@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sails.to - Melusina OS</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background: #fafafa;
+        }
+        h1 { color: #1a365d; border-bottom: 3px solid #3182ce; padding-bottom: 10px; }
+        h2 { color: #2c5282; margin-top: 40px; }
+        h3 { color: #2b6cb0; }
+        .intro-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .concept-box {
+            background: white;
+            border-left: 4px solid #3182ce;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th {
+            background: #2c5282;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        tr:hover { background: #f7fafc; }
+        .mermaid {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .analogy {
+            background: #ebf8ff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .analogy::before {
+            content: "🎯 Real-world example: ";
+            font-weight: bold;
+            font-style: normal;
+        }
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 0 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        .navbar-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+        .navbar-brand {
+            color: white;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .navbar-brand:hover {
+            opacity: 0.9;
+        }
+        .navbar-links {
+            display: flex;
+            gap: 8px;
+        }
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: background 0.2s;
+        }
+        .navbar-links a:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        .navbar-links a.active {
+            background: rgba(255,255,255,0.25);
+        }
+        body {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="sails-to-explained.html" class="navbar-brand">⛵ Sails.to</a>
+            <div class="navbar-links">
+                <a href="sails-to-explained.html">How It Works</a>
+                <a href="raise-funds.html">Raise Funds</a>
+                <a href="smart-contracts.html">Smart Contracts</a>
+                <a href="melusina-os.html" class="active">Melusina OS</a>
+            </div>
+        </div>
+    </nav>
+    
+    <h1>🖥️ Melusina OS - The Operating System</h1>
+    
+    <div class="intro-box">
+        <p>Smart contracts handle the blockchain side, but running a regulated securities platform requires much more. That's where Melusina OS comes in.</p>
+        <p>This page provides a detailed look at the operational infrastructure that makes Sails.to work in practice.</p>
+    </div>
+
+    <div class="concept-box">
+        <h4>What is Melusina OS?</h4>
+        <p>A heavily modified version of <a href="https://sandstorm.io" style="color: #3182ce;">Sandstorm.io</a> integrated with Solana. It's like an "operating system" for regulated finance — providing all the tools brokers and issuers need to run their operations.</p>
+    </div>
+
+    <h2>Architecture Overview</h2>
+
+    <div class="mermaid">
+    flowchart TD
+        subgraph Melusina OS
+            APPS[App Store<br/>Shared regulated-market apps]
+            PEARLS[Pearls/Grains<br/>Per-issuance containers]
+            STORAGE[Internal Storage<br/>Documents, backups, static assets]
+        end
+        
+        subgraph Deployments
+            BD[Broker Deploy]
+            ID[Issuer Deploy]
+        end
+        
+        subgraph External
+            SOLANA[Solana Blockchain]
+            CLEAR[Clearstream]
+        end
+        
+        APPS --> BD
+        APPS --> ID
+        BD --> PEARLS
+        ID --> PEARLS
+        PEARLS --> STORAGE
+        BD --> SOLANA
+        ID --> SOLANA
+        BD --> CLEAR
+        ID --> CLEAR
+    </div>
+
+    <h2>The App Store</h2>
+
+    <p>Pre-built applications for regulated finance operations. Each broker and issuer deployment can install and configure these apps:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>App</th>
+                <th>What It Does</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>KYC/AML Module</strong></td>
+                <td>Identity verification and anti-money-laundering checks. Integrates with external verification providers.</td>
+            </tr>
+            <tr>
+                <td><strong>Issuance Manager</strong></td>
+                <td>Create and configure new Series offerings. Set caps, duration, discount rates, and terms.</td>
+            </tr>
+            <tr>
+                <td><strong>Subscription Dashboard</strong></td>
+                <td>Track investor subscriptions and escrow status. Monitor progress toward soft cap and hard cap.</td>
+            </tr>
+            <tr>
+                <td><strong>Investor Portal</strong></td>
+                <td>Investor-facing interface for viewing holdings, downloading documents, and tracking returns.</td>
+            </tr>
+            <tr>
+                <td><strong>OTC Dealer Desk</strong></td>
+                <td>Broker trading interface. Post quotes, respond to RFQs, execute trades across the interdealer network.</td>
+            </tr>
+            <tr>
+                <td><strong>Corporate Actions Engine</strong></td>
+                <td>Schedule and process return payments, handle redemptions, manage record dates.</td>
+            </tr>
+            <tr>
+                <td><strong>Document Vault</strong></td>
+                <td>Secure storage with e-signatures, version control, and audit trails. Hash anchoring to blockchain.</td>
+            </tr>
+            <tr>
+                <td><strong>Reporting & Audit</strong></td>
+                <td>Generate compliance reports and audit exports. Regulatory reporting automation.</td>
+            </tr>
+            <tr>
+                <td><strong>Wallet Registry</strong></td>
+                <td>Manage identity-wallet linking. Handle key rotation, cold storage registration.</td>
+            </tr>
+            <tr>
+                <td><strong>Conversion Module</strong></td>
+                <td>Handle Solana ↔ Clearstream wrapping. Manage lockbox operations and ISIN registration.</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Pearls (Per-Issuance Containers)</h2>
+
+    <p>Each investment Series gets its own isolated "pearl" — a containerized environment containing everything related to that specific offering:</p>
+
+    <div class="mermaid">
+    flowchart TD
+        subgraph Pearl[Pearl: Series A - Real Estate Project]
+            PARAMS[Parameters<br/>Soft cap, hard cap, duration, discount]
+            PHASE[Phase Status<br/>Phase 1 / Phase 2 / Closed]
+            DOCS[Legal Documents<br/>Offering memo, agreements, pledges]
+            TOKEN[Token Config<br/>Contract address, supply]
+            INVESTORS[Investor Registry<br/>Who subscribed, at what price]
+            PAYMENTS[Payment Schedules<br/>Return dates, amounts]
+            BACKUP[Backups & Audit<br/>Full history, immutable logs]
+        end
+    </div>
+
+    <h3>What's in a Pearl</h3>
+
+    <ul>
+        <li><strong>Series-specific parameters:</strong> soft cap, hard cap, duration, discount rate</li>
+        <li><strong>Current phase status:</strong> Phase 1 (discount available) / Phase 2 (full price) / Closed</li>
+        <li><strong>All legal documents:</strong> offering memo, project agreement, pledge docs, legal opinions</li>
+        <li><strong>Token configuration:</strong> contract address, total supply, denomination rules</li>
+        <li><strong>Investor registry:</strong> who subscribed, how much, at what price (discounted vs full)</li>
+        <li><strong>Payment schedules:</strong> return payment dates, amounts, servicing state</li>
+        <li><strong>Backups and audit trails:</strong> complete history, immutable records</li>
+    </ul>
+
+    <div class="analogy">
+        Each pearl is like a separate filing cabinet for one project. Everything about "Series A" is in one cabinet, completely separate from "Series B". If something goes wrong with one, the others aren't affected.
+    </div>
+
+    <h2>Multi-Tenant Architecture</h2>
+
+    <p>Every broker and issuer gets their own Melusina OS deployment — a completely separate instance with:</p>
+
+    <div class="mermaid">
+    flowchart LR
+        subgraph Broker_A[Broker A's Deployment]
+            BA_USERS[Users & Permissions]
+            BA_DATA[Compliance Data]
+            BA_COMMS[Investor Communications]
+        end
+        
+        subgraph Broker_B[Broker B's Deployment]
+            BB_USERS[Users & Permissions]
+            BB_DATA[Compliance Data]
+            BB_COMMS[Investor Communications]
+        end
+        
+        subgraph Shared[Shared Infrastructure]
+            OTC[OTC Interdealer Network]
+            APPS[App Store]
+            CHAIN[Solana Blockchain]
+        end
+        
+        Broker_A --> OTC
+        Broker_B --> OTC
+        Broker_A --> APPS
+        Broker_B --> APPS
+        OTC --> CHAIN
+    </div>
+
+    <h3>Deployment Features</h3>
+
+    <ul>
+        <li><strong>Their own users and permissions:</strong> Each organization manages their own team access</li>
+        <li><strong>Their own compliance data:</strong> Never mixed with competitors — complete data isolation</li>
+        <li><strong>Their own investor communications:</strong> Branded portals, custom notifications</li>
+        <li><strong>Connected to the shared OTC network:</strong> Can trade with any other licensed broker</li>
+        <li><strong>Access to the shared app store:</strong> Same apps, organization-specific configuration</li>
+    </ul>
+
+    <h2>Integration Points</h2>
+
+    <div class="concept-box">
+        <h4>How Melusina OS Connects to Everything</h4>
+        <table style="margin: 10px 0; box-shadow: none;">
+            <tr>
+                <td><strong>Solana</strong></td>
+                <td>Direct RPC connection for all smart contract interactions</td>
+            </tr>
+            <tr>
+                <td><strong>Clearstream</strong></td>
+                <td>SWIFT/ISO messaging for ISIN registration and settlement instructions</td>
+            </tr>
+            <tr>
+                <td><strong>KYC Providers</strong></td>
+                <td>Identity verification API integrations</td>
+            </tr>
+            <tr>
+                <td><strong>Banking Partners</strong></td>
+                <td>Payment rails for fiat on/off ramp</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Security Model</h2>
+
+    <p>Melusina OS inherits Sandstorm's capability-based security model:</p>
+
+    <ul>
+        <li><strong>Grain isolation:</strong> Each pearl runs in its own sandbox</li>
+        <li><strong>Capability tokens:</strong> Access is granted via unforgeable tokens, not ACLs</li>
+        <li><strong>No ambient authority:</strong> Apps can only access what they're explicitly given</li>
+        <li><strong>Audit logging:</strong> All actions are logged with cryptographic integrity</li>
+    </ul>
+
+    <div class="concept-box">
+        <h4>Why This Matters</h4>
+        <p>In traditional systems, a bug in one part can compromise everything. With Melusina's capability model:</p>
+        <ul>
+            <li>A compromised app can only affect the resources it was given access to</li>
+            <li>Cross-tenant data access is architecturally impossible, not just policy-forbidden</li>
+            <li>Audit trails are tamper-evident and anchored to the blockchain</li>
+        </ul>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#3182ce',
+                primaryTextColor: '#1a202c',
+                primaryBorderColor: '#2c5282',
+                lineColor: '#4a5568',
+                secondaryColor: '#ebf8ff',
+                tertiaryColor: '#f7fafc',
+                nodeTextColor: '#1a202c',
+                textColor: '#1a202c',
+                labelTextColor: '#1a202c',
+                clusterBkg: '#e2e8f0',
+                clusterBorder: '#a0aec0'
+            }
+        });
+    </script>
+</body>
+</html>

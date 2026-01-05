@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sails.to - Raise Funds</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background: #fafafa;
+        }
+        h1 { color: #1a365d; border-bottom: 3px solid #3182ce; padding-bottom: 10px; }
+        h2 { color: #2c5282; margin-top: 40px; }
+        h3 { color: #2b6cb0; }
+        .intro-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .intro-box h2 { color: white; margin-top: 0; }
+        .concept-box {
+            background: white;
+            border-left: 4px solid #3182ce;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .warning-box {
+            background: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .success-box {
+            background: #f0fff4;
+            border-left: 4px solid #38a169;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th {
+            background: #2c5282;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        tr:hover { background: #f7fafc; }
+        .mermaid {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .analogy {
+            background: #ebf8ff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .analogy::before {
+            content: "🎯 ";
+            font-style: normal;
+        }
+        .step-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .step-card h4 {
+            margin-top: 0;
+            color: #2c5282;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .step-number {
+            background: #3182ce;
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        .fee-highlight {
+            display: inline-block;
+            background: #3182ce;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .tier-card {
+            background: white;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 15px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .tier-card.featured {
+            border-color: #3182ce;
+        }
+        .tier-card h4 {
+            margin-top: 0;
+            color: #2c5282;
+            font-size: 1.3em;
+        }
+        .tier-amount {
+            font-size: 2em;
+            font-weight: bold;
+            color: #1a365d;
+            margin: 10px 0;
+        }
+        .tier-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+        .tier-features li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .tier-features li::before {
+            content: "✓ ";
+            color: #38a169;
+            font-weight: bold;
+        }
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 0 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        .navbar-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+        .navbar-brand {
+            color: white;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .navbar-brand:hover {
+            opacity: 0.9;
+        }
+        .navbar-links {
+            display: flex;
+            gap: 8px;
+        }
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: background 0.2s;
+        }
+        .navbar-links a:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        .navbar-links a.active {
+            background: rgba(255,255,255,0.25);
+        }
+        body {
+            padding-top: 80px;
+        }
+        .checklist {
+            background: white;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .checklist h4 {
+            margin-top: 0;
+            color: #2c5282;
+        }
+        .checklist ul {
+            list-style: none;
+            padding: 0;
+        }
+        .checklist li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .checklist li::before {
+            content: "☐";
+            color: #3182ce;
+            font-size: 1.2em;
+        }
+        .cta-box {
+            background: linear-gradient(135deg, #38a169 0%, #2f855a 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 30px 0;
+            text-align: center;
+        }
+        .cta-box h3 {
+            color: white;
+            margin-top: 0;
+        }
+        .cta-button {
+            display: inline-block;
+            background: white;
+            color: #2f855a;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="sails-to-explained.html" class="navbar-brand">⛵ Sails.to</a>
+            <div class="navbar-links">
+                <a href="sails-to-explained.html">How It Works</a>
+                <a href="raise-funds.html" class="active">Raise Funds</a>
+                <a href="smart-contracts.html">Smart Contracts</a>
+                <a href="melusina-os.html">Melusina OS</a>
+            </div>
+        </div>
+    </nav>
+    
+    <h1>💰 Raise Funds on Sails.to</h1>
+    
+    <div class="intro-box">
+        <h2>For Issuers: Your Complete Guide to Fundraising</h2>
+        <p>Sails.to enables companies to raise capital from professional investors through tokenized securities. This guide explains everything you need to know as an issuer — from eligible raise amounts to your ongoing obligations.</p>
+    </div>
+
+    <!-- SECTION: RAISE AMOUNTS -->
+    <h2>Raise Amounts & Structure</h2>
+
+    <p>Sails.to offerings are structured in standardized increments to ensure operational efficiency and investor protection:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Parameter</th>
+                <th>Value</th>
+                <th>Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Minimum Raise</strong></td>
+                <td><span class="fee-highlight">$600,000</span></td>
+                <td>Soft cap cannot be lower than this</td>
+            </tr>
+            <tr>
+                <td><strong>Increment Size</strong></td>
+                <td><span class="fee-highlight">$150,000</span></td>
+                <td>All caps must be multiples of this amount</td>
+            </tr>
+            <tr>
+                <td><strong>Maximum Raise</strong></td>
+                <td>No hard limit</td>
+                <td>Subject to regulatory considerations and platform approval</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <h4>Example Raise Structures</h4>
+        <table style="box-shadow: none; margin: 10px 0;">
+            <tr>
+                <td><strong>Small raise:</strong></td>
+                <td>Soft cap $600K → Hard cap $900K</td>
+            </tr>
+            <tr>
+                <td><strong>Medium raise:</strong></td>
+                <td>Soft cap $1.5M → Hard cap $3M</td>
+            </tr>
+            <tr>
+                <td><strong>Large raise:</strong></td>
+                <td>Soft cap $5M → Hard cap $10M</td>
+            </tr>
+        </table>
+        <p><em>All amounts in $150K increments. Soft cap = minimum to proceed; Hard cap = maximum accepted.</em></p>
+    </div>
+
+    <!-- SECTION: LEGAL STRUCTURE -->
+    <h2>Your Legal Structure: The Series LLC</h2>
+
+    <p>When you raise through Sails.to, your offering is structured as an <strong>isolated Series</strong> within one of our Wyoming Series LLCs. This provides legal separation and professional management.</p>
+
+    <div class="mermaid">
+    flowchart TD
+        subgraph SAILS[Sails.to Series LLC]
+            S1[Series A<br/>Another Issuer]
+            S2[Series B<br/>YOUR ISSUANCE]
+            S3[Series C<br/>Another Issuer]
+        end
+        
+        S2 --> COUNCIL[Series Council<br/>Sails.to majority + Your minority rep]
+        COUNCIL --> MANDATE[Mandate: Protect<br/>Security Holders' Interests]
+        
+        S2 --> ISSUER[Your Company<br/>The Ultimate Issuer]
+        
+        style S2 fill:#3182ce,color:#fff
+        style COUNCIL fill:#38a169,color:#fff
+    </div>
+
+    <div class="concept-box">
+        <h4>What This Means for You</h4>
+        <ul>
+            <li><strong>Isolated liability:</strong> Each Series is legally separate — problems with other issuances don't affect yours</li>
+            <li><strong>Professional management:</strong> The Series LLC is run by Sails.to with fiduciary duties to security holders</li>
+            <li><strong>Your representation:</strong> You (or your designee) can sit on the Series Council in a minority position</li>
+            <li><strong>Clear mandate:</strong> The Council's sole purpose is to protect the interests of the people who invested in your offering</li>
+        </ul>
+    </div>
+
+    <h3>Series Council Governance</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Aspect</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Composition</strong></td>
+                <td>Sails.to representatives (majority) + Issuer representative (minority)</td>
+            </tr>
+            <tr>
+                <td><strong>Mandate</strong></td>
+                <td>Protect the interests of security holders — not the issuer, not the platform</td>
+            </tr>
+            <tr>
+                <td><strong>Powers</strong></td>
+                <td>Approve disbursements, enforce covenants, manage defaults, approve restructurings</td>
+            </tr>
+            <tr>
+                <td><strong>Your Role</strong></td>
+                <td>Voice in discussions, visibility into decisions, but not control</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="analogy">
+        Think of it like a trust: Sails.to acts as trustee with a legal duty to the beneficiaries (investors). You're the borrower with a seat at the table, but the trustee's job is to make sure investors are protected.
+    </div>
+
+    <!-- SECTION: ISSUER OBLIGATIONS -->
+    <h2>Your Obligations as an Issuer</h2>
+
+    <p>In exchange for access to capital, you agree to specific obligations that protect investors and ensure transparency.</p>
+
+    <h3>Pre-Issuance Requirements</h3>
+
+    <div class="checklist">
+        <h4>Due Diligence Documents</h4>
+        <ul>
+            <li><strong>Financial statements</strong> — 1-3 years of CPA-prepared or audited financials</li>
+            <li><strong>KYC/AML verification</strong> — All officers and beneficial owners verified on the platform</li>
+            <li><strong>Letters of comfort</strong> — From your bank, accountant, and lawyer confirming standing</li>
+            <li><strong>Business plan</strong> — Detailed plan for the project being funded</li>
+            <li><strong>Use of funds</strong> — Clear breakdown of how capital will be deployed</li>
+            <li><strong>Repayment plan</strong> — How investors will be repaid (schedule, sources, contingencies)</li>
+            <li><strong>Legal opinion</strong> — Your lawyer confirms you can legally receive funds from the Series LLC</li>
+            <li><strong>Asset/liability disclosure</strong> — Certified info on pledges, loans, cashflow, assets, liabilities</li>
+        </ul>
+    </div>
+
+    <h3>Security Interests & Pledges</h3>
+
+    <p>The Series LLC will require security interests to protect investors:</p>
+
+    <div class="step-card">
+        <h4><span class="step-number">🔒</span> Audit Rights</h4>
+        <p>The Series LLC receives audit rights over your company. This means:</p>
+        <ul>
+            <li>Right to inspect books and records</li>
+            <li>Right to commission independent audits</li>
+            <li>Right to verify use of proceeds</li>
+        </ul>
+    </div>
+
+    <div class="step-card">
+        <h4><span class="step-number">📋</span> Pledges & Collateral</h4>
+        <p>Depending on your raise amount and structure, you may provide:</p>
+        <ul>
+            <li>Security interests in company assets</li>
+            <li>Personal guarantees from principals</li>
+            <li>Pledge of equity or specific collateral</li>
+            <li>Assignment of receivables or contracts</li>
+        </ul>
+    </div>
+
+    <div class="step-card">
+        <h4><span class="step-number">🏛️</span> Board Representation (Large Issuances)</h4>
+        <p>For larger raises, the Series LLC may request:</p>
+        <ul>
+            <li>Observer seat on your board of directors</li>
+            <li>Or full board seat with voting rights</li>
+            <li>Information rights beyond standard reporting</li>
+        </ul>
+    </div>
+
+    <div class="warning-box">
+        <h4>⚠️ All Terms in Your Offer</h4>
+        <p>The specific security interests, pledges, and governance rights will be detailed in your <strong>customized offer</strong> after you submit your initial application. These vary based on:</p>
+        <ul>
+            <li>Raise amount</li>
+            <li>Your company's financial strength</li>
+            <li>Quality of collateral available</li>
+            <li>Track record and management team</li>
+        </ul>
+    </div>
+
+    <!-- SECTION: ONGOING OBLIGATIONS -->
+    <h2>Ongoing Obligations</h2>
+
+    <p>Once your raise is complete and funds are deployed, you have continuing obligations to investors:</p>
+
+    <h3>Reporting Requirements</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Report Type</th>
+                <th>Frequency</th>
+                <th>Contents</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Progress Reports</strong></td>
+                <td>Monthly or Quarterly</td>
+                <td>Project status, milestones achieved, any issues or delays</td>
+            </tr>
+            <tr>
+                <td><strong>Financial Updates</strong></td>
+                <td>Quarterly</td>
+                <td>Revenue, expenses, cash position, covenant compliance</td>
+            </tr>
+            <tr>
+                <td><strong>Annual Report</strong></td>
+                <td>Yearly</td>
+                <td>Audited/reviewed financials, full year summary, forward outlook</td>
+            </tr>
+            <tr>
+                <td><strong>Material Events</strong></td>
+                <td>As they occur</td>
+                <td>Anything that materially affects the investment (within 48 hours)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <h4>Digital Signing Required</h4>
+        <p>All reports must be <strong>digitally signed</strong> by an authorized officer on the Sails.to platform. This creates:</p>
+        <ul>
+            <li>Immutable audit trail</li>
+            <li>Legal accountability for statements made</li>
+            <li>Timestamp proof anchored to blockchain</li>
+        </ul>
+    </div>
+
+    <h3>Investor Communications</h3>
+
+    <p><strong>All investor communications must go through the platform.</strong> This includes:</p>
+
+    <div class="step-card">
+        <h4>What Must Go Through the Platform</h4>
+        <ul>
+            <li>Progress updates and reports</li>
+            <li>Announcements and notices</li>
+            <li>Responses to investor inquiries</li>
+            <li>Requests for waivers or modifications</li>
+            <li>Distribution notices</li>
+            <li>Any material information</li>
+        </ul>
+    </div>
+
+    <div class="success-box">
+        <h4>✅ Why This Matters</h4>
+        <p>Centralized communications ensure:</p>
+        <ul>
+            <li><strong>Equal access:</strong> All investors receive information simultaneously</li>
+            <li><strong>Audit trail:</strong> Complete record of what was communicated and when</li>
+            <li><strong>Compliance:</strong> Platform can verify disclosures meet regulatory requirements</li>
+            <li><strong>Efficiency:</strong> One place to manage all investor relations</li>
+        </ul>
+    </div>
+
+    <!-- SECTION: THE PROCESS -->
+    <h2>The Fundraising Process</h2>
+
+    <div class="mermaid">
+    flowchart TD
+        A[1. Submit Application] --> B[2. Initial Review]
+        B --> C[3. Due Diligence]
+        C --> D[4. Receive Offer]
+        D --> E{Accept Terms?}
+        E -->|Yes| F[5. Sign Agreements]
+        E -->|No| G[Negotiate or Decline]
+        G --> D
+        F --> H[6. Pledges Secured]
+        H --> I[7. Tokens Minted]
+        I --> J[8. Distribution Opens]
+        J --> K{Soft Cap Reached?}
+        K -->|Yes| L[9. Funds Released]
+        K -->|No| M[Zero-Coupon Redemption]
+        L --> N[10. Ongoing Reporting]
+        
+        style A fill:#ebf8ff
+        style L fill:#c6f6d5
+        style M fill:#fed7d7
+    </div>
+
+    <h3>Step-by-Step</h3>
+
+    <div class="step-card">
+        <h4><span class="step-number">1</span> Submit Initial Application</h4>
+        <p>Fill out the application form with basic information about your company and funding needs. This includes:</p>
+        <ul>
+            <li>Company overview and history</li>
+            <li>Funding amount requested (soft cap and hard cap)</li>
+            <li>Use of funds summary</li>
+            <li>Proposed return structure</li>
+            <li>Available collateral/security</li>
+        </ul>
+    </div>
+
+    <div class="step-card">
+        <h4><span class="step-number">2</span> Initial Review</h4>
+        <p>Our team reviews your application for basic eligibility. We'll come back with initial questions or move you to due diligence.</p>
+        <p><em>Timeline: 2-5 business days</em></p>
+    </div>
+
+    <div class="step-card">
+        <h4><span class="step-number">3</span> Due Diligence</h4>
+        <p>Submit all required documentation (see checklist above). Our team and third-party service providers verify everything.</p>
+        <p><em>Timeline: 1-2 weeks (can be faster with prepared documents)</em></p>
+    </div>
+
+    <div class="step-card">
+        <h4><span class="step-number">4</span> Receive Your Offer</h4>
+        <p>Based on due diligence, you receive a <strong>customized offer</strong> detailing:</p>
+        <ul>
+            <li>Approved raise amount (soft cap / hard cap)</li>
+            <li>Fee structure applicable to your raise</li>
+            <li>Required security interests and pledges</li>
+            <li>Governance arrangements (Council composition, board rights if any)</li>
+            <li>Reporting requirements and covenants</li>
+            <li>Distribution channel options</li>
+        </ul>
+    </div>
+
+    <div class="step-card">
+        <h4><span class="step-number">5</span> Sign Agreements</h4>
+        <p>If you accept the offer, you sign:</p>
+        <ul>
+            <li>Series Operating Agreement (your role in the Series LLC)</li>
+            <li>Loan/Investment Agreement (terms of the funding)</li>
+            <li>Security Agreement (pledges and collateral)</li>
+            <li>Platform Services Agreement</li>
+        </ul>
+    </div>
+
+    <div class="step-card">
+        <h4><span class="step-number">6</span> Pledges Secured</h4>
+        <p>All security interests are perfected — filings made, collateral transferred or encumbered, personal guarantees executed.</p>
+    </div>
+
+    <div class="step-card">
+        <h4><span class="step-number">7</span> Tokens Minted</h4>
+        <p>Security tokens are minted (amount = hard cap) and placed in your issuer treasury. <strong>The project agreement is now tokenized.</strong></p>
+    </div>
+
+    <div class="step-card">
+        <h4><span class="step-number">8</span> Distribution Opens</h4>
+        <p>Your offering goes live across the three distribution channels:</p>
+        <ul>
+            <li><strong>Channel 1:</strong> Direct sales to your known investors (0.5% fee)</li>
+            <li><strong>Channel 2:</strong> Broker OTC network (6% fee for unknown investors)</li>
+            <li><strong>Channel 3:</strong> ISIN / Clearstream (6% fee + conversion fees)</li>
+        </ul>
+        <p>Optional Phase 1 discount can incentivize early investment.</p>
+    </div>
+
+    <div class="step-card">
+        <h4><span class="step-number">9</span> Soft Cap Reached → Funds Released</h4>
+        <p>Once soft cap is reached, funds are released to you. Distribution can continue to hard cap. If soft cap is not reached by duration end, investors receive zero-coupon redemption.</p>
+    </div>
+
+    <div class="step-card">
+        <h4><span class="step-number">10</span> Ongoing Relationship</h4>
+        <p>Submit reports, communicate with investors through the platform, make scheduled payments, and comply with covenants until maturity.</p>
+    </div>
+
+    <!-- SECTION: FEES -->
+    <h2>Fee Summary for Issuers</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Fee</th>
+                <th>Amount</th>
+                <th>When</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Brokerage Fee</strong></td>
+                <td><span class="fee-highlight">0.5%</span></td>
+                <td>All investments (from proceeds)</td>
+            </tr>
+            <tr>
+                <td><strong>Distribution Fee (Unknown Investors)</strong></td>
+                <td><span class="fee-highlight">+5.5%</span></td>
+                <td>When platform/brokers source the investor</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="background:#f0f4ff; text-align:center;">
+                    <strong>Total: 0.5%</strong> for investors you bring | <strong>6%</strong> for investors we find
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <h4>How "Known vs Unknown" Works</h4>
+        <p>If you bring your own investors (partners, existing contacts, your network):</p>
+        <ul>
+            <li>They use your <strong>referral code</strong> when investing</li>
+            <li>You pay only <strong>0.5%</strong> on those investments</li>
+        </ul>
+        <p>If the platform's distribution network finds new investors for you:</p>
+        <ul>
+            <li>You pay <strong>6%</strong> on those investments</li>
+            <li>This compensates the brokers and platform for sourcing capital</li>
+        </ul>
+        <p><em>The channel (Solana direct, broker OTC, Clearstream) doesn't matter — only whether you already knew the investor.</em></p>
+    </div>
+
+    <!-- SECTION: FAQ -->
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="step-card">
+        <h4>Can I control the Series LLC that holds my issuance?</h4>
+        <p>No. Sails.to maintains majority control to ensure fiduciary duty to investors is upheld. You can have minority representation on the Council, but the mandate is to protect security holders, not issuer interests.</p>
+    </div>
+
+    <div class="step-card">
+        <h4>What if I want to raise less than $600,000?</h4>
+        <p>The minimum raise is $600,000 to ensure the economics work for all parties and sufficient investor protection structures can be put in place. For smaller amounts, consider traditional financing options.</p>
+    </div>
+
+    <div class="step-card">
+        <h4>Can I communicate with my investors directly?</h4>
+        <p>All official communications must go through the platform to ensure equal access and maintain audit trails. You can have relationships outside the platform, but investment-related communications must be on-platform.</p>
+    </div>
+
+    <div class="step-card">
+        <h4>What happens if I can't make a scheduled payment?</h4>
+        <p>Contact the platform immediately. The Series Council will work with you on options — which might include payment deferrals, restructuring, or in severe cases, enforcement of security interests. Transparency and early communication are key.</p>
+    </div>
+
+    <div class="step-card">
+        <h4>How long does the process take?</h4>
+        <p>With prepared documentation: as fast as <strong>1-2 weeks</strong> from application to tokens minted. More complex situations or missing documents can extend this. Distribution period is typically <strong>4 months</strong> (configurable).</p>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-box">
+        <h3>Ready to Raise Capital?</h3>
+        <p>Start your application and our team will guide you through the process.</p>
+        <a href="#" class="cta-button">Start Application →</a>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#3182ce',
+                primaryTextColor: '#1a202c',
+                primaryBorderColor: '#2c5282',
+                lineColor: '#4a5568',
+                secondaryColor: '#ebf8ff',
+                tertiaryColor: '#f7fafc',
+                nodeTextColor: '#1a202c',
+                textColor: '#1a202c',
+                labelTextColor: '#1a202c'
+            }
+        });
+    </script>
+</body>
+</html>
