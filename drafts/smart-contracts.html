@@ -190,11 +190,51 @@
 
     <div class="contract-card">
         <h4>📋 License Registry Contract</h4>
-        <p><strong>Purpose:</strong> The official list of who's allowed to do what</p>
+        <p><strong>Purpose:</strong> Manages licenses as NFT Print Editions derived from a Master NFT</p>
+        <p><strong>Key Design:</strong> Each deployment is tied to ONE specific Master NFT. The Master NFT mint address is hardcoded into the contract — different Master NFTs require separate contract deployments.</p>
+        
+        <p><strong>Account Structures:</strong></p>
         <ul>
-            <li>Stores all broker and issuer license status</li>
-            <li>Every other contract checks this before allowing actions</li>
-            <li>Query: "Is Broker X currently licensed?" → Yes/No</li>
+            <li><strong>LicenseRegistry</strong> (PDA: <code>["registry", master_nft_mint]</code>)
+                <ul>
+                    <li><code>authority</code> — Owner of the Master NFT</li>
+                    <li><code>master_nft_mint</code> — The Master NFT this registry tracks</li>
+                    <li><code>total_licenses</code> — Total licenses ever registered</li>
+                    <li><code>active_licenses</code> — Currently active licenses</li>
+                </ul>
+            </li>
+            <li><strong>LicenseEntry</strong> (PDA: <code>["license", license_nft_mint]</code>)
+                <ul>
+                    <li><code>license_nft_mint</code> — The Print Edition NFT mint</li>
+                    <li><code>master_nft_mint</code> — Parent Master NFT</li>
+                    <li><code>edition_number</code> — Print Edition number</li>
+                    <li><code>status</code> — Active or Inactive</li>
+                    <li><code>activated_at</code> / <code>activated_timestamp</code> — When activated</li>
+                    <li><code>deactivated_at</code> / <code>deactivated_timestamp</code> — When revoked (if applicable)</li>
+                    <li><code>history_count</code> — Number of activations/deactivations</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p><strong>Instructions:</strong></p>
+        <ul>
+            <li><strong>init_registry</strong> — Initialize the registry for a Master NFT (requires Master NFT ownership proof)</li>
+            <li><strong>activate_license</strong> — Register a Print Edition NFT as an active license
+                <ul>
+                    <li>Validates the Print Edition's parent matches the Master NFT</li>
+                    <li>Verifies caller owns the Master NFT</li>
+                    <li>Records activation timestamp and block</li>
+                </ul>
+            </li>
+            <li><strong>revoke_license</strong> — Deactivate a license (only Master NFT owner can revoke)</li>
+            <li><strong>get_license_info</strong> — Query license status and history</li>
+        </ul>
+
+        <p><strong>Security:</strong></p>
+        <ul>
+            <li>Master NFT mint is hardcoded — contract only works with ONE Master NFT</li>
+            <li>All operations require proof of Master NFT ownership (ATA balance ≥ 1)</li>
+            <li>Print Edition parent relationship validated via Metaplex Edition account</li>
         </ul>
     </div>
 
@@ -281,10 +321,9 @@
         <h4>🏭 Series Factory Contract</h4>
         <p><strong>Purpose:</strong> Creates new investment offerings</p>
         <ul>
-            <li>Only licensed issuers can use this</li>
             <li>Creates a new "pearl" (isolated container) for each Series</li>
-            <li>Sets parameters: soft cap, hard cap, duration (default 4 mo), fees</li>
-            <li>Configures optional Phase 1 discount percentage</li>
+            <li>Sets parameters: soft cap, hard cap, duration, fees</li>
+            <li>Configures optional early-bird discount</li>
             <li>Deploys the associated token contract</li>
         </ul>
     </div>
@@ -295,10 +334,10 @@
         <ul>
             <li>Receives subscription payments from all three channels</li>
             <li>Tracks: who subscribed, how much, at what price, via which channel</li>
-            <li>Tracks current phase (Phase 1 vs Phase 2) based on soft cap status</li>
-            <li>Enforces duration limit (default 4 months)</li>
-            <li>Releases funds only when soft cap reached + conditions met</li>
-            <li><strong>If soft cap fails:</strong> triggers zero-coupon redemption (returns invested capital minus minimal fees)</li>
+            <li>Tracks current phase based on soft cap status</li>
+            <li>Enforces duration limit (configurable per offering)</li>
+            <li>Releases funds when soft cap reached</li>
+            <li><strong>If soft cap fails:</strong> triggers zero-coupon redemption</li>
             <li>Triggers burning of unsold tokens at closing</li>
         </ul>
     </div>
@@ -309,7 +348,6 @@
         <ul>
             <li><strong>Minted upfront</strong> at offering start (amount = hard cap)</li>
             <li>Transfer-restricted: checks recipient eligibility on every transfer</li>
-            <li>Enforces denomination rules (e.g., minimum €100,000 chunks)</li>
             <li>Can be locked for custody/wrapping (Channel 3)</li>
             <li>Supports burning unsold tokens at closing</li>
             <li>Emits events for audit trails</li>

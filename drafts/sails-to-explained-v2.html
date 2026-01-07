@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sails.to - How It Works</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            background: #fafafa;
+        }
+        h1 { color: #1a365d; border-bottom: 3px solid #3182ce; padding-bottom: 10px; }
+        h2 { color: #2c5282; margin-top: 40px; }
+        h3 { color: #2b6cb0; }
+        .intro-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        .concept-box {
+            background: white;
+            border-left: 4px solid #3182ce;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .warning-box {
+            background: #fff5f5;
+            border-left: 4px solid #e53e3e;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .success-box {
+            background: #f0fff4;
+            border-left: 4px solid #38a169;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th {
+            background: #2c5282;
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+        tr:hover { background: #f7fafc; }
+        .mermaid {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .analogy {
+            background: #ebf8ff;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin: 15px 0;
+            font-style: italic;
+        }
+        .analogy::before {
+            content: "🎯 Real-world example: ";
+            font-weight: bold;
+            font-style: normal;
+        }
+        code {
+            background: #edf2f7;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+        }
+        .toc {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .toc ul { list-style-type: none; padding-left: 0; }
+        .toc li { padding: 5px 0; }
+        .toc a { color: #3182ce; text-decoration: none; }
+        .toc a:hover { text-decoration: underline; }
+        .fee-highlight {
+            display: inline-block;
+            background: #3182ce;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .contract-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .contract-card h4 {
+            margin-top: 0;
+            color: #2c5282;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+        /* Navigation Bar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 0 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+        .navbar-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+        .navbar-brand {
+            color: white;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .navbar-brand:hover {
+            opacity: 0.9;
+        }
+        .navbar-links {
+            display: flex;
+            gap: 8px;
+        }
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: background 0.2s;
+        }
+        .navbar-links a:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        .navbar-links a.active {
+            background: rgba(255,255,255,0.25);
+        }
+        body {
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="sails-to-explained.html" class="navbar-brand">⛵ Sails.to</a>
+            <div class="navbar-links">
+                <a href="sails-to-explained.html" class="active">How It Works</a>
+                <a href="raise-funds.html">Raise Funds</a>
+                <a href="smart-contracts.html">Smart Contracts</a>
+                <a href="melusina-os.html">Melusina OS</a>
+            </div>
+        </div>
+    </nav>
+    <h1>⛵ Sails.to - How It All Works</h1>
+    
+    <div class="intro-box">
+        <h2 style="color: white; margin-top: 0;">What is Sails.to?</h2>
+        <p>Sails.to lets companies raise money by selling digital securities (called "security tokens") to professional investors. You set up your own legal structure, tokenize your offering, and licensed brokers help you distribute it to their investor networks.</p>
+        <p>Everything settles on Solana — transparent, instant, and automatic. Investors who prefer traditional rails can hold the same security through Clearstream with an ISIN you register yourself.</p>
+        <p><strong>The key difference from regular crypto:</strong> These aren't memecoins. They're real securities with legal restrictions on who can buy them and how they can be traded.</p>
+    </div>
+
+    <div class="toc">
+        <h3>📑 What's in this guide</h3>
+        <ul>
+            <li><a href="#players">1. The Main Players</a></li>
+            <li><a href="#structure">2. Your Legal Structure</a></li>
+            <li><a href="#issuance">3. How New Securities Are Created</a></li>
+            <li><a href="#trading">4. How Trading Works</a></li>
+            <li><a href="#conversion">5. Converting Between Blockchain & Traditional Finance</a></li>
+            <li><a href="#fees">6. The Fee Structure</a></li>
+            <li><a href="#contracts">7. All the Smart Contracts</a></li>
+            <li><a href="#melusina">8. Melusina OS - The Operating System</a></li>
+        </ul>
+    </div>
+
+    <!-- SECTION 1: PLAYERS -->
+    <h2 id="players">1. The Main Players</h2>
+    
+    <p>There are five types of participants in the system:</p>
+
+    <div class="mermaid">
+    flowchart TD
+        subgraph Foundation[Foundation Layer]
+            F[🏛️ Foundation<br/>Protocol & Standards]
+        end
+        
+        subgraph Services[Service Providers]
+            T[🔐 Operational Trust<br/>Escrow & Distributions]
+            B[🏦 Licensed Brokers<br/>Distribution & Trading]
+        end
+        
+        subgraph Issuers[Your Structure]
+            I[🏢 Your DAO Series LLC<br/>Holds your securities]
+        end
+        
+        subgraph Investors
+            INV[👤 Professional Investors]
+        end
+        
+        F -->|standards| T
+        F -->|standards| B
+        T -->|escrow & distributions| I
+        I -->|client relationship| B
+        B -->|KYC & execution| INV
+        
+        style F fill:#1a365d,color:#fff
+        style T fill:#d69e2e,color:#fff
+        style B fill:#2c5282,color:#fff
+        style I fill:#805ad5,color:#fff
+        style INV fill:#3182ce,color:#fff
+    </div>
+
+    <div class="mermaid">
+    flowchart LR
+        subgraph Primary[Primary Issuance]
+            INV1[👤 Investor] -->|💵 capital| B1[🏦 Broker]
+            B1 -->|💵 proceeds - fees| T1[🔐 Trust]
+            T1 -->|💵 to issuer| I1[🏢 Your LLC]
+        end
+        
+        style INV1 fill:#38a169,color:#fff
+        style B1 fill:#38a169,color:#fff
+        style T1 fill:#d69e2e,color:#fff
+        style I1 fill:#38a169,color:#fff
+    </div>
+
+    <div class="mermaid">
+    flowchart RL
+        subgraph Returns[Returns & Distributions]
+            I2[🏢 Your LLC] -->|💵 payment| T2[🔐 Trust]
+            T2 -->|💵 distributions| INV2[👤 Token Holders]
+        end
+        
+        style I2 fill:#38a169,color:#fff
+        style T2 fill:#d69e2e,color:#fff
+        style INV2 fill:#38a169,color:#fff
+    </div>
+
+    <div class="mermaid">
+    flowchart LR
+        subgraph Secondary[Secondary Trading]
+            SELL[👤 Seller] -->|tokens| B2[🏦 Broker A]
+            B2 <-->|OTC| B3[🏦 Broker B]
+            B3 -->|tokens| BUY[👤 Buyer]
+            BUY -->|💵 payment| B3
+            B3 -->|💵 payment - fees| B2
+            B2 -->|💵 proceeds| SELL
+        end
+        
+        style SELL fill:#3182ce,color:#fff
+        style BUY fill:#3182ce,color:#fff
+        style B2 fill:#2c5282,color:#fff
+        style B3 fill:#2c5282,color:#fff
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Player</th>
+                <th>What They Do</th>
+                <th>Real-World Equivalent</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Foundation</strong></td>
+                <td>Sets standards, publishes the protocol and software that makes everything work together</td>
+                <td>Like FIX Protocol Ltd — publishes standards that brokers use</td>
+            </tr>
+            <tr>
+                <td><strong>Operational Trust</strong></td>
+                <td>Licensed fiduciary (SVG Financial Trustee) that holds escrow during issuance and distributes payments to investors</td>
+                <td>Like an escrow agent or paying agent</td>
+            </tr>
+            <tr>
+                <td><strong>Brokers</strong></td>
+                <td>Licensed firms that help distribute your offering to their investor networks and handle secondary trading</td>
+                <td>Like placement agents or broker-dealers</td>
+            </tr>
+            <tr>
+                <td><strong>Issuers (You)</strong></td>
+                <td>Companies that want to raise money — you create your own DAO Series LLC to hold your securities</td>
+                <td>Like a company doing a private placement</td>
+            </tr>
+            <tr>
+                <td><strong>Investors</strong></td>
+                <td>Professional or accredited investors who buy your securities through licensed brokers</td>
+                <td>Hedge funds, family offices, accredited individuals</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="warning-box">
+        <strong>⚠️ Important:</strong> Only professional investors can participate. The $150,000 minimum investment meets the threshold for professional investor status in many jurisdictions. US investors must be verified accredited investors under Regulation D. Non-US investors participate under Regulation S.
+    </div>
+
+    <!-- SECTION 2: YOUR LEGAL STRUCTURE -->
+    <h2 id="structure">2. Your Legal Structure</h2>
+
+    <p>When you raise money through Sails.to, you create your own <strong>Wyoming DAO Series LLC</strong>. This is your legal structure — you own it, you control it, and it holds your securities.</p>
+
+    <h3>Why a DAO Series LLC?</h3>
+
+    <div class="concept-box">
+        <h4>Self-Custody, Self-Control</h4>
+        <p>Your securities live in your own legal entity. You're not handing assets to a platform or relying on a third party to custody your tokens. The DAO LLC recognizes smart contract governance, so investor rights can be enforced automatically on-chain.</p>
+    </div>
+
+    <p>Each DAO LLC contains multiple "Series" — legally separate containers with their own assets and liabilities. This lets you run multiple offerings without them affecting each other.</p>
+
+    <div class="mermaid">
+    flowchart TD
+        DAO[🏢 Your Master DAO LLC<br/>Wyoming]
+        
+        subgraph Series[Separate Series Within Your LLC]
+            S1[💼 Series A: Operating<br/>Pledges, Revenue, Assets]
+            S2[💰 Series B: Treasury<br/>Reserves, Distributions]
+            S3[🔒 Series C: ISIN Lockbox<br/>Solana ↔ ISIN Conversion]
+            S4[📄 Series D: Future Offerings]
+        end
+        
+        DAO --> S1
+        DAO --> S2
+        DAO --> S3
+        DAO --> S4
+        
+        S1 --> T1[🪙 Security Tokens]
+        S2 --> TRUST[Trust Oversight]
+        S3 --> ISIN[ISIN Securities]
+        
+        style DAO fill:#805ad5,color:#fff
+        style S1 fill:#9f7aea,color:#fff
+        style S2 fill:#9f7aea,color:#fff
+        style S3 fill:#9f7aea,color:#fff
+        style S4 fill:#9f7aea,color:#fff
+        style T1 fill:#38a169,color:#fff
+        style TRUST fill:#d69e2e,color:#fff
+        style ISIN fill:#3182ce,color:#fff
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Series</th>
+                <th>Purpose</th>
+                <th>Who Controls</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Operating Series</strong></td>
+                <td>Holds pledges, receives revenue, manages underlying assets for a specific offering</td>
+                <td>You + Foundation oversight</td>
+            </tr>
+            <tr>
+                <td><strong>Treasury Series</strong></td>
+                <td>Holds reserves, unclaimed distributions, operational funds</td>
+                <td>Trust + Foundation oversight</td>
+            </tr>
+            <tr>
+                <td><strong>ISIN Lockbox Series</strong></td>
+                <td>Self-custody for Solana token ↔ ISIN conversion (see <a href="#conversion">Section 5</a>)</td>
+                <td>You + Trust oversight</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <h4>ISIN Self-Registration</h4>
+        <p>If you want your security available on traditional rails, you can register your own ISIN directly with a National Numbering Agency. You don't need an exchange or a third party — it's just an identifier. Your ISIN Lockbox Series handles the conversion between Solana tokens and ISIN securities.</p>
+    </div>
+
+    <div class="analogy">
+        Think of your DAO LLC like a holding company with separate subsidiaries (Series) for each project. If one project has issues, the others are legally isolated. You control the whole structure, and the blockchain enforces the rules you set.
+    </div>
+
+    <!-- SECTION 3: ISSUANCE -->
+    <h2 id="issuance">3. How New Securities Are Created</h2>
+
+    <h3>The Fundraising System</h3>
+
+    <p>Every offering has two important numbers and two pricing phases:</p>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Term</th>
+                <th>What It Means</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Soft Cap</strong></td>
+                <td>The minimum amount that must be raised for the deal to happen</td>
+            </tr>
+            <tr>
+                <td><strong>Hard Cap</strong></td>
+                <td>The maximum amount that can be raised</td>
+            </tr>
+            <tr>
+                <td><strong>Duration</strong></td>
+                <td>Maximum time the offering stays open</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Early Bird (Optional Discount)</h4>
+    <p>From opening until the soft cap is reached, you can offer an <strong>optional discount</strong> to early investors. This incentivizes people to commit early and helps reach the soft cap faster.</p>
+
+    <h4>Full Price</h4>
+    <p>Once the soft cap is reached, the discount ends. Additional investments up to the hard cap are at full price ($150,000 per security) until the offering ends.</p>
+
+    <div class="mermaid">
+    stateDiagram-v2
+        [*] --> DueDiligence: You Apply
+        DueDiligence --> EarlyBird: All docs signed, pledges secured
+        EarlyBird --> ZeroCoupon: Duration Expires, Soft Cap Not Met
+        EarlyBird --> FullPrice: Soft Cap Reached → Funds Released
+        FullPrice --> DistContinues: More investors join (up to hard cap)
+        FullPrice --> Closed: Hard Cap Met OR Duration Expires
+        DistContinues --> Closed: Hard Cap Met OR Duration Expires
+        Closed --> Matured: Project Complete
+        ZeroCoupon --> [*]: Principal Returned (minus minimal fees)
+        Matured --> [*]: Complete
+        
+        note right of DueDiligence: Agreement, KYC, pledges
+        note right of EarlyBird: Optional discount available
+        note right of FullPrice: Funds flowing to you
+        note right of Closed: Secondary trading opens
+    </div>
+
+    <div class="concept-box">
+        <h4>When Does the Offering End?</h4>
+        <p>The offering closes when <strong>either</strong> of these happens first:</p>
+        <ul>
+            <li><strong>Hard cap is met</strong> — maximum funding reached, offering closes immediately</li>
+            <li><strong>Duration expires</strong> — the offering period you set passes, offering closes at current level</li>
+        </ul>
+        <p>Once soft cap is reached, the project is <strong>live</strong> and funds flow to you. Additional investors can still join until the offering ends.</p>
+    </div>
+
+    <h3>Token Minting: Created Upfront</h3>
+
+    <p>When your offering launches, tokens equal to the <strong>hard cap</strong> are minted and held in your treasury. From there, they flow to investors through three distribution channels.</p>
+
+    <div class="mermaid">
+    flowchart TD
+        MINT[🏭 Tokens Minted<br/>Amount = Hard Cap] -->|held in| TREASURY[Your Treasury]
+        
+        TREASURY -->|direct to<br/>known investors| CH1[📋 Channel 1<br/>Direct Sales]
+        TREASURY -->|via licensed<br/>brokers| CH2[🏦 Channel 2<br/>Broker Network]
+        TREASURY -->|wrapped for<br/>traditional rails| CH3[🌐 Channel 3<br/>ISIN / Clearstream]
+        
+        CH1 -->|on-chain| INV1[Your Partners &<br/>Co-investors]
+        CH2 -->|on-chain| INV2[Professional<br/>Investors]
+        CH3 -->|locked| WRAP[Your ISIN Lockbox]
+        WRAP -->|1:1 wrapped| ISIN[ISIN Security<br/>Self-registered]
+        ISIN -->|distributed by| BANK[Paying Agent Bank]
+        BANK -->|Clearstream OTC| INV3[Traditional<br/>Investors]
+        
+        style MINT fill:#2c5282,color:#fff
+        style TREASURY fill:#3182ce,color:#fff
+        style CH1 fill:#38a169,color:#fff
+        style CH2 fill:#38a169,color:#fff
+        style CH3 fill:#805ad5,color:#fff
+        style INV1 fill:#48bb78,color:#fff
+        style INV2 fill:#48bb78,color:#fff
+        style INV3 fill:#9f7aea,color:#fff
+        style WRAP fill:#b794f4,color:#fff
+        style ISIN fill:#9f7aea,color:#fff
+        style BANK fill:#9f7aea,color:#fff
+    </div>
+
+    <h3>The Three Distribution Channels</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Channel</th>
+                <th>Who Sells</th>
+                <th>Who Buys</th>
+                <th>Settlement</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong style="color:#38a169;">1. Direct Sales</strong></td>
+                <td>You directly</td>
+                <td>Your existing network (partners, contacts)</td>
+                <td>On-chain (Solana)</td>
+            </tr>
+            <tr>
+                <td><strong style="color:#38a169;">2. Broker Network</strong></td>
+                <td>Licensed brokers</td>
+                <td>Their professional investor clients</td>
+                <td>On-chain (Solana)</td>
+            </tr>
+            <tr>
+                <td><strong style="color:#805ad5;">3. ISIN / Clearstream</strong></td>
+                <td>Your paying agent bank</td>
+                <td>Traditional/institutional investors</td>
+                <td>Clearstream (traditional rails)</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <h4>How Channel 3 Works</h4>
+        <p>Some investors only work with traditional securities infrastructure. Channel 3 bridges that gap:</p>
+        <ol>
+            <li>You lock tokens in your <strong>ISIN Lockbox Series</strong></li>
+            <li>Tokens are wrapped 1:1 into ISIN-bearing securities (you self-register the ISIN)</li>
+            <li>Your <strong>paying agent bank</strong> distributes them via Clearstream</li>
+        </ol>
+        <p>The same investment, accessible through traditional finance rails, under your control.</p>
+    </div>
+
+    <div class="concept-box">
+        <h4>Fees</h4>
+        <p>Fees depend on <strong>how the investor found your offering</strong> — tracked via referral codes. Investors brought in by your own network cost less than those sourced through the broker network. See the <a href="#fees" style="color:#3182ce;">Fee Structure section</a> for full details.</p>
+    </div>
+
+    <h3>The Three Stages of an Offering</h3>
+
+    <p>Every security you issue goes through three stages:</p>
+
+    <div class="mermaid">
+    flowchart LR
+        subgraph STAGE1[Stage 1: Escrow]
+            S1A[Investors buying in]
+            S1B[Early Bird discount may apply]
+            S1C[Funds held in Trust escrow]
+        end
+        
+        subgraph STAGE2[Stage 2: Funding]
+            S2A[Funds released to you]
+            S2B[Full price, distribution continues]
+            S2C[Still only you sell]
+        end
+        
+        subgraph STAGE3[Stage 3: Live]
+            S3A[Offering closed]
+            S3B[Secondary trading open]
+            S3C[Conversions open to all holders]
+        end
+        
+        STAGE1 -->|Soft cap reached| STAGE2
+        STAGE2 -->|Hard cap OR<br/>duration expires| STAGE3
+        STAGE1 -->|Soft cap NOT reached| REFUND[Zero-Coupon<br/>Redemption]
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Aspect</th>
+                <th>Stage 1: Escrow</th>
+                <th>Stage 2: Funding</th>
+                <th>Stage 3: Live</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>When</strong></td>
+                <td>Until soft cap reached</td>
+                <td>Soft cap → hard cap or timeout</td>
+                <td>After offering closes</td>
+            </tr>
+            <tr>
+                <td><strong>Funds</strong></td>
+                <td>Held in Trust escrow</td>
+                <td>Released to you as received</td>
+                <td>Distribution complete</td>
+            </tr>
+            <tr>
+                <td><strong>Returns</strong></td>
+                <td>None — project not yet funded</td>
+                <td>May begin per agreement</td>
+                <td>Per agreement (coupons, profit share, etc.)</td>
+            </tr>
+            <tr>
+                <td><strong>Primary Distribution</strong></td>
+                <td>Yes, via all 3 channels</td>
+                <td>Continues via all 3 channels</td>
+                <td>Closed — unsold tokens burned</td>
+            </tr>
+            <tr>
+                <td><strong>Secondary Trading</strong></td>
+                <td>No — only you can sell</td>
+                <td>No — only you can sell</td>
+                <td>Open to all holders</td>
+            </tr>
+            <tr>
+                <td><strong>Conversions (Solana ↔ Clearstream)</strong></td>
+                <td>You only</td>
+                <td>You only</td>
+                <td>Open to all holders</td>
+            </tr>
+            <tr>
+                <td><strong>Token Status</strong></td>
+                <td>Minted, in escrow distribution</td>
+                <td>In live distribution</td>
+                <td>Fully issued, tradeable</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <h4>Why No Secondary Trading Until Close?</h4>
+        <p>During both Stage 1 (Escrow) and Stage 2 (Funding):</p>
+        <ul>
+            <li><strong>Only you can sell</strong> — investors cannot resell yet</li>
+            <li><strong>Solana → ISIN conversions</strong> are only available to you (to fill Channel 3 orders)</li>
+        </ul>
+        <p>This ensures orderly primary distribution. Once the offering closes (hard cap met or duration expires), secondary trading and conversions open to all holders.</p>
+    </div>
+
+    <div class="warning-box">
+        <h4>⚠️ What Happens If Soft Cap Is NOT Reached</h4>
+        <p>If your offering fails to reach soft cap, the security becomes a <strong>zero-coupon bond</strong> that immediately redeems:</p>
+        <ul>
+            <li>Each investor receives back their <strong>invested capital</strong> (the actual amount they paid)</li>
+            <li>Discounts are respected — if they paid a discounted price, they get back what they paid, not face value</li>
+            <li><strong>Fees still apply</strong> (unlike what you might expect):
+                <ul>
+                    <li>Clearstream fees (if Channel 3 was used)</li>
+                    <li>0.5% brokerage fee on initial security purchase</li>
+                </ul>
+            </li>
+            <li>This is structured as a <strong>principal distribution</strong>, not a "refund"</li>
+        </ul>
+        <p>The security legally existed, was purchased, and is now being redeemed at par value of investment. It's not a cancellation — it's an early maturity.</p>
+    </div>
+
+    <h3>The Issuance Process Step-by-Step</h3>
+
+    <div class="concept-box">
+        <h4>Key Insight: We're Tokenizing an Existing Agreement</h4>
+        <p>Unlike a typical fundraise where money is collected first and then a deal is made, Sails.to works in reverse: <strong>all legal agreements and security pledges must be in place BEFORE tokens are minted</strong>. The tokens represent an already-signed agreement. This is why funds can be released as soon as soft cap is reached.</p>
+        <p><em>Note: "Project" here can be structured as a traditional loan, zero-coupon instrument, profit-sharing arrangement, or other security types.</em></p>
+    </div>
+
+    <h4>Phase A: Pre-Issuance Due Diligence (1-2 days typical)</h4>
+    
+    <p>Before any tokens are created, you must complete comprehensive verification:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Requirement</th>
+                <th>Details</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Financial Statements</strong></td>
+                <td>1-3 years of CPA-prepared or audited financial statements</td>
+            </tr>
+            <tr>
+                <td><strong>KYC/AML on Principals</strong></td>
+                <td>All officers and beneficial owners verified</td>
+            </tr>
+            <tr>
+                <td><strong>Letters of Comfort</strong></td>
+                <td>From your bank, accountant, and lawyer confirming standing</td>
+            </tr>
+            <tr>
+                <td><strong>Certified Asset/Liability Info</strong></td>
+                <td>Pledges, outstanding loans, cashflow, assets, and liabilities disclosed</td>
+            </tr>
+            <tr>
+                <td><strong>Business Plan</strong></td>
+                <td>Detailed plan for the project being funded</td>
+            </tr>
+            <tr>
+                <td><strong>Use of Funds</strong></td>
+                <td>Clear breakdown of how raised capital will be deployed</td>
+            </tr>
+            <tr>
+                <td><strong>Method of Reimbursement</strong></td>
+                <td>How investors will be repaid (coupon schedule, profit distribution, maturity redemption, etc.)</td>
+            </tr>
+            <tr>
+                <td><strong>Legal Opinion Letter</strong></td>
+                <td>Lawyer confirms you can legally receive funds from your DAO LLC</td>
+            </tr>
+            <tr>
+                <td><strong>Project Agreement Signed</strong></td>
+                <td>Full investment documents executed between you and your DAO LLC Series</td>
+            </tr>
+            <tr>
+                <td><strong>Collateral/Pledges Secured</strong></td>
+                <td>All security interests perfected and pledges received by the Operating Series</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="success-box">
+        <strong>✅ Only after ALL of the above is complete can tokens be minted.</strong> The token issuance represents a real, legally-binding project agreement that already exists.
+    </div>
+
+    <h4>Phase B: Token Distribution</h4>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Step</th>
+                <th>What Happens</th>
+                <th>Pricing</th>
+                <th>Where Money Goes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1. DAO LLC Established</td>
+                <td>You create your Wyoming DAO Series LLC; agree to terms: caps, return structure, duration, and optional early-bird discount</td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td>2. Mint Tokens</td>
+                <td><strong>All tokens minted upfront</strong> (amount = hard cap), held in your treasury. <em>Project is now tokenized.</em></td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td>3. Early Bird Opens</td>
+                <td>Distribution begins across all three channels</td>
+                <td><strong>Discounted</strong> (if you enabled)</td>
+                <td>Into Trust escrow</td>
+            </tr>
+            <tr>
+                <td>4a. Soft Cap Reached</td>
+                <td>Minimum funding achieved — <strong>funds released to you</strong>, Full Price period begins</td>
+                <td><strong>Full price</strong> from now on</td>
+                <td><strong>Released to you</strong></td>
+            </tr>
+            <tr>
+                <td>4b. Soft Cap NOT Reached</td>
+                <td>Duration expires — security redeems at par (zero-coupon redemption)</td>
+                <td>—</td>
+                <td>Principal returned to investors (minus 0.5% brokerage + Clearstream fees)</td>
+            </tr>
+            <tr>
+                <td>5. Distribution Continues</td>
+                <td>Additional investment up to hard cap OR duration expires</td>
+                <td><strong>Full price</strong></td>
+                <td>Released to you as received</td>
+            </tr>
+            <tr>
+                <td>6. Offering Closes</td>
+                <td><strong>Unsold tokens burned</strong>, final circulating supply set</td>
+                <td>—</td>
+                <td>—</td>
+            </tr>
+            <tr>
+                <td>7. Live</td>
+                <td>Investors receive returns per agreement (coupons, profit distributions, etc.)</td>
+                <td>—</td>
+                <td>Returns flow from you → Trust → token holders</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="warning-box">
+        <strong>⚠️ Note on unsold tokens:</strong> Any tokens not sold by the time the offering closes are <strong>burned</strong> (permanently destroyed). The final circulating supply equals actual investment received, not the hard cap.
+    </div>
+
+    <div class="analogy">
+        Think of it like a real estate syndication: the property is already under contract (agreements signed, pledges in place), and now you're bringing in investors to fund the deal. Once minimum funding is reached, you close and fund. Additional investors can still come in up to the cap.
+    </div>
+
+    <!-- SECTION 4: TRADING -->
+    <h2 id="trading">4. How Trading Works</h2>
+
+    <h3>Why Not Just Use a Regular DEX?</h3>
+    
+    <div class="warning-box">
+        <p>You might wonder: "Why can't these tokens just trade on Uniswap or Raydium?"</p>
+        <p>The answer: <strong>Because these are real securities with legal restrictions.</strong> The law says only eligible investors can own them. An open DEX would let anyone buy them, which breaks securities regulations.</p>
+    </div>
+
+    <h3>The OTC Broker Network</h3>
+
+    <p>"OTC" stands for "Over-The-Counter" — trades happen through licensed brokers, not on a public order book. Each broker has their own investor clients, and brokers trade directly with each other when their clients want to buy or sell.</p>
+
+    <div class="analogy">
+        Imagine you want to sell a rare painting. You don't just put it on eBay. You work with an art dealer who contacts other dealers to find a buyer. A buyer working with a different dealer is looking for exactly that piece. The dealers negotiate, agree on terms, and handle the transaction. That's how OTC trading works.
+    </div>
+
+    <div class="mermaid">
+    sequenceDiagram
+        participant Seller as Seller (Investor)
+        participant BrokerA as Seller's Broker
+        participant BrokerB as Buyer's Broker
+        participant Buyer as Buyer (Investor)
+
+        Seller->>BrokerA: "I want to sell 2 tokens"
+        BrokerA->>BrokerB: Posts availability / contacts broker
+        Buyer->>BrokerB: "I want to buy 2 tokens"
+        BrokerB->>BrokerA: "My client wants to buy"
+        Note over BrokerA,BrokerB: Brokers negotiate<br/>price and terms
+        rect rgb(240, 255, 240)
+            Note over BrokerA,BrokerB: ⚡ Atomic Settlement on Solana
+            BrokerA->>BrokerB: Tokens transferred
+            BrokerB->>BrokerA: Payment transferred
+        end
+        BrokerA->>Seller: Sale complete
+        BrokerB->>Buyer: Tokens delivered
+        Note over Seller,Buyer: 0.5% fee: ⅔ to brokers (proportionate), ⅓ to Foundation
+    </div>
+
+    <div class="concept-box">
+        <h4>Atomic Settlement</h4>
+        <p>All parts of the trade happen in <strong>one atomic transaction</strong> on Solana:</p>
+        <ul>
+            <li>Token transfer from seller's broker to buyer's broker</li>
+            <li>Payment transfer in the opposite direction</li>
+            <li>Fee distribution automatically</li>
+        </ul>
+        <p>Either everything succeeds together, or nothing happens. No counterparty risk, no partial fills stuck in limbo.</p>
+    </div>
+
+    <div class="concept-box">
+        <h4>Multi-Broker Fills</h4>
+        <p>A single buy request can be filled by <strong>multiple sellers from different brokers</strong>. If someone wants to buy 10 tokens:</p>
+        <ul>
+            <li>Broker A might have 4 available from their client</li>
+            <li>Broker B might have 4 from theirs</li>
+            <li>Broker C contributes the remaining 2</li>
+        </ul>
+        <p>Brokers coordinate, and all partial fills settle atomically in one transaction.</p>
+    </div>
+
+    <h3>Key Trading Rules</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Rule</th>
+                <th>Why It Exists</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Investors trade through brokers, not directly with each other</td>
+                <td>Brokers ensure both parties are eligible and compliant</td>
+            </tr>
+            <tr>
+                <td>All transfers check KYC credentials on-chain</td>
+                <td>Tokens can only go to verified, eligible wallets</td>
+            </tr>
+            <tr>
+                <td>No secondary trading until your offering closes</td>
+                <td>Ensures orderly primary distribution; only you sell during distribution period</td>
+            </tr>
+            <tr>
+                <td>Settlement is atomic on Solana</td>
+                <td>No counterparty risk — either the whole trade happens or nothing does</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- SECTION 5: CONVERSION -->
+    <h2 id="conversion">5. Converting Between Blockchain & Traditional Finance</h2>
+
+    <p>The same security can exist in two forms: a <strong>Solana token</strong> or a traditional <strong>ISIN security</strong>. Your ISIN Lockbox Series handles the conversion.</p>
+
+    <div class="mermaid">
+    flowchart LR
+        subgraph Solana
+            ST[🪙 Security Token<br/>on Solana]
+        end
+        
+        subgraph YourLLC[Your ISIN Lockbox Series]
+            LOCK[🔒 Tokens locked<br/>1:1 backing]
+        end
+        
+        subgraph Clearstream
+            ISIN[📄 ISIN Security<br/>Self-registered]
+        end
+        
+        ST -->|Wrap: Lock tokens| LOCK
+        LOCK -->|Issue ISIN| ISIN
+        ISIN -->|Unwrap: Redeem| LOCK
+        LOCK -->|Release tokens| ST
+    </div>
+
+    <div class="concept-box">
+        <h4>You Control the Conversion</h4>
+        <p>The ISIN Lockbox is a Series within your DAO LLC. You (with Trust oversight) control the conversion. When tokens are locked, ISIN securities are issued. When ISIN securities are redeemed, tokens are released. Always 1:1.</p>
+        <p><strong>No third-party custodian required.</strong> You self-custody through your own legal structure.</p>
+    </div>
+
+    <div class="concept-box">
+        <h4>The Single Source of Truth</h4>
+        <p>The Solana token is the "canonical" (original) security. The ISIN security is a "representation" — essentially a receipt that says "the issuer's lockbox is holding X tokens backing this ISIN."</p>
+        <p><strong>Critical rule:</strong> ISIN securities outstanding can never exceed tokens locked in your lockbox. The system is always 1:1 backed.</p>
+    </div>
+
+    <h3>Why Would Someone Convert?</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Scenario</th>
+                <th>Direction</th>
+                <th>Why</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Traditional fund manager with mandate restrictions</td>
+                <td>Solana → Clearstream</td>
+                <td>Their rules require holding ISIN-registered securities</td>
+            </tr>
+            <tr>
+                <td>Crypto-native investor wants self-custody</td>
+                <td>Clearstream → Solana</td>
+                <td>Wants to hold in their own wallet, not through a broker</td>
+            </tr>
+            <tr>
+                <td>Selling to a buyer who only uses traditional rails</td>
+                <td>Solana → Clearstream</td>
+                <td>Buyer's bank can only settle via Clearstream</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- SECTION 6: FEES -->
+    <h2 id="fees">6. The Fee Structure</h2>
+
+    <p>Fees are based on <strong>whether the investor is known to you</strong>, not which channel they use:</p>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Fee Type</th>
+                <th>Amount</th>
+                <th>When Charged</th>
+                <th>Who Pays</th>
+                <th>Split</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Brokerage Fee</strong></td>
+                <td><span class="fee-highlight">0.5%</span></td>
+                <td>All primary purchases (even if soft cap fails)</td>
+                <td>Buyer</td>
+                <td>⅔ Brokers (proportionate) + ⅓ Foundation</td>
+            </tr>
+            <tr>
+                <td><strong>Distribution Fee (Unknown Investors)</strong></td>
+                <td><span class="fee-highlight">+5.5%</span></td>
+                <td>When selling to investors NOT already known to you</td>
+                <td>You (from proceeds)</td>
+                <td>Brokers + Admin + Foundation</td>
+            </tr>
+            <tr>
+                <td colspan="5" style="background:#f0f4ff; font-style:italic; text-align:center;">Total: <strong>0.5%</strong> for known investors, <strong>6%</strong> for unknown investors (on successful close)</td>
+            </tr>
+            <tr>
+                <td><strong>Clearstream Fees</strong></td>
+                <td>Variable</td>
+                <td>Channel 3 transactions (even if soft cap fails)</td>
+                <td>Investor</td>
+                <td>Clearstream</td>
+            </tr>
+            <tr>
+                <td><strong>Secondary Trading Fee</strong></td>
+                <td><span class="fee-highlight">0.5%</span></td>
+                <td>Every secondary trade on Solana OTC (after offering closes)</td>
+                <td>Buyer</td>
+                <td>⅔ Brokers (proportionate) + ⅓ Foundation</td>
+            </tr>
+            <tr>
+                <td><strong>Conversion Fee</strong></td>
+                <td><span class="fee-highlight">0.10-0.25%</span> (capped)</td>
+                <td>When wrapping/unwrapping Solana ↔ Clearstream</td>
+                <td>Requester</td>
+                <td>Foundation + Trust</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <h4>Fees That Apply Even If Soft Cap Fails</h4>
+        <p>When your offering fails to reach soft cap and redeems as a zero-coupon bond:</p>
+        <ul>
+            <li><strong>0.5% brokerage fee</strong> — already deducted at time of purchase</li>
+            <li><strong>Clearstream fees</strong> — if Channel 3 was used</li>
+        </ul>
+        <p>The +5.5% distribution fee for unknown investors is <strong>NOT</strong> charged on failed offerings — that only applies when the offering successfully closes.</p>
+    </div>
+
+    <!-- SECTION 7: CONTRACTS -->
+    <h2 id="contracts">7. All the Smart Contracts</h2>
+
+    <p>The system runs on a suite of <strong>15+ smart contracts</strong> deployed on Solana. These contracts enforce all the rules automatically — permissions, trading restrictions, fee distribution, and more.</p>
+
+    <div class="mermaid">
+    flowchart LR
+        subgraph Core[Core Contract Groups]
+            GOV[🏛️ Governance<br/>4 contracts]
+            ID[👤 Identity<br/>2 contracts]
+            ISS[🏭 Issuance<br/>3 contracts]
+            TRADE[🤝 Trading<br/>3 contracts]
+            FIN[💰 Finance<br/>4 contracts]
+        end
+        
+        GOV --> ID
+        ID --> ISS
+        ISS --> TRADE
+        TRADE --> FIN
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Contracts</th>
+                <th>Key Functions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Governance & Permissions</strong></td>
+                <td>Foundation Governance, License Registry, Broker License NFT, Issuer License NFT</td>
+                <td>System standards, license management, access permissions</td>
+            </tr>
+            <tr>
+                <td><strong>Identity & KYC</strong></td>
+                <td>Identity Registry, KYC Credential</td>
+                <td>Wallet linking, investor verification, eligibility checks</td>
+            </tr>
+            <tr>
+                <td><strong>Issuance & Securities</strong></td>
+                <td>Series Factory, Subscription Escrow, Security Token</td>
+                <td>Create Series, hold funds, manage tokens</td>
+            </tr>
+            <tr>
+                <td><strong>Trading</strong></td>
+                <td>Quote/RFQ Registry, Trade Execution, Broker Pool Registry</td>
+                <td>Post prices, execute trades, track liquidity</td>
+            </tr>
+            <tr>
+                <td><strong>Finance & Corporate Actions</strong></td>
+                <td>Fee Splitter, Conversion Lockbox, Corporate Actions, Audit Log</td>
+                <td>Distribute fees, handle conversions, process payments</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <h4>📖 Full Smart Contract Reference</h4>
+        <p>For detailed documentation of each contract including purpose, functions, and interactions:</p>
+        <p><a href="smart-contracts.html" style="color: #3182ce; font-weight: bold;">→ View the complete Smart Contracts documentation</a></p>
+    </div>
+
+    <!-- SECTION 8: MELUSINA OS -->
+    <h2 id="melusina">8. Melusina OS - The Operating System</h2>
+
+    <p>Smart contracts handle the blockchain side, but running securities operations requires much more. That's where <strong>Melusina OS</strong> comes in — a heavily modified version of <a href="https://sandstorm.io">Sandstorm.io</a> integrated with Solana.</p>
+
+    <div class="mermaid">
+    flowchart TD
+        subgraph Melusina[Melusina OS]
+            APPS[📦 App Store<br/>10+ regulated finance apps]
+            PEARLS[🔮 Pearls<br/>Per-issuance containers]
+            DEPLOY[🏢 Multi-Tenant<br/>Broker & Issuer deployments]
+        end
+        
+        APPS --> DEPLOY
+        DEPLOY --> PEARLS
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Component</th>
+                <th>What It Provides</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>App Store</strong></td>
+                <td>Pre-built apps: KYC/AML, Issuance Manager, OTC Dealer Desk, Document Vault, Reporting, and more</td>
+            </tr>
+            <tr>
+                <td><strong>Pearls</strong></td>
+                <td>Isolated containers for each of your Series — all docs, investor data, payment schedules in one place</td>
+            </tr>
+            <tr>
+                <td><strong>Multi-Tenant Deployments</strong></td>
+                <td>You get your own instance with complete data isolation</td>
+            </tr>
+            <tr>
+                <td><strong>Broker Network</strong></td>
+                <td>Connected to licensed brokers for distribution and trading</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="concept-box">
+        <h4>📖 Full Melusina OS Documentation</h4>
+        <p>For detailed documentation of the operating system, app store, pearl architecture, and security model:</p>
+        <p><a href="melusina-os.html" style="color: #3182ce; font-weight: bold;">→ View the complete Melusina OS documentation</a></p>
+    </div>
+
+    <!-- SUMMARY -->
+    <h2>Summary: How It All Fits Together</h2>
+
+    <div class="mermaid">
+    flowchart TB
+        subgraph Layer1[Your Legal Structure]
+            LLC[🏢 Your Wyoming DAO Series LLC<br/>Operating · Treasury · ISIN Lockbox]
+        end
+        
+        subgraph Layer2[Service Providers]
+            TRUST[🔐 Operational Trust<br/>Escrow & Distributions]
+            BROKERS[🏦 Licensed Brokers<br/>Distribution & Trading]
+        end
+        
+        subgraph Layer3[Infrastructure]
+            FOUND[🏛️ Foundation<br/>Standards & Protocol]
+            SOL[⚡ Solana<br/>Settlement & Credentials]
+        end
+        
+        subgraph Layer4[Traditional Finance]
+            CLEAR[📄 Clearstream<br/>ISIN Settlement]
+        end
+        
+        LLC --> TRUST
+        LLC --> BROKERS
+        TRUST --> FOUND
+        BROKERS --> FOUND
+        FOUND --> SOL
+        LLC --> CLEAR
+        
+        style LLC fill:#805ad5,color:#fff
+        style TRUST fill:#d69e2e,color:#fff
+        style BROKERS fill:#2c5282,color:#fff
+        style FOUND fill:#1a365d,color:#fff
+        style SOL fill:#38a169,color:#fff
+        style CLEAR fill:#3182ce,color:#fff
+    </div>
+
+    <div class="intro-box" style="margin-top: 40px;">
+        <h3 style="color: white; margin-top: 0;">The Big Picture</h3>
+        <p>Sails.to gives you the tools to raise capital on your own terms:</p>
+        <ul>
+            <li><strong>Your DAO LLC</strong> — You own your legal structure and control your securities</li>
+            <li><strong>Your ISIN</strong> — Self-register if you want traditional finance rails</li>
+            <li><strong>Licensed brokers</strong> — Distribute to their investor networks</li>
+            <li><strong>Trust oversight</strong> — Escrow and distributions handled by a licensed fiduciary</li>
+            <li><strong>Solana settlement</strong> — Instant, atomic, transparent</li>
+        </ul>
+        <p>The smart contracts enforce the rules automatically. The credentials ensure only eligible parties participate. The conversion system lets investments flow between blockchain and traditional rails. And it's all under your control.</p>
+    </div>
+
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'base',
+            themeVariables: {
+                primaryColor: '#3182ce',
+                primaryTextColor: '#1a202c',
+                primaryBorderColor: '#2c5282',
+                lineColor: '#4a5568',
+                secondaryColor: '#ebf8ff',
+                tertiaryColor: '#f7fafc',
+                nodeTextColor: '#1a202c',
+                textColor: '#1a202c',
+                labelTextColor: '#1a202c',
+                edgeLabelBackground: '#ffffff',
+                clusterBkg: '#e2e8f0',
+                clusterBorder: '#a0aec0',
+                titleColor: '#1a202c',
+                actorTextColor: '#1a202c',
+                actorLineColor: '#4a5568',
+                signalTextColor: '#1a202c',
+                labelBoxBkgColor: '#ebf8ff',
+                labelBoxBorderColor: '#3182ce',
+                noteBkgColor: '#fefcbf',
+                noteTextColor: '#1a202c',
+                noteBorderColor: '#d69e2e',
+                pieTitleTextColor: '#1a202c',
+                pieSectionTextColor: '#1a202c',
+                pieStrokeColor: '#2c5282',
+                pie1: '#3182ce',
+                pie2: '#38a169',
+                pie3: '#d69e2e'
+            }
+        });
+    </script>
+</body>
+</html>

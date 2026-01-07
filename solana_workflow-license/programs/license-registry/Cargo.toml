@@ -1,0 +1,21 @@
+[package]
+name = "license-registry"
+version = "0.1.0"
+description = "License activation/revocation registry with Master NFT authorization"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "lib"]
+name = "license_registry"
+
+[features]
+no-entrypoint = []
+no-idl = []
+no-log-ix-name = []
+cpi = ["no-entrypoint"]
+default = []
+
+[dependencies]
+anchor-lang = { version = "0.30.1", features = ["init-if-needed"] }
+anchor-spl = "0.30.1"
+mpl-token-metadata = { version = "5.0.0", features = ["serde"] }

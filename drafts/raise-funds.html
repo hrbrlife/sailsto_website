@@ -281,7 +281,8 @@
     
     <div class="intro-box">
         <h2>For Issuers: Your Complete Guide to Fundraising</h2>
-        <p>Sails.to enables companies to raise capital from professional investors through tokenized securities. This guide explains everything you need to know as an issuer — from eligible raise amounts to your ongoing obligations.</p>
+        <p>Sails.to gives you the tools to raise capital from professional investors through tokenized securities. You create your own legal structure (a Wyoming DAO Series LLC), licensed brokers help distribute to their investor networks, and everything settles on Solana.</p>
+        <p><strong>You own it. You control it. We provide the infrastructure.</strong></p>
     </div>
 
     <!-- SECTION: RAISE AMOUNTS -->
@@ -311,7 +312,7 @@
             <tr>
                 <td><strong>Maximum Raise</strong></td>
                 <td>No hard limit</td>
-                <td>Subject to regulatory considerations and platform approval</td>
+                <td>—</td>
             </tr>
         </tbody>
     </table>
@@ -336,68 +337,71 @@
     </div>
 
     <!-- SECTION: LEGAL STRUCTURE -->
-    <h2>Your Legal Structure: The Series LLC</h2>
+    <h2>Your Legal Structure: Your DAO Series LLC</h2>
 
-    <p>When you raise through Sails.to, your offering is structured as an <strong>isolated Series</strong> within one of our Wyoming Series LLCs. This provides legal separation and professional management.</p>
+    <p>When you raise through Sails.to, you create your own <strong>Wyoming DAO Series LLC</strong>. This is your legal structure — you own it, you control it, and it holds your securities.</p>
 
     <div class="mermaid">
     flowchart TD
-        subgraph SAILS[Sails.to Series LLC]
-            S1[Series A<br/>Another Issuer]
-            S2[Series B<br/>YOUR ISSUANCE]
-            S3[Series C<br/>Another Issuer]
+        subgraph YourLLC[Your DAO Series LLC]
+            S1[💼 Operating Series<br/>Pledges & Revenue]
+            S2[💰 Treasury Series<br/>Reserves & Distributions]
+            S3[🔒 ISIN Lockbox Series<br/>Solana ↔ ISIN Conversion]
         end
         
-        S2 --> COUNCIL[Series Council<br/>Sails.to majority + Your minority rep]
-        COUNCIL --> MANDATE[Mandate: Protect<br/>Security Holders' Interests]
+        YourLLC --> TRUST[🔐 Operational Trust<br/>Escrow & Distributions]
+        YourLLC --> BROKERS[🏦 Licensed Brokers<br/>Distribution & Trading]
         
-        S2 --> ISSUER[Your Company<br/>The Ultimate Issuer]
+        TRUST --> FOUND[🏛️ Foundation<br/>Standards & Oversight]
+        BROKERS --> FOUND
         
-        style S2 fill:#3182ce,color:#fff
-        style COUNCIL fill:#38a169,color:#fff
+        style YourLLC fill:#805ad5,color:#fff
+        style TRUST fill:#d69e2e,color:#fff
+        style BROKERS fill:#2c5282,color:#fff
+        style FOUND fill:#1a365d,color:#fff
     </div>
 
     <div class="concept-box">
         <h4>What This Means for You</h4>
         <ul>
-            <li><strong>Isolated liability:</strong> Each Series is legally separate — problems with other issuances don't affect yours</li>
-            <li><strong>Professional management:</strong> The Series LLC is run by Sails.to with fiduciary duties to security holders</li>
-            <li><strong>Your representation:</strong> You (or your designee) can sit on the Series Council in a minority position</li>
-            <li><strong>Clear mandate:</strong> The Council's sole purpose is to protect the interests of the people who invested in your offering</li>
+            <li><strong>You own it:</strong> The DAO LLC is yours — not a shared vehicle with other issuers</li>
+            <li><strong>Self-custody:</strong> Your securities live in your own legal structure, not held by a platform</li>
+            <li><strong>Multiple Series:</strong> Run multiple offerings within one LLC, each legally isolated</li>
+            <li><strong>Smart contract governance:</strong> Wyoming DAO law recognizes on-chain governance and token voting</li>
         </ul>
     </div>
 
-    <h3>Series Council Governance</h3>
+    <h3>The Series Within Your LLC</h3>
 
     <table>
         <thead>
             <tr>
-                <th>Aspect</th>
-                <th>Details</th>
+                <th>Series</th>
+                <th>Purpose</th>
+                <th>Who Controls</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><strong>Composition</strong></td>
-                <td>Sails.to representatives (majority) + Issuer representative (minority)</td>
+                <td><strong>Operating Series</strong></td>
+                <td>Holds pledges, receives revenue, manages underlying assets</td>
+                <td>You + Foundation oversight</td>
             </tr>
             <tr>
-                <td><strong>Mandate</strong></td>
-                <td>Protect the interests of security holders — not the issuer, not the platform</td>
+                <td><strong>Treasury Series</strong></td>
+                <td>Holds reserves, unclaimed distributions, operational funds</td>
+                <td>Trust + Foundation oversight</td>
             </tr>
             <tr>
-                <td><strong>Powers</strong></td>
-                <td>Approve disbursements, enforce covenants, manage defaults, approve restructurings</td>
-            </tr>
-            <tr>
-                <td><strong>Your Role</strong></td>
-                <td>Voice in discussions, visibility into decisions, but not control</td>
+                <td><strong>ISIN Lockbox Series</strong></td>
+                <td>Self-custody for Solana token ↔ ISIN conversion</td>
+                <td>You + Trust oversight</td>
             </tr>
         </tbody>
     </table>
 
     <div class="analogy">
-        Think of it like a trust: Sails.to acts as trustee with a legal duty to the beneficiaries (investors). You're the borrower with a seat at the table, but the trustee's job is to make sure investors are protected.
+        Think of your DAO LLC like a holding company with separate subsidiaries (Series) for each function. You control the structure, and the blockchain enforces the rules you set. The Foundation provides standards, the Trust handles escrow/distributions, and brokers help you reach investors.
     </div>
 
     <!-- SECTION: ISSUER OBLIGATIONS -->
@@ -411,13 +415,14 @@
         <h4>Due Diligence Documents</h4>
         <ul>
             <li><strong>Financial statements</strong> — 1-3 years of CPA-prepared or audited financials</li>
-            <li><strong>KYC/AML verification</strong> — All officers and beneficial owners verified on the platform</li>
+            <li><strong>KYC/AML verification</strong> — All officers and beneficial owners verified</li>
             <li><strong>Letters of comfort</strong> — From your bank, accountant, and lawyer confirming standing</li>
             <li><strong>Business plan</strong> — Detailed plan for the project being funded</li>
             <li><strong>Use of funds</strong> — Clear breakdown of how capital will be deployed</li>
             <li><strong>Repayment plan</strong> — How investors will be repaid (schedule, sources, contingencies)</li>
-            <li><strong>Legal opinion</strong> — Your lawyer confirms you can legally receive funds from the Series LLC</li>
+            <li><strong>Legal opinion</strong> — Your lawyer confirms you can legally receive funds through your DAO LLC</li>
             <li><strong>Asset/liability disclosure</strong> — Certified info on pledges, loans, cashflow, assets, liabilities</li>
+            <li><strong>DAO LLC formation</strong> — Wyoming DAO Series LLC registered and operating agreement in place</li>
         </ul>
     </div>
 
@@ -426,18 +431,8 @@
     <p>The Series LLC will require security interests to protect investors:</p>
 
     <div class="step-card">
-        <h4><span class="step-number">🔒</span> Audit Rights</h4>
-        <p>The Series LLC receives audit rights over your company. This means:</p>
-        <ul>
-            <li>Right to inspect books and records</li>
-            <li>Right to commission independent audits</li>
-            <li>Right to verify use of proceeds</li>
-        </ul>
-    </div>
-
-    <div class="step-card">
-        <h4><span class="step-number">📋</span> Pledges & Collateral</h4>
-        <p>Depending on your raise amount and structure, you may provide:</p>
+        <h4><span class="step-number">🔒</span> Collateral in Your Operating Series</h4>
+        <p>Your Operating Series holds all pledges and collateral protecting investors:</p>
         <ul>
             <li>Security interests in company assets</li>
             <li>Personal guarantees from principals</li>
@@ -447,23 +442,35 @@
     </div>
 
     <div class="step-card">
-        <h4><span class="step-number">🏛️</span> Board Representation (Large Issuances)</h4>
-        <p>For larger raises, the Series LLC may request:</p>
+        <h4><span class="step-number">📋</span> Trust Oversight</h4>
+        <p>The Operational Trust (a licensed SVG Financial Trustee) provides investor protection:</p>
         <ul>
-            <li>Observer seat on your board of directors</li>
-            <li>Or full board seat with voting rights</li>
-            <li>Information rights beyond standard reporting</li>
+            <li>Holds escrow during fundraising</li>
+            <li>Distributes payments to token holders</li>
+            <li>Monitors covenant compliance</li>
+            <li>Can enforce security interests if needed</li>
         </ul>
     </div>
 
-    <div class="warning-box">
-        <h4>⚠️ All Terms in Your Offer</h4>
-        <p>The specific security interests, pledges, and governance rights will be detailed in your <strong>customized offer</strong> after you submit your initial application. These vary based on:</p>
+    <div class="step-card">
+        <h4><span class="step-number">🏛️</span> Foundation Standards</h4>
+        <p>The Foundation sets standards that all participants follow:</p>
         <ul>
-            <li>Raise amount</li>
-            <li>Your company's financial strength</li>
-            <li>Quality of collateral available</li>
-            <li>Track record and management team</li>
+            <li>Reporting requirements and formats</li>
+            <li>Disclosure standards</li>
+            <li>Smart contract compliance</li>
+            <li>Broker licensing requirements</li>
+        </ul>
+    </div>
+
+    <div class="concept-box">
+        <h4>You Control Your Structure</h4>
+        <p>Unlike traditional platforms where a third party controls your funds, you own your DAO LLC. The Trust and Foundation provide oversight and services, but the securities are yours. This means:</p>
+        <ul>
+            <li>No platform custody of your assets</li>
+            <li>Direct relationship with your investors (through the broker network)</li>
+            <li>Ability to self-register ISIN if you want traditional rails</li>
+            <li>Smart contract governance recognized under Wyoming law</li>
         </ul>
     </div>
 
@@ -472,45 +479,15 @@
 
     <p>Once your raise is complete and funds are deployed, you have continuing obligations to investors:</p>
 
-    <h3>Reporting Requirements</h3>
+    <h3>Reporting</h3>
 
-    <table>
-        <thead>
-            <tr>
-                <th>Report Type</th>
-                <th>Frequency</th>
-                <th>Contents</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><strong>Progress Reports</strong></td>
-                <td>Monthly or Quarterly</td>
-                <td>Project status, milestones achieved, any issues or delays</td>
-            </tr>
-            <tr>
-                <td><strong>Financial Updates</strong></td>
-                <td>Quarterly</td>
-                <td>Revenue, expenses, cash position, covenant compliance</td>
-            </tr>
-            <tr>
-                <td><strong>Annual Report</strong></td>
-                <td>Yearly</td>
-                <td>Audited/reviewed financials, full year summary, forward outlook</td>
-            </tr>
-            <tr>
-                <td><strong>Material Events</strong></td>
-                <td>As they occur</td>
-                <td>Anything that materially affects the investment (within 48 hours)</td>
-            </tr>
-        </tbody>
-    </table>
+    <p>The specific reporting requirements for your offering are defined in your investment documents. These typically include progress updates, financial information, and material event disclosures — the frequency and format depend on what you agree with your investors.</p>
 
     <div class="concept-box">
         <h4>Digital Signing Required</h4>
-        <p>All reports must be <strong>digitally signed</strong> by an authorized officer on the Sails.to platform. This creates:</p>
+        <p>All reports must be <strong>digitally signed</strong> by an authorized officer. This creates:</p>
         <ul>
-            <li>Immutable audit trail</li>
+            <li>Immutable audit trail on Solana</li>
             <li>Legal accountability for statements made</li>
             <li>Timestamp proof anchored to blockchain</li>
         </ul>
@@ -518,28 +495,26 @@
 
     <h3>Investor Communications</h3>
 
-    <p><strong>All investor communications must go through the platform.</strong> This includes:</p>
+    <p>Communications with investors flow through your brokers. Your Melusina OS instance provides the tools:</p>
 
     <div class="step-card">
-        <h4>What Must Go Through the Platform</h4>
+        <h4>Your Communication Tools</h4>
         <ul>
-            <li>Progress updates and reports</li>
-            <li>Announcements and notices</li>
-            <li>Responses to investor inquiries</li>
-            <li>Requests for waivers or modifications</li>
-            <li>Distribution notices</li>
-            <li>Any material information</li>
+            <li>Progress updates and reports — published to your Pearl (per-issuance container)</li>
+            <li>Announcements and notices — distributed via broker network</li>
+            <li>Distribution notices — automated through the Trust</li>
+            <li>Document vault — secure storage with audit trail</li>
         </ul>
     </div>
 
     <div class="success-box">
-        <h4>✅ Why This Matters</h4>
-        <p>Centralized communications ensure:</p>
+        <h4>✅ Why This Works</h4>
+        <p>Decentralized but coordinated communications:</p>
         <ul>
-            <li><strong>Equal access:</strong> All investors receive information simultaneously</li>
-            <li><strong>Audit trail:</strong> Complete record of what was communicated and when</li>
-            <li><strong>Compliance:</strong> Platform can verify disclosures meet regulatory requirements</li>
-            <li><strong>Efficiency:</strong> One place to manage all investor relations</li>
+            <li><strong>You control your data:</strong> Your Melusina instance, your documents</li>
+            <li><strong>Brokers handle distribution:</strong> They communicate with their investor clients</li>
+            <li><strong>Audit trail:</strong> All communications hash-anchored to Solana</li>
+            <li><strong>Equal access:</strong> Same information distributed to all brokers simultaneously</li>
         </ul>
     </div>
 
@@ -548,31 +523,39 @@
 
     <div class="mermaid">
     flowchart TD
-        A[1. Submit Application] --> B[2. Initial Review]
+        A[1. Form Your DAO LLC] --> B[2. Submit Application]
         B --> C[3. Due Diligence]
-        C --> D[4. Receive Offer]
-        D --> E{Accept Terms?}
-        E -->|Yes| F[5. Sign Agreements]
-        E -->|No| G[Negotiate or Decline]
-        G --> D
-        F --> H[6. Pledges Secured]
-        H --> I[7. Tokens Minted]
-        I --> J[8. Distribution Opens]
-        J --> K{Soft Cap Reached?}
-        K -->|Yes| L[9. Funds Released]
-        K -->|No| M[Zero-Coupon Redemption]
-        L --> N[10. Ongoing Reporting]
+        C --> D[4. Engage Brokers]
+        D --> E[5. Sign Agreements]
+        E --> F[6. Pledges to Operating Series]
+        F --> G[7. Tokens Minted]
+        G --> H[8. Distribution Opens]
+        H --> I{Soft Cap Reached?}
+        I -->|Yes| J[9. Funds Released]
+        I -->|No| K[Zero-Coupon Redemption]
+        J --> L[10. Ongoing Operations]
         
-        style A fill:#ebf8ff
-        style L fill:#c6f6d5
-        style M fill:#fed7d7
+        style A fill:#805ad5,color:#fff
+        style J fill:#c6f6d5
+        style K fill:#fed7d7
     </div>
 
     <h3>Step-by-Step</h3>
 
     <div class="step-card">
-        <h4><span class="step-number">1</span> Submit Initial Application</h4>
-        <p>Fill out the application form with basic information about your company and funding needs. This includes:</p>
+        <h4><span class="step-number">1</span> Form Your DAO Series LLC</h4>
+        <p>Create your Wyoming DAO Series LLC with the required Series:</p>
+        <ul>
+            <li>Operating Series — will hold pledges and receive revenue</li>
+            <li>Treasury Series — will hold reserves and handle distributions</li>
+            <li>ISIN Lockbox Series — optional, for traditional rails conversion</li>
+        </ul>
+        <p><em>We can help with formation or work with your existing structure.</em></p>
+    </div>
+
+    <div class="step-card">
+        <h4><span class="step-number">2</span> Submit Application</h4>
+        <p>Submit your application with:</p>
         <ul>
             <li>Company overview and history</li>
             <li>Funding amount requested (soft cap and hard cap)</li>
@@ -580,52 +563,44 @@
             <li>Proposed return structure</li>
             <li>Available collateral/security</li>
         </ul>
-    </div>
-
-    <div class="step-card">
-        <h4><span class="step-number">2</span> Initial Review</h4>
-        <p>Our team reviews your application for basic eligibility. We'll come back with initial questions or move you to due diligence.</p>
-        <p><em>Timeline: 2-5 business days</em></p>
+        <p><em>Timeline: Review within 2-5 business days</em></p>
     </div>
 
     <div class="step-card">
         <h4><span class="step-number">3</span> Due Diligence</h4>
-        <p>Submit all required documentation (see checklist above). Our team and third-party service providers verify everything.</p>
+        <p>Submit all required documentation. The Foundation and Trust verify everything.</p>
         <p><em>Timeline: 1-2 weeks (can be faster with prepared documents)</em></p>
     </div>
 
     <div class="step-card">
-        <h4><span class="step-number">4</span> Receive Your Offer</h4>
-        <p>Based on due diligence, you receive a <strong>customized offer</strong> detailing:</p>
+        <h4><span class="step-number">4</span> Engage Brokers</h4>
+        <p>Connect with licensed brokers who will distribute your offering to their investor networks:</p>
         <ul>
-            <li>Approved raise amount (soft cap / hard cap)</li>
-            <li>Fee structure applicable to your raise</li>
-            <li>Required security interests and pledges</li>
-            <li>Governance arrangements (Council composition, board rights if any)</li>
-            <li>Reporting requirements and covenants</li>
-            <li>Distribution channel options</li>
+            <li>Brokers review your offering materials</li>
+            <li>Agree on distribution terms</li>
+            <li>Your offering becomes available to their professional investor clients</li>
         </ul>
     </div>
 
     <div class="step-card">
         <h4><span class="step-number">5</span> Sign Agreements</h4>
-        <p>If you accept the offer, you sign:</p>
+        <p>Execute the legal documents:</p>
         <ul>
-            <li>Series Operating Agreement (your role in the Series LLC)</li>
-            <li>Loan/Investment Agreement (terms of the funding)</li>
-            <li>Security Agreement (pledges and collateral)</li>
-            <li>Platform Services Agreement</li>
+            <li>DAO LLC Operating Agreement (your governance structure)</li>
+            <li>Trust Services Agreement (escrow and distribution)</li>
+            <li>Broker Distribution Agreements</li>
+            <li>Security/Pledge Agreements</li>
         </ul>
     </div>
 
     <div class="step-card">
-        <h4><span class="step-number">6</span> Pledges Secured</h4>
-        <p>All security interests are perfected — filings made, collateral transferred or encumbered, personal guarantees executed.</p>
+        <h4><span class="step-number">6</span> Pledges to Operating Series</h4>
+        <p>All security interests are perfected and held in your Operating Series — filings made, collateral transferred or encumbered, personal guarantees executed.</p>
     </div>
 
     <div class="step-card">
         <h4><span class="step-number">7</span> Tokens Minted</h4>
-        <p>Security tokens are minted (amount = hard cap) and placed in your issuer treasury. <strong>The project agreement is now tokenized.</strong></p>
+        <p>Security tokens are minted (amount = hard cap) and placed in your Treasury. <strong>The project agreement is now tokenized.</strong></p>
     </div>
 
     <div class="step-card">
@@ -633,20 +608,20 @@
         <p>Your offering goes live across the three distribution channels:</p>
         <ul>
             <li><strong>Channel 1:</strong> Direct sales to your known investors (0.5% fee)</li>
-            <li><strong>Channel 2:</strong> Broker OTC network (6% fee for unknown investors)</li>
-            <li><strong>Channel 3:</strong> ISIN / Clearstream (6% fee + conversion fees)</li>
+            <li><strong>Channel 2:</strong> Broker network (6% fee for investors they source)</li>
+            <li><strong>Channel 3:</strong> ISIN / Clearstream (6% fee + conversion fees) — you self-register the ISIN</li>
         </ul>
-        <p>Optional Phase 1 discount can incentivize early investment.</p>
+        <p>Optional early-bird discount can incentivize early investment.</p>
     </div>
 
     <div class="step-card">
         <h4><span class="step-number">9</span> Soft Cap Reached → Funds Released</h4>
-        <p>Once soft cap is reached, funds are released to you. Distribution can continue to hard cap. If soft cap is not reached by duration end, investors receive zero-coupon redemption.</p>
+        <p>Once soft cap is reached, the Trust releases funds to you. Distribution continues to hard cap. If soft cap is not reached by duration end, investors receive zero-coupon redemption.</p>
     </div>
 
     <div class="step-card">
-        <h4><span class="step-number">10</span> Ongoing Relationship</h4>
-        <p>Submit reports, communicate with investors through the platform, make scheduled payments, and comply with covenants until maturity.</p>
+        <h4><span class="step-number">10</span> Ongoing Operations</h4>
+        <p>Submit reports, make scheduled payments through the Trust, and comply with covenants until maturity. Your Melusina OS instance manages everything.</p>
     </div>
 
     <!-- SECTION: FEES -->
@@ -698,8 +673,8 @@
     <h2>Frequently Asked Questions</h2>
 
     <div class="step-card">
-        <h4>Can I control the Series LLC that holds my issuance?</h4>
-        <p>No. Sails.to maintains majority control to ensure fiduciary duty to investors is upheld. You can have minority representation on the Council, but the mandate is to protect security holders, not issuer interests.</p>
+        <h4>Do I really control my own DAO LLC?</h4>
+        <p>Yes. The DAO LLC is yours — you form it, you own it, you control it. The Foundation sets standards you agree to follow, and the Trust provides escrow/distribution services, but the securities are in your legal structure. This is fundamentally different from platforms that custody your assets.</p>
     </div>
 
     <div class="step-card">
@@ -708,18 +683,23 @@
     </div>
 
     <div class="step-card">
-        <h4>Can I communicate with my investors directly?</h4>
-        <p>All official communications must go through the platform to ensure equal access and maintain audit trails. You can have relationships outside the platform, but investment-related communications must be on-platform.</p>
+        <h4>How do I reach investors?</h4>
+        <p>You work with licensed brokers who have professional investor clients. You can also bring your own investors (Channel 1 at 0.5% fee). Brokers handle KYC and onboarding for their clients.</p>
+    </div>
+
+    <div class="step-card">
+        <h4>Can I self-register an ISIN?</h4>
+        <p>Yes. If you want your security available on traditional rails (Clearstream), you can register your own ISIN directly with a National Numbering Agency. Your ISIN Lockbox Series handles the 1:1 conversion between Solana tokens and ISIN securities.</p>
     </div>
 
     <div class="step-card">
         <h4>What happens if I can't make a scheduled payment?</h4>
-        <p>Contact the platform immediately. The Series Council will work with you on options — which might include payment deferrals, restructuring, or in severe cases, enforcement of security interests. Transparency and early communication are key.</p>
+        <p>Contact the Trust immediately. They will work with you on options — payment deferrals, restructuring, or in severe cases, enforcement of security interests held in your Operating Series. Transparency and early communication are key.</p>
     </div>
 
     <div class="step-card">
         <h4>How long does the process take?</h4>
-        <p>With prepared documentation: as fast as <strong>1-2 weeks</strong> from application to tokens minted. More complex situations or missing documents can extend this. Distribution period is typically <strong>4 months</strong> (configurable).</p>
+        <p>With prepared documentation and an existing DAO LLC: as fast as <strong>1-2 weeks</strong> from application to tokens minted. Add 1-2 weeks if you need to form the LLC. Distribution period length is up to you.</p>
     </div>
 
     <!-- CTA -->
