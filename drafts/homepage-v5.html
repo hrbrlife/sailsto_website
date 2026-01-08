@@ -10,7 +10,7 @@
     <!-- Cache bust: 2026-01-08-v2 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
         :root {
             /* THE PALETTE: Bold, print-inspired, luxury magazine */
@@ -29,6 +29,7 @@
             --font-display: 'Cormorant Garamond', Georgia, serif;
             --font-body: 'Lora', Georgia, serif;
             --font-ui: 'Inter', -apple-system, sans-serif;
+            --font-caps: 'Bebas Neue', Impact, sans-serif;
             
             --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
             --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
@@ -297,15 +298,15 @@
         .hero-content {
             position: relative;
             z-index: 5;
-            margin-top: -140px;
+            margin-top: -200px;
         }
         
         /* Main headline - DRAMATIC SUNRISE ANIMATION */
         .hero h1 {
             font-family: var(--font-display);
-            font-size: clamp(6rem, 16vw, 13rem);
-            font-weight: 400;
-            line-height: 0.9;
+            font-size: clamp(7rem, 18vw, 15rem);
+            font-weight: 600;
+            line-height: 1.05;
             letter-spacing: -0.03em;
             margin: 0;
             position: relative;
@@ -365,13 +366,13 @@
         }
         
         .hero-tagline {
-            font-family: var(--font-ui);
-            font-size: 0.72rem;
-            font-weight: 600;
+            font-family: 'Bebas Neue', Impact, sans-serif !important;
+            font-size: 1.2rem;
+            font-weight: 400;
             text-transform: uppercase !important;
-            letter-spacing: 0.25em;
+            letter-spacing: 0.15em;
             color: #ffffff !important;
-            margin-top: 36px;
+            margin-top: 56px;
             opacity: 1;
             text-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 0 20px rgba(0,0,0,0.3);
             -webkit-text-stroke: 0.3px rgba(0,0,0,0.3);
@@ -406,23 +407,41 @@
             right: 0;
             padding: 0 48px;
             z-index: 999; /* High z-index to stay above everything */
-            transform: translateY(50%); /* Half visible initially */
+            transform: translateY(55%); /* Less visible initially to avoid overlap */
         }
         
         .hero-editorial .editorial-grid {
-            max-width: 1200px;
+            max-width: 900px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 64px;
+            gap: 80px;
         }
         
         .hero-editorial .editorial-col p {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #ffffff; /* Start white, JS changes to dark */
-            line-height: 1.9;
-            margin-bottom: 24px;
+            line-height: 1.85;
+            margin-bottom: 20px;
+            text-align: justify;
+            hyphens: auto;
             transition: color 0.1s ease;
+        }
+        
+        .hero-editorial .editorial-col p:first-child {
+            font-size: 0.95rem;
+            line-height: 1.9;
+        }
+        
+        .hero-editorial .editorial-col p:first-child::first-letter {
+            font-family: var(--font-display);
+            font-size: 3.2rem;
+            font-weight: 600;
+            float: left;
+            line-height: 0.8;
+            margin-right: 8px;
+            margin-top: 4px;
+            color: inherit;
         }
         
         .hero-editorial .editorial-col p:last-child {
@@ -1214,7 +1233,7 @@
     <section class="hero">
         <!-- Background image with zoom effect -->
         <div class="hero-bg">
-            <img src="section1bg.png" alt="" />
+            <img src="raise-your-sails-bg.gif" alt="Sailing background" />
         </div>
         
         <!-- Color/contrast overlay - shifts from dark to warm -->
