@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Sails.to — Raise Your Sails</title>
+    <!-- Cache bust: 2026-01-08-v2 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
@@ -263,6 +267,13 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
+            transform: scale(1);
+            animation: heroZoom 150s linear forwards;
+        }
+        
+        @keyframes heroZoom {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.15); }
         }
         
         /* Dark overlay for text readability */
@@ -286,13 +297,13 @@
         .hero-content {
             position: relative;
             z-index: 5;
-            margin-top: -104px;
+            margin-top: -140px;
         }
         
         /* Main headline - DRAMATIC SUNRISE ANIMATION */
         .hero h1 {
             font-family: var(--font-display);
-            font-size: clamp(5.4rem, 14vw, 11.5rem);
+            font-size: clamp(6rem, 16vw, 13rem);
             font-weight: 400;
             line-height: 0.9;
             letter-spacing: -0.03em;
@@ -355,13 +366,14 @@
         
         .hero-tagline {
             font-family: var(--font-ui);
-            font-size: 1rem;
-            font-weight: 700;
-            text-transform: none;
-            letter-spacing: 0.08em;
-            color: #ffffff;
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase !important;
+            letter-spacing: 0.25em;
+            color: #ffffff !important;
             margin-top: 36px;
             opacity: 1;
+            text-shadow: none !important;
         }
         
         .hero-desc {
@@ -1199,7 +1211,7 @@
     <section class="hero">
         <!-- Background image with zoom effect -->
         <div class="hero-bg">
-            <img src="section1bg.png" alt="" />
+            <img src="bg.svg" alt="" />
         </div>
         
         <!-- Color/contrast overlay - shifts from dark to warm -->
@@ -1210,9 +1222,9 @@
                 <span class="line"><span class="line-inner">Raise your sails.</span></span>
             </h1>
             
-            <p class="hero-tagline">Issue, trade and manage real securities on-chain and in TradFi simultaneously.</p>
+            <p class="hero-tagline" style="color: #ffffff !important; text-transform: uppercase !important;">Securities that cross the line.</p>
             
-            <p class="hero-desc">Real securities, reissued for the digital era: bonds with scheduled payments, profit participation, equity-style exposure, and real‑world assets. One security can be held on Solana, on TON, or as an ISIN at banks and brokerages — and converted between formats for KYC‑verified professional investors. Run the subscription and KYC yourself, or tap a broker OTC network for distribution and trading.</p>
+            <p class="hero-desc">For visionary businesses and pragmatic investors alike, Sails.to is sovereign infrastructure to issue, manage, and trade bonds across DeFi/TradFi borders — on Solana, TON (Telegram), or via traditional bank and broker rails (ISIN/Clearstream).</p>
             
         </div>
         
@@ -1232,9 +1244,6 @@
     </section>
 
     <section class="editorial-section">
-            
-            <div class="stats-row">
-                <div class="stat-item">
                     <div class="stat-value">$600K</div>
                     <div class="stat-label">Minimum raise</div>
                 </div>
