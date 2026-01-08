@@ -10,7 +10,7 @@
     <!-- Cache bust: 2026-01-08-v2 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
     <style>
         :root {
             /* THE PALETTE: Bold, print-inspired, luxury magazine */
@@ -27,9 +27,9 @@
             --navy: #0D1B2A;
             
             --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-body: 'Lora', Georgia, serif;
-            --font-ui: 'Inter', -apple-system, sans-serif;
-            --font-caps: 'Bebas Neue', Impact, sans-serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+            --font-ui: 'DM Sans', -apple-system, sans-serif;
+            --font-accent: 'Playfair Display', Georgia, serif;
             
             --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
             --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
@@ -260,7 +260,8 @@
             overflow: hidden;
         }
         
-        .hero-bg img {
+        .hero-bg img,
+        .hero-bg video {
             position: absolute;
             top: 0;
             left: 0;
@@ -365,30 +366,46 @@
             }
         }
         
+        .hero-supertitle {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.8), 0 4px 16px rgba(0,0,0,0.5);
+        }
+        
         .hero-tagline {
-            font-family: 'Bebas Neue', Impact, sans-serif !important;
-            font-size: 1.2rem;
-            font-weight: 400;
-            text-transform: uppercase !important;
-            letter-spacing: 0.15em;
-            color: #ffffff !important;
-            margin-top: 56px;
-            opacity: 1;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 0 20px rgba(0,0,0,0.3);
-            -webkit-text-stroke: 0.3px rgba(0,0,0,0.3);
+            font-family: var(--font-accent);
+            font-size: 1.3rem;
+            font-weight: 500;
+            font-style: italic;
+            text-transform: none;
+            letter-spacing: 0.02em;
+            color: #ffffff;
+            margin-top: 48px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.6);
         }
         
         .hero-desc {
-            font-family: var(--font-body);
-            font-size: 0.9rem;
-            font-weight: 700;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: clamp(0.7rem, 1.4vw, 0.95rem);
+            font-weight: 500;
             color: #ffffff;
-            max-width: 520px;
-            margin: 24px auto 0;
-            line-height: 1.8;
-            opacity: 1;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 0 20px rgba(0,0,0,0.3);
-            -webkit-text-stroke: 0.3px rgba(0,0,0,0.3);
+            max-width: 90%;
+            margin: 28px auto 0;
+            line-height: 1.6;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero-desc-secondary {
+            margin-top: 12px;
+            font-style: italic;
+            opacity: 0.9;
         }
         
         .hero-cta {
@@ -419,29 +436,16 @@
         }
         
         .hero-editorial .editorial-col p {
-            font-size: 0.9rem;
-            color: #ffffff; /* Start white, JS changes to dark */
-            line-height: 1.85;
-            margin-bottom: 20px;
-            text-align: justify;
-            hyphens: auto;
-            transition: color 0.1s ease;
-        }
-        
-        .hero-editorial .editorial-col p:first-child {
-            font-size: 0.95rem;
-            line-height: 1.9;
-        }
-        
-        .hero-editorial .editorial-col p:first-child::first-letter {
-            font-family: var(--font-display);
-            font-size: 3.2rem;
-            font-weight: 600;
-            float: left;
-            line-height: 0.8;
-            margin-right: 8px;
-            margin-top: 4px;
-            color: inherit;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #ffffff;
+            line-height: 1.7;
+            margin-bottom: 18px;
+            text-align: left;
+            letter-spacing: 0.01em;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+            transition: color 0.1s ease, text-shadow 0.1s ease;
         }
         
         .hero-editorial .editorial-col p:last-child {
@@ -450,12 +454,12 @@
         
         .hero-editorial .editorial-col .hl {
             color: inherit;
-            font-weight: 500;
+            font-weight: 600;
         }
         
         .hero-editorial .editorial-col .ul {
             text-decoration: underline;
-            text-decoration-color: var(--gold);
+            text-decoration-color: currentColor;
             text-underline-offset: 3px;
             text-decoration-thickness: 1px;
         }
@@ -1233,20 +1237,19 @@
     <section class="hero">
         <!-- Background image with zoom effect -->
         <div class="hero-bg">
-            <img src="raise-your-sails-bg.gif" alt="Sailing background" />
+            <video class="hero-video" src="raise-your-sails-bg.webm" poster="raise-your-sails-bg.jpg" autoplay muted loop playsinline></video>
         </div>
         
         <!-- Color/contrast overlay - shifts from dark to warm -->
         <div class="hero-overlay"></div>
         
         <div class="hero-content">
+            <p class="hero-supertitle">Securities that cross the line.</p>
             <h1>
                 <span class="line"><span class="line-inner">Raise your sails.</span></span>
             </h1>
             
-            <p class="hero-tagline" style="color: #ffffff !important; text-transform: uppercase !important;">Securities that cross the line.</p>
-            
-            <p class="hero-desc">For visionary businesses and pragmatic investors alike, Sails.to is sovereign infrastructure to issue, manage, and trade bonds across DeFi/TradFi borders — on <svg class="inline-icon" viewBox="0 0 397 312" fill="currentColor" style="width:14px;height:11px;vertical-align:middle;margin:0 2px"><path d="M64.6 237.9c2.4-2.4 5.7-3.8 9.2-3.8h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1l62.7-62.7z"/><path d="M64.6 3.8C67.1 1.4 70.4 0 73.8 0h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1L64.6 3.8z"/><path d="M333.1 120.1c-2.4-2.4-5.7-3.8-9.2-3.8H6.5c-5.8 0-8.7 7-4.6 11.1l62.7 62.7c2.4 2.4 5.7 3.8 9.2 3.8h317.4c5.8 0 8.7-7 4.6-11.1l-62.7-62.7z"/></svg> Solana, <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;vertical-align:middle;margin:0 2px"><path d="M12 2L2 19.5h20L12 2zm0 4l6.5 11.5h-13L12 6z"/></svg> TON <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor" style="width:12px;height:12px;vertical-align:middle;margin:0 1px"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69.01-.03.01-.14-.05-.2-.06-.05-.15-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.51 2.78-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/></svg>, or via traditional bank and broker rails <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;vertical-align:middle;margin:0 2px"><path d="M4 10h3v7H4zm6 0h3v7h-3zm7 0h3v7h-3zM2 22h20v-3H2zM12 1L2 6v2h20V6z"/></svg> (ISIN/Clearstream).</p>
+            <p class="hero-desc">Issue or trade hybrid bonds and asset-backed securities on <svg class="inline-icon" viewBox="0 0 397 312" fill="currentColor" style="width:14px;height:11px;vertical-align:middle;margin:0 2px"><path d="M64.6 237.9c2.4-2.4 5.7-3.8 9.2-3.8h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1l62.7-62.7z"/><path d="M64.6 3.8C67.1 1.4 70.4 0 73.8 0h317.4c5.8 0 8.7 7 4.6 11.1l-62.7 62.7c-2.4 2.4-5.7 3.8-9.2 3.8H6.5c-5.8 0-8.7-7-4.6-11.1L64.6 3.8z"/><path d="M333.1 120.1c-2.4-2.4-5.7-3.8-9.2-3.8H6.5c-5.8 0-8.7 7-4.6 11.1l62.7 62.7c2.4 2.4 5.7 3.8 9.2 3.8h317.4c5.8 0 8.7-7 4.6-11.1l-62.7-62.7z"/></svg> Solana, <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;vertical-align:middle;margin:0 2px"><path d="M12 2L2 19.5h20L12 2zm0 4l6.5 11.5h-13L12 6z"/></svg> TON, or <svg class="inline-icon" viewBox="0 0 24 24" fill="currentColor" style="width:14px;height:14px;vertical-align:middle;margin:0 2px"><path d="M4 10h3v7H4zm6 0h3v7h-3zm7 0h3v7h-3zM2 22h20v-3H2zM12 1L2 6v2h20V6z"/></svg> ISIN.<br>Access multi-broker OTC liquidity. Convert DeFi↔TradFi (ISIN) freely.</p>
             
         </div>
         
@@ -1495,8 +1498,14 @@
                 const colorValue = Math.round(255 - (255 - 35) * colorProgress);
                 const color = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
                 
+                // Shadow: fade out as we scroll
+                const shadowOpacity = Math.max(0, 0.5 - (colorProgress * 0.5));
+                const shadowBlur = Math.max(0, 4 - (colorProgress * 4));
+                const shadow = shadowOpacity > 0 ? `0 2px ${shadowBlur}px rgba(0,0,0,${shadowOpacity})` : 'none';
+                
                 editorialParagraphs.forEach(p => {
                     p.style.color = color;
+                    p.style.textShadow = shadow;
                 });
             }
         });
