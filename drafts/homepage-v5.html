@@ -79,23 +79,14 @@
         }
         
         .pattern-overlay {
-            position: fixed;
-            inset: 0;
-            background: 
-                radial-gradient(ellipse 80% 60% at 50% 0%, transparent 0%, var(--ivory) 70%),
-                radial-gradient(ellipse 100% 80% at 50% 100%, transparent 0%, var(--ivory) 60%);
-            pointer-events: none;
-            z-index: 1;
-            /* Hide on hero section - show only after scrolling */
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            display: none;
         }
         
         .pattern-overlay.visible {
-            opacity: 1;
+            display: none;
         }
         
-        /* Noise texture overlay - hidden on hero */
+        /* Noise texture overlay - removed */
         .noise {
             position: fixed;
             inset: 0;
@@ -240,8 +231,7 @@
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           HERO - The WOW Moment - SUNRISE REVEAL
-           Dark background, grey text rises and ignites into golden sunlight
+           HERO - Clean dark section with background image
         ═══════════════════════════════════════════════════════════════ */
         .hero {
             height: 100vh;
@@ -255,7 +245,6 @@
             position: relative;
             z-index: 10;
             overflow: visible;
-            background: #0a0a0a;
         }
         
         /* Background image layer */
@@ -264,7 +253,6 @@
             inset: 0;
             z-index: 0;
             overflow: hidden;
-            background: #000000; /* Black underlayer */
         }
         
         .hero-bg img {
@@ -275,79 +263,19 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
-            opacity: 0.8; /* 80% opacity over black */
-            /* Slow continuous zoom IN - ~9% per minute, reaches 10% at ~1 minute */
-            transform-origin: center center;
-            transform: scale(1);
-            animation: heroSlowZoom 66s linear forwards;
         }
         
-        @keyframes heroSlowZoom {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(1.1);
-            }
-        }
-        
-        /* Contrast/color overlay layer - between image and text */
+        /* Dark overlay for text readability */
         .hero-overlay {
             position: absolute;
             inset: 0;
             z-index: 1;
+            background: rgba(0, 0, 0, 0.5);
             pointer-events: none;
-            /* Start very dark, shift to warm golden glow with strong contrast */
-            background: rgba(0, 0, 0, 0.7);
-            animation: overlayWarm 40s ease-out forwards;
         }
         
-        @keyframes overlayWarm {
-            0% {
-                background: rgba(0, 0, 0, 0.7); /* Very dark start */
-            }
-            30% {
-                background: rgba(5, 3, 0, 0.6); /* Still dark, hint of warmth */
-            }
-            60% {
-                background: linear-gradient(
-                    to top,
-                    rgba(40, 20, 0, 0.5) 0%,
-                    rgba(10, 5, 0, 0.55) 50%,
-                    rgba(0, 0, 0, 0.6) 100%
-                ); /* Golden glow from bottom, dark top */
-            }
-            100% {
-                background: linear-gradient(
-                    to top,
-                    rgba(60, 30, 0, 0.35) 0%,
-                    rgba(20, 10, 0, 0.5) 40%,
-                    rgba(0, 0, 0, 0.6) 100%
-                ); /* Orange/golden glow at bottom, strong black contrast at top */
-            }
-        }
-        
-        /* Sunrise glow effect from bottom - where image will be placed */
         .hero::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 140%;
-            height: 50%;
-            background: radial-gradient(
-                ellipse 70% 80% at 50% 100%,
-                rgba(255, 180, 80, 0.25) 0%,
-                rgba(255, 140, 50, 0.15) 20%,
-                rgba(255, 100, 40, 0.08) 40%,
-                rgba(200, 60, 30, 0.03) 60%,
-                transparent 80%
-            );
-            transform: translateX(-50%);
-            pointer-events: none;
-            z-index: 2;
-            opacity: 0;
-            animation: sunriseGlow 3s ease-out 0.5s forwards;
+            display: none;
         }
         
         @keyframes sunriseGlow {
@@ -378,123 +306,47 @@
         
         .hero h1 .line-inner {
             display: block;
-            /* Rise up from below - SLOWER, more dramatic */
-            transform: translateY(150%) scale(0.85);
+            /* Smooth entrance */
+            transform: translateY(100%);
             opacity: 0;
-            /* Grey text with bottom-up fill animation */
-            background: linear-gradient(
-                to top,
-                #4a4a4a 0%,
-                #4a4a4a 100%
-            );
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: 
-                sunriseText 3.5s cubic-bezier(0.22, 1, 0.36, 1) forwards,
-                sunriseFill 5s ease-out 2.5s forwards;
+            /* Start white, animate to warm orange glow */
+            color: #ffffff;
+            animation: headlineEnter 2s cubic-bezier(0.22, 1, 0.36, 1) forwards,
+                       headlineGlow 3s ease-out 1.5s forwards;
         }
         
-        .hero h1 .line:nth-child(1) .line-inner { animation-delay: 0.3s, 2.8s; }
+        .hero h1 .line:nth-child(1) .line-inner { animation-delay: 0.2s, 1.7s; }
         
-        @keyframes sunriseText {
+        @keyframes headlineEnter {
             0% { 
-                transform: translateY(150%) scale(0.85);
+                transform: translateY(100%);
                 opacity: 0;
             }
-            30% {
-                opacity: 0.5;
-            }
             100% { 
-                transform: translateY(0%) scale(1);
+                transform: translateY(0%);
                 opacity: 1;
             }
         }
         
-        /* Bottom-to-top sunrise fill - like light filling the letters from below */
-        @keyframes sunriseFill {
+        @keyframes headlineGlow {
             0% {
-                background: linear-gradient(
-                    to top,
-                    #4a4a4a 0%,
-                    #4a4a4a 100%
-                );
-                -webkit-background-clip: text;
-                background-clip: text;
+                color: #ffffff;
+                text-shadow: none;
             }
-            15% {
-                background: linear-gradient(
-                    to top,
-                    #c9a227 0%,
-                    #8a7a5a 20%,
-                    #5a5a5a 40%,
-                    #4a4a4a 100%
-                );
-                -webkit-background-clip: text;
-                background-clip: text;
-            }
-            35% {
-                background: linear-gradient(
-                    to top,
-                    #ffd700 0%,
-                    #e8b84a 30%,
-                    #a08060 50%,
-                    #5a5a5a 70%,
-                    #4a4a4a 100%
-                );
-                -webkit-background-clip: text;
-                background-clip: text;
-            }
-            55% {
-                background: linear-gradient(
-                    to top,
-                    #fffaf0 0%,
-                    #ffe4b5 25%,
-                    #ffd700 50%,
-                    #c9a227 70%,
-                    #8a7a5a 85%,
-                    #5a5a5a 100%
-                );
-                -webkit-background-clip: text;
-                background-clip: text;
-            }
-            75% {
-                background: linear-gradient(
-                    to top,
-                    #fffaf0 0%,
-                    #fff8dc 30%,
-                    #ffe4b5 55%,
-                    #ffd700 75%,
-                    #d4a574 90%,
-                    #a08060 100%
-                );
-                -webkit-background-clip: text;
-                background-clip: text;
+            50% {
+                color: #ffe4b5;
+                text-shadow: 0 0 30px rgba(255, 180, 100, 0.4);
             }
             100% {
-                background: linear-gradient(
-                    to top,
-                    #fffaf0 0%,
-                    #fff8dc 20%,
-                    #ffe4b5 45%,
-                    #ffd700 70%,
-                    #f5deb3 90%,
-                    #fffaf0 100%
-                );
-                -webkit-background-clip: text;
-                background-clip: text;
+                color: #ffd699;
+                text-shadow: 0 0 40px rgba(255, 160, 80, 0.3),
+                             0 0 80px rgba(255, 140, 60, 0.15);
             }
         }
-        
-        /* Glowing text shadow pulse after fully lit */
+        /* Subtle glow pulse */
         .hero h1 {
-            animation: textGlowPulse 4s ease-in-out 8s infinite;
+            animation: none;
         }
-        
-        @keyframes textGlowPulse {
-            0%, 100% {
-                filter: drop-shadow(0 0 20px rgba(255, 200, 100, 0.3));
-            }
             50% {
                 filter: drop-shadow(0 0 40px rgba(255, 180, 80, 0.5)) drop-shadow(0 0 80px rgba(255, 140, 50, 0.2));
             }
@@ -530,15 +382,15 @@
             opacity: 1;
         }
         
-        /* Editorial columns - at bottom of viewport, translated down so only top 50% visible */
+        /* Editorial columns - FIXED position, parallax via JS */
         .hero-editorial {
-            position: absolute;
+            position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
             padding: 0 48px;
-            z-index: 6;
-            transform: translateY(50%); /* Push down by half its height = top half visible */
+            z-index: 999; /* High z-index to stay above everything */
+            transform: translateY(50%); /* Half visible initially */
         }
         
         .hero-editorial .editorial-grid {
@@ -551,10 +403,10 @@
         
         .hero-editorial .editorial-col p {
             font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.85);
+            color: #ffffff; /* Start white, JS changes to dark */
             line-height: 1.9;
             margin-bottom: 24px;
-            transition: color 0.4s ease;
+            transition: color 0.1s ease;
         }
         
         .hero-editorial .editorial-col p:last-child {
@@ -562,9 +414,8 @@
         }
         
         .hero-editorial .editorial-col .hl {
-            color: #ffffff;
+            color: inherit;
             font-weight: 500;
-            transition: color 0.4s ease;
         }
         
         .hero-editorial .editorial-col .ul {
@@ -572,15 +423,6 @@
             text-decoration-color: var(--gold);
             text-underline-offset: 3px;
             text-decoration-thickness: 1px;
-        }
-        
-        /* When editorial columns transition to light background */
-        .hero-editorial.inverted .editorial-col p {
-            color: var(--graphite);
-        }
-        
-        .hero-editorial.inverted .editorial-col .hl {
-            color: var(--ink);
         }
         
         /* Buttons on dark background - TEXT STYLE */
@@ -705,12 +547,12 @@
         }
 
         /* ═══════════════════════════════════════════════════════════════
-           EDITORIAL SECTION - Stats row only (text parallaxes from hero)
+           EDITORIAL SECTION - Space for parallax columns to land
         ═══════════════════════════════════════════════════════════════ */
         .editorial-section {
-            padding: 120px 48px 60px;
+            padding: 400px 48px 60px; /* Large top padding for columns */
             position: relative;
-            z-index: 10;
+            z-index: 1; /* Low - fixed columns are above */
             background: var(--ivory);
         }
         
@@ -1261,18 +1103,29 @@
             .nav-links a:not(.btn-nav) { display: none; }
             
             .hero { padding: 0 24px; }
-            .hero-cta { flex-direction: column; }
+            .hero-cta { flex-direction: column; align-items: center; }
             
+            /* On mobile, editorial is NOT fixed - just flows below hero */
             .hero-editorial { 
-                padding: 0 24px; 
-                bottom: 5%;
+                position: relative !important;
+                bottom: auto !important;
+                top: auto !important;
+                transform: none !important;
+                padding: 40px 24px;
+                margin-top: 40px;
+                background: var(--ivory);
             }
             .hero-editorial .editorial-grid { 
                 grid-template-columns: 1fr; 
                 gap: 24px; 
             }
             .hero-editorial .editorial-col p {
-                font-size: 0.85rem;
+                font-size: 0.9rem;
+                color: var(--graphite) !important; /* Always dark on mobile */
+            }
+            
+            .editorial-section {
+                padding: 60px 24px; /* Less padding since columns are inline */
             }
             
             .editorial-section,
@@ -1280,11 +1133,11 @@
             .structure-section,
             .fees-section,
             .global-section,
-            .cta-section { padding: 80px 24px; }
+            .cta-section { padding: 60px 24px; }
             
             .editorial-grid { grid-template-columns: 1fr; gap: 32px; }
             .feature-grid { grid-template-columns: 1fr; }
-            .stats-row { grid-template-columns: 1fr; gap: 24px; }
+            .stats-row { grid-template-columns: repeat(2, 1fr); gap: 24px; }
             .global-stats { flex-direction: column; gap: 24px; }
             .global-card { padding: 40px 24px; }
             
@@ -1562,72 +1415,64 @@
     </footer>
 
     <script>
-        // Parallax pattern on scroll
-        let ticking = false;
-        const pattern = document.querySelector('.pattern-svg');
-        
-        window.addEventListener('scroll', () => {
-            if (!ticking) {
-                window.requestAnimationFrame(() => {
-                    const scrolled = window.pageYOffset;
-                    if (pattern) {
-                        pattern.style.transform = `translateY(${scrolled * 0.15}px) rotate(${scrolled * 0.01}deg)`;
-                    }
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
-        
-        // Nav scroll effect
         const nav = document.querySelector('nav');
-        const patternOverlay = document.querySelector('.pattern-overlay');
-        const noise = document.querySelector('.noise');
         const heroEditorial = document.getElementById('heroEditorial');
+        const editorialParagraphs = heroEditorial ? heroEditorial.querySelectorAll('p') : [];
         const editorialSection = document.querySelector('.editorial-section');
+        const windowHeight = window.innerHeight;
+        const isMobile = window.innerWidth <= 768;
         
+        // Get the height of the editorial columns
+        const columnsHeight = heroEditorial ? heroEditorial.offsetHeight : 300;
+        
+        // Simple scroll handler
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const windowHeight = window.innerHeight;
             
-            // Nav background on scroll
+            // Nav background
             if (scrolled > 60) {
                 nav.classList.add('scrolled');
             } else {
                 nav.classList.remove('scrolled');
             }
             
-            // Show pattern/noise only after scrolling past initial view
-            if (scrolled > windowHeight * 0.3) {
-                patternOverlay.classList.add('visible');
-                noise.classList.add('visible');
-            } else {
-                patternOverlay.classList.remove('visible');
-                noise.classList.remove('visible');
-            }
+            // Skip parallax on mobile - CSS handles it
+            if (isMobile) return;
             
-            // Parallax effect on editorial columns
-            // They move UP slower than scroll speed, creating parallax
-            // This makes them "lag behind" as you scroll down
-            if (heroEditorial) {
-                const parallaxOffset = scrolled * -0.3; // Moves up at 30% of scroll speed (slower)
-                heroEditorial.style.transform = `translateY(${parallaxOffset}px)`;
+            // Editorial columns parallax (desktop only)
+            if (heroEditorial && editorialSection) {
+                // Calculate where columns should "land" - top of editorial section
+                const sectionTop = editorialSection.offsetTop;
+                const landingScroll = sectionTop - windowHeight + columnsHeight + 40;
                 
-                // Get editorial position relative to viewport
-                const editorialRect = heroEditorial.getBoundingClientRect();
-                const editorialTop = editorialRect.top;
-                
-                // Invert colors when editorial reaches top half of screen on white bg
-                // This happens when they've scrolled enough to be "over" the white section
-                if (scrolled > windowHeight * 0.5) {
-                    heroEditorial.classList.add('inverted');
+                if (scrolled < landingScroll) {
+                    // Phase 1: Fixed, revealing
+                    heroEditorial.style.position = 'fixed';
+                    heroEditorial.style.bottom = '0';
+                    heroEditorial.style.top = 'auto';
+                    
+                    // Reveal: 50% -> 0%
+                    const revealProgress = Math.min(1, scrolled / (windowHeight * 0.5));
+                    const translateY = Math.max(0, 50 - (revealProgress * 50));
+                    heroEditorial.style.transform = `translateY(${translateY}%)`;
                 } else {
-                    heroEditorial.classList.remove('inverted');
+                    // Phase 2: Absolute, locked in place at top of white section
+                    heroEditorial.style.position = 'absolute';
+                    heroEditorial.style.bottom = 'auto';
+                    heroEditorial.style.top = `${sectionTop + 40}px`;
+                    heroEditorial.style.transform = 'none';
                 }
+                
+                // Color: turn black quickly
+                const colorProgress = Math.min(1, scrolled / (windowHeight * 0.3));
+                const colorValue = Math.round(255 - (255 - 35) * colorProgress);
+                const color = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+                
+                editorialParagraphs.forEach(p => {
+                    p.style.color = color;
+                });
             }
         });
-        
-        // All sections visible on load - no intersection observer hiding
     </script>
 </body>
 </html>
