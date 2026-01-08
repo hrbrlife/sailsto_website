@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sails.to — Raise Your Sails</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0a1628;
+            --bg-light: #0f1d32;
+            --surface: #132039;
+            --border: rgba(255,255,255,0.06);
+            --border-hover: rgba(255,255,255,0.12);
+            --white: #ffffff;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-400: #94a3b8;
+            --gray-500: #64748b;
+            --gray-600: #475569;
+            --blue: #3b82f6;
+            --blue-light: #60a5fa;
+            --cyan: #06b6d4;
+            --emerald: #10b981;
+            --gradient: linear-gradient(135deg, var(--blue) 0%, var(--cyan) 50%, var(--emerald) 100%);
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--white);
+            line-height: 1.6;
+            font-size: 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        ::selection {
+            background: var(--blue);
+            color: var(--white);
+        }
+
+        /* Nav */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 0 60px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(10, 22, 40, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-icon { font-size: 1.5rem; }
+        
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+        
+        .nav-links a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover { color: var(--white); }
+        
+        .btn-nav {
+            background: var(--white);
+            color: var(--bg) !important;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        .btn-nav:hover { opacity: 0.9; }
+
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 140px 60px 80px;
+            position: relative;
+            background: 
+                radial-gradient(ellipse 80% 50% at 50% -20%, rgba(59, 130, 246, 0.12), transparent),
+                radial-gradient(ellipse 50% 40% at 80% 70%, rgba(6, 182, 212, 0.08), transparent);
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 8px 18px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--emerald);
+            margin-bottom: 36px;
+            font-family: 'JetBrains Mono', monospace;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+        }
+        
+        .hero-badge .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--emerald);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+        
+        .hero h1 {
+            font-size: clamp(3.2rem, 7vw, 5rem);
+            font-weight: 800;
+            letter-spacing: -2px;
+            line-height: 1.05;
+            margin-bottom: 28px;
+        }
+        
+        .hero h1 em {
+            font-style: normal;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-sub {
+            font-size: 1.35rem;
+            color: var(--gray-200);
+            margin-bottom: 20px;
+            font-weight: 500;
+            letter-spacing: -0.3px;
+        }
+        
+        .hero p {
+            font-size: 1.05rem;
+            color: var(--gray-400);
+            max-width: 560px;
+            margin-bottom: 44px;
+            line-height: 1.7;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 14px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 15px 30px;
+            border-radius: 10px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s ease;
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--white);
+            color: var(--bg);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 40px rgba(255,255,255,0.12);
+        }
+        
+        .btn-ghost {
+            background: transparent;
+            color: var(--gray-400);
+            border: 1px solid var(--border);
+        }
+        
+        .btn-ghost:hover {
+            border-color: var(--border-hover);
+            color: var(--white);
+        }
+        
+        .btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        /* Editorial */
+        .editorial {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 56px;
+            max-width: 920px;
+            margin: 0 auto 48px;
+            text-align: left;
+            padding: 48px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .editorial-col p {
+            font-size: 0.95rem;
+            color: var(--gray-400);
+            line-height: 1.8;
+            margin-bottom: 18px;
+        }
+        
+        .editorial-col p:last-child {
+            margin-bottom: 0;
+        }
+        
+        .editorial-col .hl {
+            background: rgba(59, 130, 246, 0.12);
+            padding: 1px 5px;
+            border-radius: 3px;
+            color: var(--gray-200);
+        }
+        
+        .editorial-col .ul {
+            text-decoration: underline;
+            text-decoration-color: var(--emerald);
+            text-underline-offset: 3px;
+            text-decoration-thickness: 1.5px;
+            color: var(--gray-200);
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 64px;
+            margin-top: 60px;
+            padding-top: 48px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--white);
+            letter-spacing: -1px;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--gray-500);
+            margin-top: 4px;
+        }
+
+        /* Sections */
+        section {
+            padding: 120px 60px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--blue-light);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 14px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            letter-spacing: -1px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+        
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--gray-400);
+            max-width: 480px;
+            line-height: 1.7;
+        }
+
+        /* Features */
+        .features {
+            background: var(--bg-light);
+        }
+        
+        .features-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+        
+        .features-header .section-title,
+        .features-header .section-desc {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        
+        .feature-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px 28px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            background: rgba(255,255,255,0.04);
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+        }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(6, 182, 212, 0.15));
+        }
+        
+        .feature-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            letter-spacing: -0.2px;
+        }
+        
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--gray-400);
+            line-height: 1.6;
+        }
+
+        /* Structure */
+        .structure {
+            background: var(--bg);
+        }
+        
+        .structure-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .structure-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .structure-card {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 28px 32px;
+            cursor: default;
+            transition: all 0.3s ease;
+        }
+        
+        .structure-card:hover {
+            border-color: var(--blue);
+            background: rgba(59, 130, 246, 0.06);
+        }
+        
+        .structure-card h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .tag {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            background: var(--emerald);
+            color: var(--bg);
+            padding: 4px 10px;
+            border-radius: 100px;
+        }
+        
+        .structure-card p {
+            font-size: 0.9rem;
+            color: var(--gray-400);
+            line-height: 1.6;
+        }
+
+        /* Fees */
+        .fees {
+            background: var(--bg-light);
+        }
+        
+        .fees-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .fee-table {
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .fee-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 22px 28px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .fee-row:last-child {
+            border-bottom: none;
+        }
+        
+        .fee-row .label {
+            color: var(--gray-400);
+            font-weight: 500;
+        }
+        
+        .fee-row .value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--emerald);
+        }
+        
+        .fee-note {
+            margin-top: 20px;
+            padding: 16px 20px;
+            background: rgba(16, 185, 129, 0.06);
+            border: 1px solid rgba(16, 185, 129, 0.12);
+            border-radius: 10px;
+            font-size: 0.85rem;
+            color: var(--gray-300);
+        }
+        
+        .fee-note strong {
+            color: var(--emerald);
+        }
+
+        /* Global */
+        .global {
+            background: var(--bg);
+        }
+        
+        .global-card {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 56px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            text-align: center;
+        }
+        
+        .global-card .section-title {
+            margin: 0 auto 16px;
+        }
+        
+        .global-card > p {
+            font-size: 1.05rem;
+            color: var(--gray-400);
+            line-height: 1.7;
+            max-width: 560px;
+            margin: 0 auto 32px;
+        }
+        
+        .global-stats {
+            display: flex;
+            justify-content: center;
+            gap: 56px;
+            padding-top: 28px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .global-stat {
+            text-align: center;
+        }
+        
+        .global-stat .value {
+            font-size: 1.3rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--white);
+        }
+        
+        .global-stat .label {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            margin-top: 4px;
+        }
+
+        /* CTA */
+        .cta {
+            background: var(--gradient);
+            text-align: center;
+            padding: 100px 60px;
+        }
+        
+        .cta h2 {
+            font-size: clamp(2rem, 4vw, 2.8rem);
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+        
+        .cta p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 480px;
+            margin: 0 auto 36px;
+        }
+        
+        .cta .btn-primary {
+            background: var(--bg);
+            color: var(--white);
+        }
+        
+        .cta .btn-primary:hover {
+            background: var(--bg-light);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg);
+            padding: 80px 60px 40px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-brand p {
+            color: var(--gray-500);
+            margin-top: 14px;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .footer-col h4 {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            color: var(--gray-400);
+            margin-bottom: 18px;
+        }
+        
+        .footer-col a {
+            display: block;
+            color: var(--gray-500);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 6px 0;
+            transition: color 0.2s;
+        }
+        
+        .footer-col a:hover {
+            color: var(--white);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 56px auto 0;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray-600);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .feature-grid { grid-template-columns: repeat(2, 1fr); }
+            .structure-grid, .fees-grid { grid-template-columns: 1fr; gap: 48px; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            nav { padding: 0 24px; }
+            section { padding: 80px 24px; }
+            .hero { padding: 120px 24px 80px; }
+            .editorial { grid-template-columns: 1fr; gap: 32px; }
+            .stats { flex-direction: column; gap: 24px; }
+            .feature-grid { grid-template-columns: 1fr; }
+            .global-stats { flex-direction: column; gap: 20px; }
+            .global-card { padding: 36px 24px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 36px; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#" class="logo">
+            <span class="logo-icon">⛵</span>
+            sails.to
+        </a>
+        <div class="nav-links">
+            <a href="#">For Issuers</a>
+            <a href="#">For Investors</a>
+            <a href="#">Documentation</a>
+            <a href="#" class="btn-nav">Get Started</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-badge">
+            <span class="dot"></span>
+            Live in March 2026
+        </div>
+        
+        <h1>Raise <em>your</em> sails.</h1>
+        
+        <p class="hero-sub">Tokenized securities infrastructure you actually own.</p>
+        
+        <p>Legal entity, issuance platform, and liquidity network — bundled. No intermediary holding your cap table. No vendor lock-in. Launch in weeks.</p>
+        
+        <div class="editorial">
+            <div class="editorial-col">
+                <p>Most platforms ask you to hand over the keys. We hand you a <span class="hl">DAO LLC</span> — Wyoming or Marshall Islands, your call. Inside: isolated Series for treasury, reserves, pledges, even TradFi-locked bonds. Each compartment is <span class="ul">legally firewalled</span>. You appoint a licensed trust provider as neutral overseer. They audit. They don't touch. 🔐</p>
+                <p>Mint security tokens on Solana. Place them directly to your own network — or drop a sell order into our <span class="ul">licensed broker OTC network</span> and let their clients come to you. Compliance gates fire on every transfer. Settlement is atomic. Your cap table updates before you refresh the page.</p>
+            </div>
+            <div class="editorial-col">
+                <p>Here's where it gets interesting. Lock your tokens into a TradFi Bridge Series and <span class="hl">mint ISIN-bearing bonds</span> — the kind that clear through Clearstream to any private bank on earth. Need a publicly listed instrument? Register on Vienna MTF. Same economics, <span class="ul">two rails</span>, one dashboard. 🌉</p>
+                <p>The fund manager in Zurich and the DeFi native in Singapore can hold the exact same security — one through her Bloomberg terminal, one in a Solana wallet. <span class="ul">Cross-convert anytime</span>. No friction, no paperwork, no waiting for T+2. This is what portable capital actually looks like.</p>
+            </div>
+        </div>
+        
+        <div class="hero-cta">
+            <a href="#" class="btn btn-primary">
+                Start your Fundraising
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+            </a>
+            <a href="#" class="btn btn-ghost">View Documentation</a>
+        </div>
+        
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value">$600K</div>
+                <div class="stat-label">Minimum raise</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">1–2 wks</div>
+                <div class="stat-label">Time to launch</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">0.5%</div>
+                <div class="stat-label">Direct placement</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">6%</div>
+                <div class="stat-label">Broker network</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="features-header">
+                <div class="section-label">Everything Included</div>
+                <h2 class="section-title">Not just tokens.<br>The full stack.</h2>
+                <p class="section-desc">Legal structure, management platform, and distribution network. One integration.</p>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>DAO Series LLC</h3>
+                    <p>Wyoming or RMI entity with isolated Series for treasury, reserves, pledges, and TradFi bridges. Portable forever.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3>Trust Oversight</h3>
+                    <p>Appoint SVG Financial Trustees or your own licensed provider as neutral party with platform access.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Broker OTC Network</h3>
+                    <p>Place directly or post sell orders to licensed brokers. Primary distribution and secondary trading built in.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Dual Settlement</h3>
+                    <p>Solana tokens or ISIN bonds via Clearstream. Cross-convert seamlessly. List on Vienna MTF if needed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="structure">
+        <div class="container">
+            <div class="structure-grid">
+                <div>
+                    <div class="section-label">Isolated by Design</div>
+                    <h2 class="section-title">One entity,<br>many compartments.</h2>
+                    <p class="section-desc">Your DAO LLC contains multiple Series — legally isolated containers for different aspects of your issuance. Clean separation, full control.</p>
+                </div>
+                
+                <div class="structure-cards">
+                    <div class="structure-card">
+                        <h4>Operating Series</h4>
+                        <p>Holds pledges, underlying assets, and receives revenue for your specific offering.</p>
+                    </div>
+                    <div class="structure-card">
+                        <h4>Treasury Series</h4>
+                        <p>Reserves, operational funds, unclaimed distributions. Neutral trust oversight.</p>
+                    </div>
+                    <div class="structure-card">
+                        <h4>TradFi Bridge Series</h4>
+                        <p>Lock tokens here to mint ISIN-bearing bonds. Clearstream settlement, Vienna MTF listing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fees">
+        <div class="container">
+            <div class="fees-grid">
+                <div>
+                    <div class="section-label">Pay After Success</div>
+                    <h2 class="section-title">Zero risk<br>to launch.</h2>
+                    <p class="section-desc">No setup fees. No monthly fees. You pay only on successfully raised capital. Miss your soft cap? Everyone gets reimbursed automatically.</p>
+                </div>
+                
+                <div>
+                    <div class="fee-table">
+                        <div class="fee-row">
+                            <span class="label">Direct placement</span>
+                            <span class="value">0.5%</span>
+                        </div>
+                        <div class="fee-row">
+                            <span class="label">Broker network</span>
+                            <span class="value">6%</span>
+                        </div>
+                        <div class="fee-row">
+                            <span class="label">Secondary trades</span>
+                            <span class="value">0.5%</span>
+                        </div>
+                    </div>
+                    <div class="fee-note">
+                        <strong>Soft cap miss = full refund.</strong> Investors reimbursed automatically. You owe nothing.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="global">
+        <div class="container">
+            <div class="global-card">
+                <div class="section-label">TradFi Bridge</div>
+                <h2 class="section-title">Clearstream to any bank worldwide.</h2>
+                <p>Lock tokens in your TradFi Bridge Series. Mint ISIN-bearing bonds. Clear OTC through Clearstream to institutional investors and private banks globally. Need a publicly listed security? Register on Vienna MTF.</p>
+                
+                <div class="global-stats">
+                    <div class="global-stat">
+                        <div class="value">~€3-5K</div>
+                        <div class="label">ISIN setup</div>
+                    </div>
+                    <div class="global-stat">
+                        <div class="value">~1 week</div>
+                        <div class="label">Timeline</div>
+                    </div>
+                    <div class="global-stat">
+                        <div class="value">Seamless</div>
+                        <div class="label">DeFi ↔ TradFi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <h2>Ready to raise?</h2>
+        <p>Join issuers who want control, not intermediaries.</p>
+        <a href="#" class="btn btn-primary">
+            Start your Fundraising
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-icon">⛵</span>
+                    sails.to
+                </a>
+                <p>DAO-native securities infrastructure. Pay after success.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <a href="#">For Issuers</a>
+                <a href="#">For Investors</a>
+                <a href="#">For Brokers</a>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="#">Documentation</a>
+                <a href="#">Smart Contracts</a>
+                <a href="#">Melusina OS</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Legal</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Sails.to Foundation</span>
+            <span>Professional investors only · Securities through licensed brokers</span>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sails.to — Run Your Market Like You Run Your Business</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000000;
+            --bg: #030712;
+            --surface: #0a0f1a;
+            --surface-2: #111827;
+            --border: rgba(255,255,255,0.06);
+            --border-hover: rgba(255,255,255,0.12);
+            --white: #ffffff;
+            --gray-50: #f9fafb;
+            --gray-200: #e5e7eb;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --accent: #3b82f6;
+            --accent-2: #06b6d4;
+            --green: #10b981;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: var(--bg);
+            color: var(--white);
+            line-height: 1.6;
+            font-feature-settings: 'ss01' on, 'ss02' on, 'cv01' on;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        ::selection {
+            background: var(--accent);
+            color: var(--white);
+        }
+
+        /* Noise texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+            pointer-events: none;
+            z-index: 1000;
+        }
+
+        /* Grid lines background */
+        .grid-bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+            background-size: 100px 100px;
+            mask-image: radial-gradient(ellipse 80% 50% at 50% 0%, black, transparent);
+            z-index: -1;
+        }
+
+        /* Glow effect */
+        .glow {
+            position: fixed;
+            top: -50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1200px;
+            height: 1200px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 0 48px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid transparent;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        nav.scrolled {
+            background: rgba(3, 7, 18, 0.85);
+            backdrop-filter: blur(24px) saturate(180%);
+            border-color: var(--border);
+        }
+        
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo-mark {
+            font-size: 1.5rem;
+        }
+        
+        .nav-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            background: var(--surface);
+            padding: 6px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        
+        .nav-center a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        
+        .nav-center a:hover {
+            color: var(--white);
+            background: rgba(255,255,255,0.05);
+        }
+        
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        
+        .nav-right a {
+            color: var(--gray-400);
+            text-decoration: none;
+            font-size: 0.875rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        
+        .nav-right a:hover {
+            color: var(--white);
+        }
+        
+        .btn-nav {
+            background: var(--white);
+            color: var(--black);
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+        
+        .btn-nav:hover {
+            opacity: 0.9;
+            transform: translateY(-1px);
+        }
+
+        /* Hero — Two column layout with editorial sidebar */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 80px;
+            align-items: center;
+            padding: 140px 48px 100px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .hero-main {
+            max-width: 680px;
+        }
+        
+        .hero-main p {
+            text-align: left;
+            margin: 0 0 24px 0;
+        }
+        
+        .hero-main .hero-cta {
+            justify-content: flex-start;
+            margin-bottom: 0;
+        }
+        
+        /* Editorial sidebar — 80s magazine style */
+        .hero-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+            padding: 40px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            position: relative;
+        }
+        
+        .hero-sidebar::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 40px;
+            right: 40px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: 0.4;
+        }
+        
+        .sidebar-quote {
+            font-size: 0.95rem;
+            color: var(--gray-200);
+            line-height: 1.75;
+            font-style: italic;
+            padding-left: 20px;
+            border-left: 2px solid var(--accent);
+        }
+        
+        .sidebar-slogans {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
+        .slogan {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gray-500);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .slogan::before {
+            content: '';
+            width: 16px;
+            height: 1px;
+            background: var(--gray-600);
+        }
+        
+        .sidebar-metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .sidebar-metric {
+            text-align: left;
+        }
+        
+        .sidebar-metric .value {
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--white);
+            letter-spacing: -0.02em;
+        }
+        
+        .sidebar-metric .label {
+            font-size: 0.7rem;
+            color: var(--gray-500);
+            margin-top: 2px;
+        }
+
+        /* The Shift — Before/After for Made to Stick concreteness */
+        .shift-section {
+            padding: 100px 48px;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .shift-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .shift-col {
+            background: var(--bg);
+            padding: 48px 40px;
+        }
+        
+        .shift-col h3 {
+            font-size: 0.72rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 28px;
+            color: var(--gray-500);
+        }
+        
+        .shift-col.old h3 { color: var(--gray-600); }
+        .shift-col.new h3 { color: var(--green); }
+        
+        .shift-col ul {
+            list-style: none;
+        }
+        
+        .shift-col li {
+            padding: 14px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.92rem;
+            color: var(--gray-300);
+        }
+        
+        .shift-col li:last-child {
+            border-bottom: none;
+        }
+        
+        .shift-col.old li {
+            color: var(--gray-500);
+            text-decoration: line-through;
+            text-decoration-color: var(--gray-600);
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.2);
+            padding: 8px 16px;
+            border-radius: 100px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--green);
+            margin-bottom: 32px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .hero-badge .pulse {
+            width: 6px;
+            height: 6px;
+            background: var(--green);
+            border-radius: 50%;
+            position: relative;
+        }
+        
+        .hero-badge .pulse::before {
+            content: '';
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            background: var(--green);
+            animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+        }
+        
+        @keyframes ping {
+            75%, 100% { transform: scale(2); opacity: 0; }
+        }
+        
+        .hero h1 {
+            font-size: clamp(2.4rem, 5vw, 3.5rem);
+            font-weight: 700;
+            letter-spacing: -0.035em;
+            line-height: 1.1;
+            margin-bottom: 28px;
+            max-width: 600px;
+        }
+        
+        .hero-lead {
+            font-size: 1.15rem;
+            color: var(--gray-300);
+            line-height: 1.75;
+            margin-bottom: 20px;
+            max-width: 540px;
+        }
+        
+        .hero-sub {
+            font-size: 1rem;
+            color: var(--gray-400);
+            line-height: 1.75;
+            margin-bottom: 40px;
+            max-width: 520px;
+        }
+        
+        .hero-cta {
+            display: flex;
+            gap: 12px;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+            cursor: pointer;
+            border: none;
+        }
+        
+        .btn-primary {
+            background: var(--white);
+            color: var(--black);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 0 0 1px rgba(255,255,255,0.1),
+                0 20px 40px -10px rgba(0,0,0,0.5),
+                0 0 60px rgba(59, 130, 246, 0.15);
+        }
+        
+        .btn-secondary {
+            background: var(--surface);
+            color: var(--gray-200);
+            border: 1px solid var(--border);
+        }
+        
+        .btn-secondary:hover {
+            border-color: var(--border-hover);
+            background: var(--surface-2);
+        }
+        
+        .btn svg {
+            width: 16px;
+            height: 16px;
+        }
+
+
+
+        /* Sections */
+        section {
+            padding: 160px 48px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            margin-bottom: 80px;
+        }
+        
+        .section-header.center {
+            text-align: center;
+        }
+        
+        .section-header.center .section-title,
+        .section-header.center .section-desc {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .section-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 16px;
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            max-width: 600px;
+        }
+        
+        .section-desc {
+            font-size: 1.1rem;
+            color: var(--gray-400);
+            line-height: 1.7;
+            max-width: 480px;
+        }
+
+        /* Features */
+        .features-section {
+            background: linear-gradient(180deg, var(--bg) 0%, var(--surface) 100%);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--border);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        
+        .feature {
+            background: var(--bg);
+            padding: 48px 36px;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+        
+        .feature::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(59, 130, 246, 0.05) 0%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+        
+        .feature:hover {
+            background: var(--surface);
+        }
+        
+        .feature:hover::before {
+            opacity: 1;
+        }
+        
+        .feature-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            background: var(--surface);
+            border: 1px solid var(--border);
+        }
+        
+        .feature h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+        
+        .feature p {
+            font-size: 0.9rem;
+            color: var(--gray-400);
+            line-height: 1.6;
+        }
+
+        /* Paths */
+        .paths-section {
+            background: var(--surface);
+        }
+        
+        .paths-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .paths-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .path-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 32px;
+            display: flex;
+            gap: 20px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .path-card:hover {
+            border-color: var(--accent);
+            transform: translateX(8px);
+            box-shadow: 0 0 40px rgba(59, 130, 246, 0.1);
+        }
+        
+        .path-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-2));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+        
+        .path-content h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .path-tag {
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            background: var(--green);
+            color: var(--black);
+            padding: 3px 8px;
+            border-radius: 4px;
+        }
+        
+        .path-content p {
+            font-size: 0.9rem;
+            color: var(--gray-400);
+            line-height: 1.55;
+        }
+
+        /* Pricing */
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .pricing-table {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .pricing-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px 32px;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+        
+        .pricing-row:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-row:hover {
+            background: rgba(255,255,255,0.02);
+        }
+        
+        .pricing-row .label {
+            color: var(--gray-200);
+            font-weight: 500;
+        }
+        
+        .pricing-row .value {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--green);
+        }
+
+        /* CTA */
+        .cta-section {
+            text-align: center;
+        }
+        
+        .cta-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 32px;
+            padding: 80px 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        
+        .cta-card .section-title {
+            margin: 0 auto 16px;
+        }
+        
+        .cta-card p {
+            font-size: 1.1rem;
+            color: var(--gray-400);
+            margin-bottom: 40px;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Footer */
+        footer {
+            padding: 80px 48px 40px;
+            border-top: 1px solid var(--border);
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 64px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .footer-brand p {
+            color: var(--gray-500);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            margin-top: 16px;
+        }
+        
+        .footer-col h4 {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gray-400);
+            margin-bottom: 20px;
+        }
+        
+        .footer-col a {
+            display: block;
+            color: var(--gray-500);
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 6px 0;
+            transition: color 0.2s;
+        }
+        
+        .footer-col a:hover {
+            color: var(--white);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 48px auto 0;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            color: var(--gray-600);
+            font-size: 0.8rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .hero { grid-template-columns: 1fr; max-width: 700px; }
+            .hero-sidebar { display: none; }
+        }
+        
+        @media (max-width: 1024px) {
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .paths-grid, .pricing-grid { grid-template-columns: 1fr; gap: 48px; }
+            .shift-grid { grid-template-columns: 1fr; }
+            .nav-center { display: none; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 768px) {
+            nav { padding: 0 24px; }
+            section { padding: 100px 24px; }
+            .hero { padding: 120px 24px 80px; }
+            .shift-section { padding: 80px 24px; }
+            .features-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: 40px; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-bg"></div>
+    <div class="glow"></div>
+
+    <nav id="nav">
+        <a href="#" class="logo">
+            <span class="logo-mark">⛵</span>
+            sails.to
+        </a>
+        <div class="nav-center">
+            <a href="#">Issuers</a>
+            <a href="#">Investors</a>
+            <a href="#">Partners</a>
+            <a href="#">Docs</a>
+        </div>
+        <div class="nav-right">
+            <a href="#">Sign In</a>
+            <a href="#" class="btn-nav">Get Started</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-main">
+            <div class="hero-badge">
+                <span class="pulse"></span>
+                mainnet // solana
+            </div>
+            
+            <h1>Run your market like you run your business.</h1>
+            
+            <p class="hero-lead">For years, issuing securities has meant outsourcing control. Investor verification, communication, and market access were handled elsewhere — efficiently, but never directly.</p>
+            
+            <p class="hero-sub">This platform changes that structure without changing the rules. You verify your own investors. You manage your own relationships. The market works — and it finally feels like yours.</p>
+            
+            <div class="hero-cta">
+                <a href="#" class="btn btn-primary">
+                    Start Application
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+                <a href="#" class="btn btn-secondary">Read Documentation</a>
+            </div>
+        </div>
+        
+        <div class="hero-sidebar">
+            <blockquote class="sidebar-quote">
+                "Control isn't about breaking rules. It's about knowing where decisions are made."
+            </blockquote>
+            
+            <div class="sidebar-slogans">
+                <div class="slogan">Issuer-led by design</div>
+                <div class="slogan">Infrastructure, not intermediation</div>
+                <div class="slogan">Ownership without noise</div>
+            </div>
+            
+            <div class="sidebar-metrics">
+                <div class="sidebar-metric">
+                    <div class="value">$600K</div>
+                    <div class="label">Min. raise</div>
+                </div>
+                <div class="sidebar-metric">
+                    <div class="value">1–2w</div>
+                    <div class="label">To launch</div>
+                </div>
+                <div class="sidebar-metric">
+                    <div class="value">0.5%</div>
+                    <div class="label">Your investors</div>
+                </div>
+                <div class="sidebar-metric">
+                    <div class="value">15+</div>
+                    <div class="label">Contracts</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Shift — Before/After comparison -->
+    <section class="shift-section">
+        <div class="container">
+            <div class="shift-grid">
+                <div class="shift-col old">
+                    <h3>Before</h3>
+                    <ul>
+                        <li>KYC outsourced to third parties</li>
+                        <li>Investor data held elsewhere</li>
+                        <li>Communication through intermediaries</li>
+                        <li>Market access requires listing</li>
+                        <li>Control traded for convenience</li>
+                    </ul>
+                </div>
+                <div class="shift-col new">
+                    <h3>With Sails.to</h3>
+                    <ul>
+                        <li>You run your own KYC</li>
+                        <li>Investor relationships stay in-house</li>
+                        <li>Direct, consistent communication</li>
+                        <li>OTC network with automatic matching</li>
+                        <li>Sovereignty is the default</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="container">
+            <div class="section-header center">
+                <div class="section-eyebrow">Infrastructure</div>
+                <h2 class="section-title">Everything to issue, manage, and trade.</h2>
+                <p class="section-desc">Legal structure, software, liquidity network — all in one sovereign platform. Not a feature list. A complete operating center.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>Legal Structure</h3>
+                    <p>DAO Series LLC in Wyoming or RMI. Your securities in your entity — not platform custody.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">💻</div>
+                    <h3>No-Code Platform</h3>
+                    <p>Melusina OS: Launch, issue, manage, distribute. Zero code required.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Liquidity Network</h3>
+                    <p>OTC matching engine + licensed brokers. Primary and secondary markets.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Dual Rails</h3>
+                    <p>Solana atomic settlement. Self-register ISIN for Clearstream.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="paths-section">
+        <div class="container">
+            <div class="paths-grid">
+                <div class="section-header">
+                    <div class="section-eyebrow">Your choice</div>
+                    <h2 class="section-title">Two paths. Both sovereign.</h2>
+                    <p class="section-desc">Launch fast with a Series, or deploy your own entity. Either way, the infrastructure works for you — not the other way around.</p>
+                </div>
+                
+                <div class="paths-cards">
+                    <div class="path-card">
+                        <div class="path-icon">📋</div>
+                        <div class="path-content">
+                            <h4>Series LLC <span class="path-tag">Fastest</span></h4>
+                            <p>Dedicated Series within our master structure. Live in days, not weeks. Same protections, lower costs.</p>
+                        </div>
+                    </div>
+                    <div class="path-card">
+                        <div class="path-icon">🏢</div>
+                        <div class="path-content">
+                            <h4>Your Own DAO LLC</h4>
+                            <p>No-code deploy Wyoming or RMI entity. Full independence. Your name. Portable forever.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="pricing-grid">
+                <div class="section-header">
+                    <div class="section-eyebrow">Transparent</div>
+                    <h2 class="section-title">Simple fees. No surprises.</h2>
+                    <p class="section-desc">Bring your own investors and pay less. Higher fee only when we source them for you.</p>
+                </div>
+                
+                <div class="pricing-table">
+                    <div class="pricing-row">
+                        <span class="label">Your investors</span>
+                        <span class="value">0.5%</span>
+                    </div>
+                    <div class="pricing-row">
+                        <span class="label">Network-sourced</span>
+                        <span class="value">6%</span>
+                    </div>
+                    <div class="pricing-row">
+                        <span class="label">Secondary trades</span>
+                        <span class="value">0.5%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="section-eyebrow">Get started</div>
+                <h2 class="section-title">The issuer becomes the operating center.</h2>
+                <p>Capital markets that operate at the speed — and clarity — of the businesses they serve.</p>
+                <a href="#" class="btn btn-primary">
+                    Start Your Application
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span class="logo-mark">⛵</span>
+                    sails.to
+                </a>
+                <p>Tokenized securities infrastructure.<br>Issuer-led by design.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <a href="#">For Issuers</a>
+                <a href="#">For Investors</a>
+                <a href="#">For Partners</a>
+            </div>
+            <div class="footer-col">
+                <h4>Resources</h4>
+                <a href="#">Documentation</a>
+                <a href="#">Smart Contracts</a>
+                <a href="#">Melusina OS</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Legal</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Sails.to Foundation</span>
+            <span>Professional investors only · Securities via licensed brokers</span>
+        </div>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('nav');
+        let ticking = false;
+        
+        window.addEventListener('scroll', () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    nav.classList.toggle('scrolled', window.scrollY > 20);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        });
+    </script>
+</body>
+</html>
