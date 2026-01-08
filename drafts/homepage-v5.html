@@ -286,12 +286,13 @@
         .hero-content {
             position: relative;
             z-index: 5;
+            margin-top: -104px;
         }
         
         /* Main headline - DRAMATIC SUNRISE ANIMATION */
         .hero h1 {
             font-family: var(--font-display);
-            font-size: clamp(4rem, 12vw, 10rem);
+            font-size: clamp(5.4rem, 14vw, 11.5rem);
             font-weight: 400;
             line-height: 0.9;
             letter-spacing: -0.03em;
@@ -354,19 +355,19 @@
         
         .hero-tagline {
             font-family: var(--font-ui);
-            font-size: 0.72rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.3em;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: none;
+            letter-spacing: 0.08em;
             color: #ffffff;
-            margin-top: 48px;
+            margin-top: 36px;
             opacity: 1;
         }
         
         .hero-desc {
             font-family: var(--font-body);
-            font-size: 1.1rem;
-            font-weight: 600;
+            font-size: 0.9rem;
+            font-weight: 700;
             color: #ffffff;
             max-width: 480px;
             margin: 24px auto 0;
@@ -1095,7 +1096,7 @@
             .structure-grid, .fees-grid { grid-template-columns: 1fr; gap: 48px; }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
             .stats-row { grid-template-columns: repeat(2, 1fr); }
-        }
+        }s
         
         @media (max-width: 768px) {
             nav { padding: 20px 24px; }
@@ -1103,6 +1104,10 @@
             .nav-links a:not(.btn-nav) { display: none; }
             
             .hero { padding: 0 24px; }
+            .hero-content { margin-top: -40px; }
+            .hero h1 { font-size: clamp(3.6rem, 16vw, 6.4rem); }
+            .hero-tagline { font-size: 0.9rem; letter-spacing: 0.05em; }
+            .hero-desc { font-size: 0.88rem; }
             .hero-cta { flex-direction: column; align-items: center; }
             
             /* On mobile, editorial is NOT fixed - just flows below hero */
@@ -1207,36 +1212,26 @@
             
             <p class="hero-tagline">Issue, trade and manage real securities on-chain and in TradFi simultaneously.</p>
             
-            <p class="hero-desc">We’ve reimagined Bonds, Coupons, and Profit Participation for the digital era. A sovereign RWA platform with instant intrabroker liquidity and no payment upfront. Just pure, unadulterated financial velocity.</p>
+            <p class="hero-desc">Real securities, reissued for the digital era: bonds with scheduled payments, profit participation, equity-style exposure, and real‑world assets. One security can be held on Solana, on TON, or as an ISIN at banks and brokerages — and converted between formats for KYC‑verified professional investors. Run the subscription and KYC yourself, or tap a broker OTC network for distribution and trading.</p>
             
-            <div class="hero-cta">
-                <a href="#" class="btn btn-primary">
-                    Start Fundraising
-                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-                </a>
-                <a href="#" class="btn btn-ghost">Documentation</a>
-            </div>
         </div>
         
         <!-- Editorial columns - only top half visible initially -->
         <div class="hero-editorial" id="heroEditorial">
             <div class="editorial-grid">
                 <div class="editorial-col">
-                    <p>Usually, when you access capital markets, you are renting. You rent the platform, you rent the compliance, and you definitely don't own the data. The radical alternative is to <span class="hl">own your infrastructure</span>.</p>
-                    <p>We bundled the hard things so you don't have to. You get a ready-to-use <span class="ul">DAO LLC</span> (Wyoming or RMI) that belongs to you. You get the software to run it. You get the compliance tools to verify your investors in-house, ensuring your data never leaks. <span class="hl">It is a private club where you hold the keys.</span></p>
+                    <p>Imagine a bond that can sit in a Solana wallet today and a Swiss bank account tomorrow — <span class="hl">same instrument, same rights, different format</span>. That's what we built. Solana token, TON wrapped asset, or ISIN held at any brokerage: pick one, switch later, your ownership doesn't change.</p>
+                    <p>The catch? You have to be a KYC-verified professional investor. No exceptions. But once you're in, you choose where and how you hold — and you can move between formats whenever you want.</p>
                 </div>
                 <div class="editorial-col">
-                    <p>This isn't just about privacy. It's about legitimate financial power. Issue bonds with automated coupons, profit participation rights, equity, or tokenize real-world assets. These are <span class="hl">real hybrid securities</span>: legally robust off-chain, automated on-chain.</p>
-                    <p>Launch and control everything from one dashboard. Manage your investor communications and distributions seamlessly, whether they hold Solana tokens, TON assets, or ISIN-bearing bonds. <span class="ul">It is one platform for every rail.</span></p>
-                    <p>And for liquidity? An <span class="ul">intrabroker OTC network</span> stands ready to match orders without the noise of a public exchange. You get the speed of crypto, the compliance of traditional finance, and the sovereignty of a structure that is finally yours.</p>
+                    <p>If you're raising capital, you have a choice. Run the subscription yourself — verify investors, collect funds, keep your data private. Or hand distribution to a network of licensed OTC dealers and let them bring the buyers. Mix both if you like.</p>
+                    <p>Same network handles secondary trading. No public exchange, no order book tourists. Just verified buyers and sellers, matched quietly.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="editorial-section">
-        <div class="editorial-container">
-            <!-- Editorial content now parallaxes from hero section above -->
             
             <div class="stats-row">
                 <div class="stat-item">
@@ -1269,23 +1264,23 @@
             <div class="feature-grid">
                 <div class="feature-card">
                     <span class="feature-icon">⚖️</span>
-                    <h3>DAO Series LLC</h3>
-                    <p>Wyoming or RMI entity with isolated Series for treasury, reserves, pledges, and TradFi bridges. Portable forever.</p>
+                    <h3>Issuer-Controlled Vehicle</h3>
+                    <p>Your own issuance structure with clean internal compartments for operations, reserves, and bridging — designed for privacy, control, and longevity.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">🔐</span>
                     <h3>Trust Oversight</h3>
-                    <p>Appoint SVG Financial Trustees or your own licensed provider as neutral party with platform access.</p>
+                    <p>Appoint a trustee from the network or bring your own licensed provider as an independent oversight party with the access they need.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">🔄</span>
                     <h3>Broker OTC Network</h3>
-                    <p>Place directly or post sell orders to licensed brokers. Primary distribution and secondary trading built in.</p>
+                    <p>Distribute directly, or work with licensed OTC dealers. Primary subscription and secondary trading routes are built in.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">🌐</span>
-                    <h3>Dual Settlement</h3>
-                    <p>Solana tokens or ISIN bonds via Clearstream. Cross-convert seamlessly. List on Vienna MTF if needed.</p>
+                    <h3>Interchangeable Holding</h3>
+                    <p>The same security can be held on Solana, on TON, or as an ISIN in traditional custody — convertible between formats for KYC‑verified professional investors.</p>
                 </div>
             </div>
         </div>
@@ -1297,7 +1292,7 @@
                 <div class="structure-content">
                     <span class="section-label">Isolated by Design</span>
                     <h2 class="section-title">One entity,<br>many compartments.</h2>
-                    <p class="section-desc">Your DAO LLC contains multiple Series — legally isolated containers for different aspects of your issuance. Clean separation, full control.</p>
+                    <p class="section-desc">Your issuance is organized into separate internal compartments for the different jobs a serious security needs: operations, reserves/distributions, and the TradFi bridge. Clear separation, clean governance, full control.</p>
                 </div>
                 
                 <div class="structure-cards">
@@ -1311,7 +1306,7 @@
                     </div>
                     <div class="structure-card">
                         <h4>TradFi Bridge Series</h4>
-                        <p>Lock tokens here to mint ISIN-bearing bonds. Clearstream settlement, Vienna MTF listing.</p>
+                        <p>Convert between on-chain form and ISIN form so eligible investors can hold through traditional custody without losing interoperability.</p>
                     </div>
                 </div>
             </div>
@@ -1355,7 +1350,7 @@
             <div class="global-card">
                 <span class="section-label">TradFi Bridge</span>
                 <h2 class="section-title">Clearstream to any bank worldwide.</h2>
-                <p>Lock tokens in your TradFi Bridge Series. Mint ISIN-bearing bonds. Clear OTC through Clearstream to institutional investors and private banks globally. Need a publicly listed security? Register on Vienna MTF.</p>
+                <p>This is the point where DeFi and TradFi stop arguing and start speaking the same language. Your security can be represented as an ISIN for traditional custody and settlement, while remaining interoperable with its on-chain form. For KYC‑verified professional investors, the holding format is a choice — not a different product.</p>
                 
                 <div class="global-stats">
                     <div class="global-stat">

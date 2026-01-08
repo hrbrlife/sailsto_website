@@ -8,6 +8,12 @@ I want to rewrite all the below text to be more "made to stick" and whimsical an
 Be the best copywriter in the world, Freud Communcations style.
  need you to be clinically accurate and dont make strange misleading statements. most of the issuers or traders would be used to tradfi or crypto and we need to explain that this is the institutional version of crypto based securities hybridized with the traditional financial system for issuer and investor flexibility.
 
+the concept that a Sails.to security can be on solana ton or isin in any ban or brokerage in the world for as long as it's held by a KYC verified professional investor - and that its interchangeable must not be lost.
+
+the fact that its a bridge between traiditonal finance and defi that one secuirty type is interchangeable with the other must not be lost.
+
+the fact that the issuer can run all the subscription and KYC (if he wants) himslef or tap into a network of OTC dealers must not be lost.
+
 ## Sails.to Platform Architecture — Comprehensive Summary
 
 Based on all information provided, verified against source materials.
