@@ -250,17 +250,18 @@
     <div class="header-section">
         <img src="sail_logo.png" alt="Sails.to Logo">
         <h1>Raise your sails</h1>
-        <p class="tagline">Issue, manage, and trade digital securities across blockchain and traditional finance.</p>
-        <p class="intro-text">Sails.to is a platform for established businesses and professional investors to issue, manage, and trade securities that live seamlessly across TradFi and DeFi.</p>
+        <p class="tagline">to go beyond with securities that cross the line.</p>
+        <p class="intro-text">Welcome to the next decade of capital markets that belongs to savvy issuers and visionary investors who stop choosing between worlds. Sails.to is the comprehensive self-hostable platform for established businesses and professional investors to issue, manage and trade securities that live seamlessly across TradFi and DeFi.</p>
+        <p style="font-size: 0.85em; color: #718096; margin-top: 15px;">Sails.to ecosystem description</p>
     </div>
 
     <h2 style="margin-top: 20px;">How It All Works</h2>
     
     <div class="intro-box">
         <h2 style="color: white; margin-top: 0;">What is Sails.to?</h2>
-        <p>Sails.to enables companies to raise capital by issuing digital securities to professional investors. Issuers establish their own legal structure, tokenize their offering, and licensed brokers distribute it to their investor networks.</p>
+        <p>Sails.to enables companies to raise capital by issuing compliant digital securities to eligible, KYC-verified investors. Issuers establish their own legal structure, define security terms, and licensed brokers distribute the offering to their investor networks.</p>
         <p>All transactions settle on Solana — instantly, atomically, and transparently. Investors who require traditional infrastructure can hold the same security via Clearstream, identified by an ISIN the issuer registers.</p>
-        <p><strong>Key distinction:</strong> These are real securities, not crypto assets. Ownership, transfer, and resale are legally restricted and enforced both on-chain and off-chain.</p>
+        <p><strong>Key distinction:</strong> These are real securities, not crypto assets. Ownership, transfer, and resale are legally restricted and enforced both on-chain and off-chain. For example, transfers require a valid KYC credential, and brokers verify eligible counterparties before execution.</p>
     </div>
 
     <div class="toc">
@@ -281,24 +282,31 @@
     <h2 id="players">1. The Main Players</h2>
     
     <p>There are five types of participants in the system:</p>
+    <ol>
+        <li><strong>Issuers</strong> — Companies raising capital through their own legal entity</li>
+        <li><strong>Investors</strong> — Eligible, KYC-verified participants</li>
+        <li><strong>Licensed Brokers</strong> — Distribution, compliance, and trading</li>
+        <li><strong>Operational Trust</strong> — Escrow during issuance, distributions after</li>
+        <li><strong>Standards Layer</strong> — Protocol standards and reference software</li>
+    </ol>
 
     <div class="mermaid">
     flowchart TD
-        subgraph Foundation[Foundation Layer]
-            F[🏛️ Foundation<br/>Protocol & Standards]
+        subgraph Standards[Standards Layer]
+            F[🏛️ Standards Layer<br/>Protocol Standards]
         end
         
         subgraph Services[Service Providers]
             T[🔐 Operational Trust<br/>Escrow & Distributions]
-            B[🏦 Licensed Brokers<br/>Distribution & Trading]
+            B[🏦 Licensed Brokers<br/>Distribution, Compliance & Trading]
         end
         
-        subgraph Issuers[Your Structure]
-            I[🏢 Your DAO Series LLC<br/>Holds your securities]
+        subgraph Issuers[Issuer Structure]
+            I[🏢 Issuer DAO Series LLC<br/>Legal entity for issuance]
         end
         
         subgraph Investors
-            INV[👤 Professional Investors]
+            INV[👤 Eligible Investors]
         end
         
         F -->|standards| T
@@ -314,13 +322,10 @@
         style INV fill:#3182ce,color:#fff
     </div>
 
+    <h4 style="margin-bottom: 5px; color: #2c5282;">Primary Issuance</h4>
     <div class="mermaid">
     flowchart LR
-        subgraph Primary[Primary Issuance]
-            INV1[👤 Investor] -->|💵 capital| B1[🏦 Broker]
-            B1 -->|💵 proceeds - fees| T1[🔐 Trust]
-            T1 -->|💵 to issuer| I1[🏢 Your LLC]
-        end
+        INV1[👤 Investor] -->|💵 capital| B1[🏦 Broker] -->|💵 proceeds - fees| T1[🔐 Trust] -->|💵 to issuer| I1[🏢 Issuer LLC]
         
         style INV1 fill:#38a169,color:#fff
         style B1 fill:#38a169,color:#fff
@@ -328,28 +333,21 @@
         style I1 fill:#38a169,color:#fff
     </div>
 
+    <h4 style="margin-bottom: 5px; color: #2c5282;">Returns & Distributions</h4>
     <div class="mermaid">
-    flowchart RL
-        subgraph Returns[Returns & Distributions]
-            I2[🏢 Your LLC] -->|💵 payment| T2[🔐 Trust]
-            T2 -->|💵 distributions| INV2[👤 Token Holders]
-        end
+    flowchart LR
+        I2[🏢 Issuer LLC] -->|💵 payment| T2[🔐 Trust] -->|💵 distributions| INV2[👤 Eligible Investors]
         
         style I2 fill:#38a169,color:#fff
         style T2 fill:#d69e2e,color:#fff
         style INV2 fill:#38a169,color:#fff
     </div>
 
+    <h4 style="margin-bottom: 5px; color: #2c5282;">Secondary Trading</h4>
     <div class="mermaid">
     flowchart LR
-        subgraph Secondary[Secondary Trading]
-            SELL[👤 Seller] -->|tokens| B2[🏦 Broker A]
-            B2 <-->|OTC| B3[🏦 Broker B]
-            B3 -->|tokens| BUY[👤 Buyer]
-            BUY -->|💵 payment| B3
-            B3 -->|💵 payment - fees| B2
-            B2 -->|💵 proceeds| SELL
-        end
+        SELL[👤 Seller] -->|tokens| B2[🏦 Broker A] <-->|OTC| B3[🏦 Broker B] -->|tokens| BUY[👤 Buyer]
+        BUY -->|💵 payment| B3 -->|💵 payment - fees| B2 -->|💵 proceeds| SELL
         
         style SELL fill:#3182ce,color:#fff
         style BUY fill:#3182ce,color:#fff
@@ -367,51 +365,50 @@
         </thead>
         <tbody>
             <tr>
-                <td><strong>Foundation</strong></td>
-                <td>Sets standards, publishes the protocol and software that makes everything work together</td>
-                <td>Like FIX Protocol Ltd — publishes standards that brokers use</td>
-            </tr>
-            <tr>
-                <td><strong>Operational Trust</strong></td>
-                <td>Licensed fiduciary (SVG Financial Trustee) that holds escrow during issuance and distributes payments to investors</td>
-                <td>Like an escrow agent or paying agent</td>
-            </tr>
-            <tr>
-                <td><strong>Brokers</strong></td>
-                <td>Licensed firms that help distribute your offering to their investor networks and handle secondary trading</td>
-                <td>Like placement agents or broker-dealers</td>
-            </tr>
-            <tr>
                 <td><strong>Issuers (You)</strong></td>
-                <td>Companies that want to raise capital — you create your own DAO Series LLC to hold your securities</td>
+                <td>Companies that raise capital — you create your own DAO Series LLC as the legal entity that anchors issuance and control</td>
                 <td>Like a company doing a private placement</td>
             </tr>
             <tr>
                 <td><strong>Investors</strong></td>
-                <td>Professional or accredited investors who buy your securities through licensed brokers</td>
+                <td>Eligible, KYC-verified investors who purchase securities through licensed brokers</td>
                 <td>Hedge funds, family offices, accredited individuals</td>
+            </tr>
+            <tr>
+                <td><strong>Licensed Brokers</strong></td>
+                <td>Licensed firms that perform compliance checks, maintain client relationships, distribute offerings, and handle secondary trading</td>
+                <td>Like placement agents or broker-dealers</td>
+            </tr>
+            <tr>
+                <td><strong>Operational Trust</strong></td>
+                <td>Licensed fiduciary (SVG Financial Trustee) that holds funds in escrow during issuance and distributes payments to investors after</td>
+                <td>Like an escrow agent or paying agent</td>
+            </tr>
+            <tr>
+                <td><strong>Standards Layer</strong></td>
+                <td>Publishes protocol standards and reference software that enables interoperability</td>
+                <td>Like FIX Protocol Ltd — publishes standards that brokers use</td>
             </tr>
         </tbody>
     </table>
 
     <div class="warning-box">
-        <strong>⚠️ Important:</strong> Only verified, eligible investors may participate, subject to jurisdictional requirements. The $150,000 minimum investment meets the threshold for professional investor status in many jurisdictions. US investors must be verified accredited investors under Regulation D. Non-US investors participate under Regulation S.
+        <strong>⚠️ Important:</strong> Only verified, eligible investors may participate, subject to jurisdictional requirements. Offerings may set a minimum investment amount (a typical minimum is $150,000). Eligibility and investor classification depend on jurisdiction and verification standards. US investors are typically verified as accredited investors under Regulation D. Non-US investors typically participate under Regulation S.
+        <p style="margin-top: 10px; font-size: 0.9em;"><em>This is a general framework and not legal advice; offering terms may vary.</em></p>
     </div>
 
     <!-- SECTION 2: YOUR LEGAL STRUCTURE -->
     <h2 id="structure">2. Your Legal Structure</h2>
 
-    <p>When you raise capital through Sails.to, you create your own <strong>Wyoming DAO Series LLC</strong>. This is your legal structure — you own it and control it. Your securities are issued and held within your own legal entity — not by Sails.to.</p>
+    <p>When you raise capital through Sails.to, you create your own <strong>DAO Series LLC</strong> (e.g., Wyoming or Marshall Islands, depending on preference). This is your legal structure — you own it and control it. Your securities are issued within your own legal entity — not by Sails.to.</p>
 
-    <p><em>A DAO (Decentralized Autonomous Organization) is a legal entity whose governance rules are executed through smart contracts.</em></p>
-
-    <p>The legal structure can be established in jurisdictions such as Wyoming or the Marshall Islands, depending on issuer preference.</p>
+    <p><em>A DAO is a governance model where rules can be executed by smart contracts. The legal entity is the DAO Series LLC (or equivalent) that adopts this governance.</em></p>
 
     <h3>Why a DAO Series LLC?</h3>
 
     <div class="concept-box">
         <h4>Self-Custody, Self-Control</h4>
-        <p>Your securities live in your own legal entity. You are not handing assets to a platform or relying on a third party to custody your tokens. The DAO LLC recognizes smart contract governance, so investor rights can be enforced automatically on-chain.</p>
+        <p>Your securities live in your own legal entity. You are not handing assets to a platform or relying on a third party to custody your tokens. No third-party crypto custodian is required for the on-chain token: the issuer controls custody via its own legal structure. The DAO LLC recognizes smart contract governance, so investor rights can be enforced automatically on-chain.</p>
     </div>
 
     <p>Issuers, trustees, paying agent banks, auditors, legal counsel, and administrators operate through a single coordinated platform.</p>
@@ -460,17 +457,17 @@
             <tr>
                 <td><strong>Operating Series</strong></td>
                 <td>Holds pledges, receives revenue, manages underlying assets for a specific offering</td>
-                <td>You + Foundation oversight</td>
+                <td>Issuer + Trust oversight</td>
             </tr>
             <tr>
                 <td><strong>Treasury Series</strong></td>
-                <td>Holds operational reserves and unclaimed distributions</td>
-                <td>Trust + Foundation oversight</td>
+                <td>Holds operational reserves and unclaimed distributions (legal series, not an on-chain wallet)</td>
+                <td>Trust oversight</td>
             </tr>
             <tr>
                 <td><strong>ISIN Lockbox Series</strong></td>
-                <td>Self-custody for Solana token ↔ ISIN-bearing security conversion (see <a href="#conversion">Section 5</a>)</td>
-                <td>You + Trust oversight</td>
+                <td>Self-custody for Solana token ↔ ISIN-identified security conversion (see <a href="#conversion">Section 5</a>)</td>
+                <td>Issuer + Trust oversight</td>
             </tr>
         </tbody>
     </table>
@@ -478,6 +475,7 @@
     <div class="concept-box">
         <h4>ISIN + Clearstream Registration (On-Platform)</h4>
         <p>An ISIN is a security identifier, not a security itself. When required, issuers register an ISIN and distribute the security via Clearstream. The ISIN Lockbox handles the 1:1 relationship between on-chain tokens and traditional holdings.</p>
+        <p><em>Sails.to supports the workflow and required data for ISIN + Clearstream distribution; registration is completed through the appropriate traditional infrastructure partners.</em></p>
     </div>
 
     <div class="analogy">
@@ -489,7 +487,7 @@
 
     <h3>The Fundraising System</h3>
 
-    <p>Every offering has two important numbers and two pricing phases:</p>
+    <p>Every offering has three parameters and two pricing phases:</p>
     
     <table>
         <thead>
@@ -518,7 +516,7 @@
     <p>From opening until the soft cap is reached, you can offer an <strong>optional discount</strong> to early investors. This incentivizes people to commit early and helps reach the soft cap faster.</p>
 
     <h4>Full Price</h4>
-    <p>Once the soft cap is reached, the discount ends. Additional investments up to the hard cap are at full price ($150,000 per security) until the offering ends.</p>
+    <p>Once the soft cap is reached, the discount ends. Additional investments up to the hard cap are at full price until the offering ends.</p>
 
     <div class="mermaid">
     stateDiagram-v2
@@ -551,22 +549,22 @@
 
     <h3>Token Minting: Created Upfront</h3>
 
-    <p>When your offering launches, tokens equal to the <strong>hard cap</strong> are minted and held in your treasury. From there, they flow to investors through three distribution channels.</p>
+    <p>When the offering launches, tokens equal to the <strong>hard cap</strong> are minted and held in issuer-controlled accounts. Tokens flow to investors through three distribution channels; <strong>funds</strong> flow to the Trust escrow (then to the issuer after soft cap).</p>
 
     <div class="mermaid">
     flowchart TD
-        MINT[🏭 Tokens Minted<br/>Amount = Hard Cap] -->|held in| TREASURY[Your Treasury]
+        MINT[🏭 Tokens Minted<br/>Amount = Hard Cap] -->|held in| TREASURY[Issuer Treasury Account]
         
-        TREASURY -->|direct to<br/>known investors| CH1[📋 Channel 1<br/>Direct Sales]
+        TREASURY -->|direct to<br/>referral investors| CH1[📋 Channel 1<br/>Direct Sales]
         TREASURY -->|via licensed<br/>brokers| CH2[🏦 Channel 2<br/>Broker Network]
         TREASURY -->|wrapped for<br/>traditional rails| CH3[🌐 Channel 3<br/>ISIN / Clearstream]
         
-        CH1 -->|on-chain| INV1[Your Partners &<br/>Co-investors]
-        CH2 -->|on-chain| INV2[Professional<br/>Investors]
-        CH3 -->|locked| WRAP[Your ISIN Lockbox]
-        WRAP -->|1:1 wrapped| ISIN[ISIN-Bearing Security<br/>Self-registered]
+        CH1 -->|on-chain| INV1[Partners &<br/>Co-investors]
+        CH2 -->|on-chain| INV2[Eligible<br/>Investors]
+        CH3 -->|locked| WRAP[ISIN Lockbox]
+        WRAP -->|1:1 wrapped| ISIN[ISIN-Identified Security<br/>via Clearstream]
         ISIN -->|distributed by| BANK[Paying Agent Bank]
-        BANK -->|Clearstream OTC| INV3[Traditional<br/>Investors]
+        BANK -->|Clearstream| INV3[Traditional<br/>Investors]
         
         style MINT fill:#2c5282,color:#fff
         style TREASURY fill:#3182ce,color:#fff
@@ -595,19 +593,19 @@
         <tbody>
             <tr>
                 <td><strong style="color:#38a169;">1. Direct Sales</strong></td>
-                <td>You directly</td>
-                <td>Your existing network (partners, contacts)</td>
+                <td>Issuer directly</td>
+                <td>Existing network (partners, contacts)</td>
                 <td>On-chain (Solana)</td>
             </tr>
             <tr>
                 <td><strong style="color:#38a169;">2. Broker Network</strong></td>
                 <td>Licensed brokers</td>
-                <td>Their professional investor clients</td>
+                <td>Eligible, KYC-verified investors</td>
                 <td>On-chain (Solana)</td>
             </tr>
             <tr>
                 <td><strong style="color:#805ad5;">3. ISIN / Clearstream</strong></td>
-                <td>Your paying agent bank</td>
+                <td>Paying agent bank</td>
                 <td>Traditional/institutional investors</td>
                 <td>Clearstream (traditional rails)</td>
             </tr>
@@ -651,7 +649,7 @@
         subgraph STAGE3[Stage 3: Live]
             S3A[Offering closed]
             S3B[Secondary trading open]
-            S3C[Conversions open to all holders]
+            S3C[Conversions open to eligible holders]
         end
         
         STAGE1 -->|Soft cap reached| STAGE2
@@ -973,7 +971,7 @@
     <!-- SECTION 5: CONVERSION -->
     <h2 id="conversion">5. Converting Between Blockchain & Traditional Finance</h2>
 
-    <p>The same security can exist in two forms: a <strong>Solana token</strong> or a traditional <strong>ISIN-bearing security</strong>. Your ISIN Lockbox Series handles the conversion.</p>
+    <p>The same security can exist in two forms: a <strong>Solana token</strong> or an <strong>ISIN-identified security held via Clearstream</strong>. The ISIN Lockbox Series handles the conversion.</p>
 
     <div class="mermaid">
     flowchart LR
@@ -981,31 +979,31 @@
             ST[🪙 Security Token<br/>on Solana]
         end
         
-        subgraph YourLLC[Your ISIN Lockbox Series]
+        subgraph IssuerLLC[ISIN Lockbox Series]
             LOCK[🔒 Tokens locked<br/>1:1 backing]
         end
         
         subgraph Clearstream
-            ISIN[📄 ISIN-Bearing Security<br/>Self-registered]
+            ISIN[📄 ISIN-Identified Security<br/>held via Clearstream]
         end
         
         ST -->|Wrap: Lock tokens| LOCK
-        LOCK -->|Issue ISIN| ISIN
+        LOCK -->|Issue| ISIN
         ISIN -->|Unwrap: Redeem| LOCK
         LOCK -->|Release tokens| ST
     </div>
 
     <div class="concept-box">
-        <h4>You Control the Conversion</h4>
-        <p>The ISIN Lockbox is a Series within your DAO LLC. You (with Trust oversight) control the conversion. When tokens are locked, ISIN securities are issued. When ISIN securities are redeemed, tokens are released. Always 1:1.</p>
-        <p><strong>No third-party custodian required.</strong> You self-custody through your own legal structure.</p>
+        <h4>Issuer Controls Conversion</h4>
+        <p>The ISIN Lockbox is a Series within the DAO LLC. The issuer (with Trust oversight) controls the conversion. When tokens are locked, ISIN-identified securities are issued via Clearstream. When those securities are redeemed, tokens are released. Always 1:1.</p>
+        <p><strong>No third-party crypto custodian required for the on-chain token.</strong> The issuer controls custody via its own legal structure.</p>
     </div>
 
     <div class="concept-box">
         <h4>The Single Source of Truth</h4>
-        <p>The Solana token is the canonical (original) security. The ISIN-bearing security is a representation — essentially a receipt that says "the issuer's lockbox is holding X tokens backing this ISIN."</p>
-        <p><strong>Critical rule:</strong> ISIN-bearing securities outstanding can never exceed tokens locked in your lockbox. The system is always 1:1 backed.</p>
-        <p><strong>Only the issuer controls when conversions are permitted.</strong></p>
+        <p>The Solana token is the canonical (original) security. The ISIN-identified security is a representation — essentially a receipt that says "the issuer's lockbox is holding X tokens backing this."</p>
+        <p><strong>Critical rule:</strong> ISIN-identified securities outstanding can never exceed tokens locked in the lockbox. The system is always 1:1 backed.</p>
+        <p><strong>The issuer sets the conversion policy; when enabled, eligible holders may initiate conversions.</strong></p>
     </div>
 
     <h3>Why Would Someone Convert?</h3>
@@ -1022,7 +1020,7 @@
             <tr>
                 <td>Traditional fund manager with mandate restrictions</td>
                 <td>Solana → Clearstream</td>
-                <td>Their rules require holding ISIN-registered securities</td>
+                <td>Their rules require holding ISIN-identified securities</td>
             </tr>
             <tr>
                 <td>Crypto-native investor wants self-custody</td>
@@ -1058,17 +1056,17 @@
                 <td><span class="fee-highlight">0.5%</span></td>
                 <td>All primary purchases (even if soft cap fails)</td>
                 <td>Buyer</td>
-                <td>⅔ Brokers (proportionate) + ⅓ Foundation</td>
+                <td>⅔ Brokers (proportionate) + ⅓ Standards Layer</td>
             </tr>
             <tr>
-                <td><strong>Distribution Fee (Non-Referral Investors)</strong></td>
+                <td><strong>Distribution Fee (General Distribution)</strong></td>
                 <td><span class="fee-highlight">+5.5%</span></td>
-                <td>When selling to investors not sourced through the issuer's direct referral network</td>
-                <td>You (from proceeds)</td>
-                <td>Brokers + Admin + Foundation</td>
+                <td>On successful close, for investors not sourced through issuer's direct referral network</td>
+                <td>Issuer (from proceeds)</td>
+                <td>Brokers + Platform Administration + Standards Layer</td>
             </tr>
             <tr>
-                <td colspan="5" style="background:#f0f4ff; font-style:italic; text-align:center;">Total fees depend on how the investor is sourced, not the settlement channel: <strong>0.5%</strong> for referral investors, <strong>6%</strong> for non-referral investors (on successful close)</td>
+                <td colspan="5" style="background:#f0f4ff; font-style:italic; text-align:center;"><strong>0.5%</strong> for referral investors, <strong>6%</strong> for general distribution investors (on successful close)</td>
             </tr>
             <tr>
                 <td><strong>Clearstream Fees</strong></td>
@@ -1082,32 +1080,32 @@
                 <td><span class="fee-highlight">0.5%</span></td>
                 <td>Every secondary trade on Solana OTC (after offering closes)</td>
                 <td>Buyer</td>
-                <td>⅔ Brokers (proportionate) + ⅓ Foundation</td>
+                <td>⅔ Brokers (proportionate) + ⅓ Standards Layer</td>
             </tr>
             <tr>
                 <td><strong>Conversion Fee</strong></td>
                 <td><span class="fee-highlight">0.10-0.25%</span> (capped)</td>
                 <td>When wrapping/unwrapping Solana ↔ Clearstream</td>
                 <td>Requester</td>
-                <td>Foundation + Trust</td>
+                <td>Standards Layer + Trust</td>
             </tr>
         </tbody>
     </table>
 
     <div class="concept-box">
         <h4>Fees That Apply Even If Soft Cap Fails</h4>
-        <p>When your offering fails to reach soft cap and redeems as a zero-coupon bond:</p>
+        <p>When an offering fails to reach soft cap and redeems as a zero-coupon bond:</p>
         <ul>
             <li><strong>0.5% brokerage fee</strong> — already deducted at time of purchase</li>
             <li><strong>Clearstream fees</strong> — if Channel 3 was used</li>
         </ul>
-        <p>The +5.5% distribution fee for non-referral investors is <strong>NOT</strong> charged on failed offerings — that only applies when the offering successfully closes.</p>
+        <p>The +5.5% distribution fee for general distribution investors is <strong>NOT</strong> charged on failed offerings — that only applies when the offering successfully closes.</p>
     </div>
 
     <!-- SECTION 7: CONTRACTS -->
     <h2 id="contracts">7. All the Smart Contracts</h2>
 
-    <p>The system runs on a suite of <strong>15+ smart contracts</strong> deployed on Solana. These contracts enforce all the rules automatically — permissions, trading restrictions, fee distribution, and more.</p>
+    <p>The system runs on a suite of <strong>16 smart contracts</strong> deployed on Solana. These contracts enforce all the rules automatically — permissions, trading restrictions, fee distribution, and more. Contracts are modular; deployments may vary by offering.</p>
 
     <div class="mermaid">
     flowchart LR
@@ -1136,7 +1134,7 @@
         <tbody>
             <tr>
                 <td><strong>Governance & Permissions</strong></td>
-                <td>Foundation Governance, License Registry, Broker License NFT, Issuer License NFT</td>
+                <td>Standards Governance, License Registry, Broker License NFT, Issuer License NFT</td>
                 <td>System standards, license management, access permissions</td>
             </tr>
             <tr>
@@ -1173,7 +1171,15 @@
 
     <p>Smart contracts handle the blockchain side, but running securities operations requires much more. That is where <strong>Melusina OS</strong> comes in — a purpose-built operating system integrated with Solana.</p>
 
-    <p><em>Melusina OS is based on infrastructure battle-tested for over eight years in regulated financial environments.</em></p>
+    <p><em>Melusina OS is built on infrastructure proven in regulated financial environments.</em></p>
+
+    <p>Melusina handles what smart contracts cannot:</p>
+    <ul>
+        <li>Workflow orchestration and document management</li>
+        <li>Audit trails and compliance reporting</li>
+        <li>Payment operations and settlement coordination</li>
+        <li>Permissions management across participants</li>
+    </ul>
 
     <div class="mermaid">
     flowchart TD
@@ -1225,8 +1231,8 @@
 
     <div class="mermaid">
     flowchart TB
-        subgraph Layer1[Your Legal Structure]
-            LLC[🏢 Your Wyoming DAO Series LLC<br/>Operating · Treasury · ISIN Lockbox]
+        subgraph Layer1[Issuer Legal Structure]
+            LLC[🏢 Issuer DAO Series LLC<br/>Operating · Treasury · ISIN Lockbox]
         end
         
         subgraph Layer2[Service Providers]
@@ -1235,12 +1241,12 @@
         end
         
         subgraph Layer3[Infrastructure]
-            FOUND[🏛️ Foundation<br/>Standards & Protocol]
+            FOUND[🏛️ Standards Layer<br/>Protocol Standards]
             SOL[⚡ Solana<br/>Settlement & Credentials]
         end
         
         subgraph Layer4[Traditional Finance]
-            CLEAR[📄 Clearstream<br/>ISIN Settlement]
+            CLEAR[📄 Clearstream<br/>ISIN-Identified Settlement]
         end
         
         LLC --> TRUST
@@ -1262,13 +1268,13 @@
         <h3 style="color: white; margin-top: 0;">The Big Picture</h3>
         <p>Sails.to provides the tools to raise capital on your own terms:</p>
         <ul>
-            <li><strong>Your DAO LLC</strong> — You own your legal structure and control your securities</li>
-            <li><strong>Your ISIN</strong> — Self-register if you want traditional finance rails</li>
+            <li><strong>Issuer DAO LLC</strong> — Own your legal structure and control your securities</li>
+            <li><strong>ISIN + Clearstream option</strong> — For traditional settlement when required</li>
             <li><strong>Licensed brokers</strong> — Distribute to their investor networks</li>
             <li><strong>Trust oversight</strong> — Escrow and distributions handled by a licensed fiduciary</li>
             <li><strong>Solana settlement</strong> — Instant, atomic, transparent</li>
         </ul>
-        <p>The smart contracts enforce the rules automatically. The credentials ensure only eligible parties participate. The conversion system enables investments to flow between blockchain and traditional rails. All under your control.</p>
+        <p>The smart contracts enforce the rules automatically. The credentials ensure only eligible parties participate. The conversion system enables investments to flow between blockchain and traditional rails. All under issuer control.</p>
     </div>
 
     <script>
