@@ -261,20 +261,6 @@
         <p><strong>Key distinction:</strong> These are real securities, not crypto assets. Ownership, transfer, and resale are legally restricted and enforced both on-chain and off-chain. For example, transfers require a valid KYC credential, and brokers verify eligible counterparties before execution.</p>
     </div>
 
-    <div class="toc">
-        <h3>📑 What's in this guide</h3>
-        <ul>
-            <li><a href="#players">1. The Main Players</a></li>
-            <li><a href="#structure">2. Your Legal Structure</a></li>
-            <li><a href="#issuance">3. How New Securities Are Created</a></li>
-            <li><a href="#trading">4. How Trading Works</a></li>
-            <li><a href="#conversion">5. Converting Between Blockchain & Traditional Finance</a></li>
-            <li><a href="#fees">6. The Fee Structure</a></li>
-            <li><a href="#contracts">7. All the Smart Contracts</a></li>
-            <li><a href="#melusina">8. Melusina OS - The Operating System</a></li>
-        </ul>
-    </div>
-
     <!-- SECTION 1: PLAYERS -->
     <h2 id="players">1. The Main Players</h2>
     
@@ -357,34 +343,28 @@
             <tr>
                 <th>Player</th>
                 <th>What They Do</th>
-                <th>Real-World Equivalent</th>
             </tr>
         </thead>
         <tbody>
             <tr>
                 <td><strong>Issuers (You)</strong></td>
                 <td>Companies that raise capital — you create your own DAO Series LLC as the legal entity that anchors issuance and control</td>
-                <td>A company doing a private placement</td>
             </tr>
             <tr>
                 <td><strong>Investors</strong></td>
                 <td>KYC'd Professional Investors who purchase securities through licensed brokers</td>
-                <td>Hedge funds, family offices, accredited individuals</td>
             </tr>
             <tr>
                 <td><strong>Licensed Brokers</strong></td>
                 <td>Licensed firms that perform compliance checks, maintain client relationships, distribute offerings, and handle secondary trading</td>
-                <td>Placement agents or broker-dealers</td>
             </tr>
             <tr>
                 <td><strong>Operational Trust</strong></td>
                 <td>Licensed fiduciary (SVG Financial Trustee) that holds funds in escrow during issuance and distributes payments to investors after</td>
-                <td>Escrow agent or paying agent</td>
             </tr>
             <tr>
                 <td><strong>Standards Layer</strong></td>
                 <td>Publishes protocol standards and reference software that enables interoperability</td>
-                <td>Like FIX Protocol Ltd — publishes standards that brokers use</td>
             </tr>
         </tbody>
     </table>
@@ -500,10 +480,6 @@
         <p><strong>ISIN + Clearstream Registration</strong> — An ISIN is a security identifier, not a security itself. When required, issuers can register an ISIN and enable settlement via Clearstream (at cost, approximately <strong>&lt;$4k</strong>). The ISIN Lockbox handles the 1:1 relationship between on-chain tokens and traditional holdings.</p>
         <p><strong>ViennaMTF Public Listing</strong> — If you require your securities to be publicly listed on an exchange, ViennaMTF registration is available (at cost, approximately <strong>&lt;$3k</strong>).</p>
         <p><em>Sails.to supports the workflow and required data for these optional services; registration is completed through the appropriate traditional infrastructure partners.</em></p>
-    </div>
-
-    <div class="analogy">
-        A DAO LLC functions like a holding company with separate subsidiaries (Series) for each project. If one project has issues, the others are legally isolated. The issuer controls the whole structure, and the blockchain enforces the rules set.
     </div>
 
     <!-- SECTION 3: ISSUANCE -->
@@ -657,28 +633,20 @@
     <p>Every security you issue goes through three stages:</p>
 
     <div class="mermaid">
-    flowchart LR
-        subgraph STAGE1[Stage 1: Escrow]
-            S1A[Investors buying in]
-            S1B[Early Bird discount may apply]
-            S1C[Funds held in Trust escrow]
-        end
-        
-        subgraph STAGE2[Stage 2: Funding]
-            S2A[Funds released to you]
-            S2B[Full price, distribution continues]
-            S2C[Still only you sell]
-        end
-        
-        subgraph STAGE3[Stage 3: Live]
-            S3A[Offering closed]
-            S3B[Secondary trading open]
-            S3C[Conversions open to KYC'd holders]
-        end
+    flowchart TB
+        STAGE1[<strong>Stage 1: Escrow</strong><br/>Investors buying in • Early Bird discount may apply • Funds held in Trust escrow]
+        STAGE2[<strong>Stage 2: Funding</strong><br/>Funds released to you • Full price, distribution continues • Still only you sell]
+        STAGE3[<strong>Stage 3: Live</strong><br/>Offering closed • Secondary trading open • Conversions open to KYC'd holders]
+        REFUND[Zero-Coupon Redemption]
         
         STAGE1 -->|Soft cap reached| STAGE2
-        STAGE2 -->|Hard cap OR<br/>duration expires| STAGE3
-        STAGE1 -->|Soft cap NOT reached| REFUND[Zero-Coupon<br/>Redemption]
+        STAGE2 -->|Hard cap OR duration expires| STAGE3
+        STAGE1 -->|Soft cap NOT reached| REFUND
+        
+        style STAGE1 fill:#ebf8ff,stroke:#3182ce
+        style STAGE2 fill:#f0fff4,stroke:#38a169
+        style STAGE3 fill:#faf5ff,stroke:#805ad5
+        style REFUND fill:#fff5f5,stroke:#e53e3e
     </div>
 
     <table>
@@ -735,16 +703,6 @@
             </tr>
         </tbody>
     </table>
-
-    <div class="concept-box">
-        <h4>Why No Secondary Trading Until Close?</h4>
-        <p>During both Stage 1 (Escrow) and Stage 2 (Funding):</p>
-        <ul>
-            <li><strong>Only you can sell</strong> — investors cannot resell yet</li>
-            <li><strong>Solana → ISIN conversions</strong> are only available to you (to fill Channel 3 orders)</li>
-        </ul>
-        <p>This ensures orderly primary distribution. Once the offering closes (hard cap met or duration expires), secondary trading and conversions open to all KYC'd Professional Investors.</p>
-    </div>
 
     <div class="warning-box">
         <h4>⚠️ What Happens If Soft Cap Is NOT Reached</h4>
@@ -897,27 +855,12 @@
         <strong>⚠️ Note on unsold tokens:</strong> Any tokens not sold by the time the offering closes are <strong>burned</strong> (permanently destroyed). The final circulating supply equals actual investment received, not the hard cap.
     </div>
 
-    <div class="analogy">
-        Think of it like a real estate syndication: the property is already under contract (agreements signed, pledges in place), and now the issuer is bringing in investors to fund the deal. Once minimum funding is reached, closing and funding proceed. Additional investors can still participate up to the cap.
-    </div>
-
     <!-- SECTION 4: TRADING -->
     <h2 id="trading">4. How Trading Works</h2>
 
-    <h3>Why Permissioned Trading?</h3>
-    
-    <div class="concept-box">
-        <p>Public, permissionless exchanges allow unrestricted trading. Securities require controlled access, verified participants, and compliant settlement.</p>
-        <p>Sails.to enables trading through a permissioned, broker-mediated OTC system that ensures only KYC'd Professional Investors can participate.</p>
-    </div>
-
     <h3>The OTC Broker Network</h3>
 
-    <p>"OTC" stands for "Over-The-Counter" — trades happen through licensed brokers, not on a public order book. Each broker has their own investor clients, and brokers trade directly with each other when their clients want to buy or sell.</p>
-
-    <div class="analogy">
-        Consider selling a rare painting. One does not simply list it on a public marketplace. Instead, an art dealer contacts other dealers to find a buyer. A buyer working with a different dealer is looking for exactly that piece. The dealers negotiate, agree on terms, and handle the transaction. That is how OTC trading works.
-    </div>
+    <p>Securities require controlled access. Trading happens through licensed brokers who verify eligibility. "OTC" stands for "Over-The-Counter" — trades happen through licensed brokers, not on a public order book. Each broker has their own investor clients, and brokers trade directly with each other when their clients want to buy or sell.</p>
 
     <div class="mermaid">
     sequenceDiagram
@@ -1151,22 +1094,6 @@
     <h2 id="contracts">7. All the Smart Contracts</h2>
 
     <p>The system runs on a suite of <strong>16 smart contracts</strong> deployed on Solana. These contracts enforce all the rules automatically — permissions, trading restrictions, fee distribution, and more. Contracts are modular; deployments may vary by offering.</p>
-
-    <div class="mermaid">
-    flowchart LR
-        subgraph Core[Core Contract Groups]
-            GOV[🏛️ Governance<br/>4 contracts]
-            ID[👤 Identity<br/>2 contracts]
-            ISS[🏭 Issuance<br/>3 contracts]
-            TRADE[🤝 Trading<br/>3 contracts]
-            FIN[💰 Finance<br/>4 contracts]
-        end
-        
-        GOV --> ID
-        ID --> ISS
-        ISS --> TRADE
-        TRADE --> FIN
-    </div>
 
     <table>
         <thead>
