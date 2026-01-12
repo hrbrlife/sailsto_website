@@ -26,27 +26,6 @@
             background: #fff;
         }
         
-        /* Header styling */
-        .header {
-            text-align: center;
-            border-bottom: 3px solid #1a365d;
-            padding-bottom: 15px;
-            margin-bottom: 25px;
-        }
-        
-        .header h1 {
-            font-size: 24pt;
-            color: #1a365d;
-            margin: 0 0 5px 0;
-            font-weight: 600;
-        }
-        
-        .header .subtitle {
-            font-size: 14pt;
-            color: #2c5282;
-            margin: 0;
-        }
-        
         /* Contact box */
         .contact-box {
             background: #f7fafc;
@@ -280,16 +259,105 @@
         .service-item strong {
             color: #2c5282;
         }
+        
+        /* Navbar */
+        .navbar {
+            background: linear-gradient(135deg, #1a365d 0%, #2c5282 100%);
+            padding: 0 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+        .navbar-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 60px;
+        }
+        .navbar-brand {
+            color: white;
+            font-size: 1.4em;
+            font-weight: bold;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .navbar-brand:hover {
+            opacity: 0.9;
+        }
+        .navbar-brand img {
+            height: 32px;
+            margin-right: 8px;
+        }
+        .navbar-links {
+            display: flex;
+            gap: 8px;
+        }
+        .navbar-links a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.95em;
+            transition: background 0.2s;
+        }
+        .navbar-links a:hover {
+            background: rgba(255,255,255,0.15);
+        }
+        .navbar-links a.active {
+            background: rgba(255,255,255,0.25);
+        }
+        
+        /* Header section */
+        .header-section {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+        .header-section img {
+            height: 70px;
+            margin-bottom: 10px;
+        }
+        .header-section h1 {
+            font-size: 24pt;
+            color: #1a365d;
+            border: none;
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+        }
+        .header-section .tagline {
+            font-size: 1.1em;
+            color: #2c5282;
+            margin: 5px 0 15px 0;
+        }
+        .header-section .intro-text {
+            font-size: 0.95em;
+            color: #4a5568;
+            max-width: 800px;
+            margin: 0 auto;
+        }
     </style>
 </head>
 <body>
 
+    <nav class="navbar">
+        <div class="navbar-content">
+            <a href="exec_summ.html" class="navbar-brand"><img src="sail_logo_w.png" alt="Sails.to"></a>
+            <div class="navbar-links">
+                <a href="exec_summ.html" class="active">Executive Summary</a>
+                <a href="sails-to-explained-v2.html">How It Works</a>
+            </div>
+        </div>
+    </nav>
+
     <!-- HEADER -->
-    <div class="header">
-        <img src="sail_logo.png" alt="Sails.to Logo" style="height: 60px; margin-bottom: 10px;">
+    <div class="header-section">
+        <img src="sail_logo.png" alt="Sails.to Logo">
         <h1>Raise your sails</h1>
-        <p class="subtitle">to go beyond with securities that cross the line.</p>
-        <p style="font-size: 11pt; color: #4a5568; margin-top: 15px; max-width: 700px; margin-left: auto; margin-right: auto;">Welcome to the next decade of capital markets that belongs to savvy issuers and visionary investors who stop choosing between worlds. Sails.to is the comprehensive platform for established businesses and professional investors to issue, manage and trade securities that live seamlessly across TradFi (traditional finance) and DeFi (decentralized finance).</p>
+        <p class="tagline">to go beyond with securities that cross the line.</p>
+        <p class="intro-text">Welcome to the next decade of capital markets that belongs to savvy issuers and visionary investors who stop choosing between DeFi and TradFi worlds. Sails.to is the comprehensive platform for established businesses and KYC'd Professional Investors to issue, manage and trade hybridized Crypto and Bankable regulated Securities.</p>
     </div>
 
     <!-- CONTACT -->
@@ -367,7 +435,6 @@
             </tr>
         </thead>
         <tbody>
-            <tr><td>Instant trust/custody with credit card</td><td>UTGL.io</td></tr>
             <tr><td>Digital banking and investment/traditional brokerage</td><td>Revolut</td></tr>
             <tr><td>Web-first corporate services</td><td>Osome.com</td></tr>
             <tr><td>Digital securities platform</td><td>ADDX.com</td></tr>
@@ -379,14 +446,16 @@
     <h4>Access Channels</h4>
     <div class="brand-list">
         <span class="brand-tag">Bot (Telegram, Facebook)</span>
-        <span class="brand-tag">App (iOS/Android)</span>
         <span class="brand-tag">Web (PWA)</span>
+        <span class="brand-tag">iOS</span>
+        <span class="brand-tag">Android</span>
+        <span class="brand-tag">In-wallet browser (WEB3)</span>
         <span class="brand-tag">AI Agent + MCP Server</span>
     </div>
     <p style="font-size: 9pt; color: #718096; margin-top: 8px;"><strong>PWA</strong> = Progressive Web App (installable web experience on desktop/mobile without App Store/Play Store). <strong>MCP Server</strong> = standardized agent-connector layer that lets AI agents securely interact with services and tools.</p>
 
     <div class="key-distinction">
-        <strong>Key Distinction:</strong> All offerings are securities (traditional and STO — Security Token Offering), not crypto—settlement on Solana with optional Clearstream/ISIN (International Securities Identification Number) rails for traditional investors. Crypto services limited to VASP (Virtual Asset Service Provider) operations with traditional cryptocurrencies only. Securities-first and compliance-led, while DeFi-integrated for settlement efficiency.
+        <strong>Key Distinction:</strong> All offerings are securities (traditional and STO), not crypto assets. Settlement on Solana with optional Clearstream/ISIN rails for traditional investors. Crypto services limited to traditional cryptocurrencies only (VASP-regulated).
     </div>
 
     <!-- CLIENT EXPERIENCE -->
@@ -437,8 +506,9 @@
                     • Traditional securities (paper or dematerialized)<br>
                     • Security tokens (STO) - OTC (Over-The-Counter) or listed via broker network<br>
                     • All under securities laws across jurisdictions<br>
-                    • <strong>$150,000 typical minimum investment</strong> (professional investor threshold; eligibility varies by jurisdiction)<br>
-                    • Placement through investment advice mandate
+                    • <strong>$150,000 typical minimum investment</strong> (KYC'd Professional Investor threshold; eligibility varies by jurisdiction)<br>
+                    • Placement through investment advice mandate<br>
+                    • <strong>Ongoing fees:</strong> 1% annual Trust and Administration Fee (on nominal value); 3% of issuance amount reserved as security deposit under trust for fees, legal, and winding down
                 </td>
             </tr>
         </tbody>
@@ -658,48 +728,50 @@
     <!-- CORPORATE FORMATION -->
     <h3>Corporate Formation Capabilities</h3>
     
-    <p>Marshall Islands registrar representative with KYC authority:</p>
-    
+    <p><strong>DAO (Decentralized Autonomous Organization):</strong> Wyoming and Marshall Islands DAO frameworks legally recognize corporate actions executed through smart contracts as valid. What would traditionally require a complex multi-section SPV and mountains of paperwork to execute becomes a smart-contract-governed structure — the Platform controls both the entity administration and the issuance, both as on-chain smart contracts.</p>
+
     <table>
         <thead>
             <tr>
                 <th>Structure</th>
                 <th>Timeline</th>
-                <th>Capabilities</th>
+                <th>Details</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td><strong>Series LLC</strong></td>
-                <td>Minutes</td>
-                <td>Immediate payment capabilities incl. inbound fiat and credit card</td>
+                <td><strong>Wyoming DAO LLC — New Series (Free)</strong></td>
+                <td>Instant</td>
+                <td>Provision of isolated new series inside existing structure; Reg S/Reg D compliant; Fiat rails included</td>
             </tr>
             <tr>
-                <td><strong>Standard Corporation</strong></td>
-                <td>24 hours</td>
-                <td>Series LLC upgrade path available</td>
+                <td colspan="3" style="background:#f0f4ff; font-weight:bold; text-align:center;">Own Standalone Entity (at extra cost)</td>
             </tr>
             <tr>
-                <td><strong>Marshall Islands DAO Series</strong></td>
-                <td>Instant (minutes)</td>
-                <td>Can issue securities with no further agreement (legally recognized)</td>
-            </tr>
-            <tr>
-                <td><strong>Marshall Islands (Individual Entity)</strong></td>
+                <td><strong>Marshall Islands DAO LLC</strong></td>
                 <td>~30 days</td>
-                <td>Standalone entity formation (non-series)</td>
+                <td>Fully isolated standalone entity</td>
             </tr>
             <tr>
-                <td><strong>Wyoming DAO Series LLC</strong></td>
-                <td>~1 day (24 hours)</td>
-                <td>Primary structure for securities issuance—US Reg S/D filings, self-custody, smart contract governance</td>
+                <td><strong>Wyoming DAO LLC</strong></td>
+                <td>~1 day</td>
+                <td>Fully isolated standalone entity; US Reg S/D filings, self-custody, smart contract governance</td>
+            </tr>
+            <tr>
+                <td colspan="3" style="background:#f0f4ff; font-weight:bold; text-align:center;">Optional Upgrades (at cost)</td>
+            </tr>
+            <tr>
+                <td><strong>ISIN + Clearstream</strong></td>
+                <td>As needed</td>
+                <td>Traditional settlement rails (~$4k, does not require own entity)</td>
+            </tr>
+            <tr>
+                <td><strong>ISIN + Clearstream + ViennaMTF</strong></td>
+                <td>As needed</td>
+                <td>Public listing on exchange (~$3k additional, does not require own entity)</td>
             </tr>
         </tbody>
     </table>
-
-    <div class="note-box">
-        <strong>MoU reached</strong> with MIDAO for their Series DAO LLC framework.
-    </div>
 
     <!-- BACK OFFICE -->
     <h3>Back-Office Capabilities</h3>
@@ -816,25 +888,26 @@
         </thead>
         <tbody>
             <tr>
+                <td>Foundation</td>
+                <td>7 years</td>
+                <td>Melusina OS developed and used in regulated environments</td>
+            </tr>
+            <tr>
                 <td>Phase 1</td>
-                <td>18 months</td>
+                <td>20 Months</td>
                 <td>AI-assisted development</td>
             </tr>
             <tr>
                 <td>Phase 2</td>
-                <td>Last 8 months</td>
-                <td>Full AI-first approach</td>
-            </tr>
-            <tr>
-                <td><strong>Result</strong></td>
-                <td colspan="2">"Crazy productivity" levels enabling rapid feature deployment</td>
+                <td>Last 6 Months</td>
+                <td>AI-first approach</td>
             </tr>
         </tbody>
     </table>
 
     <h3>Mission-Critical Expertise Coverage</h3>
     <div class="service-grid">
-        <div class="service-item">KYC/AML structuring</div>
+        <div class="service-item">KYC/AML & Biometric Identification (on-platform, self-hosted, no data leaks)</div>
         <div class="service-item">Financial services</div>
         <div class="service-item">Legal/regulatory compliance</div>
         <div class="service-item">Cryptocurrency systems</div>
