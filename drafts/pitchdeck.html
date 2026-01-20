@@ -356,6 +356,26 @@
             letter-spacing: 0.1em;
         }
         
+        /* Mermaid diagram font size overrides */
+        .mermaid text,
+        .mermaid .nodeLabel,
+        .mermaid .edgeLabel,
+        .mermaid .labelText,
+        .mermaid foreignObject {
+            font-size: 10px !important;
+        }
+        
+        .mermaid .node rect,
+        .mermaid .node circle,
+        .mermaid .node ellipse,
+        .mermaid .node polygon {
+            font-size: 10px !important;
+        }
+        
+        .mermaid .edgeLabel span {
+            font-size: 8px !important;
+        }
+        
         /* Print styles */
         @media print {
             .deck-nav { display: none; }
@@ -443,7 +463,7 @@
                     </tr>
                     <tr>
                         <td><strong>Cost:</strong> Low infrastructure</td>
-                        <td><strong>Cost:</strong> $100K+ per issuance (legal, admin, trustee, placement fees)
+                        <td><strong>Cost:</strong> $100K+ per issuance (legal, admin, trustee, placement fees)</td>
                     </tr>
                     <tr>
                         <td><strong>Timeline:</strong> Days</td>
@@ -479,41 +499,49 @@
             <h2 class="slide-headline">One Security, Any Format</h2>
             <p class="slide-subhead">We built the bridge.</p>
             
-            <div class="diagram-box">
-                <pre style="text-align: center; font-size: 1rem;">
-┌──────────────┐    ┌──────────────┐    ┌──────────────────────┐
-│ Solana Token │ ←→ │  TON Token   │ ←→ │ ISIN via Clearstream │
-└──────────────┘    └──────────────┘    └──────────────────────┘
-       ↓                   ↓                        ↓
-  <strong>Same security. Same cap table. Same economics.</strong>
-  Format is a choice, not a product.
-                </pre>
+            <div class="mermaid" style="margin: 8px 0 4px 0;">
+graph LR
+    A["Solana Token<br/>(On-Chain Native)"] 
+    B["ISIN Lockbox<br/>(Issuer-Controlled<br/>Trust Oversight)"]
+    C["ISIN Security<br/>via Clearstream<br/>(Traditional Rails)"]
+    
+    A -->|"Lock Token<br/>Issuer-Enabled<br/>KYC Holder Initiates"| B
+    B -->|"Issue ISIN Security<br/>1:1 Backed<br/>~$4K setup"| C
+    C -->|"Redeem ISIN<br/>Return to On-Chain"| B
+    B -->|"Release Token<br/>1:1 Unwrap"| A
+    
+    style A fill:#667eea,stroke:#764ba2,stroke-width:3px,color:#fff
+    style B fill:#f6ad55,stroke:#c05621,stroke-width:4px,color:#000
+    style C fill:#4facfe,stroke:#00f2fe,stroke-width:3px,color:#fff
             </div>
             
-            <div class="two-col">
+            <p style="text-align: center; font-size: 0.85rem; font-weight: 600; margin: 4px 0 8px 0; color: var(--ink);">Same security, cap table, economics. <em style="font-weight: 400;">Solana is canonical. ISIN is 1:1 via lockbox.</em></p>
+            
+            <div class="two-col" style="font-size: 0.85rem; gap: 20px; line-height: 1.4;">
                 <div>
-                    <h3 style="font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 16px; color: var(--ink);">What We Built</h3>
-                    <ul>
-                        <li>Issue compliant securities <strong>once</strong> (via licensed trustee entity)</li>
-                        <li>Settle on Solana or TON blockchain (instant, atomic)</li>
-                        <li>Optional ISIN bridge to Clearstream (~$4K, ~1 week setup)</li>
-                        <li>KYC'd professional investors can <strong>convert between formats</strong> (1:1 backed via regulated trust)</li>
-                        <li>Broker-mediated OTC network (compliance by design, operational)</li>
+                    <h3 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 8px; color: var(--ink);">What We Built</h3>
+                    <ul style="margin: 0; padding-left: 18px;">
+                        <li>Issue securities <strong>once</strong> (licensed trustee)</li>
+                        <li>Settle on Solana (instant, atomic)</li>
+                        <li>Optional ISIN to Clearstream (~$4K, ~1 week)</li>
+                        <li>KYC'd investors <strong>convert formats</strong> when enabled (Solana ↔ ISIN, 1:1)</li>
+                        <li>Broker-mediated OTC network (operational)</li>
                     </ul>
                 </div>
                 <div>
-                    <h3 style="font-family: var(--font-display); font-size: 1.4rem; margin-bottom: 16px; color: var(--ink);">Key Rules</h3>
-                    <ul>
-                        <li>Only KYC'd Professional Investors ($150K typical minimum)</li>
-                        <li>Broker-mediated transfers (no permissionless DEX)</li>
+                    <h3 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 8px; color: var(--ink);">Key Rules</h3>
+                    <ul style="margin: 0; padding-left: 18px;">
+                        <li>Only KYC'd Professional Investors ($150K min)</li>
+                        <li>Broker-mediated transfers (no DEX)</li>
                         <li>On-chain credentials enforce eligibility</li>
-                        <li>Atomic settlement (Solana: instant, not T+2)</li>
+                        <li>Atomic settlement (instant, not T+2)</li>
+                        <li>Issuer controls conversion (Trust oversight)</li>
                     </ul>
                 </div>
             </div>
             
-            <div class="highlight-box">
-                <p style="font-size: 1.1rem; margin: 0;"><strong>The "A-ha":</strong> Your security can sit in a Solana wallet in Singapore AND a Clearstream account in Geneva — same cap table entry, different packaging.</p>
+            <div class="highlight-box" style="margin-top: 12px; padding: 12px 20px;">
+                <p style="font-size: 0.85rem; margin: 0;"><strong>The "A-ha":</strong> Your security can sit in a Solana wallet in Singapore AND via Clearstream in Geneva — same cap table, same economics. Lockbox ensures 1:1 backing.</p>
             </div>
         </div>
     </section>
@@ -524,46 +552,51 @@
             <div class="slide-label">The Platform</div>
             <h2 class="slide-headline">Not Just Tokens.<br>The Full Stack.</h2>
             
-            <div class="diagram-box">
-                <pre>
-╔═════════════════════════════════════════════════════════════╗
-║  <strong>SAILS.TO — Securities Issuance & Distribution Platform</strong>     ║
-║  ────────────────────────────────────────────────────────   ║
-║  Issue, manage, trade regulated digital securities          ║
-║  Revenue: 0.5-6% issuance | 0.5% trading | 1% annual       ║
-╠═════════════════════════════════════════════════════════════╣
-║  <strong>CCA.SH — Money Services Business (MSB)</strong>                     ║
-║  ────────────────────────────────────────────────────────   ║
-║  Remittances, payments, fiat on/off ramps, card issuance   ║
-║  Revenue: 0.5-2% on corridor volume                         ║
-╠═════════════════════════════════════════════════════════════╣
-║  <strong>MELUSINA OS — Self-Hosted Operating System</strong>                 ║
-║  ────────────────────────────────────────────────────────   ║
-║  Compliance workflows, per-issuance isolation, app store    ║
-║  Revenue: SaaS licensing to white-label operators           ║
-╚═════════════════════════════════════════════════════════════╝
-                </pre>
+            <div class="mermaid" style="margin: 12px 0;">
+flowchart TB
+    subgraph Layer1["<b>SAILS.TO — Securities Issuance & Distribution</b>"]
+        L1A["Issue & Manage<br/>Digital Securities<br/>(Solana Blockchain)"]
+        L1B["Revenue: 0.5-6% issuance<br/>0.5% trading | 1% annual"]
+    end
+    
+    subgraph Layer2["<b>CCA.SH — Money Services Business (MSB)</b>"]
+        L2A["Remittances, Payments<br/>Fiat On/Off Ramps"]
+        L2B["Revenue: 0.5-2%<br/>on corridor volume"]
+    end
+    
+    subgraph Layer3["<b>MELUSINA OS — Self-Hosted Operating System</b>"]
+        L3A["Compliance Workflows<br/>Per-Issuance Isolation"]
+        L3B["Revenue: SaaS licensing<br/>to white-label operators"]
+    end
+    
+    Layer1 -->|"Integrated Fiat Rails<br/>Single Onboarding"| Layer2
+    Layer2 -->|"Shared Compliance<br/>Infrastructure"| Layer3
+    Layer1 -.->|"Built on top of"| Layer3
+    
+    style Layer1 fill:#f0fff4,stroke:#38a169,stroke-width:3px
+    style Layer2 fill:#ebf8ff,stroke:#3182ce,stroke-width:3px
+    style Layer3 fill:#faf5ff,stroke:#805ad5,stroke-width:3px
             </div>
             
-            <div class="two-col">
+            <div class="two-col" style="font-size: 0.9rem; gap: 20px;">
                 <div>
-                    <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 16px;">Why the Stack Matters</h3>
-                    <ul>
-                        <li><strong>Integrated:</strong> MSB enables fiat rails for STO; single onboarding unlocks all services</li>
-                        <li><strong>Self-hosted:</strong> Zero third-party vendor dependency (issuer controls their data)</li>
-                        <li><strong>Licensable:</strong> Melusina white-label = additional recurring revenue</li>
-                        <li><strong>Entity Structure:</strong> Licensed subsidiaries (Broker, MSB, Trustee) flow 80% profit to Hrbr.Life holding company — investors own holding level</li>
+                    <h3 style="font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 10px;">Why the Stack Matters</h3>
+                    <ul style="margin: 0; padding-left: 18px; line-height: 1.5;">
+                        <li><strong>Integrated:</strong> MSB enables fiat rails for STO</li>
+                        <li><strong>Self-hosted:</strong> Zero vendor dependency</li>
+                        <li><strong>Licensable:</strong> Melusina white-label revenue</li>
+                        <li><strong>Entity Structure:</strong> Licensed subs flow 80% profit to Hrbr.Life holding</li>
                     </ul>
                 </div>
                 <div>
-                    <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin-bottom: 16px;">Operational Status</h3>
-                    <table style="font-size: 0.9rem;">
+                    <h3 style="font-family: var(--font-display); font-size: 1.15rem; margin-bottom: 10px;">Operational Status</h3>
+                    <table style="font-size: 0.85rem;">
                         <tbody>
-                            <tr><td><strong>Hrbr.Life</strong></td><td>Holding Company (investors invest here)</td></tr>
+                            <tr><td><strong>Hrbr.Life</strong></td><td>Holding (investors invest here)</td></tr>
                             <tr><td><strong>AiTX.pro</strong></td><td>Mauritius Brokerage ✅ <em>Licensed</em></td></tr>
-                            <tr><td><strong>Sails.to</strong></td><td>STO Platform (70% complete, launching Q1 '26)</td></tr>
-                            <tr><td><strong>Trust Entity</strong></td><td>SVG Financial Trustee ✅ <em>Approval in Principle</em></td></tr>
-                            <tr><td><strong>Cca.sh</strong></td><td>MSB Platform (licensing Q1-Q2 '26)</td></tr>
+                            <tr><td><strong>Sails.to</strong></td><td>STO on Solana (70%, beta Q4 '25, launch Q1 '26)</td></tr>
+                            <tr><td><strong>Trust Entity</strong></td><td>SVG Trustee ✅ <em>Approval in Principle</em></td></tr>
+                            <tr><td><strong>Cca.sh</strong></td><td>MSB (licensing Q1-Q2 '26)</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -575,29 +608,27 @@
     <section class="slide" data-slide="5">
         <div class="slide-content">
             <div class="slide-label">Issuance Process</div>
-            <h2 class="slide-headline">2 Weeks, Not 6 Months</h2>
-            <p class="slide-subhead">From zero to funded in two weeks.</p>
+            <h2 class="slide-headline">As Fast As 2 Weeks,<br>Not 6 Months</h2>
+            <p class="slide-subhead">From zero to funded in as little as two weeks (for typical clean cases).</p>
             
-            <div class="diagram-box">
-                <pre>
-<strong>━━━ ISSUANCE TIMELINE (Enabled by pre-approved templates, instant Wyoming DAO LLC formation, on-chain escrow) ━━━</strong>
-
-<strong>Days 1-2:</strong>  Due diligence, KYC on principals, legal docs (parallel processing)
-<strong>Day 3:</strong>     DAO LLC Series created (Wyoming: ~24 hours)
-<strong>Day 4:</strong>     Tokens minted (hard cap amount), escrow activated
-<strong>Day 5+:</strong>    Distribution begins via 3 channels:
-
-           ┌─ <strong>Channel 1:</strong> Direct Sales (your network) — 0.5% fee
-           ├─ <strong>Channel 2:</strong> Broker OTC Network — 6% fee  
-           └─ <strong>Channel 3:</strong> ISIN/Clearstream — ~$4K setup
-
-<strong>Closing:</strong>   Soft cap reached → funds released
-           Hard cap met OR duration expires → offering closes
-           Unsold tokens burned (final supply = actual investment)
-
-<strong>Live:</strong>      Secondary trading opens via OTC broker network
-                </pre>
+            <div class="mermaid" style="margin: 32px 0;">
+timeline
+    title Issuance Timeline - As Fast As 2 Weeks
+    section Days 1-2
+        Due Diligence : KYC on principals : Legal docs : Parallel processing
+    section Day 3
+        Entity : DAO LLC Series created : Wyoming ~24 hours
+    section Day 4
+        Tokenization : Tokens minted (hard cap) : Escrow activated
+    section Day 5+
+        Distribution : Channel 1 Direct Sales (0.5% fee) : Channel 2 Broker OTC (6% fee) : Channel 3 ISIN/Clearstream (~$4K setup)
+    section Closing
+        Funding Complete : Soft cap reached → funds released : Hard cap OR duration → close : Unsold tokens burned
+    section Day 14+
+        Active : Secondary trading opens (OTC)
             </div>
+            
+            <p style="text-align: center; font-size: 0.9rem; color: var(--slate); margin-top: 16px; font-style: italic;">Enabled by: Pre-approved legal templates + Instant Wyoming DAO LLC formation + On-chain escrow via licensed trustee</p>
             
             <div class="mermaid">
 flowchart TB
@@ -639,8 +670,8 @@ flowchart TB
             </table>
             
             <div class="highlight-box">
-                <strong>Soft Cap Miss = Full Refund (Guaranteed)</strong><br>
-                Investors receive invested capital back via smart contract + legal structure. Only minimal fees apply (0.5% brokerage + Clearstream if used). Zero risk if offering fails.
+                <strong>Soft Cap Miss = Zero Investment Risk</strong><br>
+                Investors receive invested capital back via smart contract + legal structure (capital protected). Only minimal admin fees apply (0.5% brokerage + Clearstream if used).
             </div>
         </div>
     </section>
@@ -679,7 +710,7 @@ sequenceDiagram
                         <li>✓ No permissionless access</li>
                         <li>✓ Atomic settlement (instant DvP)</li>
                         <li>✓ 0.5% fee (paid by buyer), split three ways</li>
-                        <li>✓ <strong>Network operational from day 1</strong> (includes our licensed Mauritius broker)</li>
+                        <li>✓ <strong>Network seeded from day 1</strong> with our licensed Mauritius broker; additional partners onboarding</li>
                     </ul>
                 </div>
                 <div>
@@ -694,20 +725,31 @@ sequenceDiagram
                 </div>
             </div>
             
-            <div class="diagram-box">
-                <pre style="text-align: center;">
-┌────────────────┐         ┌──────────────────────┐
-│ Solana Token   │ ←─────→ │ ISIN Lockbox Series  │
-└────────────────┘  1:1    └──────────────────────┘
-                    Lock              │
-                                      ↓
-                            ┌──────────────────────┐
-                            │ ISIN-Identified      │
-                            │ Security via         │
-                            │ Clearstream          │
-                            └──────────────────────┘
-                </pre>
+            <div class="mermaid" style="margin: 32px 0;">
+flowchart TB
+    subgraph Blockchain["On-Chain (Blockchain)"]
+        SOL["Solana Tokens<br/><em>Active</em>"]
+    end
+    
+    subgraph Lockbox["Trust Lockbox<br/>(SVG Licensed Trustee)"]
+        LOCKED["Locked Solana Tokens<br/><em>1:1 Backing</em>"]
+    end
+    
+    subgraph TradFi["Traditional Finance"]
+        ISIN["ISIN Securities<br/>via Clearstream<br/><em>Active</em>"]
+    end
+    
+    SOL -->|"Lock Token<br/>Initiate Conversion<br/>0.1-0.25% fee"| LOCKED
+    LOCKED -.->|"1:1 Backing<br/>Always Equal"| ISIN
+    ISIN -->|"Redeem Token<br/>Burn ISIN<br/>Release from Lockbox"| SOL
+    
+    style Blockchain fill:#667eea,stroke:#764ba2,stroke-width:2px,color:#fff
+    style Lockbox fill:#f6ad55,stroke:#c05621,stroke-width:3px
+    style TradFi fill:#4facfe,stroke:#00f2fe,stroke-width:2px,color:#fff
+    style LOCKED fill:#fbd38d,stroke:#c05621,stroke-width:2px
             </div>
+            
+            <p style="text-align: center; font-size: 0.95rem; margin-top: 16px; color: var(--graphite);"><strong>Key Principle:</strong> Total outstanding tokens (on-chain + ISIN) always equals minted supply. Lockbox ensures 1:1 backing at all times.</p>
         </div>
     </section>
 
@@ -1040,26 +1082,49 @@ Year 1 platform revenue per issuer: <strong style="color: var(--gold);">~$700K</
             <h2 class="slide-headline">Five Doors,<br>One Ecosystem</h2>
             <p class="slide-subhead">Super-app strategy: capture via one door, open the entire ecosystem.</p>
             
-            <div class="diagram-box">
-                <pre>
-┌────────────────────────────────────────────────────────────┐
-│  <strong>1. TRUST SERVICES</strong>                                         │
-│     Investment vehicle setup, DAO LLC formation            │
-├────────────────────────────────────────────────────────────┤
-│  <strong>2. INCORPORATION SERVICES</strong>                                 │
-│     Fast company formation (minutes to days)               │
-├────────────────────────────────────────────────────────────┤
-│  <strong>3. INVESTMENT SERVICES</strong>                                    │
-│     Direct investment access to curated opportunities      │
-├────────────────────────────────────────────────────────────┤
-│  <strong>4. DIGITAL ASSET EXCHANGE</strong>                                 │
-│     VASP-regulated, traditional cryptocurrencies           │
-├────────────────────────────────────────────────────────────┤
-│  <strong>5. REMITTANCE SERVICES</strong>                                    │
-│     Cross-border payments, MSB-regulated corridors         │
-└────────────────────────────────────────────────────────────┘
-                </pre>
+            <div class="mermaid" style="margin: 32px 0;">
+flowchart TB
+    User["👤 User / Client<br/><em>Single KYC Entry Point</em>"]
+    
+    subgraph Ecosystem["Sails.to Ecosystem"]
+        Trust["🏛️ Trust Services<br/>DAO LLC Formation<br/>Investment Vehicles"]
+        Incorp["📄 Incorporation<br/>Fast Company Setup<br/>(minutes to days)"]
+        Invest["💰 Investment<br/>Direct Access<br/>to Opportunities"]
+        Exchange["🔄 Digital Exchange<br/>VASP-Regulated<br/>Crypto Trading"]
+        Remit["💸 Remittance<br/>Cross-Border<br/>MSB Corridors"]
+    end
+    
+    Revenue["💵 Platform Revenue<br/><em>Multiple Touchpoints</em>"]
+    
+    User -->|"Entry 1"| Trust
+    User -->|"Entry 2"| Incorp
+    User -->|"Entry 3"| Invest
+    User -->|"Entry 4"| Exchange
+    User -->|"Entry 5"| Remit
+    
+    Trust -->|"Cross-Sell"| Invest
+    Incorp -->|"Cross-Sell"| Trust
+    Invest -->|"Cross-Sell"| Exchange
+    Exchange -->|"Cross-Sell"| Remit
+    Remit -->|"Cross-Sell"| Trust
+    
+    Trust --> Revenue
+    Incorp --> Revenue
+    Invest --> Revenue
+    Exchange --> Revenue
+    Remit --> Revenue
+    
+    style User fill:#ffd700,stroke:#ff8c00,stroke-width:3px,color:#000
+    style Ecosystem fill:#f0fff4,stroke:#38a169,stroke-width:2px
+    style Revenue fill:#c9a227,stroke:#8b7000,stroke-width:3px,color:#000
+    style Trust fill:#ebf8ff,stroke:#3182ce
+    style Incorp fill:#e6fffa,stroke:#319795
+    style Invest fill:#faf5ff,stroke:#805ad5
+    style Exchange fill:#fff5f7,stroke:#d53f8c
+    style Remit fill:#fffaf0,stroke:#dd6b20
             </div>
+            
+            <p style="text-align: center; font-size: 1rem; margin-top: 24px; color: var(--graphite);"><strong>Super-App Strategy:</strong> Capture via any door → Single KYC unlocks entire ecosystem → Multiple revenue streams per user → High LTV, Low CAC</p>
             
             <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin: 48px 0 24px;">GTM Phases</h3>
             
@@ -1076,7 +1141,7 @@ Year 1 platform revenue per issuer: <strong style="color: var(--gold);">~$700K</
                     <tr style="background: rgba(56, 161, 105, 0.1);">
                         <td><strong>Now</strong></td>
                         <td>Crypto-native issuers, existing network</td>
-                        <td>Live</td>
+                        <td>Private Beta</td>
                         <td>3-5 pilot issuances (DeFi projects, tokenized funds), broker partnerships (Mauritius base + 2-3 regional brokers)</td>
                     </tr>
                     <tr>
@@ -1089,7 +1154,7 @@ Year 1 platform revenue per issuer: <strong style="color: var(--gold);">~$700K</
                         <td><strong>12 months</strong></td>
                         <td>Institutional funds, white-label Melusina</td>
                         <td>+12 mo</td>
-                        <td>Break-even, 3+ white-label operators</td>
+                        <td>3+ white-label operators, $150M+ annual volume, path to profitability clear</td>
                     </tr>
                     <tr>
                         <td><strong>24 months</strong></td>
@@ -1106,8 +1171,8 @@ Year 1 platform revenue per issuer: <strong style="color: var(--gold);">~$700K</
                     <ul>
                         <li><strong>Direct (Priority 1):</strong> Issuer network acquisition via founder relationships (low CAC, high trust)</li>
                         <li><strong>Broker partnerships (Priority 1):</strong> Licensed OTC dealers bring investor base (fee share model incentivizes growth)</li>
-                        <li><strong>AI agents + Telegram bots:</strong> Automated outreach to accredited investors on crypto social channels (pilot testing: 400+ qualified leads from single campaign)</li>
-                        <li><strong>Super-app integration:</strong> Single KYC unlocks trust, exchange, remittance — cross-sell drives LTV, reduces CAC by 60%+</li>
+                        <li><strong>AI agents + Telegram bots:</strong> Early tests show promise for scalable outreach to accredited investors on crypto social channels (pilot: ~400 qualified leads). <em>Designed within Reg D/Reg S marketing constraints.</em></li>
+                        <li><strong>Super-app integration:</strong> Single KYC unlocks trust, exchange, remittance — cross-sell expected to materially reduce CAC (internally modeled ~60% vs single-product funnels)</li>
                     </ul>
                 </div>
                 <div>
@@ -1160,8 +1225,13 @@ Year 1 platform revenue per issuer: <strong style="color: var(--gold);">~$700K</
             <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin: 48px 0 24px;">Cap Table Structure</h3>
             
             <div style="background: var(--cream); padding: 20px; margin-bottom: 32px; border-left: 4px solid var(--gold);">
-                <p style="margin: 0 0 12px 0; font-size: 0.95rem;"><strong>Pre-Money Structure Explanation:</strong> Initial investor pool ("Existing Investors") comprises early backers who committed under a prior structure — 170k of planned 300k shares issued = 5.61% stake.</p>
-                <p style="margin: 0; font-size: 0.95rem;"><strong>Matching Rule:</strong> 1:1:1 ratio — for every share issued to Existing Investors, one matching share goes to Founder+Management team, and one to Strategic Marketing introducers (early partners who opened key networks). This 3× matching structure is <strong>pre-money</strong> (already reflected in the cap table below) and will <strong>not be topped up</strong> at post-money close. All holders dilute equally going forward.</p>
+                <p style="margin: 0 0 12px 0; font-size: 0.95rem;"><strong>Pre-Money Structure Explanation:</strong> Initial funding structure used a 1:1:1 matching mechanism for early stakeholders (300k share pool, 170k issued):</p>
+                <ul style="margin: 0; font-size: 0.9rem; list-style-position: inside;">
+                    <li>5.61% → <strong>Early Backers</strong> (crypto-native angels, family offices)</li>
+                    <li>5.61% → <strong>Strategic Marketing Partners</strong> (early BD partners who opened broker/institutional networks)</li>
+                    <li>5.61% → <strong>Founder + Management Team</strong> (matching allocation)</li>
+                </ul>
+                <p style="margin: 12px 0 0 0; font-size: 0.95rem;">This 3× matching structure (16.83% total) is <strong>pre-money</strong> and will <strong>not be topped up</strong>. All holders dilute equally post-close. For simplicity, table below aggregates Early Backers + Strategic Marketing as "Existing Investors" (11.22%).</p>
             </div>
             
             <div class="two-col">
@@ -1169,13 +1239,13 @@ Year 1 platform revenue per issuer: <strong style="color: var(--gold);">~$700K</
                     <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 16px;">Pre-Money (Before Investment)</h4>
                     <table style="font-size: 0.9rem;">
                         <tbody>
-                            <tr><td>Existing Investors (Early Backers)</td><td style="font-weight: 700;">11.22%</td></tr>
-                            <tr><td>Founder + Management</td><td style="font-weight: 700;">5.61%</td></tr>
-                            <tr><td>Founder base</td><td style="font-weight: 700;">83.17%</td></tr>
+                            <tr><td>Existing Investors (Early Backers + Strategic Partners)</td><td style="font-weight: 700;">11.22%</td></tr>
+                            <tr><td>Founder + Management Team</td><td style="font-weight: 700;">5.61%</td></tr>
+                            <tr><td>Founder Base</td><td style="font-weight: 700;">83.17%</td></tr>
                             <tr style="background: var(--cream);"><td><strong>Total</strong></td><td style="font-weight: 700;"><strong>100%</strong></td></tr>
                         </tbody>
                     </table>
-                    <p style="font-size: 0.85rem; color: var(--slate); margin-top: 16px;"><strong>Note:</strong> Early Backers pool includes crypto-native angel investors and family office participants (170k of 300k allocated shares issued = 5.61%). Strategic Marketing pool (5.61%) includes early business development partners who opened broker/institutional networks. Both groups dilute alongside new investors — no special anti-dilution rights.</p>
+                    <p style="font-size: 0.85rem; color: var(--slate); margin-top: 16px;"><strong>Note:</strong> "Existing Investors" aggregates two 5.61% pools (Early Backers + Strategic Marketing Partners) = 11.22% combined. No special anti-dilution rights for any pre-money holders.</p>
                 </div>
                 <div>
                     <h4 style="font-family: var(--font-display); font-size: 1.1rem; margin-bottom: 16px;">Post-Money (After $12.5M Close)</h4>
@@ -1192,10 +1262,10 @@ Year 1 platform revenue per issuer: <strong style="color: var(--gold);">~$700K</
                 </div>
             </div>
             
-            <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin: 48px 0 24px;">Seniority Program (4-Year ESOP Allocation)</h3>
+            <h3 style="font-family: var(--font-display); font-size: 1.3rem; margin: 48px 0 24px;">Equity Incentive Program (4-Year ESOP)</h3>
             
             <div style="background: var(--cream); padding: 20px; margin-bottom: 24px; border-left: 4px solid var(--gold);">
-                <p style="margin: 0; font-size: 1rem;"><strong>Employee Stock Ownership Plan (ESOP):</strong> 5% new issuance per year (5 senior team members × 1%/year) for 4 years = <strong>25% cumulative dilution</strong> across all shareholders. This is the company's option pool mechanism for key talent retention (Vlad, Lorinc, Rudi, Anoop, Daniil). New Investors go from 25.00% → 20.57% over 4 years. <em>All shareholders dilute pro-rata — no protected classes.</em></p>
+                <p style="margin: 0; font-size: 1rem;"><strong>Employee Stock Ownership Plan (ESOP):</strong> 5% new share issuance per year for 4 years = <strong>~20% ESOP pool</strong> (18.55% of fully-diluted cap table after 4 years). Allocated to 5 senior team members (Vlad, Lorinc, Rudi, Anoop, Daniil) at 1%/year each. <em>All shareholders dilute pro-rata — no protected classes.</em> New investors go from 25.00% → 20.57% over 4 years.</p>
             </div>
             
             <table>
@@ -1211,10 +1281,10 @@ Year 1 platform revenue per issuer: <strong style="color: var(--gold);">~$700K</
                 </thead>
                 <tbody>
                     <tr><td>Y0 (Close)</td><td style="font-weight: 700;">25.00%</td><td>8.41%</td><td>4.21%</td><td>62.38%</td><td>0%</td></tr>
-                    <tr><td>Y1</td><td style="font-weight: 700;">23.81%</td><td>8.01%</td><td>4.01%</td><td>59.38%</td><td>5%</td></tr>
-                    <tr><td>Y2</td><td style="font-weight: 700;">22.68%</td><td>7.63%</td><td>3.82%</td><td>56.53%</td><td>10%</td></tr>
-                    <tr><td>Y3</td><td style="font-weight: 700;">21.60%</td><td>7.27%</td><td>3.64%</td><td>53.82%</td><td>15%</td></tr>
-                    <tr style="background: rgba(201, 146, 39, 0.1);"><td><strong>Y4</strong></td><td style="font-weight: 700; color: var(--gold);">20.57%</td><td style="font-weight: 700;">6.93%</td><td style="font-weight: 700;">3.47%</td><td style="font-weight: 700;">51.26%</td><td style="font-weight: 700;">25%</td></tr>
+                    <tr><td>Y1</td><td style="font-weight: 700;">23.81%</td><td>8.01%</td><td>4.01%</td><td>59.38%</td><td>4.76%</td></tr>
+                    <tr><td>Y2</td><td style="font-weight: 700;">22.68%</td><td>7.63%</td><td>3.82%</td><td>56.53%</td><td>9.05%</td></tr>
+                    <tr><td>Y3</td><td style="font-weight: 700;">21.60%</td><td>7.27%</td><td>3.64%</td><td>53.82%</td><td>12.86%</td></tr>
+                    <tr style="background: rgba(201, 146, 39, 0.1);"><td><strong>Y4</strong></td><td style="font-weight: 700; color: var(--gold);">20.57%</td><td style="font-weight: 700;">6.93%</td><td style="font-weight: 700;">3.47%</td><td style="font-weight: 700;">51.26%</td><td style="font-weight: 700;">17.77%</td></tr>
                 </tbody>
             </table>
             
@@ -1245,7 +1315,8 @@ Year 1 platform revenue per issuer: <strong style="color: var(--gold);">~$700K</
                     <tr><td><strong>Regulatory</strong></td><td>$2.5M</td><td>20%</td><td>License applications (5+ jurisdictions), compliance, legal</td></tr>
                     <tr><td><strong>GTM/Sales</strong></td><td>$2.5M</td><td>20%</td><td>Issuer acquisition, broker partnerships, brand building</td></tr>
                     <tr><td><strong>Operations</strong></td><td>$1.9M</td><td>15%</td><td>Team scaling (7 → 15 people), infrastructure</td></tr>
-                    <tr><td><strong>Reserve</strong></td><td>$1.3M</td><td>10%</td><td>Working capital, opportunities, contingency</td></tr>
+                    <tr><td><strong>Reserve</strong></td><td>$1.2M</td><td>10%</td><td>Working capital, opportunities, contingency</td></tr>
+                    <tr style="background: var(--cream); font-weight: 700;"><td><strong>Total</strong></td><td><strong>$12.5M</strong></td><td><strong>100%</strong></td><td></td></tr>
                 </tbody>
             </table>
             
@@ -1292,7 +1363,7 @@ Year 1 platform revenue per issuer: <strong style="color: var(--gold);">~$700K</
             <div style="border: 3px solid var(--gold); padding: 48px; max-width: 800px; margin: 0 auto;">
                 <p style="font-size: 1.8rem; font-family: var(--font-display); color: var(--ivory); margin-bottom: 24px;">Partner with us to own the infrastructure layer.</p>
                 <p style="font-size: 1.3rem; color: rgba(255,255,255,0.8);">$12.5M for 25% of the platform that bridges two worlds.</p>
-                <p style="font-size: 1rem; color: var(--gold); margin-top: 24px; font-weight: 600;">Target Close: Q1 2026 | ~40% allocation soft-committed</p>
+                <p style="font-size: 1rem; color: var(--gold); margin-top: 24px; font-weight: 600;">Target Close: Q1 2026 | Strong interest from multiple investors (~40% allocation in advanced conversations)</p>
             </div>
             
             <div style="margin-top: 64px;">

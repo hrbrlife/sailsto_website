@@ -1050,6 +1050,148 @@
         }
 
         /* ═══════════════════════════════════════════════════════════════
+           AUDIENCE SECTIONS (For Brokers, For Trust Companies)
+        ═══════════════════════════════════════════════════════════════ */
+        .audience-section {
+            padding: 100px 48px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .audience-section.broker-section {
+            background: var(--navy);
+        }
+        
+        .audience-section.trust-section {
+            background: var(--cream);
+        }
+        
+        .audience-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .audience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+        
+        .audience-content .section-label {
+            color: var(--gold);
+        }
+        
+        .broker-section .section-title,
+        .broker-section .section-desc {
+            color: var(--ivory);
+        }
+        
+        .broker-section .audience-content .section-desc {
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .audience-content .section-desc {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+        
+        .audience-features {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .audience-feature {
+            padding: 24px 28px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.03);
+            position: relative;
+            transition: all 0.4s var(--ease-out-expo);
+        }
+        
+        .trust-section .audience-feature {
+            background: var(--ivory);
+            border: 1px solid rgba(0,0,0,0.08);
+        }
+        
+        .audience-feature::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: var(--gold);
+            transform: scaleY(0);
+            transform-origin: top;
+            transition: transform 0.4s var(--ease-out-expo);
+        }
+        
+        .audience-feature:hover {
+            transform: translateX(8px);
+        }
+        
+        .audience-feature:hover::before {
+            transform: scaleY(1);
+        }
+        
+        .audience-feature h4 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 500;
+            margin-bottom: 6px;
+        }
+        
+        .broker-section .audience-feature h4 {
+            color: var(--ivory);
+        }
+        
+        .trust-section .audience-feature h4 {
+            color: var(--ink);
+        }
+        
+        .audience-feature p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+        
+        .broker-section .audience-feature p {
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .trust-section .audience-feature p {
+            color: var(--slate);
+        }
+        
+        .commission-highlight {
+            margin-top: 32px;
+            padding: 24px;
+            background: rgba(201, 162, 39, 0.15);
+            border: 1px solid var(--gold);
+            text-align: center;
+        }
+        
+        .commission-highlight .value {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--gold);
+            display: block;
+        }
+        
+        .commission-highlight .label {
+            font-family: var(--font-ui);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: rgba(255,255,255,0.7);
+            margin-top: 4px;
+            display: block;
+        }
+
+        /* ═══════════════════════════════════════════════════════════════
            CTA SECTION
         ═══════════════════════════════════════════════════════════════ */
         .cta-section {
@@ -1175,9 +1317,10 @@
         @media (max-width: 1024px) {
             .feature-grid { grid-template-columns: repeat(2, 1fr); }
             .structure-grid, .fees-grid { grid-template-columns: 1fr; gap: 48px; }
+            .audience-grid { grid-template-columns: 1fr; gap: 48px; }
             .footer-grid { grid-template-columns: repeat(2, 1fr); }
             .stats-row { grid-template-columns: repeat(2, 1fr); }
-        }s
+        }
         
         @media (max-width: 768px) {
             nav { padding: 20px 24px; }
@@ -1219,6 +1362,7 @@
             .structure-section,
             .fees-section,
             .global-section,
+            .audience-section,
             .cta-section { padding: 60px 24px; }
             
             .editorial-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -1226,6 +1370,9 @@
             .stats-row { grid-template-columns: repeat(2, 1fr); gap: 24px; }
             .global-stats { flex-direction: column; gap: 24px; }
             .global-card { padding: 40px 24px; }
+            .audience-grid { grid-template-columns: 1fr; gap: 40px; }
+            .structure-grid { grid-template-columns: 1fr; gap: 40px; }
+            .fees-grid { grid-template-columns: 1fr; gap: 40px; }
             
             .footer-grid { grid-template-columns: 1fr; gap: 32px; }
             .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
@@ -1272,7 +1419,7 @@
         <div class="nav-links">
             <a href="#">For Issuers</a>
             <a href="#">For Investors</a>
-            <a href="#">Documentation</a>
+            <a href="#for-brokers">For Brokers</a>
             <a href="#" class="btn-nav">Get Started</a>
         </div>
     </nav>
@@ -1302,7 +1449,7 @@
             </div>
             <div class="editorial-grid">
                 <div class="editorial-col">
-                    <p>Traditional capital-raising forces a choice: the speed of on-chain distribution or the comfort of bankable settlement; global reach or familiar controls; "new" or "accepted." Sails.to treats that fork as artificial—a question of packaging, not product. By tokenizing traditional financial instruments, the platform streamlines issuance and settlement while keeping the security intact. The holding format can change—Solana, TON, or ISIN through traditional custody—without changing what the instrument is.</p>
+                    <p>Traditional capital-raising forces a choice: the speed of on-chain distribution or the comfort of bankable settlement; global reach or familiar controls; "new" or "accepted." Sails.to treats that fork as artificial—a question of packaging, not product. Securities settle on Solana with the option to convert to ISIN-identified format via Clearstream when traditional custody is required. The holding format can change without changing what the instrument is.</p>
                     <p>That infrastructure changes the raise itself. Established companies gain access to a compliant, scalable capital-raising framework built for institutional participation: clear disclosures, robust governance, and a global network of professional investors. Issuers don't pay until the raise succeeds—aligning the platform's incentives with the only outcome that matters.</p>
                 </div>
                 <div class="editorial-col">
@@ -1343,8 +1490,8 @@
             <div class="feature-grid">
                 <div class="feature-card">
                     <span class="feature-icon">⚖️</span>
-                    <h3>Issuer-Controlled Vehicle</h3>
-                    <p>Your own issuance structure with clean internal compartments for operations, reserves, and bridging — designed for privacy, control, and longevity.</p>
+                    <h3>Turnkey Structure</h3>
+                    <p>Wyoming DAO Series LLC with Reg S/Reg D compliance, KYC/AML platform, document vault, investor communications, and reporting—all included at zero upfront cost.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">🔐</span>
@@ -1354,12 +1501,12 @@
                 <div class="feature-card">
                     <span class="feature-icon">🔄</span>
                     <h3>Broker OTC Network</h3>
-                    <p>Distribute directly, or work with licensed OTC dealers. Primary subscription and secondary trading routes are built in.</p>
+                    <p>Licensed brokers from day one. Multi-broker atomic settlement—one order fills across multiple brokers in a single transaction. Commission sharing built in.</p>
                 </div>
                 <div class="feature-card">
                     <span class="feature-icon">🌐</span>
-                    <h3>Interchangeable Holding</h3>
-                    <p>The same security can be held on Solana, on TON, or as an ISIN in traditional custody — convertible between formats for KYC‑verified professional investors.</p>
+                    <h3>Format Flexibility</h3>
+                    <p>Hold on Solana for 24/7 trading, or convert to ISIN-identified format for traditional custody via Clearstream. Issuer-controlled conversion, always 1:1 backed. Same security, both worlds.</p>
                 </div>
             </div>
         </div>
@@ -1415,6 +1562,10 @@
                             <span class="label">Secondary trades</span>
                             <span class="value">0.5%</span>
                         </div>
+                        <div class="fee-row">
+                            <span class="label">Trust & administration</span>
+                            <span class="value">1%/yr</span>
+                        </div>
                     </div>
                     <div class="fee-note">
                         <strong>Soft cap miss = full refund.</strong> Investors reimbursed automatically. You owe nothing.
@@ -1428,21 +1579,85 @@
         <div class="global-container">
             <div class="global-card">
                 <span class="section-label">TradFi Bridge</span>
-                <h2 class="section-title">Clearstream to any bank worldwide.</h2>
-                <p>This is the point where DeFi and TradFi stop arguing and start speaking the same language. Your security can be represented as an ISIN for traditional custody and settlement, while remaining interoperable with its on-chain form. For KYC‑verified professional investors, the holding format is a choice — not a different product.</p>
+                <h2 class="section-title">Solana wallet today, private bank tomorrow.</h2>
+                <p>Conversion between formats is issuer-controlled with regulated Trust oversight. Lock tokens on-chain, issue 1:1 backed ISIN-identified securities via Clearstream. Reverse when needed. Optional ViennaMTF public listing for exchange visibility. Your security adapts to custody requirements, not the other way around.</p>
                 
                 <div class="global-stats">
                     <div class="global-stat">
-                        <div class="value">~€3-5K</div>
-                        <div class="label">ISIN setup</div>
+                        <div class="value">~$4K</div>
+                        <div class="label">ISIN/Clearstream</div>
                     </div>
                     <div class="global-stat">
-                        <div class="value">~1 week</div>
-                        <div class="label">Timeline</div>
+                        <div class="value">~$3K</div>
+                        <div class="label">ViennaMTF listing</div>
                     </div>
                     <div class="global-stat">
-                        <div class="value">Seamless</div>
-                        <div class="label">DeFi ↔ TradFi</div>
+                        <div class="value">1:1</div>
+                        <div class="label">Always backed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Brokers Section -->
+    <section class="audience-section broker-section" id="for-brokers">
+        <div class="audience-container">
+            <div class="audience-grid">
+                <div class="audience-content">
+                    <span class="section-label">For Brokers</span>
+                    <h2 class="section-title">Plug into a<br>ready-built network.</h2>
+                    <p class="section-desc">Access primary and secondary deal flow from day one. No platform development. No compliance infrastructure to build. Route orders, earn commissions, serve clients who want both digital and traditional custody options.</p>
+                </div>
+                
+                <div class="audience-features">
+                    <div class="audience-feature">
+                        <h4>Commission Sharing</h4>
+                        <p>The 0.5% secondary trading fee splits ⅓ platform, ⅔ brokers. The 6% broker network fee on primary raises goes entirely to participating brokers.</p>
+                    </div>
+                    <div class="audience-feature">
+                        <h4>Multi-Broker Atomic Settlement</h4>
+                        <p>One order can fill across multiple brokers in a single on-chain transaction. No counterparty risk, no settlement delays, no manual reconciliation.</p>
+                    </div>
+                    <div class="audience-feature">
+                        <h4>OTC Liquidity Network</h4>
+                        <p>Quote and trade within a verified universe of eligible investors. Cross-broker routing when broader liquidity matters. All compliant, all auditable.</p>
+                    </div>
+                    <div class="commission-highlight">
+                        <span class="value">⅔ of 0.5%</span>
+                        <span class="label">Broker share on secondary trades</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Trust Companies / MFOs Section -->
+    <section class="audience-section trust-section" id="for-institutions">
+        <div class="audience-container">
+            <div class="audience-grid">
+                <div class="audience-content">
+                    <span class="section-label">For Trust Companies & MFOs</span>
+                    <h2 class="section-title">White-label<br>infrastructure.</h2>
+                    <p class="section-desc">Offer your clients tokenized securities capabilities without building the stack. Your brand, your client relationships, our infrastructure. Full platform access with custom branding, compliance tooling, and dedicated support.</p>
+                </div>
+                
+                <div class="audience-features">
+                    <div class="audience-feature">
+                        <h4>Your Brand, Our Rails</h4>
+                        <p>White-label the entire platform under your name. Client-facing interfaces, documentation, and communications all customizable to your identity.</p>
+                    </div>
+                    <div class="audience-feature">
+                        <h4>Compliance Tooling Included</h4>
+                        <p>KYC/AML platform you control—no data leaks to third parties. Document vault, investor communications, regulatory reporting all built in.</p>
+                    </div>
+                    <div class="audience-feature">
+                        <h4>Serve Both Worlds</h4>
+                        <p>Clients can hold on-chain or convert to ISIN for traditional custody via Clearstream. Optional ViennaMTF listing for exchange visibility. You choose what to offer.</p>
+                    </div>
+                    <div class="audience-feature">
+                        <h4>Fiduciary-Grade Oversight</h4>
+                        <p>Trustee-as-a-service model or bring your own. Wyoming DAO Series LLC structure with proper compartmentalization for segregated client assets.</p>
                     </div>
                 </div>
             </div>
@@ -1450,10 +1665,10 @@
     </section>
 
     <section class="cta-section">
-        <h2>Ready to raise?</h2>
-        <p>Join issuers who want control, not intermediaries.</p>
+        <h2>Ready to participate?</h2>
+        <p>For issuers, investors, and brokers who want infrastructure that works across both worlds.</p>
         <a href="#" class="btn btn-primary">
-            Start your Fundraising
+            Get Started
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
     </section>
@@ -1462,13 +1677,14 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="#" class="logo"><img src="sail_logo.png" alt="Sails.to"></a>
-                <p>DAO-native securities infrastructure.<br>Pay after success.</p>
+                <p>Hybrid securities infrastructure.<br>Zero upfront. Pay on success.<br><em style="font-size: 0.8rem; color: var(--silver);">White-label available for institutions.</em></p>
             </div>
             <div class="footer-col">
                 <h4>Platform</h4>
                 <a href="#">For Issuers</a>
                 <a href="#">For Investors</a>
-                <a href="#">For Brokers</a>
+                <a href="#for-brokers">For Brokers</a>
+                <a href="#for-institutions">For Institutions</a>
             </div>
             <div class="footer-col">
                 <h4>Resources</h4>
