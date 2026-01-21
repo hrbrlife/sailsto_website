@@ -329,13 +329,13 @@
         
         .hero h1 .line {
             display: block;
-            overflow: hidden;
+            overflow: visible; /* Allow letters to show fully */
         }
         
         .hero h1 .line-inner {
             display: block;
-            /* Smooth entrance */
-            transform: translateY(100%);
+            /* Smooth entrance - use clip-path for reveal instead */
+            transform: translateY(0);
             opacity: 0;
             /* Start white, animate to warm orange glow */
             color: #ffffff;
@@ -347,7 +347,7 @@
         
         @keyframes headlineEnter {
             0% { 
-                transform: translateY(100%);
+                transform: translateY(30%);
                 opacity: 0;
             }
             100% { 
@@ -632,10 +632,17 @@
            EDITORIAL SECTION - Space for parallax columns to land
         ═══════════════════════════════════════════════════════════════ */
         .editorial-section {
-            padding: 400px 48px 60px; /* Large top padding for columns */
+            padding: 720px 48px 60px; /* Large top padding for columns - accommodates full editorial content */
             position: relative;
             z-index: 1; /* Low - fixed columns are above */
             background: var(--ivory);
+        }
+        
+        /* Stats in editorial section don't need extra top margin - padding handles it */
+        .editorial-section .stats-row {
+            margin-top: 0;
+            padding-top: 48px;
+            border-top: 1px solid rgba(0,0,0,0.08);
         }
         
         .editorial-container {
