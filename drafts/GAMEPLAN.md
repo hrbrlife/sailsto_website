@@ -4,6 +4,62 @@
 
 ---
 
+## Site Architecture (Reorganized Jan 21, 2026)
+
+### Directory Structure
+```
+drafts/
+├── _source/                    # SOURCE FILES (edit these)
+│   ├── _includes/
+│   │   ├── nav.html            # Navigation template (with {{ROOT}} placeholders)
+│   │   └── footer.html         # Footer template (with {{ROOT}} placeholders)
+│   ├── index.html              # Uses {{NAV}}, {{FOOTER}}, {{ROOT}}
+│   ├── [other pages].html      # All templated pages
+│   ├── company/
+│   ├── knowledge/
+│   │   ├── blog/
+│   │   ├── glossary/
+│   │   ├── docs/
+│   │   └── guides/
+│   └── [etc]
+│
+├── assets/
+│   ├── css/
+│   │   ├── home.css            # Homepage styles (extracted from index.html)
+│   │   ├── styles.css          # Inner page shared styles
+│   │   ├── blog-post.css       # Blog post page styles
+│   │   ├── glossary-term.css   # Glossary term page styles
+│   │   └── glossary.css        # Tooltip styles
+│   ├── js/
+│   │   └── glossary.js         # Tooltip functionality
+│   └── content/
+│       └── glossary.json       # Glossary data for tooltips
+│
+├── presentations/              # Standalone files (not templated)
+│   ├── pitchdeck.html
+│   └── exec_summ.html
+│
+├── build.py                    # Build script
+├── whatsails.html              # Standalone (different design)
+│
+└── [output HTML files]         # Built from _source/ (served)
+```
+
+### Build System
+```bash
+python3 build.py          # Build all files
+python3 build.py --init   # Create _source/ from existing (one-time)
+python3 build.py --verify # Verify build matches existing
+```
+
+### Workflow
+1. Edit files in `_source/`
+2. Run `python3 build.py`
+3. Output files are generated in root (same level as _source)
+4. Deploy the root directory (excluding _source/)
+
+---
+
 ## Fee Structure (CONFIRMED)
 
 ### Primary Fees

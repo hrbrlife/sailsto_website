@@ -13,36 +13,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../styles.css">
     <link rel="stylesheet" href="../../assets/css/glossary.css">
-    <style>
-        .blog-header { background: linear-gradient(135deg, #1a2a3a 0%, #2d4a5a 100%); padding: 80px 0 60px; color: white; }
-        .blog-category { display: inline-block; padding: 6px 16px; background: rgba(201, 162, 39, 0.2); border: 1px solid #C9A227; border-radius: 20px; font-size: 0.85rem; color: #C9A227; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
-        .blog-title { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 600; margin-bottom: 20px; line-height: 1.2; }
-        .blog-meta { display: flex; align-items: center; gap: 20px; font-size: 0.95rem; opacity: 0.9; }
-        .blog-content { padding: 60px 0; background: #FFFEF8; }
-        .blog-content-inner { max-width: 800px; margin: 0 auto; padding: 0 20px; }
-        .blog-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: #1a2a3a; margin: 40px 0 20px; }
-        .blog-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: #1a2a3a; margin: 30px 0 15px; }
-        .blog-content p { font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 20px; }
-        .blog-content ul, .blog-content ol { margin: 20px 0; padding-left: 25px; }
-        .blog-content li { font-size: 1.1rem; line-height: 1.8; color: #444; margin-bottom: 10px; }
-        .back-link { display: inline-flex; align-items: center; gap: 8px; color: #C9A227; text-decoration: none; font-weight: 500; margin-bottom: 20px; }
-        .back-link:hover { text-decoration: underline; }
-        .blog-cta { background: #F7F5F0; padding: 40px; border-radius: 12px; text-align: center; margin-top: 40px; }
-        .blog-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px; }
-        .blog-cta .btn { display: inline-block; padding: 12px 30px; background: #C9A227; color: white; text-decoration: none; border-radius: 6px; font-weight: 500; }
-        .comparison-table { width: 100%; border-collapse: collapse; margin: 30px 0; }
-        .comparison-table th, .comparison-table td { padding: 15px; text-align: left; border-bottom: 1px solid #e0ddd5; }
-        .comparison-table th { background: #F7F5F0; font-weight: 600; }
-        .comparison-table tr:hover { background: #faf9f5; }
-        .case-study { background: #F7F5F0; border-radius: 12px; padding: 30px; margin: 30px 0; }
-        .case-study h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; color: #1a2a3a; margin-bottom: 15px; }
-        .case-study p { margin-bottom: 15px; }
-        .case-study p:last-child { margin-bottom: 0; }
-    </style>
+    <link rel="stylesheet" href="../../assets/css/blog-post.css">
 </head>
 <body>
     <!-- Navigation -->
-    <nav>
+        <nav>
         <a href="../../index.html" class="logo">
             <img src="../../sail_logo.png" alt="Sails.to" class="logo-dark">
             <img src="../../sail_logo_w.png" alt="Sails.to" class="logo-light">
@@ -64,7 +39,7 @@
                 </div>
             </div>
             <div class="nav-dropdown">
-                <a href="#" class="nav-dropdown-trigger active">Knowledge</a>
+                <a href="#" class="nav-dropdown-trigger">Knowledge</a>
                 <div class="nav-dropdown-menu">
                     <a href="../../knowledge/index.html">Knowledge Base</a>
                     <div class="dropdown-divider"></div>
@@ -85,6 +60,7 @@
             <a href="../../signup.html" class="btn-nav">Get Started</a>
         </div>
     </nav>
+
 
     <header class="blog-header">
         <div class="container">
@@ -280,11 +256,13 @@
     
     <script src="../../assets/js/glossary.js"></script>
     <!-- Footer -->
-    <footer>
+        <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <a href="../../index.html" class="logo"><img src="../../sail_logo.png" alt="Sails.to" style="height: 32px;"></a>
-                <p>Hybrid securities infrastructure bridging DeFi innovation with TradFi trust.</p>
+                <a href="../../index.html" class="logo">
+                    <img src="../../sail_logo.png" alt="Sails.to">
+                </a>
+                <p>Hybrid securities infrastructure bridging DeFi innovation with TradFi trust.<br><em style="font-size: 0.8rem; color: var(--silver);">White-label available for institutions.</em></p>
             </div>
             <div class="footer-col">
                 <h4>Platform</h4>
@@ -314,6 +292,7 @@
             <span>Securities offered through licensed intermediaries only. For professional investors.</span>
         </div>
     </footer>
+
 
     <script>
         // Mobile navigation

@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Sails.to — Raise Your Sails</title>
+    <meta name="description" content="Hybrid securities infrastructure bridging DeFi innovation with TradFi trust. Issue, manage and trade security tokens that work across Solana and traditional custody.">
+    <meta name="keywords" content="security tokens, tokenization, Solana, ISIN, Clearstream, private capital, Wyoming DAO, Reg D, Reg S, hybrid securities">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sails.to — Hybrid Securities Infrastructure">
+    <meta property="og:description" content="Issue and trade securities that live seamlessly across TradFi and DeFi.">
+    <meta property="og:image" content="https://sails.to/og-image.png">
+    <meta property="og:url" content="https://sails.to">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sails.to — Raise Your Sails">
+    <meta name="twitter:description" content="Hybrid securities infrastructure bridging DeFi innovation with TradFi trust.">
+    
+    <!-- Cache bust: 2026-01-08-v2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ROOT}}assets/css/home.css">
+</head>
+<body>
+    <!-- Intricate geometric sail pattern -->
+    <div class="pattern-layer" style="display: none;">
+        <svg class="pattern-svg" viewBox="0 0 1000 1000" preserveAspectRatio="xMidYMid slice">
+            <defs>
+                <pattern id="sailPattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+                    <!-- Triangular sails -->
+                    <polygon points="100,20 180,180 20,180" fill="none" stroke="#0A0A0A" stroke-width="0.5"/>
+                    <polygon points="100,40 160,160 40,160" fill="none" stroke="#0A0A0A" stroke-width="0.3"/>
+                    
+                    <!-- Compass rose hint -->
+                    <circle cx="100" cy="100" r="60" fill="none" stroke="#C9A227" stroke-width="0.3"/>
+                    <circle cx="100" cy="100" r="40" fill="none" stroke="#0A0A0A" stroke-width="0.2"/>
+                    
+                    <!-- Cardinal lines -->
+                    <line x1="100" y1="30" x2="100" y2="170" stroke="#0A0A0A" stroke-width="0.2"/>
+                    <line x1="30" y1="100" x2="170" y2="100" stroke="#0A0A0A" stroke-width="0.2"/>
+                    
+                    <!-- Diagonal lines -->
+                    <line x1="50" y1="50" x2="150" y2="150" stroke="#0A0A0A" stroke-width="0.15"/>
+                    <line x1="150" y1="50" x2="50" y2="150" stroke="#0A0A0A" stroke-width="0.15"/>
+                    
+                    <!-- Small decorative dots -->
+                    <circle cx="100" cy="40" r="2" fill="#0A0A0A"/>
+                    <circle cx="100" cy="160" r="2" fill="#0A0A0A"/>
+                    <circle cx="40" cy="100" r="2" fill="#0A0A0A"/>
+                    <circle cx="160" cy="100" r="2" fill="#0A0A0A"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#sailPattern)"/>
+        </svg>
+    </div>
+    <div class="pattern-overlay"></div>
+    <div class="noise"></div>
+
+    {{NAV}}
+
+    <section class="hero">
+        <!-- Background image with zoom effect -->
+        <div class="hero-bg">
+            <video class="hero-video" src="raise-your-sails-bg.webm" poster="raise-your-sails-bg.jpg" autoplay muted loop playsinline></video>
+        </div>
+        
+        <!-- Color/contrast overlay - shifts from dark to warm -->
+        <div class="hero-overlay"></div>
+        
+        <div class="hero-content">
+            <h1>
+                <span class="line"><span class="line-inner">Raise your sails</span></span>
+            </h1>
+            <p class="hero-tagline">to go beyond with securities that cross the line.</p>
+            
+        </div>
+        
+        <!-- Editorial columns - only top half visible initially -->
+        <div class="hero-editorial" id="heroEditorial">
+            <div class="editorial-header">
+                <span class="line1">Welcome to the next decade of capital markets that belongs to savvy issuers and visionary investors who stop choosing between worlds.</span>
+                <span class="line2">Sails.to is the pioneer platform for established businesses and <span class="glossary-term" data-term="professional-investor">professional investors</span> to issue, manage and trade <span class="glossary-term" data-term="security-token">security tokens</span> that live seamlessly across TradFi and DeFi.</span>
+            </div>
+            <div class="editorial-grid">
+                <div class="editorial-col">
+                    <p>Traditional capital-raising forces a choice: the speed of on-chain distribution or the comfort of bankable settlement; global reach or familiar controls; "new" or "accepted." Sails.to treats that fork as artificial—a question of packaging, not product. Securities settle on <span class="glossary-term" data-term="solana">Solana</span> with the option to convert to <span class="glossary-term" data-term="isin">ISIN</span>-identified format via <span class="glossary-term" data-term="clearstream">Clearstream</span> when traditional <span class="glossary-term" data-term="custody">custody</span> is required. The holding format can change without changing what the instrument is.</p>
+                    <p>That infrastructure changes the raise itself. Established companies gain access to a compliant, scalable capital-raising framework built for institutional participation: clear disclosures, robust governance, and a global network of <span class="glossary-term" data-term="professional-investor">professional investors</span>. Issuers don't pay until the raise succeeds—aligning the platform's incentives with the only outcome that matters.</p>
+                </div>
+                <div class="editorial-col">
+                    <p>For the <span class="glossary-term" data-term="professional-investor">professional investor</span>, the real question isn't "crypto or TradFi." It's whether ownership is clean, eligibility is enforced, and the position fits inside an existing workflow. Sails.to answers all three: curated opportunities backed by comprehensive disclosures, institutional-grade <span class="glossary-term" data-term="custody">custody</span>, and robust risk controls. Hold where it makes sense today, convert when it doesn't tomorrow—without turning the position into a migration exercise.</p>
+                    <p>Execution follows the same logic. Trade within a verified universe, access cross-broker OTC liquidity when broader routing matters, or see the instrument graduate to venues like EuroMTF—all without losing continuity. <span class="glossary-term" data-term="tokenization">Tokenization</span> enables efficient ownership recording and seamless settlement, while participation remains limited to eligible investors and governed by the standards traditional markets expect.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="editorial-section">
+        <div class="editorial-container">
+            <div class="stats-row">
+                <div class="stat-item">
+                    <div class="stat-value">$600K</div>
+                    <div class="stat-label">Minimum raise</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">1–2 wks</div>
+                    <div class="stat-label">Time to launch</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">0.5%</div>
+                    <div class="stat-label">Direct placement</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">6%</div>
+                    <div class="stat-label">Broker network</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <div class="features-container">
+            <div class="features-header">
+                <span class="section-label">Everything Included</span>
+                <h2 class="section-title">Not just tokens.<br>The full stack.</h2>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">⚖️</span>
+                    <h3>Turnkey Structure</h3>
+                    <p><span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO</span> <span class="glossary-term" data-term="series-llc">Series LLC</span> with <span class="glossary-term" data-term="reg-s">Reg S</span>/<span class="glossary-term" data-term="reg-d">Reg D</span> compliance, <span class="glossary-term" data-term="kyc">KYC</span>/<span class="glossary-term" data-term="aml">AML</span> platform, document vault, investor communications, and reporting—all included at zero upfront cost.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔐</span>
+                    <h3>Trust Oversight</h3>
+                    <p>Appoint a trustee from the network or bring your own licensed provider as an independent oversight party with the access they need.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🔄</span>
+                    <h3>Broker OTC Network</h3>
+                    <p>Licensed brokers from day one. Multi-broker atomic settlement—one order fills across multiple brokers in a single transaction. Commission sharing built in.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">🌐</span>
+                    <h3>Format Flexibility</h3>
+                    <p>Hold on <span class="glossary-term" data-term="solana">Solana</span> for 24/7 trading, or convert to <span class="glossary-term" data-term="isin">ISIN</span>-identified format for traditional <span class="glossary-term" data-term="custody">custody</span> via <span class="glossary-term" data-term="clearstream">Clearstream</span>. Issuer-controlled conversion, always 1:1 backed. Same security, both worlds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="structure-section">
+        <div class="structure-container">
+            <div class="structure-grid">
+                <div class="structure-content">
+                    <span class="section-label">Isolated by Design</span>
+                    <h2 class="section-title">One entity,<br>many compartments.</h2>
+                    <p class="section-desc">Your issuance is organized into separate internal compartments for the different jobs a serious security needs: operations, reserves/distributions, and the TradFi bridge. Clear separation, clean governance, full control.</p>
+                </div>
+                
+                <div class="structure-cards">
+                    <div class="structure-card">
+                        <h4>Operating Series</h4>
+                        <p>Holds pledges, underlying assets, and receives revenue for your specific offering.</p>
+                    </div>
+                    <div class="structure-card">
+                        <h4>Treasury Series</h4>
+                        <p>Reserves, operational funds, unclaimed distributions. Neutral trust oversight.</p>
+                    </div>
+                    <div class="structure-card">
+                        <h4>TradFi Bridge Series</h4>
+                        <p>Convert between on-chain form and ISIN form so eligible investors can hold through traditional custody without losing interoperability.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="fees-section">
+        <div class="fees-container">
+            <div class="fees-grid">
+                <div class="fees-content">
+                    <span class="section-label">Pay After Success</span>
+                    <h2 class="section-title">Zero risk<br>to launch.</h2>
+                    <p class="section-desc">No setup fees. No monthly fees. You pay only on successfully raised capital. Miss your soft cap? Everyone gets reimbursed automatically.</p>
+                </div>
+                
+                <div>
+                    <div class="fee-table">
+                        <div class="fee-row">
+                            <span class="label">Direct placement</span>
+                            <span class="value">0.5%</span>
+                        </div>
+                        <div class="fee-row">
+                            <span class="label">Broker network</span>
+                            <span class="value">6%</span>
+                        </div>
+                        <div class="fee-row">
+                            <span class="label">Secondary trades</span>
+                            <span class="value">0.5%</span>
+                        </div>
+                        <div class="fee-row">
+                            <span class="label">Trust & administration</span>
+                            <span class="value">1%/yr</span>
+                        </div>
+                    </div>
+                    <div class="fee-note">
+                        <strong>Soft cap miss = full refund.</strong> Investors reimbursed automatically. You owe nothing.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="global-section">
+        <div class="global-container">
+            <div class="global-card">
+                <span class="section-label"><span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span></span>
+                <h2 class="section-title"><span class="glossary-term" data-term="solana">Solana</span> wallet today, private bank tomorrow.</h2>
+                <p>Conversion between formats is issuer-controlled with regulated Trust oversight. Lock tokens on-chain, issue 1:1 backed <span class="glossary-term" data-term="isin">ISIN</span>-identified <span class="glossary-term" data-term="security-token">securities</span> via <span class="glossary-term" data-term="clearstream">Clearstream</span>. Reverse when needed. Optional ViennaMTF public listing for exchange visibility. Your security adapts to <span class="glossary-term" data-term="custody">custody</span> requirements, not the other way around.</p>
+                
+                <div class="global-stats">
+                    <div class="global-stat">
+                        <div class="value">~$4K</div>
+                        <div class="label"><span class="glossary-term" data-term="isin">ISIN</span>/<span class="glossary-term" data-term="clearstream">Clearstream</span></div>
+                    </div>
+                    <div class="global-stat">
+                        <div class="value">~$3K</div>
+                        <div class="label">ViennaMTF listing</div>
+                    </div>
+                    <div class="global-stat">
+                        <div class="value">1:1</div>
+                        <div class="label">Always backed</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <h2>Ready to participate?</h2>
+        <p>For issuers, investors, and brokers who want infrastructure that works across both worlds.</p>
+        <a href="signup.html" class="btn btn-primary">
+            Get Started
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+    </section>
+
+    {{FOOTER}}
+
+    <script>
+        const nav = document.querySelector('nav');
+        const heroEditorial = document.getElementById('heroEditorial');
+        const editorialParagraphs = heroEditorial ? heroEditorial.querySelectorAll('p, .editorial-header .line1, .editorial-header .line2') : [];
+        const editorialSection = document.querySelector('.editorial-section');
+        const windowHeight = window.innerHeight;
+        const isMobile = window.innerWidth <= 768;
+        
+        // Mobile navigation
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const navDropdowns = document.querySelectorAll('.nav-dropdown');
+        
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+        
+        // Mobile dropdown toggle
+        navDropdowns.forEach(dropdown => {
+            const trigger = dropdown.querySelector('.nav-dropdown-trigger');
+            if (trigger && isMobile) {
+                trigger.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    dropdown.classList.toggle('active');
+                });
+            }
+        });
+        
+        // Get the height of the editorial columns
+        const columnsHeight = heroEditorial ? heroEditorial.offsetHeight : 300;
+        
+        // Simple scroll handler
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            
+            // Nav background
+            if (scrolled > 60) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+            
+            // Skip parallax on mobile - CSS handles it
+            if (isMobile) return;
+            
+            // Editorial columns parallax (desktop only)
+            if (heroEditorial && editorialSection) {
+                // Calculate where columns should "land" - top of editorial section
+                const sectionTop = editorialSection.offsetTop;
+                const landingScroll = sectionTop - windowHeight + columnsHeight + 40;
+                
+                if (scrolled < landingScroll) {
+                    // Phase 1: Fixed, revealing
+                    heroEditorial.style.position = 'fixed';
+                    heroEditorial.style.bottom = '0';
+                    heroEditorial.style.top = 'auto';
+                    
+                    // Reveal: 50% -> 0%
+                    const revealProgress = Math.min(1, scrolled / (windowHeight * 0.5));
+                    const translateY = Math.max(0, 50 - (revealProgress * 50));
+                    heroEditorial.style.transform = `translateY(${translateY}%)`;
+                } else {
+                    // Phase 2: Absolute, locked in place at top of white section
+                    heroEditorial.style.position = 'absolute';
+                    heroEditorial.style.bottom = 'auto';
+                    heroEditorial.style.top = `${sectionTop + 40}px`;
+                    heroEditorial.style.transform = 'none';
+                }
+                
+                // Color: turn black quickly
+                const colorProgress = Math.min(1, scrolled / (windowHeight * 0.3));
+                const colorValue = Math.round(255 - (255 - 35) * colorProgress);
+                const color = `rgb(${colorValue}, ${colorValue}, ${colorValue})`;
+                
+                // Shadow: fade out as we scroll
+                const shadowOpacity = Math.max(0, 0.5 - (colorProgress * 0.5));
+                const shadowBlur = Math.max(0, 4 - (colorProgress * 4));
+                const shadow = shadowOpacity > 0 ? `0 2px ${shadowBlur}px rgba(0,0,0,${shadowOpacity})` : 'none';
+                
+                editorialParagraphs.forEach(p => {
+                    p.style.color = color;
+                    p.style.textShadow = shadow;
+                });
+            }
+        });
+    </script>
+    
+    <link rel="stylesheet" href="assets/css/glossary.css">
+    <script src="assets/js/glossary.js"></script>
+</body>
+</html>

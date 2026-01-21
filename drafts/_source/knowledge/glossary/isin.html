@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISIN (International Securities Identification Number) - Glossary | Sails.to</title>
+    <meta name="description" content="A 12-character alphanumeric code that uniquely identifies a security globally, enabling it to be held in traditional bank custody systems.">
+    <meta property="og:title" content="ISIN - Glossary | Sails.to">
+    <meta property="og:description" content="A 12-character alphanumeric code that uniquely identifies a security globally.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../assets/css/glossary.css">
+    <link rel="stylesheet" href="{{ROOT}}assets/css/glossary-term.css">
+</head>
+<body>
+    <!-- Navigation -->
+    {{NAV}}
+
+    <header class="term-page-header">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <span class="term-category">Finance</span>
+            <h1 class="term-title">ISIN</h1>
+            <p class="term-short">A 12-character alphanumeric code that uniquely identifies a security globally, enabling it to be held in traditional bank custody systems.</p>
+        </div>
+    </header>
+
+    <main class="term-content">
+        <div class="term-content-inner">
+            <section class="term-section">
+                <h2>Full Definition</h2>
+                <p>The International Securities Identification Number is the global standard for identifying securities, administered by national numbering agencies. When a security token receives an ISIN, it can be recognized by traditional financial infrastructure including custodian banks, clearinghouses, and securities depositories. This "TradFi bridge" enables investors to hold tokenized securities in their existing brokerage accounts.</p>
+            </section>
+
+            <section class="term-section">
+                <h2>Why It Matters</h2>
+                <p>An ISIN is the key that unlocks institutional adoption. Without it, security tokens exist only in the blockchain world. With an ISIN, your tokens can be held by <a href="clearstream.html">Clearstream</a>, custodied by traditional banks, and appear in standard portfolio reports.</p>
+                <p>Sails.to's <a href="tradfi-bridge.html">TradFi Bridge</a> makes ISIN conversion seamless. For approximately $4K and about one week of processing, any token on our platform can receive its own ISIN—instantly bridging Web3 innovation with traditional finance infrastructure.</p>
+            </section>
+
+            <section class="term-section">
+                <h2>Related Terms</h2>
+                <div class="related-terms">
+                    <a href="clearstream.html" class="related-term-link">Clearstream</a>
+                    <a href="custody.html" class="related-term-link">Custody</a>
+                    <a href="tradfi-bridge.html" class="related-term-link">TradFi Bridge</a>
+                    <a href="security-token.html" class="related-term-link">Security Token</a>
+                </div>
+            </section>
+
+            <div class="term-cta">
+                <h3>Bridge your tokens to TradFi</h3>
+                <p>Get an ISIN for your security tokens and unlock institutional custody.</p>
+                <a href="../../signup.html?type=issuer" class="btn">Learn More</a>
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="../../assets/js/glossary.js"></script>
+    <!-- Footer -->
+    {{FOOTER}}
+
+    <script>
+        // Mobile navigation
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const nav = document.querySelector('nav');
+        
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+        
+        // Scroll effect for nav
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 60) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script src="../../assets/js/glossary.js"></script>
+</body>
+</html>

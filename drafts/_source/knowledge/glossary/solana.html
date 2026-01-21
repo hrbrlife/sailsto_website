@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solana - Glossary | Sails.to</title>
+    <meta name="description" content="A high-performance blockchain platform known for fast transaction speeds (400ms finality) and low fees, used by Sails.to for issuing security tokens.">
+    <meta property="og:title" content="Solana - Glossary | Sails.to">
+    <meta property="og:description" content="A high-performance blockchain with fast transactions and low fees for security tokens.">
+    <meta property="og:type" content="article">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="../../assets/css/glossary.css">
+    <link rel="stylesheet" href="{{ROOT}}assets/css/glossary-term.css">
+</head>
+<body>
+    <!-- Navigation -->
+    {{NAV}}
+
+    <header class="term-page-header">
+        <div class="container">
+            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <span class="term-category">Technology</span>
+            <h1 class="term-title">Solana</h1>
+            <p class="term-short">A high-performance blockchain platform known for fast transaction speeds (400ms finality) and low fees, used by Sails.to for issuing security tokens.</p>
+        </div>
+    </header>
+
+    <main class="term-content">
+        <div class="term-content-inner">
+            <section class="term-section">
+                <h2>Full Definition</h2>
+                <p>Solana is a Layer 1 blockchain designed for speed and scalability, capable of processing thousands of transactions per second with sub-second finality. Its low transaction costs (fractions of a cent) and fast confirmation times make it well-suited for security token operations that require frequent on-chain actions like dividend distributions, cap table updates, and compliance checks. Sails.to chose Solana for its combination of performance, cost-efficiency, and growing institutional adoption.</p>
+            </section>
+
+            <section class="term-section">
+                <h2>Why It Matters</h2>
+                <p>When you have a <a href="cap-table.html">cap table</a> with thousands of investors and need to distribute <a href="distributions.html">dividends</a> quarterly, blockchain fees matter. On Ethereum, this could cost hundreds of dollars in gas. On Solana, it's pennies.</p>
+                <p>Solana's speed also enables real-time compliance enforcement. Every transfer can be checked against <a href="smart-contract.html">smart contract</a> rules in milliseconds, not minutes. Combined with our <a href="tradfi-bridge.html">TradFi Bridge</a> to <a href="clearstream.html">Clearstream</a>, Solana gives us the best of both worlds: crypto efficiency and institutional credibility.</p>
+            </section>
+
+            <section class="term-section">
+                <h2>Related Terms</h2>
+                <div class="related-terms">
+                    <a href="smart-contract.html" class="related-term-link">Smart Contract</a>
+                    <a href="tradfi-bridge.html" class="related-term-link">TradFi Bridge</a>
+                    <a href="security-token.html" class="related-term-link">Security Token</a>
+                </div>
+            </section>
+
+            <div class="term-cta">
+                <h3>Built on Solana</h3>
+                <p>Fast, cheap, and institutional-ready.</p>
+                <a href="../../signup.html?type=issuer" class="btn">Launch on Solana</a>
+            </div>
+        </div>
+    </main>
+
+    
+    <script src="../../assets/js/glossary.js"></script>
+    <!-- Footer -->
+    {{FOOTER}}
+
+    <script>
+        // Mobile navigation
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        const nav = document.querySelector('nav');
+        
+        if (navToggle) {
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navLinks.classList.toggle('active');
+            });
+        }
+        
+        // Scroll effect for nav
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 60) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+    <script src="../../assets/js/glossary.js"></script>
+</body>
+</html>
