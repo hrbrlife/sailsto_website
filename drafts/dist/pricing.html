@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Sails.to — Transparent Fee Structure</title>
+    <meta name="description" content="Transparent pricing for tokenized securities on Sails.to. Low-cost direct placement, broker network fees, and secondary trading fees. No hidden costs.">
+    <meta name="keywords" content="pricing, fees, security tokens, tokenization costs, issuance fees, trading fees">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sails.to Pricing — Transparent Fee Structure">
+    <meta property="og:description" content="Transparent pricing for tokenized securities. Direct placement at 0.5%, broker network at 6%, and secondary trading at 0.5%.">
+    <meta property="og:image" content="https://sails.to/assets/og-image.png">
+    <meta property="og:url" content="https://sails.to/pricing.html">
+    <meta property="og:type" content="website">
+    
+    <link rel="canonical" href="https://sails.to/pricing.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/glossary.css">
+    <style>
+        .pricing-hero {
+            background: linear-gradient(135deg, #1a2a3a 0%, #2d4a5a 100%);
+            padding: 120px 0 80px;
+            color: white;
+        }
+        
+        .pricing-hero .section-label { color: #C9A227; }
+        .pricing-hero .section-title { color: white; }
+        .pricing-hero .section-desc { color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto; }
+        
+        .pricing-section {
+            padding: 80px 0;
+            background: #FFFEF8;
+        }
+        
+        .pricing-section.alt {
+            background: #F7F5F0;
+        }
+        
+        .pricing-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            position: relative;
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid #C9A227;
+        }
+        
+        .pricing-card.featured::before {
+            content: 'Most Common';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #C9A227;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+        
+        .pricing-card h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            color: #1a2a3a;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-card .price {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 700;
+            color: #C9A227;
+            margin: 20px 0;
+        }
+        
+        .pricing-card .price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #666;
+        }
+        
+        .pricing-card .description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+        
+        .pricing-card li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .pricing-card li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-card li::before {
+            content: '✓';
+            color: #C9A227;
+            font-weight: bold;
+        }
+        
+        .pricing-notes {
+            background: rgba(201, 162, 39, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 30px;
+        }
+        
+        .pricing-notes h4 {
+            font-family: 'Cormorant Garamond', serif;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-notes p {
+            font-size: 0.9rem;
+            color: #666;
+            margin: 0;
+        }
+        
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+        }
+        
+        .fee-table th,
+        .fee-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e0ddd5;
+        }
+        
+        .fee-table th {
+            background: #1a2a3a;
+            color: white;
+            font-weight: 600;
+        }
+        
+        .fee-table th:first-child {
+            border-radius: 8px 0 0 0;
+        }
+        
+        .fee-table th:last-child {
+            border-radius: 0 8px 0 0;
+        }
+        
+        .fee-table tr:hover {
+            background: #faf9f5;
+        }
+        
+        .fee-table .fee-amount {
+            font-weight: 600;
+            color: #C9A227;
+        }
+        
+        .comparison-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            color: #1a2a3a;
+            margin-bottom: 15px;
+        }
+        
+        .comparison-section p {
+            color: #666;
+            max-width: 700px;
+            margin-bottom: 30px;
+        }
+        
+        .highlight-box {
+            background: white;
+            border-left: 4px solid #C9A227;
+            padding: 25px 30px;
+            margin: 30px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .highlight-box h4 {
+            font-family: 'Cormorant Garamond', serif;
+            margin-bottom: 10px;
+        }
+        
+        .highlight-box p {
+            margin: 0;
+            color: #444;
+        }
+        
+        .faq-mini {
+            margin-top: 50px;
+        }
+        
+        .faq-mini h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 8px;
+            padding: 20px 25px;
+            margin-bottom: 15px;
+            cursor: pointer;
+        }
+        
+        .faq-item h4 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-item p {
+            margin-top: 15px;
+            color: #666;
+            display: none;
+        }
+        
+        .faq-item.active p {
+            display: block;
+        }
+        
+        .cta-section {
+            background: #1a2a3a;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .cta-section h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .cta-section p {
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 25px;
+        }
+        
+        .cta-section .btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #C9A227;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+        <nav>
+        <a href="index.html" class="logo">
+            <img src="sail_logo.png" alt="Sails.to" class="logo-dark">
+            <img src="sail_logo_w.png" alt="Sails.to" class="logo-light">
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links nav-collapse">
+            <div class="nav-dropdown">
+                <a href="#" class="nav-dropdown-trigger">Platform</a>
+                <div class="nav-dropdown-menu">
+                    <a href="whatsails.html">How It Works</a>
+                    <a href="issuers.html">For Issuers</a>
+                    <a href="investors.html">For Investors</a>
+                    <a href="brokers.html">For Brokers</a>
+                    <a href="regulated.html">For Institutions</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a href="#" class="nav-dropdown-trigger">Knowledge</a>
+                <div class="nav-dropdown-menu">
+                    <a href="knowledge/index.html">Knowledge Base</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="knowledge/blog/index.html">Blog</a>
+                    <a href="knowledge/docs/index.html">Documentation</a>
+                    <a href="knowledge/faq.html">FAQ</a>
+                    <a href="knowledge/glossary/index.html">Glossary</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a href="#" class="nav-dropdown-trigger">Company</a>
+                <div class="nav-dropdown-menu">
+                    <a href="company/about.html">About</a>
+                    <a href="company/contact.html">Contact</a>
+                    <a href="company/legal.html">Legal</a>
+                </div>
+            </div>
+            <a href="signup.html" class="btn-nav">Get Started</a>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section class="pricing-hero">
+        <div class="pricing-container">
+            <span class="section-label">Pricing</span>
+            <h1 class="section-title">Transparent, Simple Pricing</h1>
+            <p class="section-desc">No hidden fees. No surprises. Know exactly what you'll pay before you start.</p>
+        </div>
+    </section>
+
+    <!-- Primary Placement Fees -->
+    <section class="pricing-section">
+        <div class="pricing-container">
+            <span class="section-label">For Issuers</span>
+            <h2 class="section-title">Primary Placement Fees</h2>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Direct Placement</h3>
+                    <div class="price">0.5% <span>of capital raised</span></div>
+                    <p class="description">For issuers bringing their own investors directly to the platform.</p>
+                    <ul>
+                        <li>Full platform infrastructure</li>
+                        <li>KYC/AML verification</li>
+                        <li>Token issuance on Solana</li>
+                        <li>Wyoming DAO Series LLC structure</li>
+                        <li>Cap table management</li>
+                        <li>Distribution automation</li>
+                    </ul>
+                    <div class="pricing-notes">
+                        <h4>Investor Protection</h4>
+                        <p>This fee only applies <strong>after the soft cap is reached</strong>. If the offering doesn't reach soft cap, investors' only potential cost is Clearstream custody fees (if TradFi Bridge is used).</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <h3>Broker Network</h3>
+                    <div class="price">6% <span>of capital raised</span></div>
+                    <p class="description">For capital raised through our global broker network.</p>
+                    <ul>
+                        <li>Everything in Direct Placement</li>
+                        <li>Access to global broker network</li>
+                        <li>Distribution to qualified investors</li>
+                        <li>Broker relationship management</li>
+                        <li>Marketing support</li>
+                    </ul>
+                    <div class="pricing-notes">
+                        <h4>100% to Broker</h4>
+                        <p>The entire 6% goes to the broker who brings the investor. This incentivizes quality distribution while keeping our platform fee low.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fee Breakdown Table -->
+    <section class="pricing-section alt">
+        <div class="pricing-container comparison-section">
+            <span class="section-label">Complete Breakdown</span>
+            <h2>All Fees at a Glance</h2>
+            <p>Everything you need to know about costs on Sails.to.</p>
+            
+            <table class="fee-table">
+                <thead>
+                    <tr>
+                        <th>Fee Type</th>
+                        <th>Amount</th>
+                        <th>Who Pays</th>
+                        <th>Recipient</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Direct Placement Fee</strong><br><small>Primary market - issuer's own investors</small></td>
+                        <td class="fee-amount">0.5%</td>
+                        <td>Issuer (from proceeds)</td>
+                        <td>Sails.to</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Broker Placement Fee</strong><br><small>Primary market - broker-sourced investors</small></td>
+                        <td class="fee-amount">6%</td>
+                        <td>Issuer (from proceeds)</td>
+                        <td>100% to Broker</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Secondary Trading Fee</strong><br><small>Peer-to-peer token transfers</small></td>
+                        <td class="fee-amount">0.5%</td>
+                        <td>Seller</td>
+                        <td>⅓ Sails.to, ⅔ Brokers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Trust & Admin Fee</strong><br><small>Ongoing cap table, compliance, reporting</small></td>
+                        <td class="fee-amount">1%/year</td>
+                        <td>Deducted from distributions</td>
+                        <td>Sails.to</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clearstream Custody</strong><br><small>TradFi Bridge users only</small></td>
+                        <td class="fee-amount">Variable</td>
+                        <td>Investor</td>
+                        <td>Clearstream</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="highlight-box">
+                <h4>No Upfront Fees</h4>
+                <p>We don't charge setup fees, monthly fees, or minimum commitments. You only pay when you successfully raise capital. Our success is aligned with yours.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- For Investors -->
+    <section class="pricing-section">
+        <div class="pricing-container">
+            <span class="section-label">For Investors</span>
+            <h2 class="section-title">Investor Costs</h2>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Self-Custody (Solana)</h3>
+                    <div class="price">$0 <span>platform fee</span></div>
+                    <p class="description">Hold tokens directly in your Solana wallet.</p>
+                    <ul>
+                        <li>No custody fees</li>
+                        <li>Direct token ownership</li>
+                        <li>Stablecoin distributions</li>
+                        <li>Full self-sovereignty</li>
+                    </ul>
+                    <div class="pricing-notes">
+                        <h4>Solana Network Fees</h4>
+                        <p>Standard Solana transaction fees apply (~$0.0001 per transaction). Negligible for most use cases.</p>
+                    </div>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>TradFi Bridge (Clearstream)</h3>
+                    <div class="price">Variable <span>custody fee</span></div>
+                    <p class="description">Institutional custody with ISIN assignment.</p>
+                    <ul>
+                        <li>Clearstream institutional custody</li>
+                        <li>ISIN identifier for reporting</li>
+                        <li>Cash distributions</li>
+                        <li>Bank/broker integration</li>
+                    </ul>
+                    <div class="pricing-notes">
+                        <h4>Custody Fee Structure</h4>
+                        <p>Clearstream fees depend on your custodian and holding size. Contact your broker or bank for specific rates.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="highlight-box" style="margin-top: 40px;">
+                <h4>Minimum Investment</h4>
+                <p>Most offerings on Sails.to have a minimum investment of <strong>$150,000</strong>. This reflects the professional/accredited investor requirement and ensures efficient allocation across investors.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing FAQ -->
+    <section class="pricing-section alt">
+        <div class="pricing-container">
+            <div class="faq-mini">
+                <h3>Common Pricing Questions</h3>
+                
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <h4>When is the 0.5% direct placement fee charged? <span>+</span></h4>
+                    <p>The 0.5% fee is only charged after the soft cap is reached and the offering proceeds. If an offering fails to reach soft cap, investors are refunded and no platform fee applies—protecting investors from paying fees on failed raises.</p>
+                </div>
+                
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <h4>Why is the broker fee 6% when direct is 0.5%? <span>+</span></h4>
+                    <p>The 6% is industry-standard for private placement distribution. The entire amount goes to the broker who sources the investor—we don't take a cut. This incentivizes our broker network to actively distribute your offering to qualified investors globally.</p>
+                </div>
+                
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <h4>What does the 1%/year trust fee cover? <span>+</span></h4>
+                    <p>The annual trust & admin fee covers: ongoing cap table management, compliance monitoring, distribution processing, investor reporting, regulatory filings, and platform infrastructure maintenance.</p>
+                </div>
+                
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <h4>Are there any hidden fees? <span>+</span></h4>
+                    <p>No. The fees listed on this page are comprehensive. There are no setup fees, no monthly minimums, no per-investor charges, and no surprise costs. Third-party fees (like Clearstream custody for TradFi Bridge users) are pass-through costs—we don't markup external services.</p>
+                </div>
+                
+                <div class="faq-item" onclick="this.classList.toggle('active')">
+                    <h4>Can fees be negotiated? <span>+</span></h4>
+                    <p>For large offerings ($25M+), we're open to discussing custom arrangements. Contact our team to discuss your specific situation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="pricing-container">
+            <h2>Ready to get started?</h2>
+            <p>Launch your tokenized offering with transparent, competitive pricing.</p>
+            <a href="signup.html?type=issuer" class="btn">Start Issuing</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+        <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="sail_logo.png" alt="Sails.to">
+                </a>
+                <p>Hybrid securities infrastructure bridging DeFi innovation with TradFi trust.<br><em style="font-size: 0.8rem; color: var(--silver);">White-label available for institutions.</em></p>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <a href="whatsails.html">How It Works</a>
+                <a href="issuers.html">For Issuers</a>
+                <a href="investors.html">For Investors</a>
+                <a href="brokers.html">For Brokers</a>
+                <a href="regulated.html">For Institutions</a>
+            </div>
+            <div class="footer-col">
+                <h4>Knowledge</h4>
+                <a href="knowledge/index.html">Knowledge Base</a>
+                <a href="knowledge/blog/index.html">Blog</a>
+                <a href="knowledge/docs/index.html">Documentation</a>
+                <a href="knowledge/faq.html">FAQ</a>
+                <a href="knowledge/glossary/index.html">Glossary</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="company/about.html">About</a>
+                <a href="company/contact.html">Contact</a>
+                <a href="company/legal.html">Legal</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Sails.to DAO LLC. All rights reserved.</span>
+            <span>Securities offered through licensed intermediaries only. For professional investors.</span>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/glossary.js"></script>
+</body>
+</html>
