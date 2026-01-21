@@ -16,9 +16,9 @@
     
     <link rel="canonical" href="https://sails.to/knowledge/index.html">
     
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    
+    
+    <link rel="stylesheet" href="../assets/fonts/fonts.css">
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="../assets/css/glossary.css">
 </head>
@@ -54,6 +54,7 @@
                     <a href="../knowledge/docs/index.html">Documentation</a>
                     <a href="../knowledge/faq.html">FAQ</a>
                     <a href="../knowledge/glossary/index.html">Glossary</a>
+                    <a href="../knowledge/roadmap.html">Roadmap</a>
                 </div>
             </div>
             <div class="nav-dropdown">
@@ -95,6 +96,7 @@
                 <button class="kb-tab" data-category="faq">FAQ</button>
                 <button class="kb-tab" data-category="glossary">Glossary</button>
                 <button class="kb-tab" data-category="blog">Blog</button>
+                <button class="kb-tab" data-category="roadmap">Roadmap</button>
             </div>
         </div>
     </section>
@@ -314,6 +316,206 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Roadmap Section -->
+            <div class="kb-resource-section" data-category="roadmap">
+                <div class="kb-section-header">
+                    <h2>🗺️ Roadmap</h2>
+                    <p>Track our development progress and upcoming features</p>
+                    <a href="roadmap.html" class="kb-section-link">View Full Roadmap →</a>
+                </div>
+                
+                <!-- Temporal Filter -->
+                <div class="kb-temporal-filters">
+                    <button class="kb-temporal-tag active" data-temporal="all">All Phases</button>
+                    <button class="kb-temporal-tag" data-temporal="completed">✓ Completed</button>
+                    <button class="kb-temporal-tag" data-temporal="beta">● Beta</button>
+                    <button class="kb-temporal-tag" data-temporal="public">○ Public Launch</button>
+                    <button class="kb-temporal-tag" data-temporal="future">◇ Future</button>
+                </div>
+                
+                <div class="kb-grid kb-roadmap-grid">
+                    <!-- Completed Items -->
+                    <a href="roadmap.html#wyoming-dao" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="legal compliance">
+                        <span class="kb-roadmap-status completed">✓</span>
+                        <span class="kb-card-category">Legal</span>
+                        <h3>Wyoming DAO LLC Formation</h3>
+                        <p>Legal entity established with full compliance framework for tokenized securities.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal">Completed</span>
+                            <span class="kb-tag category">Compliance</span>
+                        </div>
+                    </a>
+                    
+                    <a href="roadmap.html#core-platform" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="technical infrastructure">
+                        <span class="kb-roadmap-status completed">✓</span>
+                        <span class="kb-card-category">Technical</span>
+                        <h3>Core Platform Architecture</h3>
+                        <p>Solana smart contracts designed and audited for security token issuance.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal">Completed</span>
+                            <span class="kb-tag category">Infrastructure</span>
+                        </div>
+                    </a>
+                    
+                    <a href="roadmap.html#tradfi-bridge-design" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="technical infrastructure">
+                        <span class="kb-roadmap-status completed">✓</span>
+                        <span class="kb-card-category">Technical</span>
+                        <h3>TradFi Bridge Design</h3>
+                        <p>ISIN integration pathway and Clearstream custody protocol finalized.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal">Completed</span>
+                            <span class="kb-tag category">Infrastructure</span>
+                        </div>
+                    </a>
+                    
+                    <a href="roadmap.html#regulatory-framework" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="legal compliance">
+                        <span class="kb-roadmap-status completed">✓</span>
+                        <span class="kb-card-category">Compliance</span>
+                        <h3>Regulatory Framework</h3>
+                        <p>Reg S/Reg D compliance structure with automated investor verification.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal">Completed</span>
+                            <span class="kb-tag category">Legal</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Beta Items -->
+                    <a href="roadmap.html#platform-beta" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product launch">
+                        <span class="kb-roadmap-status current">●</span>
+                        <span class="kb-card-category">Product</span>
+                        <h3>Platform Beta Live</h3>
+                        <p>Public beta launch with full issuer and investor onboarding.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal current">Beta</span>
+                            <span class="kb-tag category">Launch</span>
+                        </div>
+                    </a>
+                    
+                    <a href="roadmap.html#broker-network" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product infrastructure">
+                        <span class="kb-roadmap-status current">●</span>
+                        <span class="kb-card-category">Product</span>
+                        <h3>Broker Network Activation</h3>
+                        <p>First licensed broker partners onboarded with white-label access.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal current">Beta</span>
+                            <span class="kb-tag category">Infrastructure</span>
+                        </div>
+                    </a>
+                    
+                    <a href="roadmap.html#first-offering" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product milestone">
+                        <span class="kb-roadmap-status current">●</span>
+                        <span class="kb-card-category">Product</span>
+                        <h3>First Offering Launch</h3>
+                        <p>Inaugural tokenized security offering goes live on the platform.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal current">Beta</span>
+                            <span class="kb-tag category">Milestone</span>
+                        </div>
+                    </a>
+                    
+                    <a href="roadmap.html#kyc-integration" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="compliance technical">
+                        <span class="kb-roadmap-status current">●</span>
+                        <span class="kb-card-category">Compliance</span>
+                        <h3>KYC/AML Integration</h3>
+                        <p>Third-party verification partners integrated for automated compliance.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal current">Beta</span>
+                            <span class="kb-tag category">Technical</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Public Launch Items -->
+                    <a href="roadmap.html#tradfi-bridge-live" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="technical infrastructure">
+                        <span class="kb-roadmap-status upcoming">○</span>
+                        <span class="kb-card-category">Technical</span>
+                        <h3>TradFi Bridge Live</h3>
+                        <p>Full ISIN conversion and Clearstream custody operational.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal">Public Launch</span>
+                            <span class="kb-tag category">Infrastructure</span>
+                        </div>
+                    </a>
+                    
+                    <a href="roadmap.html#secondary-trading" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="product trading">
+                        <span class="kb-roadmap-status upcoming">○</span>
+                        <span class="kb-card-category">Product</span>
+                        <h3>Secondary Trading</h3>
+                        <p>P2P secondary market for compliant token trading between verified investors.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal">Public Launch</span>
+                            <span class="kb-tag category">Trading</span>
+                        </div>
+                    </a>
+                    
+                    <a href="roadmap.html#institutional-partners" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="business partnerships">
+                        <span class="kb-roadmap-status upcoming">○</span>
+                        <span class="kb-card-category">Business</span>
+                        <h3>Institutional Partners</h3>
+                        <p>First institutional custodians and prime brokers integrated.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal">Public Launch</span>
+                            <span class="kb-tag category">Partnerships</span>
+                        </div>
+                    </a>
+                    
+                    <a href="roadmap.html#mobile-app" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="product mobile">
+                        <span class="kb-roadmap-status upcoming">○</span>
+                        <span class="kb-card-category">Product</span>
+                        <h3>Mobile Experience</h3>
+                        <p>iOS and Android apps for investors with full portfolio management.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal">Public Launch</span>
+                            <span class="kb-tag category">Mobile</span>
+                        </div>
+                    </a>
+                    
+                    <!-- Future Items -->
+                    <a href="roadmap.html#eu-uk-licensing" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="legal compliance expansion">
+                        <span class="kb-roadmap-status future">◇</span>
+                        <span class="kb-card-category">Legal</span>
+                        <h3>EU/UK Licensing</h3>
+                        <p>MiFID II compliance and FCA registration for European markets.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal">Future</span>
+                            <span class="kb-tag category">Expansion</span>
+                        </div>
+                    </a>
+                    
+                    <a href="roadmap.html#apac-expansion" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="legal compliance expansion">
+                        <span class="kb-roadmap-status future">◇</span>
+                        <span class="kb-card-category">Legal</span>
+                        <h3>APAC Expansion</h3>
+                        <p>Singapore MAS and Hong Kong SFC regulatory pathways.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal">Future</span>
+                            <span class="kb-tag category">Expansion</span>
+                        </div>
+                    </a>
+                    
+                    <a href="roadmap.html#cross-chain" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="technical infrastructure">
+                        <span class="kb-roadmap-status future">◇</span>
+                        <span class="kb-card-category">Technical</span>
+                        <h3>Cross-Chain Support</h3>
+                        <p>Ethereum and additional L1 integration for token portability.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal">Future</span>
+                            <span class="kb-tag category">Infrastructure</span>
+                        </div>
+                    </a>
+                    
+                    <a href="roadmap.html#dao-governance" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="product governance">
+                        <span class="kb-roadmap-status future">◇</span>
+                        <span class="kb-card-category">Product</span>
+                        <h3>DAO Governance</h3>
+                        <p>Token holder voting and decentralized protocol governance activated.</p>
+                        <div class="kb-card-tags">
+                            <span class="kb-tag temporal">Future</span>
+                            <span class="kb-tag category">Governance</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -353,6 +555,7 @@
                 <a href="../knowledge/docs/index.html">Documentation</a>
                 <a href="../knowledge/faq.html">FAQ</a>
                 <a href="../knowledge/glossary/index.html">Glossary</a>
+                <a href="../knowledge/roadmap.html">Roadmap</a>
             </div>
             <div class="footer-col">
                 <h4>Company</h4>
@@ -387,6 +590,8 @@
                 if (category === 'all') {
                     featuredSection.style.display = 'block';
                     sections.forEach(s => s.style.display = 'block');
+                    // Reset temporal filter when showing all
+                    resetTemporalFilter();
                 } else {
                     featuredSection.style.display = 'none';
                     sections.forEach(s => {
@@ -400,7 +605,40 @@
             });
         });
         
-        // Search functionality
+        // Temporal filter for roadmap
+        const temporalTags = document.querySelectorAll('.kb-temporal-tag');
+        const roadmapCards = document.querySelectorAll('.kb-card-roadmap');
+        
+        function resetTemporalFilter() {
+            temporalTags.forEach(t => t.classList.remove('active'));
+            temporalTags[0].classList.add('active');
+            roadmapCards.forEach(card => card.style.display = '');
+        }
+        
+        temporalTags.forEach(tag => {
+            tag.addEventListener('click', () => {
+                const temporal = tag.dataset.temporal;
+                
+                // Update active temporal tag
+                temporalTags.forEach(t => t.classList.remove('active'));
+                tag.classList.add('active');
+                
+                // Filter roadmap cards
+                if (temporal === 'all') {
+                    roadmapCards.forEach(card => card.style.display = '');
+                } else {
+                    roadmapCards.forEach(card => {
+                        if (card.dataset.temporal === temporal) {
+                            card.style.display = '';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Search functionality (includes roadmap items)
         const searchInput = document.getElementById('kb-search-input');
         const allCards = document.querySelectorAll('.kb-card');
         
@@ -411,6 +649,7 @@
                 allCards.forEach(card => card.style.display = '');
                 sections.forEach(s => s.style.display = 'block');
                 featuredSection.style.display = 'block';
+                resetTemporalFilter();
                 return;
             }
             
@@ -419,11 +658,15 @@
             tabs[0].classList.add('active');
             featuredSection.style.display = 'none';
             sections.forEach(s => s.style.display = 'block');
+            resetTemporalFilter();
             
-            // Filter cards
+            // Filter all cards (including roadmap)
             allCards.forEach(card => {
                 const text = card.textContent.toLowerCase();
-                if (text.includes(query)) {
+                const tags = card.dataset.tags ? card.dataset.tags.toLowerCase() : '';
+                const temporal = card.dataset.temporal ? card.dataset.temporal.toLowerCase() : '';
+                
+                if (text.includes(query) || tags.includes(query) || temporal.includes(query)) {
                     card.style.display = '';
                 } else {
                     card.style.display = 'none';
@@ -776,8 +1019,114 @@
             color: var(--ivory);
         }
         
+        /* Roadmap cards and filters */
+        .kb-temporal-filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+        
+        .kb-temporal-tag {
+            padding: 8px 16px;
+            font-family: var(--font-ui);
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--slate);
+            background: var(--cream);
+            border: 1px solid rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .kb-temporal-tag:hover {
+            border-color: var(--gold);
+            color: var(--ink);
+        }
+        
+        .kb-temporal-tag.active {
+            background: var(--ink);
+            border-color: var(--ink);
+            color: var(--ivory);
+        }
+        
+        .kb-roadmap-grid {
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        .kb-card-roadmap {
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .kb-roadmap-status {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            font-size: 1rem;
+            line-height: 1;
+        }
+        
+        .kb-roadmap-status.completed {
+            color: #2ECC71;
+        }
+        
+        .kb-roadmap-status.current {
+            color: var(--gold);
+            animation: pulseDot 2s infinite;
+        }
+        
+        .kb-roadmap-status.upcoming {
+            color: var(--silver);
+        }
+        
+        .kb-roadmap-status.future {
+            color: var(--slate);
+        }
+        
+        @keyframes pulseDot {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+        
+        .kb-card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 12px;
+        }
+        
+        .kb-tag {
+            padding: 3px 8px;
+            font-family: var(--font-ui);
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border-radius: 2px;
+        }
+        
+        .kb-tag.temporal {
+            background: rgba(201, 162, 39, 0.15);
+            color: #B8860B;
+        }
+        
+        .kb-tag.temporal.current {
+            background: rgba(201, 162, 39, 0.25);
+            color: #8B6914;
+        }
+        
+        .kb-tag.category {
+            background: rgba(0, 0, 0, 0.06);
+            color: var(--slate);
+        }
+        
         @media (max-width: 1200px) {
             .kb-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .kb-roadmap-grid {
                 grid-template-columns: repeat(3, 1fr);
             }
         }
@@ -793,6 +1142,10 @@
             
             .kb-glossary-preview {
                 grid-template-columns: 1fr;
+            }
+            
+            .kb-roadmap-grid {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
         
@@ -813,6 +1166,20 @@
             
             .kb-glossary-categories {
                 grid-template-columns: 1fr;
+            }
+            
+            .kb-roadmap-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .kb-temporal-filters {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                -webkit-overflow-scrolling: touch;
+            }
+            
+            .kb-temporal-tag {
+                white-space: nowrap;
             }
         }
     </style>
