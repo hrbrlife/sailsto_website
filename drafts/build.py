@@ -242,6 +242,8 @@ def main():
         return init_source()
     elif cmd == '--verify':
         return verify_build()
+    elif cmd == '--dist':
+        return make_dist()
     elif cmd == '--help':
         print(__doc__)
         return 0
@@ -257,6 +259,64 @@ def main():
         print(f"Unknown command: {cmd}")
         print("Use --help for usage")
         return 1
+
+
+def make_dist():
+    """Create a clean dist/ folder with only deployable files."""
+    import shutil
+    
+    DIST_DIR = SCRIPT_DIR / 'dist'
+    
+    # Clean existing dist
+    if DIST_DIR.exists():
+        shutil.rmtree(DIST_DIR)
+    
+    DIST_DIR.mkdir()
+    
+    print(f"Creating distribution in {DIST_DIR}")
+    print()
+    
+    # Files/folders to copy
+    to_copy = [
+        # Root HTML files
+        'index.html', 'issuers.html', 'investors.html', 'brokers.html',
+        'regulated.html', 'signup.html', 'pricing.html', 'whatsails.html',
+        # Assets
+        'assets', 'styles.css',
+        # Images
+        'sail_logo.png', 'sail_logo_w.png',
+        'raise-your-sails-bg.jpg', 'raise-your-sails-bg.webm',
+        'melulogoimage.png', 'vintalelogoimage.png',
+        # Subdirectories
+        'company', 'knowledge', 'presentations',
+    ]
+    
+    copied = 0
+    for item in to_copy:
+        src = SCRIPT_DIR / item
+        dst = DIST_DIR / item
+        
+        if not src.exists():
+            print(f"  ! Missing: {item}")
+            continue
+        
+        if src.is_dir():
+            shutil.copytree(src, dst)
+            print(f"  + {item}/")
+        else:
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, dst)
+            print(f"  + {item}")
+        copied += 1
+    
+    # Calculate size
+    total_size = sum(f.stat().st_size for f in DIST_DIR.rglob('*') if f.is_file())
+    
+    print()
+    print(f"Done: {copied} items copied")
+    print(f"Total size: {total_size / 1024 / 1024:.2f} MB")
+    print(f"Deploy: {DIST_DIR}")
+    return 0
 
 
 if __name__ == '__main__':
