@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Brokers — Sails.to</title>
+    <meta name="description" content="Expand your product offering with tokenized securities. 6% placement fee, secondary trading commissions, white-label capabilities.">
+    <meta property="og:title" content="Sails.to — For Brokers">
+    <meta property="og:description" content="Expand your product offering with tokenized securities. Competitive commissions.">
+    <meta property="og:image" content="https://sails.to/assets/og-image.png">
+    <meta property="og:url" content="https://sails.to/brokers.html">
+    <meta property="og:type" content="website">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
@@ -12,12 +18,42 @@
 <body>
     <nav>
         <a href="index.html" class="logo"><img src="sail_logo_w.png" alt="Sails.to" class="logo-light"><img src="sail_logo.png" alt="Sails.to" class="logo-dark"></a>
-        <div class="nav-links">
-            <a href="issuers.html">For Issuers</a>
-            <a href="investors.html">For Investors</a>
-            <a href="brokers.html" class="active">For Brokers</a>
-            <a href="regulated.html">For Institutions</a>
-            <a href="#" class="btn-nav">Get Started</a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links nav-collapse">
+            <div class="nav-dropdown">
+                <a href="#" class="nav-dropdown-trigger">Platform</a>
+                <div class="nav-dropdown-menu">
+                    <a href="whatsails.html">How It Works</a>
+                    <a href="issuers.html">For Issuers</a>
+                    <a href="investors.html">For Investors</a>
+                    <a href="brokers.html">For Brokers</a>
+                    <a href="regulated.html">For Institutions</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a href="#" class="nav-dropdown-trigger">Knowledge</a>
+                <div class="nav-dropdown-menu">
+                    <a href="knowledge/index.html">Knowledge Base</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="knowledge/blog/index.html">Blog</a>
+                    <a href="knowledge/docs/index.html">Documentation</a>
+                    <a href="knowledge/faq.html">FAQ</a>
+                    <a href="knowledge/glossary/index.html">Glossary</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a href="#" class="nav-dropdown-trigger">Company</a>
+                <div class="nav-dropdown-menu">
+                    <a href="company/about.html">About</a>
+                    <a href="company/contact.html">Contact</a>
+                    <a href="company/legal.html">Legal</a>
+                </div>
+            </div>
+            <a href="signup.html" class="btn-nav">Get Started</a>
         </div>
     </nav>
 
@@ -205,7 +241,7 @@
     <section class="cta-section">
         <h2>Ready to join the network?</h2>
         <p>Licensed brokers can onboard in days. No platform development, no compliance build-out.</p>
-        <a href="#" class="btn btn-primary">
+        <a href="signup.html?type=broker" class="btn btn-primary">
             Apply Now
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
@@ -215,34 +251,39 @@
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="index.html" class="logo"><img src="sail_logo.png" alt="Sails.to"></a>
-                <p>Hybrid securities infrastructure.<br>Zero upfront. Pay on success.<br><em style="font-size: 0.8rem; color: var(--silver);">White-label available for institutions.</em></p>
+                <p>Hybrid securities infrastructure bridging DeFi innovation with TradFi trust.<br><em style="font-size: 0.8rem; color: var(--silver);">White-label available for institutions.</em></p>
             </div>
             <div class="footer-col">
                 <h4>Platform</h4>
+                <a href="whatsails.html">How It Works</a>
                 <a href="issuers.html">For Issuers</a>
                 <a href="investors.html">For Investors</a>
                 <a href="brokers.html">For Brokers</a>
                 <a href="regulated.html">For Institutions</a>
             </div>
             <div class="footer-col">
-                <h4>Resources</h4>
-                <a href="#">Documentation</a>
-                <a href="#">Smart Contracts</a>
-                <a href="#">Melusina OS</a>
+                <h4>Knowledge</h4>
+                <a href="knowledge/index.html">Knowledge Base</a>
+                <a href="knowledge/blog/index.html">Blog</a>
+                <a href="knowledge/docs/index.html">Documentation</a>
+                <a href="knowledge/faq.html">FAQ</a>
+                <a href="knowledge/glossary/index.html">Glossary</a>
             </div>
             <div class="footer-col">
                 <h4>Company</h4>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
-                <a href="#">Legal</a>
+                <a href="company/about.html">About</a>
+                <a href="company/contact.html">Contact</a>
+                <a href="company/legal.html">Legal</a>
             </div>
         </div>
         <div class="footer-bottom">
-            <span>© 2026 Sails.to Foundation</span>
-            <span>Professional investors only · Securities through licensed brokers</span>
+            <span>© 2026 Sails.to DAO LLC. All rights reserved.</span>
+            <span>Securities offered through licensed intermediaries only. For professional investors.</span>
         </div>
     </footer>
 
+    <link rel="stylesheet" href="assets/css/glossary.css">
+    <script src="assets/js/glossary.js"></script>
     <script>
         const nav = document.querySelector('nav');
         window.addEventListener('scroll', () => {

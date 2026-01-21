@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Started | Sails.to — Hybrid Securities Infrastructure</title>
+    <meta name="description" content="Join the Sails.to platform. Whether you're an issuer, investor, broker, or institution, start your journey with compliant tokenized securities.">
+    <meta name="keywords" content="tokenization, security tokens, digital securities, Wyoming DAO, Solana, ISIN, Clearstream, signup, register">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Get Started with Sails.to">
+    <meta property="og:description" content="Launch or invest in compliant tokenized securities. Zero upfront cost, 1-2 week setup, optional traditional custody.">
+    <meta property="og:image" content="https://sails.to/assets/og-image.png">
+    <meta property="og:url" content="https://sails.to/signup.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Get Started with Sails.to">
+    <meta name="twitter:description" content="Launch or invest in compliant tokenized securities.">
+    
+    <link rel="canonical" href="https://sails.to/signup.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/css/glossary.css">
+    <style>
+        /* Signup-specific styles */
+        .signup-section {
+            min-height: 100vh;
+            padding: 160px 48px 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--navy) 0%, #1a2a3a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .signup-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='%23C9A227' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+            opacity: 0.3;
+        }
+        
+        .signup-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .signup-content h1 {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 400;
+            color: var(--ivory);
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+        
+        .signup-content p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.75);
+            line-height: 1.8;
+            margin-bottom: 32px;
+        }
+        
+        .signup-benefits {
+            list-style: none;
+        }
+        
+        .signup-benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .signup-benefits li:last-child {
+            border-bottom: none;
+        }
+        
+        .signup-benefits .icon {
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+        
+        .signup-benefits .text h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--ivory);
+            margin-bottom: 4px;
+        }
+        
+        .signup-benefits .text p {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            margin: 0;
+            line-height: 1.6;
+        }
+        
+        /* Form card */
+        .signup-form-card {
+            background: var(--ivory);
+            padding: 48px;
+            position: relative;
+        }
+        
+        .signup-form-card::before,
+        .signup-form-card::after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border: 1px solid var(--gold);
+        }
+        
+        .signup-form-card::before {
+            top: -1px;
+            left: -1px;
+            border-right: none;
+            border-bottom: none;
+        }
+        
+        .signup-form-card::after {
+            bottom: -1px;
+            right: -1px;
+            border-left: none;
+            border-top: none;
+        }
+        
+        .form-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .form-header h2 {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 8px;
+        }
+        
+        .form-header p {
+            font-size: 0.9rem;
+            color: var(--slate);
+        }
+        
+        /* User type selection */
+        .user-type-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+            margin-bottom: 28px;
+        }
+        
+        .user-type-btn {
+            padding: 16px;
+            background: var(--cream);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+        
+        .user-type-btn:hover {
+            border-color: var(--gold);
+        }
+        
+        .user-type-btn.selected {
+            background: var(--ink);
+            border-color: var(--ink);
+        }
+        
+        .user-type-btn .icon {
+            font-size: 1.5rem;
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .user-type-btn .label {
+            font-family: var(--font-ui);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--ink);
+            transition: color 0.3s ease;
+        }
+        
+        .user-type-btn.selected .label {
+            color: var(--ivory);
+        }
+        
+        /* Form fields */
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-family: var(--font-ui);
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--slate);
+            margin-bottom: 8px;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 16px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--ink);
+            background: var(--ivory);
+            border: 1px solid rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.1);
+        }
+        
+        .form-group textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        
+        /* Checkbox */
+        .form-checkbox {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+        
+        .form-checkbox input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            accent-color: var(--gold);
+            flex-shrink: 0;
+        }
+        
+        .form-checkbox label {
+            font-size: 0.85rem;
+            color: var(--graphite);
+            line-height: 1.5;
+            text-transform: none;
+            letter-spacing: normal;
+            margin: 0;
+        }
+        
+        .form-checkbox label a {
+            color: var(--ink);
+            text-decoration: underline;
+        }
+        
+        /* Submit button */
+        .form-submit {
+            width: 100%;
+            padding: 16px 32px;
+            background: var(--ink);
+            color: var(--ivory);
+            border: none;
+            font-family: var(--font-ui);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+        
+        .form-submit:hover {
+            background: var(--crimson);
+        }
+        
+        .form-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        /* Success state */
+        .form-success {
+            text-align: center;
+            padding: 40px 20px;
+            display: none;
+        }
+        
+        .form-success.show {
+            display: block;
+        }
+        
+        .form-success .icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .form-success h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--ink);
+            margin-bottom: 12px;
+        }
+        
+        .form-success p {
+            font-size: 0.95rem;
+            color: var(--slate);
+            margin-bottom: 24px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+        
+        .social-link {
+            padding: 12px 24px;
+            font-family: var(--font-ui);
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            text-decoration: none;
+            border: 1px solid rgba(0,0,0,0.15);
+            color: var(--ink);
+            transition: all 0.3s ease;
+        }
+        
+        .social-link:hover {
+            background: var(--ink);
+            border-color: var(--ink);
+            color: var(--ivory);
+        }
+        
+        @media (max-width: 992px) {
+            .signup-container {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+            
+            .signup-content {
+                text-align: center;
+            }
+            
+            .signup-benefits li {
+                justify-content: center;
+                text-align: left;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .signup-section {
+                padding: 120px 24px 60px;
+            }
+            
+            .signup-form-card {
+                padding: 32px 24px;
+            }
+            
+            .user-type-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="sail_logo.png" alt="Sails.to" class="logo-dark">
+            <img src="sail_logo_w.png" alt="Sails.to" class="logo-light">
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links nav-collapse">
+            <div class="nav-dropdown">
+                <a href="#" class="nav-dropdown-trigger">Platform</a>
+                <div class="nav-dropdown-menu">
+                    <a href="whatsails.html">How It Works</a>
+                    <a href="issuers.html">For Issuers</a>
+                    <a href="investors.html">For Investors</a>
+                    <a href="brokers.html">For Brokers</a>
+                    <a href="regulated.html">For Institutions</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a href="#" class="nav-dropdown-trigger">Knowledge</a>
+                <div class="nav-dropdown-menu">
+                    <a href="knowledge/index.html">Knowledge Base</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="knowledge/blog/index.html">Blog</a>
+                    <a href="knowledge/docs/index.html">Documentation</a>
+                    <a href="knowledge/faq.html">FAQ</a>
+                    <a href="knowledge/glossary/index.html">Glossary</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a href="#" class="nav-dropdown-trigger">Company</a>
+                <div class="nav-dropdown-menu">
+                    <a href="company/about.html">About</a>
+                    <a href="company/contact.html">Contact</a>
+                    <a href="company/legal.html">Legal</a>
+                </div>
+            </div>
+            <a href="signup.html" class="btn-nav active">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- Signup Section -->
+    <section class="signup-section">
+        <div class="signup-container">
+            <div class="signup-content">
+                <h1>Start Your Journey with Hybrid Securities</h1>
+                <p>Join the platform that bridges blockchain innovation with traditional finance infrastructure. Whether you're raising capital or seeking investment opportunities, we're here to help.</p>
+                
+                <ul class="signup-benefits">
+                    <li>
+                        <span class="icon">💰</span>
+                        <div class="text">
+                            <h4>Zero Upfront Cost</h4>
+                            <p>Pay only on successful raise — 0.5% direct, 6% via broker</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">⚡</span>
+                        <div class="text">
+                            <h4>1-2 Weeks to Launch</h4>
+                            <p>Turnkey Wyoming DAO LLC structure included</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">🔄</span>
+                        <div class="text">
+                            <h4>Hybrid Custody</h4>
+                            <p>Hold on Solana or convert to ISIN for bank custody</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="icon">✅</span>
+                        <div class="text">
+                            <h4>Built-in Compliance</h4>
+                            <p>KYC/AML, Reg S/Reg D, investor eligibility on-chain</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="signup-form-card">
+                <div id="signup-form-wrapper">
+                    <div class="form-header">
+                        <h2>Join the Waitlist</h2>
+                        <p>Tell us about yourself and we'll be in touch within 24 hours</p>
+                    </div>
+                    
+                    <form id="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                        <!-- User Type Selection -->
+                        <div class="user-type-grid">
+                            <button type="button" class="user-type-btn" data-type="issuer">
+                                <span class="icon">🏢</span>
+                                <span class="label">Issuer</span>
+                            </button>
+                            <button type="button" class="user-type-btn" data-type="investor">
+                                <span class="icon">💼</span>
+                                <span class="label">Investor</span>
+                            </button>
+                            <button type="button" class="user-type-btn" data-type="broker">
+                                <span class="icon">🤝</span>
+                                <span class="label">Broker</span>
+                            </button>
+                            <button type="button" class="user-type-btn" data-type="institution">
+                                <span class="icon">🏛️</span>
+                                <span class="label">Institution</span>
+                            </button>
+                        </div>
+                        <input type="hidden" name="user_type" id="user-type-input" value="">
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name *</label>
+                                <input type="text" id="first-name" name="first_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name *</label>
+                                <input type="text" id="last-name" name="last_name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company / Organization</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="country">Country *</label>
+                            <select id="country" name="country" required>
+                                <option value="">Select your country</option>
+                                <option value="US">United States</option>
+                                <option value="GB">United Kingdom</option>
+                                <option value="DE">Germany</option>
+                                <option value="FR">France</option>
+                                <option value="CH">Switzerland</option>
+                                <option value="SG">Singapore</option>
+                                <option value="HK">Hong Kong</option>
+                                <option value="AE">United Arab Emirates</option>
+                                <option value="LU">Luxembourg</option>
+                                <option value="OTHER">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="interest">Tell us about your interest</label>
+                            <textarea id="interest" name="interest" placeholder="What brings you to Sails.to? What are you looking to achieve?"></textarea>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="professional" name="professional_investor" required>
+                            <label for="professional">I confirm that I am a <span class="glossary-term" data-term="professional-investor">professional</span> or <span class="glossary-term" data-term="accredited-investor">accredited investor</span>, or I am inquiring on behalf of a professional entity. *</label>
+                        </div>
+                        
+                        <div class="form-checkbox">
+                            <input type="checkbox" id="terms" name="agree_terms" required>
+                            <label for="terms">I agree to the <a href="company/legal.html">Terms of Service</a> and <a href="company/legal.html#privacy">Privacy Policy</a>. *</label>
+                        </div>
+                        
+                        <button type="submit" class="form-submit">Submit Application</button>
+                    </form>
+                </div>
+                
+                <div class="form-success" id="form-success">
+                    <span class="icon">✅</span>
+                    <h3>Thank You!</h3>
+                    <p>Your application has been received. A member of our team will be in touch within 24 hours.</p>
+                    <div class="social-links">
+                        <a href="https://t.me/sailsto" class="social-link" target="_blank">Join Telegram</a>
+                        <a href="https://linkedin.com/company/sailsto" class="social-link" target="_blank">Follow LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="sail_logo.png" alt="Sails.to">
+                </a>
+                <p>Hybrid securities infrastructure bridging DeFi innovation with TradFi trust.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Platform</h4>
+                <a href="whatsails.html">How It Works</a>
+                <a href="issuers.html">For Issuers</a>
+                <a href="investors.html">For Investors</a>
+                <a href="brokers.html">For Brokers</a>
+                <a href="regulated.html">For Institutions</a>
+            </div>
+            <div class="footer-col">
+                <h4>Knowledge</h4>
+                <a href="knowledge/index.html">Knowledge Base</a>
+                <a href="knowledge/blog/index.html">Blog</a>
+                <a href="knowledge/docs/index.html">Documentation</a>
+                <a href="knowledge/faq.html">FAQ</a>
+                <a href="knowledge/glossary/index.html">Glossary</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="company/about.html">About</a>
+                <a href="company/contact.html">Contact</a>
+                <a href="company/legal.html">Legal</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Sails.to DAO LLC. All rights reserved.</span>
+            <span>Securities offered through licensed intermediaries only. For professional investors.</span>
+        </div>
+    </footer>
+
+    <script src="assets/js/glossary.js"></script>
+    <script>
+        // User type selection
+        document.querySelectorAll('.user-type-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.user-type-btn').forEach(b => b.classList.remove('selected'));
+                btn.classList.add('selected');
+                document.getElementById('user-type-input').value = btn.dataset.type;
+            });
+        });
+        
+        // Check URL params for pre-selection
+        const urlParams = new URLSearchParams(window.location.search);
+        const preselectedType = urlParams.get('type');
+        if (preselectedType) {
+            const btn = document.querySelector(`.user-type-btn[data-type="${preselectedType}"]`);
+            if (btn) {
+                btn.classList.add('selected');
+                document.getElementById('user-type-input').value = preselectedType;
+            }
+        }
+        
+        // Form submission handling
+        document.getElementById('signup-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitBtn = form.querySelector('.form-submit');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                
+                if (response.ok) {
+                    document.getElementById('signup-form-wrapper').style.display = 'none';
+                    document.getElementById('form-success').classList.add('show');
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                alert('There was an error submitting the form. Please try again or contact us directly.');
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Submit Application';
+            }
+        });
+        
+        // Nav scroll behavior
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
