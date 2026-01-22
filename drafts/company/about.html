@@ -169,19 +169,88 @@
             <div style="text-align: center; margin-bottom: 60px;">
                 <span class="section-label">Leadership</span>
                 <h2 class="section-title">The Team</h2>
+                <p class="section-desc" style="max-width: 700px; margin: 20px auto 0;">The people who built the institutions we're now disrupting.</p>
             </div>
-            <div class="team-grid">
+            
+            <!-- Core Team -->
+            <div class="team-grid team-grid-full">
                 <div class="team-card">
                     <div class="team-photo" style="background: var(--navy);">
                         <span style="font-size: 4rem;">👨‍💼</span>
                     </div>
                     <h3>Alexei Karpov</h3>
                     <span class="team-role">Founder & CEO</span>
-                    <p>15+ years in fintech and capital markets. Previously led tokenization initiatives at major financial institutions. Passionate about democratizing access to investment opportunities.</p>
+                    <span class="team-location">🇱🇺 Luxembourg → 🇲🇺 Mauritius</span>
+                    <p>20+ years in web development and IT, 15+ years in financial services. GMS+ Luxembourg Family Office, Bendura Private Bank Liechtenstein, Jurstax (Mauritius/DIFC/RAK). Deep expertise in trust structures, banking, and regulatory navigation.</p>
                     <div class="team-links">
-                        <a href="https://linkedin.com/in/alexeikarpov" target="_blank">LinkedIn</a>
+                        <a href="https://linkedin.com/in/akarpovlux" target="_blank">LinkedIn</a>
                         <a href="https://t.me/akarpovlux" target="_blank">Telegram</a>
                     </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo" style="background: var(--charcoal);">
+                        <span style="font-size: 4rem;">👨‍💻</span>
+                    </div>
+                    <h3>Vladislav Mosokkov</h3>
+                    <span class="team-role">CTO</span>
+                    <span class="team-location">🇷🇺 Russia → 🇲🇺 Mauritius</span>
+                    <p>Deutsche Bank, Oilspace. Expert in crypto and banking software architecture, distributed systems. Bridges the gap between blockchain innovation and enterprise-grade reliability.</p>
+                    <div class="team-links">
+                        <a href="#" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo" style="background: var(--slate);">
+                        <span style="font-size: 4rem;">📊</span>
+                    </div>
+                    <h3>Lorinc J. Nyitrai</h3>
+                    <span class="team-role">Data Scientist</span>
+                    <span class="team-location">🇭🇺 Hungary → 🇪🇸 Spain</span>
+                    <p>UBS, Allianz, TBS. Specialist in quantitative modeling, risk analysis, and compliance algorithms. Builds the intelligence layer that keeps our platform secure and efficient.</p>
+                    <div class="team-links">
+                        <a href="#" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+                
+                <div class="team-card">
+                    <div class="team-photo" style="background: var(--navy);">
+                        <span style="font-size: 4rem;">🏦</span>
+                    </div>
+                    <h3>Rudi van der Lugt</h3>
+                    <span class="team-role">Financial Operations</span>
+                    <span class="team-location">🇳🇱 Netherlands → 🇱🇺 Luxembourg</span>
+                    <p>Nomura, ABN AMRO, and other tier-1 institutions. Expert in securities back-office operations, settlement processes, and post-trade workflows.</p>
+                    <div class="team-links">
+                        <a href="#" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Advisory Board -->
+            <div style="text-align: center; margin: 80px 0 40px;">
+                <span class="section-label">Advisory Board</span>
+                <h3 style="font-size: 1.8rem; color: var(--ink); margin-top: 12px;">Strategic Advisors</h3>
+            </div>
+            
+            <div class="advisor-grid">
+                <div class="advisor-card">
+                    <h4>Jean-Luc Jourdan</h4>
+                    <span class="advisor-org">GMS+ Family Office, Luxembourg 🇱🇺</span>
+                    <p>Court-witnessed expert in economic and accounting matters. Chartered Professional Accountant. FINMA-Authorized Shareholder and Co-Founder of CIM Bank Geneva.</p>
+                </div>
+                
+                <div class="advisor-card">
+                    <h4>Daniil Savitskii</h4>
+                    <span class="advisor-org">Advokaadibüroo K&S Legal, Estonia 🇪🇪</span>
+                    <p>Member of the Bar in Tallinn. Member of the EUFA Juridical Committee. Expert in cross-border regulatory frameworks.</p>
+                </div>
+                
+                <div class="advisor-card">
+                    <h4>Akis Papakyriacou, MCIArb</h4>
+                    <span class="advisor-org">Akis Papakyriacou LLC, Cyprus 🇨🇾</span>
+                    <p>Top securities and banking lawyer (Legal 500). Deep expertise in international securities law and dispute resolution.</p>
                 </div>
             </div>
         </div>
@@ -295,6 +364,11 @@
             margin: 0 auto;
         }
         
+        .team-grid-full {
+            max-width: 1200px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
         .team-card {
             text-align: center;
         }
@@ -325,6 +399,14 @@
             text-transform: uppercase;
             letter-spacing: 0.12em;
             color: var(--gold);
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .team-location {
+            font-family: var(--font-ui);
+            font-size: 0.75rem;
+            color: var(--slate);
             display: block;
             margin-bottom: 16px;
         }
@@ -464,12 +546,68 @@
             .partner-grid {
                 grid-template-columns: repeat(2, 1fr);
             }
+            .team-grid-full {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .advisor-grid {
+                grid-template-columns: 1fr;
+            }
         }
         
         @media (max-width: 600px) {
             .partner-grid {
                 grid-template-columns: 1fr;
             }
+            .team-grid-full {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+            }
+        }
+        
+        /* Advisor styles */
+        .advisor-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .advisor-card {
+            padding: 32px;
+            background: var(--ivory);
+            border: 1px solid rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .advisor-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+        
+        .advisor-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 4px;
+        }
+        
+        .advisor-org {
+            font-family: var(--font-ui);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 16px;
+        }
+        
+        .advisor-card p {
+            font-size: 0.85rem;
+            color: var(--slate);
+            line-height: 1.7;
         }
     </style>
 </body>
