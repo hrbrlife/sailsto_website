@@ -3,287 +3,227 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing | Sails.to | Transparent Fee Structure</title>
-    <meta name="description" content="Transparent pricing for tokenized securities on Sails.to. Low-cost direct placement, broker network fees, and secondary trading fees. No hidden costs.">
-    <meta name="keywords" content="pricing, fees, security tokens, tokenization costs, issuance fees, trading fees">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Sails.to Pricing | Transparent Fee Structure">
-    <meta property="og:description" content="Transparent pricing for tokenized securities. Direct placement at 0.5%, broker network at 6%, and secondary trading at 0.5%.">
-    <meta property="og:image" content="https://sails.to/assets/og-image.png">
-    <meta property="og:url" content="https://sails.to/pricing.html">
-    <meta property="og:type" content="website">
-    
-    <link rel="canonical" href="https://sails.to/pricing.html">
-    
-    
+    <title>Pricing | Sails.to</title>
+    <meta name="description" content="Transparent fee structure based on investor sourcing. Calculate your total costs.">
     
     <link rel="stylesheet" href="assets/fonts/fonts.css">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="assets/css/glossary.css">
     <style>
-        .pricing-hero {
-            background: linear-gradient(135deg, #1a2a3a 0%, #2d4a5a 100%);
-            padding: 120px 0 80px;
+        .page-hero {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            padding: 100px 30px 60px;
+            text-align: center;
+        }
+
+        .page-hero h1 {
             color: white;
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 800;
         }
-        
-        .pricing-hero .section-label { color: #C9A227; }
-        .pricing-hero .section-title { color: white; }
-        .pricing-hero .section-desc { color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto; }
-        
-        .pricing-section {
-            padding: 80px 0;
-            background: #FFFEF8;
-        }
-        
-        .pricing-section.alt {
-            background: #F7F5F0;
-        }
-        
-        .pricing-container {
-            max-width: 1000px;
+
+        .page-hero p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.1rem;
+            max-width: 600px;
             margin: 0 auto;
-            padding: 0 20px;
         }
-        
-        .pricing-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 30px;
         }
-        
-        .pricing-card {
-            background: white;
-            border-radius: 12px;
-            padding: 40px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            position: relative;
+
+        .fee-table-section h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
         }
-        
-        .pricing-card.featured {
-            border: 2px solid #C9A227;
-        }
-        
-        .pricing-card.featured::before {
-            content: 'Most Common';
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #C9A227;
-            color: white;
-            padding: 4px 16px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-        }
-        
-        .pricing-card h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            color: #1a2a3a;
-            margin-bottom: 10px;
-        }
-        
-        .pricing-card .price {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: #C9A227;
-            margin: 20px 0;
-        }
-        
-        .pricing-card .price span {
-            font-size: 1rem;
-            font-weight: 400;
-            color: #666;
-        }
-        
-        .pricing-card .description {
-            color: #666;
-            margin-bottom: 20px;
+
+        .fee-table-section .intro {
+            color: #64748b;
+            margin-bottom: 30px;
             line-height: 1.6;
         }
-        
-        .pricing-card ul {
-            list-style: none;
-            padding: 0;
-            margin: 25px 0;
-        }
-        
-        .pricing-card li {
-            padding: 10px 0;
-            border-bottom: 1px solid #f0f0f0;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-        
-        .pricing-card li:last-child {
-            border-bottom: none;
-        }
-        
-        .pricing-card li::before {
-            content: '✓';
-            color: #C9A227;
-            font-weight: bold;
-        }
-        
-        .pricing-notes {
-            background: rgba(201, 162, 39, 0.1);
-            border-radius: 8px;
-            padding: 20px;
-            margin-top: 30px;
-        }
-        
-        .pricing-notes h4 {
-            font-family: 'Cormorant Garamond', serif;
-            margin-bottom: 10px;
-        }
-        
-        .pricing-notes p {
-            font-size: 0.9rem;
-            color: #666;
-            margin: 0;
-        }
-        
+
         .fee-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 30px 0;
-        }
-        
-        .fee-table th,
-        .fee-table td {
-            padding: 15px 20px;
-            text-align: left;
-            border-bottom: 1px solid #e0ddd5;
-        }
-        
-        .fee-table th {
-            background: #1a2a3a;
-            color: white;
-            font-weight: 600;
-        }
-        
-        .fee-table th:first-child {
-            border-radius: 8px 0 0 0;
-        }
-        
-        .fee-table th:last-child {
-            border-radius: 0 8px 0 0;
-        }
-        
-        .fee-table tr:hover {
-            background: #faf9f5;
-        }
-        
-        .fee-table .fee-amount {
-            font-weight: 600;
-            color: #C9A227;
-        }
-        
-        .comparison-section h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.2rem;
-            color: #1a2a3a;
-            margin-bottom: 15px;
-        }
-        
-        .comparison-section p {
-            color: #666;
-            max-width: 700px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             margin-bottom: 30px;
         }
-        
-        .highlight-box {
-            background: white;
-            border-left: 4px solid #C9A227;
-            padding: 25px 30px;
-            margin: 30px 0;
-            border-radius: 0 8px 8px 0;
+
+        .fee-table th, .fee-table td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
         }
-        
-        .highlight-box h4 {
-            font-family: 'Cormorant Garamond', serif;
-            margin-bottom: 10px;
+
+        .fee-table thead {
+            background: #1a202c;
+            color: white;
         }
-        
-        .highlight-box p {
-            margin: 0;
-            color: #444;
+
+        .fee-table tbody tr:hover {
+            background: #fafaf9;
         }
-        
-        .faq-mini {
-            margin-top: 50px;
+
+        .fee-table tbody tr:last-child td {
+            border-bottom: none;
         }
-        
-        .faq-mini h3 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 1.5rem;
-            margin-bottom: 25px;
-        }
-        
-        .faq-item {
-            background: white;
-            border-radius: 8px;
-            padding: 20px 25px;
-            margin-bottom: 15px;
-            cursor: pointer;
-        }
-        
-        .faq-item h4 {
-            font-family: 'DM Sans', sans-serif;
+
+        .fee-table td:first-child {
             font-weight: 600;
+        }
+
+        .fee-amount {
+            color: #3182ce;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .indented {
+            padding-left: 40px !important;
+            font-weight: 400 !important;
+        }
+
+        .total-row {
+            background: #f0f4ff !important;
+            font-weight: 700 !important;
+        }
+
+        .total-row td {
+            font-style: italic;
+            text-align: center;
+        }
+
+        .info-box {
+            background: rgba(49, 130, 206, 0.08);
+            border-left: 4px solid #3182ce;
+            padding: 20px 25px;
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+        }
+
+        .info-box h4 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .calculator-section {
+            background: #fafaf9;
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+
+        .calculator-section h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .calc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .calc-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .input-group input, .input-group select {
+            padding: 12px 16px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            background: white;
+        }
+
+        .input-group input:focus, .input-group select:focus {
+            outline: none;
+            border-color: #3182ce;
+        }
+
+        .input-hint {
+            font-size: 0.8rem;
+            color: #94a3b8;
+        }
+
+        .calc-results {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .result-row {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #e2e8f0;
         }
-        
-        .faq-item p {
-            margin-top: 15px;
-            color: #666;
-            display: none;
+
+        .result-row:last-child {
+            border-bottom: none;
         }
-        
-        .faq-item.active p {
-            display: block;
+
+        .result-label {
+            font-size: 0.95rem;
+            color: #64748b;
         }
-        
-        .cta-section {
-            background: #1a2a3a;
-            padding: 60px 0;
-            text-align: center;
+
+        .result-value {
+            font-size: 1.1rem;
+            font-weight: 700;
         }
-        
-        .cta-section h2 {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2rem;
-            color: white;
-            margin-bottom: 15px;
+
+        .result-highlight {
+            background: rgba(49, 130, 206, 0.08);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 16px;
+            border: 2px solid #3182ce;
         }
-        
-        .cta-section p {
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 25px;
+
+        .result-highlight .result-label {
+            font-size: 1.1rem;
+            font-weight: 700;
         }
-        
-        .cta-section .btn {
-            display: inline-block;
-            padding: 14px 32px;
-            background: #C9A227;
-            color: white;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
+
+        .result-highlight .result-value {
+            font-size: 1.8rem;
+            color: #3182ce;
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-        <nav>
+    <nav>
         <a href="index.html" class="logo">
             <img src="sail_logo.png" alt="Sails.to" class="logo-dark">
             <img src="sail_logo_w.png" alt="Sails.to" class="logo-light">
@@ -295,20 +235,22 @@
         </button>
         <div class="nav-links nav-collapse">
             <div class="nav-dropdown">
-                <a href="#" class="nav-dropdown-trigger">Platform</a>
+                <a href="#" class="nav-dropdown-trigger">For Me</a>
                 <div class="nav-dropdown-menu">
-                    <a href="whatsails.html">How It Works</a>
-                    <a href="issuers.html">For Issuers</a>
-                    <a href="investors.html">For Investors</a>
+                    <a href="issuers.html">Business - Raise Funds</a>
+                    <a href="investors.html">Professional Investors - Grow</a>
                     <a href="brokers.html">For Brokers</a>
                     <a href="regulated.html">For Institutions</a>
                 </div>
             </div>
+            <a href="issuers-directory.html" style="color: var(--ink); text-decoration: none; font-weight: 500;">Platform</a>
             <div class="nav-dropdown">
-                <a href="#" class="nav-dropdown-trigger">Knowledge</a>
+                <a href="#" class="nav-dropdown-trigger">Understand</a>
                 <div class="nav-dropdown-menu">
-                    <a href="knowledge/index.html">Knowledge Base</a>
+                    <a href="whatsails.html">How It Works</a>
+                    <a href="pricing.html">Pricing</a>
                     <div class="dropdown-divider"></div>
+                    <a href="knowledge/index.html">Knowledge Base</a>
                     <a href="knowledge/blog/index.html">Blog</a>
                     <a href="knowledge/docs/index.html">Documentation</a>
                     <a href="knowledge/faq.html">FAQ</a>
@@ -328,210 +270,139 @@
         </div>
     </nav>
 
+    <div class="page-hero">
+        <h1>💰 Fee Structure</h1>
+        <p>Transparent pricing based on investor sourcing. Calculate your total costs.</p>
+    </div>
 
-    <!-- Hero Section -->
-    <section class="pricing-hero">
-        <div class="pricing-container">
-            <span class="section-label">Pricing</span>
-            <h1 class="section-title">Transparent, Simple Pricing</h1>
-            <p class="section-desc">No hidden fees. No surprises. Know exactly what you'll pay before you start.</p>
-        </div>
-    </section>
-
-    <!-- Primary Placement Fees -->
-    <section class="pricing-section">
-        <div class="pricing-container">
-            <span class="section-label">For Issuers</span>
-            <h2 class="section-title">Primary Placement Fees</h2>
-            
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Direct Placement</h3>
-                    <div class="price">0.5% <span>of capital raised</span></div>
-                    <p class="description">For issuers bringing their own investors directly to the platform.</p>
-                    <ul>
-                        <li>Full platform infrastructure</li>
-                        <li>KYC/AML verification</li>
-                        <li>Token issuance on Solana</li>
-                        <li>Wyoming DAO Series LLC structure</li>
-                        <li>Cap table management</li>
-                        <li>Distribution automation</li>
-                    </ul>
-                    <div class="pricing-notes">
-                        <h4>Investor Protection</h4>
-                        <p>This fee only applies <strong>after the soft cap is reached</strong>. If the offering doesn't reach soft cap, investors' only potential cost is Clearstream custody fees (if TradFi Bridge is used).</p>
-                    </div>
-                </div>
-                
-                <div class="pricing-card featured">
-                    <h3>Broker Network</h3>
-                    <div class="price">6% <span>of capital raised</span></div>
-                    <p class="description">For capital raised through our global broker network.</p>
-                    <ul>
-                        <li>Everything in Direct Placement</li>
-                        <li>Access to global broker network</li>
-                        <li>Distribution to qualified investors</li>
-                        <li>Broker relationship management</li>
-                        <li>Marketing support</li>
-                    </ul>
-                    <div class="pricing-notes">
-                        <h4>100% to Broker</h4>
-                        <p>The entire 6% goes to the broker who brings the investor. This incentivizes quality distribution while keeping our platform fee low.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Fee Breakdown Table -->
-    <section class="pricing-section alt">
-        <div class="pricing-container comparison-section">
-            <span class="section-label">Complete Breakdown</span>
-            <h2>All Fees at a Glance</h2>
-            <p>Everything you need to know about costs on Sails.to.</p>
+    <div class="pricing-container">
+        
+        <div class="fee-table-section">
+            <h2>Complete Fee Breakdown</h2>
+            <p class="intro">Fees are based on <strong>how the investor is sourced</strong>, not which channel they use. All fees are charged on successful close only.</p>
             
             <table class="fee-table">
                 <thead>
                     <tr>
                         <th>Fee Type</th>
                         <th>Amount</th>
+                        <th>When Charged</th>
                         <th>Who Pays</th>
-                        <th>Recipient</th>
+                        <th>Split</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Direct Placement Fee</strong><br><small>Primary market - issuer's own investors</small></td>
-                        <td class="fee-amount">0.5%</td>
+                        <td><strong>Brokerage Fee</strong></td>
+                        <td><span class="fee-amount">0.5%</span></td>
+                        <td>All primary purchases and secondary trades</td>
+                        <td>Buyer</td>
+                        <td>⅔ Brokers (proportionate) + ⅓ Standards Layer</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Distribution Fee</strong></td>
+                        <td><span class="fee-amount">6% OR 1%</span></td>
+                        <td>On successful close: depends on investor sourcing</td>
                         <td>Issuer (from proceeds)</td>
-                        <td>Sails.to</td>
+                        <td>See details below ↓</td>
                     </tr>
                     <tr>
-                        <td><strong>Broker Placement Fee</strong><br><small>Primary market - broker-sourced investors</small></td>
-                        <td class="fee-amount">6%</td>
+                        <td class="indented">→ General Distribution Investors</td>
+                        <td><span class="fee-amount">6%</span></td>
+                        <td>Investors not sourced through issuer's direct referral network</td>
                         <td>Issuer (from proceeds)</td>
-                        <td>100% to Broker</td>
+                        <td>Brokers + Platform Admin + Standards Layer</td>
                     </tr>
                     <tr>
-                        <td><strong>Secondary Trading Fee</strong><br><small>Peer-to-peer token transfers</small></td>
-                        <td class="fee-amount">0.5%</td>
-                        <td>Seller</td>
-                        <td>⅓ Sails.to, ⅔ Brokers</td>
+                        <td class="indented">→ Referral Investors</td>
+                        <td><span class="fee-amount">1%</span></td>
+                        <td>Investors using issuer's referral code</td>
+                        <td>Issuer (from proceeds)</td>
+                        <td>Platform Admin + Standards Layer</td>
+                    </tr>
+                    <tr class="total-row">
+                        <td colspan="5"><strong>Total per investor:</strong> 1.5% for referral investors (0.5% brokerage + 1% distribution) <strong>OR</strong> 6.5% for general distribution investors (0.5% brokerage + 6% distribution). Charged on successful close only.</td>
                     </tr>
                     <tr>
-                        <td><strong>Trust & Admin Fee</strong><br><small>Ongoing cap table, compliance, reporting</small></td>
-                        <td class="fee-amount">1%/year</td>
-                        <td>Deducted from distributions</td>
-                        <td>Sails.to</td>
+                        <td><strong>Trust & Administration Fee</strong></td>
+                        <td><span class="fee-amount">1% annual</span></td>
+                        <td>Ongoing (annually on nominal value)</td>
+                        <td>Issuer</td>
+                        <td>Trust + Platform Administration</td>
                     </tr>
                     <tr>
-                        <td><strong>Clearstream Custody</strong><br><small>TradFi Bridge users only</small></td>
-                        <td class="fee-amount">Variable</td>
+                        <td><strong>Security Deposit</strong></td>
+                        <td><span class="fee-amount">3% of issuance</span></td>
+                        <td>At issuance, reserved under trust</td>
+                        <td>Issuer (from proceeds)</td>
+                        <td>Reserved for fees, legal, and winding down</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Clearstream Fees</strong></td>
+                        <td><span class="fee-amount">Variable</span></td>
+                        <td>Channel 3 transactions (even if soft cap fails)</td>
                         <td>Investor</td>
                         <td>Clearstream</td>
                     </tr>
+                    <tr>
+                        <td><strong>Conversion Fee</strong></td>
+                        <td><span class="fee-amount">0.10-0.25%</span></td>
+                        <td>When wrapping/unwrapping Solana ↔ Clearstream</td>
+                        <td>Requester</td>
+                        <td>Standards Layer + Trust</td>
+                    </tr>
                 </tbody>
             </table>
-            
-            <div class="highlight-box">
-                <h4>No Upfront Fees</h4>
-                <p>We don't charge setup fees, monthly fees, or minimum commitments. You only pay when you successfully raise capital. Our success is aligned with yours.</p>
+
+            <div class="info-box">
+                <h4>💡 Fees That Apply Even If Soft Cap Fails</h4>
+                <p>When an offering fails to reach soft cap and redeems as a zero-coupon bond:</p>
+                <ul>
+                    <li><strong>0.5% brokerage fee</strong>: already deducted at time of purchase</li>
+                    <li><strong>Clearstream fees</strong>: if Channel 3 was used</li>
+                </ul>
+                <p><strong>The 6% distribution fee for general distribution investors is NOT charged on failed offerings.</strong> That only applies when the offering successfully closes.</p>
             </div>
         </div>
-    </section>
 
-    <!-- For Investors -->
-    <section class="pricing-section">
-        <div class="pricing-container">
-            <span class="section-label">For Investors</span>
-            <h2 class="section-title">Investor Costs</h2>
+        <div class="calculator-section">
+            <h2>💸 Cost Calculator</h2>
+            <p class="intro">Calculate your total costs based on offering size, investor sourcing, and term</p>
             
-            <div class="pricing-grid">
-                <div class="pricing-card">
-                    <h3>Self-Custody (Solana)</h3>
-                    <div class="price">$0 <span>platform fee</span></div>
-                    <p class="description">Hold tokens directly in your Solana wallet.</p>
-                    <ul>
-                        <li>No custody fees</li>
-                        <li>Direct token ownership</li>
-                        <li>Stablecoin distributions</li>
-                        <li>Full self-sovereignty</li>
-                    </ul>
-                    <div class="pricing-notes">
-                        <h4>Solana Network Fees</h4>
-                        <p>Standard Solana transaction fees apply (~$0.0001 per transaction). Negligible for most use cases.</p>
+            <div class="calc-grid">
+                <div class="calc-inputs">
+                    <div class="input-group">
+                        <label for="offeringSize">Offering Size</label>
+                        <input type="number" id="offeringSize" value="1000000" min="0" step="10000">
+                        <span class="input-hint">Total amount you plan to raise</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="referralPct">% from Your Referral Network</label>
+                        <input type="number" id="referralPct" value="50" min="0" max="100" step="5">
+                        <span class="input-hint">Investors you source directly (1% fee)</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="termYears">Term (Years)</label>
+                        <input type="number" id="termYears" value="5" min="1" max="30" step="1">
+                        <span class="input-hint">Length of the bond</span>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="couponRate">Annual Coupon Rate (%)</label>
+                        <input type="number" id="couponRate" value="8" min="0" max="30" step="0.1">
+                        <span class="input-hint">Annual interest rate to investors</span>
                     </div>
                 </div>
-                
-                <div class="pricing-card">
-                    <h3>TradFi Bridge (Clearstream)</h3>
-                    <div class="price">Variable <span>custody fee</span></div>
-                    <p class="description">Institutional custody with ISIN assignment.</p>
-                    <ul>
-                        <li>Clearstream institutional custody</li>
-                        <li>ISIN identifier for reporting</li>
-                        <li>Cash distributions</li>
-                        <li>Bank/broker integration</li>
-                    </ul>
-                    <div class="pricing-notes">
-                        <h4>Custody Fee Structure</h4>
-                        <p>Clearstream fees depend on your custodian and holding size. Contact your broker or bank for specific rates.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="highlight-box" style="margin-top: 40px;">
-                <h4>Minimum Investment</h4>
-                <p>Most offerings on Sails.to have a minimum investment of <strong>$150,000</strong>. This reflects the professional/accredited investor requirement and ensures efficient allocation across investors.</p>
+
+                <div class="calc-results" id="results"></div>
             </div>
         </div>
-    </section>
 
-    <!-- Pricing FAQ -->
-    <section class="pricing-section alt">
-        <div class="pricing-container">
-            <div class="faq-mini">
-                <h3>Common Pricing Questions</h3>
-                
-                <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <h4>When is the 0.5% direct placement fee charged? <span>+</span></h4>
-                    <p>The 0.5% fee is only charged after the soft cap is reached and the offering proceeds. If an offering fails to reach soft cap, investors are refunded and no platform fee applies, protecting investors from paying fees on failed raises.</p>
-                </div>
-                
-                <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <h4>Why is the broker fee 6% when direct is 0.5%? <span>+</span></h4>
-                    <p>The 6% is industry-standard for private placement distribution. The entire amount goes to the broker who sources the investor. We don't take a cut. This incentivizes our broker network to actively distribute your offering to qualified investors globally.</p>
-                </div>
-                
-                <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <h4>What does the 1%/year trust fee cover? <span>+</span></h4>
-                    <p>The annual trust & admin fee covers: ongoing cap table management, compliance monitoring, distribution processing, investor reporting, regulatory filings, and platform infrastructure maintenance.</p>
-                </div>
-                
-                <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <h4>Are there any hidden fees? <span>+</span></h4>
-                    <p>No. The fees listed on this page are comprehensive. There are no setup fees, no monthly minimums, no per-investor charges, and no surprise costs. Third-party fees (like Clearstream custody for TradFi Bridge users) are pass-through costs. We don't markup external services.</p>
-                </div>
-                
-                <div class="faq-item" onclick="this.classList.toggle('active')">
-                    <h4>Can fees be negotiated? <span>+</span></h4>
-                    <p>For large offerings ($25M+), we're open to discussing custom arrangements. Contact our team to discuss your specific situation.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="pricing-container">
-            <h2>Ready to get started?</h2>
-            <p>Launch your tokenized offering with transparent, competitive pricing.</p>
-            <a href="signup.html?type=issuer" class="btn">Start Issuing</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-        <footer>
+    <footer>
         <div class="footer-grid">
             <div class="footer-brand">
                 <a href="index.html" class="logo">
@@ -540,21 +411,18 @@
                 <p>Hybrid securities infrastructure bridging DeFi innovation with TradFi trust.<br><em style="font-size: 0.8rem; color: var(--silver);">White-label available for institutions.</em></p>
             </div>
             <div class="footer-col">
-                <h4>Platform</h4>
-                <a href="whatsails.html">How It Works</a>
-                <a href="issuers.html">For Issuers</a>
-                <a href="investors.html">For Investors</a>
+                <h4>For Me</h4>
+                <a href="issuers.html">Business - Raise Funds</a>
+                <a href="investors.html">Professional Investors - Grow</a>
                 <a href="brokers.html">For Brokers</a>
                 <a href="regulated.html">For Institutions</a>
             </div>
             <div class="footer-col">
-                <h4>Knowledge</h4>
+                <h4>Understand</h4>
+                <a href="whatsails.html">How It Works</a>
+                <a href="pricing.html">Pricing</a>
                 <a href="knowledge/index.html">Knowledge Base</a>
-                <a href="knowledge/blog/index.html">Blog</a>
-                <a href="knowledge/docs/index.html">Documentation</a>
                 <a href="knowledge/faq.html">FAQ</a>
-                <a href="knowledge/glossary/index.html">Glossary</a>
-                <a href="knowledge/roadmap.html">Roadmap</a>
             </div>
             <div class="footer-col">
                 <h4>Company</h4>
@@ -569,7 +437,98 @@
         </div>
     </footer>
 
+    <script>
+        const offeringSizeInput = document.getElementById('offeringSize');
+        const referralPctInput = document.getElementById('referralPct');
+        const termYearsInput = document.getElementById('termYears');
+        const couponRateInput = document.getElementById('couponRate');
+        const resultsDiv = document.getElementById('results');
 
-    <script src="assets/js/glossary.js"></script>
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(amount);
+        }
+
+        function formatPercent(percent) {
+            return percent.toFixed(2) + '%';
+        }
+
+        function calculateCosts() {
+            const offeringSize = parseFloat(offeringSizeInput.value) || 0;
+            const referralPct = parseFloat(referralPctInput.value) || 0;
+            const termYears = parseFloat(termYearsInput.value) || 5;
+            const couponRate = parseFloat(couponRateInput.value) || 8;
+
+            const referralAmount = offeringSize * (referralPct / 100);
+            const generalAmount = offeringSize - referralAmount;
+
+            const referralDistFee = referralAmount * 0.01;
+            const generalDistFee = generalAmount * 0.06;
+            const totalDistFee = referralDistFee + generalDistFee;
+
+            const brokerageFee = offeringSize * 0.005;
+            const securityDeposit = offeringSize * 0.03;
+            const annualTrustFee = offeringSize * 0.01;
+            const totalTrustFees = annualTrustFee * termYears;
+
+            const totalPlatformFees = totalDistFee + brokerageFee + securityDeposit + totalTrustFees;
+
+            const annualInterest = offeringSize * (couponRate / 100);
+            const totalInterest = annualInterest * termYears;
+
+            const totalCost = totalPlatformFees + totalInterest;
+            const effectiveRate = (totalCost / offeringSize) / termYears * 100;
+
+            const html = `
+                <div class="result-row">
+                    <span class="result-label">Distribution Fee (${formatPercent(referralPct)} at 1% + ${formatPercent(100-referralPct)} at 6%)</span>
+                    <span class="result-value">${formatCurrency(totalDistFee)}</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">Brokerage Fee (0.5%)</span>
+                    <span class="result-value">${formatCurrency(brokerageFee)}</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">Security Deposit (3%)</span>
+                    <span class="result-value">${formatCurrency(securityDeposit)}</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">Trust & Admin Fees (${termYears} years × 1%)</span>
+                    <span class="result-value">${formatCurrency(totalTrustFees)}</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">Total Platform Fees</span>
+                    <span class="result-value">${formatCurrency(totalPlatformFees)}</span>
+                </div>
+                <div class="result-row">
+                    <span class="result-label">Total Interest Payments (${termYears} years × ${formatPercent(couponRate)})</span>
+                    <span class="result-value">${formatCurrency(totalInterest)}</span>
+                </div>
+                <div class="result-highlight">
+                    <div class="result-row" style="border: none; padding: 0;">
+                        <span class="result-label">Total Cost of Capital</span>
+                        <span class="result-value">${formatCurrency(totalCost)}</span>
+                    </div>
+                </div>
+                <div class="result-row" style="border: none; margin-top: 12px;">
+                    <span class="result-label">Effective Annual Rate</span>
+                    <span class="result-value" style="color: #3182ce;">${formatPercent(effectiveRate)}</span>
+                </div>
+            `;
+
+            resultsDiv.innerHTML = html;
+        }
+
+        offeringSizeInput.addEventListener('input', calculateCosts);
+        referralPctInput.addEventListener('input', calculateCosts);
+        termYearsInput.addEventListener('input', calculateCosts);
+        couponRateInput.addEventListener('input', calculateCosts);
+
+        calculateCosts();
+    </script>
 </body>
 </html>

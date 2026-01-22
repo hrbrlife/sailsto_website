@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Sails.to</title>
+    <meta name="description" content="Transparent pricing for issuers and investors. Calculate your costs with our interactive calculator.">
+    <meta name="keywords" content="pricing, fees, bond pricing, issuance costs, capital raising fees">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sails.to Pricing">
+    <meta property="og:description" content="Transparent pricing with interactive calculator.">
+    <meta property="og:image" content="https://sails.to/assets/og-image.png">
+    <meta property="og:url" content="https://sails.to/pricing.html">
+    <meta property="og:type" content="website">
+    
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+            --primary: #3182ce;
+            --ink: #1a202c;
+            --slate: #64748b;
+            --silver: #94a3b8;
+            --border: #e2e8f0;
+            --cream: #fafaf9;
+            --success: #38a169;
+        }
+
+        .page-hero {
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            padding: 100px 30px 60px;
+            text-align: center;
+        }
+
+        .page-hero h1 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+            font-weight: 800;
+        }
+
+        .page-hero p {
+            color: rgba(255,255,255,0.7);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .pricing-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 30px;
+            background: white;
+        }
+
+        /* FEE TABLE */
+        .fee-table-section {
+            margin-bottom: 60px;
+        }
+
+        .fee-table-section h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            color: var(--ink);
+        }
+
+        .fee-table-section .intro {
+            color: var(--slate);
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .fee-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            margin-bottom: 30px;
+        }
+
+        .fee-table th,
+        .fee-table td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .fee-table thead {
+            background: var(--ink);
+            color: white;
+        }
+
+        .fee-table th {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .fee-table tbody tr:hover {
+            background: var(--cream);
+        }
+
+        .fee-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .fee-table td:first-child {
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .fee-amount {
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .indented {
+            padding-left: 40px !important;
+            font-weight: 400 !important;
+        }
+
+        .total-row {
+            background: #f0f4ff !important;
+            font-weight: 700 !important;
+        }
+
+        .total-row td {
+            font-style: italic;
+            text-align: center;
+        }
+
+        /* INFO BOXES */
+        .info-box {
+            background: rgba(49, 130, 206, 0.08);
+            border-left: 4px solid var(--primary);
+            padding: 20px 25px;
+            border-radius: 0 8px 8px 0;
+            margin: 30px 0;
+        }
+
+        .info-box h4 {
+            margin-top: 0;
+            margin-bottom: 12px;
+            color: var(--ink);
+        }
+
+        .info-box p {
+            margin: 0;
+            color: var(--slate);
+            line-height: 1.6;
+        }
+
+        .info-box ul {
+            margin: 12px 0 0 0;
+            padding-left: 20px;
+            color: var(--slate);
+        }
+
+        .info-box li {
+            margin: 8px 0;
+        }
+
+        /* CALCULATOR */
+        .calculator-section {
+            background: var(--cream);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 60px;
+        }
+
+        .calculator-section h2 {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            color: var(--ink);
+        }
+
+        .calculator-section .intro {
+            color: var(--slate);
+            margin-bottom: 40px;
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .calc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .calc-inputs {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .input-group label {
+            font-weight: 600;
+            color: var(--ink);
+            font-size: 0.9rem;
+        }
+
+        .input-group input,
+        .input-group select {
+            padding: 12px 16px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.2s ease;
+            background: white;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .input-hint {
+            font-size: 0.8rem;
+            color: var(--silver);
+        }
+
+        .calc-results {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .result-row:last-child {
+            border-bottom: none;
+        }
+
+        .result-label {
+            font-size: 0.95rem;
+            color: var(--slate);
+        }
+
+        .result-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .result-highlight {
+            background: rgba(49, 130, 206, 0.08);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 16px;
+            border: 2px solid var(--primary);
+        }
+
+        .result-highlight .result-label {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .result-highlight .result-value {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Sails.to</a>
+            <div class="nav-dropdown">
+                <a href="#" class="nav-dropdown-trigger">For Me</a>
+                <div class="nav-dropdown-menu">
+                    <a href="issuers.html">Business - Raise Funds</a>
+                    <a href="investors.html">Professional Investors - Grow</a>
+                    <a href="brokers.html">For Brokers</a>
+                    <a href="regulated.html">For Institutions</a>
+                </div>
+            </div>
+            <a href="issuers-directory.html" style="color: var(--ink); text-decoration: none; font-weight: 500;">Platform</a>
+            <div class="nav-dropdown">
+                <a href="#" class="nav-dropdown-trigger">Understand</a>
+                <div class="nav-dropdown-menu">
+                    <a href="whatsails.html">How It Works</a>
+                    <a href="pricing.html">Pricing</a>
+                    <div class="dropdown-divider"></div>
+                    <a href="knowledge/index.html">Knowledge Base</a>
+                    <a href="knowledge/faq.html">FAQ</a>
+                    <a href="knowledge/roadmap.html">Roadmap</a>
+                </div>
+            </div>
+            <div class="nav-dropdown">
+                <a href="#" class="nav-dropdown-trigger">Company</a>
+                <div class="nav-dropdown-menu">
+                    <a href="company/about.html">About</a>
+                    <a href="company/contact.html">Contact</a>
+                    <a href="company/legal.html">Legal</a>
+                </div>
+            </div>
+            <a href="signup.html" class="nav-cta">Get Started</a>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="page-hero">
+        <h1>💰 Transparent Pricing</h1>
+        <p>No hidden fees. No surprises. Calculate your costs before you start.</p>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="pricing-container">
+        
+        <!-- CALCULATOR -->
+        <div class="calculator-section">
+            <h2>Cost Calculator</h2>
+            <p class="intro">Calculate your total costs based on offering size and term</p>
+            
+            <div class="calc-grid">
+                <div class="calc-inputs">
+                    <div class="input-group">
+                        <label for="userType">I am a...</label>
+                        <select id="userType">
+                            <option value="issuer">Issuer (raising capital)</option>
+                            <option value="investor">Investor (deploying capital)</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="offeringSize">Offering Size</label>
+                        <input type="number" id="offeringSize" value="1000000" min="0" step="10000">
+                        <span class="input-hint">Total amount you plan to raise/invest</span>
+                    </div>
+
+                    <div class="input-group" id="termGroup">
+                        <label for="termYears">Term (Years)</label>
+                        <input type="number" id="termYears" value="3" min="1" max="30" step="1">
+                        <span class="input-hint">Length of the bond</span>
+                    </div>
+
+                    <div class="input-group" id="couponGroup">
+                        <label for="couponRate">Annual Coupon Rate (%)</label>
+                        <input type="number" id="couponRate" value="8" min="0" max="30" step="0.1">
+                        <span class="input-hint">Annual interest rate</span>
+                    </div>
+                </div>
+
+                <div class="calc-results" id="results">
+                    <!-- Results populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- PRICING TIERS -->
+        <div class="pricing-tiers">
+            <!-- ISSUER PRICING -->
+            <div class="pricing-card">
+                <h2>For Issuers</h2>
+                <p class="subtitle">Raise capital with confidence</p>
+                <div class="price-display">$2,500</div>
+                <p class="price-period">One-time setup + 0.5% annual</p>
+                <ul class="features-list">
+                    <li>Full platform access</li>
+                    <li>Regulatory compliance support</li>
+                    <li>KYC/AML verification</li>
+                    <li>Investor relations dashboard</li>
+                    <li>Payment distribution automation</li>
+                    <li>Prospectus hosting & distribution</li>
+                    <li>Dedicated support</li>
+                </ul>
+                <a href="signup.html" class="cta-button">Start Raising</a>
+            </div>
+
+            <!-- INVESTOR PRICING -->
+            <div class="pricing-card">
+                <h2>For Investors</h2>
+                <p class="subtitle">Grow your portfolio</p>
+                <div class="price-display">$0</div>
+                <p class="price-period">Free to browse and invest</p>
+                <ul class="features-list">
+                    <li>Access to all bond offerings</li>
+                    <li>Real-time portfolio tracking</li>
+                    <li>Automated payment collection</li>
+                    <li>Document vault</li>
+                    <li>Secondary market access</li>
+                    <li>Tax reporting tools</li>
+                    <li>Email support</li>
+                </ul>
+                <a href="signup.html" class="cta-button">Start Investing</a>
+            </div>
+
+            <!-- BROKER/INSTITUTION PRICING -->
+            <div class="pricing-card">
+                <h2>For Brokers & Institutions</h2>
+                <p class="subtitle">White-label & API access</p>
+                <div class="price-display">Custom</div>
+                <p class="price-period">Tailored to your needs</p>
+                <ul class="features-list">
+                    <li>White-label platform</li>
+                    <li>Full API access</li>
+                    <li>Custom integrations</li>
+                    <li>Multi-entity management</li>
+                    <li>Bulk operations</li>
+                    <li>Priority support</li>
+                    <li>Dedicated account manager</li>
+                </ul>
+                <a href="company/contact.html" class="cta-button">Contact Sales</a>
+            </div>
+        </div>
+
+        <!-- COMPARISON TABLE -->
+        <div class="comparison-section">
+            <h2>How We Compare</h2>
+            <p class="intro">Sails.to vs. traditional capital markets infrastructure</p>
+            
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Sails.to</th>
+                        <th>Traditional Banks</th>
+                        <th>Private Markets</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Setup Fee</td>
+                        <td>$2,500</td>
+                        <td>$50,000 - $250,000</td>
+                        <td>$10,000 - $100,000</td>
+                    </tr>
+                    <tr>
+                        <td>Annual Platform Fee</td>
+                        <td>0.5% of offering</td>
+                        <td>1.5% - 3.5%</td>
+                        <td>2% - 4%</td>
+                    </tr>
+                    <tr>
+                        <td>Minimum Offering</td>
+                        <td>$100,000</td>
+                        <td>$10,000,000+</td>
+                        <td>$500,000+</td>
+                    </tr>
+                    <tr>
+                        <td>Time to Market</td>
+                        <td>2-4 weeks</td>
+                        <td>3-6 months</td>
+                        <td>1-3 months</td>
+                    </tr>
+                    <tr>
+                        <td>Investor Access</td>
+                        <td>Global</td>
+                        <td>Regional</td>
+                        <td>Limited network</td>
+                    </tr>
+                    <tr>
+                        <td>Secondary Market</td>
+                        <td>Built-in</td>
+                        <td>Limited</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td>Payment Automation</td>
+                        <td>✓ Included</td>
+                        <td>✓ Extra fees</td>
+                        <td>✗ Manual</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>For Me</h4>
+                <a href="issuers.html">Business - Raise Funds</a>
+                <a href="investors.html">Professional Investors - Grow</a>
+                <a href="brokers.html">For Brokers</a>
+                <a href="regulated.html">For Institutions</a>
+            </div>
+            <div class="footer-col">
+                <h4>Understand</h4>
+                <a href="whatsails.html">How It Works</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="knowledge/index.html">Knowledge Base</a>
+                <a href="knowledge/faq.html">FAQ</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="company/about.html">About</a>
+                <a href="company/contact.html">Contact</a>
+                <a href="company/legal.html">Legal</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="https://linkedin.com/company/sailsto" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com/sailsto" target="_blank">Twitter</a>
+                <a href="mailto:hello@sails.to">hello@sails.to</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Sails.to. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- CALCULATOR SCRIPT -->
+    <script>
+        const userTypeSelect = document.getElementById('userType');
+        const offeringSizeInput = document.getElementById('offeringSize');
+        const termYearsInput = document.getElementById('termYears');
+        const couponRateInput = document.getElementById('couponRate');
+        const resultsDiv = document.getElementById('results');
+        const termGroup = document.getElementById('termGroup');
+        const couponGroup = document.getElementById('couponGroup');
+
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD',
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(amount);
+        }
+
+        function formatPercent(percent) {
+            return percent.toFixed(2) + '%';
+        }
+
+        function calculateCosts() {
+            const userType = userTypeSelect.value;
+            const offeringSize = parseFloat(offeringSizeInput.value) || 0;
+            const termYears = parseFloat(termYearsInput.value) || 3;
+            const couponRate = parseFloat(couponRateInput.value) || 8;
+
+            let html = '';
+
+            if (userType === 'issuer') {
+                // Show issuer-relevant fields
+                termGroup.style.display = 'flex';
+                couponGroup.style.display = 'flex';
+
+                const setupFee = 2500;
+                const annualPlatformFee = offeringSize * 0.005; // 0.5%
+                const totalPlatformFees = setupFee + (annualPlatformFee * termYears);
+                
+                const annualInterest = offeringSize * (couponRate / 100);
+                const totalInterestPayments = annualInterest * termYears;
+                
+                const totalCost = totalPlatformFees + totalInterestPayments;
+                const effectiveCostRate = (totalCost / offeringSize) / termYears * 100;
+
+                html = `
+                    <div class="result-row">
+                        <span class="result-label">Setup Fee</span>
+                        <span class="result-value">${formatCurrency(setupFee)}</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Annual Platform Fee</span>
+                        <span class="result-value">${formatCurrency(annualPlatformFee)}</span>
+                    </div>
+                    <div class="breakdown-section">
+                        <h4>Total Over ${termYears} Years</h4>
+                        <div class="result-row">
+                            <span class="result-label">Platform Fees</span>
+                            <span class="result-value">${formatCurrency(totalPlatformFees)}</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Interest Payments</span>
+                            <span class="result-value">${formatCurrency(totalInterestPayments)}</span>
+                        </div>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Total Cost of Capital</span>
+                        <span class="result-value">${formatCurrency(totalCost)}</span>
+                    </div>
+                    <div class="result-row" style="border-top: none; margin-top: 0; padding-top: 12px;">
+                        <span class="result-label">Effective Annual Rate</span>
+                        <span class="result-value">${formatPercent(effectiveCostRate)}</span>
+                    </div>
+                `;
+            } else {
+                // Investor view - simplified
+                termGroup.style.display = 'none';
+                couponGroup.style.display = 'none';
+
+                html = `
+                    <div class="result-row">
+                        <span class="result-label">Platform Fee</span>
+                        <span class="result-value">${formatCurrency(0)}</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Transaction Fee</span>
+                        <span class="result-value">${formatCurrency(0)}</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Annual Management Fee</span>
+                        <span class="result-value">${formatCurrency(0)}</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Total Cost</span>
+                        <span class="result-value">${formatCurrency(0)}</span>
+                    </div>
+                    <div style="margin-top: 20px; padding: 16px; background: #e6fffa; border-radius: 8px; text-align: center;">
+                        <p style="color: #2c7a7b; font-weight: 600; margin: 0;">
+                            ✓ Free for investors<br>
+                            <span style="font-size: 0.85rem; font-weight: 400;">You keep 100% of your returns</span>
+                        </p>
+                    </div>
+                `;
+            }
+
+            resultsDiv.innerHTML = html;
+        }
+
+        // Event listeners
+        userTypeSelect.addEventListener('change', calculateCosts);
+        offeringSizeInput.addEventListener('input', calculateCosts);
+        termYearsInput.addEventListener('input', calculateCosts);
+        couponRateInput.addEventListener('input', calculateCosts);
+
+        // Initial calculation
+        calculateCosts();
+    </script>
