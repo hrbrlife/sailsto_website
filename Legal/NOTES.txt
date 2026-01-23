@@ -1,0 +1,836 @@
+LEGAL NOTES DIRECTORY MUST BE APPENDED EVERY 5 FILES HERE=== BATCH 1 ANALYSIS (Files 1-5) ===
+Date: January 23, 2026
+
+CRITICAL DISCOVERY - MONTANA TO WYOMING MIGRATION REQUIREMENT:
+
+The legal framework discovered is built entirely around CCASH MONEY SERVICES (US) SERIES LLC, a Montana Series LLC operating under MCA § 35-8-304. This is fundamentally different from Sails.to which requires Wyoming DAO Series LLC structure. The entire legal infrastructure must be migrated jurisdiction-wise.
+
+MONTANA vs WYOMING STRUCTURAL DIFFERENCES:
+1. Montana Series LLC (MCA § 35-8-304) provides liability separation between series
+2. Wyoming DAO LLC (W.S. § 17-31-101 et seq.) adds blockchain governance recognition
+3. Wyoming's DAO statute explicitly recognizes smart contract governance as legally binding
+4. Montana structure was designed for MSB licensing - Wyoming structure designed for tokenized securities
+
+KEY ENTITY DEFINITIONS REQUIRING CHANGE:
+- Company legal name: "CCASH MONEY SERVICES (US) SERIES LLC" → "Sails.to DAO LLC" 
+- Jurisdiction: Montana → Wyoming
+- Statutory citations: MCA § 35-8-304 → W.S. § 17-31-XXX throughout
+- Registered Agent: Montana → Wyoming requirement
+- Secretary of State filings: Montana SOS → Wyoming SOS
+
+BUSINESS MODEL TRANSFORMATION:
+CCASH model: MSB infrastructure provider for client money transmission
+Sails model: Hybrid securities issuance platform (Solana + ISIN/Clearstream)
+- CCASH focuses on FinCEN MSB registration per client series
+- Sails focuses on SEC/securities compliance per offering series
+- CCASH deals with BSA/AML for money transmission
+- Sails deals with Reg D/Reg S for securities offerings
+
+REGULATORY FRAMEWORK SHIFT:
+CCASH: Heavy FinCEN, state MTL licensing, BSA/AML focus
+Sails: SEC securities regulations, FINRA broker network, custody regulations
+- All references to "MSBRegistration", "FinCEN", "MTL" need evaluation
+- New terms needed: "RegulationD", "RegulationS", "FINRA", "SecuritiesOffering"
+- BSA/AML still relevant but different context (broker KYC vs MSB CIP)
+
+SCHEMA FRAMEWORK IS EXCELLENT:
+The _schema system with markers [TERM:], [DOC:], [OBL:], [FLOW:] is sophisticated. This system should be PRESERVED and adapted, not replaced. The validation framework, role-based execution system, and document registry architecture are solid foundations that translate well to securities operations.
+
+FILES MUST BE CATEGORIZED:
+1. PRESERVE & ADAPT: Structure, roles, entity config, schema framework
+2. MAJOR REVISION: All MSB-specific compliance documents
+3. NEW REQUIRED: Securities formation docs, broker agreements, custody agreements
+4. REMOVE: State-by-state MTL checklists, Partner MSB agreements
+
+The 28 annotated documents referenced serve CCASH's MSB model. Sails needs analogous document set for securities issuance. The organizational structure (Company/Formation, Company/Governance, Client_Series/Formation, etc.) remains valid but content within each category transforms completely.
+
+
+==========================================
+BATCH 2 ANALYSIS (Files 6-10)
+==========================================
+
+Files read in this batch:
+- llc_roles.md: Role registry with 15 defined roles across governance/officer/compliance/external categories
+- persons.md: Person registry with 5 individuals (P001-P004, RA001) including full identity/contact/compliance data
+- assignments.md: Role assignments mapping entities to roles to persons across Company, Protected Series, Client Series
+- obligations.md: hledger-style double-entry ledger of 88 obligations across Company, ClientSeries, Officers
+- decisions_rights.md: Decision authority matrix and rights allocation (5 decisions, 5 rights defined)
+
+CRITICAL FINDINGS FOR SAILS.TO ADAPTATION:
+
+1. ROLES & GOVERNANCE TRANSFORMATION
+   - CCASH role registry is Montana Series LLC focused with MSB-oriented positions
+   - For Sails.to Wyoming DAO LLC: Many roles remain valid (Manager, CEO, CFO, CTO) BUT Chief Compliance Officer and BSA Officer roles must transform
+   - CCO must shift from BSA/AML Officer to Chief Compliance Officer focused on SEC regulations, Reg D compliance, FINRA oversight, custody rules
+   - ELIMINATE: BSA Officer, OFAC Contact roles (MSB-specific)
+   - ADD NEW ROLES: Chief Legal Officer/General Counsel (securities law), Custody Officer (digital asset custody), Broker Relationship Manager, Placement Agent Coordinator
+   - Independence rules change: CCO independence from revenue functions still critical BUT for different reasons (SEC conflict rules not BSA independence)
+   - Registered Agent: Wyoming requires registered agent (same concept as Montana but W.S. § 17-28-101 not MCA § 35-8-205)
+
+2. PERSON REGISTRY ADAPTATION
+   - Person registry structure is EXCELLENT and directly portable to Sails
+   - Required fields for Sails officers will differ: SEC Form BD/U4 data for FINRA-registered personnel, Series 7/24/63 licenses for broker-dealer activities
+   - Background checks must include FINRA CRD checks, SEC disciplinary history, not just BSA fit-and-proper
+   - Signature authority rules remain similar but governed by securities law not BSA regulations
+   - Address requirements: Wyoming entity addresses required per W.S. § 17-31-XXX
+
+3. ASSIGNMENT STRUCTURE BRILLIANCE
+   - The assignments.md structure mapping entity→role→person is GENIUS and 100% portable to Sails
+   - Protected Series concept remains valid: Sails can have infrastructure series (custody, technology, operations) separate from client offering series
+   - Client Series structure transforms DRAMATICALLY: C-### series become individual securities offerings (each bond issuance = separate series)
+   - Manager inheritance from Company to Series: SAME PATTERN applies in Wyoming DAO Series LLC
+   - Key difference: ClientSeries Manager in CCASH = client's MSB manager; in Sails = issuer's authorized officer/representative
+   - Organizer role: Wyoming formation still requires Organizer to file Articles of Organization (W.S. § 17-31-204)
+
+4. OBLIGATIONS TRANSFORMATION - MOST CRITICAL SECTION
+   - CCASH has 88 obligations primarily focused on FinCEN/BSA/MTL compliance
+   - Sails.to will have DIFFERENT obligation categories:
+     * ELIMINATE ENTIRELY: FinCEN registration, SAR filing, CTR reporting, MSB annual testing, state MTL compliance (OBL-REG-001 through OBL-REG-005, all BSA-SAR obligations, all FinCEN obligations)
+     * TRANSFORM TO SEC: Replace FinCEN biennial renewal with SEC Form D amendments (Rule 506(c)), annual audited financials per Reg D, custody audit requirements
+     * NEW OBLIGATIONS: Broker commission payments (OBL-BROKER-001), FINRA supervision obligations, custody reporting, investor accreditation verification (OBL-INVESTOR-ACC-001), Form D filing within 15 days (OBL-SEC-FORM-D-001)
+   - Fee structure obligations (OBL-CLIENT-CO-001/002/003): Completely different for Sails
+     * No monthly platform fee model
+     * Sails charges: upfront structuring fee, annual admin fee, success fee on placement
+     * New: Broker fee obligations (company owes commissions to broker-dealers)
+   - Client→Company obligations transform to Issuer→Company obligations with securities-specific requirements:
+     * Provide offering materials (OBL-ISSUER-001)
+     * Maintain D&O insurance (OBL-ISSUER-002)
+     * File Form D amendments (OBL-ISSUER-003)
+     * Investor reporting obligations (OBL-ISSUER-004)
+   - Continuous obligations shift from AUP/geographic restrictions to securities compliance: investor suitability, custody requirements, transfer restrictions per Reg D
+
+5. DECISION & RIGHTS MATRIX
+   - Decision authority structure is excellent framework BUT decision types completely change
+   - STRATEGIC-001 decisions remain valid (markets, services) but applied to: Which securities to offer? Which investor jurisdictions to serve? Which custody partners?
+   - COMPLIANCE-001 decisions: NOT "SAR filing" but "Investor suitability determination" and "Offering suspension decisions"
+   - CLIENT-EXPANSION-001 becomes ISSUER-EXPANSION-001: Approving issuer to expand to new investor jurisdictions or new offering types
+   - Rights matrix transforms:
+     * Company rights over ClientSeries become Company rights over Issuer Series (each bond offering)
+     * AUDIT-001 right remains but auditing for SEC compliance not BSA compliance
+     * TERMINATE-001 right to terminate issuer relationship (similar pattern, different triggers)
+     * New rights: RIGHT-CUSTODY-001 (access to custody records), RIGHT-INVESTOR-DATA-001 (access to investor accreditation docs)
+
+PRESERVATION VS TRANSFORMATION ANALYSIS:
+- PRESERVE COMPLETELY: Assignment structure, person registry format, role→person mapping, decision matrix framework, rights allocation structure, double-entry obligation ledger format
+- ADAPT HEAVILY: Specific role definitions, independence rules, obligation content, decision types, rights categories
+- ELIMINATE: All MSB/BSA/FinCEN specific roles/obligations/decisions
+- CREATE NEW: All SEC/securities/broker-dealer specific roles/obligations/decisions
+
+The schema architecture from llc_roles.md through decisions_rights.md is OUTSTANDING foundational work. The relationship modeling, validation rules, and cross-referencing systems are sophisticated and production-ready. This is NOT amateur hour - this is professional-grade legal operations infrastructure. For Sails.to, we preserve the entire structural framework and swap the regulatory substance from money transmission to securities.
+
+
+==========================================
+BATCH 3 ANALYSIS (Files 11-15)
+==========================================
+
+Files read in this batch:
+- cross_references.md: Document-to-document reference index with 50+ cross-references mapped
+- document_registry.md: Master index of all 28 documents with metadata, dependencies, output mapping
+- markers.md: Inline marker system with 2,899 total marker uses across 6 types
+- templates.md: Document templates and MVP validation rules (80+ validation rules defined)
+- field_mappings.md: Placeholder-to-data field mapping system for auto-population
+
+CRITICAL FINDINGS FOR SAILS.TO ADAPTATION:
+
+1. CROSS-REFERENCE SYSTEM SOPHISTICATION
+   - CCASH has meticulously mapped every document→document reference enabling impact analysis
+   - When B7 (AUP) changes, system knows to review A3, F1, N3 automatically
+   - For Sails: This cross-reference graph is ESSENTIAL and fully portable
+   - Need to rebuild reference graph for Sails documents but SAME SYSTEM:
+     * Replace B5 (BSA/AML) references with SEC compliance document references
+     * Replace FinCEN/MTL checklist references with Form D/Reg D references
+     * New cross-references: Broker agreements↔offering documents, custody agreements↔operating agreements
+   - Graph structure enables circular reference detection - critical for legal document integrity
+
+2. DOCUMENT REGISTRY AS SYSTEM INTELLIGENCE
+   - document_registry.md is the "brain" of the entire system - tracks 28 documents with full metadata
+   - Output directory mapping organizes documents by purpose: Formation/Governance/Client/Checklists/Schedules
+   - For Sails transformation:
+     * PRESERVE: Formation (A-series), Governance (B-series core), Client (F-series), Schedule (N-series) categories
+     * ELIMINATE: B5 (BSA/AML), B7 (Client AUP), B12 (Partner MSB Due Diligence) - MSB-specific documents
+     * TRANSFORM: E1/E2 checklists from FinCEN/MTL to SEC/Form D/custody checklists
+     * ADD NEW DOCUMENTS:
+       - Broker-Dealer Agreement (new F3 or similar)
+       - Custody Service Agreement (new N6 or similar)
+       - Offering Document Template (new F4)
+       - Investor Subscription Agreement (new F5)
+       - Transfer Agent Agreement (new N7)
+   - Dependency graph shows A1→B1→F1 cascade pattern - same pattern applies to Sails but with different leaf documents
+
+3. MARKER SYSTEM AS TYPED REFERENCES
+   - 2,899 markers across documents creating typed cross-reference system
+   - Marker types: [TERM:], [DOC:], [OBL:], [FLOW:], [DECISION:], [RIGHT:]
+   - This is BRILLIANT: functions like TypeScript types for legal documents - enables compile-time validation
+   - For Sails adaptation:
+     * PRESERVE ENTIRELY: The marker syntax and validation system
+     * UPDATE CONTENT: Replace TERM definitions (MSB→Securities Issuer, ClientSeries→Offering Series)
+     * UPDATE OBLIGATIONS: Replace OBL-REG-001 (FinCEN renewal) with OBL-SEC-001 (Form D amendment)
+     * SAME VALIDATION RULES: All [TERM:X] must exist in defined_terms.md, all [DOC:X] must exist in registry
+   - Marker stripping for OUTPUT generation preserves clean client-facing documents while maintaining internal traceability
+   - 2,260 TERM markers means massive defined-term discipline - this level of rigor is production-ready for Sails
+
+4. TEMPLATE & VALIDATION SYSTEM - THE CROWN JEWEL
+   - templates.md defines 80+ validation rules across 7 document templates
+   - MSB-specific validation rules (MSB-001 through MSB-005) are CRITICAL to understand what NOT to do for Sails:
+     * MSB-001/002: Prohibit "white-label" and "rent-a-license" language → For Sails: Similar prohibition against "guaranteed returns" or "investment advice" language per securities law
+     * MSB-003: Require "independent MSB" language → For Sails: Require "separate issuer" and "independent offering" language per Reg D
+     * MSB-004/005: Require client own EIN and FinCEN registration → For Sails: Require issuer own EIN and Form D filing
+   - Template inheritance (BaseDocument→FormationDocument→ABNDocument) is SOFTWARE ENGINEERING applied to legal documents
+   - For Sails transformation:
+     * PRESERVE: Entire template inheritance system, all BASE-* rules, all validation severity levels
+     * TRANSFORM: MSB-* rules become SEC-* rules with similar structure but securities content
+     * NEW RULES NEEDED:
+       - SEC-001: Must include Rule 506(c) general solicitation disclaimer
+       - SEC-002: Must include accredited investor definition per Reg D 501(a)
+       - SEC-003: Must include transfer restrictions per Rule 144/144A
+       - BROKER-001: Commission structure must comply with FINRA markup rules
+       - CUSTODY-001: Digital asset custody must reference qualified custodian per SEC guidance
+   - FINCEN-001/002 rules (biennial not annual, biennial stated) have EXACT PARALLEL for Sails:
+     * Replace with "Form D amendments within 30 days not 15 days" type rules
+     * Same validation pattern, different regulatory timeframes
+
+5. FIELD MAPPING SYSTEM FOR DOCUMENT GENERATION
+   - field_mappings.md creates typed field references: [ROLE:company.ceo.display_name] pulls from person registry
+   - This enables SINGLE SOURCE OF TRUTH for person data across all documents - change once, populate everywhere
+   - Mappings cover 100+ placeholder locations across formation, governance, and client documents
+   - For Sails transformation:
+     * PRESERVE COMPLETELY: The [ROLE:entity.role.field] syntax and auto-population system
+     * UPDATE ROLES: Replace BSA Officer with Chief Compliance Officer (securities focus), add Custody Officer, add Broker Relations Officer
+     * NEW FIELD TYPES: [OFFERING:series_id.security_type], [INVESTOR:investor_id.accreditation_status]
+   - Configuration fields (thresholds, compensation) separate from person data - same pattern for Sails offering parameters
+   - Populate command with --dry-run is CRITICAL for testing before making changes
+
+SCHEMA MATURITY ASSESSMENT:
+This is NOT a prototype or draft system. This is PRODUCTION-GRADE legal operations infrastructure with:
+- Comprehensive validation (80+ rules)
+- Complete traceability (2,899 markers)
+- Sophisticated dependency tracking (cross-reference graph)
+- Automated document generation (field mappings)
+- Version control awareness (change impact matrix)
+- Software engineering principles applied to legal operations
+
+The CCASH team has built what amounts to a "compiler" for legal documents. The marker system + validation rules + templates function like a type system catching errors before documents are filed or executed. This level of sophistication is RARE in legal operations.
+
+For Sails.to: We don't rebuild this infrastructure - we ADAPT it. The regulatory substance changes from money transmission to securities, but the operational framework is already production-ready. The transformation is:
+1. Preserve: All schema files, validation system, marker syntax, template inheritance
+2. Update registries: defined_terms.md, obligations.md, roles.md with securities-specific content
+3. Transform documents: Swap MSB documents for securities documents using SAME structure
+4. Add new document types: Broker agreements, custody agreements, offering documents, investor agreements
+5. Update validation rules: MSB-* rules become SEC-* rules with parallel structure
+
+The architecture is sound. The implementation is mature. The transformation is well-defined.
+
+
+==========================================
+BATCH 4 ANALYSIS (Files 16-20)
+==========================================
+
+Files read in this batch:
+- flows/index.md: Master registry of 75 process flows across 8 categories
+- flows/client_onboarding.md: Detailed state machine for client onboarding with 14 states and SLA tracking
+- AUDIT_PROMPT.md: Comprehensive legal documentation audit framework with anti-hallucination protocols
+- _schema/data/: Directory containing 4 data files (clients.dat, company.dat, fees.dat, states.dat)
+
+CRITICAL FINDINGS FOR SAILS.TO ADAPTATION:
+
+1. PROCESS FLOW SYSTEM AS STATE MACHINES
+   - 75 defined process flows organized into 8 categories (Formation, Onboarding, Compliance, Operations, Financial, Governance, IT/Security, Dispute)
+   - Each flow is a formal state machine with: trigger, owner, SLA, states, transitions, timeout escalations, document references
+   - client_onboarding.md is exemplar: 14 states from INQUIRY to ACTIVE/REJECTED/TERMINATED
+   - For Sails transformation:
+     * PRESERVE: Entire state machine approach, transition rules, timeout mechanisms, checklist format
+     * ELIMINATE MSB-SPECIFIC FLOWS: sar_filing, fincen_registration, fincen_renewal, fincen_update, mtl_compliance, bsa_efiling, travel_rule, sanctions_screening
+     * TRANSFORM FLOWS: client_onboarding becomes issuer_onboarding with DIFFERENT state sequence:
+       - INQUIRY → KYB_REVIEW → TERMS_NEGOTIATION → AGREEMENT_EXECUTED → OFFERING_DOCUMENTS → SEC_FILING → CUSTODY_SETUP → INVESTOR_VERIFICATION → ACTIVE
+       - Key differences: No EIN_PENDING/FINCEN_PENDING states; Add SEC_FILING, CUSTODY_SETUP, INVESTOR_VERIFICATION states
+     * NEW FLOWS REQUIRED FOR SAILS:
+       - form_d_filing (trigger: new offering, deadline: 15 days)
+       - form_d_amendment (trigger: material change, deadline: 30 days)
+       - investor_accreditation (trigger: subscription, states: VERIFICATION → APPROVED/REJECTED)
+       - broker_commission_payment (trigger: placement, states: CALCULATED → APPROVED → PAID)
+       - custody_reconciliation (trigger: daily, states: RECONCILED → DISCREPANCY → RESOLVED)
+       - transfer_restriction_verification (trigger: secondary transfer request, states: VERIFIED → APPROVED/DENIED)
+       - annual_audit (trigger: yearly, states: SCHEDULED → CONDUCTED → REPORT → FILED)
+   - Flow registry with alias normalization (Client_Onboarding → client_onboarding) shows maturity - same pattern for Sails
+
+2. CLIENT ONBOARDING FLOW DEEP DIVE
+   - 30 business day SLA from CSA execution to ACTIVE
+   - Critical path: INQUIRY → KYB_REVIEW → CSA_NEGOTIATION → CSA_EXECUTED → EIN_PENDING → FINCEN_PENDING → FINCEN_VERIFIED → SOS_PENDING → TRAINING → INTEGRATION → COMPLIANCE_REVIEW → ACTIVE
+   - Two "milestone" states: CSA_EXECUTED (contract signed) and FINCEN_VERIFIED (registration confirmed)
+   - Timeout escalations defined (e.g., FINCEN_PENDING: 30 day warning, 45 day auto-reject)
+   - For Sails issuer_onboarding transformation:
+     * Replace KYB_REVIEW with ISSUER_DD (different due diligence focus: creditworthiness, D&O insurance, regulatory history)
+     * Replace CSA with ISSUANCE_AGREEMENT (different contract structure: offering terms, custody arrangements, broker relationships)
+     * Replace EIN_PENDING with OFFERING_DOCS_PENDING (waiting for issuer to provide: financial statements, business plan, offering memorandum draft)
+     * Replace FINCEN_VERIFIED with SEC_FILING_COMPLETE (Form D filed, offering approved)
+     * Add CUSTODY_SETUP state (establish custody relationship, verify qualified custodian)
+     * Replace TRAINING with ISSUER_TRAINING (different content: Reg D compliance, investor relations, custody procedures)
+     * Replace INTEGRATION with INVESTOR_PORTAL_SETUP (technical integration for investor access)
+     * COMPLIANCE_REVIEW changes focus: SEC compliance not BSA compliance
+   - Checklist by state approach is EXCELLENT - direct port to Sails with updated items
+   - Metrics tracking (Time to CSA, KYB Approval Rate, Onboarding Completion) has parallel for Sails: Time to Offering Launch, Issuer Approval Rate, Offering Success Rate
+
+3. AUDIT FRAMEWORK AS VALIDATION PHILOSOPHY
+   - AUDIT_PROMPT.md is extraordinary: 25+ page comprehensive audit methodology with anti-hallucination protocols
+   - Multi-phase audit sequence (Inventory → Terminology → Cross-Reference → Internal Consistency → Completeness → Legal Risk → Formatting → Jurisdictional → Implementation → Report)
+   - CRITICAL ANTI-HALLUCINATION SECTION: "JURISDICTION GUARD: Montana MSB Status" explicitly prevents false findings about Montana MTL requirements
+   - Citation requirement system: [SOURCE:filename#section] markers mandatory for ALL legal/regulatory assertions
+   - For Sails adaptation:
+     * PRESERVE ENTIRELY: The audit methodology, phase structure, citation requirements, confidence scoring
+     * UPDATE JURISDICTIONAL SECTION: Replace "Montana does NOT regulate money transmitters" with "Wyoming DAO LLC structure" guidance and SEC/securities regulatory environment
+     * UPDATE PROHIBITED LANGUAGE: Keep white-label/rent-a-license prohibitions but ADD securities-specific prohibitions:
+       - "guaranteed returns" (securities fraud)
+       - "investment advice" (requires RIA registration)
+       - "no risk" (misrepresentation)
+       - "SEC approved" (false - SEC does not approve offerings)
+     * UPDATE CITATION REQUIREMENTS: Replace FinCEN/BSA source files with SEC/Reg D/FINRA source files in knowledge_base
+     * VALIDATION COMMAND REFERENCE section is genius - same pattern for Sails but checking different compliance markers
+   - Pre-Finding Verification Checklist is CRITICAL for preventing hallucinations - same checklist applies to Sails audits
+   - Confidence scoring (0.9-1.0 for direct KB cite, <0.5 for no source) prevents overconfident assertions
+
+4. DATA DIRECTORY AS STRUCTURED RECORDS
+   - Four .dat files suggest structured data storage: clients.dat, company.dat, fees.dat, states.dat
+   - Likely formats: CSV, JSON, or custom delimited format for operational data
+   - For Sails transformation:
+     * clients.dat becomes issuers.dat: Different data schema (issuer company info, offering terms, SEC filing numbers, CUSIP/ISIN)
+     * company.dat probably remains similar: Sails.to company information
+     * fees.dat transforms completely: From monthly platform fees to offering fees (structuring fee, annual admin fee, placement fee %, broker commission %)
+     * states.dat transforms: From MTL approval states to securities offering availability states (which states approved for Reg D under NSMIA)
+   - Structured data enables automated population of documents via field_mappings.md - same approach for Sails
+
+5. FLOW CATEGORIES AND COVERAGE GAPS FOR SAILS
+   - CCASH has 75 flows across 8 categories - comprehensive coverage
+   - For Sails, categories remain similar but content shifts:
+     * Formation Flows: Same (formation, governance_setup, series_structure, company_dissolution)
+     * Onboarding Flows: Transform all 10 flows (client → issuer, FinCEN → SEC)
+     * Compliance Flows: MASSIVE TRANSFORMATION REQUIRED
+       - ELIMINATE: All BSA/AML flows (18 flows including sar_filing, transaction_monitoring, sanctions_screening, travel_rule, cip, cdd_edd)
+       - ADD NEW: SEC compliance flows:
+         * reg_d_compliance_review
+         * form_d_filing_and_amendment
+         * investor_accreditation_verification
+         * transfer_restriction_enforcement
+         * annual_audit_coordination
+         * custody_audit_review
+         * broker_dealer_supervision
+         * advertising_compliance_review (Rule 506(c) general solicitation)
+         * bad_actor_disqualification_check
+     * Operations Flows: Transform routing/partner flows to custody/transfer agent flows
+     * Financial Flows: Transform client fund trust to investor funds custody
+     * Governance Flows: Mostly preserve (officer appointment, succession, etc.)
+     * IT/Security Flows: Preserve (bcp_drp, incident_response, etc.)
+     * Dispute Flows: Preserve and ADD investor dispute resolution
+   - Coverage gaps for Sails to fill:
+     * Secondary market flows (transfer requests, transfer agent coordination)
+     * Investor communications flows (annual reports, financial statements, tax forms)
+     * Maturity/redemption flows (bond maturity, principal payment, interest payment)
+     * Default/restructuring flows (issuer default, workout procedures, investor consent)
+
+OPERATIONAL MATURITY ASSESSMENT:
+The flow system demonstrates OPERATIONAL EXCELLENCE:
+- Formal state machines with defined transitions
+- Timeout escalations prevent stagnation
+- Responsibility assignments clear
+- SLA tracking enables performance measurement
+- Document references link flows to legal framework
+- Checklist approach ensures completeness
+
+For Sails: We don't rebuild state machine infrastructure - we REDEFINE the states and transitions for securities operations. The framework (flow registry, state machine format, timeout mechanism, checklist structure) is production-ready. Only the CONTENT of flows transforms from MSB to securities.
+
+The audit framework demonstrates INTELLECTUAL RIGOR:
+- Anti-hallucination protocols prevent false legal assertions
+- Citation requirements enforce evidence-based findings
+- Confidence scoring acknowledges uncertainty
+- Jurisdiction-specific filtering prevents overgeneralization
+- Pre-finding verification checklist enforces discipline
+
+This is not legal document generation - this is LEGAL ENGINEERING. The CCASH framework applies software engineering principles to legal operations: typed references (markers), compile-time validation (schema checks), state machines (flows), version control (change tracking), test-driven development (validation rules).
+
+For Sails.to: This framework is the foundation. We adapt content but preserve methodology. The transformation is well-scoped, systematic, and executable.
+
+
+==========================================
+BATCH 5 ANALYSIS (Files 21-23)
+==========================================
+
+Files read in this batch:
+- A1_Articles_of_Organization.md: Montana Series LLC formation document (500 lines)
+- B1_Master_Operating_Agreement.md: Core governance document (1000+ lines, version 1.4)
+- A2_Exhibit_A_Series_List.md: Series classification and establishment (700 lines)
+
+CRITICAL FINDINGS FOR SAILS.TO ADAPTATION:
+
+1. ARTICLES OF ORGANIZATION (A1) AS FORMATION TEMPLATE
+   - Standard Montana Series LLC Articles citing MCA § 35-8-304 for series liability limitation
+   - Key sections: Name, Company Type, Duration, Purpose, Principal Office, Registered Agent, Management Structure, Initial Manager, Officers, Initial Members, Liability Limitation, International Standards, Series List, Organizer
+   - For Sails.to Wyoming DAO LLC transformation:
+     * PRESERVE: Document structure, section sequence, registered agent requirements, manager-managed structure, member liability limitation
+     * CHANGE JURISDICTION: Replace all MCA § 35-8-304 citations with Wyoming Statutes W.S. § 17-31-XXX (Wyoming DAO LLC Act)
+     * CHANGE PURPOSE SECTION (Art. 4): Eliminate MSB activities entirely, replace with:
+       - Securities issuance and offering coordination
+       - Custodial services for tokenized securities
+       - Broker-dealer relationship management
+       - Investor relations and reporting services
+       - Technology platform for securities infrastructure
+       - Compliance services for SEC/Reg D operations
+     * ELIMINATE: All references to "money services business", "money transmission", "MSB", "FinCEN", "BSA/AML"
+     * ADD PURPOSE ITEMS:
+       - Form D filing services under Securities Act of 1933
+       - Custody coordination with qualified custodians
+       - Broker commission processing and reporting
+       - Investor accreditation verification services
+       - Secondary market transfer coordination
+   - NOTICE LANGUAGE (top of document): Brilliant liability limitation notice - PRESERVE EXACT PATTERN but update citation to Wyoming statute
+   - OFFICER STRUCTURE (Art. 9): Five officers listed - for Sails adapt roles:
+     * CEO: Remains (overall management, strategy, investor relations, SEC coordination)
+     * CTO: Remains (platform technology, custody integration, security)
+     * CMO: Remains (issuer relations, broker relations, marketing)
+     * CFO: Remains (treasury, financial reporting, audit coordination)
+     * CCO: Transform from "BSA/AML Officer" to "Chief Compliance Officer responsible for SEC compliance, Reg D adherence, Form D filings, investor suitability, transfer restrictions, custody compliance, broker supervision"
+   - INTERNATIONAL STANDARDS (Art. 12): Fascinating section - includes anti-corruption, transparency with regulators/banking partners, risk-based information sharing, data protection
+     * For Sails: Keep anti-corruption and data protection provisions
+     * Transform "banking partners/correspondent institutions" to "broker-dealers/custodians/transfer agents"
+     * Transform "compliance information" sharing from AML context to securities compliance context (investor accreditation docs, suitability assessments)
+
+2. MASTER OPERATING AGREEMENT (B1) AS GOVERNANCE CORE
+   - 20 Articles covering: Definitions, Formation, Purpose, Series Authorization, Management, Officers, Members, Capital, Allocations, Books/Records, Tax, Indemnification, Business Ethics, Dissolution, Series Termination, Amendments, Dispute Resolution, AI Operations, Miscellaneous
+   - Version 1.4 with detailed version history showing iterative improvements - professional version control
+   - For Sails.to transformation:
+     * PRESERVE COMPLETELY: Articles 1 (Definitions), 2 (Formation), 5 (Management Structure), 7 (Officer Rotation/Succession), 8 (Members), 9 (Capital), 10 (Allocations), 11 (Books/Records), 12 (Tax), 13 (Indemnification), 17 (Amendments), 18 (Dispute Resolution), 19 (AI Operations), 20 (Miscellaneous)
+     * TRANSFORM HEAVILY: Article 3 (Purpose - MSB→securities), Article 4 (Series Authorization - client MSBs→issuer offerings), Article 6 (Officers - BSA→SEC), Article 14 (Business Ethics - banking→brokers), Article 15 (Dissolution), Article 16 (Series Termination)
+     * Article 4.8 "Inter-Series Operational Conflicts" is GENIUS - mechanism to protect enterprise when one series creates risk for others - KEEP for Sails with securities context
+     * Article 5.5 "Scaling and Capacity Planning" and 5.6 "Trigger-Based Enhancements" show operational maturity - direct port to Sails
+     * Article 6.8-6.9: CCO authority to halt transactions and file reports without approval - FOR SAILS: Parallel authority for SEC filings, investor suitability rejections, offering suspensions
+     * Article 11.6: Transfer pricing documentation for inter-series transactions - CRITICAL for Sails too (pricing between infrastructure series and offering series)
+     * Article 14.9: Conflict of Interest provisions with disclosure, approval, arm's-length standard, documentation, recusal, annual review - DIRECTLY APPLICABLE to Sails
+     * Article 14.10: Independent oversight mechanisms beyond required testing - KEEP for Sails (independent securities compliance reviews)
+     * Article 15.3: Company dissolution continuity plan for client series protection - FOR SAILS: Investor protection continuity plan if platform dissolves
+     * Article 16: COMPREHENSIVE series termination procedures with termination events, notice requirements, wind-down procedures, asset distribution priority, post-termination obligations
+       - FOR SAILS: Adapt from client MSB termination to issuer offering termination:
+         * Termination events transform: FinCEN revocation → Form D violations, compliance risk → investor protection violations
+         * Wind-down: Return customer funds → Return investor principal (per offering terms), FinCEN notification → SEC Form D amendment
+     * Article 18: Arbitration provisions with AI-assisted arbitration opt-in - FASCINATING and KEEP for Sails (AAA Commercial Arbitration with AI arbitrator option)
+     * Article 19: AI-enabled operations philosophy - DIRECTLY APPLICABLE to Sails:
+       - KYC/KYB → Investor accreditation verification
+       - AML monitoring → Securities transaction monitoring
+       - Human oversight for material decisions (SARs → Form D amendments, client termination → offering suspension)
+
+3. SERIES CLASSIFICATION SYSTEM (A2) BRILLIANCE
+   - 10 initial series across 5 prefixes: T (Technical/Treasury), B (Brand/IP), P (Platform Services), S (Securities), C (Client Operations)
+   - For Sails.to transformation:
+     * T-SERIES (4 series): Partially preserve, partially transform
+       - T-1 "Treasury and Payment" → T-1 "Custody Coordination" (coordinates with qualified custodians, manages investor distributions)
+       - T-2 "Crypto Custody" → T-2 "Token Infrastructure" (Solana SPL token operations, ISIN/Clearstream integration)
+       - T-3 "Operational Expenses" → KEEP UNCHANGED (still need expense management)
+       - T-4 "Technology Infrastructure" → KEEP UNCHANGED (still need tech platform)
+     * B-SERIES (2 series): KEEP UNCHANGED
+       - B-1 "Brand and Trademark" → Still needed for Sails.to brand
+       - B-2 "Platform IP" → Still needed for software/patents
+     * P-SERIES (3 series): Partially preserve, partially transform
+       - P-1 "Compliance and Risk" → P-1 "Securities Compliance" (SEC/Reg D/FINRA oversight instead of BSA/AML)
+       - P-2 "Intragroup Finance" → KEEP UNCHANGED (inter-series treasury)
+       - P-3 "IT Consulting" → POTENTIALLY ELIMINATE or transform to "Issuer Services" (advisory for issuers)
+     * S-SERIES (1 series): Transform completely
+       - S-1 "Capital Raising" → S-1 "Platform Operations" (Sails.to platform operations series)
+       - CCASH uses S-1 for its OWN capital raising; Sails uses S-1 for platform operations
+     * C-SERIES (999 potential): Transform fundamentally
+       - CCASH: C-### = client MSB operations (each client runs their own MSB using CCASH infrastructure)
+       - SAILS: C-### = issuer offerings (each offering is a separate series with its own bonds/investors)
+       - CRITICAL DIFFERENCE: CCASH clients are ongoing MSB businesses; Sails issuers are discrete bond offerings with maturity dates
+       - Series lifecycle: CCASH client series can exist indefinitely; Sails offering series terminate when bonds mature (unless refinanced)
+   - Section 3.4: "Each ClientSeries is an independent Montana MSB with its own EIN and FinCEN registration" - FOR SAILS: "Each Offering Series is an independent securities offering with its own Form D filing and CUSIP/ISIN assignment"
+   - Section 3.6: "Assets Owned by Client Series" - FOR SAILS: "Assets Owned by Offering Series" (investor proceeds, revenue streams pledged as collateral, reserve accounts)
+   - Section 3.7: "Services Received by Client Series" - FOR SAILS: "Services Received by Offering Series" (custody, platform access, investor relations, SEC filing coordination, broker coordination)
+   - Number allocation scheme (C-001 to C-099 founding clients, C-100 to C-499 standard, etc.) - FOR SAILS: Allocate by offering type:
+     * C-001 to C-099: Pilot/beta offerings
+     * C-100 to C-499: Standard bond offerings
+     * C-500 to C-799: High-frequency issuers (multiple offerings)
+     * C-800 to C-899: Strategic/anchor offerings
+     * C-900 to C-999: Testing/internal
+
+LEGAL DOCUMENT QUALITY ASSESSMENT:
+These are NOT placeholder documents or rough drafts. These are PRODUCTION-READY legal instruments with:
+- Proper Montana statute citations throughout
+- Complete officer and member identification with placeholders for specific names/addresses
+- Comprehensive governance provisions covering edge cases (succession, termination, dissolution, disputes)
+- Sophisticated inter-series coordination mechanisms
+- Professional version control with breaking change tracking
+- Field mapping integration ([ROLE:company.manager.display_name] notation for auto-population)
+- Schema marker integration ([TERM:], [DOC:], [OBL:] throughout)
+
+For Sails.to: We need Wyoming counsel to adapt these from Montana MCA to Wyoming W.S. citations, but the STRUCTURE is production-ready. The MSB→securities transformation is a content swap using the same architectural framework.
+
+CRITICAL TRANSFORMATION REQUIREMENTS SUMMARY:
+1. Jurisdiction: Montana MCA § 35-8-304 → Wyoming W.S. § 17-31-XXX (DAO LLC Act)
+2. Business Purpose: MSB money transmission → Securities issuance and custody
+3. Regulatory Framework: FinCEN/BSA/MTL → SEC/Reg D/FINRA
+4. Officer Roles: BSA/AML Officer → Securities Compliance Officer
+5. Series Purpose: Client MSB operations → Issuer bond offerings
+6. Lifecycle: Perpetual client relationships → Fixed-term offerings with maturity dates
+7. Compliance Obligations: SAR filing, transaction monitoring → Form D filing, investor accreditation
+8. Service Providers: Banking partners, Partner MSBs → Broker-dealers, custodians, transfer agents
+9. End-User Relationship: End-Customer (money transmission user) → Investor (securities holder)
+10. Terminology: Everywhere "money services business" appears, consider context and replace with "securities offering" or "custody services" or "broker coordination" as appropriate
+
+The CCASH legal framework is sophisticated, comprehensive, and production-grade. For Sails.to, we preserve the framework and transform the content. This is achievable, well-scoped, and executable with Wyoming legal counsel.
+
+
+==========================================
+BATCH 6 ANALYSIS (Files 24-29)
+==========================================
+
+Files read in this batch:
+- B1_Master_Operating_Agreement.md remainder: Articles 12-20 (lines 1001-2000, appears to be continuation but found empty)
+- A2_Exhibit_A_Series_List.md remainder: Section 4 (lines 701-1000, appears to end at  line 700 - no additional content)
+- A3_Exhibit_B_Series_Operating_Agreements.md: Full public series operating agreement provisions
+- B2_Officer_Appointment_Resolution.md: Officer appointment resolution document
+- B3_Officer_Rotation_Succession_Policy.md: Version 1.2, comprehensive succession planning policy
+- B10_Insurance_and_Capital_Policy.md: Version 1.1, insurance/capital/cash management policy
+- B4_Record_Keeping_Policy.md: Version 1.3, comprehensive record-keeping policy
+
+CRITICAL FINDINGS FOR SAILS.TO ADAPTATION (CONTINUED):
+
+4. SERIES OPERATING AGREEMENTS (A3) - PUBLIC FILING PROVISIONS
+   - Montana MCA § 35-8-202(1)(h) and § 35-8-304 require PUBLIC disclosure of series provisions
+   - Document A3 is the PUBLIC-FACING version showing: liability separation, rights/powers/duties, limitations on authority
+   - Section 2: Standard provisions applicable to ALL series (liability separation, manager-managed structure, binding authority, transfer restrictions, dispute resolution, AI-enabled operations)
+   - Sections 3-12: Individual series provisions for all 10 functional series (T-1 through S-1)
+   - Section 13: CLIENT SERIES TEMPLATE - framework for C-001 through C-999 client operations series
+   - For Sails.to Wyoming transformation:
+     * PRESERVE STRUCTURE: Public filing requirement likely similar in Wyoming (verify Wyoming DAO LLC Act requirements)
+     * Section 2.5 Arbitration: AAA Commercial Arbitration with AI-assisted arbitration option - BRILLIANT innovation, keep for Sails
+     * Section 2.6 AI-Enabled Operations: All series consent to AI for compliance/support/security - directly applicable to Sails
+     * Individual series sections (3-12): Transform each series purpose per Batch 5 analysis
+     * Section 13 Client Series Template: COMPREHENSIVE adaptation required:
+       - "Each ClientSeries is an independent Montana MSB with own EIN and FinCEN registration" →  "Each Offering Series is an independent securities offering with own Form D filing and CUSIP/ISIN"
+       - Section 13.3: Transform services received: "BSA/AML services" → "securities compliance services"; "banking/fiat payment" → "custody coordination"; "transaction monitoring" → "transfer agent coordination"
+       - Section 13.4: Liability separation provisions - PRESERVE EXACTLY for Sails (same legal principle)
+       - Section 13.5: Assets owned: Transform from "client brand/ABN/end-customer relationships" → "offering prospectus/investor relationships/pledged revenue streams"
+       - Section 13.6: Services received enumeration - comprehensive list showing platform model clarity
+       - Section 13.7: Client rights and controls - for Sails transform to "Issuer rights": control over offering terms, investor relations, use of proceeds
+       - Section 13.8: Manager authority over regulated operations - FOR SAILS: Manager retains authority over Form D filings, custody operations, investor suitability, securities law compliance
+       - Section 13.9: Limitations on authority - FOR SAILS: Issuer cannot make unregistered offers, cannot modify offering terms without amendment, cannot transfer securities outside transfer restrictions
+
+5. OFFICER APPOINTMENT RESOLUTION (B2) - GOVERNANCE FORMALISM
+   - Version 1.0, dated December 12, 2025 - formal manager resolution appointing all five officers
+   - Section 2: Officer appointments with placeholders for names/addresses
+   - Sections 3.2-3.6: Detailed officer responsibilities for each role (CEO, CTO, CMO, CFO, CCO)
+   - Section 3.6: CCO responsibilities - 12 subsections covering BSA/AML Officer duties in exhaustive detail
+   - Section 4: Authority to act + limits requiring Manager approval (contract thresholds, hiring thresholds, capital expenditures, cross-series actions, regulatory matters)
+   - Section 5: Compensation with placeholders, all paid through Series T-3 (Operational Expenses)
+   - Section 6: Fit and proper verification requirements linking to B9
+   - Section 7: References B3 Officer Rotation/Succession Policy
+   - Section 10: Officer acceptance signatures
+   - For Sails.to transformation:
+     * PRESERVE STRUCTURE: Resolution format, approval thresholds, compensation payment through operational series
+     * Section 3.6 CCO responsibilities: Complete rewrite from BSA focus to SEC focus:
+       - "BSA/AML program" → "SEC compliance program"
+       - "FinCEN MSB registration" → "Form D filings and amendments"
+       - "Sanctions screening" → "Investor accreditation verification"
+       - "Transaction monitoring" → "Transfer restriction monitoring"
+       - "SAR filing" → "Form D-A amendments for material changes"
+       - Keep: "halt/reject transactions" authority (becomes "suspend offerings/reject investors")
+       - Keep: "anti-corruption compliance" (applies to broker commissions, issuer relationships)
+       - Keep: "data protection compliance" (investor data protection under applicable law)
+       - Transform: "banking partners/correspondent institutions" → "broker-dealers/custodians"
+     * Section 4.2.5 "regulatory status" still relevant (SEC Form D status, broker registrations, custody compliance)
+     * Section 6: Fit and proper verification - for Sails add securities industry background checks (FINRA checks, SEC sanctions lists)
+
+6. OFFICER SUCCESSION POLICY (B3) - BUSINESS CONTINUITY SOPHISTICATION
+   - Version 1.2 with audit remediation showing iterative refinement
+   - Section 3: Terms and performance review - annual performance review required, performance improvement plans
+   - Section 3.5: NEW in v1.2 - Quarterly officer governance meetings, annual succession review meeting, emergency meeting procedures with notice/quorum requirements
+   - Section 4: Officer rotation procedures - voluntary development rotation with 30-day notice
+   - Section 5: Succession planning - primary/secondary successors, external candidate criteria, development plans
+   - Section 6: Emergency succession - within 24 hours interim appointment, 60 days permanent replacement
+   - Section 6.5: DEFAULT succession chain if no interim appointed (Manager assumes vacant roles)
+   - Section 6.5A: NEW in v1.2 - MULTIPLE SIMULTANEOUS VACANCIES provisions:
+     * 2+ officers vacant: Manager assumes/delegates, external interim authorized, dual roles allowed where no conflict
+     * 3+ officers vacant (catastrophic): Invoke BCP, emergency management committee, external management authorized, notify banking partners/regulators/members
+     * Deputy and backup designations required quarterly with documented access
+   - Section 6.6: BSA/AML Officer succession - 72 hours interim designation, FinCEN Form 107 clarification (only if officer is also control person)
+   - Section 7: Voluntary departure - 30-60 days notice, transition memo, property return, exit interview
+   - Section 8: Involuntary departure - removal for cause (8 grounds) or without cause
+   - Section 9: Regulatory notifications - FinCEN (180 days), state MTL (30 days), banking partners
+   - Section 10: Confidentiality and non-competition:
+     * Section 10.2: MONTANA LAW LIMITATION - non-competes void per MCA § 28-2-703/704 except business sale
+     * Company relies on: confidentiality (survives indefinitely for trade secrets), non-solicitation (24 months), IP assignment, fiduciary duties
+   - Section 10.3: Non-solicitation - 24 months on employees, clients, business relationships
+   - For Sails.to Wyoming transformation:
+     * PRESERVE COMPLETELY: Sections 3-9 (performance review, rotation, succession, emergency procedures, departure procedures, notifications)
+     * Section 3.5 Governance Meetings: Direct port - quarterly meetings essential for securities compliance oversight
+     * Section 6.5A Multiple Vacancy: CRITICAL for Sails given officer-dependent SEC compliance functions
+     * Section 6.6 parallel: FOR SAILS create "Securities Compliance Officer Succession Requirements":
+       - 72 hours interim designation of qualified securities compliance professional
+       - Form D amendment if CCO is named officer in any active offerings
+       - Broker-dealer notifications where CCO is designated contact
+       - Permanent CCO must meet FINRA/securities background standards
+     * Section 9 Regulatory Notifications: Transform targets - SEC (Form D amendments), state securities regulators (30-60 days typically), broker-dealers (per agreement), custodians (immediate)
+     * Section 10.2 Non-Competition: WYOMING LAW CHECK REQUIRED - verify Wyoming Statutes § 27-1-XXX on non-compete enforceability
+     * If Wyoming allows non-competes, consider for CCO role given sensitive securities compliance knowledge
+     * Non-solicitation provisions (10.3) - KEEP EXACTLY for Sails (24 months on issuers, investors, brokers)
+
+7. INSURANCE AND CAPITAL POLICY (B10) - FINANCIAL CONTROLS EXCELLENCE
+   - Version 1.1 with omnibus account clarifications
+   - Section 2: Mandatory insurance coverage (5 types):
+     * Crime/fidelity: Greater of $1M or 25% monthly client assets (reviewed quarterly)
+     * Cyber liability: $5M minimum
+     * E&O/professional liability: $2M minimum
+     * D&O liability: $2M minimum
+     * State surety bonds: Per MTL requirements
+   - Section 3: Capital and reserves - state MTL minimums, 3-month operating reserve, permissible investments
+   - Section 4: CLIENT FUND TRUST AND SEGREGATION - sophisticated omnibus account framework:
+     * Section 4.1: Client funds held in TRUST, not available for Company creditors
+     * Section 4.2.1: Omnibus accounts permitted with FBO/trust designation + daily-reconciled sub-ledger tracking individual beneficial ownership
+     * Section 4.2.2: No cross-series substantive commingling even in omnibus accounts
+     * Section 4.3: Digital assets segregated by wallet/sub-account
+     * Section 4.4: Bankruptcy priority for client funds over general creditors
+     * Section 4.4.1: Reconciliation records sufficient for examination/insolvency proof
+     * Sections 4.5-4.9: Liquidity reserves, settlement timing, banking partner standards, investment restrictions (capital preservation only), interest allocation
+   - Section 5: INTERNAL FINANCIAL CONTROLS - dual control, segregation of duties, reconciliation:
+     * Section 5.2: Dual control for transfers >$10K, account changes, capital distributions
+     * Section 5.3: Segregation - no single person initiate+approve, no sole custody of keys, role-based access, code deployment dual approval
+     * Section 5.4: Daily reconciliation, immediate escalation for discrepancies >$1K or 0.1%
+     * Section 5.5: Emergency override procedures with documentation/notification/ratification
+   - Section 6: Loss allocation - insurance priority, discretionary Company contribution, liability limited to insurance + contribution + third-party recovery, no liability for sophisticated attacks unless gross negligence/fraud
+   - For Sails.to Wyoming transformation:
+     * Section 2 Insurance: ADJUST coverage types and amounts:
+       - Keep: Crime/fidelity (but based on investor assets not "client assets")
+       - Keep: Cyber liability ($5M likely adequate for platform risk)
+       - Keep: E&O for platform services to issuers
+       - Keep: D&O for officers/manager
+       - Transform: State surety bonds (MTL requirements) → Broker-dealer/custodian insurance requirements, SIPC coverage coordination
+       - ADD: Potentially securities compliance errors coverage (Form D filing errors, investor suitability errors)
+     * Section 3 Capital: Transform from MTL capital minimums → platform operating capital + contingency for offering wind-downs
+     * Section 4 Client Fund Trust: DIRECTLY APPLICABLE to investor proceeds:
+       - Section 4.1: Investor proceeds held in TRUST for benefit of investors
+       - Section 4.2.1: Omnibus custody accounts permitted with daily sub-ledger tracking individual investor balances
+       - Section 4.2.2: No commingling between offerings (preserve series separation)
+       - Section 4.4: Bankruptcy priority for investor proceeds
+       - Sections 4.5-4.9: Liquidity for distributions, settlement timing, qualified custodian standards per SEC custody rules, investment restrictions per offering terms, interest/yield allocation per offering docs
+     * Section 5 Internal Financial Controls: PRESERVE COMPLETELY - dual control, segregation, reconciliation are MANDATORY for securities custody
+     * Section 6 Loss Allocation: FOR SAILS adapt to securities context - insurance priority, discretionary contribution, limited liability except gross negligence/fraud
+
+8. RECORD KEEPING POLICY (B4) - COMPLIANCE INFRASTRUCTURE BACKBONE
+   - Version 1.3 with profit/loss allocation records, privacy response timelines, data collection disclosures
+   - Section 2: Legal requirements - MCA § 35-8-304 separateness, BSA/AML record requirements (31 CFR), general LLC/IRS/employment
+   - Section 3: Records by series - comprehensive enumeration for ALL 10 functional series + client series:
+     * Section 3.1: ALL series must maintain - asset register, liability register, bank statements, contracts, income/expense, tax records, profit/loss allocations/K-1 support
+     * Sections 3.2-3.11: Series-specific records (T-1 banking, T-2 custody, T-3 expenses, T-4 tech, B-1 brand, B-2 IP, P-1 compliance, P-2 treasury, P-3 consulting, S-1 securities)
+     * Section 3.12: Client series records - CSA, KYC file, segregated accounts, transactions, fees, correspondence
+   - Section 4: Format and storage - paper/electronic/cloud/blockchain, electronic indexing/backup/security, access controls
+   - Section 5: RETENTION PERIODS:
+     * Permanent: Formation docs, series designations, member records
+     * 7 years: Financial statements, tax returns, contracts, employment, regulatory filings
+     * 5 years: BSA/AML (31 CFR §1010.410(e)), KYC after relationship ends, transactions
+     * 3-5 years: Email (3 general, 5 compliance)
+   - Section 6: Record destruction - authorization, secure methods, destruction log
+   - Section 7: SERIES SEPARATION - CRITICAL FOR LIABILITY SHIELD:
+     * Section 7.2.1: NEW in v1.1 - SEPARATE BANK ACCOUNTS FOR EACH SERIES MANDATORY per MCA § 35-8-304, pooling prohibited except <5 business days temporary with allocation records
+     * Section 7.2: Sub-ledgers, series identifiers, separate folders, clear ownership
+     * Section 7.3: Custodial arrangements documented, beneficial ownership tracked, no commingling, regular statements
+     * Section 7.4: Monthly reconciliation of all series
+     * Section 7.5: Series identification in external dealings - full series name on contracts, signature blocks with series designation, counterparty acknowledgment of limited liability structure
+     * Section 7.6: Annual separateness audit by CFO - verify accounts, contracts, ledgers, no commingling, custodial docs
+     * Section 7.7: Consequences of failures - material breach, disciplinary action including removal
+   - Section 8: Access and inspection - members, regulators, audits, legal proceedings, banking partners
+   - Section 9: Cross-border data and data protection:
+     * Section 9.2: Cross-border transfers for compliance/banking/law enforcement with appropriate legal mechanisms
+     * Section 9.3.2: NEW in v1.3 - Data subject response timeline TABLE by jurisdiction:
+       - EEA/UK/Switzerland: 30 days + 60 day extension
+       - California: 45 days + 45 day extension
+       - Virginia/Colorado/Connecticut/Utah: 45 days + 45 day extension
+       - Other US states: 30 days
+       - All other: 30 days or as required by applicable law
+     * Section 9.5: NEW in v1.3 - DATA COLLECTION DISCLOSURES:
+       - Categories collected: Identifiers, financial, KYC/KYB, technical, communications
+       - Purposes: CIP/KYC, transaction monitoring, sanctions screening, SAR/CTR, service delivery
+       - Recipients: Banking partners, regulators (FinCEN/state/OFAC), law enforcement, service providers, partner MSBs
+       - Retention: See Section 5.1
+       - Rights: See Section 9.3 and DOC:B8
+   - For Sails.to Wyoming transformation:
+     * Section 2 Legal Requirements: Transform BSA/AML → SEC custody rules (17 CFR § 275.206(4)-2), securities record-keeping (17 CFR § 240.17a-3/17a-4 if applicable), state securities regulations
+     * Section 3 Records by Series: PRESERVE structure, transform content per series transformation (Batch 5):
+       - T-1: Transform from "fiat payment" to "custody coordination" records (custodian agreements, investor distribution logs)
+       - T-2: Transform from "crypto custody" to "tokenized securities custody" (token issuance records, ISIN/CUSIP assignments, transfer agent coordination)
+       - P-1: Transform from "BSA/AML" to "securities compliance" records (Form D filings, investor accreditation files, transfer restriction logs, offering amendments)
+       - P-3: Transform from "IT consulting" to "Issuer services" (advisory engagements, offering support)
+       - S-1: Transform from "capital raising for Company" to "platform operations"
+       - Client Series → Offering Series: Transform records from "client MSB operations" to "offering records" (Form D, investor subscriptions, distributions, financial reports to investors)
+     * Section 5 Retention: ADJUST for securities:
+       - Keep 7 years financial/tax
+       - Transform "5 years BSA/AML" → "6 years securities records" per SEC Rule 17a-4 (if applicable as broker-dealer or IA)
+       - Check Wyoming DAO LLC Act for formation/series designation retention (likely permanent)
+       - Add: Offering documents permanent, investor files 6 years after maturity/redemption
+     * Section 7 Series Separation: PRESERVE COMPLETELY - Wyoming DAO LLC likely has similar liability separation provisions requiring separate accounts/ledgers/contracts
+     * Section 9 Data Protection: FOR SAILS update to investor context:
+       - Section 9.5 transform: Categories (identifiers, financial, accreditation, technical, communications); Purposes (investor onboarding, accreditation verification, custody, distributions, tax reporting); Recipients (broker-dealers, custodians, SEC/state securities regulators, issuers, law enforcement); Retention (see adjusted Section 5)
+
+OPERATIONAL EXCELLENCE OBSERVATIONS:
+The governance documents (B2, B3, B10, B4) demonstrate PRODUCTION-GRADE legal operations:
+- Version control with breaking change tracking (B3 v1.2, B10 v1.1, B4 v1.3)
+- Audit remediation responsiveness (multiple versions address audit findings)
+- Cross-reference integrity ([DOC:XX] markers throughout linking 28 documents)
+- Obligation tracking ([OBL:XXX-XXX-001] markers linking to obligations.md ledger)
+- Flow integration ([FLOW:Process_Name] markers linking to 75 process flows)
+- Regulatory citation precision (31 CFR § specific sections, MCA § specific provisions)
+- Edge case coverage (multiple simultaneous officer vacancies in B3 §6.5A, omnibus account mechanics in B10 §4.2.1)
+- Remediation documentation (version history tables show exact changes and rationale)
+
+For Sails.to: This governance infrastructure is PRESERVATION-WORTHY. The document interconnections, version control discipline, and edge case thinking apply equally to securities platform operations. Transform the CONTENT (MSB→securities), preserve the ARCHITECTURE.
+
+CRITICAL PATH FOR SAILS.TO LEGAL ADAPTATION:
+1. Engage Wyoming counsel to:
+   - Confirm DAO LLC Act provisions on series liability separation and recordkeeping (verify parallel to MCA § 35-8-304)
+   - Draft Wyoming Articles of Organization using A1 as template with purpose/officer role transformations per Batch 5
+   - Verify non-compete enforceability under Wyoming law (for B3 §10.2 adaptation)
+   - Confirm securities custody and recordkeeping requirements for platform model
+2. Engage securities counsel to:
+   - Map Form D filing requirements to document flow (replace FinCEN flows)
+   - Define securities compliance officer qualifications and authorities (for B2 §3.6, B3 §6.6 adaptation)
+   - Review custody requirements for tokenized bonds (SEC custody rules, qualified custodian standards)
+   - Validate insurance requirements for securities platform (B10 Section 2 adjustment)
+   - Map investor accreditation verification to KYC/KYB framework (preserve structure, change content)
+3. Adapt schema system:
+   - Update defined_terms.md: Add securities terms (Form D, accredited investor, offering series, CUSIP, ISIN, qualified custodian)
+   - Update obligations.md: Replace FinCEN/BSA obligations with SEC/state securities obligations
+   - Update flows/: Replace BSA flows (sar_filing, fincen_registration) with securities flows (form_d_filing, investor_onboarding, accreditation_verification, distribution_processing)
+   - Update templates.md: Replace MSB-* validation rules with SEC-* rules
+4. Document transformation sequence:
+   - Phase 1: Formation documents (A1, A2, A3) - Wyoming jurisdiction, securities purpose, series structure
+   - Phase 2: Governance documents (B1, B2, B3) - preserve structure, transform officer roles
+   - Phase 3: Compliance documents (B4-B9, B12) - comprehensive MSB→securities content transformation
+   - Phase 4: Client-facing documents (F1, F2, B11) - transform to issuer/investor context
+   - Phase 5: Operational schedules (N1-N5, C1-C3) - transform service provider context
+
+
+==========================================
+BATCH 7 ANALYSIS (Files 30-35)
+==========================================
+
+Files read in this batch:
+- B5_BSA_AML_Program.md: Version 1.2, comprehensive BSA/AML compliance program
+- B6_IT_Security_Incident_BCP_DRP.md: Version 1.4, IT security/incident/continuity policy
+- B7_Acceptable_Client_Use_Policy.md: Version 1.4, client use and geographic restrictions
+- B8_Privacy_Data_Protection_Policy.md: Version 1.1, two-tier privacy model
+- B9_Fit_and_Proper_Screening_Policy.md: Version 1.1, personnel screening standards
+- B12_Partner_Due_Diligence_Standard.md: Version 1.1, partner MSB due diligence
+
+CRITICAL MSB-SPECIFIC COMPLIANCE INFRASTRUCTURE (FOR WHOLESALE TRANSFORMATION TO SECURITIES):
+
+9. BSA/AML PROGRAM (B5) - ENTIRE DOCUMENT FOR REPLACEMENT
+   - This is THE definitive BSA/AML compliance program - 1000 lines of MSB-specific regulatory compliance
+   - Version 1.2 shows iterative refinement (added SAR/CTR thresholds, AI governance, BSA succession)
+   - Key MSB-specific sections requiring COMPLETE REPLACEMENT for Sails:
+     * Section 3: CIP (Customer Identification Program) - 31 CFR compliance → Transform to Investor Onboarding/Accreditation Verification
+     * Section 4: CDD/EDD (Customer Due Diligence) → Transform to Investor Suitability Assessment
+     * Section 5: Sanctions Screening (OFAC) → Keep OFAC for Sails (still required), add FINRA/SEC sanctions lists
+     * Section 6: Transaction Monitoring + SAR/CTR filing → Transform to Transfer Restriction Monitoring + Form D amendments for material events
+     * Section 7: Training (BSA/AML/FINTRAC/NZ) → Transform to Securities Compliance Training (Reg D, transfer restrictions, custody rules)
+     * Section 8: Travel Rule and VASP → ELIMINATE entirely (not applicable to securities offerings)
+     * Section 9: AML/CTF Risk Assessment → Transform to Securities Compliance Risk Assessment (offering risk, investor concentration, custody risk)
+     * Section 10: Independent Testing (annual BSA audit) → Transform to Securities Compliance Audit (Form D accuracy, transfer restrictions, custody controls)
+     * Section 11: Reporting Crosswalk (US SAR/CTR, Canada FINTRAC, NZ) → ELIMINATE/REPLACE with SEC Form D filing, Form D-A amendments, state securities filings
+     * Section 14: Information Sharing with Business Partners (banking partners, correspondents) → Transform to broker-dealers, custodians, transfer agents
+     * Section 15: AI-ENABLED COMPLIANCE - BRILLIANT section, PRESERVE architecture:
+       - Model validation (annual), bias testing (annual), failsafe procedures, decision accountability, explainability, regulatory engagement
+       - Transform application from AML context to securities context: investor accreditation verification AI, transfer restriction monitoring AI, offering analytics AI
+   - FOR SAILS TRANSFORMATION STRATEGY:
+     * Section 1 Purpose: "BSA/AML framework for MSB activities" → "Securities compliance framework for Reg D offerings and custody operations"
+     * Section 2 Governance: CCO as BSA/AML Officer → CCO as Securities Compliance Officer
+     * Section 2.5 BSA Succession: FinCEN Form 107 → Form D amendments if CCO named in offerings
+     * Sections 3-14: Wholesale content replacement from MSB→securities while preserving section structure/numbering
+     * Section 15 AI: KEEP EXACTLY - change application domain only (AML→securities)
+     * Add new sections: Reg D exemption compliance, transfer restrictions enforcement, qualified custodian oversight, broker supervision
+
+10. IT SECURITY POLICY (B6) - MOSTLY PRESERVE, MINOR SECURITIES ADAPTATIONS
+   - Version 1.4 with comprehensive security/incident/continuity framework
+   - Key sections DIRECTLY APPLICABLE to Sails:
+     * Sections 1-5: Access control, change management, logging, key management → KEEP for securities custody
+     * Section 5: Key Management for T-2 Wallets → Transform to Tokenized Securities Custody Key Management
+     * Section 6: Incident Response → KEEP with securities context (custody incidents, investor data breaches)
+     * Section 6.8: Personal Data Breach Notification → KEEP exactly (applies to investor data)
+     * Section 7: BCP/DRP → KEEP, add securities-specific continuity (offering suspensions, investor communications)
+     * Section 8: Vendor Security + PCI DSS (payment cards) → Transform PCI to custody vendor requirements, SIPC coordination
+     * Section 9: Compliance Enforcement Controls → KEEP structure, transform from MSB geographic restrictions to securities transfer restrictions
+     * Section 10: AI Systems Security - COMPREHENSIVE AI governance → KEEP exactly for Sails AI systems
+   - FOR SAILS: Minimal changes - mostly terminology swaps (client→issuer, MSB→offering, BSA→SEC compliance)
+
+11. ACCEPTABLE CLIENT USE POLICY (B7) - EXTENSIVE TRANSFORMATION REQUIRED
+   - Version 1.4 defining acceptable clients/uses to mitigate MSB regulatory risk
+   - Key MSB-specific sections requiring transformation:
+     * Section 2: Prohibited Clients/Uses → Transform from MSB-specific (darknet, unlicensed MSBs, cannabis, downstream exchange/custody) to securities-specific:
+       - Eliminate: "unlicensed MSBs", "downstream crypto exchange", "darknet/mixers" (not relevant to securities)
+       - Add: "Unregistered broker-dealers", "penny stock promoters", "pump-and-dump schemes", "fraudulent offerings", "unaccredited investors for Reg D 506(b)"
+     * Section 3: EDD triggers → Transform from MSB (PEPs, cross-border, high-volume crypto, gambling) to securities (large investors, foreign investors, broker-dealers, affiliated parties)
+     * Section 6: Transparency/Information Sharing → Transform from "banking partners/correspondents" to "broker-dealers/custodians/transfer agents"
+     * Section 7: Data Protection → KEEP structure, transform to investor data context
+     * Section 9: GEOGRAPHIC/CROSS-BORDER - EXTENSIVE MSB-specific content:
+       - Section 9.7: Montana MSB operating scope → Transform to "Wyoming DAO LLC" operating scope (likely no parallel geographic restrictions for securities offerings)
+       - Section 9.8: Cryptocurrency-exempt states → ELIMINATE (not relevant to securities)
+       - Section 9.9: Partner MSB interstate arrangements → ELIMINATE (no equivalent for securities platform)
+       - Section 9.10: Prohibited geographic activities (OFAC, unlicensed states) → Transform to Reg D offering restrictions (no unaccredited investors for 506(b), no unregistered offers)
+       - Section 9.11: Geographic verification (MSB license coverage) → Transform to investor accreditation verification, Reg D exemption compliance
+     * Section 10: Compliance Enforcement → KEEP structure, transform from MSB holds to offering suspensions/investor rejections
+   - FOR SAILS: Heavy transformation of Section 2 (prohibited uses), Section 3 (EDD), Section 6 (business partners), Section 9 (entire geography/MSB licensing framework eliminated, replaced with Reg D compliance framework)
+
+12. PRIVACY POLICY (B8) - PRESERVE ARCHITECTURE, TRANSFORM DATA CATEGORIES
+   - Version 1.1 with TWO-TIER MODEL (genius design):
+     * Sections 1-9: Baseline privacy protections for all jurisdictions
+     * Section 10+: International Data Protection Addendum (EEA/UK/Switzerland enhanced requirements)
+   - Two-tier model DIRECTLY APPLICABLE to Sails (U.S. baseline + international for foreign investors)
+   - Key sections requiring transformation:
+     * Section 2: Controller/Processor/Joint-Controller roles → KEEP structure, update context:
+       - Controller: Company compliance data, employee data → Also issuer due diligence data
+       - Processor: End-customer transaction data → Investor subscription/distribution data
+       - Joint-Controller: AML/KYC data → Investor accreditation/suitability data
+     * Section 3: Lawful Basis → Transform from "BSA/AML legal obligation" to "Securities law legal obligation" (Reg D recordkeeping, custody requirements)
+     * Section 4: Data Subject Rights → KEEP exactly
+     * Section 5-7: Security, Retention, Breach → KEEP, adjust retention from "5 years BSA" to "6 years securities" per SEC Rule 17a-4
+     * Section 8: Third-Party Processors → Transform from "banking partners" to "broker-dealers/custodians/transfer agents", add DPA requirements for vendor processors
+     * Section 10: AI and Automated Decision-Making → KEEP exactly, transform application from AML to investor accreditation/suitability
+     * PART II (International Addendum, Sections 11-14) → KEEP EXACTLY, directly applicable to foreign investors
+   - FOR SAILS: Minimal structural changes, content transformation from MSB data categories (KYC/transactions/AML) to securities data categories (accreditation/subscriptions/transfers)
+
+13. FIT AND PROPER SCREENING (B9) - PRESERVE WITH CCO QUALIFICATION TRANSFORMATION
+   - Version 1.1 establishing personnel screening standards
+   - Section 2.5: CCO/BSA Officer Enhanced Standards → TRANSFORM to Securities CCO standards:
+     * Current: CAMS certification, 3 years BSA/AML experience, FinCEN/OFAC/travel rule knowledge, MSB experience preferred
+     * For Sails: Securities compliance certification (Series 24/Series 99), 3 years securities compliance experience, SEC/FINRA/Reg D knowledge, broker-dealer or RIA compliance experience preferred
+     * Keep: Continuing education (20 hours annually), independence requirements, capacity assessment
+   - Sections 1, 2.1-2.4, 3-8: PRESERVE exactly - screening, re-screening, declarations, training, records, review all apply to securities context
+   - FOR SAILS: Transform Section 2.5 CCO qualifications from BSA→securities, keep everything else
+
+14. PARTNER DUE DILIGENCE (B12) - ELIMINATE OR TRANSFORM TO BROKER/CUSTODIAN DILIGENCE
+   - Version 1.1 establishing Partner MSB due diligence process
+   - Designed for "Partner MSB" relationships where CCASH routes interstate fiat transactions through licensed partners in other states
+   - FOR SAILS: This specific partner model likely DOESN'T APPLY - Sails doesn't route through partner securities platforms
+   - POSSIBLE TRANSFORMATION: Create "B12_Broker_Custodian_Due_Diligence_Standard.md":
+     * Section 2: Initial DD → Verify broker-dealer FINRA registration, custodian qualifications per SEC custody rules, insurance (SIPC), no enforcement actions
+     * Section 2.2: "Bankability" becomes "Custody Capability" - confirm custodian can hold tokenized securities, process distributions, report to SEC/IRS
+     * Section 3: Agreement terms → Transform from Partner MSB obligations to Broker Agreement / Custodian Agreement terms (regulatory compliance, reporting, termination rights)
+     * Section 4: Ongoing monitoring → Quarterly FINRA checks, annual custody audits, triggered review for enforcement/complaints
+   - FOR SAILS: Either eliminate entirely OR transform to broker/custodian oversight framework (depends on Sails platform model - if using third-party brokers/custodians vs integrated)
+
+OPERATIONAL MATURITY OBSERVATIONS (BATCH 7):
+These compliance documents (B5-B9, B12) demonstrate INSTITUTIONAL-GRADE regulatory operations:
+- Iterative version control addressing audit findings (B5 v1.2 added SAR thresholds, AI governance; B6 v1.4 refined breach notification; B7 v1.4 removed unverified statute citations)
+- Comprehensive cross-references integrating 28 documents into cohesive compliance framework
+- Edge case coverage (B5 §2.5 BSA succession with 72hr interim, FinCEN Form 107 clarification; B6 §6.1 IT designee succession with runbook access)
+- AI governance sophistication (B5 §15 with model validation, bias testing, failsafe, explainability, accountability; B6 §10 with incident classification, change control, human-in-loop)
+- International compliance (B5 §11 FINTRAC/NZ reporting; B7 §9 multi-jurisdiction framework; B8 Part II EEA/UK/Switzerland addendum)
+- Privacy architecture brilliance (B8 two-tier model - baseline for all + addendum for enhanced jurisdictions - elegant solution to multi-jurisdiction privacy complexity)
+
+FOR SAILS.TO TRANSFORMATION CRITICAL PATH (BATCH 7 INSIGHTS):
+1. B5 (BSA/AML) requires WHOLESALE CONTENT REPLACEMENT while preserving structure:
+   - Preserve: Section numbering, governance model (§2), AI framework (§15), training cadence (§7), independent testing (§10), information sharing structure (§14)
+   - Replace entirely: CIP (§3), CDD/EDD (§4), SAR/CTR (§6), Travel Rule (§8), Risk Assessment (§9), Reporting Crosswalk (§11)
+   - Add new: Reg D exemption compliance, transfer restrictions, qualified custodian oversight, Form D filings, investor accreditation
+2. B6 (IT Security) is 90% portable - mostly terminology changes, custody key management adaptation, incident categories adjustment
+3. B7 (Acceptable Use) requires extensive Section 9 transformation - entire MSB geographic/licensing framework eliminated, replaced with Reg D compliance framework
+4. B8 (Privacy) is architecturally perfect for Sails - two-tier model applies to U.S. + international investors, minimal content transformation needed
+5. B9 (Fit & Proper) needs only Section 2.5 transformation (BSA→securities qualifications for CCO)
+6. B12 (Partner DD) is MSB-specific, either eliminate or transform to broker/custodian oversight
+
+STATUS: 35 files read, 65 remaining to reach 100. Compliance documents complete. Next: Client-facing documents (F1, F2, B11) and operational schedules (N1-N5, C1-C3).
+
