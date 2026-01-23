@@ -365,7 +365,7 @@
         <div class="content-container">
             <h2>2. Your Legal Structure</h2>
 
-            <p>When you raise capital through Sails.to, you get a bundle of Series specific to your offering within a <strong>Wyoming DAO LLC</strong> (Decentralized Autonomous Organization). Wyoming and Marshall Islands DAO frameworks legally recognize corporate actions executed through smart contracts as valid. What would traditionally require a complex multi-section SPV structure and mountains of paperwork to execute becomes a smart-contract-governed entity. The Platform controls both the SPV administration and the issuance itself, both as on-chain smart contracts linked to the legal DAO entity.</p>
+            <p>When you raise capital through Sails.to, you get a bundle of Series specific to your offering within a <strong>Wyoming DAO LLC</strong> (Decentralized Autonomous Organization). Wyoming's DAO framework legally recognizes corporate actions executed through smart contracts as valid. What would traditionally require a complex multi-section SPV structure and mountains of paperwork to execute becomes a smart-contract-governed entity. The Platform controls both the SPV administration and the issuance itself, both as on-chain smart contracts linked to the legal DAO entity.</p>
             
             <p>The default option is:</p>
             
@@ -376,12 +376,7 @@
 
             <h4>Optional Upgrades</h4>
             <ul>
-                <li><strong>Own Standalone Entity (at extra cost)</strong>
-                    <ul>
-                        <li>Marshall Islands DAO LLC: ~30 days</li>
-                        <li>Wyoming DAO LLC: ~1 day</li>
-                    </ul>
-                </li>
+                <li><strong>Own Standalone Wyoming DAO LLC (at extra cost)</strong>: ~1 day setup</li>
                 <li><strong>ISIN + Clearstream</strong> (~$4k, does not require own entity): Traditional settlement rails</li>
                 <li><strong>ISIN + Clearstream + ViennaMTF</strong> (~$3k additional, does not require own entity): Public listing on exchange</li>
             </ul>
@@ -700,17 +695,18 @@
                 <h4>⚠️ What Happens If Soft Cap Is NOT Reached</h4>
                 <p>If your offering fails to reach soft cap, the security becomes a <strong>zero-coupon bond</strong> that immediately redeems:</p>
                 <ul>
-                    <li>Each investor receives back their <strong>invested capital</strong> (the actual amount they paid)</li>
+                    <li>Each investor receives back their <strong>full invested capital</strong> (the actual amount they paid)</li>
                     <li>Discounts are respected: if they paid a discounted price, they get back what they paid, not face value</li>
-                    <li><strong>Fees still apply</strong> (unlike what you might expect):
+                    <li><strong>No fees are charged during soft cap phase:</strong>
                         <ul>
-                            <li>Clearstream fees (if Channel 3 was used)</li>
-                            <li>0.5% brokerage fee on initial security purchase</li>
+                            <li>Brokerage fee (0.5%) is <strong>waived</strong> during soft cap phase</li>
+                            <li>Distribution fees (1%/6%) only apply when soft cap is reached</li>
+                            <li>Only Clearstream fees apply (if Channel 3 was used) — charged at cost</li>
                         </ul>
                     </li>
-                    <li>This is structured as a <strong>principal distribution</strong>, not a "refund"</li>
+                    <li>This enables a <strong>smooth full refund</strong> if soft cap fails</li>
                 </ul>
-                <p>The security legally existed, was purchased, and is now being redeemed at par value of investment. This is not a cancellation. It is an early maturity.</p>
+                <p>The security legally existed, was purchased, and is now being redeemed at par value of investment. This is not a cancellation — it is an early maturity with full principal return.</p>
             </div>
 
             <h3>The Issuance Process Step-by-Step</h3>
@@ -877,7 +873,7 @@
                 end
                 BrokerA->>Seller: Sale complete
                 BrokerB->>Buyer: Tokens delivered
-                Note over Seller,Buyer: 0.5% brokerage fee: ⅔ to brokers (proportionate), ⅓ to Standards Layer
+                Note over Seller,Buyer: 0.5% brokerage fee: ⅓ platform, ⅓ buy-side broker, ⅓ sell-side broker
             </div>
 
             <div class="concept-box">
@@ -1025,14 +1021,14 @@
                     <tr>
                         <td><strong>Brokerage Fee</strong></td>
                         <td><span class="fee-highlight">0.5%</span></td>
-                        <td>All primary purchases and secondary trades</td>
+                        <td>Secondary trades and post-soft-cap primary purchases<br><em style="color:#38a169; font-size:0.9em;">⚡ Waived during soft cap phase</em></td>
                         <td>Buyer</td>
-                        <td>⅔ Brokers (proportionate) + ⅓ Standards Layer</td>
+                        <td>⅓ Platform + ⅓ Buy-side Broker + ⅓ Sell-side Broker</td>
                     </tr>
                     <tr>
                         <td><strong>Distribution Fee</strong></td>
                         <td><span class="fee-highlight">6% OR 1%</span></td>
-                        <td>On successful close: depends on investor sourcing</td>
+                        <td>Deducted from soft cap amount when reached<br><em style="color:#38a169; font-size:0.9em;">⚡ Not charged until soft cap is reached</em></td>
                         <td>Issuer (from proceeds)</td>
                         <td>See details below</td>
                     </tr>
@@ -1051,7 +1047,7 @@
                         <td>Platform Administration + Standards Layer</td>
                     </tr>
                     <tr>
-                        <td colspan="5" style="background:#f0f4ff; font-style:italic; text-align:center;"><strong>Total per investor:</strong> 1.5% for referral investors (0.5% brokerage + 1% distribution) <strong>OR</strong> 6.5% for general distribution investors (0.5% brokerage + 6% distribution). On successful close.</td>
+                        <td colspan="5" style="background:#e6ffed; font-style:italic; text-align:center;"><strong>During soft cap:</strong> 0% fees (brokerage waived, distribution deferred). <strong>After soft cap reached:</strong> 1.5% for referral investors (0.5% + 1%) <strong>OR</strong> 6.5% for general distribution (0.5% + 6%).</td>
                     </tr>
                     <tr>
                         <td><strong>Trust & Administration Fee</strong></td>
@@ -1085,13 +1081,14 @@
             </table>
 
             <div class="concept-box">
-                <h4>Fees That Apply Even If Soft Cap Fails</h4>
-                <p>When an offering fails to reach soft cap and redeems as a zero-coupon bond:</p>
+                <h4>Soft Cap Phase: Fee-Free Period</h4>
+                <p>During the soft cap phase, <strong>no brokerage or distribution fees are charged</strong>. This enables smooth, full refunds if the offering fails:</p>
                 <ul>
-                    <li><strong>0.5% brokerage fee</strong>: already deducted at time of purchase</li>
-                    <li><strong>Clearstream fees</strong>: if Channel 3 was used</li>
+                    <li><strong>0.5% brokerage fee</strong>: waived during soft cap phase</li>
+                    <li><strong>Distribution fees (1%/6%)</strong>: only deducted from soft cap amount when reached</li>
+                    <li><strong>Clearstream fees</strong>: if Channel 3 was used (charged at cost)</li>
                 </ul>
-                <p>The 6% distribution fee for general distribution investors is <strong>NOT</strong> charged on failed offerings. That only applies when the offering successfully closes.</p>
+                <p>After soft cap is reached: a partner broker handles additional distribution at normal fee rates. This two-phase approach ensures investors risk nothing if soft cap fails.</p>
             </div>
         </div>
     </section>
@@ -1119,7 +1116,7 @@
                     </tr>
                     <tr>
                         <td><strong>Identity & KYC</strong></td>
-                        <td>Identity Registry, KYC Credential</td>
+                        <td>Identity Registry, KYC Credential NFT</td>
                         <td>Wallet linking, investor verification, eligibility checks</td>
                     </tr>
                     <tr>
@@ -1139,6 +1136,18 @@
                     </tr>
                 </tbody>
             </table>
+
+            <div class="concept-box">
+                <h4>NFT Credential System (Key Differentiator)</h4>
+                <p>Investor eligibility is verified via <strong>on-chain KYC Credential NFTs</strong>. These are non-transferable tokens that prove an investor has passed verification. The key innovation:</p>
+                <ul>
+                    <li><strong>Multiple issuers accepted:</strong> KYC credentials can be issued by an independent authority, by the issuer directly, or by any licensed broker in the network</li>
+                    <li><strong>Portable verification:</strong> Once verified with one broker, the credential works across the entire platform - no repeat KYC for each new investment</li>
+                    <li><strong>On-chain enforcement:</strong> Smart contracts automatically check credentials before any transfer - no unauthorized trades possible</li>
+                    <li><strong>Privacy-preserving:</strong> The NFT proves eligibility without exposing underlying personal data on-chain</li>
+                </ul>
+                <p>This decentralized credential model means investors aren't locked into a single provider - verification from any trusted authority in the network grants platform-wide access.</p>
+            </div>
         </div>
     </section>
 
