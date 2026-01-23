@@ -1,0 +1,23 @@
+# § 1022.200 - 1022.210)
+Source: law.cornell.edu (cleaned)
+Original file: 31_cfr_part_1022_msb_rules.txt
+---
+
+Subtitle B—Regulations Relating to Money and Finance > CHAPTER X—FINANCIAL CRIMES ENFORCEMENT NETWORK, DEPARTMENT OF THE TREASURY > PART 1022—RULES FOR MONEY SERVICES BUSINESSES" />
+
+Title 31—Money and Finance: Treasury
+
+Subtitle B—Regulations Relating to Money and Finance
+
+CHAPTER X—FINANCIAL CRIMES ENFORCEMENT NETWORK, DEPARTMENT OF THE TREASURY
+
+PART 1022—RULES FOR MONEY SERVICES BUSINESSES
+
+31 CFR Part 1022 - RULES FOR MONEY SERVICES BUSINESSES
+Subpart A—Definitions (§ 1022.100)
+Subpart C—Reports Required To Be Made By Money Services Businesses (§§ 1022.300 - 1022.380)
+Subpart D—Records Required To Be Maintained By Money Services Businesses (§§ 1022.400 - 1022.420)
+Subpart E—Special Information Sharing Procedures To Deter Money Laundering and Terrorist Activity (§§ 1022.500 - 1022.540)
+Subpart F—Special Standards of Diligence; Prohibitions; and Special Measures for Money Services Businesses (§§ 1022.600 - 1022.610-1022.670)
+
+"background": "#f1d600"

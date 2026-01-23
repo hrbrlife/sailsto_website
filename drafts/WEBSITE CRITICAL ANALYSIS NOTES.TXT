@@ -158,44 +158,53 @@ FIX APPLIED:
 AFFECTED FILES: whatsails.html ✅ UPDATED
 
 ================================================================================
-TERMINOLOGY INCONSISTENCIES
+TERMINOLOGY INCONSISTENCIES - ✅ FIXED (January 23, 2026)
 ================================================================================
 
-4. "STANDARDS LAYER" vs "PLATFORM" vs "SAILS.TO"
-------------------------------------------------
-ISSUE: The entity receiving platform fees is called different things:
-- whatsails.html uses "Standards Layer" 
-- pricing.html uses "Standards Layer" in fee table
-- Most marketing pages just say "Sails.to" or "platform"
+4. "STANDARDS LAYER" vs "PLATFORM" vs "SAILS.TO" ✅ FIXED
+---------------------------------------------------------
+ISSUE: The entity receiving platform fees was called different things:
+- whatsails.html used "Standards Layer" 
+- pricing.html used "Standards Layer" in fee table
+- Most marketing pages just said "Sails.to" or "platform"
 
-Context docs use "Standards Layer" as the protocol governance entity.
+FIX APPLIED:
+  - Replaced "Standards Layer" with "Sails.to" in all fee split contexts
+  - Replaced "Platform Administration + Standards Layer" with "Sails.to"
+  - Kept "Standards Layer" only in participants table (whatsails.html line 350)
+    and Mermaid diagram (technical context where it's appropriate)
+  - Now consistent: fees go to "Sails.to", "Brokers", "Trust", or "Clearstream"
 
-AFFECTED FILES: All pages
-RECOMMENDATION: Define "Standards Layer" once clearly, then use consistently or explain the relationship
+AFFECTED FILES: pricing.html, whatsails.html ✅ UPDATED
 
-5. OFFERING PHASES NAMING
--------------------------
-ISSUE: Context docs name the phases:
-  - Phase A: Subscription (refundable)
-  - Phase B: Committed (non-refundable, funds released)
-  - Phase C: Active (trading enabled)
+5. OFFERING PHASES NAMING ✅ FIXED
+----------------------------------
+ISSUE: Website mixed "Phase A/B" with "Stage 1/2/3" naming
 
-Website (whatsails.html) uses:
-  - Stage 1: Escrow
-  - Stage 2: Funding
-  - Stage 3: Live
+FIX APPLIED:
+  - Renamed "Phase A: Pre-Issuance Due Diligence" to "Pre-Issuance: Due Diligence"
+  - Renamed "Phase B: Token Distribution" to "Token Distribution (Stages 1-3)"
+  - Now consistent: Pre-Issuance setup followed by Stages 1/2/3
 
-These don't match. Pick one nomenclature.
+AFFECTED FILES: whatsails.html ✅ UPDATED
 
-AFFECTED FILES: whatsails.html
-RECOMMENDATION: Align naming with context docs or vice versa
+5B. EM-DASHES AND AI ARTIFACTS ✅ REMOVED (January 23, 2026)
+------------------------------------------------------------
+ISSUE: Em-dashes (\u2014) and other AI-style formatting throughout pages
+
+FIX APPLIED:
+  - Replaced em-dashes with commas, periods, or rewrote sentences
+  - Replaced table em-dashes with "n/a"
+  - Fixed arrow notation (\u2192) to use regular "to" where appropriate
+
+AFFECTED FILES: introducers.html, whatsails.html, pricing.html ✅ UPDATED
 
 ================================================================================
 MISSING INFORMATION
 ================================================================================
 
-6. MARSHALL ISLANDS DAO LLC OPTION
-----------------------------------
+6. MARSHALL ISLANDS DAO LLC OPTION ✅ REMOVED (January 23, 2026)
+----------------------------------------------------------------
 ISSUE: Context docs mention two entity options:
   - Wyoming DAO LLC (instant, free)
   - Marshall Islands DAO LLC (~30 days, separate cost)

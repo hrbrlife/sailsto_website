@@ -1,0 +1,14 @@
+# Client Series Data
+# Format: CODE|NAME|DBA|EIN|FINCEN_REG|CONTACT_NAME|CONTACT_EMAIL|EFFECTIVE_DATE|STATUS
+# One client series per line
+# STATUS: active, pending, suspended
+
+# ============================================================================
+# EXAMPLE CLIENT SERIES
+# ============================================================================
+
+C-001|ABC Payments LLC|ABC Pay|91-1111111|31000111111111|Alice Anderson|alice@abcpay.com|2024-03-01|active|support@abcpay.com|1-800-555-0101|100 Payment Plaza, Suite 200, Denver, CO 80202
+C-002|QuickTransfer Inc|QuickSend|91-2222222|31000222222222|Bob Baker|bob@quicktransfer.io|2024-04-15|active|help@quicktransfer.io|1-888-555-0102|200 Transfer Tower, Austin, TX 78701
+C-003|Global Remit Corp|GlobalPay|91-3333333|31000333333333|Carlos Chen|carlos@globalremit.com|2024-05-20|active|support@globalremit.com|1-877-555-0103|300 Global Center, Miami, FL 33131
+C-004|Metro Money Services|MetroPay|91-4444444|31000444444444|Diana Davis|diana@metromoney.net|2024-06-10|pending|help@metromoney.net|1-866-555-0104|400 Metro Square, Chicago, IL 60601
+C-005|FastCash Solutions|FastCash|91-5555555|31000555555555|Edward Evans|edward@fastcash.co|2024-07-01|active|support@fastcash.co|1-855-555-0105|500 Cash Court, Phoenix, AZ 85001

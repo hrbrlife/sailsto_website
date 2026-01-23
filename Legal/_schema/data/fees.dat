@@ -1,0 +1,49 @@
+# Fee Schedule Data
+# Used to populate pricing tables in documents
+
+# ============================================================================
+# TRANSACTION FEES
+# ============================================================================
+
+# Domestic Transfers
+FEE_DOMESTIC_MIN=0.00
+FEE_DOMESTIC_MAX=1000.00
+FEE_DOMESTIC_FLAT=2.99
+FEE_DOMESTIC_PERCENT=0.5
+
+# International Transfers
+FEE_INTL_MIN=0.00
+FEE_INTL_MAX=5000.00
+FEE_INTL_FLAT=9.99
+FEE_INTL_PERCENT=1.5
+
+# ============================================================================
+# VOLUME LIMITS
+# ============================================================================
+LIMIT_DAILY_UNVERIFIED=500.00
+LIMIT_DAILY_VERIFIED=5000.00
+LIMIT_MONTHLY_UNVERIFIED=2500.00
+LIMIT_MONTHLY_VERIFIED=25000.00
+
+# ============================================================================
+# FRAUD/CHARGEBACK ALLOCATION
+# ============================================================================
+FRAUD_ALLOC_COMPANY=20
+FRAUD_ALLOC_CLIENT=80
+CHARGEBACK_ALLOC_COMPANY=10
+CHARGEBACK_ALLOC_CLIENT=90
+
+# ============================================================================
+# SETTLEMENT
+# ============================================================================
+SETTLEMENT_DOMESTIC=T+1
+SETTLEMENT_INTL=T+3
+SETTLEMENT_MIN_PAYOUT=100.00
+
+# ============================================================================
+# SERVICE FEES
+# ============================================================================
+FEE_MONTHLY_PLATFORM=500.00
+FEE_PER_TRANSACTION=0.10
+FEE_COMPLIANCE_ANNUAL=2500.00
+FEE_ONBOARDING=1000.00

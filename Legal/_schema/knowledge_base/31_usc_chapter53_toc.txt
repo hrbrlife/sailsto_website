@@ -1,0 +1,13 @@
+# § 5301 – 5304)
+Source: law.cornell.edu (cleaned)
+Original file: 31_usc_chapter53_toc.txt
+---
+
+SUBCHAPTER II—RECORDS AND REPORTS ON MONETARY INSTRUMENTS TRANSACTIONS (§§ 5311 – 5336)
+SUBCHAPTER III—MONEY LAUNDERING AND RELATED FINANCIAL CRIMES (§§ 5340 – 5355)
+SUBCHAPTER IV—PROHIBITION ON FUNDING OF UNLAWFUL INTERNET GAMBLING (§§ 5361 – 5367)
+2021—Pub. L. 116–283, div. F, title LXIII, §§ 6306(b)(1), 6307(b), 6313(b), 6314(c), title LXIV, § 6403(b)(3), Jan. 1, 2021, 134 Stat. 4589, 4590, 4597, 4603, 4623, added items 5323 and 5333 to 5336 and struck out former item 5323 “Rewards for informants” and item 5328 “Whistleblower protections”. Former item 5323 and item 5328 were struck out, and item 5323 was added, to the analysis for this chapter to reflect the probable intent of Congress, notwithstanding directory language striking out and adding those items to the analysis for subchapter II of this chapter.
+2004—Pub. L. 108–458, title VI, § 6203(i), Dec. 17, 2004, 118 Stat. 3747, substituted item 5318A for former item 5318A “Special measures for jurisdictions, financial institutions, or international transactions of primary money laundering concern”.
+1986—Pub. L. 99–570, title I, §§ 1354(b), 1356(d), Oct. 27, 1986, 100 Stat. 3207–22, 3207–25, substituted “Compliance, exemptions, and summons authority” for “Compliance and exemptions” in item 5318 and added item 5324.
+
+"background": "#f1d600"

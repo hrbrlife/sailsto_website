@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ccash-llm-audit"
+version = "1.0.0"
+description = "Multi-agent LLM audit system for CCASH legal documentation"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.11"
+authors = [
+    {name = "CCASH LLC", email = "compliance@ccash.io"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Legal Industry",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Typing :: Typed",
+]
+keywords = ["legal", "audit", "compliance", "LLM", "multi-agent", "AI"]
+
+dependencies = [
+    # Core
+    "pydantic>=2.0",
+    "pyyaml>=6.0",
+    "rich>=13.0",
+    "typer>=0.9.0",
+    "python-dotenv>=1.0.0",
+    
+    # LLM Provider Layer (MIT license)
+    "litellm>=1.40.0",
+    
+    # Async support
+    "aiofiles>=23.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-asyncio>=0.21.0",
+    "pytest-cov>=4.0",
+    "mypy>=1.0",
+    "ruff>=0.1.0",
+]
+local = [
+    # For running local models
+    "vllm>=0.4.0",
+]
+
+[project.scripts]
+llm-audit = "llm_audit.cli:main"
+
+[project.urls]
+"Homepage" = "https://github.com/ccash-llc/series-docs"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+llm_audit = ["*.yaml", "prompts/*.md"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.mypy]
+python_version = "3.11"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

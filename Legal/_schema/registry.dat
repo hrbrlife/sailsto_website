@@ -1,0 +1,62 @@
+# CCASH Document Registry - Single Source of Truth
+# This file drives all document conversion, linking, and index generation
+# Format: CODE|PATH|TITLE|CATEGORY|VERSION|DEPENDENCIES
+
+# ============================================================================
+# COMPANY DOCUMENTS
+# ============================================================================
+
+# Overview
+00_README|Company/Overview/00_README|Document Overview|overview|1.0|
+00_Business_Model|Company/Overview/00_Business_Model|Business Model|overview|1.1|
+
+# Formation
+A1|Company/Formation/A1_Articles_of_Organization|Articles of Organization|formation|1.0|
+
+# Governance
+B1|Company/Governance/B1_Master_Operating_Agreement|Master Operating Agreement|governance|1.4|A1
+B2|Company/Governance/B2_Officer_Appointment_Resolution|Officer Appointment Resolution|governance|1.0|B1
+B3|Company/Governance/B3_Officer_Rotation_Succession_Policy|Officer Rotation & Succession Policy|governance|1.2|B1,B2
+B10|Company/Governance/B10_Insurance_and_Capital_Policy|Insurance & Capital Policy|governance|1.1|B1
+
+# Compliance
+B4|Company/Compliance/B4_Record_Keeping_Policy|Record Keeping Policy|compliance|1.3|B1
+B5|Company/Compliance/B5_BSA_AML_Program|BSA/AML Program|compliance|1.1|B1
+B6|Company/Compliance/B6_IT_Security_Incident_BCP_DRP|IT Security / Incident / BCP / DRP|compliance|1.4|B1
+B7|Company/Compliance/B7_Acceptable_Client_Use_Policy|Acceptable Client Use Policy|compliance|1.4|B1,N3,N4
+B8|Company/Compliance/B8_Privacy_Data_Protection_Policy|Privacy & Data Protection Policy|compliance|1.0|B1
+B9|Company/Compliance/B9_Fit_and_Proper_Screening_Policy|Fit & Proper Screening Policy|compliance|1.1|B1,B2
+B12|Company/Compliance/B12_Partner_Due_Diligence_Standard|Partner Due Diligence Standard|compliance|1.1|B1,B4,N1
+
+# ============================================================================
+# CLIENT SERIES DOCUMENTS
+# ============================================================================
+
+# Formation
+A2|Client_Series/Formation/A2_Exhibit_A_Series_List|Exhibit A — Series List|formation|1.1|A1
+A3|Client_Series/Formation/A3_Exhibit_B_Series_Operating_Agreements|Exhibit B — Series Operating Agreements|formation|1.1|A1,A2
+D1|Client_Series/Formation/D1_Articles_of_Amendment_Add_Series|Articles of Amendment (Add Series)|formation|1.1|A1,A2
+
+# Client
+B11|Client_Series/Client/B11_Client_Services_and_Licensing_Framework|Client Services & Licensing Framework|client|1.8|B1,F1
+F1|Client_Series/Client/F1_Client_Services_Agreement|Client Services Agreement|client|1.7|B1,B11,C3
+F2|Client_Series/Client/F2_End_Customer_Terms_Template|End Customer Terms Template|client|1.8|F1
+
+# Schedules
+N1|Client_Series/Schedule/N1_Partner_MSB_Agreement|Partner MSB Agreement|schedule|1.4|N3,N4,B4,B5,B8,B12,C3
+N3|Client_Series/Schedule/N3_Approved_States_Schedule|Approved States Schedule|schedule|1.4|B7,N4
+N4|Client_Series/Schedule/N4_Partner_MSB_Directory|Partner MSB Directory|schedule|1.3|N3,N1,B12,C3
+N5|Client_Series/Schedule/N5_Client_FinCEN_Filing_Guide|Client FinCEN Filing Guide|schedule|1.1|E1
+
+# ============================================================================
+# INTERNAL DOCUMENTS
+# ============================================================================
+
+# Checklists
+E1|Internal/Checklist/E1_Filing_Checklist_and_Instructions|Filing Checklist & Instructions|internal|1.1|A1,A2,A3,B1,B2,B3,B4,B5,B6,B7,B8,B9,B10,B11,C1,C2,D1
+E2|Internal/Checklist/E2_Securities_and_MTL_Checklist|Securities & MTL Checklist|internal|1.1|E1
+
+# Registration
+C1|Internal/Registration/C1_ABN_Registration_CCASH|ABN Registration (CCASH)|formation|1.1|A1
+C2|Internal/Registration/C2_ABN_Template_Client_Series|ABN Template (Client Series)|formation|1.1|A1,D1
+C3|Internal/Registration/C3_Pricing_and_Routing_Schedule|Pricing & Routing Schedule|schedule|1.1|F1,N3
