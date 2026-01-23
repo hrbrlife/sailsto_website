@@ -632,9 +632,9 @@ timeline
             
             <div class="mermaid">
 flowchart TB
-    A[Phase A: ESCROW] --> B[Phase B: FUNDING]
-    B --> C[Phase C: ACTIVE]
-    A --> D[Soft Cap Miss → Refund]
+    A[Stage 1: ESCROW] --> B[Stage 2: FUNDING]
+    B --> C[Stage 3: LIVE]
+    A --> D[Soft Cap Miss: Full Refund]
     
     style A fill:#ebf8ff,stroke:#3182ce
     style B fill:#f0fff4,stroke:#38a169
@@ -645,33 +645,33 @@ flowchart TB
             <table>
                 <thead>
                     <tr>
-                        <th>Phase</th>
+                        <th>Stage</th>
                         <th>Status</th>
                         <th>Key Characteristics</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>Phase A: ESCROW</strong></td>
+                        <td><strong>Stage 1: Escrow</strong></td>
                         <td>Pre-Soft Cap</td>
-                        <td>Funds held in licensed trust escrow (our SVG trustee entity) • Optional early-bird discount • Full refund if soft cap not reached</td>
+                        <td>Funds held in licensed trust escrow (our SVG trustee entity). Optional early-bird discount. Full refund if soft cap not reached.</td>
                     </tr>
                     <tr>
-                        <td><strong>Phase B: FUNDING</strong></td>
+                        <td><strong>Stage 2: Funding</strong></td>
                         <td>Post-Soft Cap</td>
-                        <td>Funds released to issuer as received • Full price, distribution continues • Only issuer + brokers may allocate</td>
+                        <td>Funds released to issuer as received. Full price, distribution continues. Only issuer + brokers may allocate.</td>
                     </tr>
                     <tr>
-                        <td><strong>Phase C: ACTIVE</strong></td>
+                        <td><strong>Stage 3: Live</strong></td>
                         <td>Closed</td>
-                        <td>Offering complete, unsold tokens burned • Secondary trading enabled (OTC) • Conversions open to KYC'd holders</td>
+                        <td>Offering complete, unsold tokens burned. Secondary trading enabled (OTC). Conversions open to KYC'd holders.</td>
                     </tr>
                 </tbody>
             </table>
             
             <div class="highlight-box">
-                <strong>Soft Cap Miss = Zero Investment Risk</strong><br>
-                Investors receive invested capital back via smart contract + legal structure (capital protected). Only minimal admin fees apply (0.5% brokerage + Clearstream if used).
+                <strong>Soft Cap Miss = Full Refund</strong><br>
+                Investors receive full invested capital back via smart contract + legal structure. Brokerage fees are waived during soft cap phase. Only Clearstream fees apply if Channel 3 was used.
             </div>
         </div>
     </section>
