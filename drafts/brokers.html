@@ -78,21 +78,22 @@
                 <div class="detail-content">
                     <h2>Commission sharing built in</h2>
                     <p>Every trade on the platform generates revenue that flows directly to participating brokers. No negotiation, no manual billing. Commissions are calculated and distributed automatically on-chain.</p>
-                    <p>Primary placements earn you commission from <strong>two sources</strong>: the issuer's placement reward (typically 3%) plus Sails.to sharing its distribution fee (2% of the 6%). Secondary trading carries a 0.5% fee split ⅓ to the platform, ⅔ to brokers.</p>
+                    <p>When you place investors in a primary offering, you earn commission from the <strong>6% distribution fee</strong>: the issuer may offer a placement reward (typically 3%), and Sails.to automatically shares 2% of its 6% fee with you. Secondary trading carries a 0.5% fee split equally: ⅓ platform, ⅓ buy-side broker, ⅓ sell-side broker.</p>
+                    <p><em style="color:#38a169;"><strong>Note:</strong> During soft cap phase, brokerage fees are waived. Primary placement commissions only apply to distributions after soft cap is reached.</em></p>
                 </div>
                 <ul class="detail-list">
                     <li>
                         <span class="icon">💰</span>
                         <div class="text">
-                            <h4>Primary Placement: 5%</h4>
-                            <p>3% from issuer + 2% from Sails.to. Paid at settlement.</p>
+                            <h4>Primary Placement: up to 5%</h4>
+                            <p>Up to 3% issuer reward + 2% from Sails.to's 6% fee. <em>(After soft cap)</em></p>
                         </div>
                     </li>
                     <li>
                         <span class="icon">🔄</span>
                         <div class="text">
                             <h4>Secondary Trades: 0.5%</h4>
-                            <p>Split ⅓ platform, ⅔ brokers. Both sides of the trade earn.</p>
+                            <p>Split ⅓ platform, ⅓ buy-side broker, ⅓ sell-side broker.</p>
                         </div>
                     </li>
                     <li>
@@ -291,7 +292,7 @@
                 </div>
                 
                 <div class="assumptions">
-                    <strong>Assumptions:</strong> Secondary trading commission is 0.5% total, of which ⅔ (0.33%) goes to brokers. Your share depends on deal structure and whether you represent one or both sides.
+                    <strong>Assumptions:</strong> Secondary trading commission is 0.5% total, split ⅓ platform, ⅓ buy-side broker, ⅓ sell-side broker (~0.17% each). Primary placement commissions only apply after soft cap is reached. Your share depends on deal structure and whether you represent one or both sides.
                 </div>
             </div>
         </div>
@@ -523,7 +524,7 @@
             // Secondary trading earnings (annual)
             const annualVolume = placement * (turnover / 100);
             const yourDeals = annualVolume * (participation / 100);
-            const brokerCommission = yourDeals * 0.005 * (2/3); // 0.5% total, ⅔ to brokers
+            const brokerCommission = yourDeals * 0.005 * (2/3); // 0.5% total, ⅓ platform + ⅓ buy-side + ⅓ sell-side (brokers get ⅔)
             const yourSecondary = brokerCommission * (commShare / 100);
 
             // Multi-year projection
