@@ -1,0 +1,141 @@
+# Ofac Advanced Faq
+Source: Cleaned from browser text dump
+Original file: ofac_advanced_faq.txt
+---
+
+Frequently Asked Questions on Advanced Sanctions List Standard | Office of Foreign Assets Control
+
+Here’s how you know
+
+Here’s how you know
+
+U.S. Department of the Treasury
+
+Read the latest Treasury news
+
+Office of Foreign Assets Control
+
+A Part of Treasury's Office of Terrorism and
+Financial Intelligence
+
+Recent Actions
+
+Sanctions Lists
+
+Sanctions List Service
+
+Specially Designated Nationals (SDN) List
+
+Consolidated Sanctions List (Non-SDN Lists)
+
+Other OFAC Sanctions Lists
+
+Sanctions List Search
+
+Sanctions Programs
+
+Russia-related Sanctions
+
+Iran Sanctions
+
+North Korea Sanctions
+
+Cuba Sanctions
+
+Counter Narcotics Sanctions
+
+Cyber-related Sanctions
+
+Venezuela-related Sanctions
+
+Complete List of Sanctions Programs and Country Information
+
+Submit a Report
+
+Contact Us
+
+Enter Search Term(s):
+
+Breadcrumb
+
+Home
+
+Sdn List Data Formats Data Schemas
+
+Frequently Asked Questions On Advanced Sanctions List Standard
+
+Specially Designated Nationals List (SDN List)
+
+Consolidated Sanctions List (Non-SDN Lists)
+
+Additional Sanctions Lists
+
+Search OFAC&#039;s Sanctions Lists
+
+Sanctions Programs and Country Information
+
+Recent Actions
+
+OFAC License Application Page
+
+Additional OFAC Resources
+
+Frequently Asked Questions
+
+Civil Penalties and Enforcement Information
+
+OFAC Reporting System
+
+Selected General Licenses Issued by OFAC
+
+Contact OFAC
+
+Frequently Asked Questions on Advanced Sanctions List Standard
+
+What are the new XML products that OFAC is offering?OFAC is offering new XML products that conform to an advanced, UN-developed data standard. XML files conforming to the new data standard are available for the Specially Designated Nationals List (SDN) and the Consolidated Non-SDN Data Files.Will this new XML format replace the existing XML? Will I need to switch to this new XML format in the future?No, these new XML files will not replace the existing SDN.xml or consolidated.xml files which will remain in production. OFAC will continue to support all of its current data offerings even after the new XML standard goes into production. This includes the continual support of its legacy files (the fixed-width, .CSV, .PIP, and .DEL files) for the foreseeable future.Which XML file should I use?All of OFAC’s XML files, including the ones that are currently available (SDN.xml and consolidated.xml) and the new products, contain the same basic sanctions list data at their core. Thus the new sdn_advanced.xml file contains the entire SDN list. However, the advanced sanctions data model contains additional meta data that may further aid compliance and screening programs.The advanced XML files are based on a United Nations-sponsored, Sanctions Data Model. The model is designed with an international user-base in mind. They support multiple languages and multiple character sets. Anyone may use the advanced XML files, but OFAC feels that they will be particularly useful for businesses with international operations as well as government actors.How do the XML files differ?All OFAC XML files will contain the same core sanctions list data. For example, the current SDN.xml file provides a small amount of additional meta data for each name. Aliases are specifically labeled as “weak” or “strong” in this file. The advanced XML files have the capacity to provide a great deal of additional meta data on sanctioned parties. For example, non-western names can now be broken down into multiple name parts and those parts are identified in the XML file. Also, government-issued identification information can be labeled as legitimate or fraudulent.Will you be updating the advanced XML files every time there is an update to the list?Yes, the new files contain live data and will be updated at the same time as all of OFAC’s other list products.What types of organizations would benefit from using this new product? Is this only intended to be used by government agencies and the United Nations?All users may benefit by adopting the new standard. The advanced XML files will be most useful to enterprises that have international operations. It may also be useful to screening service providers that provide other United Nations’ lists in their screening products.An earlier FAQ stated that the advanced XML files support multiple languages and character sets. Will OFAC be issuing the SDN list in languages other than English?The advanced xml files provide OFAC with the capability to provide sanctioned parties and their aliases in other languages and character sets. OFAC has begun using these capabilities for select entries. However, the office has no immediate plans to offer the entire SDN list or other lists in multiple languages. Any information presented in non-Latin character sets will also have a basic Latin version.I have noticed that all of the names in the sdn_advanced.xml file have a sanctions type of "block." Does this mean I should automatically block any true hit I get during the screening process?Generally speaking the SDN list is considered a blocking list, meaning targets featured on this list are blocked when a list user encounters a true hit during the screening process. However, there are certain exceptions to this rule. For example, please see this text from the human-readable version of the SDN list related to vessels."Except in limited circumstances, financial institutions are instructed to reject any funds transfer referencing a blocked vessel and must notify OFAC, preferably via facsimile with a copy of the payment instructions, that funds have been returned to the remitter due to the possible involvement of a blocked vessel in the underlying transaction. See 31 C.F.R. 501.604(b)(1). Financial institutions should contact OFAC's Compliance Outreach and Implementation Division for further instructions should the name of a blocked vessel appear in shipping documents presented under a letter of credit or if noticed in a documentary collection. Blocked vessels must themselves be physically blocked should they enter U.S. jurisdiction. Freight forwarders and shippers may not charter, book cargo on, or otherwise deal with blocked vessels."Users should continue to use the program tags associated with each designation to determine the treatment of a true hit.I have noticed that the names in the advanced XML files now have a legal authority associated with them. How is that different from the program tag and why are many of the values in this element null?The advanced sanctions data model allows OFAC to be more granular when it comes to indicating why a sanctioned party has been listed. The program tags currently in use on OFAC's sanctions lists may represent more than one authority. For example the [SYRIA] tag represents all executive orders associated with the Syria program. OFAC will be using the legal authority element to allow users to see the specific executive order or statute behind each designation. The reason many of the values in this element are currently null is that OFAC is still populating the legal authorties associated with older SDNs in its internal systems. Over time there will be fewer null values in the legal authority area and the office's ultimate goal is to have one or more legal authorities assigned to all SDNs.
+
+Office of Terrorism and Financial Intelligence
+
+Additional Resources
+
+Privacy Act
+
+Small Business Contacts
+
+Budget and Performance
+
+TreasuryDirect.gov Securities/Bonds
+
+Freedom of Information Act (FOIA)
+
+No FEAR Act Data
+
+Whistleblower Protection
+
+Helpful OFAC Links
+
+Sign Up For OFAC E-mail Alerts
+
+Contact OFAC
+
+Dealing with an &quot;OFAC Alert&quot;
+
+List of Country-related Sanctions
+
+Appeal an OFAC designation or other listing
+
+Other Government Sites
+
+USAJOBS.gov
+
+OPM.gov
+
+MyMoney.gov
+
+Data.gov
+
+Footer
+
+Google Privacy
+
+Site Policies and Notices

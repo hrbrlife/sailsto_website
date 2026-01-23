@@ -1,0 +1,556 @@
+# CCASH Validation Patterns v2.0
+# 
+# Single source of truth for all regex patterns and validation rules.
+# This file is consumed by both bash scripts and Python validators.
+#
+# Philosophy:
+# - Centralize all patterns here to prevent drift
+# - Include test cases to verify patterns work
+# - Provide LLM prompts for semantic fallback
+# - Support normalization for alias resolution
+
+version: "2.0"
+last_updated: "2025-12-14"
+
+# =============================================================================
+# MARKER PATTERNS
+# These patterns extract and validate schema markers like [TERM:*], [DOC:*]
+# =============================================================================
+
+markers:
+  TERM:
+    description: "Defined terms from defined_terms.md"
+    extract_pattern: '\[TERM:([A-Za-z0-9_/. -]+)\]'
+    validate_pattern: '^[A-Za-z][A-Za-z0-9_/. -]*$'
+    registry_file: "defined_terms.md"
+    registry_extract: '\[TERM:([A-Za-z0-9_/. -]+)\]'
+    examples:
+      valid:
+        - "[TERM:Company]"
+        - "[TERM:BSA/AML]"
+        - "[TERM:End Customer]"
+        - "[TERM:Series_T1]"
+        - "[TERM:Client Series]"
+      invalid:
+        - "[TERM:]"
+        - "[term:lowercase]"  # Wrong case for marker
+        
+  DOC:
+    description: "Document cross-references"
+    extract_pattern: '\[DOC:([^\]]+)\]'
+    validate_pattern: '^[A-Z0-9]+[a-z]?(_[A-Za-z_]+)?'
+    normalize:
+      - pattern: '#.*$'      # Strip section anchors
+        replacement: ''
+      - pattern: '§.*$'      # Strip section references
+        replacement: ''
+      - pattern: '\s.*$'     # Strip trailing text
+        replacement: ''
+    registry_file: "document_registry.md"
+    registry_extract: '\| `([A-Z0-9]+[a-z]?(_[A-Za-z_]+)?)` \|'
+    examples:
+      valid:
+        - "[DOC:B1]"
+        - "[DOC:F1]"
+        - "[DOC:00_README]"
+        - "[DOC:B11]"
+        - "[DOC:B1#section]"
+        - "[DOC:B1 §5.2]"
+      invalid:
+        - "[DOC:]"
+        - "[DOC:lowercase]"
+        
+  OBL:
+    description: "Obligations from obligations.md"
+    extract_pattern: '\[OBL:([A-Za-z0-9_-]+)\]'
+    validate_pattern: '^[A-Z0-9]+(-[A-Z0-9]+)*-[0-9]{3}$|^OBL-[A-Z0-9]+(-[A-Z0-9]+)*-[0-9]{3}$'
+    registry_file: "obligations.md"
+    registry_extract_mode: "ledger_block"
+    examples:
+      valid:
+        - "[OBL:REG-001]"
+        - "[OBL:PARTNER-RESTRICT-001]"
+        - "[OBL:OBL-REG-001]"
+        - "[OBL:OBL-REG-002]"
+        - "[OBL:OBL-CLIENT-CO-001]"
+        - "[OBL:CLIENT-CO-001]"
+        - "[OBL:FINCEN-REG-001]"
+        - "[OBL:TAX-1099-CLIENT-001]"
+      invalid:
+        - "[OBL:]"
+        - "[OBL:lowercase-001]"
+        
+  FLOW:
+    description: "Process flows from flows/index.md"
+    extract_pattern: '\[FLOW:([A-Za-z0-9_-]+)\]'
+    validate_pattern: '^[a-z_]+$|^[A-Z][a-zA-Z_]+$'
+    normalize:
+      # Convert PascalCase to snake_case for canonical lookup
+      - pattern: '([A-Z])'
+        replacement: '_\L\1'
+      - pattern: '^_'
+        replacement: ''
+    registry_file: "flows/index.md"
+    registry_modes:
+      - type: "section_headers"
+        pattern: '^### ([a-z_]+)$'
+      - type: "alias_table"
+        pattern: '^\| `([A-Za-z_]+)` \| `([a-z_]+)` \|$'
+    examples:
+      valid:
+        - "[FLOW:client_onboarding]"
+        - "[FLOW:Client_Onboarding]"  # Alias
+        - "[FLOW:Series_Dissolution]"  # Alias
+        - "[FLOW:bsa_efiling]"
+      aliases:
+        "Client_Onboarding": "client_onboarding"
+        "Series_Dissolution": "series_dissolution"
+        "BSA_eFiling": "bsa_efiling"
+        
+  DECISION:
+    description: "Decision rights from decisions_rights.md"
+    extract_pattern: '\[DECISION:([A-Za-z0-9_-]+)\]'
+    validate_pattern: '^[A-Z]+-[A-Z]*-?[0-9]+$'
+    registry_file: "decisions_rights.md"
+    registry_extract: '`([A-Z]+-[A-Z]*-?[0-9]+)`'
+    examples:
+      valid:
+        - "[DECISION:COMPLIANCE-001]"
+        - "[DECISION:CLIENT-EXPANSION-001]"
+        
+  RIGHT:
+    description: "Rights from decisions_rights.md"
+    extract_pattern: '\[RIGHT:([A-Za-z0-9_-]+)\]'
+    validate_pattern: '^[A-Z]+-[A-Z]*-?[0-9]+$'
+    registry_file: "decisions_rights.md"
+    registry_extract: '`([A-Z]+-[A-Z]*-?[0-9]+)`'
+    examples:
+      valid:
+        - "[RIGHT:AUDIT-001]"
+        - "[RIGHT:FEE-MODIFY-001]"
+
+  # =========================================================================
+  # PERSON/ROLE MARKERS (NEW)
+  # For centralized person data and role assignment management
+  # =========================================================================
+  
+  PERSON:
+    description: "Direct person reference from persons.md"
+    extract_pattern: '\[PERSON:([A-Za-z0-9_.-]+)\]'
+    validate_pattern: '^(P[0-9]{3}|RA[0-9]{3}|CLIENT-[A-Z0-9]+-[A-Z0-9]+)(\.[a-z_.]+)?$'
+    registry_file: "persons.md"
+    registry_extract: '^person_id:\s*([A-Za-z0-9_-]+)'
+    field_access: true  # Supports [PERSON:P001.display_name]
+    fields:
+      - display_name
+      - legal_name.first
+      - legal_name.last
+      - address_formatted
+      - phone
+      - email
+      - signature_block.name_line
+    examples:
+      valid:
+        - "[PERSON:P001]"
+        - "[PERSON:P001.display_name]"
+        - "[PERSON:P001.address_formatted]"
+        - "[PERSON:RA001]"
+        - "[PERSON:CLIENT-C001-001]"
+      invalid:
+        - "[PERSON:]"
+        - "[PERSON:bob]"
+        - "[PERSON:P001.invalid_field]"
+
+  ROLE:
+    description: "Role-based person reference from assignments.md"
+    extract_pattern: '\[ROLE:([A-Za-z0-9_./-]+)\]'
+    validate_pattern: '^(company|[Ppt]-[0-9]+|[Cc]-[0-9]{3})\.[a-z_]+(\.[a-z_.]+)?$'
+    registry_file: "assignments.md"
+    registry_extract: '^entity_id:\s*([A-Za-z0-9_-]+)'
+    resolves_to: PERSON  # ROLE markers resolve to PERSON data
+    field_access: true
+    fields:
+      - display_name
+      - address_formatted
+      - title
+      - abbreviation
+      - phone
+      - email
+      - signature_block.name_line
+    examples:
+      valid:
+        - "[ROLE:company.manager]"
+        - "[ROLE:company.ceo.display_name]"
+        - "[ROLE:company.cco.address_formatted]"
+        - "[ROLE:P-1.manager]"
+        - "[ROLE:C-001.bsa_officer]"
+      invalid:
+        - "[ROLE:]"
+        - "[ROLE:manager]"  # Missing entity
+        - "[ROLE:company.invalid_role]"
+        
+  CONFIG:
+    description: "Configuration values (non-person data)"
+    extract_pattern: '\[CONFIG:([A-Za-z0-9_./-]+)\]'
+    validate_pattern: '^[a-z_]+\.[a-z_]+(\.[a-z_]+)?$'
+    registry_file: "config.yaml"  # Will create if needed
+    examples:
+      valid:
+        - "[CONFIG:company.phone]"
+        - "[CONFIG:company.business_address]"
+        - "[CONFIG:company.mt_entity_id]"
+        - "[CONFIG:thresholds.contract_approval]"
+        - "[CONFIG:compensation.ceo_salary]"
+      invalid:
+        - "[CONFIG:]"
+        - "[CONFIG:phone]"  # Missing category
+
+# =============================================================================
+# METADATA PATTERNS
+# These patterns extract document metadata like version, dates, etc.
+# =============================================================================
+
+metadata:
+  effective_date:
+    description: "Document effective date"
+    rule_id: "BASE-001"
+    patterns:
+      - '^\*{0,2}Effective Date:\*{0,2}\s*(.+)$'
+      - '^effective_date:\s*(.+)$'
+      - 'Effective Date:?\s*(.+)$'
+    required: true
+    severity: "ERROR"
+    examples:
+      valid:
+        - "**Effective Date:** December 12, 2025"
+        - "Effective Date: 2025-12-12"
+        - "effective_date: 2025-12-12"
+      invalid:
+        - "Date: December 12, 2025"
+        
+  version:
+    description: "Document version number"
+    rule_id: "BASE-002"
+    patterns:
+      - '^\*{0,2}Version:\*{0,2}\s*([0-9]+\.[0-9]+)'
+      - '^\*{0,2}Schedule Version:\*{0,2}\s*([0-9]+\.[0-9]+)'
+      - '^\*{0,2}Document Version:\*{0,2}\s*([0-9]+\.[0-9]+)'
+      - '^version:\s*([0-9]+\.[0-9]+)'
+      - 'schema:doc[^>]*version:([0-9]+\.[0-9]+)'
+    required: true
+    severity: "WARNING"
+    examples:
+      valid:
+        - "**Version:** 1.0"
+        - "Version: 2.1"
+        - "**Schedule Version:** 1.0"
+        - "schema:doc DOC:F1 version:1.1"
+        - "version: 1.0"
+      invalid:
+        - "Version: one"
+        - "v1.0"
+        - "Version 1.0"  # Missing colon
+
+  placeholders:
+    description: "Unfilled bracket placeholders"
+    rule_id: "BASE-003"
+    patterns:
+      - '\[_{2,}\]'
+      - '\[________________\]'
+    severity: "WARNING"
+    invert: true  # These should NOT be present
+    count: true   # Count occurrences
+    examples:
+      should_flag:
+        - "[____]"
+        - "[________________]"
+        - "[________]"
+      should_not_flag:
+        - "[TERM:Company]"
+        - "[DOC:B1]"
+
+# =============================================================================
+# PROHIBITED LANGUAGE
+# These patterns detect language that violates MSB compliance requirements
+# =============================================================================
+
+prohibited:
+  white_label:
+    description: "Prohibited white-label language"
+    rule_id: "MSB-001"
+    patterns:
+      - 'white[-\s]?label'
+      - 'whitelabel'
+    case_insensitive: true
+    severity: "ERROR"
+    applies_to:
+      - "00_Business_Model"
+      - "A2"
+      - "A3"
+      - "B1"
+      - "B11"
+      - "D1"
+      - "F1"
+      - "F2"
+      - "C1"
+      - "C2"
+    llm_semantic:
+      enabled: true
+      prompt: |
+        Analyze this document for white-label arrangements.
+        A white-label arrangement is where a client uses the company's 
+        licenses/registrations as if they were the client's own.
+        
+        Does this document describe or permit white-label arrangements?
+        
+        Respond with:
+        - found: true/false
+        - confidence: 0.0-1.0
+        - evidence: relevant quote if found
+      min_confidence: 0.8
+    examples:
+      should_flag:
+        - "This is a white-label solution"
+        - "white label services"
+        - "WHITELABEL platform"
+        - "white-labeled product"
+      should_not_flag:
+        - "Client operates independently"
+        - "Each series maintains its own registration"
+        
+  rent_a_license:
+    description: "Prohibited rent-a-license language"
+    rule_id: "MSB-002"
+    patterns:
+      - 'rent[-\s]?a[-\s]?license'
+      - 'license\s+rental'
+      - 'borrowed\s+license'
+      - 'lease.*license'
+      - 'renting.*license'
+      - 'operating\s+under\s+(our|the|company)\s+license'
+    case_insensitive: true
+    severity: "ERROR"
+    applies_to:
+      - "00_Business_Model"
+      - "A2"
+      - "A3"
+      - "B1"
+      - "B11"
+      - "D1"
+      - "F1"
+      - "F2"
+    llm_semantic:
+      enabled: true
+      prompt: |
+        Analyze this document for "rent-a-license" arrangements.
+        A rent-a-license arrangement is where clients operate money 
+        transmission under the company's licenses rather than obtaining 
+        their own independent registrations.
+        
+        Does this document describe or permit rent-a-license arrangements?
+        
+        Respond with:
+        - found: true/false
+        - confidence: 0.0-1.0
+        - evidence: relevant quote if found
+      min_confidence: 0.8
+    examples:
+      should_flag:
+        - "rent-a-license model"
+        - "rent a license arrangement"
+        - "clients operating under our license"
+      should_not_flag:
+        - "Each client maintains their own MSB registration"
+
+# =============================================================================
+# REQUIRED LANGUAGE
+# These patterns verify presence of mandatory compliance language
+# =============================================================================
+
+required:
+  independent_msb:
+    description: "Must state independent MSB model"
+    rule_id: "MSB-003"
+    patterns:
+      - 'independent.*MSB'
+      - 'independent.*money\s+services?\s+business'
+      - 'independently\s+registered'
+      - 'own\s+MSB\s+registration'
+    case_insensitive: true
+    severity: "ERROR"
+    applies_to:
+      - "00_Business_Model"
+      - "A2"
+      - "A3"
+      - "B11"
+      - "F1"
+    llm_semantic:
+      enabled: true
+      prompt: |
+        Does this document clearly establish that client series are 
+        INDEPENDENT Money Services Businesses (MSBs)?
+        
+        Key indicators:
+        - Clients have their own registrations
+        - Clients are not operating under company licenses
+        - Each client is a separate legal/regulatory entity
+        
+        Respond with confidence 0.0-1.0 and explanation.
+      min_confidence: 0.8
+      
+  client_own_ein:
+    description: "Client documents must mention own EIN"
+    rule_id: "MSB-004"
+    patterns:
+      - 'own\s+EIN'
+      - 'its\s+own.*EIN'
+      - 'Client\s+Series.*EIN'
+      - 'separate\s+EIN'
+      - 'individual\s+EIN'
+    case_insensitive: true
+    severity: "ERROR"
+    applies_to:
+      - "A2"
+      - "B11"
+      - "F1"
+      - "E1"
+      - "N5"
+      
+  fincen_registration:
+    description: "Client docs must require FinCEN registration"
+    rule_id: "MSB-005"
+    patterns:
+      - 'FinCEN.*registration'
+      - 'registered.*FinCEN'
+      - 'FinCEN\s+MSB\s+registration'
+      - 'own.*FinCEN'
+    case_insensitive: true
+    severity: "ERROR"
+    applies_to:
+      - "A2"
+      - "B11"
+      - "F1"
+      - "E1"
+      - "N5"
+      
+  biennial_renewal:
+    description: "FinCEN renewal is biennial, not annual"
+    rule_id: "FINCEN-001"
+    anti_patterns:
+      - 'FinCEN.*annual'
+      - 'annually.*FinCEN'
+    patterns:
+      - 'biennial'
+      - 'every\s+two\s+years'
+      - '2[-\s]year'
+      - 'two[-\s]year'
+    case_insensitive: true
+    severity: "ERROR"
+    applies_to:
+      - "E1"
+      - "E2"
+      - "N5"
+      - "B5"
+
+# =============================================================================
+# TERMINOLOGY CONSISTENCY
+# Patterns for ensuring consistent terminology across documents
+# =============================================================================
+
+terminology:
+  record_keeping:
+    description: "Consistent 'Record-Keeping' spelling"
+    canonical: "Record-Keeping"
+    alternatives:
+      - pattern: 'Record\s+Keeping'
+        severity: "WARNING"
+      - pattern: 'Recordkeeping'
+        severity: "WARNING"
+      - pattern: 'record-keeping'
+        severity: "INFO"  # Lowercase OK in prose
+        
+  acceptable_use_policy:
+    description: "Consistent AUP naming"
+    canonical: "Acceptable Client Use Policy"
+    doc_code: "B7"
+    alternatives:
+      - pattern: 'Acceptable\s+Use\s+Policy'
+        severity: "INFO"  # OK as short form if defined
+      - pattern: 'AUP'
+        severity: "INFO"  # OK as abbreviation if defined
+
+# =============================================================================
+# LLM SEMANTIC ANALYSIS PROMPTS
+# Prompts for deeper semantic analysis when regex is insufficient
+# =============================================================================
+
+llm_prompts:
+  document_classification:
+    description: "Classify document type and extract key entities"
+    prompt: |
+      Analyze this legal document and provide:
+      
+      1. Document Type: [Formation|Governance|Compliance|Client|Schedule|Overview]
+      2. Key Entities Mentioned: list of defined terms
+      3. Regulatory Frameworks: BSA, AML, MTL, FinCEN, etc.
+      4. Obligations Established: list of key requirements
+      5. Cross-References: list of other documents referenced
+      
+      Respond in JSON format.
+      
+  compliance_audit:
+    description: "Full compliance check for MSB model"
+    prompt: |
+      You are auditing a Money Services Business (MSB) document.
+      
+      Check for these CRITICAL requirements:
+      1. NO white-label arrangements (clients using company's licenses)
+      2. NO rent-a-license arrangements
+      3. Each client series has OWN EIN
+      4. Each client series has OWN FinCEN registration
+      5. Client series are INDEPENDENT MSBs
+      
+      For each requirement:
+      - Status: PASS | FAIL | UNCLEAR
+      - Evidence: quote from document
+      - Concern: any red flags
+      - Recommendation: suggested fix if needed
+      
+      Respond in JSON format.
+      
+  cross_reference_extraction:
+    description: "Extract all document references"
+    prompt: |
+      Extract ALL document cross-references from this text.
+      
+      Look for:
+      1. Explicit markers: [DOC:B1], [DOC:F1 §5.2]
+      2. Name references: "the Master Operating Agreement", "Document B5"
+      3. Implicit references: "as set forth in the privacy policy"
+      
+      For each reference:
+      - Type: explicit | name | implicit
+      - Text: the actual text
+      - Target: document code if identifiable
+      - Section: section reference if any
+      
+      Valid document codes: A1, A2, A3, B1-B11, C1-C3, D1, E1-E2, F1-F2, N1-N5
+      
+      Respond in JSON format.
+
+# =============================================================================
+# TEST FRAMEWORK
+# Test cases to verify patterns work correctly
+# =============================================================================
+
+test_config:
+  run_on_save: true
+  fail_fast: false
+  report_format: "json"
+  
+  test_files:
+    - "_schema/validation/pattern_tests.yaml"
+    
+  coverage:
+    min_examples_per_pattern: 2
+    require_positive_and_negative: true

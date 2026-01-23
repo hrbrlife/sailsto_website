@@ -1,0 +1,130 @@
+# Company Master Data
+# Format: KEY=VALUE
+# Used by convert_dynamic.sh to populate placeholders
+
+# ============================================================================
+# COMPANY INFORMATION
+# ============================================================================
+COMPANY_LEGAL_NAME=CCASH MONEY SERVICES (US) SERIES LLC
+COMPANY_SHORT_NAME=CCASH
+COMPANY_DBA=CCASH Money Services
+COMPANY_EIN=88-1234567
+COMPANY_FINCEN_REG=31000123456789
+COMPANY_FORMATION_DATE=2024-01-15
+COMPANY_STATE=Montana
+COMPANY_STATE_CODE=MT
+
+# ============================================================================
+# REGISTERED AGENT
+# ============================================================================
+REG_AGENT_NAME=Northwest Registered Agent LLC
+REG_AGENT_ADDRESS=2030 11th Ave N
+REG_AGENT_STREET=2030 11th Ave N
+REG_AGENT_CITY=Great Falls
+REG_AGENT_STATE=MT
+REG_AGENT_ZIP=59401
+
+# ============================================================================
+# PRINCIPAL OFFICE
+# ============================================================================
+PRINCIPAL_ADDRESS=123 Main Street, Suite 400
+PRINCIPAL_STREET=123 Main Street, Suite 400
+PRINCIPAL_CITY=Helena
+PRINCIPAL_STATE=MT
+PRINCIPAL_ZIP=59601
+PRINCIPAL_FULL=123 Main Street, Suite 400, Helena, MT 59601
+
+# ============================================================================
+# MAILING ADDRESS
+# ============================================================================
+MAILING_STREET=PO Box 1234
+MAILING_CITY=Helena
+MAILING_STATE=MT
+MAILING_ZIP=59601
+
+# ============================================================================
+# CONTACT INFORMATION
+# ============================================================================
+COMPANY_PHONE=(406) 555-0100
+COMPANY_EMAIL=legal@ccash.io
+COMPANY_FAX=(406) 555-0101
+
+# ============================================================================
+# ORGANIZER / INITIAL MEMBER
+# ============================================================================
+ORGANIZER_NAME=John A. Smith
+ORGANIZER_TITLE=Managing Member
+ORGANIZER_ADDRESS=456 Oak Avenue
+ORGANIZER_CITY=Billings
+ORGANIZER_STATE=MT
+ORGANIZER_ZIP=59101
+INITIAL_MEMBER_TYPE=Individual
+INITIAL_MEMBER_JURISDICTION=Montana
+
+# ============================================================================
+# OFFICERS (with addresses)
+# ============================================================================
+CEO_NAME=John A. Smith
+CEO_TITLE=Chief Executive Officer
+CEO_ADDRESS=456 Oak Avenue, Billings, MT 59101
+
+CFO_NAME=Jane B. Doe
+CFO_TITLE=Chief Financial Officer
+CFO_ADDRESS=789 Pine Street, Helena, MT 59601
+
+CCO_NAME=Robert C. Johnson
+CCO_TITLE=Chief Compliance Officer
+CCO_ADDRESS=321 Elm Drive, Great Falls, MT 59401
+
+CTO_NAME=Sarah D. Williams
+CTO_TITLE=Chief Technology Officer
+CTO_ADDRESS=654 Maple Court, Missoula, MT 59801
+
+CMO_NAME=Michael E. Brown
+CMO_TITLE=Chief Marketing Officer
+CMO_ADDRESS=987 Cedar Lane, Bozeman, MT 59715
+
+# ============================================================================
+# TREASURY / OPERATING SERIES
+# ============================================================================
+SERIES_T1_NAME=Treasury Series (T-1)
+SERIES_T1_CODE=T-1
+SERIES_T1_PURPOSE=Capital reserves and investments
+
+SERIES_T2_NAME=Operating Series (T-2)
+SERIES_T2_CODE=T-2
+SERIES_T2_PURPOSE=Day-to-day operations and overhead
+
+SERIES_T3_NAME=Compliance Series (T-3)
+SERIES_T3_CODE=T-3
+SERIES_T3_PURPOSE=Regulatory compliance and legal
+
+# ============================================================================
+# FINANCIAL DEFAULTS
+# ============================================================================
+MIN_CAPITAL_REQUIREMENT=100000
+INSURANCE_COVERAGE=1000000
+BOND_AMOUNT=500000
+ANNUAL_AUDIT_FEE=25000
+
+# Authority Thresholds
+CONTRACT_THRESHOLD=25,000
+HIRING_THRESHOLD=75,000
+CAPEX_THRESHOLD=10,000
+CAPITAL_CONTRIBUTION=100,000
+
+# Officer Compensation
+CEO_SALARY=150,000
+CFO_SALARY=125,000
+CTO_SALARY=130,000
+CCO_SALARY=120,000
+CMO_SALARY=115,000
+
+# ============================================================================
+# REGISTRATION NUMBERS (example)
+# ============================================================================
+MT_SOS_ID=E1234567
+MT_ABN_NUMBER=001-123456
+
+# OWNERSHIP
+INITIAL_MEMBER_OWNERSHIP_PERCENT=100

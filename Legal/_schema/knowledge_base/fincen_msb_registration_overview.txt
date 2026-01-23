@@ -1,0 +1,84 @@
+# Fincen Msb Registration Overview
+Source: Cleaned from browser text dump
+Original file: fincen_msb_registration_overview.txt
+---
+
+Money Services Business (MSB) Registration | FinCEN.gov
+
+Here’s how you know
+
+Here’s how you know
+
+Financial Crimes Enforcement Network
+
+Enter Search Term(s):
+
+Breadcrumb
+
+Home
+
+Money Services Business (MSB)...
+
+Money Services Business (MSB) Registration
+
+NOTICE: On February 24, 2012, the Financial Crimes Enforcement Network (FinCEN) issued a final notice requiring the electronic filing of most FinCEN reports by July 1, 2012. Institutions are strongly encouraged to begin using the BSA E-Filing System as soon as possible. For more information about mandatory E-Filing, please see our Frequently Asked Questions (FAQs), and the E-Filing webinar.With few exceptions, each money services business (MSB) must register with the Department of the Treasury. A person that is an MSB solely because that person serves as an agent of another MSB is not required to register.Registration of an MSB is the responsibility of the owner or controlling person of the MSB and must be filed by the registration deadline. The form, Registration of Money Services Business, FinCEN Form 107, must be completed and signed by the owner or controlling person and filed within 180 days after the date on which the MSB is established.Registration must be renewed every two years. Re-registration is required in limited circumstances.A copy of the filed registration form and other supporting documentation must be retained at a location in the United States for a period of five years.Penalties. Civil and criminal penalties may be imposed for violation of the registration requirement.Registration FormFinCEN Announces Electronic Filing For MSB RegistrationsRegulationFact Sheet This guidance is intended to clarify general issues arising under 31 CFR Chapter X (formerly 31 CFR Part 103). The guidance does not replace or supersede the regulations.
+
+Casinos
+
+Depository Institutions
+
+Insurance
+
+Money Services Businesses
+
+MSB Registration
+
+MSB Registrant Search
+
+Mortgage Co / Broker
+
+Precious Metals / Jewelry
+
+Securities / Futures
+
+Header
+QUICK LINKS
+
+314(b) Fact Sheet
+BSA E-Filing System
+General Information about the MSB Registrant Search Web page
+Technical Help
+MSB Registrant Search Web page
+Webinar on Prepaid Access Final Rule
+Webinar on MSBs Final Rule
+Webinar on the FinCEN CTR and DOEP
+Webinar on the FinCEN SAR
+Technical Specifications for FinCEN's New SAR, CTR and DOEP
+MSB Materials in English and Eight Foreign Languages
+MSB Examination Manual
+MSB Contact Information
+Chapter X Main Page
+
+Footer menu
+
+Home
+
+About
+
+Newsroom
+
+.icons-footer {
+position: relative;
+display: flex;
+flex-direction: row;
+justify-content: end;
+}
+.icons-footer a {
+display: block;
+}
+.icon-footer-sm {
+width: 35px;
+height: 35px;
+margin: 0 5px;
+}
+USA.gov | Regulations.gov | Treasury.gov | IRS.gov | Freedom of Information Act (FOIA) | NO FEAR Act | Vote.gov | Accessibility | Office of Equal Opportunity | Privacy Policy | Public Posting Notice of Finding of Discrimination | Security and Vulnerability Disclosure Policies (VDP) | Office of Inspector General

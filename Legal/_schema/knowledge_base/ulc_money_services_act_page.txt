@@ -1,0 +1,1166 @@
+
+
+
+
+
+	Money Services Act - Uniform Law Commission
+
+                
+                    window.i18nConfig = {
+                        initialLanguage: 'en',
+                        i18nPaths: {"en":"https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/en.d711bacb.json","fr":"https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/fr.c24098db.json","es":"https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/i18n/es.5f80097a.json"}
+                    };
+                var higherlogic_crestApi_origin = 'https://api.connectedcommunity.org'window.CDN_PATH = 'https://d3uf7shreuzboy.cloudfront.net'var filestackUrl = 'https://static.filestackapi.com/filestack-js/3.28.0/filestack.min.js'; var filestackUrlIE11 = 'https://d2x5ku95bkycr3.cloudfront.net/HigherLogic/JavaScript/filestack.ie11.min.js';(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','UA-48401811-2');
+	/* <![CDATA[ */
+	#AuxMenu img.icon { border-style:none;vertical-align:middle; }
+	#AuxMenu img.separator { border-style:none;display:block; }
+	#AuxMenu img.horizontal-separator { border-style:none;vertical-align:middle; }
+	#AuxMenu ul { list-style:none;margin:0;padding:0;width:auto; }
+	#AuxMenu ul.dynamic { z-index:1; }
+	#AuxMenu a { text-decoration:none;white-space:nowrap;display:block; }
+	#AuxMenu a.static { text-decoration:none;border-style:none;padding-left:0.15em;padding-right:0.15em; }
+	#AuxMenu a.popout { background-image:url("/WebResource.axd?d=YAYach_zykzn7tRotFpEUhNQdcc-UoX1bDWo-6GhPrYJDK6ttaq2JPbh-3nH7oFgsZt8JeDmDFTslj7mqh9tE5D5JYukQrT3066kCcTUv-o1&t=638628063619783110");background-repeat:no-repeat;background-position:right center;padding-right:14px; }
+	/* ]]> */
+
+
+	
+	
+    
+    
+
+	
+	
+
+	
+
+	
+		
+
+
+
+
+
+
+//<![CDATA[
+$(document).ready(function () { 
+                                            hl_common_util_attach_dropdown_config('ManageDropdownMainCopy_ctl26_ManageDropDown639014639566901219',false,'text-center');
+                                        });//]]>
+
+
+
+
+
+//<![CDATA[
+(window.Sys && Sys._Application && Sys.Observer)||document.write('');//]]>
+
+
+
+
+            
+			
+			
+			
+				
+				
+			
+
+
+			
+                                                
+                                                    &nbsp;&nbsp;
+                                                    
+                                                
+                                        
+			
+			
+			
+			
+			
+			
+
+			
+                
+                
+                    var formTokenElement = document.getElementsByName('__HL-RequestVerificationToken')[0];
+                    var formToken = formTokenElement? formTokenElement.value : '';
+                    window.fetchOCApi = function(url, params) {
+                        return fetch(url, {
+                            method: 'POST',
+                            body: JSON.stringify(params),
+                            headers: {
+                                RequestVerificationFormToken: formToken,
+                                'Content-Type': 'application/json'
+                            }
+                        }).then(function(response) {
+                            return response.json();
+                        }).then(function(body) {
+                            return body.data
+                        });
+                    }
+                
+            
+                
+            <div id="__hl-activity-trace" 
+                traceId="2b94bfbc4e3fb14eceb49a1eadc54c8b"
+                spanId="e2881cc8d594349f"
+                tenantCode="UNIFORMLAWS"
+                micrositeKey="b7c515db-1895-4387-bb2d-ee99e58c0066"
+                navigationKey="80483666-0d99-470e-b0ed-eabb071cd38e"
+                navigationName="viewdocument"
+                viewedByContactKey="00000000-0000-0000-0000-000000000000"
+                pageOrigin="http://www.uniformlaws.org"
+                pagePath="/viewdocument/final-act-8"
+                referrerUrl=""
+                userHostAddress="102.160.62.42 "
+                userAgent="curl/7.88.1"
+            >
+                
+                
+                 
+                window.reactroot_webpackPublicPath = 'https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/ReactRoot/'
+                 
+                  
+                
+                    window.hl_tinyMceIncludePaths =  {
+                        cssIncludes: 'https://d2x5ku95bkycr3.cloudfront.net/HigherLogic/Font-Awesome/6.4.2-pro/css/all.min.css|https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css|https://d2x5ku95bkycr3.cloudfront.net/HigherLogic/bootstrap/3.4.1/css/bootstrap.min.css|https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/Desktop/Bundles/Desktop_bundle.min.339fbc5a533c58b3fed8d31bf771f1b7fc5ebc6d.hash.css|https://d2x5ku95bkycr3.cloudfront.net/HigherLogic/jquery/jquery-ui-1.13.3.min.css|https://d132x6oi8ychic.cloudfront.net/higherlogic/microsite/generatecss/e88a339c-44c5-4012-99bc-a57a656f0cbf/e6386387-1ee0-4394-9514-cb524f578ef7/639005393542600000/34|file://fonts.googleapis.com/css%3Ffamily=Lato:100,400,700,900|https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css|file://fonts.googleapis.com/css%3Ffamily=Vollkorn:400,700',
+                        tinymcejs: 'https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/Desktop/JS/Common/hl_common_ui_tinymce.97e0fbb759a9b9238760d4558ef3b62457430552.hash.js',
+                        hashmentionjs: 'https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/Desktop/JS/Common/hl_common_ui_tinymce_hashmention.94b265db0d98038d20e17308f50c5d23682bf370.hash.js',
+                        mentionjs: 'https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/Desktop/JS/Common/hl_common_ui_tinymce_mention.a35f893e40ce48b298979135724cd9e6ad18dde1.hash.js',
+                        hashtagjs: 'https://d3uf7shreuzboy.cloudfront.net/WebRoot/stable/Desktop/JS/Common/hl_common_ui_tinymce_hashtag.41911401f95a96298bc047bf869a84f8f292b734.hash.js'
+                    };
+                
+                
+                    window.addEventListener('DOMContentLoaded', function (){
+                        window.renderReactRoot(
+                            [], 
+                            'page-react-root', 
+                            {"tenant":{"name":"Uniform Law Commission","logoPath":"https://higherlogicdownload.s3.amazonaws.com/UNIFORMLAWS/b7c515db-1895-4387-bb2d-ee99e58c0066/UploadedImages/ULC%20Logo%20Web%20Small.png","contactSummary":"Phone: (312) 450-6600FAX: (312) 450-6601email: info@uniformlaws.org"},"communityKey":"cf8b649a-114c-4bc9-8937-c4ee17148a1b","micrositeKey":"b7c515db-1895-4387-bb2d-ee99e58c0066","canUserEditPage":false,"isUserAuthenticated":false,"isUserSuperAdmin":false,"isUserCommunityAdmin":false,"isUserSiteAdmin":false,"isUserCommunityModerator":false,"currentUserContactKey":"00000000-0000-0000-0000-000000000000","isTopicCommunity":false,"isSelfModerationCommunity":false,"useCommunityWebApi":false,"loginUrl":"https://uniformlaws.b2clogin.com/UniformLaws.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_SignInV2&client_id=5e5c4a64-d55b-4271-8f1f-7e43801eba50&nonce=defaultNonce&redirect_uri=https%3A%2F%2Fwww.uniformlaws.org&scope=openid&response_type=id_token&response_mode=query&state=","hasTranslationsProduct":false,"colorPickerDefaults":{"primaryColor":null,"textOnPrimary":null,"secondaryColor":null,"textOnSecondary":null,"linkColor":null,"linkHoverColor":null,"footerBackgroundColor":null,"footerTextColor":null}}
+                        )
+                    });
+                
+                
+                
+                    
+                    
+                        
+                            
+                        
+                        
+                            
+                        
+                    
+                    
+                
+            
+            
+
+			
+				
+					
+						
+							
+							
+							
+								Skip to main content (Press Enter).
+								
+									
+										
+											
+											
+												
+													
+
+
+
+    
+        
+        $(document).ready(function () {
+            $('.Picture_Profile').tipTip({ delay: 200 }); });
+
+        function toggleHelp() {
+            
+            if ($("ul#CompleteBarHelpContainer").is(":visible")) {
+                $("ul#CompleteBarHelpContainer").hide();
+            } else {
+                $("ul#CompleteBarHelpContainer").show();
+            }
+        }
+
+        // Added as onClick for logoutLink on back end if opted in
+        // On logout, removes the CREST API cookie that was added on login, whose value is a token used to authenticate to the API
+        function removeApiToken(tenantKey, token) {
+            hl_webapi_remove_cookie(tenantKey, token, tenantKey, "HLApiPassThrough");
+
+            window.location = "";
+            return false;
+        }
+
+        $(document).on('click', "span.CompleteBarClose", function (e) {
+
+            e.stopPropagation();
+            toggleHelp();
+            $(".btn-group").find('button#BtnShowProfile').dropdown('toggle');
+        });
+
+	
+
+    
+
+    
+    
+    
+    
+	
+        Sign in
+    
+
+
+
+
+												
+											
+											
+											
+												
+													Skip auxiliary navigation (Press Enter).
+												
+												
+													
+	
+		Follow ULCSchedule of Events
+	
+
+												
+											
+										
+									
+                                    
+									
+										
+											
+												
+													
+											
+											
+												
+													
+											
+											Better Laws. Stronger States.
+										
+									
+								
+							
+							
+							
+							
+	
+$('#MainCopy_ContentWrapper, #MainCopy_ContentWrapper > .row').each(function (i) {
+    $(this).addClass('row-' + i);
+});
+
+	
+$('.make-btn-primary .btn-default').removeClass('btn-default').addClass('btn-primary');
+
+	
+$('.nav li a, ul.hs li a').each(function(hsnav){
+$(this).parent().addClass(function( index ) {
+return "nav-" + $(this).children('a').text().replace(/ /g,'').replace(/&/g,"");
+}); });
+
+	
+function activateDesignBeta() {
+    // Create a new  element
+  const style = document.createElement('style');
+  style.type = 'text/css';
+  // Define the CSS styles
+  const css = `
+    #HEADER {
+      height: 100px;
+    }
+    #DesktopLogoDiv > a > img {
+      height: 50px;
+      width: auto;
+    }
+    /* Search button */
+    #SearchControl_WholeSearch {
+        /* margin-top: 100px; */
+      margin-top: 30px;
+      width: 90%;
+      margin-bottom: 10px;
+    }
+    #searchColumn {
+      border-radius: 90px;
+      margin-right: -60px;
+      max-width: 700px !important;
+    }
+    #SearchControl_SearchTerm {
+      border-bottom-left-radius: 16px !important;
+      border-top-left-radius: 16px !important;
+    }
+    #SearchControl_SearchButton {
+      border: 1px solid #012D69;
+      border-top-right-radius: 16px !important;
+      border-bottom-right-radius: 16px !important;
+    }
+    .dropdown-menu {
+      border: .5px solid #012D69;
+      border-radius: 5px !important;
+    }
+    .form-control {
+      border-radius: 100%;
+    }
+    .navbar {
+      margin-bottom: 100px;
+    }
+    .nav.navbar-nav.ae-exclude {}
+    /* Study committees */
+    .row.rowContainer.community-list {
+      border-width: 6px 1px 1px;
+      border-color: #012D69 #ccc #ccc;
+      border-radius: 5px;
+      display: flex;
+      padding-left: 30px;
+      flex-direction: row;
+      align-items: center;
+      padding-right: 0px;
+    }
+    .row.rowContainer.community-list>:nth-child(2) > div > div {
+      padding: 0px;
+    }
+    .row.rowContainer.community-list>:nth-child(2) > div > div > div {
+      display: flex;
+      margin-right: 0px;
+      flex-direction: column;
+      justify-content: right;
+    }
+    .row.rowContainer.community-list>:nth-child(2) > div > div > div > a {
+      margin-right: 0px;
+      font-size: 18px;
+    }
+    /* Upcoming Events */
+    .ContentUserControl.featured > .HLLandingControl.HLEventList > div.Content > div.row > div > ul > li {
+      height: auto;
+      padding: 16px;
+      box-sizing: border-box;
+      background-color: rgb(255,
+        255,
+        255);
+      border-radius: 5px;
+      border: 1px solid rgb(230,
+        230,
+        230);
+      margin-bottom: 5px;
+      display: block;
+    }
+    .ContentUserControl.featured > .HLLandingControl.HLEventList > div.Content > div.row > div > ul > li:hover {
+      cursor: pointer;
+      box-shadow: 0px 4px 16px 0px rgba(66,
+        66,
+        66,.2);
+    }
+  `;
+  // Set the CSS styles as the content of the  element
+  style.textContent = css;
+  // Append the  element to the  of the document
+    document.head.appendChild(style);
+    AddClickEventListenerToUpcomingEvents()
+}
+function AddClickEventListenerToUpcomingEvents(){
+     var ulElement =
+        document.querySelector("div.ContentUserControl.featured> .HLLandingControl.HLEventList > div.Content > div.row >div > ul")
+    console.log('ulElement', ulElement)
+    // Evaluate the XPath expression to get the ul element
+    // var ulElement = document.evaluate(xpathExpression, document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
+    if (ulElement) {
+        // Get all li elements within the ul group
+        var liElements = ulElement.querySelectorAll('li');
+        // Attach the click event listener to each li element
+        liElements.forEach(function (li) {
+            var link = li.querySelector('a') || li.querySelector('div > div > h3 > a');
+            if (link) {
+                li.addEventListener('click', function () {
+                    link.click();
+                });
+                // Prevent the event from propagating to nested elements
+                link.addEventListener('click', function (e) {
+                    e.stopPropagation();
+                });
+            }
+        });
+    } else {
+        console.error('UL element not found using the provided XPath expression.');
+    }
+}
+// Make the function accessible globally
+window.activateDesignBeta = activateDesignBeta;
+
+						
+					
+					
+                        
+							
+								Skip main navigation (Press Enter).
+								
+									
+										
+
+											
+											
+												Toggle navigation
+												
+												
+												
+												
+											
+										
+										
+											
+												
+													
+														Acts Overview What is a Uniform Act?What is a Model Act?Current Acts New ActsSearch ActsBrowse ActsUniform Commercial CodeProjects Overview Types of CommitteesNew Project CriteriaCurrent Committees Search CommitteesBrowse DraftingBrowse StudyBrowse OtherBrowse AllMeetings and Events Committee MeetingsMeeting CalendarRequest to Schedule a Web MeetingGrant ApplicationNews and Publications NewsPublicationsReprint RequestSearch DocumentsVideosWebinar SeriesLegislation Legislative ActivityAbout ULC About UsLeadershipDelegationsFAQsStanding CommitteesEditorial BoardsConstitutionPoliciesSpotlight ULCCareers
+													
+													
+														
+															
+
+
+	System.import('Common/SearchBox.js').then(function () {
+
+       $('#SearchControl_SearchButton').click(function () {
+            $('#SearchControl_hiddenSearchButton').click();
+       });
+
+		$('#SearchControl_SearchInputs')
+			.hl_ui_common_searchBox({
+				controlId: 'SearchControl_SearchInputs',
+				inputId: 'SearchControl_SearchTerm',
+				buttonId: 'SearchControl_hiddenSearchButton'
+		});
+	});
+
+
+
+
+	
+
+
+
+	
+	
+		
+		
+			
+				
+				
+					
+						
+						
+					
+				
+				
+			
+		
+	
+	
+
+
+
+														
+														
+														
+														
+														
+													
+												
+											
+										
+									
+								
+								
+								
+							
+						
+                    
+
+					
+					
+				
+			
+			
+				
+				
+				
+					
+					
+					
+					
+						
+					
+					
+	
+						
+						
+
+						
+
+						
+							Money Services Act
+						
+                        
+
+						
+
+
+						
+                        
+						
+						
+           
+        
+		
+
+
+    
+        $(".community-tabs-container").parent().addClass("community-tabs-container-outer");
+    
+    
+    
+    
+    
+			
+     View Only
+
+		
+
+
+
+    
+    
+        
+            Home
+            
+        
+        
+            Discussion
+            0
+        
+        
+            Documents
+            3
+        
+        
+        
+        
+        
+        
+        
+        
+    
+    
+    
+        
+        
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+    
+      
+ 
+    
+
+
+
+    System.import('Directory/CommunityManagementGear.js').then(function() {
+        
+        $('#MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_CommunityManagementGearDropDown').communityManagementGear({
+            gearId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_CommunityManagementGearDropDown',
+            emailNotifyId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_EmailNotificationBtnGroup',
+            selectedNotifyOptionId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_SelectedNotificationOption',
+            allowH1Fallback: 'True',
+            controlIDToAttachToH1: 'CommunityManagementGearMainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear639014639568660364',
+            defaultAlign: '',
+            changeEmailId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_ChangeLink',
+            emailTextId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_UserEmailAddress',
+            saveText: 'Save',
+            savingText: 'Saving...',
+            cancelText: 'Cancel',
+            emailPlaceHolder: 'Enter email',
+            additionalHtmlContentLiId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_AdditionalHTMLContentLI',
+            additionalHtmlContentLinkId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_AdditionalHTMLContentLink',
+            additionalHTMLModalId: '#EditHtmlModal',
+            egroupKey: 'd3cd2f76-4b91-4791-9100-e168dbdb074f',
+            subscriptionType: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_subTypeHidden',
+            emailNotifyOptionBtnId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_EmailNotificationOptBtn',
+            leftColId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_leftCol',
+            rightColId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_rightCol',
+            gearDropDownPanel: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_CommunityManagementGearDDPanel',
+            emailNotificationStateId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_EmailNotificationBtnGroup',
+            communityManagementGearBtnId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_communityManagementGearBtn',
+            contactHasEmailAddressId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_ContactHasEmailAddress',
+            liAuxTitleId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_liAuxTitle',
+            inviteMembersToEventsLinkId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_InviteMembersToEventsLink',
+            emailNotificationOptBtnLoadingId: 'MainCopy_ctl02_CommunityDescriptionDashboard1_CommunityManagementGear_EmailNotificationOptBtnLoading'
+        });
+    });
+
+
+
+
+    
+    
+
+    
+
+
+	
+
+	
+
+	
+
+	
+		
+
+
+
+
+    
+    function entryRating_onThumbsUpDownClick(elem, isThumbsUp) {
+
+        var $elem = $(elem);
+        var $thumbsUpDown = $elem.closest('.thumbs-up-down');
+
+        var $thumbsUp = isThumbsUp ? $elem : $thumbsUpDown.find('button.thumbs-up');
+        var $thumbsDown = isThumbsUp ? $thumbsUpDown.find('button.thumbs-down') : $elem;
+
+        var $thumbsUpAmount = $thumbsUpDown.find('.thumbs-up-amount');
+        var $thumbsDownAmount = $thumbsUpDown.find('.thumbs-down-amount');
+
+        var thumbsUpVal = +$thumbsUpAmount.text();
+        var thumbsDownVal = +$thumbsDownAmount.text();
+
+
+        if (isThumbsUp) {
+
+            // check if the class btn-success is there
+            if ($thumbsUp.hasClass('btn-success')) {
+                // remove the success and then decrement
+                $thumbsUp.removeClass('btn-success').addClass('btn-default');
+                $thumbsUpAmount.text(thumbsUpVal - 1);
+            } else {
+                $thumbsUp.removeClass('btn-default').addClass('btn-success');
+                $thumbsUpAmount.text(thumbsUpVal + 1);
+
+                // make sure that the btn down has no btn danger
+                if ($thumbsDown.hasClass('btn-danger')) {
+                    $thumbsDown.removeClass('btn-danger').addClass('btn-default');
+                    $thumbsDownAmount.text(thumbsDownVal - 1);
+                }
+            }
+
+        } else {
+
+            // check if the class btn-success is there
+            if ($thumbsDown.hasClass('btn-danger')) {
+                // remove the success and then decrement
+                $thumbsDown.removeClass('btn-danger').addClass('btn-default');
+                $thumbsDownAmount.text(thumbsDownVal - 1);
+            } else {
+                $thumbsDown.removeClass('btn-default').addClass('btn-danger');
+                $thumbsDownAmount.text(thumbsDownVal + 1);
+
+                // make sure that the btn down has no btn danger
+                if ($thumbsUp.hasClass('btn-success')) {
+                    $thumbsUp.removeClass('btn-success').addClass('btn-default');
+                    $thumbsUpAmount.text(thumbsUpVal - 1);
+                }
+            }
+        }
+
+    }
+
+
+
+    .thumbs-up-down {
+        margin-top: 4px;
+    }
+
+
+
+    
+         Back to Library
+        
+    
+
+
+
+			
+    
+        
+            Final Act&nbsp;
+            
+        
+    
+    
+        
+            
+            
+            
+            
+            
+				
+        
+            function showLikesModal(itemkey) {
+                var req = {};
+                req.ItemKey = itemkey;
+
+                hl_common_ui_blockUI();
+                $.ajax({
+                    contentType: 'application/json; charset=utf-8',
+                    type: 'POST',
+                    data: JSON.stringify(req),
+                    dataType: 'html',
+                    url: '/HigherLogic/UI/MVC/common/itemrating/GetRecommendedByModalPartial',
+                    success: function (data) {
+                        var $nom = $('#recommended-by-modal');
+                        if ($nom.length > 0) {
+                            $nom.remove();
+                        }
+                        $('body').append(data);
+                        $('#recommended-by-modal').modal('show');
+                        hl_common_ui_unBlockUI();
+                    },
+                });               
+            }
+
+            function showDemographicLikesModal(demographicKey, contactKey) {
+                var req = {};
+                req.DemographicKey = demographicKey;
+                req.ContactKey = contactKey;
+
+                hl_common_ui_blockUI();
+                $.ajax({
+                    contentType: 'application/json; charset=utf-8',
+                    type: 'POST',
+                    data: JSON.stringify(req),
+                    dataType: 'html',
+                    url: '/HigherLogic/UI/MVC/common/itemrating/GetDemographicRecommendedByModalPartial',
+                    success: function (data) {
+                        var $nom = $('#recommended-by-modal');
+                        if ($nom.length > 0) {
+                            $nom.remove();
+                        }
+                        $('body').append(data);
+                        $('#recommended-by-modal').modal('show');
+                        hl_common_ui_unBlockUI();
+                    },
+                });
+            }
+        
+        
+        
+                
+            
+            Recommend
+                        
+        
+        
+        
+        
+        
+            
+        
+    
+			
+
+    
+
+      
+
+            
+            
+            
+        
+    
+
+		
+
+	
+		
+
+
+
+	
+
+	
+		
+
+
+    
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+
+        
+    
+
+
+
+
+	
+
+	
+		
+
+
+    
+        
+            Attachment(s)
+            
+                
+            
+        
+    
+    
+        
+        
+                
+                
+                    
+                        
+                            
+                                
+                            
+                            
+                                
+                                    
+                                
+                                UMSA_Final04.pdf
+                                
+                                &nbsp;
+                                
+                                    325 KB
+                                
+                                &nbsp;
+                                
+                                    1 version
+                                
+                                Uploaded - 01-10-2022
+                                
+                                
+                                
+                            
+                        
+                        
+                            &nbsp; 
+                            
+                                Download
+                            
+                        
+                    
+                
+                
+            
+            
+    
+    
+    
+    
+			
+        
+				
+            
+                
+                    
+                        Download Document
+                    
+                    
+                        
+                    
+                    
+                    
+                
+                
+                    
+                        Please accept the terms of the copyright associated with this attachment before downloading it. Click the link below to read the terms.
+                        
+                        
+                        
+                        
+                            Accept
+                        
+                        
+                    
+                
+            
+        
+			
+    
+		
+    
+
+
+
+    $(document).ready(function () {
+        var uploadStateDivs = $('.upload-state-indicator');
+        $.each(uploadStateDivs, function (i, div) {
+            var $div = $(div);
+            $div.hl_ui_common_fileuploadstatus($div.data('document-file-key'), 'DocumentFile', function (done, result, timeout, ui) {
+                if (done) {
+                    ui.siblings('.processing-file-label')
+                           .hide();
+                    ui.siblings('.DocumentTitle')
+                        .attr('href', result.Url)
+                        .text(result.FileName);
+                    ui.closest('.file-container').find('.file-icon-img')
+                        .attr('src', result.ImgUrl);
+                    if (result.StatusCode === 'Complete') {
+                        ui.closest('.file-container')
+                            .find('.file-download-button')
+                            .removeClass('aspNetDisabled')
+                            .attr('href', result.ImgUrl);
+                    }
+                }
+            });
+        });
+    });
+
+    
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+        
+		
+        
+	
+        
+    
+
+						
+						
+
+						
+					
+
+					
+					
+					
+				
+
+			
+
+			
+				
+					
+					
+
+Contact Us
+ (312) 450-6600
+ info@uniformlaws.org
+
+
+Uniform Law Commission The Uniform Law Commission (ULC, also known as the National Conference of Commissioners on Uniform State Laws), established in 1892, provides states with non-partisan, well-conceived and well-drafted legislation that brings clarity and stability to critical areas of state statutory law.
+
+					
+						
+							
+	
+							
+
+							
+								
+								
+							
+						
+					
+					
+						
+							Copyright 2025 Connect. All rights reserved.
+						
+					
+					
+					
+					
+	
+$(function() {
+var randomInt = Math.floor((Math.random() * 1000) + 1);
+$('', {
+
+name: 'keepaliveiframe',
+id: 'keepaliveiframe',
+src: 'https://customer245975b41.portal.membersuite.com/KeepAlive.aspx?r=' + randomInt,
+style: 'display: none;'
+
+}).appendTo('body');
+
+});
+
+
+Privacy Policy | Terms of Use | Accessibility | Contact Us | © 2025 The National Conference of Commissioners on Uniform State Laws. All Rights Reserved.
+  
+
+	
+$('.lower-footer').appendTo('#MPOuterFooter');
+
+	
+$('.social').clone().addClass('socialhead').prependTo('#Logo > .col-md-12');
+
+	
+!function(){var b=function(){window.__AudioEyeSiteHash = "d5aabbd2df60561aa67686ff7e309463"; var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();
+!function(){var b=function(){window.__AudioEyeSiteHash = "d5aabbd2df60561aa67686ff7e309463"; var a=document.createElement("script");a.src="https://wsmcdn.audioeye.com/aem.js";a.type="text/javascript";a.setAttribute("async","");document.getElementsByTagName("body")[0].appendChild(a)};"complete"!==document.readyState?window.addEventListener?window.addEventListener("load",b):window.attachEvent&&window.attachEvent("onload",b):b()}();
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-QTE4ZZ9S3Q');
+
+					
+						
+					
+					
+
+				
+			
+
+			
+				
+					
+						Powered by Higher Logic
+					
+				
+			
+			
+                                                
+                                                    
+                                                
+                                             
+			
+			
+		
+
+
+//<![CDATA[
+var _suppressGlobalPopupContainer = false;
+              
+                                    Sys.Application.add_load(GlobalApplicationLoadHandler);
+
+                                    function GlobalApplicationLoadHandler(sender, args) {
+                                        var prm = Sys.WebForms.PageRequestManager.getInstance();
+                                        if (!prm.get_isInAsyncPostBack()) {
+                                            prm.add_initializeRequest(initRequest);
+                                            prm.add_endRequest(endRequest);
+                                        }
+                                    }
+                                    function initRequest(sender, args) {
+                                        if (!_suppressGlobalPopupContainer) {
+                                            hl_common_ui_blockUI();
+                                        }
+                                    }
+
+                                    function endRequest(sender, args) {
+                                         hl_common_ui_unBlockUI();
+                                    }window.__TsmHiddenField = $get('ScriptManager1_TSM');hl_resourcelibrary.renameBreadcrumbTitle('Final Act');//]]>
+
+new Sys.WebForms.Menu({ element: 'AuxMenu', disappearAfter: 500, orientation: 'horizontal', tabIndex: 0, disabled: false });
+
+//<![CDATA[
+$(function() { $('#MainCopy_ctl02_communityJoinLeave_lblLock').popover({title: 'View Only',html: true,container: 'body',placement: 'auto bottom',trigger: 'click hover focus',content: 'Membership is limited.'}); });//]]>
+
+
+
+
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"cancelControlID":"MainCopy_ctl21_CloseButton","dynamicServicePath":"/viewdocument/final-act-8","id":"MainCopy_ctl21_DocumentLicensePopup","okControlID":"MainCopy_ctl21_BottomCloseButton","popupControlID":"MainCopy_ctl21_DocumentLicenseControllerPanel","popupDragHandleControlID":"MainCopy_ctl21_DocumentLicenseModalPopupPanel"}, null, null, $get("MainCopy_ctl21_TempBtn"));
+});
+//]]>
+
+
+	
+	
+
+        
+
+		$(document).ready(function () {
+
+			var path = window.location.pathname;
+			var lastChar = path.substr(-1); // Selects the last character
+			if (lastChar != '?' && lastChar != '/' && lastChar != ';') { // If the last character is not a slash
+				path = path + '/'; // Append a slash to it.
+			}
+
+			$('ul.navbar-nav a').each(function () {
+				var myHref = $(this).attr('href').split("?")[0];
+				var lastChar2 = myHref.substr(-1); // Selects the last character
+				if (lastChar2 != '?' && lastChar2 != '/' && lastChar2 != ';') { // If the last character is not a slash
+					myHref = myHref + '/'; // Append a slash to it.
+				}
+				if (path == myHref) {
+					$(this).parents('li').last().addClass('active current-page');
+					$(this).parent('li').addClass('active current-page');
+				}
+			});
+
+
+
+			$('#modalTags').on('tagAdded',
+				function () {
+					var oldCount = parseInt($('#litCommunityTagsCount').text());
+					$('#litCommunityTagsCount').text(oldCount + 1);
+				}).on('tagRemoved',
+					function () {
+						var oldCount = parseInt($('#litCommunityTagsCount').text());
+						$('#litCommunityTagsCount').text(oldCount - 1);
+					});
+
+			var isImpersonating = false;
+
+            
+
+			let iframe = document.querySelector('iframe[id^="easyXDM_HLeasyXDM"]');
+			iframe.ariaHidden = 'true';
+		});
+
+        //var btn = $.fn.button.noConflict(); // reverts $.fn.button to jqueryui btn
+        //$.fn.btn = btn; // assigns bootstrap button functionality to $.fn.btn
+    
+
+
+
