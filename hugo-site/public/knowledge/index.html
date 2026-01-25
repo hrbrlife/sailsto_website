@@ -17,11 +17,16 @@
     
     
     
-    <link rel="stylesheet" href="../assets/fonts/fonts.css">
     
-    <link rel="stylesheet" href="../styles.css">
     
-    <link rel="stylesheet" href="../assets/css/glossary.css">
+    
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    
+    <link rel="stylesheet" href="/styles.css">
+    
+    <link rel="stylesheet" href="/assets/css/glossary.css">
+    
+    <link rel="stylesheet" href="/assets/css/knowledge-index.css">
     
     
     
@@ -82,421 +87,420 @@
     
     <main id="main-content">
     
-<pre><code>&lt;section class=&quot;page-hero&quot;&gt;
-    &lt;span class=&quot;section-label&quot;&gt;Learn&lt;/span&gt;
-    &lt;h1 class=&quot;section-title&quot;&gt;Knowledge Base&lt;/h1&gt;
-    &lt;p class=&quot;section-desc&quot;&gt;Everything you need to understand hybrid securities infrastructure — from blockchain basics to regulatory compliance.&lt;/p&gt;
-    &lt;div class=&quot;kb-search&quot;&gt;
-        &lt;input type=&quot;text&quot; id=&quot;kb-search-input&quot; placeholder=&quot;Search articles, guides, and terms...&quot; class=&quot;kb-search-input&quot;&gt;
-        &lt;svg class=&quot;kb-search-icon&quot; viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
-            &lt;circle cx=&quot;11&quot; cy=&quot;11&quot; r=&quot;8&quot;/&gt;
-            &lt;path d=&quot;M21 21l-4.35-4.35&quot;/&gt;
-        &lt;/svg&gt;
-    &lt;/div&gt;
-&lt;/section&gt;
-&lt;section class=&quot;kb-tabs-section&quot;&gt;
-    &lt;div class=&quot;kb-container&quot;&gt;
-        &lt;div class=&quot;kb-tabs&quot; id=&quot;kb-tabs&quot;&gt;
-            &lt;button class=&quot;kb-tab active&quot; data-category=&quot;all&quot;&gt;All Resources&lt;/button&gt;
-            &lt;button class=&quot;kb-tab&quot; data-category=&quot;guides&quot;&gt;Guides&lt;/button&gt;
-            &lt;button class=&quot;kb-tab&quot; data-category=&quot;docs&quot;&gt;Documentation&lt;/button&gt;
-            &lt;button class=&quot;kb-tab&quot; data-category=&quot;faq&quot;&gt;FAQ&lt;/button&gt;
-            &lt;button class=&quot;kb-tab&quot; data-category=&quot;glossary&quot;&gt;Glossary&lt;/button&gt;
-            &lt;button class=&quot;kb-tab&quot; data-category=&quot;blog&quot;&gt;Blog&lt;/button&gt;
-            &lt;button class=&quot;kb-tab&quot; data-category=&quot;roadmap&quot;&gt;Roadmap&lt;/button&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/section&gt;
-&lt;section class=&quot;kb-featured&quot;&gt;
-    &lt;div class=&quot;kb-container&quot;&gt;
-        &lt;h2 class=&quot;kb-section-title&quot;&gt;Featured Resources&lt;/h2&gt;
-        &lt;div class=&quot;kb-featured-grid&quot;&gt;
-            &lt;a href=&quot;/knowledge/docs/getting-started/&quot; class=&quot;kb-card kb-card-featured&quot; data-category=&quot;docs&quot;&gt;
-                &lt;div class=&quot;kb-card-icon&quot;&gt;🚀&lt;/div&gt;
-                &lt;div class=&quot;kb-card-content&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Getting Started&lt;/span&gt;
-                    &lt;h3&gt;Quick Start Guide&lt;/h3&gt;
-                    &lt;p&gt;New to Sails.to? This guide walks you through the platform, from account setup to your first transaction.&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;span class=&quot;kb-card-arrow&quot;&gt;→&lt;/span&gt;
-            &lt;/a&gt;
-            &lt;a href=&quot;/knowledge/docs/hybrid-architecture/&quot; class=&quot;kb-card kb-card-featured&quot; data-category=&quot;docs&quot;&gt;
-                &lt;div class=&quot;kb-card-icon&quot;&gt;🔗&lt;/div&gt;
-                &lt;div class=&quot;kb-card-content&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Architecture&lt;/span&gt;
-                    &lt;h3&gt;Understanding the TradFi Bridge&lt;/h3&gt;
-                    &lt;p&gt;Deep dive into how tokens flow between Solana and traditional custody via ISIN conversion.&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;span class=&quot;kb-card-arrow&quot;&gt;→&lt;/span&gt;
-            &lt;/a&gt;
-            &lt;a href=&quot;/knowledge/faq/&quot; class=&quot;kb-card kb-card-featured&quot; data-category=&quot;faq&quot;&gt;
-                &lt;div class=&quot;kb-card-icon&quot;&gt;❓&lt;/div&gt;
-                &lt;div class=&quot;kb-card-content&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Support&lt;/span&gt;
-                    &lt;h3&gt;Frequently Asked Questions&lt;/h3&gt;
-                    &lt;p&gt;Answers to the most common questions about tokenization, compliance, and using the platform.&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;span class=&quot;kb-card-arrow&quot;&gt;→&lt;/span&gt;
-            &lt;/a&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/section&gt;
-&lt;section class=&quot;kb-resources&quot;&gt;
-    &lt;div class=&quot;kb-container&quot;&gt;
-        &lt;div class=&quot;kb-resource-section&quot; data-category=&quot;guides&quot;&gt;
-            &lt;div class=&quot;kb-section-header&quot;&gt;
-                &lt;h2&gt;📚 Guides&lt;/h2&gt;
-                &lt;p&gt;Step-by-step tutorials and conceptual explanations&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;kb-grid&quot;&gt;
-                &lt;a href=&quot;/knowledge/guides/tokenization-101/&quot; class=&quot;kb-card&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Beginner&lt;/span&gt;
-                    &lt;h3&gt;Tokenization 101&lt;/h3&gt;
-                    &lt;p&gt;What are security tokens? How do they differ from utility tokens? A complete introduction.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;10 min read&lt;/span&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/guides/wyoming-dao-explained/&quot; class=&quot;kb-card&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Legal&lt;/span&gt;
-                    &lt;h3&gt;Wyoming DAO LLC Explained&lt;/h3&gt;
-                    &lt;p&gt;Understanding the legal structure that makes compliant blockchain-based securities possible.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;8 min read&lt;/span&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/guides/investor-eligibility/&quot; class=&quot;kb-card&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Compliance&lt;/span&gt;
-                    &lt;h3&gt;Investor Eligibility Requirements&lt;/h3&gt;
-                    &lt;p&gt;Accredited vs. professional investors, KYC/AML requirements, and geographic considerations.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;6 min read&lt;/span&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/guides/isin-conversion/&quot; class=&quot;kb-card&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Technical&lt;/span&gt;
-                    &lt;h3&gt;Token to ISIN Conversion&lt;/h3&gt;
-                    &lt;p&gt;How the TradFi Bridge converts Solana tokens to traditional securities identifiers.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;12 min read&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;kb-resource-section&quot; data-category=&quot;docs&quot;&gt;
-            &lt;div class=&quot;kb-section-header&quot;&gt;
-                &lt;h2&gt;📖 Documentation&lt;/h2&gt;
-                &lt;p&gt;Technical references and platform specifications&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;kb-grid&quot;&gt;
-                &lt;a href=&quot;/knowledge/docs/platform-overview/&quot; class=&quot;kb-card&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Overview&lt;/span&gt;
-                    &lt;h3&gt;Platform Architecture&lt;/h3&gt;
-                    &lt;p&gt;High-level overview of system components, data flows, and integration points.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;Technical&lt;/span&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/token-standard/&quot; class=&quot;kb-card&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Development&lt;/span&gt;
-                    &lt;h3&gt;Token Standard&lt;/h3&gt;
-                    &lt;p&gt;SPL token implementation details, metadata structure, and compliance extensions.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;Technical&lt;/span&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/api-reference/&quot; class=&quot;kb-card&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;API&lt;/span&gt;
-                    &lt;h3&gt;API Reference&lt;/h3&gt;
-                    &lt;p&gt;REST API endpoints for integration, authentication, and data retrieval.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;Technical&lt;/span&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/compliance-framework/&quot; class=&quot;kb-card&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Compliance&lt;/span&gt;
-                    &lt;h3&gt;Compliance Framework&lt;/h3&gt;
-                    &lt;p&gt;On-chain compliance rules, transfer restrictions, and regulatory hooks.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;Technical&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;kb-resource-section&quot; data-category=&quot;faq&quot;&gt;
-            &lt;div class=&quot;kb-section-header&quot;&gt;
-                &lt;h2&gt;❓ FAQ&lt;/h2&gt;
-                &lt;p&gt;Quick answers to common questions&lt;/p&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;kb-grid&quot;&gt;
-                &lt;a href=&quot;/knowledge/faq/#general&quot; class=&quot;kb-card&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;General&lt;/span&gt;
-                    &lt;h3&gt;General Questions&lt;/h3&gt;
-                    &lt;p&gt;What is Sails.to? How does it work? Is it safe?&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;12 questions&lt;/span&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/faq/#issuers&quot; class=&quot;kb-card&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;For Issuers&lt;/span&gt;
-                    &lt;h3&gt;Issuer FAQ&lt;/h3&gt;
-                    &lt;p&gt;How to launch a token, costs, timeline, and legal requirements.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;8 questions&lt;/span&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/faq/#investors&quot; class=&quot;kb-card&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;For Investors&lt;/span&gt;
-                    &lt;h3&gt;Investor FAQ&lt;/h3&gt;
-                    &lt;p&gt;How to invest, custody options, tax implications, and returns.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;10 questions&lt;/span&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/faq/#technical&quot; class=&quot;kb-card&quot;&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Technical&lt;/span&gt;
-                    &lt;h3&gt;Technical FAQ&lt;/h3&gt;
-                    &lt;p&gt;Blockchain details, wallet setup, and troubleshooting.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;6 questions&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;kb-resource-section&quot; data-category=&quot;glossary&quot;&gt;
-            &lt;div class=&quot;kb-section-header&quot;&gt;
-                &lt;h2&gt;📖 Glossary&lt;/h2&gt;
-                &lt;p&gt;Definitions of key terms and concepts&lt;/p&gt;
-                &lt;a href=&quot;/knowledge/glossary/&quot; class=&quot;kb-section-link&quot;&gt;View Full Glossary →&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;kb-glossary-preview&quot;&gt;
-                &lt;div class=&quot;kb-glossary-categories&quot;&gt;
-                    &lt;a href=&quot;glossary/index.html#finance&quot; class=&quot;kb-glossary-cat&quot;&gt;
-                        &lt;span class=&quot;kb-glossary-icon&quot; style=&quot;color: var(--gold);&quot;&gt;💰&lt;/span&gt;
-                        &lt;span class=&quot;kb-glossary-label&quot;&gt;Finance&lt;/span&gt;
-                        &lt;span class=&quot;kb-glossary-count&quot;&gt;6 terms&lt;/span&gt;
-                    &lt;/a&gt;
-                    &lt;a href=&quot;glossary/index.html#compliance&quot; class=&quot;kb-glossary-cat&quot;&gt;
-                        &lt;span class=&quot;kb-glossary-icon&quot; style=&quot;color: var(--navy);&quot;&gt;⚖️&lt;/span&gt;
-                        &lt;span class=&quot;kb-glossary-label&quot;&gt;Compliance&lt;/span&gt;
-                        &lt;span class=&quot;kb-glossary-count&quot;&gt;5 terms&lt;/span&gt;
-                    &lt;/a&gt;
-                    &lt;a href=&quot;glossary/index.html#legal&quot; class=&quot;kb-glossary-cat&quot;&gt;
-                        &lt;span class=&quot;kb-glossary-icon&quot; style=&quot;color: var(--crimson);&quot;&gt;📜&lt;/span&gt;
-                        &lt;span class=&quot;kb-glossary-label&quot;&gt;Legal&lt;/span&gt;
-                        &lt;span class=&quot;kb-glossary-count&quot;&gt;5 terms&lt;/span&gt;
-                    &lt;/a&gt;
-                    &lt;a href=&quot;glossary/index.html#technology&quot; class=&quot;kb-glossary-cat&quot;&gt;
-                        &lt;span class=&quot;kb-glossary-icon&quot; style=&quot;color: var(--slate);&quot;&gt;⚙️&lt;/span&gt;
-                        &lt;span class=&quot;kb-glossary-label&quot;&gt;Technology&lt;/span&gt;
-                        &lt;span class=&quot;kb-glossary-count&quot;&gt;4 terms&lt;/span&gt;
-                    &lt;/a&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;kb-glossary-featured&quot;&gt;
-                    &lt;h4&gt;Popular Terms&lt;/h4&gt;
-                    &lt;div class=&quot;kb-glossary-terms&quot;&gt;
-                        &lt;a href=&quot;/knowledge/glossary/security-token/&quot; class=&quot;glossary-term-pill&quot;&gt;Security Token&lt;/a&gt;
-                        &lt;a href=&quot;/knowledge/glossary/wyoming-dao-llc/&quot; class=&quot;glossary-term-pill&quot;&gt;Wyoming DAO LLC&lt;/a&gt;
-                        &lt;a href=&quot;/knowledge/glossary/isin/&quot; class=&quot;glossary-term-pill&quot;&gt;ISIN&lt;/a&gt;
-                        &lt;a href=&quot;/knowledge/glossary/clearstream/&quot; class=&quot;glossary-term-pill&quot;&gt;Clearstream&lt;/a&gt;
-                        &lt;a href=&quot;/knowledge/glossary/tradfi-bridge/&quot; class=&quot;glossary-term-pill&quot;&gt;TradFi Bridge&lt;/a&gt;
-                        &lt;a href=&quot;/knowledge/glossary/kyc/&quot; class=&quot;glossary-term-pill&quot;&gt;KYC&lt;/a&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;kb-resource-section&quot; data-category=&quot;blog&quot;&gt;
-            &lt;div class=&quot;kb-section-header&quot;&gt;
-                &lt;h2&gt;📝 Blog&lt;/h2&gt;
-                &lt;p&gt;Insights, updates, and industry analysis&lt;/p&gt;
-                &lt;a href=&quot;/knowledge/blog/&quot; class=&quot;kb-section-link&quot;&gt;View All Posts →&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;kb-grid&quot;&gt;
-                &lt;a href=&quot;/knowledge/blog/future-of-tokenized-securities/&quot; class=&quot;kb-card kb-card-blog&quot;&gt;
-                    &lt;span class=&quot;kb-card-date&quot;&gt;Jan 15, 2025&lt;/span&gt;
-                    &lt;h3&gt;The Future of Tokenized Securities in 2025&lt;/h3&gt;
-                    &lt;p&gt;How regulatory clarity and institutional adoption are reshaping private markets.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;5 min read&lt;/span&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/blog/why-wyoming/&quot; class=&quot;kb-card kb-card-blog&quot;&gt;
-                    &lt;span class=&quot;kb-card-date&quot;&gt;Jan 10, 2025&lt;/span&gt;
-                    &lt;h3&gt;Why Wyoming? The DAO LLC Advantage&lt;/h3&gt;
-                    &lt;p&gt;Understanding why Wyoming has become the Delaware of blockchain.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;4 min read&lt;/span&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/blog/hybrid-custody-explained/&quot; class=&quot;kb-card kb-card-blog&quot;&gt;
-                    &lt;span class=&quot;kb-card-date&quot;&gt;Jan 5, 2025&lt;/span&gt;
-                    &lt;h3&gt;Hybrid Custody: Best of Both Worlds&lt;/h3&gt;
-                    &lt;p&gt;How our TradFi Bridge lets investors choose their custody model.&lt;/p&gt;
-                    &lt;span class=&quot;kb-card-meta&quot;&gt;6 min read&lt;/span&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;kb-resource-section&quot; data-category=&quot;roadmap&quot;&gt;
-            &lt;div class=&quot;kb-section-header&quot;&gt;
-                &lt;h2&gt;🗺️ Roadmap&lt;/h2&gt;
-                &lt;p&gt;Track our development progress and upcoming features&lt;/p&gt;
-                &lt;a href=&quot;/knowledge/roadmap/&quot; class=&quot;kb-section-link&quot;&gt;View Full Roadmap →&lt;/a&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;kb-temporal-filters&quot;&gt;
-                &lt;button class=&quot;kb-temporal-tag active&quot; data-temporal=&quot;all&quot;&gt;All Phases&lt;/button&gt;
-                &lt;button class=&quot;kb-temporal-tag&quot; data-temporal=&quot;completed&quot;&gt;✓ Completed&lt;/button&gt;
-                &lt;button class=&quot;kb-temporal-tag&quot; data-temporal=&quot;beta&quot;&gt;● Beta&lt;/button&gt;
-                &lt;button class=&quot;kb-temporal-tag&quot; data-temporal=&quot;public&quot;&gt;○ Public Launch&lt;/button&gt;
-                &lt;button class=&quot;kb-temporal-tag&quot; data-temporal=&quot;future&quot;&gt;◇ Future&lt;/button&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;kb-grid kb-roadmap-grid&quot;&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#wyoming-dao&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;completed&quot; data-tags=&quot;legal compliance&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status completed&quot;&gt;✓&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Legal&lt;/span&gt;
-                    &lt;h3&gt;Wyoming DAO LLC Formation&lt;/h3&gt;
-                    &lt;p&gt;Legal entity established with full compliance framework for tokenized securities.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal&quot;&gt;Completed&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Compliance&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#core-platform&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;completed&quot; data-tags=&quot;technical infrastructure&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status completed&quot;&gt;✓&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Technical&lt;/span&gt;
-                    &lt;h3&gt;Core Platform Architecture&lt;/h3&gt;
-                    &lt;p&gt;Solana smart contracts designed and audited for security token issuance.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal&quot;&gt;Completed&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Infrastructure&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#tradfi-bridge-design&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;completed&quot; data-tags=&quot;technical infrastructure&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status completed&quot;&gt;✓&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Technical&lt;/span&gt;
-                    &lt;h3&gt;TradFi Bridge Design&lt;/h3&gt;
-                    &lt;p&gt;ISIN integration pathway and Clearstream custody protocol finalized.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal&quot;&gt;Completed&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Infrastructure&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#regulatory-framework&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;completed&quot; data-tags=&quot;legal compliance&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status completed&quot;&gt;✓&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Compliance&lt;/span&gt;
-                    &lt;h3&gt;Regulatory Framework&lt;/h3&gt;
-                    &lt;p&gt;Reg S/Reg D compliance structure with automated investor verification.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal&quot;&gt;Completed&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Legal&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#platform-beta&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;beta&quot; data-tags=&quot;product launch&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status current&quot;&gt;●&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Product&lt;/span&gt;
-                    &lt;h3&gt;Platform Beta Live&lt;/h3&gt;
-                    &lt;p&gt;Public beta launch with full issuer and investor onboarding.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal current&quot;&gt;Beta&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Launch&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#broker-network&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;beta&quot; data-tags=&quot;product infrastructure&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status current&quot;&gt;●&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Product&lt;/span&gt;
-                    &lt;h3&gt;Broker Network Activation&lt;/h3&gt;
-                    &lt;p&gt;First licensed broker partners onboarded with white-label access.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal current&quot;&gt;Beta&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Infrastructure&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#first-offering&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;beta&quot; data-tags=&quot;product milestone&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status current&quot;&gt;●&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Product&lt;/span&gt;
-                    &lt;h3&gt;First Offering Launch&lt;/h3&gt;
-                    &lt;p&gt;Inaugural tokenized security offering goes live on the platform.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal current&quot;&gt;Beta&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Milestone&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#kyc-integration&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;beta&quot; data-tags=&quot;compliance technical&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status current&quot;&gt;●&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Compliance&lt;/span&gt;
-                    &lt;h3&gt;KYC/AML Integration&lt;/h3&gt;
-                    &lt;p&gt;Third-party verification partners integrated for automated compliance.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal current&quot;&gt;Beta&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Technical&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#tradfi-bridge-live&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;public&quot; data-tags=&quot;technical infrastructure&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status upcoming&quot;&gt;○&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Technical&lt;/span&gt;
-                    &lt;h3&gt;TradFi Bridge Live&lt;/h3&gt;
-                    &lt;p&gt;Full ISIN conversion and Clearstream custody operational.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal&quot;&gt;Public Launch&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Infrastructure&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#secondary-trading&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;public&quot; data-tags=&quot;product trading&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status upcoming&quot;&gt;○&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Product&lt;/span&gt;
-                    &lt;h3&gt;Secondary Trading&lt;/h3&gt;
-                    &lt;p&gt;P2P secondary market for compliant token trading between verified investors.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal&quot;&gt;Public Launch&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Trading&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#institutional-partners&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;public&quot; data-tags=&quot;business partnerships&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status upcoming&quot;&gt;○&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Business&lt;/span&gt;
-                    &lt;h3&gt;Institutional Partners&lt;/h3&gt;
-                    &lt;p&gt;First institutional custodians and prime brokers integrated.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal&quot;&gt;Public Launch&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Partnerships&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#mobile-app&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;public&quot; data-tags=&quot;product mobile&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status upcoming&quot;&gt;○&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Product&lt;/span&gt;
-                    &lt;h3&gt;Mobile Experience&lt;/h3&gt;
-                    &lt;p&gt;iOS and Android apps for investors with full portfolio management.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal&quot;&gt;Public Launch&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Mobile&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#eu-uk-licensing&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;future&quot; data-tags=&quot;legal compliance expansion&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status future&quot;&gt;◇&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Legal&lt;/span&gt;
-                    &lt;h3&gt;EU/UK Licensing&lt;/h3&gt;
-                    &lt;p&gt;MiFID II compliance and FCA registration for European markets.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal&quot;&gt;Future&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Expansion&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#apac-expansion&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;future&quot; data-tags=&quot;legal compliance expansion&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status future&quot;&gt;◇&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Legal&lt;/span&gt;
-                    &lt;h3&gt;APAC Expansion&lt;/h3&gt;
-                    &lt;p&gt;Singapore MAS and Hong Kong SFC regulatory pathways.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal&quot;&gt;Future&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Expansion&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#cross-chain&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;future&quot; data-tags=&quot;technical infrastructure&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status future&quot;&gt;◇&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Technical&lt;/span&gt;
-                    &lt;h3&gt;Cross-Chain Support&lt;/h3&gt;
-                    &lt;p&gt;Ethereum and additional L1 integration for token portability.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal&quot;&gt;Future&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Infrastructure&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-                &lt;a href=&quot;/knowledge/roadmap/#dao-governance&quot; class=&quot;kb-card kb-card-roadmap&quot; data-category=&quot;roadmap&quot; data-temporal=&quot;future&quot; data-tags=&quot;product governance&quot;&gt;
-                    &lt;span class=&quot;kb-roadmap-status future&quot;&gt;◇&lt;/span&gt;
-                    &lt;span class=&quot;kb-card-category&quot;&gt;Product&lt;/span&gt;
-                    &lt;h3&gt;DAO Governance&lt;/h3&gt;
-                    &lt;p&gt;Token holder voting and decentralized protocol governance activated.&lt;/p&gt;
-                    &lt;div class=&quot;kb-card-tags&quot;&gt;
-                        &lt;span class=&quot;kb-tag temporal&quot;&gt;Future&lt;/span&gt;
-                        &lt;span class=&quot;kb-tag category&quot;&gt;Governance&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/section&gt;
-&lt;section class=&quot;cta-section&quot;&gt;
-    &lt;h2&gt;Can't Find What You're Looking For?&lt;/h2&gt;
-    &lt;p&gt;Our team is here to help with any questions.&lt;/p&gt;
-    &lt;a href=&quot;/company/contact/&quot; class=&quot;btn btn-primary&quot;&gt;
+<section class="page-hero">
+    <span class="section-label">Learn</span>
+    <h1 class="section-title">Knowledge Base</h1>
+    <p class="section-desc">Everything you need to understand hybrid securities infrastructure — from blockchain basics to regulatory compliance.</p>
+    <div class="kb-search">
+        <input type="text" id="kb-search-input" placeholder="Search articles, guides, and terms..." class="kb-search-input">
+        <svg class="kb-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/>
+            <path d="M21 21l-4.35-4.35"/>
+        </svg>
+    </div>
+</section>
+<section class="kb-tabs-section">
+    <div class="kb-container">
+        <div class="kb-tabs" id="kb-tabs">
+            <button class="kb-tab active" data-category="all">All Resources</button>
+            <button class="kb-tab" data-category="guides">Guides</button>
+            <button class="kb-tab" data-category="docs">Documentation</button>
+            <button class="kb-tab" data-category="faq">FAQ</button>
+            <button class="kb-tab" data-category="glossary">Glossary</button>
+            <button class="kb-tab" data-category="blog">Blog</button>
+            <button class="kb-tab" data-category="roadmap">Roadmap</button>
+        </div>
+    </div>
+</section>
+<section class="kb-featured">
+    <div class="kb-container">
+        <h2 class="kb-section-title">Featured Resources</h2>
+        <div class="kb-featured-grid">
+            <a href="/knowledge/docs/getting-started/" class="kb-card kb-card-featured" data-category="docs">
+                <div class="kb-card-icon">🚀</div>
+                <div class="kb-card-content">
+                    <span class="kb-card-category">Getting Started</span>
+                    <h3>Quick Start Guide</h3>
+                    <p>New to Sails.to? This guide walks you through the platform, from account setup to your first transaction.</p>
+                </div>
+                <span class="kb-card-arrow">→</span>
+            </a>
+            <a href="/knowledge/docs/hybrid-architecture/" class="kb-card kb-card-featured" data-category="docs">
+                <div class="kb-card-icon">🔗</div>
+                <div class="kb-card-content">
+                    <span class="kb-card-category">Architecture</span>
+                    <h3>Understanding the TradFi Bridge</h3>
+                    <p>Deep dive into how tokens flow between Solana and traditional custody via ISIN conversion.</p>
+                </div>
+                <span class="kb-card-arrow">→</span>
+            </a>
+            <a href="/knowledge/faq/" class="kb-card kb-card-featured" data-category="faq">
+                <div class="kb-card-icon">❓</div>
+                <div class="kb-card-content">
+                    <span class="kb-card-category">Support</span>
+                    <h3>Frequently Asked Questions</h3>
+                    <p>Answers to the most common questions about tokenization, compliance, and using the platform.</p>
+                </div>
+                <span class="kb-card-arrow">→</span>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="kb-resources">
+    <div class="kb-container">
+        <div class="kb-resource-section" data-category="guides">
+            <div class="kb-section-header">
+                <h2>📚 Guides</h2>
+                <p>Step-by-step tutorials and conceptual explanations</p>
+            </div>
+            <div class="kb-grid">
+                <a href="/knowledge/guides/tokenization-101/" class="kb-card">
+                    <span class="kb-card-category">Beginner</span>
+                    <h3>Tokenization 101</h3>
+                    <p>What are security tokens? How do they differ from utility tokens? A complete introduction.</p>
+                    <span class="kb-card-meta">10 min read</span>
+                </a>
+                <a href="/knowledge/guides/wyoming-dao-explained/" class="kb-card">
+                    <span class="kb-card-category">Legal</span>
+                    <h3>Wyoming DAO LLC Explained</h3>
+                    <p>Understanding the legal structure that makes compliant blockchain-based securities possible.</p>
+                    <span class="kb-card-meta">8 min read</span>
+                </a>
+                <a href="/knowledge/guides/investor-eligibility/" class="kb-card">
+                    <span class="kb-card-category">Compliance</span>
+                    <h3>Investor Eligibility Requirements</h3>
+                    <p>Accredited vs. professional investors, KYC/AML requirements, and geographic considerations.</p>
+                    <span class="kb-card-meta">6 min read</span>
+                </a>
+                <a href="/knowledge/guides/isin-conversion/" class="kb-card">
+                    <span class="kb-card-category">Technical</span>
+                    <h3>Token to ISIN Conversion</h3>
+                    <p>How the TradFi Bridge converts Solana tokens to traditional securities identifiers.</p>
+                    <span class="kb-card-meta">12 min read</span>
+                </a>
+            </div>
+        </div>
+        <div class="kb-resource-section" data-category="docs">
+            <div class="kb-section-header">
+                <h2>📖 Documentation</h2>
+                <p>Technical references and platform specifications</p>
+            </div>
+            <div class="kb-grid">
+                <a href="/knowledge/docs/platform-overview/" class="kb-card">
+                    <span class="kb-card-category">Overview</span>
+                    <h3>Platform Architecture</h3>
+                    <p>High-level overview of system components, data flows, and integration points.</p>
+                    <span class="kb-card-meta">Technical</span>
+                </a>
+                <a href="/knowledge/docs/token-standard/" class="kb-card">
+                    <span class="kb-card-category">Development</span>
+                    <h3>Token Standard</h3>
+                    <p>SPL token implementation details, metadata structure, and compliance extensions.</p>
+                    <span class="kb-card-meta">Technical</span>
+                </a>
+                <a href="/knowledge/docs/api-reference/" class="kb-card">
+                    <span class="kb-card-category">API</span>
+                    <h3>API Reference</h3>
+                    <p>REST API endpoints for integration, authentication, and data retrieval.</p>
+                    <span class="kb-card-meta">Technical</span>
+                </a>
+                <a href="/knowledge/docs/compliance-framework/" class="kb-card">
+                    <span class="kb-card-category">Compliance</span>
+                    <h3>Compliance Framework</h3>
+                    <p>On-chain compliance rules, transfer restrictions, and regulatory hooks.</p>
+                    <span class="kb-card-meta">Technical</span>
+                </a>
+            </div>
+        </div>
+        <div class="kb-resource-section" data-category="faq">
+            <div class="kb-section-header">
+                <h2>❓ FAQ</h2>
+                <p>Quick answers to common questions</p>
+            </div>
+            <div class="kb-grid">
+                <a href="/knowledge/faq/#general" class="kb-card">
+                    <span class="kb-card-category">General</span>
+                    <h3>General Questions</h3>
+                    <p>What is Sails.to? How does it work? Is it safe?</p>
+                    <span class="kb-card-meta">12 questions</span>
+                </a>
+                <a href="/knowledge/faq/#issuers" class="kb-card">
+                    <span class="kb-card-category">For Issuers</span>
+                    <h3>Issuer FAQ</h3>
+                    <p>How to launch a token, costs, timeline, and legal requirements.</p>
+                    <span class="kb-card-meta">8 questions</span>
+                </a>
+                <a href="/knowledge/faq/#investors" class="kb-card">
+                    <span class="kb-card-category">For Investors</span>
+                    <h3>Investor FAQ</h3>
+                    <p>How to invest, custody options, tax implications, and returns.</p>
+                    <span class="kb-card-meta">10 questions</span>
+                </a>
+                <a href="/knowledge/faq/#technical" class="kb-card">
+                    <span class="kb-card-category">Technical</span>
+                    <h3>Technical FAQ</h3>
+                    <p>Blockchain details, wallet setup, and troubleshooting.</p>
+                    <span class="kb-card-meta">6 questions</span>
+                </a>
+            </div>
+        </div>
+        <div class="kb-resource-section" data-category="glossary">
+            <div class="kb-section-header">
+                <h2>📖 Glossary</h2>
+                <p>Definitions of key terms and concepts</p>
+                <a href="/knowledge/glossary/" class="kb-section-link">View Full Glossary →</a>
+            </div>
+            <div class="kb-glossary-preview">
+                <div class="kb-glossary-categories">
+                    <a href="glossary/index.html#finance" class="kb-glossary-cat">
+                        <span class="kb-glossary-icon" style="color: var(--gold);">💰</span>
+                        <span class="kb-glossary-label">Finance</span>
+                        <span class="kb-glossary-count">6 terms</span>
+                    </a>
+                    <a href="glossary/index.html#compliance" class="kb-glossary-cat">
+                        <span class="kb-glossary-icon" style="color: var(--navy);">⚖️</span>
+                        <span class="kb-glossary-label">Compliance</span>
+                        <span class="kb-glossary-count">5 terms</span>
+                    </a>
+                    <a href="glossary/index.html#legal" class="kb-glossary-cat">
+                        <span class="kb-glossary-icon" style="color: var(--crimson);">📜</span>
+                        <span class="kb-glossary-label">Legal</span>
+                        <span class="kb-glossary-count">5 terms</span>
+                    </a>
+                    <a href="glossary/index.html#technology" class="kb-glossary-cat">
+                        <span class="kb-glossary-icon" style="color: var(--slate);">⚙️</span>
+                        <span class="kb-glossary-label">Technology</span>
+                        <span class="kb-glossary-count">4 terms</span>
+                    </a>
+                </div>
+                <div class="kb-glossary-featured">
+                    <h4>Popular Terms</h4>
+                    <div class="kb-glossary-terms">
+                        <a href="/knowledge/glossary/security-token/" class="glossary-term-pill">Security Token</a>
+                        <a href="/knowledge/glossary/wyoming-dao-llc/" class="glossary-term-pill">Wyoming DAO LLC</a>
+                        <a href="/knowledge/glossary/isin/" class="glossary-term-pill">ISIN</a>
+                        <a href="/knowledge/glossary/clearstream/" class="glossary-term-pill">Clearstream</a>
+                        <a href="/knowledge/glossary/tradfi-bridge/" class="glossary-term-pill">TradFi Bridge</a>
+                        <a href="/knowledge/glossary/kyc/" class="glossary-term-pill">KYC</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="kb-resource-section" data-category="blog">
+            <div class="kb-section-header">
+                <h2>📝 Blog</h2>
+                <p>Insights, updates, and industry analysis</p>
+                <a href="/knowledge/blog/" class="kb-section-link">View All Posts →</a>
+            </div>
+            <div class="kb-grid">
+                <a href="/knowledge/blog/future-of-tokenized-securities/" class="kb-card kb-card-blog">
+                    <span class="kb-card-date">Jan 15, 2025</span>
+                    <h3>The Future of Tokenized Securities in 2025</h3>
+                    <p>How regulatory clarity and institutional adoption are reshaping private markets.</p>
+                    <span class="kb-card-meta">5 min read</span>
+                </a>
+                <a href="/knowledge/blog/why-wyoming/" class="kb-card kb-card-blog">
+                    <span class="kb-card-date">Jan 10, 2025</span>
+                    <h3>Why Wyoming? The DAO LLC Advantage</h3>
+                    <p>Understanding why Wyoming has become the Delaware of blockchain.</p>
+                    <span class="kb-card-meta">4 min read</span>
+                </a>
+                <a href="/knowledge/blog/hybrid-custody-explained/" class="kb-card kb-card-blog">
+                    <span class="kb-card-date">Jan 5, 2025</span>
+                    <h3>Hybrid Custody: Best of Both Worlds</h3>
+                    <p>How our TradFi Bridge lets investors choose their custody model.</p>
+                    <span class="kb-card-meta">6 min read</span>
+                </a>
+            </div>
+        </div>
+        <div class="kb-resource-section" data-category="roadmap">
+            <div class="kb-section-header">
+                <h2>🗺️ Roadmap</h2>
+                <p>Track our development progress and upcoming features</p>
+                <a href="/knowledge/roadmap/" class="kb-section-link">View Full Roadmap →</a>
+            </div>
+            <div class="kb-temporal-filters">
+                <button class="kb-temporal-tag active" data-temporal="all">All Phases</button>
+                <button class="kb-temporal-tag" data-temporal="completed">✓ Completed</button>
+                <button class="kb-temporal-tag" data-temporal="beta">● Beta</button>
+                <button class="kb-temporal-tag" data-temporal="public">○ Public Launch</button>
+                <button class="kb-temporal-tag" data-temporal="future">◇ Future</button>
+            </div>
+            <div class="kb-grid kb-roadmap-grid">
+                <a href="/knowledge/roadmap/#wyoming-dao" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="legal compliance">
+                    <span class="kb-roadmap-status completed">✓</span>
+                    <span class="kb-card-category">Legal</span>
+                    <h3>Wyoming DAO LLC Formation</h3>
+                    <p>Legal entity established with full compliance framework for tokenized securities.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal">Completed</span>
+                        <span class="kb-tag category">Compliance</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#core-platform" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="technical infrastructure">
+                    <span class="kb-roadmap-status completed">✓</span>
+                    <span class="kb-card-category">Technical</span>
+                    <h3>Core Platform Architecture</h3>
+                    <p>Solana smart contracts designed and audited for security token issuance.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal">Completed</span>
+                        <span class="kb-tag category">Infrastructure</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#tradfi-bridge-design" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="technical infrastructure">
+                    <span class="kb-roadmap-status completed">✓</span>
+                    <span class="kb-card-category">Technical</span>
+                    <h3>TradFi Bridge Design</h3>
+                    <p>ISIN integration pathway and Clearstream custody protocol finalized.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal">Completed</span>
+                        <span class="kb-tag category">Infrastructure</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#regulatory-framework" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="legal compliance">
+                    <span class="kb-roadmap-status completed">✓</span>
+                    <span class="kb-card-category">Compliance</span>
+                    <h3>Regulatory Framework</h3>
+                    <p>Reg S/Reg D compliance structure with automated investor verification.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal">Completed</span>
+                        <span class="kb-tag category">Legal</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#platform-beta" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product launch">
+                    <span class="kb-roadmap-status current">●</span>
+                    <span class="kb-card-category">Product</span>
+                    <h3>Platform Beta Live</h3>
+                    <p>Public beta launch with full issuer and investor onboarding.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal current">Beta</span>
+                        <span class="kb-tag category">Launch</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#broker-network" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product infrastructure">
+                    <span class="kb-roadmap-status current">●</span>
+                    <span class="kb-card-category">Product</span>
+                    <h3>Broker Network Activation</h3>
+                    <p>First licensed broker partners onboarded with white-label access.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal current">Beta</span>
+                        <span class="kb-tag category">Infrastructure</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#first-offering" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product milestone">
+                    <span class="kb-roadmap-status current">●</span>
+                    <span class="kb-card-category">Product</span>
+                    <h3>First Offering Launch</h3>
+                    <p>Inaugural tokenized security offering goes live on the platform.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal current">Beta</span>
+                        <span class="kb-tag category">Milestone</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#kyc-integration" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="compliance technical">
+                    <span class="kb-roadmap-status current">●</span>
+                    <span class="kb-card-category">Compliance</span>
+                    <h3>KYC/AML Integration</h3>
+                    <p>Third-party verification partners integrated for automated compliance.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal current">Beta</span>
+                        <span class="kb-tag category">Technical</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#tradfi-bridge-live" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="technical infrastructure">
+                    <span class="kb-roadmap-status upcoming">○</span>
+                    <span class="kb-card-category">Technical</span>
+                    <h3>TradFi Bridge Live</h3>
+                    <p>Full ISIN conversion and Clearstream custody operational.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal">Public Launch</span>
+                        <span class="kb-tag category">Infrastructure</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#secondary-trading" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="product trading">
+                    <span class="kb-roadmap-status upcoming">○</span>
+                    <span class="kb-card-category">Product</span>
+                    <h3>Secondary Trading</h3>
+                    <p>P2P secondary market for compliant token trading between verified investors.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal">Public Launch</span>
+                        <span class="kb-tag category">Trading</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#institutional-partners" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="business partnerships">
+                    <span class="kb-roadmap-status upcoming">○</span>
+                    <span class="kb-card-category">Business</span>
+                    <h3>Institutional Partners</h3>
+                    <p>First institutional custodians and prime brokers integrated.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal">Public Launch</span>
+                        <span class="kb-tag category">Partnerships</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#mobile-app" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="product mobile">
+                    <span class="kb-roadmap-status upcoming">○</span>
+                    <span class="kb-card-category">Product</span>
+                    <h3>Mobile Experience</h3>
+                    <p>iOS and Android apps for investors with full portfolio management.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal">Public Launch</span>
+                        <span class="kb-tag category">Mobile</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#eu-uk-licensing" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="legal compliance expansion">
+                    <span class="kb-roadmap-status future">◇</span>
+                    <span class="kb-card-category">Legal</span>
+                    <h3>EU/UK Licensing</h3>
+                    <p>MiFID II compliance and FCA registration for European markets.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal">Future</span>
+                        <span class="kb-tag category">Expansion</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#apac-expansion" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="legal compliance expansion">
+                    <span class="kb-roadmap-status future">◇</span>
+                    <span class="kb-card-category">Legal</span>
+                    <h3>APAC Expansion</h3>
+                    <p>Singapore MAS and Hong Kong SFC regulatory pathways.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal">Future</span>
+                        <span class="kb-tag category">Expansion</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#cross-chain" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="technical infrastructure">
+                    <span class="kb-roadmap-status future">◇</span>
+                    <span class="kb-card-category">Technical</span>
+                    <h3>Cross-Chain Support</h3>
+                    <p>Ethereum and additional L1 integration for token portability.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal">Future</span>
+                        <span class="kb-tag category">Infrastructure</span>
+                    </div>
+                </a>
+                <a href="/knowledge/roadmap/#dao-governance" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="product governance">
+                    <span class="kb-roadmap-status future">◇</span>
+                    <span class="kb-card-category">Product</span>
+                    <h3>DAO Governance</h3>
+                    <p>Token holder voting and decentralized protocol governance activated.</p>
+                    <div class="kb-card-tags">
+                        <span class="kb-tag temporal">Future</span>
+                        <span class="kb-tag category">Governance</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="cta-section">
+    <h2>Can't Find What You're Looking For?</h2>
+    <p>Our team is here to help with any questions.</p>
+    <a href="/company/contact/" class="btn btn-primary">
         Contact Support
-        &lt;svg viewBox=&quot;0 0 24 24&quot; fill=&quot;none&quot; stroke=&quot;currentColor&quot; stroke-width=&quot;2&quot;&gt;
-            &lt;path d=&quot;M5 12h14M12 5l7 7-7 7&quot;/&gt;
-        &lt;/svg&gt;
-    &lt;/a&gt;
-&lt;/section&gt;
-</code></pre>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+    </a>
+</section>
 
 
     </main>
@@ -545,8 +549,10 @@
     
     
     <script src="/js/nav.js" defer></script>
+    <script src="/assets/js/glossary.js" defer></script>
     
-
-
+    <script src="/js/knowledge-index.js" defer></script>
+    
+    
 </body>
 </html>

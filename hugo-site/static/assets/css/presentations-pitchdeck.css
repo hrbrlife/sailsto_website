@@ -1,0 +1,385 @@
+/* Styles for presentations/pitchdeck.html */
+
+
+        :root {
+            --ivory: #FFFEF8;
+            --cream: #F7F5ED;
+            --champagne: #EDE8DC;
+            --ink: #0A0A0A;
+            --charcoal: #1A1A1A;
+            --graphite: #2D2D2D;
+            --slate: #4A4A4A;
+            --silver: #8A8A8A;
+            --gold: #C9A227;
+            --crimson: #B8192B;
+            --navy: #0D1B2A;
+            
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+            --font-accent: 'Playfair Display', Georgia, serif;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        html { 
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--ivory);
+            color: var(--ink);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        /* Slide container */
+        .slide {
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 48px 48px;
+            scroll-snap-align: start;
+            position: relative;
+        }
+        
+        .slide-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        /* Navigation */
+        .deck-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 254, 248, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 16px 48px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+        }
+        
+        .deck-nav .logo {
+            height: 32px;
+        }
+        
+        .slide-counter {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            color: var(--silver);
+            letter-spacing: 0.1em;
+        }
+        
+        .slide-counter .current {
+            color: var(--gold);
+            font-weight: 600;
+        }
+        
+        .nav-arrows {
+            display: flex;
+            gap: 16px;
+        }
+        
+        .nav-arrow {
+            background: transparent;
+            border: 1px solid var(--slate);
+            color: var(--slate);
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-arrow:hover {
+            background: var(--ink);
+            color: var(--ivory);
+            border-color: var(--ink);
+        }
+        
+        .nav-arrow:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+        
+        /* Typography */
+        .slide-label {
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.25em;
+            color: var(--gold);
+            margin-bottom: 20px;
+        }
+        
+        .slide-headline {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 600;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+            margin-bottom: 32px;
+        }
+        
+        .slide-subhead {
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 3vw, 2rem);
+            font-weight: 400;
+            font-style: italic;
+            color: var(--graphite);
+            margin-bottom: 48px;
+        }
+        
+        /* Slide 1 - Cover */
+        .slide-cover {
+            background: linear-gradient(135deg, #0D1B2A 0%, #1A1A1A 100%);
+            color: var(--ivory);
+            text-align: center;
+            justify-content: center;
+        }
+        
+        .slide-cover .slide-headline {
+            font-size: clamp(4rem, 10vw, 8rem);
+            color: var(--ivory);
+            margin-bottom: 16px;
+        }
+        
+        .slide-cover .tagline {
+            font-family: var(--font-display);
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            font-style: italic;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 48px;
+        }
+        
+        .slide-cover .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 64px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .raise-box {
+            background: rgba(255,255,255,0.1);
+            border: 2px solid var(--gold);
+            padding: 32px;
+            max-width: 700px;
+            margin: 0 auto 48px;
+        }
+        
+        .raise-box .raise-line {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .raise-box .raise-line .amount {
+            color: var(--gold);
+        }
+        
+        .contact-info {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+        }
+        
+        .contact-info .name {
+            font-weight: 600;
+            color: var(--ivory);
+            margin-bottom: 8px;
+        }
+        
+        /* Two-column layout */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            margin: 32px 0;
+        }
+        
+        .two-col p {
+            font-size: 1rem;
+            line-height: 1.8;
+            color: var(--graphite);
+            margin-bottom: 16px;
+        }
+        
+        /* Tables */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 24px 0;
+            font-size: 0.95rem;
+        }
+        
+        th {
+            background: var(--ink);
+            color: var(--ivory);
+            padding: 16px;
+            text-align: left;
+            font-weight: 600;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        
+        td {
+            padding: 16px;
+            border-bottom: 1px solid var(--champagne);
+        }
+        
+        tr:nth-child(even) {
+            background: var(--cream);
+        }
+        
+        tr:hover {
+            background: rgba(201, 146, 39, 0.05);
+        }
+        
+        table strong {
+            color: var(--ink);
+            font-weight: 600;
+        }
+        
+        /* Diagram boxes */
+        .diagram-box {
+            background: var(--cream);
+            border: 1px solid var(--champagne);
+            padding: 32px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+        
+        .diagram-box pre {
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: var(--graphite);
+            overflow-x: auto;
+            white-space: pre;
+        }
+        
+        .mermaid {
+            background: white;
+            padding: 24px;
+            border-radius: 4px;
+            margin: 24px 0;
+        }
+        
+        /* Bullet points */
+        ul, ol {
+            margin: 16px 0 16px 24px;
+        }
+        
+        li {
+            margin: 8px 0;
+            line-height: 1.7;
+        }
+        
+        /* Highlight boxes */
+        .highlight-box {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 24px 32px;
+            margin: 32px 0;
+            border-radius: 4px;
+        }
+        
+        .highlight-box strong {
+            color: var(--gold);
+        }
+        
+        .punch-line {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--ink);
+            text-align: center;
+            margin: 48px 0;
+            padding: 24px;
+            border-top: 2px solid var(--gold);
+            border-bottom: 2px solid var(--gold);
+        }
+        
+        /* Stats grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 32px;
+            margin: 48px 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 24px;
+            background: var(--cream);
+            border-radius: 4px;
+        }
+        
+        .stat-value {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 8px;
+        }
+        
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--slate);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        /* Mermaid diagram font size overrides */
+        .mermaid text,
+        .mermaid .nodeLabel,
+        .mermaid .edgeLabel,
+        .mermaid .labelText,
+        .mermaid foreignObject {
+            font-size: 10px !important;
+        }
+        
+        .mermaid .node rect,
+        .mermaid .node circle,
+        .mermaid .node ellipse,
+        .mermaid .node polygon {
+            font-size: 10px !important;
+        }
+        
+        .mermaid .edgeLabel span {
+            font-size: 8px !important;
+        }
+        
+        /* Print styles */
+        @media print {
+            .deck-nav { display: none; }
+            .slide { page-break-after: always; min-height: auto; }
+            body { background: white; }
+        }
+        
+        /* Mobile */
+        @media (max-width: 768px) {
+            .slide { padding: 80px 24px 24px; }
+            .deck-nav { padding: 12px 24px; }
+            .two-col { grid-template-columns: 1fr; gap: 32px; }
+            .slide-headline { font-size: 2rem; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    

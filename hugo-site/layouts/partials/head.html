@@ -15,6 +15,11 @@
     <link rel="canonical" href="{{ .Params.canonical }}">
     {{ end }}
     
+    <!-- Head scripts (loaded synchronously before body) -->
+    {{ range .Params.headScripts }}
+    <script src="{{ . }}"></script>
+    {{ end }}
+    
     <!-- Stylesheets -->
     {{ range .Params.stylesheets }}
     <link rel="stylesheet" href="{{ . }}">

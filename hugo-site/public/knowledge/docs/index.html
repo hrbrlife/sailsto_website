@@ -17,11 +17,16 @@
     
     
     
-    <link rel="stylesheet" href="../../assets/fonts/fonts.css">
     
-    <link rel="stylesheet" href="../../styles.css">
     
-    <link rel="stylesheet" href="../../assets/css/glossary.css">
+    
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    
+    <link rel="stylesheet" href="/styles.css">
+    
+    <link rel="stylesheet" href="/assets/css/glossary.css">
+    
+    <link rel="stylesheet" href="/assets/css/knowledge-docs-index.css">
     
     
     
@@ -82,153 +87,152 @@
     
     <main id="main-content">
     
-<pre><code>&lt;section class=&quot;page-hero&quot;&gt;
-    &lt;span class=&quot;section-label&quot;&gt;Technical Reference&lt;/span&gt;
-    &lt;h1 class=&quot;section-title&quot;&gt;Documentation&lt;/h1&gt;
-    &lt;p class=&quot;section-desc&quot;&gt;Everything you need to integrate with and build on the Sails.to platform.&lt;/p&gt;
-&lt;/section&gt;
-&lt;section class=&quot;docs-main&quot;&gt;
-    &lt;div class=&quot;docs-container&quot;&gt;
-        &lt;aside class=&quot;docs-sidebar&quot;&gt;
-            &lt;nav class=&quot;docs-nav&quot;&gt;
-                &lt;h4&gt;Getting Started&lt;/h4&gt;
-                &lt;a href=&quot;/knowledge/docs/getting-started/&quot; class=&quot;docs-link&quot;&gt;Quick Start Guide&lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/platform-overview/&quot; class=&quot;docs-link&quot;&gt;Platform Overview&lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/hybrid-architecture/&quot; class=&quot;docs-link&quot;&gt;Hybrid Architecture&lt;/a&gt;
-                &lt;h4&gt;Token Standard&lt;/h4&gt;
-                &lt;a href=&quot;/knowledge/docs/token-standard/&quot; class=&quot;docs-link&quot;&gt;SPL Token Implementation&lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/metadata/&quot; class=&quot;docs-link&quot;&gt;Token Metadata&lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/compliance-extensions/&quot; class=&quot;docs-link&quot;&gt;Compliance Extensions&lt;/a&gt;
-                &lt;h4&gt;API Reference&lt;/h4&gt;
-                &lt;a href=&quot;/knowledge/docs/api-reference/&quot; class=&quot;docs-link&quot;&gt;API Overview&lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/authentication/&quot; class=&quot;docs-link&quot;&gt;Authentication&lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/investors-api/&quot; class=&quot;docs-link&quot;&gt;Investors API&lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/cap-table-api/&quot; class=&quot;docs-link&quot;&gt;Cap Table API&lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/distributions-api/&quot; class=&quot;docs-link&quot;&gt;Distributions API&lt;/a&gt;
-                &lt;h4&gt;Compliance&lt;/h4&gt;
-                &lt;a href=&quot;/knowledge/docs/compliance-framework/&quot; class=&quot;docs-link&quot;&gt;Compliance Framework&lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/kyc-integration/&quot; class=&quot;docs-link&quot;&gt;KYC Integration&lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/transfer-rules/&quot; class=&quot;docs-link&quot;&gt;Transfer Rules&lt;/a&gt;
-                &lt;h4&gt;TradFi Bridge&lt;/h4&gt;
-                &lt;a href=&quot;/knowledge/docs/tradfi-bridge/&quot; class=&quot;docs-link&quot;&gt;Bridge Overview&lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/isin-conversion/&quot; class=&quot;docs-link&quot;&gt;ISIN Conversion&lt;/a&gt;
-                &lt;a href=&quot;/knowledge/docs/clearstream/&quot; class=&quot;docs-link&quot;&gt;Clearstream Integration&lt;/a&gt;
-            &lt;/nav&gt;
-        &lt;/aside&gt;
-        &lt;main class=&quot;docs-content&quot;&gt;
-            &lt;div class=&quot;docs-hero-card&quot;&gt;
-                &lt;h2&gt;Welcome to Sails.to Docs&lt;/h2&gt;
-                &lt;p&gt;This documentation covers everything you need to understand, integrate with, and build on the Sails.to hybrid securities platform.&lt;/p&gt;
-                &lt;div class=&quot;docs-quick-links&quot;&gt;
-                    &lt;a href=&quot;/knowledge/docs/getting-started/&quot; class=&quot;docs-quick-link&quot;&gt;
-                        &lt;span class=&quot;icon&quot;&gt;🚀&lt;/span&gt;
-                        &lt;span class=&quot;text&quot;&gt;
-                            &lt;strong&gt;Quick Start&lt;/strong&gt;
-                            &lt;small&gt;Get up and running in minutes&lt;/small&gt;
-                        &lt;/span&gt;
-                    &lt;/a&gt;
-                    &lt;a href=&quot;/knowledge/docs/api-reference/&quot; class=&quot;docs-quick-link&quot;&gt;
-                        &lt;span class=&quot;icon&quot;&gt;⚡&lt;/span&gt;
-                        &lt;span class=&quot;text&quot;&gt;
-                            &lt;strong&gt;API Reference&lt;/strong&gt;
-                            &lt;small&gt;Explore our REST APIs&lt;/small&gt;
-                        &lt;/span&gt;
-                    &lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-            &lt;section class=&quot;docs-section&quot;&gt;
-                &lt;h3&gt;Core Concepts&lt;/h3&gt;
-                &lt;div class=&quot;docs-grid&quot;&gt;
-                    &lt;a href=&quot;/knowledge/docs/platform-overview/&quot; class=&quot;docs-card&quot;&gt;
-                        &lt;span class=&quot;docs-card-icon&quot;&gt;🏗️&lt;/span&gt;
-                        &lt;h4&gt;Platform Overview&lt;/h4&gt;
-                        &lt;p&gt;High-level architecture, components, and data flows.&lt;/p&gt;
-                    &lt;/a&gt;
-                    &lt;a href=&quot;/knowledge/docs/hybrid-architecture/&quot; class=&quot;docs-card&quot;&gt;
-                        &lt;span class=&quot;docs-card-icon&quot;&gt;🔗&lt;/span&gt;
-                        &lt;h4&gt;Hybrid Architecture&lt;/h4&gt;
-                        &lt;p&gt;How blockchain and traditional finance systems interoperate.&lt;/p&gt;
-                    &lt;/a&gt;
-                    &lt;a href=&quot;/knowledge/docs/token-standard/&quot; class=&quot;docs-card&quot;&gt;
-                        &lt;span class=&quot;docs-card-icon&quot;&gt;🪙&lt;/span&gt;
-                        &lt;h4&gt;Token Standard&lt;/h4&gt;
-                        &lt;p&gt;SPL token implementation with compliance extensions.&lt;/p&gt;
-                    &lt;/a&gt;
-                    &lt;a href=&quot;/knowledge/docs/compliance-framework/&quot; class=&quot;docs-card&quot;&gt;
-                        &lt;span class=&quot;docs-card-icon&quot;&gt;⚖️&lt;/span&gt;
-                        &lt;h4&gt;Compliance Framework&lt;/h4&gt;
-                        &lt;p&gt;On-chain transfer restrictions and regulatory hooks.&lt;/p&gt;
-                    &lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/section&gt;
-            &lt;section class=&quot;docs-section&quot;&gt;
-                &lt;h3&gt;API Reference&lt;/h3&gt;
-                &lt;p&gt;Our REST API enables programmatic access to core platform functionality.&lt;/p&gt;
-                &lt;div class=&quot;docs-api-preview&quot;&gt;
-                    &lt;div class=&quot;docs-api-header&quot;&gt;
-                        &lt;span class=&quot;docs-api-method get&quot;&gt;GET&lt;/span&gt;
-                        &lt;code&gt;/api/v1/investors/{id}&lt;/code&gt;
-                    &lt;/div&gt;
-                    &lt;p class=&quot;docs-api-desc&quot;&gt;Retrieve investor details including KYC status and holdings.&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;docs-api-preview&quot;&gt;
-                    &lt;div class=&quot;docs-api-header&quot;&gt;
-                        &lt;span class=&quot;docs-api-method get&quot;&gt;GET&lt;/span&gt;
-                        &lt;code&gt;/api/v1/offerings/{id}/cap-table&lt;/code&gt;
-                    &lt;/div&gt;
-                    &lt;p class=&quot;docs-api-desc&quot;&gt;Get current cap table for an offering with ownership percentages.&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;div class=&quot;docs-api-preview&quot;&gt;
-                    &lt;div class=&quot;docs-api-header&quot;&gt;
-                        &lt;span class=&quot;docs-api-method post&quot;&gt;POST&lt;/span&gt;
-                        &lt;code&gt;/api/v1/distributions&lt;/code&gt;
-                    &lt;/div&gt;
-                    &lt;p class=&quot;docs-api-desc&quot;&gt;Create and execute a distribution to token holders.&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;a href=&quot;/knowledge/docs/api-reference/&quot; class=&quot;docs-section-link&quot;&gt;View Full API Reference →&lt;/a&gt;
-            &lt;/section&gt;
-            &lt;section class=&quot;docs-section&quot;&gt;
-                &lt;h3&gt;TradFi Bridge&lt;/h3&gt;
-                &lt;p&gt;The TradFi Bridge enables seamless conversion between Solana tokens and ISIN-denominated securities at Clearstream.&lt;/p&gt;
-                &lt;div class=&quot;docs-diagram&quot;&gt;
-                    &lt;div class=&quot;docs-diagram-step&quot;&gt;
-                        &lt;span class=&quot;step-num&quot;&gt;1&lt;/span&gt;
-                        &lt;span class=&quot;step-text&quot;&gt;Investor initiates bridge request&lt;/span&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;docs-diagram-arrow&quot;&gt;→&lt;/div&gt;
-                    &lt;div class=&quot;docs-diagram-step&quot;&gt;
-                        &lt;span class=&quot;step-num&quot;&gt;2&lt;/span&gt;
-                        &lt;span class=&quot;step-text&quot;&gt;Tokens burned/locked on Solana&lt;/span&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;docs-diagram-arrow&quot;&gt;→&lt;/div&gt;
-                    &lt;div class=&quot;docs-diagram-step&quot;&gt;
-                        &lt;span class=&quot;step-num&quot;&gt;3&lt;/span&gt;
-                        &lt;span class=&quot;step-text&quot;&gt;ISIN securities credited at Clearstream&lt;/span&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-                &lt;a href=&quot;/knowledge/docs/tradfi-bridge/&quot; class=&quot;docs-section-link&quot;&gt;Learn More About the Bridge →&lt;/a&gt;
-            &lt;/section&gt;
-            &lt;section class=&quot;docs-section&quot;&gt;
-                &lt;h3&gt;Need Help?&lt;/h3&gt;
-                &lt;div class=&quot;docs-help-grid&quot;&gt;
-                    &lt;a href=&quot;/knowledge/faq/&quot; class=&quot;docs-help-link&quot;&gt;
-                        &lt;span class=&quot;icon&quot;&gt;❓&lt;/span&gt;
-                        &lt;span class=&quot;text&quot;&gt;FAQ&lt;/span&gt;
-                    &lt;/a&gt;
-                    &lt;a href=&quot;https://github.com/sailsto&quot; class=&quot;docs-help-link&quot; target=&quot;_blank&quot;&gt;
-                        &lt;span class=&quot;icon&quot;&gt;🐙&lt;/span&gt;
-                        &lt;span class=&quot;text&quot;&gt;GitHub&lt;/span&gt;
-                    &lt;/a&gt;
-                    &lt;a href=&quot;/company/contact/&quot; class=&quot;docs-help-link&quot;&gt;
-                        &lt;span class=&quot;icon&quot;&gt;💬&lt;/span&gt;
-                        &lt;span class=&quot;text&quot;&gt;Contact&lt;/span&gt;
-                    &lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/section&gt;
-        &lt;/main&gt;
-    &lt;/div&gt;
-&lt;/section&gt;
-</code></pre>
+<section class="page-hero">
+    <span class="section-label">Technical Reference</span>
+    <h1 class="section-title">Documentation</h1>
+    <p class="section-desc">Everything you need to integrate with and build on the Sails.to platform.</p>
+</section>
+<section class="docs-main">
+    <div class="docs-container">
+        <aside class="docs-sidebar">
+            <nav class="docs-nav">
+                <h4>Getting Started</h4>
+                <a href="/knowledge/docs/getting-started/" class="docs-link">Quick Start Guide</a>
+                <a href="/knowledge/docs/platform-overview/" class="docs-link">Platform Overview</a>
+                <a href="/knowledge/docs/hybrid-architecture/" class="docs-link">Hybrid Architecture</a>
+                <h4>Token Standard</h4>
+                <a href="/knowledge/docs/token-standard/" class="docs-link">SPL Token Implementation</a>
+                <a href="/knowledge/docs/metadata/" class="docs-link">Token Metadata</a>
+                <a href="/knowledge/docs/compliance-extensions/" class="docs-link">Compliance Extensions</a>
+                <h4>API Reference</h4>
+                <a href="/knowledge/docs/api-reference/" class="docs-link">API Overview</a>
+                <a href="/knowledge/docs/authentication/" class="docs-link">Authentication</a>
+                <a href="/knowledge/docs/investors-api/" class="docs-link">Investors API</a>
+                <a href="/knowledge/docs/cap-table-api/" class="docs-link">Cap Table API</a>
+                <a href="/knowledge/docs/distributions-api/" class="docs-link">Distributions API</a>
+                <h4>Compliance</h4>
+                <a href="/knowledge/docs/compliance-framework/" class="docs-link">Compliance Framework</a>
+                <a href="/knowledge/docs/kyc-integration/" class="docs-link">KYC Integration</a>
+                <a href="/knowledge/docs/transfer-rules/" class="docs-link">Transfer Rules</a>
+                <h4>TradFi Bridge</h4>
+                <a href="/knowledge/docs/tradfi-bridge/" class="docs-link">Bridge Overview</a>
+                <a href="/knowledge/docs/isin-conversion/" class="docs-link">ISIN Conversion</a>
+                <a href="/knowledge/docs/clearstream/" class="docs-link">Clearstream Integration</a>
+            </nav>
+        </aside>
+        <main class="docs-content">
+            <div class="docs-hero-card">
+                <h2>Welcome to Sails.to Docs</h2>
+                <p>This documentation covers everything you need to understand, integrate with, and build on the Sails.to hybrid securities platform.</p>
+                <div class="docs-quick-links">
+                    <a href="/knowledge/docs/getting-started/" class="docs-quick-link">
+                        <span class="icon">🚀</span>
+                        <span class="text">
+                            <strong>Quick Start</strong>
+                            <small>Get up and running in minutes</small>
+                        </span>
+                    </a>
+                    <a href="/knowledge/docs/api-reference/" class="docs-quick-link">
+                        <span class="icon">⚡</span>
+                        <span class="text">
+                            <strong>API Reference</strong>
+                            <small>Explore our REST APIs</small>
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <section class="docs-section">
+                <h3>Core Concepts</h3>
+                <div class="docs-grid">
+                    <a href="/knowledge/docs/platform-overview/" class="docs-card">
+                        <span class="docs-card-icon">🏗️</span>
+                        <h4>Platform Overview</h4>
+                        <p>High-level architecture, components, and data flows.</p>
+                    </a>
+                    <a href="/knowledge/docs/hybrid-architecture/" class="docs-card">
+                        <span class="docs-card-icon">🔗</span>
+                        <h4>Hybrid Architecture</h4>
+                        <p>How blockchain and traditional finance systems interoperate.</p>
+                    </a>
+                    <a href="/knowledge/docs/token-standard/" class="docs-card">
+                        <span class="docs-card-icon">🪙</span>
+                        <h4>Token Standard</h4>
+                        <p>SPL token implementation with compliance extensions.</p>
+                    </a>
+                    <a href="/knowledge/docs/compliance-framework/" class="docs-card">
+                        <span class="docs-card-icon">⚖️</span>
+                        <h4>Compliance Framework</h4>
+                        <p>On-chain transfer restrictions and regulatory hooks.</p>
+                    </a>
+                </div>
+            </section>
+            <section class="docs-section">
+                <h3>API Reference</h3>
+                <p>Our REST API enables programmatic access to core platform functionality.</p>
+                <div class="docs-api-preview">
+                    <div class="docs-api-header">
+                        <span class="docs-api-method get">GET</span>
+                        <code>/api/v1/investors/{id}</code>
+                    </div>
+                    <p class="docs-api-desc">Retrieve investor details including KYC status and holdings.</p>
+                </div>
+                <div class="docs-api-preview">
+                    <div class="docs-api-header">
+                        <span class="docs-api-method get">GET</span>
+                        <code>/api/v1/offerings/{id}/cap-table</code>
+                    </div>
+                    <p class="docs-api-desc">Get current cap table for an offering with ownership percentages.</p>
+                </div>
+                <div class="docs-api-preview">
+                    <div class="docs-api-header">
+                        <span class="docs-api-method post">POST</span>
+                        <code>/api/v1/distributions</code>
+                    </div>
+                    <p class="docs-api-desc">Create and execute a distribution to token holders.</p>
+                </div>
+                <a href="/knowledge/docs/api-reference/" class="docs-section-link">View Full API Reference →</a>
+            </section>
+            <section class="docs-section">
+                <h3>TradFi Bridge</h3>
+                <p>The TradFi Bridge enables seamless conversion between Solana tokens and ISIN-denominated securities at Clearstream.</p>
+                <div class="docs-diagram">
+                    <div class="docs-diagram-step">
+                        <span class="step-num">1</span>
+                        <span class="step-text">Investor initiates bridge request</span>
+                    </div>
+                    <div class="docs-diagram-arrow">→</div>
+                    <div class="docs-diagram-step">
+                        <span class="step-num">2</span>
+                        <span class="step-text">Tokens burned/locked on Solana</span>
+                    </div>
+                    <div class="docs-diagram-arrow">→</div>
+                    <div class="docs-diagram-step">
+                        <span class="step-num">3</span>
+                        <span class="step-text">ISIN securities credited at Clearstream</span>
+                    </div>
+                </div>
+                <a href="/knowledge/docs/tradfi-bridge/" class="docs-section-link">Learn More About the Bridge →</a>
+            </section>
+            <section class="docs-section">
+                <h3>Need Help?</h3>
+                <div class="docs-help-grid">
+                    <a href="/knowledge/faq/" class="docs-help-link">
+                        <span class="icon">❓</span>
+                        <span class="text">FAQ</span>
+                    </a>
+                    <a href="https://github.com/sailsto" class="docs-help-link" target="_blank">
+                        <span class="icon">🐙</span>
+                        <span class="text">GitHub</span>
+                    </a>
+                    <a href="/company/contact/" class="docs-help-link">
+                        <span class="icon">💬</span>
+                        <span class="text">Contact</span>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+</section>
 
 
     </main>
@@ -277,8 +281,10 @@
     
     
     <script src="/js/nav.js" defer></script>
+    <script src="/assets/js/glossary.js" defer></script>
     
-
-
+    <script src="/js/knowledge-docs-index.js" defer></script>
+    
+    
 </body>
 </html>

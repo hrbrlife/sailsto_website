@@ -44,7 +44,7 @@
                     <span class="glossary-tooltip-category"></span>
                 </div>
                 <p class="glossary-tooltip-definition"></p>
-                <a href="/knowledge/glossary/" class="glossary-tooltip-link">
+                <a href="#" class="glossary-tooltip-link">
                     Read full definition
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
@@ -285,7 +285,7 @@
         
         // Set link to glossary page
         const basePath = getGlossaryBasePath();
-        linkEl.href = basePath + termKey + '/';
+        linkEl.href = basePath + termKey + '.html';
         
         // Position tooltip
         positionTooltip(termElement);
@@ -327,8 +327,20 @@
     }
     
     function getGlossaryBasePath() {
-        // Always use absolute path for reliability
-        return '/knowledge/glossary/';
+        // Determine correct path based on current page
+        const path = window.location.pathname;
+        
+        if (path.includes('/knowledge/glossary/')) {
+            return '';
+        } else if (path.includes('/knowledge/blog/') || path.includes('/knowledge/docs/') || path.includes('/knowledge/guides/')) {
+            return '../glossary/';
+        } else if (path.includes('/knowledge/')) {
+            return 'glossary/';
+        } else if (path.includes('/company/')) {
+            return '../knowledge/glossary/';
+        } else {
+            return 'knowledge/glossary/';
+        }
     }
     
 })();

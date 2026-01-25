@@ -8,13 +8,13 @@ draft: false
 ---
 
 <section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Compliance-framework</h1>
-    <p class="section-desc">This documentation page is under development.</p>
+<span class="section-label">Documentation</span>
+<h1 class="section-title">Compliance-framework</h1>
+<p class="section-desc">This documentation page is under development.</p>
 </section>
 
 <section class="features-section">
-    <div class="container">
-        <p>This section is coming soon. Please check back later or <a href="/company/contact/">contact us</a> for more information.</p>
-    </div>
+<div class="container">
+    <p>This section is coming soon. Please check back later or <a href="/company/contact/">contact us</a> for more information.</p>
+</div>
 </section>

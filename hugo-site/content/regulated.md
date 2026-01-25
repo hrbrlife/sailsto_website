@@ -8,266 +8,266 @@ stylesheets:
 ---
 
 <section class="page-hero" style="background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0a 100%);">
-        <span class="section-label">For Trust Companies, VCs & Multi-Family Offices</span>
-        <h1 class="section-title">Your infrastructure.<br>Your rules</h1>
-        <p class="section-desc">White-label the entire platform and take ultimate control. You decide which issuers launch, which trustees oversee, which brokers participate. Full sovereignty over your securities ecosystem. For regulated entities only.</p>
-    </section>
-    <section class="detail-section">
-        <div class="detail-container">
-            <div class="detail-grid">
-                <div class="detail-content">
-                    <h2>Ultimate control over your ecosystem</h2>
-                    <p>This is not just white-labeling a portal. You become the platform operator. You approve every issuer. You authorize every trustee. You decide which brokers can access your network.</p>
-                    <p>Your regulatory status means you can take on responsibilities that others cannot. We give you the infrastructure to exercise that authority at scale.</p>
-                </div>
-                <ul class="detail-list">
-                    <li>
-                        <span class="icon">👑</span>
-                        <div class="text">
-                            <h4>Issuer Approval Authority</h4>
-                            <p>You vet and approve every issuer on your platform. Your due diligence standards. Your risk tolerance. Your decision.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon">⚖️</span>
-                        <div class="text">
-                            <h4>Trustee Authorization</h4>
-                            <p>Appoint trustees from your network or act as trustee yourself. Configure oversight permissions per issuer, per series.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon">🤝</span>
-                        <div class="text">
-                            <h4>Broker Network Control</h4>
-                            <p>Decide which brokers can distribute offerings on your platform. Set commission structures. Manage relationships.</p>
-                        </div>
-                    </li>
-                </ul>
+    <span class="section-label">For Trust Companies, VCs & Multi-Family Offices</span>
+    <h1 class="section-title">Your infrastructure.<br>Your rules</h1>
+    <p class="section-desc">White-label the entire platform and take ultimate control. You decide which issuers launch, which trustees oversee, which brokers participate. Full sovereignty over your securities ecosystem. For regulated entities only.</p>
+</section>
+<section class="detail-section">
+    <div class="detail-container">
+        <div class="detail-grid">
+            <div class="detail-content">
+                <h2>Ultimate control over your ecosystem</h2>
+                <p>This is not just white-labeling a portal. You become the platform operator. You approve every issuer. You authorize every trustee. You decide which brokers can access your network.</p>
+                <p>Your regulatory status means you can take on responsibilities that others cannot. We give you the infrastructure to exercise that authority at scale.</p>
+            </div>
+            <ul class="detail-list">
+                <li>
+                    <span class="icon">👑</span>
+                    <div class="text">
+                        <h4>Issuer Approval Authority</h4>
+                        <p>You vet and approve every issuer on your platform. Your due diligence standards. Your risk tolerance. Your decision.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">⚖️</span>
+                    <div class="text">
+                        <h4>Trustee Authorization</h4>
+                        <p>Appoint trustees from your network or act as trustee yourself. Configure oversight permissions per issuer, per series.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">🤝</span>
+                    <div class="text">
+                        <h4>Broker Network Control</h4>
+                        <p>Decide which brokers can distribute offerings on your platform. Set commission structures. Manage relationships.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="detail-section alt">
+    <div class="detail-container">
+        <div class="detail-grid">
+            <div class="detail-content">
+                <h2>Built for regulated entities</h2>
+                <p>This offering is exclusively for licensed trust companies, registered investment advisers, regulated venture capital managers, and multi-family offices operating under appropriate regulatory frameworks.</p>
+                <p>Your regulatory status allows you to take on platform operator responsibilities. We provide the technology; you provide the regulatory wrapper.</p>
+            </div>
+            <ul class="detail-list">
+                <li>
+                    <span class="icon">🏛️</span>
+                    <div class="text">
+                        <h4>Trust Companies</h4>
+                        <p>Licensed fiduciaries who can act as trustee, custodian, or platform operator under existing charters.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">💼</span>
+                    <div class="text">
+                        <h4>Venture Capital Funds</h4>
+                        <p>Registered fund managers who want to tokenize portfolio company securities for LP liquidity.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">🏠</span>
+                    <div class="text">
+                        <h4>Multi-Family Offices</h4>
+                        <p>Sophisticated wealth managers seeking private market infrastructure for their client families.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="detail-section">
+    <div class="detail-container">
+        <div class="detail-grid">
+            <div class="detail-content">
+                <h2>Complete infrastructure stack</h2>
+                <p>Everything you need to run a securities platform: issuance engine, investor onboarding, cap table management, distribution processing, secondary trading, custody bridge, compliance reporting.</p>
+                <p>Deploy under your brand, your domain, your terms of service. We're the invisible technology layer.</p>
+            </div>
+            <ul class="detail-list">
+                <li>
+                    <span class="icon">🏗️</span>
+                    <div class="text">
+                        <h4>Issuance Engine</h4>
+                        <p>Launch tokenized debt, equity, revenue share, fund interests. Your issuers, your structures, your approval process.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">📊</span>
+                    <div class="text">
+                        <h4>Cap Table & Registry</h4>
+                        <p>Authoritative investor registry. Transfer agent functionality. Corporate actions processing.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">💰</span>
+                    <div class="text">
+                        <h4>Distribution Engine</h4>
+                        <p>Automated dividend, interest, and principal distributions. Withholding calculations. Payment processing.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">🔄</span>
+                    <div class="text">
+                        <h4>Secondary Marketplace</h4>
+                        <p>OTC trading within your investor universe. Cross-broker routing optional. You control access.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="detail-section alt">
+    <div class="detail-container">
+        <div class="detail-grid">
+            <div class="detail-content">
+                <h2>Your compliance framework</h2>
+                <p>Configure investor eligibility rules, transfer restrictions, holding limits, and jurisdiction controls to match your regulatory requirements. The platform enforces what you define.</p>
+                <p>Self-hosted KYC/AML keeps all investor data under your control. No third-party data processors. No data leaks. Your clients' information stays with you.</p>
+            </div>
+            <ul class="detail-list">
+                <li>
+                    <span class="icon">🔐</span>
+                    <div class="text">
+                        <h4>Self-Hosted Verification</h4>
+                        <p>Run KYC/AML on your infrastructure. Integrate your existing providers. Maintain data sovereignty.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">🛡️</span>
+                    <div class="text">
+                        <h4>Configurable Restrictions</h4>
+                        <p>Set transfer rules per security: accreditation, jurisdiction, holding period, concentration limits.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">📋</span>
+                    <div class="text">
+                        <h4>Audit & Reporting</h4>
+                        <p>Complete audit trail. Regulatory reports on demand. Export for your compliance team, auditors, regulators.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="detail-section">
+    <div class="detail-container">
+        <div class="detail-grid">
+            <div class="detail-content">
+                <h2>Custody flexibility</h2>
+                <p>Securities settle on Solana by default. For investors requiring traditional custody, convert to ISIN-identified format via Clearstream. Settles to any bank worldwide.</p>
+                <p>You control the conversion process. Issuer-level permissions. Trust oversight configurable. Always 1:1 backed between formats.</p>
+            </div>
+            <ul class="detail-list">
+                <li>
+                    <span class="icon">⛓️</span>
+                    <div class="text">
+                        <h4>On-Chain (Solana)</h4>
+                        <p>24/7 settlement. Programmable compliance. Self-custody or qualified custodian.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">🏦</span>
+                    <div class="text">
+                        <h4>Traditional (ISIN/Clearstream)</h4>
+                        <p>ISIN identifier. Clearstream settlement. Compatible with any private bank worldwide.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">📈</span>
+                    <div class="text">
+                        <h4>Exchange Listing</h4>
+                        <p>Optional Vienna MTF listing for public price discovery. You decide which securities qualify.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<section class="features-section">
+    <div class="features-container">
+        <div class="features-header">
+            <span class="section-label">Platform Capabilities</span>
+            <h2 class="section-title">Everything to run your own<br>securities infrastructure</h2>
+        </div>
+        <div class="feature-grid three-col">
+            <div class="feature-card">
+                <span class="feature-icon">🖥️</span>
+                <h3>White-Label Portals</h3>
+                <p>Investor portal, issuer dashboard, admin console. All branded to your identity. Your domain, your logo, and your UX.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">👑</span>
+                <h3>Admin Controls</h3>
+                <p>Approve issuers, authorize actors, configure permissions, monitor activity. Full platform governance in your hands.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔧</span>
+                <h3>API Access</h3>
+                <p>Full API for integration with your existing systems. Webhooks, data exports, custom workflows.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">📑</span>
+                <h3>Document Management</h3>
+                <p>Offering documents, subscription agreements, corporate records. Versioned, auditable, always accessible.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🤝</span>
+                <h3>Dedicated Support</h3>
+                <p>Named account manager. Technical integration support. Compliance consultation available.</p>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🔒</span>
+                <h3>Enterprise Security</h3>
+                <p>SOC 2 compliant infrastructure. Role-based access. Multi-sig where required. Your security policies enforced.</p>
             </div>
         </div>
-    </section>
-    <section class="detail-section alt">
-        <div class="detail-container">
-            <div class="detail-grid">
-                <div class="detail-content">
-                    <h2>Built for regulated entities</h2>
-                    <p>This offering is exclusively for licensed trust companies, registered investment advisers, regulated venture capital managers, and multi-family offices operating under appropriate regulatory frameworks.</p>
-                    <p>Your regulatory status allows you to take on platform operator responsibilities. We provide the technology; you provide the regulatory wrapper.</p>
-                </div>
-                <ul class="detail-list">
-                    <li>
-                        <span class="icon">🏛️</span>
-                        <div class="text">
-                            <h4>Trust Companies</h4>
-                            <p>Licensed fiduciaries who can act as trustee, custodian, or platform operator under existing charters.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon">💼</span>
-                        <div class="text">
-                            <h4>Venture Capital Funds</h4>
-                            <p>Registered fund managers who want to tokenize portfolio company securities for LP liquidity.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon">🏠</span>
-                        <div class="text">
-                            <h4>Multi-Family Offices</h4>
-                            <p>Sophisticated wealth managers seeking private market infrastructure for their client families.</p>
-                        </div>
-                    </li>
-                </ul>
+    </div>
+</section>
+<section class="detail-section alt">
+    <div class="detail-container">
+        <div class="detail-grid">
+            <div class="detail-content">
+                <h2>Engagement model</h2>
+                <p>Annual licensing plus transaction-based fees. No revenue share on your client relationships. Volume discounts available.</p>
+                <p>Implementation typically takes 4–8 weeks depending on customization requirements and integration complexity.</p>
             </div>
+            <ul class="detail-list">
+                <li>
+                    <span class="icon">📄</span>
+                    <div class="text">
+                        <h4>Annual License</h4>
+                        <p>Platform access, updates, support, and maintenance. Scales with your usage tier.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">💳</span>
+                    <div class="text">
+                        <h4>Transaction Fees</h4>
+                        <p>Per-issuance and per-trade fees at institutional rates. Pass through or absorb: your choice.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">🚀</span>
+                    <div class="text">
+                        <h4>Implementation</h4>
+                        <p>Dedicated onboarding team. Branding setup, integration support, compliance configuration, training.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
-    </section>
-    <section class="detail-section">
-        <div class="detail-container">
-            <div class="detail-grid">
-                <div class="detail-content">
-                    <h2>Complete infrastructure stack</h2>
-                    <p>Everything you need to run a securities platform: issuance engine, investor onboarding, cap table management, distribution processing, secondary trading, custody bridge, compliance reporting.</p>
-                    <p>Deploy under your brand, your domain, your terms of service. We're the invisible technology layer.</p>
-                </div>
-                <ul class="detail-list">
-                    <li>
-                        <span class="icon">🏗️</span>
-                        <div class="text">
-                            <h4>Issuance Engine</h4>
-                            <p>Launch tokenized debt, equity, revenue share, fund interests. Your issuers, your structures, your approval process.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon">📊</span>
-                        <div class="text">
-                            <h4>Cap Table & Registry</h4>
-                            <p>Authoritative investor registry. Transfer agent functionality. Corporate actions processing.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon">💰</span>
-                        <div class="text">
-                            <h4>Distribution Engine</h4>
-                            <p>Automated dividend, interest, and principal distributions. Withholding calculations. Payment processing.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon">🔄</span>
-                        <div class="text">
-                            <h4>Secondary Marketplace</h4>
-                            <p>OTC trading within your investor universe. Cross-broker routing optional. You control access.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="detail-section alt">
-        <div class="detail-container">
-            <div class="detail-grid">
-                <div class="detail-content">
-                    <h2>Your compliance framework</h2>
-                    <p>Configure investor eligibility rules, transfer restrictions, holding limits, and jurisdiction controls to match your regulatory requirements. The platform enforces what you define.</p>
-                    <p>Self-hosted KYC/AML keeps all investor data under your control. No third-party data processors. No data leaks. Your clients' information stays with you.</p>
-                </div>
-                <ul class="detail-list">
-                    <li>
-                        <span class="icon">🔐</span>
-                        <div class="text">
-                            <h4>Self-Hosted Verification</h4>
-                            <p>Run KYC/AML on your infrastructure. Integrate your existing providers. Maintain data sovereignty.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon">🛡️</span>
-                        <div class="text">
-                            <h4>Configurable Restrictions</h4>
-                            <p>Set transfer rules per security: accreditation, jurisdiction, holding period, concentration limits.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon">📋</span>
-                        <div class="text">
-                            <h4>Audit & Reporting</h4>
-                            <p>Complete audit trail. Regulatory reports on demand. Export for your compliance team, auditors, regulators.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="detail-section">
-        <div class="detail-container">
-            <div class="detail-grid">
-                <div class="detail-content">
-                    <h2>Custody flexibility</h2>
-                    <p>Securities settle on Solana by default. For investors requiring traditional custody, convert to ISIN-identified format via Clearstream. Settles to any bank worldwide.</p>
-                    <p>You control the conversion process. Issuer-level permissions. Trust oversight configurable. Always 1:1 backed between formats.</p>
-                </div>
-                <ul class="detail-list">
-                    <li>
-                        <span class="icon">⛓️</span>
-                        <div class="text">
-                            <h4>On-Chain (Solana)</h4>
-                            <p>24/7 settlement. Programmable compliance. Self-custody or qualified custodian.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon">🏦</span>
-                        <div class="text">
-                            <h4>Traditional (ISIN/Clearstream)</h4>
-                            <p>ISIN identifier. Clearstream settlement. Compatible with any private bank worldwide.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon">📈</span>
-                        <div class="text">
-                            <h4>Exchange Listing</h4>
-                            <p>Optional Vienna MTF listing for public price discovery. You decide which securities qualify.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="features-section">
-        <div class="features-container">
-            <div class="features-header">
-                <span class="section-label">Platform Capabilities</span>
-                <h2 class="section-title">Everything to run your own<br>securities infrastructure</h2>
-            </div>
-            <div class="feature-grid three-col">
-                <div class="feature-card">
-                    <span class="feature-icon">🖥️</span>
-                    <h3>White-Label Portals</h3>
-                    <p>Investor portal, issuer dashboard, admin console. All branded to your identity. Your domain, your logo, and your UX.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">👑</span>
-                    <h3>Admin Controls</h3>
-                    <p>Approve issuers, authorize actors, configure permissions, monitor activity. Full platform governance in your hands.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">🔧</span>
-                    <h3>API Access</h3>
-                    <p>Full API for integration with your existing systems. Webhooks, data exports, custom workflows.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">📑</span>
-                    <h3>Document Management</h3>
-                    <p>Offering documents, subscription agreements, corporate records. Versioned, auditable, always accessible.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">🤝</span>
-                    <h3>Dedicated Support</h3>
-                    <p>Named account manager. Technical integration support. Compliance consultation available.</p>
-                </div>
-                <div class="feature-card">
-                    <span class="feature-icon">🔒</span>
-                    <h3>Enterprise Security</h3>
-                    <p>SOC 2 compliant infrastructure. Role-based access. Multi-sig where required. Your security policies enforced.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="detail-section alt">
-        <div class="detail-container">
-            <div class="detail-grid">
-                <div class="detail-content">
-                    <h2>Engagement model</h2>
-                    <p>Annual licensing plus transaction-based fees. No revenue share on your client relationships. Volume discounts available.</p>
-                    <p>Implementation typically takes 4–8 weeks depending on customization requirements and integration complexity.</p>
-                </div>
-                <ul class="detail-list">
-                    <li>
-                        <span class="icon">📄</span>
-                        <div class="text">
-                            <h4>Annual License</h4>
-                            <p>Platform access, updates, support, and maintenance. Scales with your usage tier.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon">💳</span>
-                        <div class="text">
-                            <h4>Transaction Fees</h4>
-                            <p>Per-issuance and per-trade fees at institutional rates. Pass through or absorb: your choice.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <span class="icon">🚀</span>
-                        <div class="text">
-                            <h4>Implementation</h4>
-                            <p>Dedicated onboarding team. Branding setup, integration support, compliance configuration, training.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <section class="cta-section">
-        <h2>Ready to take control?</h2>
-        <p>For regulated entities seeking complete infrastructure sovereignty.</p>
-        <a href="/signup/?type=institution" class="btn btn-primary">
-            Request Information
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
-        </a>
-    </section>
+    </div>
+</section>
+<section class="cta-section">
+    <h2>Ready to take control?</h2>
+    <p>For regulated entities seeking complete infrastructure sovereignty.</p>
+    <a href="/signup/?type=institution" class="btn btn-primary">
+        Request Information
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+</section>
