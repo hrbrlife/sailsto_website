@@ -7,3 +7,5 @@ melusinasite/
 
 # Social media assets
 social/
+qa-testing/node_modules/
+qa-testing/screenshots/

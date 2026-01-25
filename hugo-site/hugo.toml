@@ -1,0 +1,22 @@
+baseURL = 'https://sails.to/'
+languageCode = 'en-us'
+title = 'Sails.to | Hybrid Securities Infrastructure'
+
+[params]
+  description = "Hybrid securities infrastructure bridging DeFi innovation with TradFi trust"
+  author = "Sails.to DAO LLC"
+
+[outputs]
+  home = ["HTML"]
+  section = ["HTML"]
+  page = ["HTML"]
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allow raw HTML in markdown
+
+# Permalinks for top-level pages only
+[[permalinks]]
+page = "/:filename.html"
+

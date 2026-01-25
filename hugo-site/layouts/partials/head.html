@@ -1,0 +1,27 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+    
+    {{ with .Params.description }}
+    <meta name="description" content="{{ . }}">
+    <meta property="og:description" content="{{ . }}">
+    {{ end }}
+    
+    <meta property="og:title" content="{{ if .Title }}{{ .Title }}{{ else }}{{ .Site.Title }}{{ end }}">
+    <meta property="og:type" content="{{ .Params.ogtype | default "website" }}">
+    
+    {{ if .Params.canonical }}
+    <link rel="canonical" href="{{ .Params.canonical }}">
+    {{ end }}
+    
+    <!-- Stylesheets -->
+    {{ range .Params.stylesheets }}
+    <link rel="stylesheet" href="{{ . }}">
+    {{ end }}
+    
+    <!-- Default stylesheets if none specified -->
+    {{ if not .Params.stylesheets }}
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    <link rel="stylesheet" href="/styles.css">
+    {{ end }}
