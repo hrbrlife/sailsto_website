@@ -6,12 +6,15 @@
     {{ partial "nav.html" . }}
     {{ end }}
     
+    <main id="main-content">
     {{ block "main" . }}{{ end }}
+    </main>
     
     {{ if not .Params.hideFooter }}
     {{ partial "footer.html" . }}
     {{ end }}
     
+    <script src="/js/nav.js" defer></script>
     {{ block "scripts" . }}{{ end }}
 </body>
 </html>

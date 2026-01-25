@@ -1041,7 +1041,7 @@ stylesheets:
             <div class="concept-box">
                 <h4>📖 Full Melusina OS Documentation</h4>
                 <p>For detailed documentation of the operating system, app store, pearl architecture, and security model:</p>
-                <p><a href="melusina-os.html" style="color: var(--primary); font-weight: bold;">→ View the complete Melusina OS documentation</a></p>
+                <p><a href="https://melusina-os.org/" style="color: var(--primary); font-weight: bold;">→ View the complete Melusina OS documentation</a></p>
             </div>
         </div>
     </section>

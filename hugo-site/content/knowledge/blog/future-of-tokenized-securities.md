@@ -12,7 +12,7 @@ stylesheets:
     <article class="blog-article">
         <header class="article-header">
             <div class="article-meta">
-                <a href="index.html" class="article-back">← Back to Blog</a>
+                <a href="/knowledge/blog/" class="article-back">← Back to Blog</a>
                 <span class="article-category industry">Industry</span>
             </div>
             <h1>The Future of Tokenized Securities in 2025</h1>

@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="term-page-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
             <span class="term-category">Compliance</span>
             <h1 class="term-title">KYC (Know Your Customer)</h1>
             <p class="term-short">Regulatory process to verify the identity of clients, assess their suitability, and understand the nature of their activities to prevent fraud and money laundering.</p>
@@ -24,15 +24,15 @@ stylesheets:
             </section>
             <section class="term-section">
                 <h2>Why It Matters</h2>
-                <p>KYC is the first line of defense against financial crime and regulatory violations. On Sails.to, our KYC process verifies that investors meet the eligibility requirements for each offering—whether that's <a href="accredited-investor.html">accredited investor</a> status under US regulations or <a href="professional-investor.html">professional investor</a> classification under EU rules.</p>
-                <p>Our KYC data is stored securely and can be reused across multiple investments, so investors only need to verify once. Combined with <a href="aml.html">AML screening</a>, this creates a compliant foundation for all platform activities.</p>
+                <p>KYC is the first line of defense against financial crime and regulatory violations. On Sails.to, our KYC process verifies that investors meet the eligibility requirements for each offering—whether that's <a href="/knowledge/glossary/accredited-investor/">accredited investor</a> status under US regulations or <a href="/knowledge/glossary/professional-investor/">professional investor</a> classification under EU rules.</p>
+                <p>Our KYC data is stored securely and can be reused across multiple investments, so investors only need to verify once. Combined with <a href="/knowledge/glossary/aml/">AML screening</a>, this creates a compliant foundation for all platform activities.</p>
             </section>
             <section class="term-section">
                 <h2>Related Terms</h2>
                 <div class="related-terms">
-                    <a href="aml.html" class="related-term-link">AML</a>
-                    <a href="accredited-investor.html" class="related-term-link">Accredited Investor</a>
-                    <a href="professional-investor.html" class="related-term-link">Professional Investor</a>
+                    <a href="/knowledge/glossary/aml/" class="related-term-link">AML</a>
+                    <a href="/knowledge/glossary/accredited-investor/" class="related-term-link">Accredited Investor</a>
+                    <a href="/knowledge/glossary/professional-investor/" class="related-term-link">Professional Investor</a>
                 </div>
             </section>
             <div class="term-cta">

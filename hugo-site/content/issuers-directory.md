@@ -85,7 +85,7 @@ stylesheets:
                                 </div>
                             </div>
                         </div>
-                        <a href="investors.html" class="card-cta">View Details</a>
+                        <a href="/investors/" class="card-cta">View Details</a>
                     </div>
                 </div>
                 <div class="issuer-card" data-structure="coupon" data-audited="true" data-regulated="false">
@@ -137,7 +137,7 @@ stylesheets:
                                 </div>
                             </div>
                         </div>
-                        <a href="investors.html" class="card-cta">View Details</a>
+                        <a href="/investors/" class="card-cta">View Details</a>
                     </div>
                 </div>
                 <div class="issuer-card" data-structure="coupon" data-audited="true" data-regulated="true">
@@ -189,7 +189,7 @@ stylesheets:
                                 </div>
                             </div>
                         </div>
-                        <a href="investors.html" class="card-cta">View Details</a>
+                        <a href="/investors/" class="card-cta">View Details</a>
                     </div>
                 </div>
                 <div class="issuer-card" data-structure="profit" data-audited="true" data-regulated="false">
@@ -242,7 +242,7 @@ stylesheets:
                                 </div>
                             </div>
                         </div>
-                        <a href="investors.html" class="card-cta">View Details</a>
+                        <a href="/investors/" class="card-cta">View Details</a>
                     </div>
                 </div>
                 <div class="issuer-card" data-structure="profit" data-audited="true" data-regulated="true">
@@ -295,7 +295,7 @@ stylesheets:
                                 </div>
                             </div>
                         </div>
-                        <a href="investors.html" class="card-cta">View Details</a>
+                        <a href="/investors/" class="card-cta">View Details</a>
                     </div>
                 </div>
                 <div class="issuer-card" data-structure="profit" data-audited="true" data-regulated="true">
@@ -348,7 +348,7 @@ stylesheets:
                                 </div>
                             </div>
                         </div>
-                        <a href="investors.html" class="card-cta">View Details</a>
+                        <a href="/investors/" class="card-cta">View Details</a>
                     </div>
                 </div>
                 <div class="issuer-card" data-structure="profit" data-audited="true" data-regulated="false">
@@ -401,7 +401,7 @@ stylesheets:
                                 </div>
                             </div>
                         </div>
-                        <a href="investors.html" class="card-cta">View Details</a>
+                        <a href="/investors/" class="card-cta">View Details</a>
                     </div>
                 </div>
                 <div class="issuer-card" data-structure="profit" data-audited="true" data-regulated="true">
@@ -454,7 +454,7 @@ stylesheets:
                                 </div>
                             </div>
                         </div>
-                        <a href="investors.html" class="card-cta">View Details</a>
+                        <a href="/investors/" class="card-cta">View Details</a>
                     </div>
                 </div>
                 <div class="issuer-card" data-structure="profit" data-audited="false" data-regulated="false">
@@ -507,7 +507,7 @@ stylesheets:
                                 </div>
                             </div>
                         </div>
-                        <a href="investors.html" class="card-cta">View Details</a>
+                        <a href="/investors/" class="card-cta">View Details</a>
                     </div>
                 </div>
             </div>

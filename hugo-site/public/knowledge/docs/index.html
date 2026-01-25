@@ -1,86 +1,21 @@
-<!DOCTYPE html>
-<html lang="en-us">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documentation | Sails.to | Hybrid Securities Infrastructure</title>
-    
-    
-    <meta name="description" content="Technical documentation for Sails.to platform — architecture overview, API reference, token standards, compliance framework, and integration guides.">
-    <meta property="og:description" content="Technical documentation for Sails.to platform — architecture overview, API reference, token standards, compliance framework, and integration guides.">
-    
-    
-    <meta property="og:title" content="Documentation">
-    <meta property="og:type" content="website">
-    
-    
-    
-    
-    
-    <link rel="stylesheet" href="../../assets/fonts/fonts.css">
-    
-    <link rel="stylesheet" href="../../styles.css">
-    
-    <link rel="stylesheet" href="../../assets/css/glossary.css">
-    
-    
-    
-    
-
-<body>
-    
-    <nav>
-    <a href="https://sails.to/" class="logo">
-        <img src="/sail_logo.png" alt="Sails.to" class="logo-dark">
-        <img src="/sail_logo_w.png" alt="Sails.to" class="logo-light">
-    </a>
-    <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    <div class="nav-links nav-collapse">
-        <div class="nav-dropdown">
-            <a href="#" class="nav-dropdown-trigger">For Me</a>
-            <div class="nav-dropdown-menu">
-                <a href="/issuers/">Business - Raise Funds</a>
-                <a href="/investors/">Professional Investors - Grow</a>
-                <a href="/brokers/">For Brokers</a>
-                <a href="/introducers/">Business Introducers</a>
-                <a href="/regulated/">For Institutions</a>
-            </div>
-        </div>
-        <a href="/issuers-directory/" style="color: var(--ink); text-decoration: none; font-weight: 500;">Platform</a>
-        <div class="nav-dropdown">
-            <a href="#" class="nav-dropdown-trigger">Understand</a>
-            <div class="nav-dropdown-menu">
-                <a href="/whatsails/">How It Works</a>
-                <a href="/pricing/">Pricing</a>
-                <div class="dropdown-divider"></div>
-                <a href="/knowledge/">Knowledge Base</a>
-                <a href="/knowledge/blog/">Blog</a>
-                <a href="/knowledge/docs/">Documentation</a>
-                <a href="/knowledge/faq/">FAQ</a>
-                <a href="/knowledge/glossary/">Glossary</a>
-                <a href="/knowledge/roadmap/">Roadmap</a>
-            </div>
-        </div>
-        <div class="nav-dropdown">
-            <a href="#" class="nav-dropdown-trigger">Company</a>
-            <div class="nav-dropdown-menu">
-                <a href="/company/about/">About</a>
-                <a href="/company/contact/">Contact</a>
-                <a href="/company/legal/">Legal</a>
-            </div>
-        </div>
-        <a href="/signup/" class="btn-nav">Get Started</a>
-    </div>
-</nav>
-
-    
-    
-    
-<pre><code>&lt;section class=&quot;page-hero&quot;&gt;
+<!doctype html><html lang=en-us><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Documentation | Sails.to | Hybrid Securities Infrastructure</title><meta name=description content="Technical documentation for Sails.to platform — architecture overview, API reference, token standards, compliance framework, and integration guides."><meta property="og:description" content="Technical documentation for Sails.to platform — architecture overview, API reference, token standards, compliance framework, and integration guides."><meta property="og:title" content="Documentation"><meta property="og:type" content="website"><link rel=stylesheet href=../../assets/fonts/fonts.css><link rel=stylesheet href=../../styles.css><link rel=stylesheet href=../../assets/css/glossary.css><body><a href=#main-content class=skip-link>Skip to main content</a><nav><a href=https://sails.to/ class=logo><img src=/sail_logo.png alt=Sails.to class=logo-dark>
+<img src=/sail_logo_w.png alt=Sails.to class=logo-light></a>
+<button class=nav-toggle aria-label="Toggle navigation" aria-expanded=false aria-controls=nav-links>
+<span></span>
+<span></span>
+<span></span></button><div class="nav-links nav-collapse" id=nav-links><div class=nav-dropdown><span class=nav-dropdown-trigger role=button tabindex=0 aria-haspopup=true aria-expanded=false>For Me</span><div class=nav-dropdown-menu role=menu><a href=/issuers/ role=menuitem>Business - Raise Funds</a>
+<a href=/investors/ role=menuitem>Professional Investors - Grow</a>
+<a href=/brokers/ role=menuitem>For Brokers</a>
+<a href=/introducers/ role=menuitem>Business Introducers</a>
+<a href=/regulated/ role=menuitem>For Institutions</a></div></div><a href=/issuers-directory/>Platform</a><div class=nav-dropdown><span class=nav-dropdown-trigger role=button tabindex=0 aria-haspopup=true aria-expanded=false>Understand</span><div class=nav-dropdown-menu role=menu><a href=/whatsails/ role=menuitem>How It Works</a>
+<a href=/pricing/ role=menuitem>Pricing</a><div class=dropdown-divider role=separator></div><a href=/knowledge/ role=menuitem>Knowledge Base</a>
+<a href=/knowledge/blog/ role=menuitem>Blog</a>
+<a href=/knowledge/docs/ role=menuitem>Documentation</a>
+<a href=/knowledge/faq/ role=menuitem>FAQ</a>
+<a href=/knowledge/glossary/ role=menuitem>Glossary</a>
+<a href=/knowledge/roadmap/ role=menuitem>Roadmap</a></div></div><div class=nav-dropdown><span class=nav-dropdown-trigger role=button tabindex=0 aria-haspopup=true aria-expanded=false>Company</span><div class=nav-dropdown-menu role=menu><a href=/company/about/ role=menuitem>About</a>
+<a href=/company/contact/ role=menuitem>Contact</a>
+<a href=/company/legal/ role=menuitem>Legal</a></div></div><a href=/signup/ class=btn-nav>Get Started</a></div></nav><main id=main-content><pre><code>&lt;section class=&quot;page-hero&quot;&gt;
     &lt;span class=&quot;section-label&quot;&gt;Technical Reference&lt;/span&gt;
     &lt;h1 class=&quot;section-title&quot;&gt;Documentation&lt;/h1&gt;
     &lt;p class=&quot;section-desc&quot;&gt;Everything you need to integrate with and build on the Sails.to platform.&lt;/p&gt;
@@ -90,27 +25,27 @@
         &lt;aside class=&quot;docs-sidebar&quot;&gt;
             &lt;nav class=&quot;docs-nav&quot;&gt;
                 &lt;h4&gt;Getting Started&lt;/h4&gt;
-                &lt;a href=&quot;getting-started.html&quot; class=&quot;docs-link&quot;&gt;Quick Start Guide&lt;/a&gt;
-                &lt;a href=&quot;platform-overview.html&quot; class=&quot;docs-link&quot;&gt;Platform Overview&lt;/a&gt;
-                &lt;a href=&quot;hybrid-architecture.html&quot; class=&quot;docs-link&quot;&gt;Hybrid Architecture&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/getting-started/&quot; class=&quot;docs-link&quot;&gt;Quick Start Guide&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/platform-overview/&quot; class=&quot;docs-link&quot;&gt;Platform Overview&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/hybrid-architecture/&quot; class=&quot;docs-link&quot;&gt;Hybrid Architecture&lt;/a&gt;
                 &lt;h4&gt;Token Standard&lt;/h4&gt;
-                &lt;a href=&quot;token-standard.html&quot; class=&quot;docs-link&quot;&gt;SPL Token Implementation&lt;/a&gt;
-                &lt;a href=&quot;metadata.html&quot; class=&quot;docs-link&quot;&gt;Token Metadata&lt;/a&gt;
-                &lt;a href=&quot;compliance-extensions.html&quot; class=&quot;docs-link&quot;&gt;Compliance Extensions&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/token-standard/&quot; class=&quot;docs-link&quot;&gt;SPL Token Implementation&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/metadata/&quot; class=&quot;docs-link&quot;&gt;Token Metadata&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/compliance-extensions/&quot; class=&quot;docs-link&quot;&gt;Compliance Extensions&lt;/a&gt;
                 &lt;h4&gt;API Reference&lt;/h4&gt;
-                &lt;a href=&quot;api-reference.html&quot; class=&quot;docs-link&quot;&gt;API Overview&lt;/a&gt;
-                &lt;a href=&quot;authentication.html&quot; class=&quot;docs-link&quot;&gt;Authentication&lt;/a&gt;
-                &lt;a href=&quot;investors-api.html&quot; class=&quot;docs-link&quot;&gt;Investors API&lt;/a&gt;
-                &lt;a href=&quot;cap-table-api.html&quot; class=&quot;docs-link&quot;&gt;Cap Table API&lt;/a&gt;
-                &lt;a href=&quot;distributions-api.html&quot; class=&quot;docs-link&quot;&gt;Distributions API&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/api-reference/&quot; class=&quot;docs-link&quot;&gt;API Overview&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/authentication/&quot; class=&quot;docs-link&quot;&gt;Authentication&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/investors-api/&quot; class=&quot;docs-link&quot;&gt;Investors API&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/cap-table-api/&quot; class=&quot;docs-link&quot;&gt;Cap Table API&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/distributions-api/&quot; class=&quot;docs-link&quot;&gt;Distributions API&lt;/a&gt;
                 &lt;h4&gt;Compliance&lt;/h4&gt;
-                &lt;a href=&quot;compliance-framework.html&quot; class=&quot;docs-link&quot;&gt;Compliance Framework&lt;/a&gt;
-                &lt;a href=&quot;kyc-integration.html&quot; class=&quot;docs-link&quot;&gt;KYC Integration&lt;/a&gt;
-                &lt;a href=&quot;transfer-rules.html&quot; class=&quot;docs-link&quot;&gt;Transfer Rules&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/compliance-framework/&quot; class=&quot;docs-link&quot;&gt;Compliance Framework&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/kyc-integration/&quot; class=&quot;docs-link&quot;&gt;KYC Integration&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/transfer-rules/&quot; class=&quot;docs-link&quot;&gt;Transfer Rules&lt;/a&gt;
                 &lt;h4&gt;TradFi Bridge&lt;/h4&gt;
-                &lt;a href=&quot;tradfi-bridge.html&quot; class=&quot;docs-link&quot;&gt;Bridge Overview&lt;/a&gt;
-                &lt;a href=&quot;isin-conversion.html&quot; class=&quot;docs-link&quot;&gt;ISIN Conversion&lt;/a&gt;
-                &lt;a href=&quot;clearstream.html&quot; class=&quot;docs-link&quot;&gt;Clearstream Integration&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/tradfi-bridge/&quot; class=&quot;docs-link&quot;&gt;Bridge Overview&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/isin-conversion/&quot; class=&quot;docs-link&quot;&gt;ISIN Conversion&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/clearstream/&quot; class=&quot;docs-link&quot;&gt;Clearstream Integration&lt;/a&gt;
             &lt;/nav&gt;
         &lt;/aside&gt;
         &lt;main class=&quot;docs-content&quot;&gt;
@@ -118,14 +53,14 @@
                 &lt;h2&gt;Welcome to Sails.to Docs&lt;/h2&gt;
                 &lt;p&gt;This documentation covers everything you need to understand, integrate with, and build on the Sails.to hybrid securities platform.&lt;/p&gt;
                 &lt;div class=&quot;docs-quick-links&quot;&gt;
-                    &lt;a href=&quot;getting-started.html&quot; class=&quot;docs-quick-link&quot;&gt;
+                    &lt;a href=&quot;/knowledge/docs/getting-started/&quot; class=&quot;docs-quick-link&quot;&gt;
                         &lt;span class=&quot;icon&quot;&gt;🚀&lt;/span&gt;
                         &lt;span class=&quot;text&quot;&gt;
                             &lt;strong&gt;Quick Start&lt;/strong&gt;
                             &lt;small&gt;Get up and running in minutes&lt;/small&gt;
                         &lt;/span&gt;
                     &lt;/a&gt;
-                    &lt;a href=&quot;api-reference.html&quot; class=&quot;docs-quick-link&quot;&gt;
+                    &lt;a href=&quot;/knowledge/docs/api-reference/&quot; class=&quot;docs-quick-link&quot;&gt;
                         &lt;span class=&quot;icon&quot;&gt;⚡&lt;/span&gt;
                         &lt;span class=&quot;text&quot;&gt;
                             &lt;strong&gt;API Reference&lt;/strong&gt;
@@ -137,22 +72,22 @@
             &lt;section class=&quot;docs-section&quot;&gt;
                 &lt;h3&gt;Core Concepts&lt;/h3&gt;
                 &lt;div class=&quot;docs-grid&quot;&gt;
-                    &lt;a href=&quot;platform-overview.html&quot; class=&quot;docs-card&quot;&gt;
+                    &lt;a href=&quot;/knowledge/docs/platform-overview/&quot; class=&quot;docs-card&quot;&gt;
                         &lt;span class=&quot;docs-card-icon&quot;&gt;🏗️&lt;/span&gt;
                         &lt;h4&gt;Platform Overview&lt;/h4&gt;
                         &lt;p&gt;High-level architecture, components, and data flows.&lt;/p&gt;
                     &lt;/a&gt;
-                    &lt;a href=&quot;hybrid-architecture.html&quot; class=&quot;docs-card&quot;&gt;
+                    &lt;a href=&quot;/knowledge/docs/hybrid-architecture/&quot; class=&quot;docs-card&quot;&gt;
                         &lt;span class=&quot;docs-card-icon&quot;&gt;🔗&lt;/span&gt;
                         &lt;h4&gt;Hybrid Architecture&lt;/h4&gt;
                         &lt;p&gt;How blockchain and traditional finance systems interoperate.&lt;/p&gt;
                     &lt;/a&gt;
-                    &lt;a href=&quot;token-standard.html&quot; class=&quot;docs-card&quot;&gt;
+                    &lt;a href=&quot;/knowledge/docs/token-standard/&quot; class=&quot;docs-card&quot;&gt;
                         &lt;span class=&quot;docs-card-icon&quot;&gt;🪙&lt;/span&gt;
                         &lt;h4&gt;Token Standard&lt;/h4&gt;
                         &lt;p&gt;SPL token implementation with compliance extensions.&lt;/p&gt;
                     &lt;/a&gt;
-                    &lt;a href=&quot;compliance-framework.html&quot; class=&quot;docs-card&quot;&gt;
+                    &lt;a href=&quot;/knowledge/docs/compliance-framework/&quot; class=&quot;docs-card&quot;&gt;
                         &lt;span class=&quot;docs-card-icon&quot;&gt;⚖️&lt;/span&gt;
                         &lt;h4&gt;Compliance Framework&lt;/h4&gt;
                         &lt;p&gt;On-chain transfer restrictions and regulatory hooks.&lt;/p&gt;
@@ -183,7 +118,7 @@
                     &lt;/div&gt;
                     &lt;p class=&quot;docs-api-desc&quot;&gt;Create and execute a distribution to token holders.&lt;/p&gt;
                 &lt;/div&gt;
-                &lt;a href=&quot;api-reference.html&quot; class=&quot;docs-section-link&quot;&gt;View Full API Reference →&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/api-reference/&quot; class=&quot;docs-section-link&quot;&gt;View Full API Reference →&lt;/a&gt;
             &lt;/section&gt;
             &lt;section class=&quot;docs-section&quot;&gt;
                 &lt;h3&gt;TradFi Bridge&lt;/h3&gt;
@@ -204,7 +139,7 @@
                         &lt;span class=&quot;step-text&quot;&gt;ISIN securities credited at Clearstream&lt;/span&gt;
                     &lt;/div&gt;
                 &lt;/div&gt;
-                &lt;a href=&quot;tradfi-bridge.html&quot; class=&quot;docs-section-link&quot;&gt;Learn More About the Bridge →&lt;/a&gt;
+                &lt;a href=&quot;/knowledge/docs/tradfi-bridge/&quot; class=&quot;docs-section-link&quot;&gt;Learn More About the Bridge →&lt;/a&gt;
             &lt;/section&gt;
             &lt;section class=&quot;docs-section&quot;&gt;
                 &lt;h3&gt;Need Help?&lt;/h3&gt;
@@ -226,55 +161,18 @@
         &lt;/main&gt;
     &lt;/div&gt;
 &lt;/section&gt;
-</code></pre>
-
-
-    
-    
-    <footer>
-    <div class="footer-grid">
-        <div class="footer-brand">
-            <a href="https://sails.to/" class="logo">
-                <img src="/sail_logo.png" alt="Sails.to">
-            </a>
-            <p>Hybrid securities infrastructure bridging DeFi innovation with TradFi trust.<br><em style="font-size: 0.8rem; color: var(--silver);">White-label available for institutions.</em></p>
-        </div>
-        <div class="footer-col">
-            <h4>For Me</h4>
-            <a href="/issuers/">Business - Raise Funds</a>
-            <a href="/investors/">Professional Investors - Grow</a>
-            <a href="/brokers/">For Brokers</a>
-            <a href="/introducers/">Business Introducers</a>
-            <a href="/regulated/">For Institutions</a>
-        </div>
-        <div class="footer-col">
-            <h4>Understand</h4>
-            <a href="/whatsails/">How It Works</a>
-            <a href="/pricing/">Pricing</a>
-            <a href="/knowledge/">Knowledge Base</a>
-            <a href="/knowledge/blog/">Blog</a>
-            <a href="/knowledge/docs/">Documentation</a>
-            <a href="/knowledge/faq/">FAQ</a>
-            <a href="/knowledge/glossary/">Glossary</a>
-            <a href="/knowledge/roadmap/">Roadmap</a>
-        </div>
-        <div class="footer-col">
-            <h4>Company</h4>
-            <a href="/company/about/">About</a>
-            <a href="/company/contact/">Contact</a>
-            <a href="/company/legal/">Legal</a>
-        </div>
-    </div>
-    <div class="footer-bottom">
-        <span>© 2026 Sails.to DAO LLC. All rights reserved.</span>
-        <span>Securities offered through licensed intermediaries only. For professional investors.</span>
-    </div>
-</footer>
-
-    
-    
-    
-
-
-</body>
-</html>
+</code></pre></main><footer><div class=footer-grid><div class=footer-brand><a href=https://sails.to/ class=logo><img src=/sail_logo.png alt=Sails.to></a><p>Hybrid securities infrastructure bridging DeFi innovation with TradFi trust.<br><em style=font-size:.8rem;color:var(--silver)>White-label available for institutions.</em></p></div><div class=footer-col><h4>For Me</h4><a href=/issuers/>Business - Raise Funds</a>
+<a href=/investors/>Professional Investors - Grow</a>
+<a href=/brokers/>For Brokers</a>
+<a href=/introducers/>Business Introducers</a>
+<a href=/regulated/>For Institutions</a></div><div class=footer-col><h4>Understand</h4><a href=/whatsails/>How It Works</a>
+<a href=/pricing/>Pricing</a>
+<a href=/knowledge/>Knowledge Base</a>
+<a href=/knowledge/blog/>Blog</a>
+<a href=/knowledge/docs/>Documentation</a>
+<a href=/knowledge/faq/>FAQ</a>
+<a href=/knowledge/glossary/>Glossary</a>
+<a href=/knowledge/roadmap/>Roadmap</a></div><div class=footer-col><h4>Company</h4><a href=/company/about/>About</a>
+<a href=/company/contact/>Contact</a>
+<a href=/company/legal/>Legal</a></div></div><div class=footer-bottom><span>© 2026 Sails.to DAO LLC. All rights reserved.</span>
+<span>Securities offered through licensed intermediaries only. For professional investors.</span></div></footer><script src=/js/nav.js defer></script></body></html>

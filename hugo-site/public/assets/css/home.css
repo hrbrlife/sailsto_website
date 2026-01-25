@@ -7,7 +7,7 @@
             --charcoal: #1A1A1A;
             --graphite: #2D2D2D;
             --slate: #4A4A4A;
-            --silver: #8A8A8A;
+            --silver: #6B6B6B;
             --gold: #C9A227;
             --crimson: #B8192B;
             --navy: #0D1B2A;
@@ -224,6 +224,29 @@
         
         .nav-dropdown-trigger {
             cursor: pointer;
+            font-family: var(--font-ui);
+            font-size: 0.72rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--slate);
+            text-decoration: none;
+            position: relative;
+            padding: 4px 0;
+            transition: color 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-dropdown-trigger:hover {
+            color: var(--ink);
+        }
+        
+        nav:not(.scrolled) .nav-dropdown-trigger {
+            color: rgba(255,255,255,0.85);
+        }
+        
+        nav:not(.scrolled) .nav-dropdown-trigger:hover {
+            color: #ffffff;
         }
         
         .nav-dropdown-trigger::after {
@@ -478,14 +501,6 @@
                 color: #ffd699;
                 text-shadow: 0 0 40px rgba(255, 160, 80, 0.3),
                              0 0 80px rgba(255, 140, 60, 0.15);
-            }
-        }
-        /* Subtle glow pulse */
-        .hero h1 {
-            animation: none;
-        }
-            50% {
-                filter: drop-shadow(0 0 40px rgba(255, 180, 80, 0.5)) drop-shadow(0 0 80px rgba(255, 140, 50, 0.2));
             }
         }
         

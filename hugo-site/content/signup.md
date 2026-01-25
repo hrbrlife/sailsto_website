@@ -114,7 +114,7 @@ stylesheets:
                         </div>
                         <div class="form-checkbox">
                             <input type="checkbox" id="terms" name="agree_terms" required>
-                            <label for="terms">I agree to the <a href="company/legal.html">Terms of Service</a> and <a href="company/legal.html#privacy">Privacy Policy</a>. *</label>
+                            <label for="terms">I agree to the <a href="/company/legal/">Terms of Service</a> and <a href="/company/legal/#privacy">Privacy Policy</a>. *</label>
                         </div>
                         <button type="submit" class="form-submit">Submit Application</button>
                     </form>

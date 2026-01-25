@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="term-page-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
             <span class="term-category">Compliance</span>
             <h1 class="term-title">Accredited Investor</h1>
             <p class="term-short">An individual or entity meeting SEC financial thresholds ($200K+ annual income or $1M+ net worth) that qualifies to invest in unregistered securities offerings.</p>
@@ -42,15 +42,15 @@ stylesheets:
             </section>
             <section class="term-section">
                 <h2>Why It Matters</h2>
-                <p>US securities laws require <a href="reg-d.html">Reg D 506(c)</a> offerings to verify that all investors are accredited. This isn't just a checkbox—it's a legal requirement with real consequences for issuers who get it wrong.</p>
-                <p>Sails.to works with third-party verification services to confirm accredited status during <a href="kyc.html">KYC</a>. Non-US investors may qualify under <a href="reg-s.html">Reg S</a> without meeting US accreditation thresholds, instead qualifying as <a href="professional-investor.html">professional investors</a> under their local regulations.</p>
+                <p>US securities laws require <a href="/knowledge/glossary/reg-d/">Reg D 506(c)</a> offerings to verify that all investors are accredited. This isn't just a checkbox—it's a legal requirement with real consequences for issuers who get it wrong.</p>
+                <p>Sails.to works with third-party verification services to confirm accredited status during <a href="/knowledge/glossary/kyc/">KYC</a>. Non-US investors may qualify under <a href="/knowledge/glossary/reg-s/">Reg S</a> without meeting US accreditation thresholds, instead qualifying as <a href="/knowledge/glossary/professional-investor/">professional investors</a> under their local regulations.</p>
             </section>
             <section class="term-section">
                 <h2>Related Terms</h2>
                 <div class="related-terms">
-                    <a href="professional-investor.html" class="related-term-link">Professional Investor</a>
-                    <a href="reg-d.html" class="related-term-link">Reg D</a>
-                    <a href="kyc.html" class="related-term-link">KYC</a>
+                    <a href="/knowledge/glossary/professional-investor/" class="related-term-link">Professional Investor</a>
+                    <a href="/knowledge/glossary/reg-d/" class="related-term-link">Reg D</a>
+                    <a href="/knowledge/glossary/kyc/" class="related-term-link">KYC</a>
                 </div>
             </section>
             <div class="term-cta">

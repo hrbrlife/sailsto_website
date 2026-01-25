@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="blog-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Blog</a>
+            <a href="/knowledge/blog/" class="back-link">← Back to Blog</a>
             <span class="blog-category">Legal & Compliance</span>
             <h1 class="blog-title">Why Wyoming? The State Leading Crypto Innovation</h1>
             <div class="blog-meta">
@@ -65,11 +65,11 @@ stylesheets:
             <div class="related-posts">
                 <h3>Related Articles</h3>
                 <div class="related-grid">
-                    <a href="security-tokens-explained.html" class="related-card">
+                    <a href="/knowledge/blog/security-tokens-explained/" class="related-card">
                         <h4>Security Tokens Explained</h4>
                         <p>What makes a token a security, and why it matters.</p>
                     </a>
-                    <a href="future-of-tokenized-securities.html" class="related-card">
+                    <a href="/knowledge/blog/future-of-tokenized-securities/" class="related-card">
                         <h4>The Future of Tokenized Securities</h4>
                         <p>How blockchain is transforming capital markets.</p>
                     </a>

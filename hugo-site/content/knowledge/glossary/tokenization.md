@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="term-page-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
             <span class="term-category">Finance</span>
             <h1 class="term-title">Tokenization</h1>
             <p class="term-short">The process of converting ownership rights in an asset into digital tokens on a blockchain, enabling fractional ownership and programmable compliance.</p>
@@ -25,14 +25,14 @@ stylesheets:
             <section class="term-section">
                 <h2>Why It Matters</h2>
                 <p>Tokenization is what makes previously illiquid assets tradeable. That $10M commercial building? Divide it into 10,000 tokens and suddenly accredited investors can own a piece for $1,000. That private equity fund with a $500K minimum? Tokenize it and drop the threshold to $150K.</p>
-                <p>On Sails.to, tokenization creates <a href="security-token.html">security tokens</a> within legal <a href="spv.html">SPV</a> structures. Your tokens represent real, legally enforceable ownership—not just a database entry, but a <a href="smart-contract.html">smart contract</a> backed by a <a href="wyoming-dao-llc.html">Wyoming DAO LLC</a>.</p>
+                <p>On Sails.to, tokenization creates <a href="/knowledge/glossary/security-token/">security tokens</a> within legal <a href="/knowledge/glossary/spv/">SPV</a> structures. Your tokens represent real, legally enforceable ownership—not just a database entry, but a <a href="/knowledge/glossary/smart-contract/">smart contract</a> backed by a <a href="/knowledge/glossary/wyoming-dao-llc/">Wyoming DAO LLC</a>.</p>
             </section>
             <section class="term-section">
                 <h2>Related Terms</h2>
                 <div class="related-terms">
-                    <a href="security-token.html" class="related-term-link">Security Token</a>
-                    <a href="smart-contract.html" class="related-term-link">Smart Contract</a>
-                    <a href="spv.html" class="related-term-link">SPV</a>
+                    <a href="/knowledge/glossary/security-token/" class="related-term-link">Security Token</a>
+                    <a href="/knowledge/glossary/smart-contract/" class="related-term-link">Smart Contract</a>
+                    <a href="/knowledge/glossary/spv/" class="related-term-link">SPV</a>
                 </div>
             </section>
             <div class="term-cta">

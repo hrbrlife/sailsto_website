@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="term-page-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
             <span class="term-category">Compliance</span>
             <h1 class="term-title">Professional Investor</h1>
             <p class="term-short">Under EU/international regulations, an investor with sufficient experience, knowledge, and expertise to make independent investment decisions and assess risks.</p>
@@ -24,15 +24,15 @@ stylesheets:
             </section>
             <section class="term-section">
                 <h2>Why It Matters</h2>
-                <p>If you're outside the US, you don't need to meet US <a href="accredited-investor.html">accredited investor</a> thresholds. Instead, Sails.to offerings are available under <a href="reg-s.html">Regulation S</a> to professional investors as defined by your local jurisdiction.</p>
+                <p>If you're outside the US, you don't need to meet US <a href="/knowledge/glossary/accredited-investor/">accredited investor</a> thresholds. Instead, Sails.to offerings are available under <a href="/knowledge/glossary/reg-s/">Regulation S</a> to professional investors as defined by your local jurisdiction.</p>
                 <p>This typically means institutional investors, high-net-worth individuals, or those with professional financial experience. The exact criteria vary by country, but the principle is the same: ensuring investors understand the risks of private securities offerings.</p>
             </section>
             <section class="term-section">
                 <h2>Related Terms</h2>
                 <div class="related-terms">
-                    <a href="accredited-investor.html" class="related-term-link">Accredited Investor</a>
-                    <a href="kyc.html" class="related-term-link">KYC</a>
-                    <a href="reg-s.html" class="related-term-link">Reg S</a>
+                    <a href="/knowledge/glossary/accredited-investor/" class="related-term-link">Accredited Investor</a>
+                    <a href="/knowledge/glossary/kyc/" class="related-term-link">KYC</a>
+                    <a href="/knowledge/glossary/reg-s/" class="related-term-link">Reg S</a>
                 </div>
             </section>
             <div class="term-cta">

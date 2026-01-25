@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="term-page-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
             <span class="term-category">Compliance</span>
             <h1 class="term-title">Regulation D (Reg D)</h1>
             <p class="term-short">SEC regulation providing exemptions from registration for private placements, allowing companies to raise capital from accredited investors without a public offering.</p>
@@ -24,15 +24,15 @@ stylesheets:
             </section>
             <section class="term-section">
                 <h2>Why It Matters</h2>
-                <p>Reg D 506(c) is the workhorse of compliant token offerings in the US. It allows you to market publicly—essential for blockchain projects—but requires verifying that every investor is <a href="accredited-investor.html">accredited</a>.</p>
-                <p>Sails.to structures all US-facing offerings under 506(c), combined with <a href="reg-s.html">Reg S</a> for international investors. This dual structure lets issuers market globally while maintaining full SEC compliance.</p>
+                <p>Reg D 506(c) is the workhorse of compliant token offerings in the US. It allows you to market publicly—essential for blockchain projects—but requires verifying that every investor is <a href="/knowledge/glossary/accredited-investor/">accredited</a>.</p>
+                <p>Sails.to structures all US-facing offerings under 506(c), combined with <a href="/knowledge/glossary/reg-s/">Reg S</a> for international investors. This dual structure lets issuers market globally while maintaining full SEC compliance.</p>
             </section>
             <section class="term-section">
                 <h2>Related Terms</h2>
                 <div class="related-terms">
-                    <a href="reg-s.html" class="related-term-link">Reg S</a>
-                    <a href="accredited-investor.html" class="related-term-link">Accredited Investor</a>
-                    <a href="security-token.html" class="related-term-link">Security Token</a>
+                    <a href="/knowledge/glossary/reg-s/" class="related-term-link">Reg S</a>
+                    <a href="/knowledge/glossary/accredited-investor/" class="related-term-link">Accredited Investor</a>
+                    <a href="/knowledge/glossary/security-token/" class="related-term-link">Security Token</a>
                 </div>
             </section>
             <div class="term-cta">

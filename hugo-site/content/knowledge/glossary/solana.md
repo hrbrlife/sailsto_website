@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="term-page-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
             <span class="term-category">Technology</span>
             <h1 class="term-title">Solana</h1>
             <p class="term-short">A high-performance blockchain platform known for fast transaction speeds (400ms finality) and low fees, used by Sails.to for issuing security tokens.</p>
@@ -24,15 +24,15 @@ stylesheets:
             </section>
             <section class="term-section">
                 <h2>Why It Matters</h2>
-                <p>When you have a <a href="cap-table.html">cap table</a> with thousands of investors and need to distribute <a href="distributions.html">dividends</a> quarterly, blockchain fees matter. On Ethereum, this could cost hundreds of dollars in gas. On Solana, it's pennies.</p>
-                <p>Solana's speed also enables real-time compliance enforcement. Every transfer can be checked against <a href="smart-contract.html">smart contract</a> rules in milliseconds, not minutes. Combined with our <a href="tradfi-bridge.html">TradFi Bridge</a> to <a href="clearstream.html">Clearstream</a>, Solana gives us the best of both worlds: crypto efficiency and institutional credibility.</p>
+                <p>When you have a <a href="/knowledge/glossary/cap-table/">cap table</a> with thousands of investors and need to distribute <a href="/knowledge/glossary/distributions/">dividends</a> quarterly, blockchain fees matter. On Ethereum, this could cost hundreds of dollars in gas. On Solana, it's pennies.</p>
+                <p>Solana's speed also enables real-time compliance enforcement. Every transfer can be checked against <a href="/knowledge/glossary/smart-contract/">smart contract</a> rules in milliseconds, not minutes. Combined with our <a href="/knowledge/glossary/tradfi-bridge/">TradFi Bridge</a> to <a href="/knowledge/glossary/clearstream/">Clearstream</a>, Solana gives us the best of both worlds: crypto efficiency and institutional credibility.</p>
             </section>
             <section class="term-section">
                 <h2>Related Terms</h2>
                 <div class="related-terms">
-                    <a href="smart-contract.html" class="related-term-link">Smart Contract</a>
-                    <a href="tradfi-bridge.html" class="related-term-link">TradFi Bridge</a>
-                    <a href="security-token.html" class="related-term-link">Security Token</a>
+                    <a href="/knowledge/glossary/smart-contract/" class="related-term-link">Smart Contract</a>
+                    <a href="/knowledge/glossary/tradfi-bridge/" class="related-term-link">TradFi Bridge</a>
+                    <a href="/knowledge/glossary/security-token/" class="related-term-link">Security Token</a>
                 </div>
             </section>
             <div class="term-cta">

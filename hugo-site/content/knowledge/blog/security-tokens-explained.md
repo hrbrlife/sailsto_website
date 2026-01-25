@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="blog-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Blog</a>
+            <a href="/knowledge/blog/" class="back-link">← Back to Blog</a>
             <span class="blog-category">Education</span>
             <h1 class="blog-title">Security Tokens Explained: What They Are and Why They Matter</h1>
             <div class="blog-meta">

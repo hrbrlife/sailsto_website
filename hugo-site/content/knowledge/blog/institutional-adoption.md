@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="blog-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Blog</a>
+            <a href="/knowledge/blog/" class="back-link">← Back to Blog</a>
             <span class="blog-category">Market Trends</span>
             <h1 class="blog-title">Institutional Adoption of Tokenized Securities: The Tipping Point</h1>
             <div class="blog-meta">

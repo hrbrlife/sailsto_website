@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="term-page-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
             <span class="term-category">Finance</span>
             <h1 class="term-title">Distributions</h1>
             <p class="term-short">Payments made to security token holders, including dividends, interest, rental income, or liquidation proceeds, automated via smart contracts.</p>
@@ -25,14 +25,14 @@ stylesheets:
             <section class="term-section">
                 <h2>Why It Matters</h2>
                 <p>Traditional dividend processing is a nightmare. Record dates, ex-dividend dates, payment delays, intermediary banks, currency conversions, tax withholding—every step adds cost and delay. A simple dividend can take weeks to reach international investors.</p>
-                <p>On Sails.to, distributions are instant and automatic. The <a href="smart-contract.html">smart contract</a> reads the <a href="cap-table.html">cap table</a>, calculates each holder's pro-rata share, and sends funds directly to their wallet. For investors holding tokens via <a href="isin.html">ISIN</a> in <a href="clearstream.html">Clearstream</a>, distributions are converted and settled through traditional banking rails.</p>
+                <p>On Sails.to, distributions are instant and automatic. The <a href="/knowledge/glossary/smart-contract/">smart contract</a> reads the <a href="/knowledge/glossary/cap-table/">cap table</a>, calculates each holder's pro-rata share, and sends funds directly to their wallet. For investors holding tokens via <a href="/knowledge/glossary/isin/">ISIN</a> in <a href="/knowledge/glossary/clearstream/">Clearstream</a>, distributions are converted and settled through traditional banking rails.</p>
             </section>
             <section class="term-section">
                 <h2>Related Terms</h2>
                 <div class="related-terms">
-                    <a href="smart-contract.html" class="related-term-link">Smart Contract</a>
-                    <a href="cap-table.html" class="related-term-link">Cap Table</a>
-                    <a href="security-token.html" class="related-term-link">Security Token</a>
+                    <a href="/knowledge/glossary/smart-contract/" class="related-term-link">Smart Contract</a>
+                    <a href="/knowledge/glossary/cap-table/" class="related-term-link">Cap Table</a>
+                    <a href="/knowledge/glossary/security-token/" class="related-term-link">Security Token</a>
                 </div>
             </section>
             <div class="term-cta">

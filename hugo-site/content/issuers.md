@@ -5,7 +5,6 @@ stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
-  - "/assets/css/glossary.css"
 ---
 
 <section class="page-hero" style="background: var(--ink);">
@@ -248,7 +247,7 @@ stylesheets:
     <section class="cta-section">
         <h2>Ready to raise?</h2>
         <p>From term sheet to live offering in 1–2 weeks. Zero upfront.</p>
-        <a href="signup.html?type=issuer" class="btn btn-primary">
+        <a href="/signup/?type=issuer" class="btn btn-primary">
             Start Your Raise
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>
