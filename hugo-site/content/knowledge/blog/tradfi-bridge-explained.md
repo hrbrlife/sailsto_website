@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="blog-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Blog</a>
+            <a href="/knowledge/blog/" class="back-link">← Back to Blog</a>
             <span class="blog-category">Technology</span>
             <h1 class="blog-title">The TradFi Bridge Explained: Connecting Blockchain to Traditional Finance</h1>
             <div class="blog-meta">

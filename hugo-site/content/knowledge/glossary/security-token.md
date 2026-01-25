@@ -11,7 +11,7 @@ stylesheets:
 
     <header class="term-page-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
             <span class="term-category">Finance</span>
             <h1 class="term-title">Security Token</h1>
             <p class="term-short">A digital representation of a traditional security (equity, debt, or fund share) issued on a blockchain with built-in compliance rules enforced by smart contracts.</p>
@@ -25,16 +25,16 @@ stylesheets:
             </section>
             <section class="term-section">
                 <h2>Why It Matters</h2>
-                <p>Security tokens represent the evolution of capital markets infrastructure. By encoding compliance rules directly into <a href="smart-contract.html">smart contracts</a>, they eliminate the need for intermediaries while maintaining regulatory compliance. Investors benefit from increased liquidity through fractional ownership, while issuers gain access to global capital markets with reduced costs.</p>
-                <p>On Sails.to, every security token is backed by a real legal entity (typically a <a href="wyoming-dao-llc.html">Wyoming DAO LLC</a> or <a href="series-llc.html">Series LLC</a>), ensuring clear ownership rights and regulatory standing.</p>
+                <p>Security tokens represent the evolution of capital markets infrastructure. By encoding compliance rules directly into <a href="/knowledge/glossary/smart-contract/">smart contracts</a>, they eliminate the need for intermediaries while maintaining regulatory compliance. Investors benefit from increased liquidity through fractional ownership, while issuers gain access to global capital markets with reduced costs.</p>
+                <p>On Sails.to, every security token is backed by a real legal entity (typically a <a href="/knowledge/glossary/wyoming-dao-llc/">Wyoming DAO LLC</a> or <a href="/knowledge/glossary/series-llc/">Series LLC</a>), ensuring clear ownership rights and regulatory standing.</p>
             </section>
             <section class="term-section">
                 <h2>Related Terms</h2>
                 <div class="related-terms">
-                    <a href="tokenization.html" class="related-term-link">Tokenization</a>
-                    <a href="isin.html" class="related-term-link">ISIN</a>
-                    <a href="smart-contract.html" class="related-term-link">Smart Contract</a>
-                    <a href="spv.html" class="related-term-link">SPV</a>
+                    <a href="/knowledge/glossary/tokenization/" class="related-term-link">Tokenization</a>
+                    <a href="/knowledge/glossary/isin/" class="related-term-link">ISIN</a>
+                    <a href="/knowledge/glossary/smart-contract/" class="related-term-link">Smart Contract</a>
+                    <a href="/knowledge/glossary/spv/" class="related-term-link">SPV</a>
                 </div>
             </section>
             <div class="term-cta">

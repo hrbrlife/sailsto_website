@@ -18,27 +18,27 @@ stylesheets:
             <aside class="docs-sidebar">
                 <nav class="docs-nav">
                     <h4>Getting Started</h4>
-                    <a href="getting-started.html" class="docs-link">Quick Start Guide</a>
-                    <a href="platform-overview.html" class="docs-link">Platform Overview</a>
-                    <a href="hybrid-architecture.html" class="docs-link">Hybrid Architecture</a>
+                    <a href="/knowledge/docs/getting-started/" class="docs-link">Quick Start Guide</a>
+                    <a href="/knowledge/docs/platform-overview/" class="docs-link">Platform Overview</a>
+                    <a href="/knowledge/docs/hybrid-architecture/" class="docs-link">Hybrid Architecture</a>
                     <h4>Token Standard</h4>
-                    <a href="token-standard.html" class="docs-link">SPL Token Implementation</a>
-                    <a href="metadata.html" class="docs-link">Token Metadata</a>
-                    <a href="compliance-extensions.html" class="docs-link">Compliance Extensions</a>
+                    <a href="/knowledge/docs/token-standard/" class="docs-link">SPL Token Implementation</a>
+                    <a href="/knowledge/docs/metadata/" class="docs-link">Token Metadata</a>
+                    <a href="/knowledge/docs/compliance-extensions/" class="docs-link">Compliance Extensions</a>
                     <h4>API Reference</h4>
-                    <a href="api-reference.html" class="docs-link">API Overview</a>
-                    <a href="authentication.html" class="docs-link">Authentication</a>
-                    <a href="investors-api.html" class="docs-link">Investors API</a>
-                    <a href="cap-table-api.html" class="docs-link">Cap Table API</a>
-                    <a href="distributions-api.html" class="docs-link">Distributions API</a>
+                    <a href="/knowledge/docs/api-reference/" class="docs-link">API Overview</a>
+                    <a href="/knowledge/docs/authentication/" class="docs-link">Authentication</a>
+                    <a href="/knowledge/docs/investors-api/" class="docs-link">Investors API</a>
+                    <a href="/knowledge/docs/cap-table-api/" class="docs-link">Cap Table API</a>
+                    <a href="/knowledge/docs/distributions-api/" class="docs-link">Distributions API</a>
                     <h4>Compliance</h4>
-                    <a href="compliance-framework.html" class="docs-link">Compliance Framework</a>
-                    <a href="kyc-integration.html" class="docs-link">KYC Integration</a>
-                    <a href="transfer-rules.html" class="docs-link">Transfer Rules</a>
+                    <a href="/knowledge/docs/compliance-framework/" class="docs-link">Compliance Framework</a>
+                    <a href="/knowledge/docs/kyc-integration/" class="docs-link">KYC Integration</a>
+                    <a href="/knowledge/docs/transfer-rules/" class="docs-link">Transfer Rules</a>
                     <h4>TradFi Bridge</h4>
-                    <a href="tradfi-bridge.html" class="docs-link">Bridge Overview</a>
-                    <a href="isin-conversion.html" class="docs-link">ISIN Conversion</a>
-                    <a href="clearstream.html" class="docs-link">Clearstream Integration</a>
+                    <a href="/knowledge/docs/tradfi-bridge/" class="docs-link">Bridge Overview</a>
+                    <a href="/knowledge/docs/isin-conversion/" class="docs-link">ISIN Conversion</a>
+                    <a href="/knowledge/docs/clearstream/" class="docs-link">Clearstream Integration</a>
                 </nav>
             </aside>
             <main class="docs-content">
@@ -46,14 +46,14 @@ stylesheets:
                     <h2>Welcome to Sails.to Docs</h2>
                     <p>This documentation covers everything you need to understand, integrate with, and build on the Sails.to hybrid securities platform.</p>
                     <div class="docs-quick-links">
-                        <a href="getting-started.html" class="docs-quick-link">
+                        <a href="/knowledge/docs/getting-started/" class="docs-quick-link">
                             <span class="icon">🚀</span>
                             <span class="text">
                                 <strong>Quick Start</strong>
                                 <small>Get up and running in minutes</small>
                             </span>
                         </a>
-                        <a href="api-reference.html" class="docs-quick-link">
+                        <a href="/knowledge/docs/api-reference/" class="docs-quick-link">
                             <span class="icon">⚡</span>
                             <span class="text">
                                 <strong>API Reference</strong>
@@ -65,22 +65,22 @@ stylesheets:
                 <section class="docs-section">
                     <h3>Core Concepts</h3>
                     <div class="docs-grid">
-                        <a href="platform-overview.html" class="docs-card">
+                        <a href="/knowledge/docs/platform-overview/" class="docs-card">
                             <span class="docs-card-icon">🏗️</span>
                             <h4>Platform Overview</h4>
                             <p>High-level architecture, components, and data flows.</p>
                         </a>
-                        <a href="hybrid-architecture.html" class="docs-card">
+                        <a href="/knowledge/docs/hybrid-architecture/" class="docs-card">
                             <span class="docs-card-icon">🔗</span>
                             <h4>Hybrid Architecture</h4>
                             <p>How blockchain and traditional finance systems interoperate.</p>
                         </a>
-                        <a href="token-standard.html" class="docs-card">
+                        <a href="/knowledge/docs/token-standard/" class="docs-card">
                             <span class="docs-card-icon">🪙</span>
                             <h4>Token Standard</h4>
                             <p>SPL token implementation with compliance extensions.</p>
                         </a>
-                        <a href="compliance-framework.html" class="docs-card">
+                        <a href="/knowledge/docs/compliance-framework/" class="docs-card">
                             <span class="docs-card-icon">⚖️</span>
                             <h4>Compliance Framework</h4>
                             <p>On-chain transfer restrictions and regulatory hooks.</p>
@@ -111,7 +111,7 @@ stylesheets:
                         </div>
                         <p class="docs-api-desc">Create and execute a distribution to token holders.</p>
                     </div>
-                    <a href="api-reference.html" class="docs-section-link">View Full API Reference →</a>
+                    <a href="/knowledge/docs/api-reference/" class="docs-section-link">View Full API Reference →</a>
                 </section>
                 <section class="docs-section">
                     <h3>TradFi Bridge</h3>
@@ -132,7 +132,7 @@ stylesheets:
                             <span class="step-text">ISIN securities credited at Clearstream</span>
                         </div>
                     </div>
-                    <a href="tradfi-bridge.html" class="docs-section-link">Learn More About the Bridge →</a>
+                    <a href="/knowledge/docs/tradfi-bridge/" class="docs-section-link">Learn More About the Bridge →</a>
                 </section>
                 <section class="docs-section">
                     <h3>Need Help?</h3>

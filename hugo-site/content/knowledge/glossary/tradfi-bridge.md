@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="term-page-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
             <span class="term-category">Finance</span>
             <h1 class="term-title">TradFi Bridge</h1>
             <p class="term-short">Sails.to's mechanism for converting blockchain-native security tokens to traditional ISIN securities that can be held in conventional bank custody.</p>
@@ -25,15 +25,15 @@ stylesheets:
             <section class="term-section">
                 <h2>Why It Matters</h2>
                 <p>The TradFi Bridge is what makes Sails.to different from every other security token platform. Most platforms force you to choose: blockchain OR traditional finance. We let you have both.</p>
-                <p>Start with <a href="solana.html">Solana</a> tokens for cheap transfers and 24/7 trading. When you need institutional credibility or want to use your existing broker, bridge to <a href="isin.html">ISIN</a> format and settle through <a href="clearstream.html">Clearstream</a>. Same security, same ownership rights, different rails. The conversion takes about a week and costs around $4K—a small price for TradFi legitimacy.</p>
+                <p>Start with <a href="/knowledge/glossary/solana/">Solana</a> tokens for cheap transfers and 24/7 trading. When you need institutional credibility or want to use your existing broker, bridge to <a href="/knowledge/glossary/isin/">ISIN</a> format and settle through <a href="/knowledge/glossary/clearstream/">Clearstream</a>. Same security, same ownership rights, different rails. The conversion takes about a week and costs around $4K—a small price for TradFi legitimacy.</p>
             </section>
             <section class="term-section">
                 <h2>Related Terms</h2>
                 <div class="related-terms">
-                    <a href="isin.html" class="related-term-link">ISIN</a>
-                    <a href="clearstream.html" class="related-term-link">Clearstream</a>
-                    <a href="solana.html" class="related-term-link">Solana</a>
-                    <a href="custody.html" class="related-term-link">Custody</a>
+                    <a href="/knowledge/glossary/isin/" class="related-term-link">ISIN</a>
+                    <a href="/knowledge/glossary/clearstream/" class="related-term-link">Clearstream</a>
+                    <a href="/knowledge/glossary/solana/" class="related-term-link">Solana</a>
+                    <a href="/knowledge/glossary/custody/" class="related-term-link">Custody</a>
                 </div>
             </section>
             <div class="term-cta">

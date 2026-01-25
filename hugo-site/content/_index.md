@@ -181,7 +181,7 @@ stylesheets:
     <section class="cta-section">
         <h2>Ready to participate?</h2>
         <p>For issuers, investors, and brokers who want infrastructure that works across both worlds.</p>
-        <a href="signup.html" class="btn btn-primary">
+        <a href="/signup/" class="btn btn-primary">
             Get Started
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>

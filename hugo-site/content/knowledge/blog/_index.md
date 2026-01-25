@@ -26,7 +26,7 @@ stylesheets:
     </section>
     <section class="blog-featured">
         <div class="blog-container">
-            <a href="future-of-tokenized-securities.html" class="blog-featured-card" data-category="industry">
+            <a href="/knowledge/blog/future-of-tokenized-securities/" class="blog-featured-card" data-category="industry">
                 <div class="blog-featured-image">
                     <div class="blog-featured-placeholder">
                         <span>🔮</span>
@@ -49,7 +49,7 @@ stylesheets:
     <section class="blog-main">
         <div class="blog-container">
             <div class="blog-grid">
-                <a href="why-wyoming.html" class="blog-card" data-category="regulatory">
+                <a href="/knowledge/blog/why-wyoming/" class="blog-card" data-category="regulatory">
                     <div class="blog-card-image">
                         <div class="blog-placeholder">
                             <span>🏔️</span>
@@ -65,7 +65,7 @@ stylesheets:
                         <span class="blog-read-time">4 min read</span>
                     </div>
                 </a>
-                <a href="hybrid-custody-explained.html" class="blog-card" data-category="product">
+                <a href="/knowledge/blog/hybrid-custody-explained/" class="blog-card" data-category="product">
                     <div class="blog-card-image">
                         <div class="blog-placeholder">
                             <span>🔗</span>
@@ -81,7 +81,7 @@ stylesheets:
                         <span class="blog-read-time">6 min read</span>
                     </div>
                 </a>
-                <a href="tokenization-vs-traditional.html" class="blog-card" data-category="education">
+                <a href="/knowledge/blog/tokenization-vs-traditional/" class="blog-card" data-category="education">
                     <div class="blog-card-image">
                         <div class="blog-placeholder">
                             <span>⚖️</span>
@@ -97,7 +97,7 @@ stylesheets:
                         <span class="blog-read-time">7 min read</span>
                     </div>
                 </a>
-                <a href="sec-clarity-2024.html" class="blog-card" data-category="regulatory">
+                <a href="/knowledge/blog/sec-clarity-2024/" class="blog-card" data-category="regulatory">
                     <div class="blog-card-image">
                         <div class="blog-placeholder">
                             <span>📋</span>
@@ -113,7 +113,7 @@ stylesheets:
                         <span class="blog-read-time">5 min read</span>
                     </div>
                 </a>
-                <a href="solana-for-securities.html" class="blog-card" data-category="product">
+                <a href="/knowledge/blog/solana-for-securities/" class="blog-card" data-category="product">
                     <div class="blog-card-image">
                         <div class="blog-placeholder">
                             <span>⚡</span>
@@ -129,7 +129,7 @@ stylesheets:
                         <span class="blog-read-time">5 min read</span>
                     </div>
                 </a>
-                <a href="kyc-onchain.html" class="blog-card" data-category="education">
+                <a href="/knowledge/blog/kyc-onchain/" class="blog-card" data-category="education">
                     <div class="blog-card-image">
                         <div class="blog-placeholder">
                             <span>🔐</span>
@@ -145,7 +145,7 @@ stylesheets:
                         <span class="blog-read-time">6 min read</span>
                     </div>
                 </a>
-                <a href="institutional-adoption.html" class="blog-card" data-category="industry">
+                <a href="/knowledge/blog/institutional-adoption/" class="blog-card" data-category="industry">
                     <div class="blog-card-image">
                         <div class="blog-placeholder">
                             <span>🏦</span>
@@ -161,7 +161,7 @@ stylesheets:
                         <span class="blog-read-time">8 min read</span>
                     </div>
                 </a>
-                <a href="real-estate-tokenization.html" class="blog-card" data-category="education">
+                <a href="/knowledge/blog/real-estate-tokenization/" class="blog-card" data-category="education">
                     <div class="blog-card-image">
                         <div class="blog-placeholder">
                             <span>🏢</span>

@@ -55,7 +55,7 @@ stylesheets:
                     </div>
                     <span class="kb-card-arrow">→</span>
                 </a>
-                <a href="faq.html" class="kb-card kb-card-featured" data-category="faq">
+                <a href="/knowledge/faq/" class="kb-card kb-card-featured" data-category="faq">
                     <div class="kb-card-icon">❓</div>
                     <div class="kb-card-content">
                         <span class="kb-card-category">Support</span>
@@ -139,25 +139,25 @@ stylesheets:
                     <p>Quick answers to common questions</p>
                 </div>
                 <div class="kb-grid">
-                    <a href="faq.html#general" class="kb-card">
+                    <a href="/knowledge/faq/#general" class="kb-card">
                         <span class="kb-card-category">General</span>
                         <h3>General Questions</h3>
                         <p>What is Sails.to? How does it work? Is it safe?</p>
                         <span class="kb-card-meta">12 questions</span>
                     </a>
-                    <a href="faq.html#issuers" class="kb-card">
+                    <a href="/knowledge/faq/#issuers" class="kb-card">
                         <span class="kb-card-category">For Issuers</span>
                         <h3>Issuer FAQ</h3>
                         <p>How to launch a token, costs, timeline, and legal requirements.</p>
                         <span class="kb-card-meta">8 questions</span>
                     </a>
-                    <a href="faq.html#investors" class="kb-card">
+                    <a href="/knowledge/faq/#investors" class="kb-card">
                         <span class="kb-card-category">For Investors</span>
                         <h3>Investor FAQ</h3>
                         <p>How to invest, custody options, tax implications, and returns.</p>
                         <span class="kb-card-meta">10 questions</span>
                     </a>
-                    <a href="faq.html#technical" class="kb-card">
+                    <a href="/knowledge/faq/#technical" class="kb-card">
                         <span class="kb-card-category">Technical</span>
                         <h3>Technical FAQ</h3>
                         <p>Blockchain details, wallet setup, and troubleshooting.</p>
@@ -238,7 +238,7 @@ stylesheets:
                 <div class="kb-section-header">
                     <h2>🗺️ Roadmap</h2>
                     <p>Track our development progress and upcoming features</p>
-                    <a href="roadmap.html" class="kb-section-link">View Full Roadmap →</a>
+                    <a href="/knowledge/roadmap/" class="kb-section-link">View Full Roadmap →</a>
                 </div>
                 <div class="kb-temporal-filters">
                     <button class="kb-temporal-tag active" data-temporal="all">All Phases</button>
@@ -248,7 +248,7 @@ stylesheets:
                     <button class="kb-temporal-tag" data-temporal="future">◇ Future</button>
                 </div>
                 <div class="kb-grid kb-roadmap-grid">
-                    <a href="roadmap.html#wyoming-dao" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="legal compliance">
+                    <a href="/knowledge/roadmap/#wyoming-dao" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="legal compliance">
                         <span class="kb-roadmap-status completed">✓</span>
                         <span class="kb-card-category">Legal</span>
                         <h3>Wyoming DAO LLC Formation</h3>
@@ -258,7 +258,7 @@ stylesheets:
                             <span class="kb-tag category">Compliance</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#core-platform" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="technical infrastructure">
+                    <a href="/knowledge/roadmap/#core-platform" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="technical infrastructure">
                         <span class="kb-roadmap-status completed">✓</span>
                         <span class="kb-card-category">Technical</span>
                         <h3>Core Platform Architecture</h3>
@@ -268,7 +268,7 @@ stylesheets:
                             <span class="kb-tag category">Infrastructure</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#tradfi-bridge-design" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="technical infrastructure">
+                    <a href="/knowledge/roadmap/#tradfi-bridge-design" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="technical infrastructure">
                         <span class="kb-roadmap-status completed">✓</span>
                         <span class="kb-card-category">Technical</span>
                         <h3>TradFi Bridge Design</h3>
@@ -278,7 +278,7 @@ stylesheets:
                             <span class="kb-tag category">Infrastructure</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#regulatory-framework" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="legal compliance">
+                    <a href="/knowledge/roadmap/#regulatory-framework" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="legal compliance">
                         <span class="kb-roadmap-status completed">✓</span>
                         <span class="kb-card-category">Compliance</span>
                         <h3>Regulatory Framework</h3>
@@ -288,7 +288,7 @@ stylesheets:
                             <span class="kb-tag category">Legal</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#platform-beta" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product launch">
+                    <a href="/knowledge/roadmap/#platform-beta" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product launch">
                         <span class="kb-roadmap-status current">●</span>
                         <span class="kb-card-category">Product</span>
                         <h3>Platform Beta Live</h3>
@@ -298,7 +298,7 @@ stylesheets:
                             <span class="kb-tag category">Launch</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#broker-network" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product infrastructure">
+                    <a href="/knowledge/roadmap/#broker-network" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product infrastructure">
                         <span class="kb-roadmap-status current">●</span>
                         <span class="kb-card-category">Product</span>
                         <h3>Broker Network Activation</h3>
@@ -308,7 +308,7 @@ stylesheets:
                             <span class="kb-tag category">Infrastructure</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#first-offering" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product milestone">
+                    <a href="/knowledge/roadmap/#first-offering" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product milestone">
                         <span class="kb-roadmap-status current">●</span>
                         <span class="kb-card-category">Product</span>
                         <h3>First Offering Launch</h3>
@@ -318,7 +318,7 @@ stylesheets:
                             <span class="kb-tag category">Milestone</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#kyc-integration" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="compliance technical">
+                    <a href="/knowledge/roadmap/#kyc-integration" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="compliance technical">
                         <span class="kb-roadmap-status current">●</span>
                         <span class="kb-card-category">Compliance</span>
                         <h3>KYC/AML Integration</h3>
@@ -328,7 +328,7 @@ stylesheets:
                             <span class="kb-tag category">Technical</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#tradfi-bridge-live" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="technical infrastructure">
+                    <a href="/knowledge/roadmap/#tradfi-bridge-live" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="technical infrastructure">
                         <span class="kb-roadmap-status upcoming">○</span>
                         <span class="kb-card-category">Technical</span>
                         <h3>TradFi Bridge Live</h3>
@@ -338,7 +338,7 @@ stylesheets:
                             <span class="kb-tag category">Infrastructure</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#secondary-trading" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="product trading">
+                    <a href="/knowledge/roadmap/#secondary-trading" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="product trading">
                         <span class="kb-roadmap-status upcoming">○</span>
                         <span class="kb-card-category">Product</span>
                         <h3>Secondary Trading</h3>
@@ -348,7 +348,7 @@ stylesheets:
                             <span class="kb-tag category">Trading</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#institutional-partners" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="business partnerships">
+                    <a href="/knowledge/roadmap/#institutional-partners" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="business partnerships">
                         <span class="kb-roadmap-status upcoming">○</span>
                         <span class="kb-card-category">Business</span>
                         <h3>Institutional Partners</h3>
@@ -358,7 +358,7 @@ stylesheets:
                             <span class="kb-tag category">Partnerships</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#mobile-app" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="product mobile">
+                    <a href="/knowledge/roadmap/#mobile-app" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="product mobile">
                         <span class="kb-roadmap-status upcoming">○</span>
                         <span class="kb-card-category">Product</span>
                         <h3>Mobile Experience</h3>
@@ -368,7 +368,7 @@ stylesheets:
                             <span class="kb-tag category">Mobile</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#eu-uk-licensing" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="legal compliance expansion">
+                    <a href="/knowledge/roadmap/#eu-uk-licensing" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="legal compliance expansion">
                         <span class="kb-roadmap-status future">◇</span>
                         <span class="kb-card-category">Legal</span>
                         <h3>EU/UK Licensing</h3>
@@ -378,7 +378,7 @@ stylesheets:
                             <span class="kb-tag category">Expansion</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#apac-expansion" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="legal compliance expansion">
+                    <a href="/knowledge/roadmap/#apac-expansion" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="legal compliance expansion">
                         <span class="kb-roadmap-status future">◇</span>
                         <span class="kb-card-category">Legal</span>
                         <h3>APAC Expansion</h3>
@@ -388,7 +388,7 @@ stylesheets:
                             <span class="kb-tag category">Expansion</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#cross-chain" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="technical infrastructure">
+                    <a href="/knowledge/roadmap/#cross-chain" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="technical infrastructure">
                         <span class="kb-roadmap-status future">◇</span>
                         <span class="kb-card-category">Technical</span>
                         <h3>Cross-Chain Support</h3>
@@ -398,7 +398,7 @@ stylesheets:
                             <span class="kb-tag category">Infrastructure</span>
                         </div>
                     </a>
-                    <a href="roadmap.html#dao-governance" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="product governance">
+                    <a href="/knowledge/roadmap/#dao-governance" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="product governance">
                         <span class="kb-roadmap-status future">◇</span>
                         <span class="kb-card-category">Product</span>
                         <h3>DAO Governance</h3>

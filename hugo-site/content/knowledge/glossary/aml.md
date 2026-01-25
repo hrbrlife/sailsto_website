@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="term-page-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
             <span class="term-category">Compliance</span>
             <h1 class="term-title">AML (Anti-Money Laundering)</h1>
             <p class="term-short">Laws, regulations, and procedures designed to prevent criminals from disguising illegally obtained funds as legitimate income through financial transactions.</p>
@@ -24,15 +24,15 @@ stylesheets:
             </section>
             <section class="term-section">
                 <h2>Why It Matters</h2>
-                <p>AML compliance isn't optional—it's a legal requirement for any platform dealing with financial transactions. On Sails.to, our AML procedures work alongside <a href="kyc.html">KYC verification</a> to ensure the platform isn't used for illicit purposes.</p>
-                <p>Our automated screening checks every user against global sanctions lists and politically exposed persons (PEP) databases. Combined with transaction monitoring built into our <a href="smart-contract.html">smart contracts</a>, this creates a comprehensive compliance framework.</p>
+                <p>AML compliance isn't optional—it's a legal requirement for any platform dealing with financial transactions. On Sails.to, our AML procedures work alongside <a href="/knowledge/glossary/kyc/">KYC verification</a> to ensure the platform isn't used for illicit purposes.</p>
+                <p>Our automated screening checks every user against global sanctions lists and politically exposed persons (PEP) databases. Combined with transaction monitoring built into our <a href="/knowledge/glossary/smart-contract/">smart contracts</a>, this creates a comprehensive compliance framework.</p>
             </section>
             <section class="term-section">
                 <h2>Related Terms</h2>
                 <div class="related-terms">
-                    <a href="kyc.html" class="related-term-link">KYC</a>
-                    <a href="reg-d.html" class="related-term-link">Reg D</a>
-                    <a href="reg-s.html" class="related-term-link">Reg S</a>
+                    <a href="/knowledge/glossary/kyc/" class="related-term-link">KYC</a>
+                    <a href="/knowledge/glossary/reg-d/" class="related-term-link">Reg D</a>
+                    <a href="/knowledge/glossary/reg-s/" class="related-term-link">Reg S</a>
                 </div>
             </section>
             <div class="term-cta">

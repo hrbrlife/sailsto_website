@@ -96,7 +96,7 @@ stylesheets:
                             </div>
                             <div class="form-checkbox">
                                 <input type="checkbox" id="consent" name="consent" required>
-                                <label for="consent">I consent to Sails.to processing my data as described in the <a href="legal.html#privacy">Privacy Policy</a>. *</label>
+                                <label for="consent">I consent to Sails.to processing my data as described in the <a href="/company/legal/#privacy">Privacy Policy</a>. *</label>
                             </div>
                             <button type="submit" class="form-submit">Send Message</button>
                         </form>

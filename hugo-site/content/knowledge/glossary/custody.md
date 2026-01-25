@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="term-page-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
             <span class="term-category">Finance</span>
             <h1 class="term-title">Custody</h1>
             <p class="term-short">The safekeeping and administration of securities on behalf of investors, including settlement, corporate actions processing, and record-keeping.</p>
@@ -25,14 +25,14 @@ stylesheets:
             <section class="term-section">
                 <h2>Why It Matters</h2>
                 <p>Custody is the elephant in the room for crypto adoption. Institutions need qualified custodians for regulatory reasons. Retail investors want the security (and insurance) that comes with professional custody. But crypto natives want self-custody—"not your keys, not your coins."</p>
-                <p>Sails.to solves this with hybrid custody. Keep your tokens in your <a href="solana.html">Solana</a> wallet for DeFi-style control. Or use our <a href="tradfi-bridge.html">TradFi Bridge</a> to move them to <a href="clearstream.html">Clearstream</a> for institutional-grade custody. Same tokens, your choice of rails.</p>
+                <p>Sails.to solves this with hybrid custody. Keep your tokens in your <a href="/knowledge/glossary/solana/">Solana</a> wallet for DeFi-style control. Or use our <a href="/knowledge/glossary/tradfi-bridge/">TradFi Bridge</a> to move them to <a href="/knowledge/glossary/clearstream/">Clearstream</a> for institutional-grade custody. Same tokens, your choice of rails.</p>
             </section>
             <section class="term-section">
                 <h2>Related Terms</h2>
                 <div class="related-terms">
-                    <a href="clearstream.html" class="related-term-link">Clearstream</a>
-                    <a href="isin.html" class="related-term-link">ISIN</a>
-                    <a href="tradfi-bridge.html" class="related-term-link">TradFi Bridge</a>
+                    <a href="/knowledge/glossary/clearstream/" class="related-term-link">Clearstream</a>
+                    <a href="/knowledge/glossary/isin/" class="related-term-link">ISIN</a>
+                    <a href="/knowledge/glossary/tradfi-bridge/" class="related-term-link">TradFi Bridge</a>
                 </div>
             </section>
             <div class="term-cta">

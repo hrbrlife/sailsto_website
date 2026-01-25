@@ -358,7 +358,7 @@ stylesheets:
     <section class="cta-section">
         <h2>Ready to join the network?</h2>
         <p>Licensed brokers can onboard in days. No platform development, no compliance build-out.</p>
-        <a href="signup.html?type=broker" class="btn btn-primary">
+        <a href="/signup/?type=broker" class="btn btn-primary">
             Apply Now
             <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
         </a>

@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="term-page-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
             <span class="term-category">Finance</span>
             <h1 class="term-title">ISIN</h1>
             <p class="term-short">A 12-character alphanumeric code that uniquely identifies a security globally, enabling it to be held in traditional bank custody systems.</p>
@@ -24,16 +24,16 @@ stylesheets:
             </section>
             <section class="term-section">
                 <h2>Why It Matters</h2>
-                <p>An ISIN is the key that unlocks institutional adoption. Without it, security tokens exist only in the blockchain world. With an ISIN, your tokens can be held by <a href="clearstream.html">Clearstream</a>, custodied by traditional banks, and appear in standard portfolio reports.</p>
-                <p>Sails.to's <a href="tradfi-bridge.html">TradFi Bridge</a> makes ISIN conversion seamless. For approximately $4K and about one week of processing, any token on our platform can receive its own ISIN—instantly bridging Web3 innovation with traditional finance infrastructure.</p>
+                <p>An ISIN is the key that unlocks institutional adoption. Without it, security tokens exist only in the blockchain world. With an ISIN, your tokens can be held by <a href="/knowledge/glossary/clearstream/">Clearstream</a>, custodied by traditional banks, and appear in standard portfolio reports.</p>
+                <p>Sails.to's <a href="/knowledge/glossary/tradfi-bridge/">TradFi Bridge</a> makes ISIN conversion seamless. For approximately $4K and about one week of processing, any token on our platform can receive its own ISIN—instantly bridging Web3 innovation with traditional finance infrastructure.</p>
             </section>
             <section class="term-section">
                 <h2>Related Terms</h2>
                 <div class="related-terms">
-                    <a href="clearstream.html" class="related-term-link">Clearstream</a>
-                    <a href="custody.html" class="related-term-link">Custody</a>
-                    <a href="tradfi-bridge.html" class="related-term-link">TradFi Bridge</a>
-                    <a href="security-token.html" class="related-term-link">Security Token</a>
+                    <a href="/knowledge/glossary/clearstream/" class="related-term-link">Clearstream</a>
+                    <a href="/knowledge/glossary/custody/" class="related-term-link">Custody</a>
+                    <a href="/knowledge/glossary/tradfi-bridge/" class="related-term-link">TradFi Bridge</a>
+                    <a href="/knowledge/glossary/security-token/" class="related-term-link">Security Token</a>
                 </div>
             </section>
             <div class="term-cta">

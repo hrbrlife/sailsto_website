@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="term-page-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Glossary</a>
+            <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
             <span class="term-category">Legal</span>
             <h1 class="term-title">SPV (Special Purpose Vehicle)</h1>
             <p class="term-short">A subsidiary entity created for a specific, limited purpose, typically to isolate financial risk and hold specific assets separate from a parent company.</p>
@@ -24,15 +24,15 @@ stylesheets:
             </section>
             <section class="term-section">
                 <h2>Why It Matters</h2>
-                <p>Every offering on Sails.to operates through an SPV structure—specifically, a series under our <a href="series-llc.html">Series LLC</a>. This means your investment is legally isolated from other offerings and from the platform itself.</p>
+                <p>Every offering on Sails.to operates through an SPV structure—specifically, a series under our <a href="/knowledge/glossary/series-llc/">Series LLC</a>. This means your investment is legally isolated from other offerings and from the platform itself.</p>
                 <p>If you invest in a real estate token, you own a piece of the SPV that owns the property—not a vague claim against the platform. This structure survived the 2008 financial crisis because it provides real, legally enforceable separation of assets.</p>
             </section>
             <section class="term-section">
                 <h2>Related Terms</h2>
                 <div class="related-terms">
-                    <a href="series-llc.html" class="related-term-link">Series LLC</a>
-                    <a href="security-token.html" class="related-term-link">Security Token</a>
-                    <a href="wyoming-dao-llc.html" class="related-term-link">Wyoming DAO LLC</a>
+                    <a href="/knowledge/glossary/series-llc/" class="related-term-link">Series LLC</a>
+                    <a href="/knowledge/glossary/security-token/" class="related-term-link">Security Token</a>
+                    <a href="/knowledge/glossary/wyoming-dao-llc/" class="related-term-link">Wyoming DAO LLC</a>
                 </div>
             </section>
             <div class="term-cta">

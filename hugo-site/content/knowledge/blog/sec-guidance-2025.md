@@ -10,7 +10,7 @@ stylesheets:
 
 <header class="blog-header">
         <div class="container">
-            <a href="index.html" class="back-link">← Back to Blog</a>
+            <a href="/knowledge/blog/" class="back-link">← Back to Blog</a>
             <span class="blog-category">Regulation</span>
             <h1 class="blog-title">SEC Digital Asset Guidance 2025: What It Means for Security Tokens</h1>
             <div class="blog-meta">
