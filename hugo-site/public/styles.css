@@ -234,6 +234,16 @@ nav.scrolled .logo .logo-light {
 
 .nav-dropdown-trigger {
     cursor: pointer;
+    font-family: var(--font-ui);
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--slate);
+}
+
+.nav-dropdown:hover .nav-dropdown-trigger {
+    color: var(--ink);
 }
 
 .nav-dropdown-trigger::after {
