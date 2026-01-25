@@ -1,0 +1,23 @@
+{
+  "name": "sails-qa-testing",
+  "version": "1.0.0",
+  "description": "Automated UX testing with Playwright and AI agent review",
+  "type": "module",
+  "scripts": {
+    "install:browsers": "npx playwright install chromium",
+    "test": "node crawler.js",
+    "test:desktop": "node crawler.js --viewport=desktop",
+    "test:mobile": "node crawler.js --viewport=mobile",
+    "collages": "node generate-collages.js",
+    "review": "node agent-review.js",
+    "report": "node generate-report.js",
+    "full-audit": "npm run test && npm run collages && npm run review && npm run report"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0",
+    "openai": "^4.20.0",
+    "sharp": "^0.33.0",
+    "glob": "^10.3.0"
+  },
+  "devDependencies": {}
+}

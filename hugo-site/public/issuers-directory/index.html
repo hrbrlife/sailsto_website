@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Issuers | Sails.to | Hybrid Securities Infrastructure</title>
+    
+    
+    <meta name="description" content="Browse active securities offerings on Sails.to. Filter by structure and trust indicators.">
+    <meta property="og:description" content="Browse active securities offerings on Sails.to. Filter by structure and trust indicators.">
+    
+    
+    <meta property="og:title" content="Active Issuers">
+    <meta property="og:type" content="website">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    
+    <link rel="stylesheet" href="/styles.css">
+    
+    
+    
+    
+
+<body>
+    
+    <nav>
+    <a href="https://sails.to/" class="logo">
+        <img src="/sail_logo.png" alt="Sails.to" class="logo-dark">
+        <img src="/sail_logo_w.png" alt="Sails.to" class="logo-light">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="nav-links nav-collapse">
+        <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-trigger">For Me</a>
+            <div class="nav-dropdown-menu">
+                <a href="/issuers/">Business - Raise Funds</a>
+                <a href="/investors/">Professional Investors - Grow</a>
+                <a href="/brokers/">For Brokers</a>
+                <a href="/introducers/">Business Introducers</a>
+                <a href="/regulated/">For Institutions</a>
+            </div>
+        </div>
+        <a href="/issuers-directory/" style="color: var(--ink); text-decoration: none; font-weight: 500;">Platform</a>
+        <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-trigger">Understand</a>
+            <div class="nav-dropdown-menu">
+                <a href="/whatsails/">How It Works</a>
+                <a href="/pricing/">Pricing</a>
+                <div class="dropdown-divider"></div>
+                <a href="/knowledge/">Knowledge Base</a>
+                <a href="/knowledge/blog/">Blog</a>
+                <a href="/knowledge/docs/">Documentation</a>
+                <a href="/knowledge/faq/">FAQ</a>
+                <a href="/knowledge/glossary/">Glossary</a>
+                <a href="/knowledge/roadmap/">Roadmap</a>
+            </div>
+        </div>
+        <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-trigger">Company</a>
+            <div class="nav-dropdown-menu">
+                <a href="/company/about/">About</a>
+                <a href="/company/contact/">Contact</a>
+                <a href="/company/legal/">Legal</a>
+            </div>
+        </div>
+        <a href="/signup/" class="btn-nav">Get Started</a>
+    </div>
+</nav>
+
+    
+    
+    
+<pre><code>&lt;section class=&quot;page-hero&quot;&gt;
+    &lt;h1&gt;Active Offerings&lt;/h1&gt;
+    &lt;p&gt;Tokenized bonds from verified issuers. Filter by structure and trust indicators.&lt;/p&gt;
+&lt;/section&gt;
+&lt;div class=&quot;filter-section&quot;&gt;
+    &lt;div class=&quot;filter-container&quot;&gt;
+        &lt;div class=&quot;filter-row&quot;&gt;
+            &lt;div class=&quot;filter-group&quot;&gt;
+                &lt;span class=&quot;filter-label&quot;&gt;Structure&lt;/span&gt;
+                &lt;div class=&quot;filter-pills&quot;&gt;
+                    &lt;button class=&quot;filter-pill active&quot; data-filter=&quot;structure&quot; data-value=&quot;all&quot;&gt;All&lt;/button&gt;
+                    &lt;button class=&quot;filter-pill&quot; data-filter=&quot;structure&quot; data-value=&quot;coupon&quot;&gt;Coupon Only&lt;/button&gt;
+                    &lt;button class=&quot;filter-pill&quot; data-filter=&quot;structure&quot; data-value=&quot;profit&quot;&gt;+ Profit Share&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;filter-group&quot;&gt;
+                &lt;span class=&quot;filter-label&quot;&gt;Trust&lt;/span&gt;
+                &lt;div class=&quot;filter-pills&quot;&gt;
+                    &lt;button class=&quot;filter-pill&quot; data-filter=&quot;trust&quot; data-value=&quot;audited&quot;&gt;Audited&lt;/button&gt;
+                    &lt;button class=&quot;filter-pill&quot; data-filter=&quot;trust&quot; data-value=&quot;regulated&quot;&gt;Regulated&lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;span class=&quot;results-count&quot;&gt;&lt;span id=&quot;count&quot;&gt;9&lt;/span&gt; offerings&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;section class=&quot;issuers-section&quot;&gt;
+    &lt;div class=&quot;issuers-container&quot;&gt;
+        &lt;div class=&quot;issuers-grid&quot;&gt;
+            &lt;div class=&quot;issuer-card&quot; data-structure=&quot;coupon&quot; data-audited=&quot;true&quot; data-regulated=&quot;true&quot;&gt;
+                &lt;div class=&quot;card-hero&quot;&gt;
+                    ☀️
+                &lt;/div&gt;
+                &lt;div class=&quot;card-content&quot;&gt;
+                    &lt;div class=&quot;card-header&quot;&gt;
+                        &lt;div class=&quot;card-location&quot;&gt;🇰🇪 Kenya&lt;/div&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Solar Grid Africa&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;card-description&quot;&gt;Distributed solar networks with long-term power purchase agreements from regional utilities.&lt;/p&gt;
+                    &lt;div class=&quot;structure-row&quot;&gt;
+                        &lt;span class=&quot;structure-pill coupon&quot;&gt;10% Coupon&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill maturity&quot;&gt;10 Years&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;funding-section&quot;&gt;
+                        &lt;div class=&quot;funding-header&quot;&gt;
+                            &lt;span class=&quot;funding-label&quot;&gt;Funding Progress&lt;/span&gt;
+                            &lt;span class=&quot;funding-amount&quot;&gt;$5.2M raised&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-bar-container&quot;&gt;
+                            &lt;div class=&quot;funding-bar&quot; style=&quot;width: 76%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;soft-cap-marker&quot; style=&quot;left: 59%;&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-caps&quot;&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot soft&quot;&gt;&lt;/span&gt; Soft $4.0M&lt;/span&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot hard&quot;&gt;&lt;/span&gt; Hard $6.8M&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;trust-section&quot;&gt;
+                        &lt;div class=&quot;trust-label&quot;&gt;Trust Indicators&lt;/div&gt;
+                        &lt;div class=&quot;trust-grid&quot;&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🔍&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Audited&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;📋&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;CPA&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;�&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Prospectus&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🏛️&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Regulated&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;a href=&quot;investors.html&quot; class=&quot;card-cta&quot;&gt;View Details&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;issuer-card&quot; data-structure=&quot;coupon&quot; data-audited=&quot;true&quot; data-regulated=&quot;false&quot;&gt;
+                &lt;div class=&quot;card-hero&quot;&gt;
+                    🏢
+                &lt;/div&gt;
+                &lt;div class=&quot;card-content&quot;&gt;
+                    &lt;div class=&quot;card-header&quot;&gt;
+                        &lt;div class=&quot;card-location&quot;&gt;🇲🇺 Mauritius&lt;/div&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Coastal Development&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;card-description&quot;&gt;12-hectare mixed-use waterfront development with luxury residential, commercial, and hospitality.&lt;/p&gt;
+                    &lt;div class=&quot;structure-row&quot;&gt;
+                        &lt;span class=&quot;structure-pill coupon&quot;&gt;8.5% Coupon&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill maturity&quot;&gt;8 Years&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;funding-section&quot;&gt;
+                        &lt;div class=&quot;funding-header&quot;&gt;
+                            &lt;span class=&quot;funding-label&quot;&gt;Funding Progress&lt;/span&gt;
+                            &lt;span class=&quot;funding-amount&quot;&gt;$1.8M raised&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-bar-container&quot;&gt;
+                            &lt;div class=&quot;funding-bar&quot; style=&quot;width: 43%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;soft-cap-marker&quot; style=&quot;left: 48%;&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-caps&quot;&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot soft&quot;&gt;&lt;/span&gt; Soft $2.0M&lt;/span&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot hard&quot;&gt;&lt;/span&gt; Hard $4.2M&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;trust-section&quot;&gt;
+                        &lt;div class=&quot;trust-label&quot;&gt;Trust Indicators&lt;/div&gt;
+                        &lt;div class=&quot;trust-grid&quot;&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🔍&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Audited&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;📋&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;CPA&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;�&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Prospectus&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item inactive&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🏛️&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Regulated&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;a href=&quot;investors.html&quot; class=&quot;card-cta&quot;&gt;View Details&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;issuer-card&quot; data-structure=&quot;coupon&quot; data-audited=&quot;true&quot; data-regulated=&quot;true&quot;&gt;
+                &lt;div class=&quot;card-hero&quot;&gt;
+                    🔋
+                &lt;/div&gt;
+                &lt;div class=&quot;card-content&quot;&gt;
+                    &lt;div class=&quot;card-header&quot;&gt;
+                        &lt;div class=&quot;card-location&quot;&gt;🇦🇪 UAE&lt;/div&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Solar + Storage Platform&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;card-description&quot;&gt;Commercial and industrial solar + battery storage with 25-year service contracts across MENA.&lt;/p&gt;
+                    &lt;div class=&quot;structure-row&quot;&gt;
+                        &lt;span class=&quot;structure-pill coupon&quot;&gt;11% Coupon&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill maturity&quot;&gt;10 Years&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;funding-section&quot;&gt;
+                        &lt;div class=&quot;funding-header&quot;&gt;
+                            &lt;span class=&quot;funding-label&quot;&gt;Funding Progress&lt;/span&gt;
+                            &lt;span class=&quot;funding-amount&quot;&gt;$6.1M raised&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-bar-container&quot;&gt;
+                            &lt;div class=&quot;funding-bar&quot; style=&quot;width: 85%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;soft-cap-marker&quot; style=&quot;left: 56%;&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-caps&quot;&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot soft&quot;&gt;&lt;/span&gt; Soft $4.0M&lt;/span&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot hard&quot;&gt;&lt;/span&gt; Hard $7.2M&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;trust-section&quot;&gt;
+                        &lt;div class=&quot;trust-label&quot;&gt;Trust Indicators&lt;/div&gt;
+                        &lt;div class=&quot;trust-grid&quot;&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🔍&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Audited&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;📋&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;CPA&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;�&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Prospectus&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🏛️&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Regulated&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;a href=&quot;investors.html&quot; class=&quot;card-cta&quot;&gt;View Details&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;issuer-card&quot; data-structure=&quot;profit&quot; data-audited=&quot;true&quot; data-regulated=&quot;false&quot;&gt;
+                &lt;div class=&quot;card-hero&quot;&gt;
+                    🌱
+                &lt;/div&gt;
+                &lt;div class=&quot;card-content&quot;&gt;
+                    &lt;div class=&quot;card-header&quot;&gt;
+                        &lt;div class=&quot;card-location&quot;&gt;🇧🇷 Brazil&lt;/div&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Sustainable Agribusiness&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;card-description&quot;&gt;Certified organic coffee and cacao on 800 hectares with direct premium market access.&lt;/p&gt;
+                    &lt;div class=&quot;structure-row&quot;&gt;
+                        &lt;span class=&quot;structure-pill coupon&quot;&gt;6% Coupon&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill profit&quot;&gt;+15% Profit&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill maturity&quot;&gt;7 Years&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;funding-section&quot;&gt;
+                        &lt;div class=&quot;funding-header&quot;&gt;
+                            &lt;span class=&quot;funding-label&quot;&gt;Funding Progress&lt;/span&gt;
+                            &lt;span class=&quot;funding-amount&quot;&gt;$1.2M raised&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-bar-container&quot;&gt;
+                            &lt;div class=&quot;funding-bar&quot; style=&quot;width: 48%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;soft-cap-marker&quot; style=&quot;left: 60%;&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-caps&quot;&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot soft&quot;&gt;&lt;/span&gt; Soft $1.5M&lt;/span&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot hard&quot;&gt;&lt;/span&gt; Hard $2.5M&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;trust-section&quot;&gt;
+                        &lt;div class=&quot;trust-label&quot;&gt;Trust Indicators&lt;/div&gt;
+                        &lt;div class=&quot;trust-grid&quot;&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🔍&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Audited&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;📋&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;CPA&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;📄&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Prospectus&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item inactive&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🏛️&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Regulated&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;a href=&quot;investors.html&quot; class=&quot;card-cta&quot;&gt;View Details&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;issuer-card&quot; data-structure=&quot;profit&quot; data-audited=&quot;true&quot; data-regulated=&quot;true&quot;&gt;
+                &lt;div class=&quot;card-hero&quot;&gt;
+                    🏙️
+                &lt;/div&gt;
+                &lt;div class=&quot;card-content&quot;&gt;
+                    &lt;div class=&quot;card-header&quot;&gt;
+                        &lt;div class=&quot;card-location&quot;&gt;🇵🇹 Portugal&lt;/div&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Lisbon Urban Renewal&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;card-description&quot;&gt;Historic building conversion in tech quarter with co-working, residential, and retail pre-leasing.&lt;/p&gt;
+                    &lt;div class=&quot;structure-row&quot;&gt;
+                        &lt;span class=&quot;structure-pill coupon&quot;&gt;7% Coupon&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill profit&quot;&gt;+10% Profit&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill maturity&quot;&gt;6 Years&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;funding-section&quot;&gt;
+                        &lt;div class=&quot;funding-header&quot;&gt;
+                            &lt;span class=&quot;funding-label&quot;&gt;Funding Progress&lt;/span&gt;
+                            &lt;span class=&quot;funding-amount&quot;&gt;$3.4M raised&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-bar-container&quot;&gt;
+                            &lt;div class=&quot;funding-bar&quot; style=&quot;width: 89%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;soft-cap-marker&quot; style=&quot;left: 53%;&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-caps&quot;&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot soft&quot;&gt;&lt;/span&gt; Soft $2.0M&lt;/span&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot hard&quot;&gt;&lt;/span&gt; Hard $3.8M&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;trust-section&quot;&gt;
+                        &lt;div class=&quot;trust-label&quot;&gt;Trust Indicators&lt;/div&gt;
+                        &lt;div class=&quot;trust-grid&quot;&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🔍&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Audited&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;📋&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;CPA&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;�&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Prospectus&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🏛️&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Regulated&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;a href=&quot;investors.html&quot; class=&quot;card-cta&quot;&gt;View Details&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;issuer-card&quot; data-structure=&quot;profit&quot; data-audited=&quot;true&quot; data-regulated=&quot;true&quot;&gt;
+                &lt;div class=&quot;card-hero&quot;&gt;
+                    💻
+                &lt;/div&gt;
+                &lt;div class=&quot;card-content&quot;&gt;
+                    &lt;div class=&quot;card-header&quot;&gt;
+                        &lt;div class=&quot;card-location&quot;&gt;🇸🇬 Singapore&lt;/div&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;FinTech Growth Fund&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;card-description&quot;&gt;Venture debt fund providing growth capital to Series B/C fintech companies across Southeast Asia.&lt;/p&gt;
+                    &lt;div class=&quot;structure-row&quot;&gt;
+                        &lt;span class=&quot;structure-pill coupon&quot;&gt;9% Coupon&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill profit&quot;&gt;+8% Exit&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill maturity&quot;&gt;5 Years&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;funding-section&quot;&gt;
+                        &lt;div class=&quot;funding-header&quot;&gt;
+                            &lt;span class=&quot;funding-label&quot;&gt;Funding Progress&lt;/span&gt;
+                            &lt;span class=&quot;funding-amount&quot;&gt;$4.8M raised&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-bar-container&quot;&gt;
+                            &lt;div class=&quot;funding-bar&quot; style=&quot;width: 87%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;soft-cap-marker&quot; style=&quot;left: 64%;&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-caps&quot;&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot soft&quot;&gt;&lt;/span&gt; Soft $3.5M&lt;/span&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot hard&quot;&gt;&lt;/span&gt; Hard $5.5M&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;trust-section&quot;&gt;
+                        &lt;div class=&quot;trust-label&quot;&gt;Trust Indicators&lt;/div&gt;
+                        &lt;div class=&quot;trust-grid&quot;&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🔍&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Audited&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;📋&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;CPA&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;📄&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Prospectus&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🏛️&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Regulated&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;a href=&quot;investors.html&quot; class=&quot;card-cta&quot;&gt;View Details&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;issuer-card&quot; data-structure=&quot;profit&quot; data-audited=&quot;true&quot; data-regulated=&quot;false&quot;&gt;
+                &lt;div class=&quot;card-hero&quot;&gt;
+                    🏖️
+                &lt;/div&gt;
+                &lt;div class=&quot;card-content&quot;&gt;
+                    &lt;div class=&quot;card-header&quot;&gt;
+                        &lt;div class=&quot;card-location&quot;&gt;🇲🇽 Mexico&lt;/div&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Resort &amp; Residences&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;card-description&quot;&gt;Beachfront resort and fractional residence community with branded management and buyback guarantee.&lt;/p&gt;
+                    &lt;div class=&quot;structure-row&quot;&gt;
+                        &lt;span class=&quot;structure-pill coupon&quot;&gt;8% Coupon&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill profit&quot;&gt;+5% Revenue&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill maturity&quot;&gt;8 Years&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;funding-section&quot;&gt;
+                        &lt;div class=&quot;funding-header&quot;&gt;
+                            &lt;span class=&quot;funding-label&quot;&gt;Funding Progress&lt;/span&gt;
+                            &lt;span class=&quot;funding-amount&quot;&gt;$2.1M raised&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-bar-container&quot;&gt;
+                            &lt;div class=&quot;funding-bar&quot; style=&quot;width: 41%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;soft-cap-marker&quot; style=&quot;left: 49%;&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-caps&quot;&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot soft&quot;&gt;&lt;/span&gt; Soft $2.5M&lt;/span&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot hard&quot;&gt;&lt;/span&gt; Hard $5.1M&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;trust-section&quot;&gt;
+                        &lt;div class=&quot;trust-label&quot;&gt;Trust Indicators&lt;/div&gt;
+                        &lt;div class=&quot;trust-grid&quot;&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🔍&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Audited&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;📋&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;CPA&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;�&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Prospectus&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item inactive&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🏛️&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Regulated&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;a href=&quot;investors.html&quot; class=&quot;card-cta&quot;&gt;View Details&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;issuer-card&quot; data-structure=&quot;profit&quot; data-audited=&quot;true&quot; data-regulated=&quot;true&quot;&gt;
+                &lt;div class=&quot;card-hero&quot;&gt;
+                    📦
+                &lt;/div&gt;
+                &lt;div class=&quot;card-content&quot;&gt;
+                    &lt;div class=&quot;card-header&quot;&gt;
+                        &lt;div class=&quot;card-location&quot;&gt;🇮🇳 India&lt;/div&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Logistics Network Hub&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;card-description&quot;&gt;Multi-modal logistics platform with warehousing, last-mile delivery, and reverse logistics across 12 metros.&lt;/p&gt;
+                    &lt;div class=&quot;structure-row&quot;&gt;
+                        &lt;span class=&quot;structure-pill coupon&quot;&gt;8% Coupon&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill profit&quot;&gt;+12% EBITDA&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill maturity&quot;&gt;7 Years&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;funding-section&quot;&gt;
+                        &lt;div class=&quot;funding-header&quot;&gt;
+                            &lt;span class=&quot;funding-label&quot;&gt;Funding Progress&lt;/span&gt;
+                            &lt;span class=&quot;funding-amount&quot;&gt;$7.2M raised&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-bar-container&quot;&gt;
+                            &lt;div class=&quot;funding-bar&quot; style=&quot;width: 85%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;soft-cap-marker&quot; style=&quot;left: 59%;&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-caps&quot;&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot soft&quot;&gt;&lt;/span&gt; Soft $5.0M&lt;/span&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot hard&quot;&gt;&lt;/span&gt; Hard $8.5M&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;trust-section&quot;&gt;
+                        &lt;div class=&quot;trust-label&quot;&gt;Trust Indicators&lt;/div&gt;
+                        &lt;div class=&quot;trust-grid&quot;&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🔍&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Audited&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;📋&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;CPA&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;�&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Prospectus&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🏛️&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Regulated&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;a href=&quot;investors.html&quot; class=&quot;card-cta&quot;&gt;View Details&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;issuer-card&quot; data-structure=&quot;profit&quot; data-audited=&quot;false&quot; data-regulated=&quot;false&quot;&gt;
+                &lt;div class=&quot;card-hero&quot;&gt;
+                    🌾
+                &lt;/div&gt;
+                &lt;div class=&quot;card-content&quot;&gt;
+                    &lt;div class=&quot;card-header&quot;&gt;
+                        &lt;div class=&quot;card-location&quot;&gt;🇮🇩 Indonesia&lt;/div&gt;
+                        &lt;h3 class=&quot;card-title&quot;&gt;Palm &amp; Biodiversity&lt;/h3&gt;
+                    &lt;/div&gt;
+                    &lt;p class=&quot;card-description&quot;&gt;Regenerative agriculture platform consolidating smallholder farms into sustainable export cooperatives.&lt;/p&gt;
+                    &lt;div class=&quot;structure-row&quot;&gt;
+                        &lt;span class=&quot;structure-pill coupon&quot;&gt;7% Coupon&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill profit&quot;&gt;+18% Profit&lt;/span&gt;
+                        &lt;span class=&quot;structure-pill maturity&quot;&gt;6 Years&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;funding-section&quot;&gt;
+                        &lt;div class=&quot;funding-header&quot;&gt;
+                            &lt;span class=&quot;funding-label&quot;&gt;Funding Progress&lt;/span&gt;
+                            &lt;span class=&quot;funding-amount&quot;&gt;$0.9M raised&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-bar-container&quot;&gt;
+                            &lt;div class=&quot;funding-bar&quot; style=&quot;width: 28%;&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;soft-cap-marker&quot; style=&quot;left: 56%;&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;funding-caps&quot;&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot soft&quot;&gt;&lt;/span&gt; Soft $1.8M&lt;/span&gt;
+                            &lt;span class=&quot;cap-label&quot;&gt;&lt;span class=&quot;cap-dot hard&quot;&gt;&lt;/span&gt; Hard $3.2M&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;trust-section&quot;&gt;
+                        &lt;div class=&quot;trust-label&quot;&gt;Trust Indicators&lt;/div&gt;
+                        &lt;div class=&quot;trust-grid&quot;&gt;
+                            &lt;div class=&quot;trust-item inactive&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🔍&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Audited&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item inactive&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;📋&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;CPA&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item active&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;📄&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Prospectus&lt;/span&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&quot;trust-item inactive&quot;&gt;
+                                &lt;span class=&quot;trust-icon&quot;&gt;🏛️&lt;/span&gt;
+                                &lt;span class=&quot;trust-text&quot;&gt;Regulated&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;a href=&quot;investors.html&quot; class=&quot;card-cta&quot;&gt;View Details&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+
+
+    
+    
+    <footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="https://sails.to/" class="logo">
+                <img src="/sail_logo.png" alt="Sails.to">
+            </a>
+            <p>Hybrid securities infrastructure bridging DeFi innovation with TradFi trust.<br><em style="font-size: 0.8rem; color: var(--silver);">White-label available for institutions.</em></p>
+        </div>
+        <div class="footer-col">
+            <h4>For Me</h4>
+            <a href="/issuers/">Business - Raise Funds</a>
+            <a href="/investors/">Professional Investors - Grow</a>
+            <a href="/brokers/">For Brokers</a>
+            <a href="/introducers/">Business Introducers</a>
+            <a href="/regulated/">For Institutions</a>
+        </div>
+        <div class="footer-col">
+            <h4>Understand</h4>
+            <a href="/whatsails/">How It Works</a>
+            <a href="/pricing/">Pricing</a>
+            <a href="/knowledge/">Knowledge Base</a>
+            <a href="/knowledge/blog/">Blog</a>
+            <a href="/knowledge/docs/">Documentation</a>
+            <a href="/knowledge/faq/">FAQ</a>
+            <a href="/knowledge/glossary/">Glossary</a>
+            <a href="/knowledge/roadmap/">Roadmap</a>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <a href="/company/about/">About</a>
+            <a href="/company/contact/">Contact</a>
+            <a href="/company/legal/">Legal</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 Sails.to DAO LLC. All rights reserved.</span>
+        <span>Securities offered through licensed intermediaries only. For professional investors.</span>
+    </div>
+</footer>
+
+    
+    
+    
+
+
+</body>
+</html>

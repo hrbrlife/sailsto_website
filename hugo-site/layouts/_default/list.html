@@ -1,0 +1,11 @@
+{{ define "main" }}
+{{ .Content }}
+{{ end }}
+
+{{ define "scripts" }}
+{{ if .Params.scripts }}
+{{ range .Params.scripts }}
+<script src="{{ . }}"></script>
+{{ end }}
+{{ end }}
+{{ end }}

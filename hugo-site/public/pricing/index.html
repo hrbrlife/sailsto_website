@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Sails.to | Hybrid Securities Infrastructure</title>
+    
+    
+    <meta name="description" content="Transparent pricing calculator. Understand your costs based on investor sourcing and offering size.">
+    <meta property="og:description" content="Transparent pricing calculator. Understand your costs based on investor sourcing and offering size.">
+    
+    
+    <meta property="og:title" content="Pricing">
+    <meta property="og:type" content="website">
+    
+    
+    
+    
+    
+    <link rel="stylesheet" href="/assets/fonts/fonts.css">
+    
+    <link rel="stylesheet" href="/styles.css">
+    
+    
+    
+    
+
+<body>
+    
+    <nav>
+    <a href="https://sails.to/" class="logo">
+        <img src="/sail_logo.png" alt="Sails.to" class="logo-dark">
+        <img src="/sail_logo_w.png" alt="Sails.to" class="logo-light">
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+    <div class="nav-links nav-collapse">
+        <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-trigger">For Me</a>
+            <div class="nav-dropdown-menu">
+                <a href="/issuers/">Business - Raise Funds</a>
+                <a href="/investors/">Professional Investors - Grow</a>
+                <a href="/brokers/">For Brokers</a>
+                <a href="/introducers/">Business Introducers</a>
+                <a href="/regulated/">For Institutions</a>
+            </div>
+        </div>
+        <a href="/issuers-directory/" style="color: var(--ink); text-decoration: none; font-weight: 500;">Platform</a>
+        <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-trigger">Understand</a>
+            <div class="nav-dropdown-menu">
+                <a href="/whatsails/">How It Works</a>
+                <a href="/pricing/">Pricing</a>
+                <div class="dropdown-divider"></div>
+                <a href="/knowledge/">Knowledge Base</a>
+                <a href="/knowledge/blog/">Blog</a>
+                <a href="/knowledge/docs/">Documentation</a>
+                <a href="/knowledge/faq/">FAQ</a>
+                <a href="/knowledge/glossary/">Glossary</a>
+                <a href="/knowledge/roadmap/">Roadmap</a>
+            </div>
+        </div>
+        <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-trigger">Company</a>
+            <div class="nav-dropdown-menu">
+                <a href="/company/about/">About</a>
+                <a href="/company/contact/">Contact</a>
+                <a href="/company/legal/">Legal</a>
+            </div>
+        </div>
+        <a href="/signup/" class="btn-nav">Get Started</a>
+    </div>
+</nav>
+
+    
+    
+    
+<pre><code>&lt;section class=&quot;page-hero&quot;&gt;
+    &lt;span class=&quot;section-label&quot;&gt;Pricing&lt;/span&gt;
+    &lt;h1 class=&quot;section-title&quot;&gt;Cost Calculator&lt;/h1&gt;
+    &lt;p class=&quot;section-desc&quot;&gt;Model your offering costs based on size, caps, and investor sourcing. All amounts in multiples of $150,000.&lt;/p&gt;
+&lt;/section&gt;
+&lt;div class=&quot;pricing-container&quot;&gt;
+    &lt;div class=&quot;calculator-section&quot;&gt;
+        &lt;h2&gt;Calculate Your Costs&lt;/h2&gt;
+        &lt;p class=&quot;intro&quot;&gt;Adjust the parameters below to see exactly what you'll receive and pay over the life of your offering&lt;/p&gt;
+        &lt;div class=&quot;calc-grid&quot;&gt;
+            &lt;div class=&quot;calc-inputs&quot;&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                    &lt;label for=&quot;softCap&quot;&gt;Soft Cap (Minimum Goal)&lt;/label&gt;
+                    &lt;div class=&quot;amount-input-wrapper&quot;&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;softCap&quot; value=&quot;600,000&quot; inputmode=&quot;numeric&quot;&gt;
+                        &lt;div class=&quot;increment-buttons&quot;&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;increment-btn&quot; data-target=&quot;softCap&quot; data-dir=&quot;up&quot;&gt;▲&lt;/button&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;increment-btn&quot; data-target=&quot;softCap&quot; data-dir=&quot;down&quot;&gt;▼&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;amount-written&quot; id=&quot;softCapWritten&quot;&gt;Six Hundred Thousand Dollars&lt;/span&gt;
+                    &lt;span class=&quot;input-hint&quot;&gt;Minimum funding required to proceed&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                    &lt;label for=&quot;hardCap&quot;&gt;Hard Cap (Maximum Goal)&lt;/label&gt;
+                    &lt;div class=&quot;amount-input-wrapper&quot;&gt;
+                        &lt;input type=&quot;text&quot; id=&quot;hardCap&quot; value=&quot;1,500,000&quot; inputmode=&quot;numeric&quot;&gt;
+                        &lt;div class=&quot;increment-buttons&quot;&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;increment-btn&quot; data-target=&quot;hardCap&quot; data-dir=&quot;up&quot;&gt;▲&lt;/button&gt;
+                            &lt;button type=&quot;button&quot; class=&quot;increment-btn&quot; data-target=&quot;hardCap&quot; data-dir=&quot;down&quot;&gt;▼&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;amount-written&quot; id=&quot;hardCapWritten&quot;&gt;One Million Five Hundred Thousand Dollars&lt;/span&gt;
+                    &lt;span class=&quot;input-hint&quot;&gt;Maximum you can raise&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;slider-group&quot;&gt;
+                    &lt;label&gt;Actual Amount Raised&lt;/label&gt;
+                    &lt;div class=&quot;slider-container&quot;&gt;
+                        &lt;div class=&quot;slider-value&quot; id=&quot;sliderValue&quot;&gt;$900,000&lt;/div&gt;
+                        &lt;div class=&quot;slider-track&quot;&gt;
+                            &lt;div class=&quot;slider-softcap-marker&quot; id=&quot;softCapMarker&quot;&gt;
+                                &lt;span class=&quot;slider-softcap-label&quot;&gt;Soft Cap&lt;/span&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;input type=&quot;range&quot; id=&quot;actualRaise&quot; class=&quot;slider&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;60&quot;&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;slider-labels&quot;&gt;
+                        &lt;span id=&quot;minLabel&quot;&gt;$0&lt;/span&gt;
+                        &lt;span id=&quot;maxLabel&quot;&gt;$1,500,000&lt;/span&gt;
+                    &lt;/div&gt;
+                    &lt;span class=&quot;input-hint&quot;&gt;Drag to simulate different outcomes (from $0 to hard cap)&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;sourcing-section&quot;&gt;
+                    &lt;h3 style=&quot;font-family: var(--font-ui); font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--ink); margin-bottom: 20px; padding-top: 20px; border-top: 1px solid rgba(0,0,0,0.1);&quot;&gt;Investor Sourcing&lt;/h3&gt;
+                    &lt;div class=&quot;sourcing-visual&quot; id=&quot;sourcingVisual&quot;&gt;
+                        &lt;div class=&quot;sourcing-bar&quot;&gt;
+                            &lt;div class=&quot;sourcing-segment own-segment&quot; id=&quot;ownSegment&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;sourcing-segment broker-segment&quot; id=&quot;brokerSegment&quot;&gt;&lt;/div&gt;
+                            &lt;div class=&quot;sourcing-segment general-segment&quot; id=&quot;generalSegment&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;sourcing-legend&quot;&gt;
+                            &lt;span class=&quot;legend-item&quot;&gt;&lt;span class=&quot;legend-color own&quot;&gt;&lt;/span&gt;Your Network (1%)&lt;/span&gt;
+                            &lt;span class=&quot;legend-item&quot;&gt;&lt;span class=&quot;legend-color broker&quot;&gt;&lt;/span&gt;Broker Placed (6%)&lt;/span&gt;
+                            &lt;span class=&quot;legend-item&quot;&gt;&lt;span class=&quot;legend-color general&quot;&gt;&lt;/span&gt;General (6%)&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;slider-group&quot;&gt;
+                        &lt;label&gt;Your Own Network Placement&lt;/label&gt;
+                        &lt;div class=&quot;sourcing-slider-row&quot;&gt;
+                            &lt;input type=&quot;range&quot; id=&quot;ownPlacement&quot; class=&quot;slider sourcing-slider&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;30&quot;&gt;
+                            &lt;span class=&quot;slider-percent&quot; id=&quot;ownPercent&quot;&gt;30%&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;sourcing-amounts&quot;&gt;
+                            &lt;span id=&quot;ownAmount&quot;&gt;$270,000&lt;/span&gt;
+                            &lt;span class=&quot;input-hint&quot;&gt;Investors you bring directly → 1% distribution fee&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;slider-group&quot;&gt;
+                        &lt;label&gt;Broker Assisted (of remaining &lt;span id=&quot;remainingPercent&quot;&gt;70%&lt;/span&gt;)&lt;/label&gt;
+                        &lt;div class=&quot;sourcing-slider-row&quot;&gt;
+                            &lt;input type=&quot;range&quot; id=&quot;brokerPlacement&quot; class=&quot;slider sourcing-slider&quot; min=&quot;0&quot; max=&quot;100&quot; value=&quot;50&quot;&gt;
+                            &lt;span class=&quot;slider-percent&quot; id=&quot;brokerPercent&quot;&gt;50%&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;sourcing-amounts&quot;&gt;
+                            &lt;span id=&quot;brokerAmount&quot;&gt;$315,000&lt;/span&gt;
+                            &lt;span class=&quot;input-hint&quot;&gt;Broker helps place → 6% distribution fee&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;sourcing-summary&quot; id=&quot;sourcingSummary&quot;&gt;
+                        &lt;div class=&quot;summary-row&quot;&gt;
+                            &lt;span&gt;General Distribution (unassisted)&lt;/span&gt;
+                            &lt;span id=&quot;generalAmount&quot;&gt;$315,000&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;checkbox-group&quot;&gt;
+                    &lt;input type=&quot;checkbox&quot; id=&quot;earlyBirdDiscount&quot;&gt;
+                    &lt;label for=&quot;earlyBirdDiscount&quot;&gt;Enable Early Bird Discount (during soft cap phase)&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;input-group&quot; id=&quot;discountGroup&quot; style=&quot;display: none;&quot;&gt;
+                    &lt;label for=&quot;discountRate&quot;&gt;Early Bird Discount (%)&lt;/label&gt;
+                    &lt;input type=&quot;number&quot; id=&quot;discountRate&quot; value=&quot;10&quot; min=&quot;0&quot; max=&quot;50&quot; step=&quot;1&quot;&gt;
+                    &lt;span class=&quot;input-hint&quot;&gt;Discount for investors during soft cap phase&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;checkbox-group&quot;&gt;
+                    &lt;input type=&quot;checkbox&quot; id=&quot;brokerReward&quot;&gt;
+                    &lt;label for=&quot;brokerReward&quot;&gt;Enable Broker Placement Reward (soft cap phase)&lt;/label&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;input-group&quot; id=&quot;brokerRewardGroup&quot; style=&quot;display: none;&quot;&gt;
+                    &lt;label for=&quot;brokerRewardRate&quot;&gt;Broker Reward (%)&lt;/label&gt;
+                    &lt;input type=&quot;number&quot; id=&quot;brokerRewardRate&quot; value=&quot;2&quot; min=&quot;0&quot; max=&quot;10&quot; step=&quot;0.5&quot;&gt;
+                    &lt;span class=&quot;input-hint&quot;&gt;Additional incentive for brokers on their placed amount&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                    &lt;label for=&quot;couponRate&quot;&gt;Annual Coupon Rate (%)&lt;/label&gt;
+                    &lt;input type=&quot;number&quot; id=&quot;couponRate&quot; value=&quot;8&quot; min=&quot;0&quot; max=&quot;30&quot; step=&quot;0.1&quot;&gt;
+                    &lt;span class=&quot;input-hint&quot;&gt;Annual interest rate paid to investors&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                    &lt;label for=&quot;termYears&quot;&gt;Term (Years)&lt;/label&gt;
+                    &lt;input type=&quot;number&quot; id=&quot;termYears&quot; value=&quot;3&quot; min=&quot;1&quot; max=&quot;30&quot; step=&quot;1&quot;&gt;
+                    &lt;span class=&quot;input-hint&quot;&gt;Bond maturity period&lt;/span&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;input-group&quot;&gt;
+                    &lt;label for=&quot;paymentFreq&quot;&gt;Payment Frequency&lt;/label&gt;
+                    &lt;select id=&quot;paymentFreq&quot;&gt;
+                        &lt;option value=&quot;1&quot;&gt;Annual&lt;/option&gt;
+                        &lt;option value=&quot;2&quot; selected&gt;Semi-Annual&lt;/option&gt;
+                        &lt;option value=&quot;4&quot;&gt;Quarterly&lt;/option&gt;
+                        &lt;option value=&quot;12&quot;&gt;Monthly&lt;/option&gt;
+                    &lt;/select&gt;
+                    &lt;span class=&quot;input-hint&quot;&gt;How often coupon payments are made&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;calc-results&quot; id=&quot;results&quot;&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;fee-section&quot;&gt;
+        &lt;h2&gt;Complete Fee Structure&lt;/h2&gt;
+        &lt;p class=&quot;intro&quot;&gt;All fees depend on how investors are sourced&lt;/p&gt;
+        &lt;table class=&quot;fee-table&quot;&gt;
+            &lt;thead&gt;
+                &lt;tr&gt;
+                    &lt;th&gt;Fee Type&lt;/th&gt;
+                    &lt;th&gt;Amount&lt;/th&gt;
+                    &lt;th&gt;When Charged&lt;/th&gt;
+                    &lt;th&gt;Who Pays&lt;/th&gt;
+                    &lt;th&gt;Split&lt;/th&gt;
+                &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;strong&gt;Brokerage Fee&lt;/strong&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;span class=&quot;fee-highlight&quot;&gt;0.5%&lt;/span&gt;&lt;/td&gt;
+                    &lt;td&gt;Secondary trades + post-soft-cap primary&lt;br&gt;&lt;em style=&quot;color:#38a169; font-size:0.85em;&quot;&gt;⚡ Waived during soft cap phase&lt;/em&gt;&lt;/td&gt;
+                    &lt;td&gt;Buyer&lt;/td&gt;
+                    &lt;td&gt;⅓ Platform + ⅓ Buy-side + ⅓ Sell-side&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;strong&gt;Distribution Fee&lt;/strong&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;span class=&quot;fee-highlight&quot;&gt;6% OR 1%&lt;/span&gt;&lt;/td&gt;
+                    &lt;td&gt;Deducted from soft cap when reached&lt;br&gt;&lt;em style=&quot;color:#38a169; font-size:0.85em;&quot;&gt;⚡ Not charged until soft cap reached&lt;/em&gt;&lt;/td&gt;
+                    &lt;td&gt;Issuer (from proceeds)&lt;/td&gt;
+                    &lt;td&gt;See below&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td style=&quot;padding-left: 30px;&quot;&gt;→ General Distribution&lt;/td&gt;
+                    &lt;td&gt;&lt;span class=&quot;fee-highlight&quot;&gt;6%&lt;/span&gt;&lt;/td&gt;
+                    &lt;td&gt;Investors not from issuer's network&lt;/td&gt;
+                    &lt;td&gt;Issuer&lt;/td&gt;
+                    &lt;td&gt;Brokers + Sails.to&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td style=&quot;padding-left: 30px;&quot;&gt;→ Referral Investors&lt;/td&gt;
+                    &lt;td&gt;&lt;span class=&quot;fee-highlight&quot;&gt;1%&lt;/span&gt;&lt;/td&gt;
+                    &lt;td&gt;Investors using issuer's referral code&lt;/td&gt;
+                    &lt;td&gt;Issuer&lt;/td&gt;
+                    &lt;td&gt;Sails.to&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;strong&gt;Trust &amp; Administration&lt;/strong&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;span class=&quot;fee-highlight&quot;&gt;1% annual&lt;/span&gt;&lt;/td&gt;
+                    &lt;td&gt;Ongoing (annually on nominal value)&lt;/td&gt;
+                    &lt;td&gt;Issuer&lt;/td&gt;
+                    &lt;td&gt;Trust + Sails.to&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;strong&gt;Security Deposit&lt;/strong&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;span class=&quot;fee-highlight&quot;&gt;3% of issuance&lt;/span&gt;&lt;/td&gt;
+                    &lt;td&gt;At issuance, reserved under trust&lt;/td&gt;
+                    &lt;td&gt;Issuer (from proceeds)&lt;/td&gt;
+                    &lt;td&gt;Reserved, returned at end&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;strong&gt;Clearstream Fees&lt;/strong&gt;&lt;/td&gt;
+                    &lt;td&gt;Variable&lt;/td&gt;
+                    &lt;td&gt;Channel 3 transactions&lt;/td&gt;
+                    &lt;td&gt;Investor&lt;/td&gt;
+                    &lt;td&gt;Clearstream&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                    &lt;td&gt;&lt;strong&gt;Conversion Fee&lt;/strong&gt;&lt;/td&gt;
+                    &lt;td&gt;&lt;span class=&quot;fee-highlight&quot;&gt;0.10-0.25%&lt;/span&gt;&lt;/td&gt;
+                    &lt;td&gt;When wrapping/unwrapping Solana ↔ Clearstream&lt;/td&gt;
+                    &lt;td&gt;Requester&lt;/td&gt;
+                    &lt;td&gt;Sails.to + Trust&lt;/td&gt;
+                &lt;/tr&gt;
+            &lt;/tbody&gt;
+        &lt;/table&gt;
+        &lt;div class=&quot;note-box&quot;&gt;
+            &lt;strong&gt;📌 Key Points&lt;/strong&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;strong&gt;Soft cap phase is fee-free:&lt;/strong&gt; Brokerage (0.5%) waived, distribution fees deferred until soft cap reached&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;If soft cap fails:&lt;/strong&gt; Full refund to investors (only Clearstream fees at cost, if used)&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;No upfront costs:&lt;/strong&gt; All fees deducted from proceeds when offering succeeds&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;Security deposit:&lt;/strong&gt; Returned at end of bond term if no issues&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+
+    
+    
+    <footer>
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <a href="https://sails.to/" class="logo">
+                <img src="/sail_logo.png" alt="Sails.to">
+            </a>
+            <p>Hybrid securities infrastructure bridging DeFi innovation with TradFi trust.<br><em style="font-size: 0.8rem; color: var(--silver);">White-label available for institutions.</em></p>
+        </div>
+        <div class="footer-col">
+            <h4>For Me</h4>
+            <a href="/issuers/">Business - Raise Funds</a>
+            <a href="/investors/">Professional Investors - Grow</a>
+            <a href="/brokers/">For Brokers</a>
+            <a href="/introducers/">Business Introducers</a>
+            <a href="/regulated/">For Institutions</a>
+        </div>
+        <div class="footer-col">
+            <h4>Understand</h4>
+            <a href="/whatsails/">How It Works</a>
+            <a href="/pricing/">Pricing</a>
+            <a href="/knowledge/">Knowledge Base</a>
+            <a href="/knowledge/blog/">Blog</a>
+            <a href="/knowledge/docs/">Documentation</a>
+            <a href="/knowledge/faq/">FAQ</a>
+            <a href="/knowledge/glossary/">Glossary</a>
+            <a href="/knowledge/roadmap/">Roadmap</a>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <a href="/company/about/">About</a>
+            <a href="/company/contact/">Contact</a>
+            <a href="/company/legal/">Legal</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 Sails.to DAO LLC. All rights reserved.</span>
+        <span>Securities offered through licensed intermediaries only. For professional investors.</span>
+    </div>
+</footer>
+
+    
+    
+    
+
+
+</body>
+</html>

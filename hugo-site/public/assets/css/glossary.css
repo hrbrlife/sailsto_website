@@ -1,0 +1,397 @@
+/* ═══════════════════════════════════════════════════════════════
+   SAILS.TO GLOSSARY STYLES
+   Tooltips, term highlighting, glossary pages
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─────────────────────────────────────────────────────────────────
+   INLINE GLOSSARY TERM HIGHLIGHTING
+   Subtle, elegant, magazine-worthy
+   ───────────────────────────────────────────────────────────────── */
+.glossary-term {
+    background: linear-gradient(to bottom, transparent 60%, rgba(201, 162, 39, 0.15) 60%);
+    border-bottom: 1px dashed var(--gold);
+    cursor: help;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+}
+
+.glossary-term:hover {
+    background: linear-gradient(to bottom, transparent 40%, rgba(201, 162, 39, 0.25) 40%);
+    border-bottom-style: solid;
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   TOOLTIP STYLES
+   Floating, elegant, informative
+   ───────────────────────────────────────────────────────────────── */
+.glossary-tooltip {
+    position: fixed;
+    z-index: 10000;
+    max-width: 360px;
+    min-width: 280px;
+    pointer-events: auto;
+    opacity: 0;
+    transition: opacity 0.15s ease;
+}
+
+.glossary-tooltip-content {
+    background: var(--ivory);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 
+                0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    position: relative;
+}
+
+.glossary-tooltip-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.glossary-tooltip-term {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.3;
+}
+
+.glossary-tooltip-category {
+    font-family: var(--font-ui);
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 10px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+/* Category colors */
+.category-finance {
+    background: rgba(201, 162, 39, 0.15);
+    color: #8B7355;
+}
+
+.category-compliance {
+    background: rgba(13, 27, 42, 0.1);
+    color: var(--navy);
+}
+
+.category-legal {
+    background: rgba(184, 25, 43, 0.1);
+    color: var(--crimson);
+}
+
+.category-technology {
+    background: rgba(74, 74, 74, 0.1);
+    color: var(--slate);
+}
+
+.glossary-tooltip-definition {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--graphite);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.glossary-tooltip-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    text-decoration: none;
+    transition: all 0.2s ease;
+}
+
+.glossary-tooltip-link:hover {
+    color: var(--ink);
+}
+
+.glossary-tooltip-link svg {
+    transition: transform 0.2s ease;
+}
+
+.glossary-tooltip-link:hover svg {
+    transform: translateX(3px);
+}
+
+/* Tooltip arrow */
+.glossary-tooltip-arrow {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid var(--ivory);
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* When tooltip is below the element */
+.glossary-tooltip.tooltip-below .glossary-tooltip-arrow {
+    bottom: auto;
+    top: -8px;
+    border-top: none;
+    border-bottom: 8px solid var(--ivory);
+    filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.1));
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   GLOSSARY PAGE STYLES
+   Term listing and detail pages
+   ───────────────────────────────────────────────────────────────── */
+
+/* Glossary grid */
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 24px;
+}
+
+.glossary-card {
+    background: var(--ivory);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 28px;
+    transition: all 0.4s var(--ease-out-expo);
+    position: relative;
+    text-decoration: none;
+    display: block;
+}
+
+.glossary-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--gold);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s var(--ease-out-expo);
+}
+
+.glossary-card:hover {
+    border-color: rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+}
+
+.glossary-card:hover::before {
+    transform: scaleY(1);
+}
+
+.glossary-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.glossary-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 0;
+    line-height: 1.3;
+}
+
+.glossary-card-category {
+    font-family: var(--font-ui);
+    font-size: 0.55rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 4px 8px;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.glossary-card p {
+    font-size: 0.9rem;
+    color: var(--slate);
+    line-height: 1.7;
+    margin: 0;
+}
+
+.glossary-card-arrow {
+    margin-top: 16px;
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.glossary-card:hover .glossary-card-arrow {
+    color: var(--ink);
+}
+
+/* Glossary detail page */
+.glossary-detail {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.glossary-detail-header {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.glossary-detail-term {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 16px;
+    line-height: 1.2;
+}
+
+.glossary-detail-short {
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    color: var(--graphite);
+    line-height: 1.7;
+}
+
+.glossary-detail-body {
+    font-size: 1.1rem;
+    color: var(--charcoal);
+    line-height: 1.9;
+}
+
+.glossary-detail-body p {
+    margin-bottom: 24px;
+}
+
+.glossary-related {
+    margin-top: 48px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.glossary-related h4 {
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--silver);
+    margin-bottom: 16px;
+}
+
+.glossary-related-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.glossary-related-term {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    padding: 8px 16px;
+    background: var(--cream);
+    color: var(--ink);
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.glossary-related-term:hover {
+    border-color: var(--gold);
+    background: var(--ivory);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   GLOSSARY FILTER
+   ───────────────────────────────────────────────────────────────── */
+.glossary-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.glossary-filter-btn {
+    font-family: var(--font-ui);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 10px 20px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    color: var(--slate);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.glossary-filter-btn:hover,
+.glossary-filter-btn.active {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--ivory);
+}
+
+/* ─────────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .glossary-tooltip {
+        max-width: calc(100vw - 32px);
+        min-width: 260px;
+        left: 16px !important;
+        right: 16px;
+        transform: none !important;
+    }
+
+    .glossary-tooltip-content {
+        padding: 16px;
+    }
+
+    .glossary-tooltip-term {
+        font-size: 1rem;
+    }
+
+    .glossary-tooltip-definition {
+        font-size: 0.85rem;
+    }
+
+    .glossary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .glossary-filter {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .glossary-filter-btn {
+        flex-shrink: 0;
+    }
+}
