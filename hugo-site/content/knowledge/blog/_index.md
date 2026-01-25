@@ -181,7 +181,7 @@ stylesheets:
             <div class="blog-no-results" style="display: none;">
                 <span class="icon">📭</span>
                 <h3>No posts in this category yet</h3>
-                <p>Check back soon for new content, or <a href="../../signup.html">subscribe</a> to get notified.</p>
+                <p>Check back soon for new content, or <a href="/signup/">subscribe</a> to get notified.</p>
             </div>
             <div class="blog-load-more">
                 <button class="btn btn-secondary">Load More Posts</button>

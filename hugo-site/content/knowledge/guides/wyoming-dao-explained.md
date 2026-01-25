@@ -9,7 +9,7 @@ stylesheets:
 
 <header class="guide-header">
         <div class="container">
-            <a href="../index.html" class="back-link">← Back to Knowledge Base</a>
+            <a href="/knowledge/" class="back-link">← Back to Knowledge Base</a>
             <span class="guide-badge">Guide</span>
             <h1 class="guide-title">Wyoming DAO LLC Explained</h1>
             <p class="guide-meta">Understanding the legal structure behind compliant tokenized securities</p>

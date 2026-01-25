@@ -232,7 +232,7 @@ stylesheets:
     <section class="cta-section">
         <h2>Ready to Get Started?</h2>
         <p>Join the future of compliant tokenized securities.</p>
-        <a href="../signup.html" class="btn btn-primary">
+        <a href="/signup/" class="btn btn-primary">
             Start Your Journey
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>

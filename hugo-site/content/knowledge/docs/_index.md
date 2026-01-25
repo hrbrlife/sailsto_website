@@ -137,7 +137,7 @@ stylesheets:
                 <section class="docs-section">
                     <h3>Need Help?</h3>
                     <div class="docs-help-grid">
-                        <a href="../faq.html" class="docs-help-link">
+                        <a href="/knowledge/faq/" class="docs-help-link">
                             <span class="icon">❓</span>
                             <span class="text">FAQ</span>
                         </a>
@@ -145,7 +145,7 @@ stylesheets:
                             <span class="icon">🐙</span>
                             <span class="text">GitHub</span>
                         </a>
-                        <a href="../../company/contact.html" class="docs-help-link">
+                        <a href="/company/contact/" class="docs-help-link">
                             <span class="icon">💬</span>
                             <span class="text">Contact</span>
                         </a>

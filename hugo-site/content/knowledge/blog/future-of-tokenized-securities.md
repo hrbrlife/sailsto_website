@@ -64,6 +64,6 @@ stylesheets:
             <div class="article-cta">
                 <h3>Ready to explore tokenization?</h3>
                 <p>Whether you're looking to issue or invest, we're here to help.</p>
-                <a href="../../signup.html" class="btn btn-primary">Get Started →</a>
+                <a href="/signup/" class="btn btn-primary">Get Started →</a>
             </div>
         </div>

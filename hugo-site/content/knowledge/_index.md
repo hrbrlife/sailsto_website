@@ -37,7 +37,7 @@ stylesheets:
         <div class="kb-container">
             <h2 class="kb-section-title">Featured Resources</h2>
             <div class="kb-featured-grid">
-                <a href="docs/getting-started.html" class="kb-card kb-card-featured" data-category="docs">
+                <a href="/knowledge/docs/getting-started/" class="kb-card kb-card-featured" data-category="docs">
                     <div class="kb-card-icon">🚀</div>
                     <div class="kb-card-content">
                         <span class="kb-card-category">Getting Started</span>
@@ -46,7 +46,7 @@ stylesheets:
                     </div>
                     <span class="kb-card-arrow">→</span>
                 </a>
-                <a href="docs/hybrid-architecture.html" class="kb-card kb-card-featured" data-category="docs">
+                <a href="/knowledge/docs/hybrid-architecture/" class="kb-card kb-card-featured" data-category="docs">
                     <div class="kb-card-icon">🔗</div>
                     <div class="kb-card-content">
                         <span class="kb-card-category">Architecture</span>
@@ -75,25 +75,25 @@ stylesheets:
                     <p>Step-by-step tutorials and conceptual explanations</p>
                 </div>
                 <div class="kb-grid">
-                    <a href="guides/tokenization-101.html" class="kb-card">
+                    <a href="/knowledge/guides/tokenization-101/" class="kb-card">
                         <span class="kb-card-category">Beginner</span>
                         <h3>Tokenization 101</h3>
                         <p>What are security tokens? How do they differ from utility tokens? A complete introduction.</p>
                         <span class="kb-card-meta">10 min read</span>
                     </a>
-                    <a href="guides/wyoming-dao-explained.html" class="kb-card">
+                    <a href="/knowledge/guides/wyoming-dao-explained/" class="kb-card">
                         <span class="kb-card-category">Legal</span>
                         <h3>Wyoming DAO LLC Explained</h3>
                         <p>Understanding the legal structure that makes compliant blockchain-based securities possible.</p>
                         <span class="kb-card-meta">8 min read</span>
                     </a>
-                    <a href="guides/investor-eligibility.html" class="kb-card">
+                    <a href="/knowledge/guides/investor-eligibility/" class="kb-card">
                         <span class="kb-card-category">Compliance</span>
                         <h3>Investor Eligibility Requirements</h3>
                         <p>Accredited vs. professional investors, KYC/AML requirements, and geographic considerations.</p>
                         <span class="kb-card-meta">6 min read</span>
                     </a>
-                    <a href="guides/isin-conversion.html" class="kb-card">
+                    <a href="/knowledge/guides/isin-conversion/" class="kb-card">
                         <span class="kb-card-category">Technical</span>
                         <h3>Token to ISIN Conversion</h3>
                         <p>How the TradFi Bridge converts Solana tokens to traditional securities identifiers.</p>
@@ -107,25 +107,25 @@ stylesheets:
                     <p>Technical references and platform specifications</p>
                 </div>
                 <div class="kb-grid">
-                    <a href="docs/platform-overview.html" class="kb-card">
+                    <a href="/knowledge/docs/platform-overview/" class="kb-card">
                         <span class="kb-card-category">Overview</span>
                         <h3>Platform Architecture</h3>
                         <p>High-level overview of system components, data flows, and integration points.</p>
                         <span class="kb-card-meta">Technical</span>
                     </a>
-                    <a href="docs/token-standard.html" class="kb-card">
+                    <a href="/knowledge/docs/token-standard/" class="kb-card">
                         <span class="kb-card-category">Development</span>
                         <h3>Token Standard</h3>
                         <p>SPL token implementation details, metadata structure, and compliance extensions.</p>
                         <span class="kb-card-meta">Technical</span>
                     </a>
-                    <a href="docs/api-reference.html" class="kb-card">
+                    <a href="/knowledge/docs/api-reference/" class="kb-card">
                         <span class="kb-card-category">API</span>
                         <h3>API Reference</h3>
                         <p>REST API endpoints for integration, authentication, and data retrieval.</p>
                         <span class="kb-card-meta">Technical</span>
                     </a>
-                    <a href="docs/compliance-framework.html" class="kb-card">
+                    <a href="/knowledge/docs/compliance-framework/" class="kb-card">
                         <span class="kb-card-category">Compliance</span>
                         <h3>Compliance Framework</h3>
                         <p>On-chain compliance rules, transfer restrictions, and regulatory hooks.</p>
@@ -169,7 +169,7 @@ stylesheets:
                 <div class="kb-section-header">
                     <h2>📖 Glossary</h2>
                     <p>Definitions of key terms and concepts</p>
-                    <a href="glossary/index.html" class="kb-section-link">View Full Glossary →</a>
+                    <a href="/knowledge/glossary/" class="kb-section-link">View Full Glossary →</a>
                 </div>
                 <div class="kb-glossary-preview">
                     <div class="kb-glossary-categories">
@@ -197,12 +197,12 @@ stylesheets:
                     <div class="kb-glossary-featured">
                         <h4>Popular Terms</h4>
                         <div class="kb-glossary-terms">
-                            <a href="glossary/security-token.html" class="glossary-term-pill">Security Token</a>
-                            <a href="glossary/wyoming-dao-llc.html" class="glossary-term-pill">Wyoming DAO LLC</a>
-                            <a href="glossary/isin.html" class="glossary-term-pill">ISIN</a>
-                            <a href="glossary/clearstream.html" class="glossary-term-pill">Clearstream</a>
-                            <a href="glossary/tradfi-bridge.html" class="glossary-term-pill">TradFi Bridge</a>
-                            <a href="glossary/kyc.html" class="glossary-term-pill">KYC</a>
+                            <a href="/knowledge/glossary/security-token/" class="glossary-term-pill">Security Token</a>
+                            <a href="/knowledge/glossary/wyoming-dao-llc/" class="glossary-term-pill">Wyoming DAO LLC</a>
+                            <a href="/knowledge/glossary/isin/" class="glossary-term-pill">ISIN</a>
+                            <a href="/knowledge/glossary/clearstream/" class="glossary-term-pill">Clearstream</a>
+                            <a href="/knowledge/glossary/tradfi-bridge/" class="glossary-term-pill">TradFi Bridge</a>
+                            <a href="/knowledge/glossary/kyc/" class="glossary-term-pill">KYC</a>
                         </div>
                     </div>
                 </div>
@@ -211,22 +211,22 @@ stylesheets:
                 <div class="kb-section-header">
                     <h2>📝 Blog</h2>
                     <p>Insights, updates, and industry analysis</p>
-                    <a href="blog/index.html" class="kb-section-link">View All Posts →</a>
+                    <a href="/knowledge/blog/" class="kb-section-link">View All Posts →</a>
                 </div>
                 <div class="kb-grid">
-                    <a href="blog/future-of-tokenized-securities.html" class="kb-card kb-card-blog">
+                    <a href="/knowledge/blog/future-of-tokenized-securities/" class="kb-card kb-card-blog">
                         <span class="kb-card-date">Jan 15, 2025</span>
                         <h3>The Future of Tokenized Securities in 2025</h3>
                         <p>How regulatory clarity and institutional adoption are reshaping private markets.</p>
                         <span class="kb-card-meta">5 min read</span>
                     </a>
-                    <a href="blog/why-wyoming.html" class="kb-card kb-card-blog">
+                    <a href="/knowledge/blog/why-wyoming/" class="kb-card kb-card-blog">
                         <span class="kb-card-date">Jan 10, 2025</span>
                         <h3>Why Wyoming? The DAO LLC Advantage</h3>
                         <p>Understanding why Wyoming has become the Delaware of blockchain.</p>
                         <span class="kb-card-meta">4 min read</span>
                     </a>
-                    <a href="blog/hybrid-custody-explained.html" class="kb-card kb-card-blog">
+                    <a href="/knowledge/blog/hybrid-custody-explained/" class="kb-card kb-card-blog">
                         <span class="kb-card-date">Jan 5, 2025</span>
                         <h3>Hybrid Custody: Best of Both Worlds</h3>
                         <p>How our TradFi Bridge lets investors choose their custody model.</p>
@@ -415,7 +415,7 @@ stylesheets:
     <section class="cta-section">
         <h2>Can't Find What You're Looking For?</h2>
         <p>Our team is here to help with any questions.</p>
-        <a href="../company/contact.html" class="btn btn-primary">
+        <a href="/company/contact/" class="btn btn-primary">
             Contact Support
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>

@@ -105,7 +105,7 @@ stylesheets:
                         <span class="icon">✅</span>
                         <h3>Message Sent!</h3>
                         <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
-                        <a href="../index.html" class="btn btn-primary">Back to Home</a>
+                        <a href="/" class="btn btn-primary">Back to Home</a>
                     </div>
                 </div>
             </div>
@@ -136,7 +136,7 @@ stylesheets:
                         <small>Broker referral program</small>
                     </span>
                 </a>
-                <a href="../knowledge/faq.html" class="quick-link">
+                <a href="/knowledge/faq/" class="quick-link">
                     <span class="icon">❓</span>
                     <span class="text">
                         <strong>Read the FAQ</strong>
