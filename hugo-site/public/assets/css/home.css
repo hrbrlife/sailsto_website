@@ -130,6 +130,14 @@
             color: rgba(255,255,255,0.85);
         }
         
+        nav:not(.scrolled) .nav-dropdown-trigger {
+            color: rgba(255,255,255,0.85);
+        }
+        
+        nav:not(.scrolled) .nav-dropdown:hover .nav-dropdown-trigger {
+            color: #ffffff;
+        }
+        
         nav:not(.scrolled) .nav-links a:hover {
             color: #ffffff;
         }
@@ -224,6 +232,12 @@
         
         .nav-dropdown-trigger {
             cursor: pointer;
+            font-family: var(--font-ui);
+            font-size: 0.72rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--slate);
         }
         
         .nav-dropdown-trigger::after {
