@@ -9,7 +9,7 @@ stylesheets:
 
 <header class="guide-header">
         <div class="container">
-            <a href="../index.html" class="back-link">← Back to Knowledge Base</a>
+            <a href="/knowledge/" class="back-link">← Back to Knowledge Base</a>
             <span class="guide-badge">Guide</span>
             <h1 class="guide-title">Getting Started with Sails.to</h1>
             <p class="guide-meta">Complete onboarding guide for issuers, investors, and brokers</p>
@@ -52,7 +52,7 @@ stylesheets:
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h4>Create Your Issuer Account</h4>
-                        <p>Sign up at <a href="../../signup.html?type=issuer">sails.to/signup</a> and select "Issuer." Provide basic company information to start the process.</p>
+                        <p>Sign up at <a href="/signup/?type=issuer">sails.to/signup</a> and select "Issuer." Provide basic company information to start the process.</p>
                     </div>
                 </div>
                 <div class="step-card">
@@ -107,7 +107,7 @@ stylesheets:
                     <div class="step-number">1</div>
                     <div class="step-content">
                         <h4>Create Your Investor Account</h4>
-                        <p>Sign up at <a href="../../signup.html?type=investor">sails.to/signup</a> and select "Investor." Provide contact information and country of residence.</p>
+                        <p>Sign up at <a href="/signup/?type=investor">sails.to/signup</a> and select "Investor." Provide contact information and country of residence.</p>
                     </div>
                 </div>
                 <div class="step-card">
@@ -235,10 +235,10 @@ stylesheets:
                 <h2>Getting Help</h2>
                 <h3>Self-Service Resources</h3>
                 <ul>
-                    <li><a href="../faq.html">FAQ</a> — Answers to common questions</li>
-                    <li><a href="../glossary/index.html">Glossary</a> — Key terms explained</li>
-                    <li><a href="../docs/index.html">Documentation</a> — Technical guides and API reference</li>
-                    <li><a href="../blog/index.html">Blog</a> — Industry insights and updates</li>
+                    <li><a href="/knowledge/faq/">FAQ</a> — Answers to common questions</li>
+                    <li><a href="/knowledge/glossary/">Glossary</a> — Key terms explained</li>
+                    <li><a href="/knowledge/docs/">Documentation</a> — Technical guides and API reference</li>
+                    <li><a href="/knowledge/blog/">Blog</a> — Industry insights and updates</li>
                 </ul>
                 <h3>Contact Support</h3>
                 <ul>
@@ -247,12 +247,12 @@ stylesheets:
                     <li><strong>Dedicated support:</strong> Available for verified issuers and brokers</li>
                 </ul>
                 <h3>Schedule a Call</h3>
-                <p>For issuers exploring offerings or brokers considering partnership, schedule a consultation through our <a href="../../company/contact.html">contact page</a>.</p>
+                <p>For issuers exploring offerings or brokers considering partnership, schedule a consultation through our <a href="/company/contact/">contact page</a>.</p>
             </section>
             <div class="cta-box">
                 <h3>Ready to get started?</h3>
                 <p>Create your account and begin your journey with tokenized securities.</p>
-                <a href="../../signup.html" class="btn">Create Account</a>
+                <a href="/signup/" class="btn">Create Account</a>
             </div>
         </div>
     </main>

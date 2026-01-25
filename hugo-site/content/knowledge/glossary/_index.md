@@ -198,14 +198,14 @@ stylesheets:
             <div class="glossary-no-results" style="display: none;">
                 <span class="icon">🔍</span>
                 <h3>No matching terms found</h3>
-                <p>Try a different search term or <a href="../../company/contact.html">suggest a term</a> to add to our glossary.</p>
+                <p>Try a different search term or <a href="/company/contact/">suggest a term</a> to add to our glossary.</p>
             </div>
         </div>
     </section>
     <section class="cta-section">
         <h2>Ready to Put Knowledge into Action?</h2>
         <p>Start your journey with hybrid securities infrastructure.</p>
-        <a href="../../signup.html" class="btn btn-primary">
+        <a href="/signup/" class="btn btn-primary">
             Get Started
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>

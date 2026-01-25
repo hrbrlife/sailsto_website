@@ -355,7 +355,7 @@ stylesheets:
                             <li>Distribution triggers</li>
                             <li>Transaction history</li>
                         </ul>
-                        <p>API access requires authentication and is available to issuers and authorized integrators. See our <a href="docs/api-reference.html">API Documentation</a> for details.</p>
+                        <p>API access requires authentication and is available to issuers and authorized integrators. See our <a href="/knowledge/docs/api-reference/">API Documentation</a> for details.</p>
                     </div>
                 </div>
             </div>
@@ -364,7 +364,7 @@ stylesheets:
     <section class="cta-section">
         <h2>Still Have Questions?</h2>
         <p>Our team is here to help with anything not covered above.</p>
-        <a href="../company/contact.html" class="btn btn-primary">
+        <a href="/company/contact/" class="btn btn-primary">
             Contact Us
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
