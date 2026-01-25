@@ -17,11 +17,16 @@
     
     
     
+    
+    
+    
     <link rel="stylesheet" href="/assets/fonts/fonts.css">
     
     <link rel="stylesheet" href="/styles.css">
     
     <link rel="stylesheet" href="/assets/css/glossary.css">
+    
+    <link rel="stylesheet" href="/assets/css/signup.css">
     
     
     
@@ -82,130 +87,129 @@
     
     <main id="main-content">
     
-<pre><code>&lt;section class=&quot;signup-section&quot;&gt;
-    &lt;div class=&quot;signup-container&quot;&gt;
-        &lt;div class=&quot;signup-content&quot;&gt;
-            &lt;h1&gt;Start Your Journey with Hybrid Securities&lt;/h1&gt;
-            &lt;p&gt;Join the platform that bridges blockchain innovation with traditional finance infrastructure. Whether you're raising capital or seeking investment opportunities, we're here to help.&lt;/p&gt;
-            &lt;ul class=&quot;signup-benefits&quot;&gt;
-                &lt;li&gt;
-                    &lt;span class=&quot;icon&quot;&gt;💰&lt;/span&gt;
-                    &lt;div class=&quot;text&quot;&gt;
-                        &lt;h4&gt;Zero Upfront Cost&lt;/h4&gt;
-                        &lt;p&gt;Soft cap phase is fee-free. After soft cap: 1% direct, 6% via broker&lt;/p&gt;
-                    &lt;/div&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;span class=&quot;icon&quot;&gt;⚡&lt;/span&gt;
-                    &lt;div class=&quot;text&quot;&gt;
-                        &lt;h4&gt;1-2 Weeks to Launch&lt;/h4&gt;
-                        &lt;p&gt;Turnkey Wyoming DAO LLC structure included&lt;/p&gt;
-                    &lt;/div&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;span class=&quot;icon&quot;&gt;🔄&lt;/span&gt;
-                    &lt;div class=&quot;text&quot;&gt;
-                        &lt;h4&gt;Hybrid Custody&lt;/h4&gt;
-                        &lt;p&gt;Hold on Solana or convert to ISIN for bank custody&lt;/p&gt;
-                    &lt;/div&gt;
-                &lt;/li&gt;
-                &lt;li&gt;
-                    &lt;span class=&quot;icon&quot;&gt;✅&lt;/span&gt;
-                    &lt;div class=&quot;text&quot;&gt;
-                        &lt;h4&gt;Built-in Compliance&lt;/h4&gt;
-                        &lt;p&gt;KYC/AML, Reg S/Reg D, investor eligibility on-chain&lt;/p&gt;
-                    &lt;/div&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;signup-form-card&quot;&gt;
-            &lt;div id=&quot;signup-form-wrapper&quot;&gt;
-                &lt;div class=&quot;form-header&quot;&gt;
-                    &lt;h2&gt;Join the Waitlist&lt;/h2&gt;
-                    &lt;p&gt;Tell us about yourself and we'll be in touch within 24 hours&lt;/p&gt;
-                &lt;/div&gt;
-                &lt;form id=&quot;signup-form&quot; action=&quot;https://formspree.io/f/YOUR_FORM_ID&quot; method=&quot;POST&quot;&gt;
-                    &lt;div class=&quot;user-type-grid&quot;&gt;
-                        &lt;button type=&quot;button&quot; class=&quot;user-type-btn&quot; data-type=&quot;issuer&quot;&gt;
-                            &lt;span class=&quot;icon&quot;&gt;🏢&lt;/span&gt;
-                            &lt;span class=&quot;label&quot;&gt;Issuer&lt;/span&gt;
-                        &lt;/button&gt;
-                        &lt;button type=&quot;button&quot; class=&quot;user-type-btn&quot; data-type=&quot;investor&quot;&gt;
-                            &lt;span class=&quot;icon&quot;&gt;💼&lt;/span&gt;
-                            &lt;span class=&quot;label&quot;&gt;Investor&lt;/span&gt;
-                        &lt;/button&gt;
-                        &lt;button type=&quot;button&quot; class=&quot;user-type-btn&quot; data-type=&quot;broker&quot;&gt;
-                            &lt;span class=&quot;icon&quot;&gt;🤝&lt;/span&gt;
-                            &lt;span class=&quot;label&quot;&gt;Broker&lt;/span&gt;
-                        &lt;/button&gt;
-                        &lt;button type=&quot;button&quot; class=&quot;user-type-btn&quot; data-type=&quot;institution&quot;&gt;
-                            &lt;span class=&quot;icon&quot;&gt;🏛️&lt;/span&gt;
-                            &lt;span class=&quot;label&quot;&gt;Institution&lt;/span&gt;
-                        &lt;/button&gt;
-                    &lt;/div&gt;
-                    &lt;input type=&quot;hidden&quot; name=&quot;user_type&quot; id=&quot;user-type-input&quot; value=&quot;&quot;&gt;
-                    &lt;div class=&quot;form-row&quot;&gt;
-                        &lt;div class=&quot;form-group&quot;&gt;
-                            &lt;label for=&quot;first-name&quot;&gt;First Name *&lt;/label&gt;
-                            &lt;input type=&quot;text&quot; id=&quot;first-name&quot; name=&quot;first_name&quot; required&gt;
-                        &lt;/div&gt;
-                        &lt;div class=&quot;form-group&quot;&gt;
-                            &lt;label for=&quot;last-name&quot;&gt;Last Name *&lt;/label&gt;
-                            &lt;input type=&quot;text&quot; id=&quot;last-name&quot; name=&quot;last_name&quot; required&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;form-group&quot;&gt;
-                        &lt;label for=&quot;email&quot;&gt;Email Address *&lt;/label&gt;
-                        &lt;input type=&quot;email&quot; id=&quot;email&quot; name=&quot;email&quot; required&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;form-group&quot;&gt;
-                        &lt;label for=&quot;company&quot;&gt;Company / Organization&lt;/label&gt;
-                        &lt;input type=&quot;text&quot; id=&quot;company&quot; name=&quot;company&quot;&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;form-group&quot;&gt;
-                        &lt;label for=&quot;country&quot;&gt;Country *&lt;/label&gt;
-                        &lt;select id=&quot;country&quot; name=&quot;country&quot; required&gt;
-                            &lt;option value=&quot;&quot;&gt;Select your country&lt;/option&gt;
-                            &lt;option value=&quot;US&quot;&gt;United States&lt;/option&gt;
-                            &lt;option value=&quot;GB&quot;&gt;United Kingdom&lt;/option&gt;
-                            &lt;option value=&quot;DE&quot;&gt;Germany&lt;/option&gt;
-                            &lt;option value=&quot;FR&quot;&gt;France&lt;/option&gt;
-                            &lt;option value=&quot;CH&quot;&gt;Switzerland&lt;/option&gt;
-                            &lt;option value=&quot;SG&quot;&gt;Singapore&lt;/option&gt;
-                            &lt;option value=&quot;HK&quot;&gt;Hong Kong&lt;/option&gt;
-                            &lt;option value=&quot;AE&quot;&gt;United Arab Emirates&lt;/option&gt;
-                            &lt;option value=&quot;LU&quot;&gt;Luxembourg&lt;/option&gt;
-                            &lt;option value=&quot;OTHER&quot;&gt;Other&lt;/option&gt;
-                        &lt;/select&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;form-group&quot;&gt;
-                        &lt;label for=&quot;interest&quot;&gt;Tell us about your interest&lt;/label&gt;
-                        &lt;textarea id=&quot;interest&quot; name=&quot;interest&quot; placeholder=&quot;What brings you to Sails.to? What are you looking to achieve?&quot;&gt;&lt;/textarea&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;form-checkbox&quot;&gt;
-                        &lt;input type=&quot;checkbox&quot; id=&quot;professional&quot; name=&quot;professional_investor&quot; required&gt;
-                        &lt;label for=&quot;professional&quot;&gt;I confirm that I am a &lt;span class=&quot;glossary-term&quot; data-term=&quot;professional-investor&quot;&gt;professional&lt;/span&gt; or &lt;span class=&quot;glossary-term&quot; data-term=&quot;accredited-investor&quot;&gt;accredited investor&lt;/span&gt;, or I am inquiring on behalf of a professional entity. *&lt;/label&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;form-checkbox&quot;&gt;
-                        &lt;input type=&quot;checkbox&quot; id=&quot;terms&quot; name=&quot;agree_terms&quot; required&gt;
-                        &lt;label for=&quot;terms&quot;&gt;I agree to the &lt;a href=&quot;/company/legal/&quot;&gt;Terms of Service&lt;/a&gt; and &lt;a href=&quot;/company/legal/#privacy&quot;&gt;Privacy Policy&lt;/a&gt;. *&lt;/label&gt;
-                    &lt;/div&gt;
-                    &lt;button type=&quot;submit&quot; class=&quot;form-submit&quot;&gt;Submit Application&lt;/button&gt;
-                &lt;/form&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;form-success&quot; id=&quot;form-success&quot;&gt;
-                &lt;span class=&quot;icon&quot;&gt;✅&lt;/span&gt;
-                &lt;h3&gt;Thank You!&lt;/h3&gt;
-                &lt;p&gt;Your application has been received. A member of our team will be in touch within 24 hours.&lt;/p&gt;
-                &lt;div class=&quot;social-links&quot;&gt;
-                    &lt;a href=&quot;https://t.me/sailsto&quot; class=&quot;social-link&quot; target=&quot;_blank&quot;&gt;Join Telegram&lt;/a&gt;
-                    &lt;a href=&quot;https://linkedin.com/company/sailsto&quot; class=&quot;social-link&quot; target=&quot;_blank&quot;&gt;Follow LinkedIn&lt;/a&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/section&gt;
-</code></pre>
+<section class="signup-section">
+    <div class="signup-container">
+        <div class="signup-content">
+            <h1>Start Your Journey with Hybrid Securities</h1>
+            <p>Join the platform that bridges blockchain innovation with traditional finance infrastructure. Whether you're raising capital or seeking investment opportunities, we're here to help.</p>
+            <ul class="signup-benefits">
+                <li>
+                    <span class="icon">💰</span>
+                    <div class="text">
+                        <h4>Zero Upfront Cost</h4>
+                        <p>Soft cap phase is fee-free. After soft cap: 1% direct, 6% via broker</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">⚡</span>
+                    <div class="text">
+                        <h4>1-2 Weeks to Launch</h4>
+                        <p>Turnkey Wyoming DAO LLC structure included</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">🔄</span>
+                    <div class="text">
+                        <h4>Hybrid Custody</h4>
+                        <p>Hold on Solana or convert to ISIN for bank custody</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon">✅</span>
+                    <div class="text">
+                        <h4>Built-in Compliance</h4>
+                        <p>KYC/AML, Reg S/Reg D, investor eligibility on-chain</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="signup-form-card">
+            <div id="signup-form-wrapper">
+                <div class="form-header">
+                    <h2>Join the Waitlist</h2>
+                    <p>Tell us about yourself and we'll be in touch within 24 hours</p>
+                </div>
+                <form id="signup-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+                    <div class="user-type-grid">
+                        <button type="button" class="user-type-btn" data-type="issuer">
+                            <span class="icon">🏢</span>
+                            <span class="label">Issuer</span>
+                        </button>
+                        <button type="button" class="user-type-btn" data-type="investor">
+                            <span class="icon">💼</span>
+                            <span class="label">Investor</span>
+                        </button>
+                        <button type="button" class="user-type-btn" data-type="broker">
+                            <span class="icon">🤝</span>
+                            <span class="label">Broker</span>
+                        </button>
+                        <button type="button" class="user-type-btn" data-type="institution">
+                            <span class="icon">🏛️</span>
+                            <span class="label">Institution</span>
+                        </button>
+                    </div>
+                    <input type="hidden" name="user_type" id="user-type-input" value="">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name *</label>
+                            <input type="text" id="first-name" name="first_name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name *</label>
+                            <input type="text" id="last-name" name="last_name" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="company">Company / Organization</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country *</label>
+                        <select id="country" name="country" required>
+                            <option value="">Select your country</option>
+                            <option value="US">United States</option>
+                            <option value="GB">United Kingdom</option>
+                            <option value="DE">Germany</option>
+                            <option value="FR">France</option>
+                            <option value="CH">Switzerland</option>
+                            <option value="SG">Singapore</option>
+                            <option value="HK">Hong Kong</option>
+                            <option value="AE">United Arab Emirates</option>
+                            <option value="LU">Luxembourg</option>
+                            <option value="OTHER">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">Tell us about your interest</label>
+                        <textarea id="interest" name="interest" placeholder="What brings you to Sails.to? What are you looking to achieve?"></textarea>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="professional" name="professional_investor" required>
+                        <label for="professional">I confirm that I am a <span class="glossary-term" data-term="professional-investor">professional</span> or <span class="glossary-term" data-term="accredited-investor">accredited investor</span>, or I am inquiring on behalf of a professional entity. *</label>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" id="terms" name="agree_terms" required>
+                        <label for="terms">I agree to the <a href="/company/legal/">Terms of Service</a> and <a href="/company/legal/#privacy">Privacy Policy</a>. *</label>
+                    </div>
+                    <button type="submit" class="form-submit">Submit Application</button>
+                </form>
+            </div>
+            <div class="form-success" id="form-success">
+                <span class="icon">✅</span>
+                <h3>Thank You!</h3>
+                <p>Your application has been received. A member of our team will be in touch within 24 hours.</p>
+                <div class="social-links">
+                    <a href="https://t.me/sailsto" class="social-link" target="_blank">Join Telegram</a>
+                    <a href="https://linkedin.com/company/sailsto" class="social-link" target="_blank">Follow LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 
     </main>
@@ -254,8 +258,10 @@
     
     
     <script src="/js/nav.js" defer></script>
+    <script src="/assets/js/glossary.js" defer></script>
     
-
-
+    <script src="/js/signup.js" defer></script>
+    
+    
 </body>
 </html>

@@ -6,7 +6,8 @@ Automated UX testing with Playwright screenshot capture and AI-powered review.
 
 - 🖥️ **Multi-viewport testing**: Desktop (1920x1080), Tablet (768x1024), Mobile (375x812)
 - 📸 **Automatic screenshots**: Captures at top, 25%, 50%, 75%, and bottom of each page
-- 🤖 **AI-powered review**: Analyzes screenshots for UX issues (requires OpenAI API key)
+- 🤖 **AI-powered review**: Analyzes screenshots for UX issues using vision models
+- 🔄 **Site comparison**: Compare pre-Hugo (drafts) vs Hugo-built site page-by-page
 - 📊 **Local analysis**: Falls back to image analysis when no API key is provided
 - 📝 **HTML reports**: Beautiful, interactive reports with all findings
 - ⚡ **Performance metrics**: Load times, First Paint, FCP for each page
@@ -28,8 +29,12 @@ npm run full-audit
 
 # Or run steps individually:
 npm run test      # Crawl and capture screenshots
+npm run collages  # Generate collage images
 npm run review    # Analyze with AI agent
 npm run report    # Generate HTML report
+
+# Compare original vs Hugo site (NEW!)
+npm run compare   # Side-by-side comparison with AI analysis
 ```
 
 ## Scripts
@@ -39,17 +44,64 @@ npm run report    # Generate HTML report
 | `npm run test` | Crawl site and capture screenshots (all viewports) |
 | `npm run test:desktop` | Capture desktop viewport only |
 | `npm run test:mobile` | Capture mobile viewport only |
+| `npm run collages` | Generate collage images for AI review |
 | `npm run review` | Run AI agent review on screenshots |
 | `npm run report` | Generate HTML report |
-| `npm run full-audit` | Run test + review |
+| `npm run full-audit` | Run complete test + collages + review + report |
+| `npm run compare` | **NEW**: Compare original vs Hugo site (standard model) |
+| `npm run compare:free` | Compare using free tier model (gemma-3-27b) |
+| `npm run compare:standard` | Compare using standard model (gemini-2.0-flash) |
+| `npm run compare:premium` | Compare using premium model (claude-3.5-sonnet) |
+
+## Site Comparison Tool (NEW!)
+
+The comparison tool captures both the original (drafts) site and the Hugo-built site, creates side-by-side screenshots, and uses AI vision models to identify:
+
+- **Content differences**: Missing text, changed wording, missing sections
+- **Visual differences**: Font, color, spacing, styling changes  
+- **Layout differences**: Grid changes, alignment, ordering
+- **Missing elements**: Icons, images, navigation items
+- **Broken elements**: Raw HTML showing as text, broken images
+
+### Model Tiers
+
+| Tier | Model | Best For |
+|------|-------|----------|
+| `free` | google/gemma-3-27b-it:free | Quick checks, budget conscious |
+| `standard` | google/gemini-2.0-flash-exp:free | Good balance of quality/cost |
+| `premium` | anthropic/claude-3.5-sonnet | Detailed analysis, critical reviews |
+
+### Running Comparison
+
+```bash
+# Default (standard tier)
+npm run compare
+
+# Use free model
+npm run compare:free
+
+# Use premium model (requires API credits)
+MODEL_TIER=premium npm run compare
+```
+
+### Output
+
+- `screenshots/comparison/original/` - Screenshots of original site
+- `screenshots/comparison/hugo/` - Screenshots of Hugo site
+- `screenshots/comparison/side-by-side/` - Side-by-side comparisons
+- `screenshots/reports/comparison-results.json` - Raw analysis data
+- `screenshots/reports/comparison-report.html` - Visual HTML report
 
 ## Configuration
 
 ### Environment Variables
 
 ```bash
-# Optional: Enable AI-powered analysis (GPT-4 Vision)
-export OPENAI_API_KEY=your-api-key
+# OpenRouter API key for AI analysis
+export OPENROUTER_API_KEY=your-api-key
+
+# Model tier selection (free, standard, premium)
+export MODEL_TIER=standard
 
 # Optional: Custom base URL (default: http://localhost:1313)
 export BASE_URL=http://localhost:1313

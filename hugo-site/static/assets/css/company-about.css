@@ -1,0 +1,258 @@
+/* Styles for company/about.html */
+
+
+        /* Team styles */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        
+        .team-grid-full {
+            max-width: 1200px;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        
+        .team-card {
+            text-align: center;
+        }
+        
+        .team-photo {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--cream);
+        }
+        
+        .team-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 4px;
+        }
+        
+        .team-role {
+            font-family: var(--font-ui);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 8px;
+        }
+        
+        .team-location {
+            font-family: var(--font-ui);
+            font-size: 0.75rem;
+            color: var(--slate);
+            display: block;
+            margin-bottom: 16px;
+        }
+        
+        .team-card p {
+            font-size: 0.9rem;
+            color: var(--slate);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        
+        .team-links {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+        }
+        
+        .team-links a {
+            font-family: var(--font-ui);
+            font-size: 0.7rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink);
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .team-links a:hover {
+            background: var(--ink);
+            border-color: var(--ink);
+            color: var(--ivory);
+        }
+        
+        /* Partner styles */
+        .partner-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        
+        .partner-card {
+            text-align: center;
+            padding: 32px 24px;
+            background: var(--ivory);
+            border: 1px solid rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .partner-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+        
+        .partner-icon {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 16px;
+        }
+        
+        .partner-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 8px;
+        }
+        
+        .partner-card p {
+            font-size: 0.85rem;
+            color: var(--slate);
+            line-height: 1.5;
+        }
+        
+        /* Approach diagram */
+        .approach-diagram {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .approach-box {
+            background: var(--ivory);
+            border: 1px solid rgba(0,0,0,0.1);
+            padding: 24px;
+        }
+        
+        .approach-box .label {
+            font-family: var(--font-ui);
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 12px;
+        }
+        
+        .approach-box .items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        
+        .approach-box .items span {
+            font-size: 0.8rem;
+            padding: 6px 12px;
+            background: var(--cream);
+            color: var(--ink);
+        }
+        
+        .approach-bridge {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            padding: 16px;
+            background: var(--ink);
+            color: var(--ivory);
+        }
+        
+        .approach-bridge span:first-child {
+            font-size: 1.5rem;
+        }
+        
+        .approach-bridge span:last-child {
+            font-family: var(--font-ui);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+        }
+        
+        @media (max-width: 1024px) {
+            .partner-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .team-grid-full {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .advisor-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .partner-grid {
+                grid-template-columns: 1fr;
+            }
+            .team-grid-full {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+            }
+        }
+        
+        /* Advisor styles */
+        .advisor-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .advisor-card {
+            padding: 32px;
+            background: var(--ivory);
+            border: 1px solid rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+        
+        .advisor-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+        
+        .advisor-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 4px;
+        }
+        
+        .advisor-org {
+            font-family: var(--font-ui);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            display: block;
+            margin-bottom: 16px;
+        }
+        
+        .advisor-card p {
+            font-size: 0.85rem;
+            color: var(--slate);
+            line-height: 1.7;
+        }
+    

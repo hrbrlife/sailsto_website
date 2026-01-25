@@ -1,0 +1,133 @@
+/* Styles for brokers.html */
+
+
+                .calc-card {
+                    background: white;
+                    padding: 40px;
+                    border: 1px solid rgba(0,0,0,0.08);
+                    max-width: 900px;
+                    margin: 0 auto;
+                }
+                .calc-card h2 {
+                    font-family: var(--font-display);
+                    font-size: 1.8rem;
+                    color: var(--ink);
+                    margin-bottom: 8px;
+                }
+                .calc-card .intro {
+                    color: var(--slate);
+                    margin-bottom: 32px;
+                }
+                .calc-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 48px;
+                }
+                @media (max-width: 768px) {
+                    .calc-grid { grid-template-columns: 1fr; }
+                }
+                .calc-inputs {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                }
+                .input-group {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                }
+                .input-group label {
+                    font-size: 0.75rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 0.08em;
+                    color: var(--ink);
+                }
+                .input-group input {
+                    padding: 12px 16px;
+                    border: 1px solid rgba(0,0,0,0.12);
+                    font-size: 1rem;
+                    color: var(--ink);
+                }
+                .input-group input:focus {
+                    outline: none;
+                    border-color: var(--gold);
+                }
+                .input-hint {
+                    font-size: 0.8rem;
+                    color: var(--silver);
+                }
+                .calc-results {
+                    background: var(--cream);
+                    padding: 24px;
+                }
+                .result-section {
+                    margin-bottom: 24px;
+                    padding-bottom: 24px;
+                    border-bottom: 1px solid rgba(0,0,0,0.08);
+                }
+                .result-section:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border-bottom: none;
+                }
+                .result-section h4 {
+                    font-size: 0.7rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                    color: var(--slate);
+                    margin-bottom: 12px;
+                }
+                .result-row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 8px 0;
+                    font-size: 0.95rem;
+                }
+                .result-row .label {
+                    color: var(--ink);
+                }
+                .result-row .value {
+                    font-weight: 600;
+                    color: var(--ink);
+                }
+                .result-row.sub {
+                    padding-left: 16px;
+                    font-size: 0.85rem;
+                    color: var(--slate);
+                }
+                .result-row.sub .value {
+                    font-weight: 500;
+                    color: var(--slate);
+                }
+                .result-total {
+                    background: var(--ink);
+                    color: white;
+                    padding: 16px;
+                    margin: -24px;
+                    margin-top: 24px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+                .result-total .label {
+                    font-weight: 600;
+                }
+                .result-total .value {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: var(--gold);
+                }
+                .assumptions {
+                    margin-top: 24px;
+                    padding: 16px;
+                    background: rgba(201,162,39,0.08);
+                    font-size: 0.8rem;
+                    color: var(--slate);
+                }
+                .assumptions strong {
+                    color: var(--ink);
+                }
+            
