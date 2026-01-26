@@ -1,6 +1,20 @@
 ---
 title: "Sails.to"
 description: "Hybrid securities infrastructure bridging DeFi innovation with TradFi trust. Issue, manage and trade security tokens that work across Solana and traditional custody."
+keywords:
+  - security tokens
+  - tokenization
+  - Solana
+  - ISIN
+  - Clearstream
+  - private capital
+  - Wyoming DAO
+  - Reg D
+  - Reg S
+  - hybrid securities
+  - DeFi
+  - TradFi
+ogImage: "/og-image.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/assets/css/home.css"

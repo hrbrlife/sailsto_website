@@ -1,6 +1,18 @@
 ---
 title: "For Issuers"
 description: "Launch tokenized securities with compliant infrastructure. Wyoming DAO Series LLC structure, global distribution, 0.5% direct placement fee."
+keywords:
+  - raise capital
+  - tokenized securities
+  - Wyoming DAO
+  - Reg D
+  - Reg S
+  - security token offering
+  - STO
+  - private placement
+  - broker network
+  - ISIN
+ogImage: "/og-issuers.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

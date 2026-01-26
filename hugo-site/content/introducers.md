@@ -1,6 +1,14 @@
 ---
 title: "For Business Introducers"
 description: "Earn 25% of Sails.to commission by introducing businesses to our platform. No capital required, no ongoing obligations."
+keywords:
+  - business introducer
+  - referral program
+  - commission
+  - partnership
+  - affiliate program
+  - tokenization referral
+ogImage: "/og-introducers.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

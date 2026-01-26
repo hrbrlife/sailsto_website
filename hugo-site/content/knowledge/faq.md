@@ -1,6 +1,13 @@
 ---
 title: "FAQ"
 description: "Frequently asked questions about Sails.to tokenized securities platform. Learn about tokenization, compliance, costs, timelines, and how to get started."
+keywords:
+  - tokenization FAQ
+  - security token questions
+  - compliance questions
+  - how to tokenize
+  - tokenization costs
+ogImage: "/og-faq.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

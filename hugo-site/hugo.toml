@@ -5,11 +5,19 @@ title = 'Sails.to | Hybrid Securities Infrastructure'
 [params]
   description = "Hybrid securities infrastructure bridging DeFi innovation with TradFi trust"
   author = "Sails.to DAO LLC"
+  ogImage = "/og-image.png"
+  twitterHandle = "@sailsto"
+  siteName = "Sails.to"
 
 [outputs]
-  home = ["HTML"]
-  section = ["HTML"]
+  home = ["HTML", "RSS", "SITEMAP"]
+  section = ["HTML", "RSS"]
   page = ["HTML"]
+
+[sitemap]
+  changefreq = "weekly"
+  filename = "sitemap.xml"
+  priority = 0.5
 
 [markup]
   [markup.goldmark]

@@ -1,6 +1,13 @@
 ---
 title: "Legal"
 description: "Legal information, terms of service, privacy policy, and regulatory disclosures for Sails.to hybrid securities platform."
+keywords:
+  - terms of service
+  - privacy policy
+  - legal disclosures
+  - regulatory compliance
+  - securities law
+ogImage: "/og-legal.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

@@ -1,6 +1,16 @@
 ---
 title: "For Investors"
 description: "Access institutional-grade tokenized securities. Self-custody on Solana or traditional custody via Clearstream. $150K minimum."
+keywords:
+  - professional investors
+  - accredited investor
+  - security tokens
+  - tokenized securities
+  - custody
+  - compliance
+  - private placement
+  - alternative investments
+ogImage: "/og-investors.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

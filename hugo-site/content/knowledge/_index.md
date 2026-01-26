@@ -1,6 +1,14 @@
 ---
 title: "Knowledge Base"
 description: "Learn everything about tokenized securities, compliance, blockchain infrastructure, and traditional finance integration. Guides, documentation, FAQ, and glossary."
+keywords:
+  - tokenization guide
+  - security token education
+  - blockchain securities
+  - compliance guide
+  - DeFi TradFi
+  - knowledge base
+ogImage: "/og-knowledge.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

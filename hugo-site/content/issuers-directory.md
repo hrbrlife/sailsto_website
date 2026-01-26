@@ -1,6 +1,14 @@
 ---
 title: "Active Issuers"
 description: "Browse active securities offerings on Sails.to. Filter by structure and trust indicators."
+keywords:
+  - active offerings
+  - tokenized bonds
+  - security tokens
+  - investment opportunities
+  - verified issuers
+  - trust indicators
+ogImage: "/og-platform.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
