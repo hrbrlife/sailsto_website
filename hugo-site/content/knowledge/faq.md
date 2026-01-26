@@ -8,6 +8,20 @@ keywords:
   - how to tokenize
   - tokenization costs
 ogImage: "/og-faq.png"
+faqSchema: true
+faqItems:
+  - question: "What is Sails.to?"
+    answer: "Sails.to is a hybrid securities infrastructure platform that bridges blockchain technology with traditional finance. We enable businesses to issue compliant security tokens that can be held natively on the Solana blockchain or converted to traditional securities with an ISIN for custody at institutions like Clearstream."
+  - question: "How much does it cost to launch a token?"
+    answer: "Zero upfront cost. We operate on a success-based fee model. Direct investors pay 1% distribution fee, broker-introduced investors pay 6% (includes broker commission). Secondary trades incur 0.5% fee. If soft cap fails, investors get full refund."
+  - question: "How long does it take to launch?"
+    answer: "1-2 weeks from initial onboarding to token deployment. This includes issuer KYC verification, legal structure setup, token configuration, smart contract deployment, and investor portal setup."
+  - question: "Who can invest on Sails.to?"
+    answer: "Offerings are available to accredited investors (U.S.) and professional investors (international) only. Requirements include net worth over $1M, annual income over $200K, professional certifications, or institutional status."
+  - question: "How do I custody my tokens?"
+    answer: "Two options: Self-custody on Solana using any compatible wallet (Phantom, Solflare, Ledger), or traditional custody via ISIN at Clearstream accessible through your bank. You can switch between formats anytime."
+  - question: "What legal structure do you provide?"
+    answer: "We create a Wyoming DAO LLC with Series LLC architecture. Each offering exists as an isolated series with its own assets, liabilities, and investors, providing liability protection while maintaining operational efficiency."
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

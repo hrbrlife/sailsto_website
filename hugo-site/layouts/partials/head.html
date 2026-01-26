@@ -135,6 +135,29 @@
     </script>
     {{ end }}
     
+    <!-- FAQ Schema (for pages with faqSchema: true) -->
+    {{ if .Params.faqSchema }}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {{ range $i, $faq := .Params.faqItems }}
+            {{ if $i }},{{ end }}
+            {
+                "@type": "Question",
+                "name": "{{ $faq.question }}",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "{{ $faq.answer }}"
+                }
+            }
+            {{ end }}
+        ]
+    }
+    </script>
+    {{ end }}
+    
     <!-- Head scripts (loaded synchronously before body) -->
     {{ range .Params.headScripts }}
     <script src="{{ . }}"></script>
