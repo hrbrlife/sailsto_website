@@ -1,6 +1,15 @@
 ---
 title: "For Regulated Institutions"
 description: "Wyoming DAO LLC legal structure, Reg D/Reg S compliance, full KYC/AML verification, Clearstream custody integration."
+keywords:
+  - regulated institutions
+  - institutional custody
+  - Clearstream
+  - ISIN
+  - compliance
+  - KYC AML
+  - institutional investors
+ogImage: "/og-institutions.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

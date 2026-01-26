@@ -1,6 +1,13 @@
 ---
 title: "Contact Us"
 description: "Get in touch with the Sails.to team. For issuers, investors, brokers, or general inquiries about our hybrid securities platform."
+keywords:
+  - contact sails.to
+  - get in touch
+  - support
+  - inquiries
+  - tokenization questions
+ogImage: "/og-contact.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

@@ -1,6 +1,15 @@
 ---
 title: "Get Started"
 description: "Join the Sails.to platform. Whether you're an issuer, investor, broker, or institution, start your journey with compliant tokenized securities."
+keywords:
+  - sign up
+  - get started
+  - register
+  - tokenized securities
+  - issuer registration
+  - investor onboarding
+  - broker application
+ogImage: "/og-signup.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

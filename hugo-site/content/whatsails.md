@@ -1,6 +1,17 @@
 ---
 title: "How It Works"
 description: "Understand how Sails.to works: Wyoming DAO LLC structure, tokenized securities, OTC trading, ISIN conversion, smart contracts, and Melusina OS infrastructure."
+keywords:
+  - how it works
+  - Wyoming DAO
+  - tokenized securities
+  - OTC trading
+  - ISIN conversion
+  - smart contracts
+  - Solana
+  - Clearstream
+  - Melusina OS
+ogImage: "/og-how-it-works.png"
 headScripts:
   - "/assets/js/mermaid.min.js"
 stylesheets:

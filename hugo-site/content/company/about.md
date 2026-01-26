@@ -1,6 +1,14 @@
 ---
 title: "About Us"
 description: "Learn about Sails.to — the team building hybrid securities infrastructure that bridges blockchain innovation with traditional finance. Founded to democratize capital markets."
+keywords:
+  - about sails.to
+  - hybrid securities
+  - blockchain finance
+  - capital markets
+  - tokenization company
+  - fintech startup
+ogImage: "/og-about.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

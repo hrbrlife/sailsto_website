@@ -1,6 +1,14 @@
 ---
 title: "Pricing"
 description: "Transparent pricing calculator. Understand your costs based on investor sourcing and offering size."
+keywords:
+  - tokenization pricing
+  - security token costs
+  - capital raising fees
+  - success-based pricing
+  - no upfront fees
+  - STO pricing
+ogImage: "/og-pricing.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

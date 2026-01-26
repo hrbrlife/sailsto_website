@@ -1,6 +1,15 @@
 ---
 title: "For Brokers"
 description: "Expand your product offering with tokenized securities. 6% placement fee, secondary trading commissions, white-label capabilities."
+keywords:
+  - broker network
+  - securities distribution
+  - OTC settlement
+  - tokenized securities
+  - commission sharing
+  - broker-dealer
+  - securities trading
+ogImage: "/og-brokers.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
