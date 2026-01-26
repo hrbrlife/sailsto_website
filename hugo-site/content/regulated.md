@@ -18,8 +18,8 @@ stylesheets:
 
 <section class="page-hero" style="background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0a 100%);">
     <span class="section-label">For Trust Companies, VCs & Multi-Family Offices</span>
-    <h1 class="section-title">Your infrastructure.<br>Your rules</h1>
-    <p class="section-desc">White-label the entire platform and take ultimate control. You decide which issuers launch, which trustees oversee, which brokers participate. Full sovereignty over your securities ecosystem. For regulated entities only.</p>
+    <h1 class="section-title">Full platform sovereignty.<br>Your regulatory wrapper.</h1>
+    <p class="section-desc">Deploy a complete securities infrastructure under your brand: issuance, compliance, trading, custody bridge. You approve every issuer, authorize every trustee, control every broker relationship. We're the invisible technology layer. You're the platform operator.</p>
 </section>
 <section class="detail-section">
     <div class="detail-container">

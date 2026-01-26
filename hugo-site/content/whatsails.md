@@ -336,7 +336,7 @@ scripts:
             subgraph Series[Separate Series Within Your LLC]
                 S1[💼 Series A: Operating<br/>Pledges, Revenue, Assets]
                 S2[💰 Series B: Treasury<br/>Reserves, Distributions]
-                S3[🔒 Series C: ISIN Lockbox<br/>Solana ↔ ISIN-Bearing Conversion]
+                S3[🔒 Series C: TradFi Bridge<br/>Solana ↔ ISIN Conversion]
                 S4[📄 Series D: Future Offerings]
             end
             DAO --> S1
@@ -375,15 +375,15 @@ scripts:
                     <td>Trust oversight</td>
                 </tr>
                 <tr>
-                    <td><strong>ISIN Lockbox Series</strong></td>
-                    <td>Self-custody for Solana token ↔ ISIN-identified security conversion (see <a href="#conversion">Section 5</a>)</td>
+                    <td><strong>TradFi Bridge Series</strong></td>
+                    <td>Handles Solana token ↔ ISIN-identified security conversion. Any token holder can request conversion for 1.5% of nominal value. (see <a href="#conversion">Section 5</a>)</td>
                     <td>Issuer + Trust oversight</td>
                 </tr>
             </tbody>
         </table>
         <div class="concept-box">
             <h4>Optional Level-Ups for Traditional Infrastructure</h4>
-            <p><strong>ISIN + Clearstream Registration</strong>: An ISIN is a security identifier, not a security itself. When required, issuers can register an ISIN and enable settlement via Clearstream (at cost, approximately <strong>&lt;$4k</strong>). The ISIN Lockbox handles the 1:1 relationship between on-chain tokens and traditional holdings.</p>
+            <p><strong>ISIN + Clearstream Registration</strong>: An ISIN is a security identifier, not a security itself. When required, issuers can register an ISIN and enable settlement via Clearstream (at cost, approximately <strong>&lt;$4k</strong>). The TradFi Bridge handles the 1:1 relationship between on-chain tokens and traditional holdings.</p>
             <p><strong>ViennaMTF Public Listing</strong>: If you require your securities to be publicly listed on an exchange, ViennaMTF registration is available (at cost, approximately <strong>&lt;$3k</strong>).</p>
             <p><em>Sails.to supports the workflow and required data for these optional services; registration is completed through the appropriate traditional infrastructure partners.</em></p>
         </div>
@@ -456,7 +456,7 @@ scripts:
             TREASURY -->|wrapped for<br/>traditional rails| CH3[🌐 Channel 3<br/>ISIN / Clearstream]
             CH1 -->|on-chain| INV1[Partners &<br/>Co-investors]
             CH2 -->|on-chain| INV2[KYC'd Professional<br/>Investors]
-            CH3 -->|locked| WRAP[ISIN Lockbox]
+            CH3 -->|locked| WRAP[TradFi Bridge]
             WRAP -->|1:1 wrapped| ISIN[ISIN-Identified Security<br/>via Clearstream]
             ISIN -->|distributed by| BANK[Paying Agent Bank]
             BANK -->|Clearstream| INV3[Traditional<br/>Investors]
@@ -507,8 +507,8 @@ scripts:
             <h4>How Channel 3 Works</h4>
             <p>Some investors only work with traditional securities infrastructure. Channel 3 bridges that gap:</p>
             <ol>
-                <li>You lock tokens in your <strong>ISIN Lockbox Series</strong></li>
-                <li>Tokens are wrapped 1:1 into ISIN-bearing securities (you self-register the ISIN)</li>
+                <li>You lock tokens in your <strong>TradFi Bridge Series</strong></li>
+                <li>Tokens are wrapped 1:1 into ISIN-identified securities (you self-register the ISIN)</li>
                 <li>Your <strong>paying agent bank</strong> distributes them via Clearstream</li>
             </ol>
             <p>The same investment, accessible through traditional finance rails, under your control.</p>
@@ -808,13 +808,13 @@ scripts:
 <section class="content-section" id="conversion">
     <div class="content-container">
         <h2>5. Converting Between Blockchain & Traditional Finance</h2>
-        <p>The same security can exist in two forms: a <strong>Solana token</strong> or an <strong>ISIN-identified security held via Clearstream</strong>. The ISIN Lockbox Series handles the conversion.</p>
+        <p>The same security can exist in two forms: a <strong>Solana token</strong> or an <strong>ISIN-identified security held via Clearstream</strong>. The TradFi Bridge Series handles the conversion. Any Solana token holder can request conversion for 1.5% of nominal value.</p>
         <div class="mermaid">
         flowchart LR
             subgraph Solana
                 ST["🪙 Security Token<br/>on Solana"]
             end
-            subgraph IssuerLLC["ISIN Lockbox Series"]
+            subgraph IssuerLLC["TradFi Bridge Series"]
                 LOCK["🔒 Tokens locked<br/>1:1 backing"]
             end
             subgraph Clearstream
@@ -826,9 +826,11 @@ scripts:
             LOCK -->|Release tokens| ST
         </div>
         <div class="concept-box">
-            <h4>Issuer Controls Conversion</h4>
-            <p>The ISIN Lockbox is a Series within the DAO LLC. The issuer (with Trust oversight) controls the conversion. When tokens are locked, ISIN-identified securities are issued via Clearstream. When those securities are redeemed, tokens are released. Always 1:1.</p>
+            <h4>Who Can Convert</h4>
+            <p>The TradFi Bridge is a Series within the DAO LLC. <strong>Any Solana token holder can request conversion for 1.5% of nominal value.</strong> During initial placement, the issuer typically handles conversions to distribute via Channel 3. After the offering closes, any eligible holder may initiate conversion in either direction.</p>
+            <p>When tokens are locked, ISIN-identified securities are issued via Clearstream. When those securities are redeemed, tokens are released. Always 1:1.</p>
             <p><strong>No third-party crypto custodian required for the on-chain token.</strong> The issuer controls custody via its own legal structure.</p>
+            <p><em>Note: If conversion fees occur during soft cap phase and soft cap is not reached, fees will be rebilled at actual cost + 20%.</em></p>
         </div>
         <div class="concept-box">
             <h4>The Single Source of Truth</h4>
@@ -897,7 +899,7 @@ scripts:
                 <tr>
                     <td style="padding-left: 30px;">→ General Distribution Investors</td>
                     <td><span class="fee-highlight">6%</span></td>
-                    <td>Investors not sourced through issuer's direct referral network</td>
+                    <td>Investors who find the offering organically—existing platform users, word-of-mouth, or general notoriety (not via issuer's referral code or broker placement)</td>
                     <td>Issuer (from proceeds)</td>
                     <td>Brokers + Sails.to</td>
                 </tr>
@@ -1067,7 +1069,7 @@ scripts:
         <div class="mermaid">
         flowchart TB
             subgraph Layer1["Issuer Legal Structure"]
-                LLC["🏢 Issuer DAO Series LLC<br/>Operating · Treasury · ISIN Lockbox"]
+                LLC["🏢 Issuer DAO Series LLC<br/>Operating · Treasury · TradFi Bridge"]
             end
             subgraph Layer2["Service Providers"]
                 TRUST["🔐 Operational Trust<br/>Escrow & Distributions"]

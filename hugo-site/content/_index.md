@@ -1,12 +1,12 @@
 ---
 title: "Sails.to"
-description: "Hybrid securities infrastructure bridging DeFi innovation with TradFi trust. Issue, manage and trade security tokens that work across Solana and traditional custody."
+description: "A sovereign capital-raising and trading platform for established businesses. Self-hosted compliance, global investor access, and total flexibility across blockchain and traditional finance."
 keywords:
+  - capital raising
   - security tokens
   - tokenization
   - Solana
-  - ISIN
-  - Clearstream
+  - private placement
   - private capital
   - Wyoming DAO
   - Reg D
@@ -33,21 +33,18 @@ scripts:
             <span class="line"><span class="line-inner">Raise your sails</span></span>
         </h1>
         <p class="hero-tagline">to go beyond with securities that cross the line.</p>
-        <p class="hero-subline" style="font-size: 1rem; opacity: 0.85; margin-top: 1rem; color: var(--ivory);">A hybrid securities platform bridging traditional finance and DeFi.</p>
+        <p class="hero-subline" style="font-size: 1rem; opacity: 0.85; margin-top: 1rem; color: var(--ivory);">A sovereign capital-raising and trading platform for established businesses.</p>
     </div>
     <div class="hero-editorial" id="heroEditorial">
         <div class="editorial-header">
-            <span class="line1">Welcome to the next decade of capital markets that belongs to savvy issuers and visionary investors who stop choosing between worlds.</span>
-            <span class="line2">Sails.to is the pioneer platform for established businesses and professional investors to issue, manage and trade security tokens that live seamlessly across TradFi and DeFi.</span>
+            <span class="line1">Sails.to provides a secure, regulated environment connecting established companies seeking to raise capital with professional and institutional investors globally.</span>
         </div>
         <div class="editorial-grid">
             <div class="editorial-col">
-                <p>Traditional capital-raising forces a choice: the speed of on-chain distribution or the comfort of bankable settlement; global reach or familiar controls; "new" or "accepted." Sails.to treats that fork as artificial: a question of packaging, not product. Securities settle on Solana with the option to convert to ISIN-identified format via Clearstream when traditional custody is required. The holding format can change without changing what the instrument is.</p>
-                <p>That infrastructure changes the raise itself. Established companies gain access to a compliant, scalable capital-raising framework built for institutional participation: clear disclosures, robust governance, and a global network of professional investors. Issuers don't pay until the raise succeeds, aligning the platform's incentives with the only outcome that matters.</p>
+                <p><strong>For Issuers:</strong> A streamlined, self-hosted, compliant capital-raising infrastructure designed to support sustainable growth and long-term value creation. You control your own KYC/KYT, investor communications, and governance—sovereign infrastructure that works however you need it to.</p>
             </div>
             <div class="editorial-col">
-                <p>For the professional investor, the real question isn't "crypto or TradFi." It's whether ownership is clean, eligibility is enforced, and the position fits inside an existing workflow. Sails.to answers all three: curated opportunities backed by comprehensive disclosures, institutional-grade custody, and robust risk controls. Hold where it makes sense today, convert when it doesn't tomorrow. No migration exercise required.</p>
-                <p>Execution follows the same logic. Trade within a verified universe, access cross-broker OTC liquidity when broader routing matters, or see the instrument graduate to venues like EuroMTF. All without losing continuity. Tokenization enables efficient ownership recording and seamless settlement, while participation remains limited to eligible investors and governed by the standards traditional markets expect.</p>
+                <p><strong>For Investors:</strong> Curated investment opportunities supported by comprehensive disclosures, robust risk management frameworks, self-hosted compliance, and institutional-grade security. Access deals globally with the flexibility to hold and trade across both blockchain and traditional rails.</p>
             </div>
         </div>
     </div>
@@ -64,8 +61,8 @@ scripts:
                 <div class="stat-label">Time to launch</div>
             </div>
             <div class="stat-item">
-                <div class="stat-value">0.5%</div>
-                <div class="stat-label">Direct placement</div>
+                <div class="stat-value">1%</div>
+                <div class="stat-label">Direct referral</div>
             </div>
             <div class="stat-item">
                 <div class="stat-value">6%</div>
@@ -98,8 +95,8 @@ scripts:
             </div>
             <div class="feature-card">
                 <span class="feature-icon">🌐</span>
-                <h3>Format Flexibility</h3>
-                <p>Hold on <span class="glossary-term" data-term="solana">Solana</span> for 24/7 trading, or convert to <span class="glossary-term" data-term="isin">ISIN</span>-identified format for traditional <span class="glossary-term" data-term="custody">custody</span> via <span class="glossary-term" data-term="clearstream">Clearstream</span>. Issuer-controlled conversion, always 1:1 backed. Same security, both worlds.</p>
+                <h3>Total Flexibility</h3>
+                <p>Your securities work however you need them to. Hold on blockchain for 24/7 global access, or convert to traditional custody format when required. Same security, seamless movement between worlds. You're never locked into one system.</p>
             </div>
         </div>
     </div>
@@ -174,21 +171,21 @@ scripts:
 <section class="global-section">
     <div class="global-container">
         <div class="global-card">
-            <span class="section-label"><span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span></span>
-            <h2 class="section-title"><span class="glossary-term" data-term="solana">Solana</span> wallet today, private bank tomorrow</h2>
-            <p>Conversion between formats is issuer-controlled with regulated Trust oversight. Lock tokens on-chain, issue 1:1 backed <span class="glossary-term" data-term="isin">ISIN</span>-identified <span class="glossary-term" data-term="security-token">securities</span> via <span class="glossary-term" data-term="clearstream">Clearstream</span>. Reverse when needed. Optional Vienna MTF public listing for exchange visibility. Your security adapts to <span class="glossary-term" data-term="custody">custody</span> requirements, not the other way around.</p>
+            <span class="section-label">Bridge to Traditional Finance</span>
+            <h2 class="section-title">When traditional custody is required</h2>
+            <p>Some investors need securities held through traditional custodians. No problem. Convert to traditional format when needed, convert back when it makes sense. Optional public listing on Vienna MTF for exchange visibility. Your infrastructure adapts to requirements—you're never forced to choose one world over the other.</p>
             <div class="global-stats">
-                <div class="global-stat">
-                    <div class="value">~$4K</div>
-                    <div class="label"><span class="glossary-term" data-term="isin">ISIN</span>/<span class="glossary-term" data-term="clearstream">Clearstream</span></div>
-                </div>
-                <div class="global-stat">
-                    <div class="value">~$3K</div>
-                    <div class="label">Vienna MTF listing</div>
-                </div>
                 <div class="global-stat">
                     <div class="value">1:1</div>
                     <div class="label">Always backed</div>
+                </div>
+                <div class="global-stat">
+                    <div class="value">~$4K</div>
+                    <div class="label">Traditional format</div>
+                </div>
+                <div class="global-stat">
+                    <div class="value">~$3K</div>
+                    <div class="label">Exchange listing</div>
                 </div>
             </div>
         </div>

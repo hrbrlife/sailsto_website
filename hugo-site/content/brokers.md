@@ -21,8 +21,8 @@ scripts:
 
 <section class="page-hero" style="background: var(--navy);">
     <span class="section-label">For Brokers</span>
-    <h1 class="section-title">Plug into a<br>ready-built network</h1>
-    <p class="section-desc">Access primary and secondary deal flow from day one. No platform development. No compliance infrastructure to build. Route orders, earn commissions, serve clients who want both digital and traditional custody options.</p>
+    <h1 class="section-title">Add tokenized securities<br>to your offering. Today.</h1>
+    <p class="section-desc">Primary placements, secondary trading, commission sharing — all ready. No platform to build, no compliance infrastructure to create. Plug in, access deal flow, earn from day one. Serve clients who want both blockchain efficiency and traditional custody.</p>
 </section>
 <section class="detail-section">
     <div class="detail-container">

@@ -20,8 +20,8 @@ scripts:
 
 <section class="page-hero" style="background: linear-gradient(135deg, var(--ink) 0%, #2d3748 100%);">
     <span class="section-label">For Business Introducers</span>
-    <h1 class="section-title">Know a business<br>that needs capital?</h1>
-    <p class="section-desc">Introduce them to Sails.to. If they successfully raise, you earn 25% of our commission. No license required. No ongoing obligations. Just a warm introduction.</p>
+    <h1 class="section-title">Know a business that<br>should be raising capital?</h1>
+    <p class="section-desc">Make one introduction. We handle everything — onboarding, compliance, structuring, distribution. When they close, you earn 25% of Sails.to's fee. A $2M raise through broker network = $30,000 to you. No license. No ongoing work.</p>
 </section>
 <section class="detail-section">
     <div class="detail-container">
@@ -212,7 +212,7 @@ scripts:
             <div class="detail-content">
                 <h2>What businesses are we looking for?</h2>
                 <p>Established businesses with real revenue and a clear use of funds. Not early-stage startups. Not speculative ventures. Companies that would traditionally raise from banks or private equity, but want more flexibility.</p>
-                <p>Our sweet spot: €500K to €10M raises for expansion, equipment, working capital, or project finance.</p>
+                <p>Our sweet spot: $600K to $10M raises for expansion, equipment, working capital, or project finance.</p>
             </div>
             <ul class="detail-list">
                 <li>
@@ -239,7 +239,7 @@ scripts:
                 <li>
                     <span class="icon">✓</span>
                     <div class="text">
-                        <h4>€500K – €10M Raise</h4>
+                        <h4>$600K – $10M Raise</h4>
                         <p>Our infrastructure is optimized for this range. Larger deals welcome.</p>
                     </div>
                 </li>
