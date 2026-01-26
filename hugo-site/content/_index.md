@@ -49,6 +49,40 @@ scripts:
         </div>
     </div>
 </section>
+<section class="editorial-section">
+    <div class="editorial-container">
+        <div class="editorial-intro" style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.15rem; line-height: 1.7; color: var(--slate);">We currently support <strong>bonds</strong> issued by companies with a proven track record or significant co-investment from founders. Coupon payments, profit-sharing participations, royalty arrangements—the structure flexes to fit the deal.</p>
+            <p style="font-size: 0.95rem; color: var(--gold); margin-top: 1rem; font-weight: 500;">RWA Tokens & Tokenized Shares coming soon</p>
+        </div>
+    </div>
+</section>
+<section class="fees-section">
+    <div class="fees-container">
+        <div class="fees-grid">
+            <div class="fees-content">
+                <span class="section-label">Pay After Success</span>
+                <h2 class="section-title">Zero risk<br>to launch</h2>
+                <p class="section-desc">No setup fees. No monthly fees. You pay only when capital is successfully raised — between 1% and 6% depending on how investors find you. Miss your target? Everyone gets reimbursed automatically.</p>
+                <p class="section-desc" style="margin-top: 1rem;"><a href="/pricing/" style="color: var(--gold); text-decoration: underline;">See full pricing details →</a></p>
+            </div>
+            <div class="fees-summary" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                <div class="fee-highlight" style="background: var(--cream); padding: 24px; text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--ink);">$0</div>
+                    <div style="font-size: 0.9rem; color: var(--slate);">Upfront cost</div>
+                </div>
+                <div class="fee-highlight" style="background: var(--cream); padding: 24px; text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: var(--ink);">1–6%</div>
+                    <div style="font-size: 0.9rem; color: var(--slate);">On successful raise</div>
+                </div>
+                <div class="fee-highlight" style="background: var(--cream); padding: 24px; text-align: center;">
+                    <div style="font-size: 2.5rem; font-weight: 700; color: #38a169;">100%</div>
+                    <div style="font-size: 0.9rem; color: var(--slate);">Refund if target not met</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="features-section">
     <div class="features-container">
         <div class="features-header">
@@ -79,81 +113,6 @@ scripts:
         </div>
     </div>
 </section>
-<section class="sovereign-section">
-    <div class="sovereign-container" style="max-width: 900px; margin: 0 auto; padding: 80px 24px; text-align: center;">
-        <span class="section-label">🖥️ Sovereign Infrastructure</span>
-        <h2 class="section-title" style="margin-top: 16px;">Your data. Your control.</h2>
-        <p style="font-size: 1.1rem; line-height: 1.8; color: var(--slate); max-width: 800px; margin: 24px auto 0;">Each issuer and broker runs their own Melusina-OS instance—a self-hosted environment for KYC, AML, and compliance. Your investor data never leaves your infrastructure. All instances interoperate via Web3 credentials, so verification travels with the investor across the network without exposing underlying data.</p>
-    </div>
-</section>
-<section class="structure-section">
-    <div class="structure-container">
-        <div class="structure-grid">
-            <div class="structure-content">
-                <span class="section-label">Isolated by Design</span>
-                <h2 class="section-title">One DAO,<br>many compartments</h2>
-                <p class="section-desc">Each issuance operates as a multi-series DAO LLC where functions are cleanly compartmentalized. Different offerings never cross-contaminate—each is fully isolated from others on the platform, running in its own sovereign Melusina-OS environment.</p>
-                <p class="section-desc" style="margin-top: 1rem;">Within your issuance, each series is managed by its designated parties (issuer, trustee, KYC provider) with 1:1 corporate authority–to–DAO action parity. Traditional governance maps directly to blockchain execution—no translation layer, no gaps.</p>
-            </div>
-            <div class="structure-cards">
-                <div class="structure-card">
-                    <h4>Operating Series</h4>
-                    <p>Your offering's core: holds pledges, underlying assets, receives revenue. Managed by the issuer with trustee oversight. Runs in your sovereign environment.</p>
-                </div>
-                <div class="structure-card">
-                    <h4>Treasury Series</h4>
-                    <p>Reserves, operational funds, unclaimed distributions. Neutral trustee control ensures proper handling. Fully auditable on-chain.</p>
-                </div>
-                <div class="structure-card">
-                    <h4>TradFi Bridge Series</h4>
-                    <p>Handles conversion between on-chain and traditional format. Investors move between worlds without changing what they own or who they're verified with.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section class="fees-section">
-    <div class="fees-container">
-        <div class="fees-grid">
-            <div class="fees-content">
-                <span class="section-label">Pay After Success</span>
-                <h2 class="section-title">Zero risk<br>to launch</h2>
-                <p class="section-desc">No setup fees. No monthly fees. You pay only on successfully raised capital. Miss your soft cap? Everyone gets reimbursed automatically.</p>
-            </div>
-            <div>
-                <div class="fee-table">
-                    <div class="fee-row">
-                        <span class="label">Soft cap phase</span>
-                        <span class="value" style="color:#38a169;">0%</span>
-                    </div>
-                    <div class="fee-row">
-                        <span class="label">Direct referral (after soft cap)</span>
-                        <span class="value">1%</span>
-                    </div>
-                    <div class="fee-row">
-                        <span class="label">Broker network (after soft cap)</span>
-                        <span class="value">6%</span>
-                    </div>
-                    <div class="fee-row">
-                        <span class="label">Secondary trades</span>
-                        <span class="value">0.5%</span>
-                    </div>
-                    <div class="fee-row">
-                        <span class="label">Trust & administration</span>
-                        <span class="value">1%/yr</span>
-                    </div>
-                    <div class="fee-row">
-                        <span class="label">Security deposit (refundable)</span>
-                        <span class="value">3%</span>
-                    </div>
-                </div>
-                <div class="fee-note">
-                    <strong>Soft cap phase is fee-free.</strong> Miss soft cap = full refund. Security deposit returned at end of term.
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="global-section">
     <div class="global-container">
         <div class="global-card">
@@ -165,8 +124,33 @@ scripts:
         </div>
     </div>
 </section>
+<section class="structure-section">
+    <div class="structure-container">
+        <div class="structure-grid">
+            <div class="structure-content">
+                <span class="section-label">Protected by Design</span>
+                <h2 class="section-title">Your offering.<br>Fully protected.</h2>
+                <p class="section-desc">Every issuance is legally separate — if another issuer has problems, yours is completely unaffected. Your investor data stays under your control, never shared with the platform or other participants. Independent trustee oversight on every offering. Full audit trail throughout.</p>
+            </div>
+            <div class="structure-cards">
+                <div class="structure-card">
+                    <h4>Data Sovereignty</h4>
+                    <p>Your KYC and investor data stays on your infrastructure. Verification credentials travel with investors across the network — the underlying data doesn't.</p>
+                </div>
+                <div class="structure-card">
+                    <h4>Legal Isolation</h4>
+                    <p>Each offering operates in its own legal compartment. Other issuers' problems never touch your raise or your investors.</p>
+                </div>
+                <div class="structure-card">
+                    <h4>Independent Oversight</h4>
+                    <p>Licensed trustee monitors every offering. Reserves handled neutrally. Full on-chain audit trail for complete transparency.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <section class="cta-section">
-    <h2>Ready to participate?</h2>
+    <h2>Ready to raise sails?</h2>
     <p>For issuers, investors, and brokers who want infrastructure that works across both worlds.</p>
     <a href="/signup/" class="btn btn-primary">
         Get Started
