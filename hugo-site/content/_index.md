@@ -55,6 +55,57 @@ scripts:
             <p style="font-size: 1.15rem; line-height: 1.7; color: var(--slate);">We currently support <strong>bonds</strong> issued by companies with a proven track record or significant co-investment from founders. Coupon payments, profit-sharing participations, royalty arrangements—the structure flexes to fit the deal.</p>
             <p style="font-size: 0.95rem; color: var(--gold); margin-top: 1rem; font-weight: 500;">RWA Tokens & Tokenized Shares coming soon</p>
         </div>
+        <div class="example-bond" style="max-width: 900px; margin: 48px auto 0; background: #fff; border: 1px solid rgba(0,0,0,0.08); position: relative;">
+            <div style="display: flex; justify-content: space-between; align-items: center; padding: 20px 32px; border-bottom: 1px solid rgba(0,0,0,0.06); background: var(--ink);">
+                <span style="font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold);">Example Offering</span>
+                <span style="font-size: 0.75rem; color: var(--silver);">Illustrative Only</span>
+            </div>
+            <div style="padding: 32px;">
+                <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 32px;">
+                    <div>
+                        <h3 style="font-size: 1.4rem; font-weight: 500; color: var(--ink); margin-bottom: 8px;">Mongolian Critical Minerals Project Bond</h3>
+                        <p style="font-size: 0.9rem; color: var(--slate); margin-bottom: 24px;">Lithium Ore Mining & Refining Facility (+ Tungsten, Cobalt)</p>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 0.85rem;">
+                            <div style="padding: 16px; background: var(--cream);">
+                                <div style="color: var(--slate); margin-bottom: 4px;">Issuer</div>
+                                <div style="color: var(--ink); font-weight: 500;">Project SPV</div>
+                            </div>
+                            <div style="padding: 16px; background: var(--cream);">
+                                <div style="color: var(--slate); margin-bottom: 4px;">Project Manager</div>
+                                <div style="color: var(--ink); font-weight: 500;">Top 5 Mongolian Mining Co.</div>
+                            </div>
+                            <div style="padding: 16px; background: var(--cream);">
+                                <div style="color: var(--slate); margin-bottom: 4px;">Maturity</div>
+                                <div style="color: var(--ink); font-weight: 500;">15 Years</div>
+                            </div>
+                            <div style="padding: 16px; background: var(--cream);">
+                                <div style="color: var(--slate); margin-bottom: 4px;">Coupon</div>
+                                <div style="color: var(--ink); font-weight: 500;">2% p.a. Quarterly</div>
+                                <div style="color: var(--gold); font-size: 0.8rem; margin-top: 4px;">+ 20% of pre-tax lithium sales</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="text-align: center; display: flex; flex-direction: column; justify-content: center; padding: 24px; background: linear-gradient(135deg, var(--ink) 0%, #1a1a2e 100%); color: #fff;">
+                        <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 8px;">Raise Amount</div>
+                        <div style="font-size: 2.5rem; font-weight: 700;">$350M</div>
+                        <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.15);">
+                            <div style="font-size: 0.65rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--silver); margin-bottom: 4px;">Bond Nominal</div>
+                            <div style="font-size: 1.2rem; font-weight: 600;">$150,000</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(0,0,0,0.06);">
+                    <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold); margin-bottom: 12px;">Quality & Security</div>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 0.8rem;">
+                        <span style="padding: 6px 12px; background: var(--cream); color: var(--graphite);">✓ Reserves verified by Pincock Minerco</span>
+                        <span style="padding: 6px 12px; background: var(--cream); color: var(--graphite);">✓ Feasibility by German Engineering Anstalt</span>
+                        <span style="padding: 6px 12px; background: var(--cream); color: var(--graphite);">✓ CPA audited financials</span>
+                        <span style="padding: 6px 12px; background: var(--cream); color: var(--graphite);">✓ Isolated & monitored sales flows</span>
+                        <span style="padding: 6px 12px; background: var(--cream); color: var(--graphite);">✓ Mine & license pledge as security</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 <section class="fees-section">
