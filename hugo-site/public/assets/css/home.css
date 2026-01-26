@@ -755,7 +755,7 @@
            EDITORIAL SECTION - Space for parallax columns to land
         ═══════════════════════════════════════════════════════════════ */
         .editorial-section {
-            padding: 720px 48px 60px; /* Large top padding for columns - accommodates full editorial content */
+            padding: 320px 48px 40px; /* Top padding for columns */
             position: relative;
             z-index: 1; /* Low - fixed columns are above */
             background: var(--ivory);
@@ -865,7 +865,7 @@
         ═══════════════════════════════════════════════════════════════ */
         .features-section {
             padding: 120px 48px;
-            background: var(--cream);
+            background: var(--ivory);
             position: relative;
             z-index: 10;
         }
@@ -946,6 +946,7 @@
         ═══════════════════════════════════════════════════════════════ */
         .structure-section {
             padding: 120px 48px;
+            background: var(--ivory);
             position: relative;
             z-index: 10;
         }
@@ -1025,7 +1026,7 @@
         ═══════════════════════════════════════════════════════════════ */
         .fees-section {
             padding: 120px 48px;
-            background: var(--cream);
+            background: #fff;
             position: relative;
             z-index: 10;
         }
@@ -1102,6 +1103,7 @@
         ═══════════════════════════════════════════════════════════════ */
         .global-section {
             padding: 120px 48px;
+            background: #fff;
             position: relative;
             z-index: 10;
         }
