@@ -561,7 +561,7 @@
             right: 0;
             padding: 0 48px;
             z-index: 999; /* High z-index to stay above everything */
-            transform: translateY(40%); /* More visible initially - see columns with boat */
+            transform: translateY(25%); /* Moved up - closer to intro line */
         }
         
         .hero-editorial .editorial-header {
