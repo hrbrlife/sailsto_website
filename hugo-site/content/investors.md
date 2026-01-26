@@ -19,8 +19,8 @@ stylesheets:
 
 <section class="page-hero" style="background: linear-gradient(135deg, var(--navy) 0%, var(--charcoal) 100%);">
     <span class="section-label">For Investors</span>
-    <h1 class="section-title">Hold where it makes sense.<br>Convert when it doesn't</h1>
-    <p class="section-desc">Access curated private market opportunities with institutional-grade structure. Hold on Solana for efficiency, or convert to ISIN for traditional custody through your bank. Same security, your choice of format.</p>
+    <h1 class="section-title">Private market deals.<br>Institutional protections.</h1>
+    <p class="section-desc">Access curated opportunities from established businesses — with full disclosures, verified issuers, and clear governance. Trade through a multi-broker OTC network with real liquidity. Hold on blockchain or through your bank. No platform lock-in.</p>
     <p class="section-desc" style="margin-top: 15px; opacity: 0.8; font-size: 0.95rem;">Minimum investment: $150,000 • Accredited/Professional investors only</p>
 </section>
 <section class="detail-section">
@@ -84,7 +84,7 @@ stylesheets:
                     <span class="icon">🔄</span>
                     <div class="text">
                         <h4>Bidirectional Conversion</h4>
-                        <p>Move between formats as needed. Issuer-controlled with Trust oversight. Always 1:1 backed.</p>
+                        <p>Move between formats as needed. Any token holder can request conversion for 1.5% of nominal value. Always 1:1 backed.</p>
                     </div>
                 </li>
             </ul>
@@ -194,15 +194,15 @@ stylesheets:
         <div class="global-card">
             <span class="section-label">TradFi Bridge</span>
             <h2 class="section-title">Solana wallet today,<br>private bank tomorrow</h2>
-            <p>Conversion between formats is issuer-controlled with regulated Trust oversight. Lock tokens on-chain, receive 1:1 backed ISIN-identified securities via Clearstream. Reverse when needed. Your security adapts to custody requirements, not the other way around.</p>
+            <p>Any Solana token holder can request conversion to traditional format for 1.5% of nominal value. Lock tokens on-chain, receive 1:1 backed ISIN-identified securities via Clearstream. Reverse when needed. During initial placement, issuers typically handle conversions; afterward, any holder can initiate. Your security adapts to custody requirements, not the other way around.</p>
             <div class="global-stats">
                 <div class="global-stat">
                     <div class="value">1:1</div>
                     <div class="label">Always backed</div>
                 </div>
                 <div class="global-stat">
-                    <div class="value">Bidirectional</div>
-                    <div class="label">Convert anytime</div>
+                    <div class="value">1.5%</div>
+                    <div class="label">Conversion fee</div>
                 </div>
                 <div class="global-stat">
                     <div class="value">Global</div>

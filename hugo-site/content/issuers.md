@@ -1,6 +1,6 @@
 ---
 title: "For Issuers"
-description: "Launch tokenized securities with compliant infrastructure. Wyoming DAO Series LLC structure, global distribution, 0.5% direct placement fee."
+description: "Launch tokenized securities with compliant infrastructure. Wyoming DAO Series LLC structure, global distribution, 1% direct referral fee."
 keywords:
   - raise capital
   - tokenized securities
@@ -21,8 +21,8 @@ stylesheets:
 
 <section class="page-hero" style="background: var(--ink);">
     <span class="section-label">For Issuers</span>
-    <h1 class="section-title">Zero upfront.<br>Pay on success</h1>
-    <p class="section-desc">Launch a compliant securities offering in 1–2 weeks. Wyoming DAO Series LLC, Reg S/Reg D compliance, KYC/AML platform, document vault, investor communications. All included. You pay only when the raise succeeds.</p>
+    <h1 class="section-title">Your raise. Fully equipped.<br>Day one.</h1>
+    <p class="section-desc">We provide everything: legal entity, compliance structure, KYC platform, document vault, investor communications, and a global broker network ready to distribute. Plug into a multi-broker OTC network for automatic liquidity. You bring the deal. We provide the rails. Pay nothing until you succeed.</p>
 </section>
 <section class="detail-section">
     <div class="detail-container">
@@ -105,7 +105,7 @@ stylesheets:
             <div class="detail-content">
                 <h2>Distribution from day one</h2>
                 <p>Access a network of licensed brokers who can introduce your offering to their clients. Or raise directly from your own investor base. Your choice.</p>
-                <p>Broker network placement carries a 6% fee that goes entirely to the introducing broker. Direct placement is just 0.5%.</p>
+                <p>Broker network placement carries a 6% fee. Direct referral (your own investors) is just 1%.</p>
             </div>
             <ul class="detail-list">
                 <li>
@@ -118,8 +118,8 @@ stylesheets:
                 <li>
                     <span class="icon">📱</span>
                     <div class="text">
-                        <h4>Direct Placement</h4>
-                        <p>Raise from your own investors at 0.5%. Full platform tools, minimal fee.</p>
+                        <h4>Direct Referral</h4>
+                        <p>Raise from your own investors at 1%. Full platform tools, minimal fee.</p>
                     </div>
                 </li>
                 <li>
@@ -246,8 +246,8 @@ stylesheets:
                 <div class="stat-label">Time to launch</div>
             </div>
             <div class="stat-item">
-                <div class="stat-value">0.5%</div>
-                <div class="stat-label">Direct placement</div>
+                <div class="stat-value">1%</div>
+                <div class="stat-label">Direct referral</div>
             </div>
             <div class="stat-item">
                 <div class="stat-value">$0</div>
