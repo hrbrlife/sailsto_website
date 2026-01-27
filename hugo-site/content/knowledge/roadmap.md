@@ -39,25 +39,25 @@ scripts:
             <div class="milestones-grid">
                 <div class="milestone-card completed">
                     <span class="milestone-check">✓</span>
-                    <div class="milestone-icon">🏛️</div>
+                    <div class="milestone-icon"><svg><use href="#icon-landmark"></use></svg></div>
                     <h3 class="milestone-title">Wyoming DAO LLC Formation</h3>
                     <p class="milestone-desc">Legal entity established with full compliance framework for CrossSecurities.</p>
                 </div>
                 <div class="milestone-card completed">
                     <span class="milestone-check">✓</span>
-                    <div class="milestone-icon">⚙️</div>
+                    <div class="milestone-icon"><svg><use href="#icon-settings"></use></svg></div>
                     <h3 class="milestone-title">Core Platform Architecture</h3>
                     <p class="milestone-desc">Solana smart contracts designed and audited for CrossSecurities issuance.</p>
                 </div>
                 <div class="milestone-card completed">
                     <span class="milestone-check">✓</span>
-                    <div class="milestone-icon">🔗</div>
+                    <div class="milestone-icon"><svg><use href="#icon-convert"></use></svg></div>
                     <h3 class="milestone-title">CrossConversion Design</h3>
                     <p class="milestone-desc">ISIN integration pathway and Clearstream custody protocol finalized.</p>
                 </div>
                 <div class="milestone-card completed">
                     <span class="milestone-check">✓</span>
-                    <div class="milestone-icon">📋</div>
+                    <div class="milestone-icon"><svg><use href="#icon-clipboard"></use></svg></div>
                     <h3 class="milestone-title">Regulatory Framework</h3>
                     <p class="milestone-desc">Reg S/Reg D compliance structure with automated investor verification.</p>
                 </div>
@@ -74,22 +74,22 @@ scripts:
             <div class="milestones-grid">
                 <div class="milestone-card completed">
                     <span class="milestone-check">✓</span>
-                    <div class="milestone-icon">🚀</div>
+                    <div class="milestone-icon"><svg><use href="#icon-zap"></use></svg></div>
                     <h3 class="milestone-title">Platform Beta Live</h3>
                     <p class="milestone-desc">Public beta launch with full issuer and investor onboarding.</p>
                 </div>
                 <div class="milestone-card">
-                    <div class="milestone-icon">🤝</div>
+                    <div class="milestone-icon"><svg><use href="#icon-handshake"></use></svg></div>
                     <h3 class="milestone-title">Broker Network Activation</h3>
                     <p class="milestone-desc">First licensed broker partners onboarded with white-label access.</p>
                 </div>
                 <div class="milestone-card">
-                    <div class="milestone-icon">💰</div>
+                    <div class="milestone-icon"><svg><use href="#icon-money"></use></svg></div>
                     <h3 class="milestone-title">First CrossSecurities Launch</h3>
                     <p class="milestone-desc">Inaugural CrossSecurities offering goes live on the platform.</p>
                 </div>
                 <div class="milestone-card">
-                    <div class="milestone-icon">✅</div>
+                    <div class="milestone-icon"><svg><use href="#icon-check"></use></svg></div>
                     <h3 class="milestone-title">KYC/AML Integration</h3>
                     <p class="milestone-desc">Third-party verification partners integrated for automated compliance.</p>
                 </div>
@@ -105,12 +105,12 @@ scripts:
             </div>
             <div class="milestones-grid">
                 <div class="milestone-card">
-                    <div class="milestone-icon">🏦</div>
+                    <div class="milestone-icon"><svg><use href="#icon-bank"></use></svg></div>
                     <h3 class="milestone-title">CrossConversion Live</h3>
                     <p class="milestone-desc">Full ISIN conversion and Clearstream custody operational.</p>
                 </div>
                 <div class="milestone-card">
-                    <div class="milestone-icon">📈</div>
+                    <div class="milestone-icon"><svg><use href="#icon-trending-up"></use></svg></div>
                     <h3 class="milestone-title">Secondary Trading</h3>
                     <p class="milestone-desc">P2P secondary market for compliant token trading between verified investors.</p>
                 </div>
@@ -120,7 +120,7 @@ scripts:
                     <p class="milestone-desc">First institutional custodians and prime brokers integrated.</p>
                 </div>
                 <div class="milestone-card">
-                    <div class="milestone-icon">📱</div>
+                    <div class="milestone-icon"><svg><use href="#icon-mobile"></use></svg></div>
                     <h3 class="milestone-title">Mobile Experience</h3>
                     <p class="milestone-desc">iOS and Android apps for investors with full portfolio management.</p>
                 </div>
@@ -136,7 +136,7 @@ scripts:
             </div>
             <div class="milestones-grid">
                 <div class="milestone-card">
-                    <div class="milestone-icon">🌍</div>
+                    <div class="milestone-icon"><svg><use href="#icon-globe"></use></svg></div>
                     <h3 class="milestone-title">EU/UK Licensing</h3>
                     <p class="milestone-desc">MiFID II compliance and FCA registration for European markets.</p>
                 </div>
@@ -151,7 +151,7 @@ scripts:
                     <p class="milestone-desc">Ethereum and additional L1 integration for token portability.</p>
                 </div>
                 <div class="milestone-card">
-                    <div class="milestone-icon">🏛️</div>
+                    <div class="milestone-icon"><svg><use href="#icon-landmark"></use></svg></div>
                     <h3 class="milestone-title">DAO Governance</h3>
                     <p class="milestone-desc">Token holder voting and decentralized protocol governance activated.</p>
                 </div>
@@ -182,7 +182,7 @@ scripts:
                     <p class="milestone-desc">T+0 settlement for all security types across jurisdictions.</p>
                 </div>
                 <div class="milestone-card">
-                    <div class="milestone-icon">🌐</div>
+                    <div class="milestone-icon"><svg><use href="#icon-globe"></use></svg></div>
                     <h3 class="milestone-title">Global Standard</h3>
                     <p class="milestone-desc">Become the reference implementation for CrossSecurities infrastructure.</p>
                 </div>

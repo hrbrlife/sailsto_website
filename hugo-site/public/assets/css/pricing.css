@@ -359,33 +359,46 @@
 
         .fee-table {
             width: 100%;
-            border-collapse: collapse;
+            border-collapse: separate;
+            border-spacing: 0;
             background: white;
             border: 1px solid rgba(0,0,0,0.08);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
         }
 
         .fee-table th,
         .fee-table td {
-            padding: 16px 20px;
+            padding: 18px 24px;
             text-align: left;
             border-bottom: 1px solid rgba(0,0,0,0.06);
         }
 
         .fee-table thead {
-            background: var(--ink);
-            color: var(--ivory);
+            background: linear-gradient(135deg, #f5f7ff 0%, #eef1ff 100%);
+            color: var(--ink);
         }
 
         .fee-table th {
             font-family: var(--font-ui);
-            font-size: 0.7rem;
+            font-size: 0.72rem;
             text-transform: uppercase;
-            letter-spacing: 0.1em;
+            letter-spacing: 0.08em;
             font-weight: 600;
+            color: #4A3AFF;
+        }
+
+        .fee-table tbody tr {
+            transition: all 0.2s ease;
         }
 
         .fee-table tbody tr:hover {
-            background: var(--cream);
+            background: linear-gradient(135deg, rgba(74,58,255,0.02) 0%, rgba(108,92,231,0.02) 100%);
+        }
+
+        .fee-table tbody tr:last-child td {
+            border-bottom: none;
         }
 
         .fee-table td:first-child {
@@ -394,10 +407,14 @@
         }
 
         .fee-highlight {
-            background: rgba(201, 162, 39, 0.15);
-            color: var(--ink);
-            padding: 3px 10px;
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(74,58,255,0.1) 0%, rgba(108,92,231,0.1) 100%);
+            color: #4A3AFF;
+            padding: 6px 14px;
             font-weight: 700;
+            border-radius: 4px;
+            font-family: var(--font-ui);
+            font-size: 0.9rem;
             font-family: var(--font-ui);
         }
 
@@ -449,25 +466,32 @@
         }
 
         .increment-btn {
-            width: 40px;
+            width: 44px;
             flex: 1;
             border: none;
-            background: var(--cream);
-            border-left: 1px solid rgba(0,0,0,0.08);
+            background: linear-gradient(180deg, #f8f9ff 0%, #f0f2ff 100%);
+            border-left: 1px solid rgba(74,58,255,0.12);
             cursor: pointer;
-            font-size: 1rem;
-            font-weight: bold;
-            color: var(--slate);
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #4A3AFF;
             transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .increment-btn:hover {
-            background: var(--gold);
+            background: linear-gradient(180deg, #4A3AFF 0%, #6C5CE7 100%);
             color: white;
         }
 
+        .increment-btn:active {
+            transform: scale(0.95);
+        }
+
         .increment-btn:first-child {
-            border-bottom: 1px solid rgba(0,0,0,0.08);
+            border-bottom: 1px solid rgba(74,58,255,0.12);
         }
 
         /* Sourcing section */

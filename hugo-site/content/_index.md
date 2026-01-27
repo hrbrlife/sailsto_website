@@ -194,22 +194,22 @@ scripts:
         </div>
         <div class="feature-grid">
             <div class="feature-card">
-                <span class="feature-icon">⚖️</span>
+                <span class="icon-wrapper"><svg><use href="#icon-legal"></use></svg></span>
                 <h3>Turnkey Legal Structure</h3>
                 <p><strong>Issuers:</strong> Wyoming DAO Series LLC, Reg S/Reg D compliance, KYC platform, document vault—all provided. Launch in weeks, not months.<br><strong>Investors:</strong> Clear legal framework, verified issuer identity, comprehensive disclosures. Know exactly what you're investing in.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">🔐</span>
+                <span class="icon-wrapper"><svg><use href="#icon-shield-check"></use></svg></span>
                 <h3>Independent Oversight</h3>
                 <p><strong>Issuers:</strong> Appoint a trustee from the network or bring your own. Independent verification builds investor confidence.<br><strong>Investors:</strong> Licensed trustee oversight on every offering. Your interests are independently protected.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">🔄</span>
+                <span class="icon-wrapper"><svg><use href="#icon-network"></use></svg></span>
                 <h3>Multi-Broker OTC Network</h3>
                 <p><strong>Issuers:</strong> Access a network of licensed brokers for distribution. Reach investors globally without building relationships from scratch.<br><strong>Investors:</strong> Trade through your broker of choice. Cross-broker liquidity means better execution and real secondary markets.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">🌐</span>
+                <span class="icon-wrapper"><svg><use href="#icon-convert"></use></svg></span>
                 <h3>CrossSecurities Flexibility</h3>
                 <p><strong>Issuers:</strong> One offering reaches both on-chain and traditional investors. Unified cap table regardless of form.<br><strong>Investors:</strong> Hold on-chain or cross to bankable ISIN format. CrossConvert between forms as your requirements change. Same security, your choice.</p>
             </div>

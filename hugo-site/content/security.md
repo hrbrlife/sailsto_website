@@ -23,24 +23,24 @@ stylesheets:
 <section class="content-section">
 <div class="content-container">
 
-<div class="feature-grid">
+<div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
 <div class="feature-card">
-<div class="feature-icon">🏠</div>
+<span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-building"></use></svg></span>
 <h3>Independent Infrastructure</h3>
 <p>We don't rent space on AWS, Google, or Azure. Your sensitive data never passes through big-tech systems that mine, profile, or aggregate user information.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">🔒</div>
+<span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-lock"></use></svg></span>
 <h3>Isolated by Design</h3>
 <p>Each issuer's data lives in its own sealed container. A breach elsewhere can't cascade to you. Smaller attack surface means fewer things that can go wrong.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">👥</div>
+<span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-users"></use></svg></span>
 <h3>No Single Point of Failure</h3>
 <p>Critical operations require multiple independent approvers. No single person—not even us—can unilaterally access funds or make system changes.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">🔍</div>
+<span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-shield"></use></svg></span>
 <h3>Audited Smart Contracts</h3>
 <p>All CrossSecurities smart contracts undergo third-party security audits before deployment. Published audit reports available for review.</p>
 </div>

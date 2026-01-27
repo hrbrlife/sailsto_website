@@ -28,25 +28,25 @@ scripts:
         <div class="contact-grid">
             <div class="contact-info">
                 <div class="contact-card">
-                    <span class="contact-icon">📧</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-mail"></use></svg></span>
                     <h3>Email Us</h3>
                     <p>For general inquiries and support</p>
                     <a href="mailto:hello@sails.to">hello@sails.to</a>
                 </div>
                 <div class="contact-card">
-                    <span class="contact-icon">💬</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-message"></use></svg></span>
                     <h3>Telegram</h3>
                     <p>Join our community or DM us directly</p>
                     <a href="https://t.me/sailsto" target="_blank">@sailsto</a>
                 </div>
                 <div class="contact-card">
-                    <span class="contact-icon">💼</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-briefcase"></use></svg></span>
                     <h3>LinkedIn</h3>
                     <p>Follow us for updates and announcements</p>
                     <a href="https://linkedin.com/company/sailsto" target="_blank">/company/sailsto</a>
                 </div>
                 <div class="contact-card">
-                    <span class="contact-icon">🐦</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-send"></use></svg></span>
                     <h3>Twitter/X</h3>
                     <p>Quick updates and industry commentary</p>
                     <a href="https://x.com/sailsto" target="_blank">@sailsto</a>
@@ -112,7 +112,7 @@ scripts:
                     </form>
                 </div>
                 <div class="form-success" id="form-success">
-                    <span class="icon">✅</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-check"></use></svg></span>
                     <h3>Message Sent!</h3>
                     <p>Thank you for reaching out. We'll get back to you within 24 hours.</p>
                     <a href="/" class="btn btn-primary">Back to Home</a>
@@ -126,28 +126,28 @@ scripts:
         <h2>Looking for Something Specific?</h2>
         <div class="quick-connect-grid">
             <a href="/signup/?type=issuer" class="quick-link">
-                <span class="icon">🏢</span>
+                <span class="icon-wrapper"><svg><use href="#icon-building"></use></svg></span>
                 <span class="text">
                     <strong>Launch a Token</strong>
                     <small>Start your issuance journey</small>
                 </span>
             </a>
             <a href="/signup/?type=investor" class="quick-link">
-                <span class="icon">💼</span>
+                <span class="icon-wrapper"><svg><use href="#icon-briefcase"></use></svg></span>
                 <span class="text">
                     <strong>Invest in Opportunities</strong>
                     <small>Access tokenized securities</small>
                 </span>
             </a>
             <a href="/signup/?type=broker" class="quick-link">
-                <span class="icon">🤝</span>
+                <span class="icon-wrapper"><svg><use href="#icon-handshake"></use></svg></span>
                 <span class="text">
                     <strong>Become a Partner</strong>
                     <small>Broker referral program</small>
                 </span>
             </a>
             <a href="/knowledge/faq/" class="quick-link">
-                <span class="icon">❓</span>
+                <span class="icon-wrapper"><svg><use href="#icon-info"></use></svg></span>
                 <span class="text">
                     <strong>Read the FAQ</strong>
                     <small>Answers to common questions</small>

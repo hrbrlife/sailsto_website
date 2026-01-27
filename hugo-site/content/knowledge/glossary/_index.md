@@ -209,7 +209,7 @@ scripts:
             </div>
         </div>
         <div class="glossary-no-results" style="display: none;">
-            <span class="icon">🔍</span>
+            <span class="icon-wrapper"><svg><use href="#icon-scan"></use></svg></span>
             <h3>No matching terms found</h3>
             <p>Try a different search term or <a href="/company/contact/">suggest a term</a> to add to our glossary.</p>
         </div>
