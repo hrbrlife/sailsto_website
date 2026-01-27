@@ -1,17 +1,8 @@
 # Sails.to QA Testing Suite
 
-Automated UX testing with Playwright screenshot capture and AI-powered review.
+Automated UX/UI testing for the Sails.to CrossSecurities platform using multi-agent AI analysis.
 
-## Features
-
-- 🖥️ **Multi-viewport testing**: Desktop (1920x1080), Tablet (768x1024), Mobile (375x812)
-- 📸 **Automatic screenshots**: Captures at top, 25%, 50%, 75%, and bottom of each page
-- 🤖 **AI-powered review**: Analyzes screenshots for UX issues (requires OpenAI API key)
-- 📊 **Local analysis**: Falls back to image analysis when no API key is provided
-- 📝 **HTML reports**: Beautiful, interactive reports with all findings
-- ⚡ **Performance metrics**: Load times, First Paint, FCP for each page
-
-## Quick Start
+## 🚀 Quick Start
 
 ```bash
 # Install dependencies
@@ -23,186 +14,153 @@ npm run install:browsers
 # Make sure Hugo dev server is running
 cd ../hugo-site && hugo server -D &
 
-# Run full audit
-npm run full-audit
+# Run website analysis (default: critical + high priority pages)
+npm run analyze
 
-# Or run steps individually:
-npm run test      # Crawl and capture screenshots
-npm run review    # Analyze with AI agent
-npm run report    # Generate HTML report
+# Quick check (critical pages only)
+npm run analyze -- --quick
+
+# Full analysis (all tiers)
+npm run analyze -- --full
 ```
 
-## Scripts
+## 🤖 Multi-Agent System
+
+Two specialized AI agents analyze each page:
+
+| Agent | Focus Areas |
+|-------|-------------|
+| 🎯 **UX Agent** | Trust & credibility, value proposition clarity, navigation, conversion path, mobile experience |
+| 🎨 **UI Agent** | Visual hierarchy, design consistency, professional polish, whitespace, responsive quality |
+
+### Models (via OpenRouter)
+
+| Model | Best For |
+|-------|----------|
+| `deepseek/deepseek-r1t2-chimera` | **Default** - Strong reasoning, detailed analysis |
+| `mistralai/devstral-2-2512` | Agentic tasks, 256K context |
+| `qwen/qwen3-coder-480b-a35b` | Tool use, function calling |
+
+## 📋 Scripts
 
 | Command | Description |
 |---------|-------------|
-| `npm run test` | Crawl site and capture screenshots (all viewports) |
-| `npm run test:desktop` | Capture desktop viewport only |
-| `npm run test:mobile` | Capture mobile viewport only |
-| `npm run review` | Run AI agent review on screenshots |
-| `npm run report` | Generate HTML report |
-| `npm run full-audit` | Run test + review |
+| `npm run analyze` | Analyze critical + high priority pages (10 pages) |
+| `npm run analyze -- --quick` | Quick check - critical pages only (5 pages) |
+| `npm run analyze -- --full` | Comprehensive - includes knowledge base (20+ pages) |
+| `npm run analyze -- --all` | Everything including samples (25+ pages) |
+| `npm run analyze:headless` | Run in headless mode (no browser window) |
+| `npm run test` | Crawl site and capture screenshots |
+| `npm run full-audit` | Run crawl + collages + review + report |
 
-## Configuration
+## 🎯 Page Tiers
+
+Pages are organized by priority:
+
+### Tier 1: Critical (Conversion Pages)
+- Homepage, For Issuers, For Investors, Pricing, Signup
+
+### Tier 2: High (Value Pages)
+- For Brokers, For Institutions, Introducers, How It Works, Issuers Directory
+
+### Tier 3: Trust (Credibility Pages)
+- Security, Compliance, Oversight, About, Contact, Legal
+
+### Tier 4: Knowledge (Content Pages)
+- Knowledge Hub, FAQ, Roadmap, Glossary Index, Blog Index, Docs Index
+
+### Tier 5: Samples (Spot Checks)
+- Sample glossary terms, blog posts
+
+## ⚙️ Configuration
 
 ### Environment Variables
 
+Create a `.env` file:
+
 ```bash
-# Optional: Enable AI-powered analysis (GPT-4 Vision)
-export OPENAI_API_KEY=your-api-key
+# Required for AI analysis
+OPENROUTER_API_KEY=sk-or-v1-your-key-here
 
-# Optional: Custom base URL (default: http://localhost:1313)
-export BASE_URL=http://localhost:1313
+# Model selection (optional)
+OPENROUTER_MODEL=deepseek/deepseek-r1t2-chimera
+
+# Site URL (optional, defaults to localhost:1313)
+BASE_URL=http://localhost:1313
+
+# Browser mode (optional)
+HEADLESS=true
+
+# Viewport: desktop, tablet, or mobile (optional)
+VIEWPORT=desktop
 ```
 
-### Customizing Pages
+### Get an API Key
 
-Edit `crawler.js` to modify the pages list:
+1. Go to https://openrouter.ai/keys
+2. Create a free account
+3. Generate an API key
+4. Add to `.env` file
 
-```javascript
-const CONFIG = {
-  pages: [
-    { path: '/', name: 'home' },
-    { path: '/issuers/', name: 'issuers' },
-    // Add more pages...
-  ]
-};
+## 📊 Output
+
+After running analysis:
+
+| File | Description |
+|------|-------------|
+| `WEBSITE_ANALYSIS_REPORT.md` | Full markdown report with scores, issues, and recommendations |
+| `website-analysis.json` | Machine-readable JSON with all data |
+| `screenshots/website-analysis/*.png` | Full-page screenshots of each analyzed page |
+
+## 🎨 Scoring Rubric
+
+Both agents use a 1-10 scale:
+
+| Score | Meaning |
+|-------|---------|
+| 9-10 | Exceptional - Would convert skeptical finance professionals |
+| 7-8 | Good - Works well, minor polish needed |
+| 5-6 | Adequate - Gets the job done but not compelling |
+| 3-4 | Needs Work - Confusing or unprofessional elements |
+| 1-2 | Poor - Would erode trust or confuse visitors |
+
+## 📁 Directory Structure
+
+```
+qa-testing/
+├── .env                          # API key and config
+├── .env.example                  # Template for .env
+├── package.json                  # Dependencies and scripts
+├── website-analyzer.js           # Main multi-agent analyzer
+├── crawler.js                    # Screenshot crawler
+├── agent-review.js               # Single-agent review
+├── generate-collages.js          # Collage generator
+├── generate-report.js            # HTML report generator
+├── UX_STYLE_GUIDE.md            # UX standards reference
+├── WEBSITE_ANALYSIS_REPORT.md   # Generated analysis report
+├── website-analysis.json        # Generated JSON data
+└── screenshots/
+    └── website-analysis/        # Page screenshots
 ```
 
-### Customizing Viewports
+## 🔧 Advanced Usage
 
-```javascript
-const CONFIG = {
-  viewports: {
-    desktop: { width: 1920, height: 1080, name: 'desktop' },
-    tablet: { width: 768, height: 1024, name: 'tablet' },
-    mobile: { width: 375, height: 812, name: 'mobile' }
-  }
-};
-```
-
-## Output Structure
-
-```
-screenshots/
-├── desktop/           # Desktop viewport screenshots
-│   ├── home_desktop_top.png
-│   ├── home_desktop_25pct.png
-│   └── ...
-├── tablet/            # Tablet viewport screenshots
-├── mobile/            # Mobile viewport screenshots
-└── reports/
-    ├── crawler-results.json      # Raw crawler data
-    ├── agent-review-results.json # AI analysis results
-    └── qa-report.html            # Interactive HTML report
-```
-
-## UX Review Criteria
-
-The AI agent reviews for:
-
-1. **Visual Consistency**
-   - Color scheme consistency
-   - Typography consistency
-   - Spacing and alignment
-   - Button styles
-
-2. **Navigation & Structure**
-   - Nav visibility and clarity
-   - Mobile menu accessibility
-   - Footer organization
-
-3. **Readability & Content**
-   - Text contrast
-   - Font sizes
-   - Line lengths
-   - Header hierarchy
-
-4. **Responsive Design**
-   - Content fits viewport
-   - Touch target sizes
-   - Image scaling
-   - Layout adaptation
-
-5. **Accessibility Indicators**
-   - Color contrast
-   - Interactive elements
-   - Focus states
-
-6. **Call to Action**
-   - CTA prominence
-   - Button clarity
-   - Form structure
-
-## Local Analysis (No API Key)
-
-When no OpenAI API key is provided, the system performs local image analysis:
-
-- Blank page detection
-- Dark page detection (CSS issues)
-- Color variance analysis
-- File size checks
-- Aspect ratio verification
-
-## Example Report
-
-The generated HTML report includes:
-
-- Summary cards (pages tested, issues found, average score)
-- Critical and high-severity issues list
-- Performance metrics table
-- Interactive screenshot gallery with viewport tabs
-- Console errors and warnings
-
-## Troubleshooting
-
-### Screenshots are blank
-- Ensure Hugo dev server is running on port 1313
-- Check for JavaScript errors in console output
-
-### AI analysis fails
-- Verify OPENAI_API_KEY is set correctly
-- Check API quota and billing
-
-### Playwright install issues
+### Mobile Testing
 ```bash
-# Try manual browser install
-npx playwright install chromium --with-deps
+VIEWPORT=mobile npm run analyze -- --quick
 ```
 
-## Integration with CI/CD
-
-```yaml
-# GitHub Actions example
-jobs:
-  qa-test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-      - name: Install dependencies
-        run: |
-          cd qa-testing
-          npm install
-          npx playwright install chromium --with-deps
-      - name: Start Hugo server
-        run: |
-          cd hugo-site
-          hugo server -D &
-          sleep 5
-      - name: Run QA tests
-        run: |
-          cd qa-testing
-          npm run test
-          npm run review
-          npm run report
-      - name: Upload report
-        uses: actions/upload-artifact@v4
-        with:
-          name: qa-report
-          path: qa-testing/screenshots/reports/
+### Different Model
+```bash
+OPENROUTER_MODEL=mistralai/devstral-2-2512 npm run analyze
 ```
 
-## License
+### Visible Browser (Debug)
+```bash
+HEADLESS=false npm run analyze -- --quick
+```
 
-MIT
+### Production Site
+```bash
+BASE_URL=https://sails.to npm run analyze -- --quick
+```

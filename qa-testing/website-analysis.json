@@ -1,0 +1,395 @@
+{
+  "meta": {
+    "generated": "2026-01-27T15:16:06.297Z",
+    "model": "tngtech/deepseek-r1t2-chimera:free",
+    "baseUrl": "http://localhost:1313",
+    "tiers": [
+      "critical"
+    ],
+    "totalPages": 5,
+    "apiCalls": 8
+  },
+  "summary": {
+    "avgUxScore": "6.3",
+    "avgUiScore": "6.3",
+    "avgCombined": "6.3",
+    "highIssueCount": 12
+  },
+  "pages": [
+    {
+      "tier": "critical",
+      "page": "Homepage",
+      "path": "/",
+      "error": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"http://localhost:1313/\", waiting until \"networkidle\"\u001b[22m\n"
+    },
+    {
+      "tier": "critical",
+      "page": "For Issuers",
+      "path": "/issuers/",
+      "desc": "Primary audience landing page",
+      "url": "http://localhost:1313/issuers/",
+      "screenshot": "/home/user/sailsto_website/qa-testing/screenshots/website-analysis/for_issuers.png",
+      "ux": {
+        "score": 6,
+        "headline": "Comprehensive offering for issuers but lacks critical trust signals and content scannability for finance professionals.",
+        "trustScore": 5,
+        "clarityScore": 7,
+        "conversionScore": 6,
+        "strengths": [
+          "Clear value proposition with 'everything included' approach",
+          "Strong explanation of legal structure benefits (Wyoming DAO Series LLC)"
+        ],
+        "issues": [
+          {
+            "severity": "high",
+            "issue": "Insufficient trust signals for financial audience",
+            "fix": "Add regulatory badges (SEC/FINRA), partner logos (trust companies/law firms), and client testimonials"
+          },
+          {
+            "severity": "medium",
+            "issue": "Overwhelming text density reduces scannability",
+            "fix": "Break paragraphs into bullet points, add expandable sections for legal details, use more white space"
+          },
+          {
+            "severity": "medium",
+            "issue": "Jargon without explanation (e.g., 'Reg S/Reg D', 'DAO Series LLC')",
+            "fix": "Add tooltips or microcopy explaining terms for non-crypto-native finance professionals"
+          },
+          {
+            "severity": "low",
+            "issue": "No immediate conversion pathway",
+            "fix": "Add 'Schedule Consultation' CTA above the fold with calendar link"
+          }
+        ],
+        "quickWins": [
+          "Add 'As Featured In' section with reputable finance publications",
+          "Include compliance badges next to 'Wyoming DAO Series LLC' explanation",
+          "Convert hero text 'Pay nothing until you succeed' into a standalone benefit badge"
+        ]
+      },
+      "ui": {
+        "score": 6,
+        "headline": "Adequate foundation with clear institutional value proposition, but undermined by unprofessional visual elements and density.",
+        "hierarchyScore": 7,
+        "consistencyScore": 6,
+        "polishScore": 5,
+        "strengths": [
+          "Clear value proposition in hero section",
+          "Logical content structure with well-defined feature categories"
+        ],
+        "issues": [
+          {
+            "severity": "high",
+            "issue": "Emoji icons (⚖️🌍🔐) undermine professional credibility",
+            "fix": "Replace with minimalist line icons in brand colors (#4A3AFF primary, #6C5CE7 secondary)"
+          },
+          {
+            "severity": "medium",
+            "issue": "Dense text blocks with insufficient line height",
+            "fix": "Increase body text line-height to 1.6rem (current appears ~1.2rem)"
+          },
+          {
+            "severity": "medium",
+            "issue": "Flat visual hierarchy in feature sections",
+            "fix": "Add 1px border-bottom: #EAEFF5 to H2 headings with 24px padding-bottom"
+          },
+          {
+            "severity": "medium",
+            "issue": "No visual separation between sections",
+            "fix": "Implement alternating background colors (#FFFFFF / #F8FAFD) for sections"
+          },
+          {
+            "severity": "low",
+            "issue": "Inconsistent spacing between feature cards",
+            "fix": "Standardize card margins to 32px vertical / 24px horizontal"
+          }
+        ],
+        "quickWins": [
+          "Replace all emojis with professional SVG icons",
+          "Increase hero text line spacing (add space between 'equipped.' and 'Day one.')",
+          "Add 48px vertical padding between sections"
+        ]
+      },
+      "combined": "6.0"
+    },
+    {
+      "tier": "critical",
+      "page": "For Investors",
+      "path": "/investors/",
+      "desc": "Investor audience landing",
+      "url": "http://localhost:1313/investors/",
+      "screenshot": "/home/user/sailsto_website/qa-testing/screenshots/website-analysis/for_investors.png",
+      "ux": {
+        "score": 7,
+        "headline": "Strong institutional value proposition undermined by presentation density and missing trust elements.",
+        "trustScore": 7,
+        "clarityScore": 8,
+        "conversionScore": 6,
+        "strengths": [
+          "Clear articulation of institutional-grade protections (Clearstream, Wyoming DAO)",
+          "Effective explanation of complex hybrid security mechanics (CrossConversion)",
+          "Strong upfront filtering of investor qualifications ($150k minimum)"
+        ],
+        "issues": [
+          {
+            "severity": "high",
+            "issue": "Critical compliance details buried (1.5% CrossConversion fee appears only in feature card)",
+            "fix": "Add 'Important Considerations' section with fees/restrictions near top"
+          },
+          {
+            "severity": "high",
+            "issue": "$150k minimum investment requirement hidden in hero paragraph",
+            "fix": "Display as standalone badge/alert below CTA with accreditation notice"
+          },
+          {
+            "severity": "medium",
+            "issue": "Content truncation in secondary liquidity section ('exchange-ba...')",
+            "fix": "Complete sentence and implement content QA process"
+          },
+          {
+            "severity": "medium",
+            "issue": "No visual hierarchy for sophisticated investors (wall of text)",
+            "fix": "Introduce executive summary carousel above the fold with: Deal Flow > Liquidity Options > Compliance"
+          },
+          {
+            "severity": "low",
+            "issue": "Generic CTAs ('Get Started') for high-stakes investors",
+            "fix": "Contextual CTAs: 'Access Deal Flow' (hero), 'Request Broker Introduction' (liquidity section)"
+          }
+        ],
+        "quickWins": [
+          "Add institutional partner logos (Clearstream, Vienna MTF) below hero",
+          "Convert 'Minimum investment' line into warning-style alert component",
+          "Break hero paragraph into bullet points matching H1 claims"
+        ]
+      },
+      "ui": {
+        "score": 7,
+        "headline": "Professional foundation with inconsistent visual elements undermining institutional credibility.",
+        "hierarchyScore": 6,
+        "consistencyScore": 7,
+        "polishScore": 6,
+        "strengths": [
+          "Clear value proposition in hero section",
+          "Consistent card-based information architecture for features"
+        ],
+        "issues": [
+          {
+            "severity": "high",
+            "issue": "Emoji usage in feature cards appears unprofessional",
+            "fix": "Replace emojis with custom-designed financial icons (e.g. document icon for disclosures, shield for verification)"
+          },
+          {
+            "severity": "medium",
+            "issue": "Section separation lacks visual distinction",
+            "fix": "Add subtle dividers (1px #E5E7EB) between major sections with 64px padding above/below"
+          },
+          {
+            "severity": "medium",
+            "issue": "Headings lack sufficient visual hierarchy",
+            "fix": "Increase H2 font-weight to 600 (semibold) and add 0.02em letter-spacing for better scannability"
+          },
+          {
+            "severity": "low",
+            "issue": "Minimum investment info competes with primary CTA",
+            "fix": "Reduce font-size of disclaimer text to 0.875rem and add 8px top margin separation"
+          }
+        ],
+        "quickWins": [
+          "Replace all emojis with SVG icons from financial icon set",
+          "Add 48px vertical spacing between H2 sections",
+          "Implement hover states for cards (elevation + border transition)"
+        ]
+      },
+      "combined": "7.0"
+    },
+    {
+      "tier": "critical",
+      "page": "Pricing",
+      "path": "/pricing/",
+      "desc": "Revenue page - must be crystal clear",
+      "url": "http://localhost:1313/pricing/",
+      "screenshot": "/home/user/sailsto_website/qa-testing/screenshots/website-analysis/pricing.png",
+      "ux": {
+        "score": 6,
+        "headline": "Detailed cost calculator shows transparency but lacks critical trust signals and clear conversion pathways for financial decision-makers.",
+        "trustScore": 5,
+        "clarityScore": 7,
+        "conversionScore": 4,
+        "strengths": [
+          "Interactive calculator allows precise modeling of scenarios",
+          "Comprehensive fee breakdown demonstrates transparency"
+        ],
+        "issues": [
+          {
+            "severity": "high",
+            "issue": "Zero trust signals for financial audience",
+            "fix": "Add regulatory badges (FINMA, SEC exemptions), security certifications, and institutional partner logos above calculator"
+          },
+          {
+            "severity": "high",
+            "issue": "No clear next step after calculation",
+            "fix": "Add prominent 'Discuss This Structure' CTA button below calculator results with calendly integration"
+          },
+          {
+            "severity": "medium",
+            "issue": "Financial jargon without explanations (soft cap/hard cap)",
+            "fix": "Add ? tooltips with brief definitions visible on hover/tap"
+          },
+          {
+            "severity": "medium",
+            "issue": "Fee structure table formatting hurts readability",
+            "fix": "Convert to card-based layout with fee type categories and visual hierarchy"
+          },
+          {
+            "severity": "low",
+            "issue": "No mobile-optimized calculator controls",
+            "fix": "Replace ▲/▼ arrows with touch-friendly slider controls for caps"
+          }
+        ],
+        "quickWins": [
+          "Add 'FINMA-Regulated' badge next to page title",
+          "Insert comparative pricing context (e.g., '50% cheaper than traditional issuance') in hero",
+          "Make 'Get Started' button sticky on scroll"
+        ]
+      },
+      "ui": {
+        "score": 6,
+        "headline": "Functional calculator but lacks financial-grade visual hierarchy and polish for institutional trust.",
+        "hierarchyScore": 5,
+        "consistencyScore": 6,
+        "polishScore": 5,
+        "strengths": [
+          "Clear calculator functionality for modeling scenarios",
+          "Detailed fee breakdown meets financial transparency needs"
+        ],
+        "issues": [
+          {
+            "severity": "high",
+            "issue": "Critical financial figures ($828k net proceeds, 11.59% EAR) lack visual prominence",
+            "fix": "Increase font-size: 1.8rem; font-weight: 600; color: brand-primary; add background: #f8f9ff; padding: 1rem;"
+          },
+          {
+            "severity": "high",
+            "issue": "Primitive ▲▼ controls undermine financial credibility",
+            "fix": "Replace with professional input steppers: border: 1px solid #e0e0ff; border-radius: 4px; padding: 8px 12px;"
+          },
+          {
+            "severity": "medium",
+            "issue": "No visual distinction between input sections/outputs",
+            "fix": "Add card containers: background: white; box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-radius: 8px; padding: 1.5rem;"
+          },
+          {
+            "severity": "medium",
+            "issue": "Fee table uses basic text formatting (═) instead of proper grid",
+            "fix": "Implement CSS grid with header row: background: #f5f7ff; font-weight: 600; padding: 12px;"
+          },
+          {
+            "severity": "low",
+            "issue": "Missing brand color application (purples/blues)",
+            "fix": "Apply --brand-primary (#4a36dc) to all H2s, buttons, and key metrics"
+          }
+        ],
+        "quickWins": [
+          "Convert text sliders to proper range inputs with track styling",
+          "Add currency symbols ($) before all monetary values",
+          "Implement proper decimal formatting (900,000 → $900,000)",
+          "Use branded purple (#4a36dc) for all interactive elements"
+        ]
+      },
+      "combined": "6.0"
+    },
+    {
+      "tier": "critical",
+      "page": "Signup",
+      "path": "/signup/",
+      "desc": "Conversion endpoint - minimize friction",
+      "url": "http://localhost:1313/signup/",
+      "screenshot": "/home/user/sailsto_website/qa-testing/screenshots/website-analysis/signup.png",
+      "ux": {
+        "score": 6,
+        "headline": "Functional signup flow with clear role segmentation but lacks critical trust signals and creates unnecessary friction for financial users.",
+        "trustScore": 5,
+        "clarityScore": 7,
+        "conversionScore": 6,
+        "strengths": [
+          "Clear role-based segmentation (Issuer/Investor/Broker/Institution)",
+          "Concisely communicates key benefits through iconography",
+          "Includes necessary compliance confirmations (accredited investor)"
+        ],
+        "issues": [
+          {
+            "severity": "high",
+            "issue": "Missing critical trust signals for financial users",
+            "fix": "Add regulatory badges (FINRA/SEC), partner logos (Prime Trust etc.), and security certifications above the form"
+          },
+          {
+            "severity": "high",
+            "issue": "Copyright shows 2026 (future date) which undermines credibility",
+            "fix": "Immediately update footer to show © 2023 or current year"
+          },
+          {
+            "severity": "medium",
+            "issue": "Financial jargon without explanations (CrossConversion Custody, Soft cap phase)",
+            "fix": "Add tooltip icons next to complex terms with brief explanations"
+          },
+          {
+            "severity": "medium",
+            "issue": "Form friction too high for financial professionals",
+            "fix": "Remove 'First Name/Last Name' fields (use single 'Name'), make 'Company' conditional based on role selection"
+          },
+          {
+            "severity": "low",
+            "issue": "No immediate confirmation after submission",
+            "fix": "Replace 'Thank You!' with specific next steps timeline and compliance officer contact info"
+          }
+        ],
+        "quickWins": [
+          "Fix copyright year in footer",
+          "Add 'Why we need this info' tooltips next to form fields",
+          "Include SEC/FINRA member badges near compliance section",
+          "Change 'Submit Application' to role-specific CTAs like 'Start Issuer Onboarding'"
+        ]
+      },
+      "ui": {
+        "score": 6,
+        "headline": "Functional conversion flow with institutional credibility concerns due to inconsistent visual language.",
+        "hierarchyScore": 7,
+        "consistencyScore": 5,
+        "polishScore": 5,
+        "strengths": [
+          "Clear value proposition with tangible benefits (Zero Upfront Cost, 1-2 Weeks to Launch)",
+          "Comprehensive form fields appropriate for institutional signups"
+        ],
+        "issues": [
+          {
+            "severity": "high",
+            "issue": "Emoji usage in role selection buttons (🏢💼🤝🏛️) undermines professional tone",
+            "fix": "Replace with minimalist SVG icons in brand colors (purple/blue) using .icon-wrapper { padding: 12px; background: #F5F7FF; border-radius: 8px; }"
+          },
+          {
+            "severity": "medium",
+            "issue": "Weak visual hierarchy in form section with insufficient contrast for primary CTA",
+            "fix": "Increase Submit button prominence with .submit-btn { background: #4A22FF; padding: 16px 32px; font-weight: 600; box-shadow: 0px 4px 12px rgba(74, 34, 255, 0.25); }"
+          },
+          {
+            "severity": "medium",
+            "issue": "Feature icons (💰⚡🔄✅) appear as Unicode characters rather than designed assets",
+            "fix": "Implement custom icon set with consistent line weight (1.5px) and brand-aligned metaphors"
+          },
+          {
+            "severity": "low",
+            "issue": "Dense form layout lacks sufficient vertical rhythm",
+            "fix": "Increase form spacing with .form-group { margin-bottom: 1.5rem; } and .form-label { margin-bottom: 0.5rem; }"
+          }
+        ],
+        "quickWins": [
+          "Remove all emoji usage from interface elements",
+          "Add hover states to interactive elements: button:hover { transform: translateY(-2px); transition: all 0.2s ease; }",
+          "Implement segmented control styling for role selector buttons"
+        ]
+      },
+      "combined": "6.0"
+    }
+  ]
+}
