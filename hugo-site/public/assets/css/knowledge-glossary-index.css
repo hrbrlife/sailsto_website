@@ -1,0 +1,249 @@
+/* Styles for knowledge/glossary/index.html */
+
+
+        /* Glossary page styles */
+        .glossary-search {
+            max-width: 400px;
+            margin: 40px auto 0;
+            position: relative;
+        }
+        
+        .glossary-search-input {
+            width: 100%;
+            padding: 14px 20px 14px 48px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            color: var(--ink);
+            background: var(--ivory);
+            border: 1px solid rgba(0,0,0,0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .glossary-search-input:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.1);
+        }
+        
+        .glossary-search-icon {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 18px;
+            height: 18px;
+            color: var(--slate);
+            pointer-events: none;
+        }
+        
+        .glossary-filter-section {
+            background: var(--cream);
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            position: sticky;
+            top: 70px;
+            z-index: 50;
+        }
+        
+        .glossary-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 48px;
+        }
+        
+        .glossary-filters {
+            display: flex;
+            gap: 8px;
+            padding: 16px 0;
+            overflow-x: auto;
+        }
+        
+        .glossary-filter {
+            padding: 10px 20px;
+            font-family: var(--font-ui);
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--slate);
+            background: transparent;
+            border: 1px solid transparent;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+        }
+        
+        .glossary-filter:hover {
+            color: var(--ink);
+            border-color: rgba(0,0,0,0.15);
+        }
+        
+        .glossary-filter.active {
+            color: var(--ivory);
+            background: var(--ink);
+            border-color: var(--ink);
+        }
+        
+        .glossary-main {
+            padding: 60px 48px 80px;
+        }
+        
+        .glossary-alphabet {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 48px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .alpha-link {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-display);
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--slate);
+            background: var(--cream);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .alpha-link:hover {
+            background: var(--ink);
+            color: var(--ivory);
+        }
+        
+        .glossary-letter-section {
+            margin-bottom: 48px;
+        }
+        
+        .glossary-letter {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--gold);
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--gold);
+            display: inline-block;
+        }
+        
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+        
+        .glossary-card {
+            display: block;
+            padding: 24px;
+            background: var(--ivory);
+            border: 1px solid rgba(0,0,0,0.08);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .glossary-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+        }
+        
+        .glossary-card-category {
+            display: inline-block;
+            font-family: var(--font-ui);
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            padding: 4px 10px;
+            margin-bottom: 12px;
+        }
+        
+        .glossary-card-category.finance {
+            background: rgba(201, 162, 39, 0.15);
+            color: var(--gold);
+        }
+        
+        .glossary-card-category.compliance {
+            background: rgba(13, 27, 42, 0.1);
+            color: var(--navy);
+        }
+        
+        .glossary-card-category.legal {
+            background: rgba(184, 25, 43, 0.1);
+            color: var(--crimson);
+        }
+        
+        .glossary-card-category.technology {
+            background: rgba(94, 109, 121, 0.15);
+            color: var(--slate);
+        }
+        
+        .glossary-card h3 {
+            font-family: var(--font-display);
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: var(--ink);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        
+        .glossary-card p {
+            font-size: 0.85rem;
+            color: var(--slate);
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .glossary-no-results {
+            text-align: center;
+            padding: 80px 20px;
+        }
+        
+        .glossary-no-results .icon {
+            font-size: 3rem;
+            display: block;
+            margin-bottom: 20px;
+        }
+        
+        .glossary-no-results h3 {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            color: var(--ink);
+            margin-bottom: 12px;
+        }
+        
+        .glossary-no-results p {
+            font-size: 0.95rem;
+            color: var(--slate);
+        }
+        
+        .glossary-no-results a {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 992px) {
+            .glossary-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .glossary-container {
+                padding: 0 24px;
+            }
+            
+            .glossary-main {
+                padding: 40px 24px 60px;
+            }
+            
+            .glossary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    
