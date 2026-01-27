@@ -33,21 +33,21 @@ stylesheets:
             </div>
             <ul class="detail-list">
                 <li>
-                    <span class="icon">👑</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-crown"></use></svg></span>
                     <div class="text">
                         <h4>Issuer Approval Authority</h4>
                         <p>You vet and approve every issuer on your platform. Your due diligence standards. Your risk tolerance. Your decision.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">⚖️</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-legal"></use></svg></span>
                     <div class="text">
                         <h4>Trustee Authorization</h4>
                         <p>Appoint trustees from your network or act as trustee yourself. Configure oversight permissions per issuer, per series.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">🤝</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-handshake"></use></svg></span>
                     <div class="text">
                         <h4>Broker Network Control</h4>
                         <p>Decide which brokers can distribute offerings on your platform. Set commission structures. Manage relationships.</p>
@@ -67,21 +67,21 @@ stylesheets:
             </div>
             <ul class="detail-list">
                 <li>
-                    <span class="icon">🏛️</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-landmark"></use></svg></span>
                     <div class="text">
                         <h4>Trust Companies</h4>
                         <p>Licensed fiduciaries who can act as trustee, custodian, or platform operator under existing charters.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">💼</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-briefcase"></use></svg></span>
                     <div class="text">
                         <h4>Venture Capital Funds</h4>
                         <p>Registered fund managers who want to tokenize portfolio company securities for LP liquidity.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">🏠</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-home"></use></svg></span>
                     <div class="text">
                         <h4>Multi-Family Offices</h4>
                         <p>Sophisticated wealth managers seeking private market infrastructure for their client families.</p>
@@ -101,28 +101,28 @@ stylesheets:
             </div>
             <ul class="detail-list">
                 <li>
-                    <span class="icon">🏗️</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-building"></use></svg></span>
                     <div class="text">
                         <h4>Issuance Engine</h4>
                         <p>Launch tokenized debt, equity, revenue share, fund interests. Your issuers, your structures, your approval process.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">📊</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-chart"></use></svg></span>
                     <div class="text">
                         <h4>Cap Table & Registry</h4>
                         <p>Authoritative investor registry. Transfer agent functionality. Corporate actions processing.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">💰</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-money"></use></svg></span>
                     <div class="text">
                         <h4>Distribution Engine</h4>
                         <p>Automated dividend, interest, and principal distributions. Withholding calculations. Payment processing.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">🔄</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-refresh"></use></svg></span>
                     <div class="text">
                         <h4>Secondary Marketplace</h4>
                         <p>OTC trading within your investor universe. Cross-broker routing optional. You control access.</p>
@@ -142,21 +142,21 @@ stylesheets:
             </div>
             <ul class="detail-list">
                 <li>
-                    <span class="icon">🔐</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-lock"></use></svg></span>
                     <div class="text">
                         <h4>Self-Hosted Verification</h4>
                         <p>Run KYC/AML on your infrastructure. Integrate your existing providers. Maintain data sovereignty.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">🛡️</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-shield"></use></svg></span>
                     <div class="text">
                         <h4>Configurable Restrictions</h4>
                         <p>Set transfer rules per security: accreditation, jurisdiction, holding period, concentration limits.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">📋</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-clipboard"></use></svg></span>
                     <div class="text">
                         <h4>Audit & Reporting</h4>
                         <p>Complete audit trail. Regulatory reports on demand. Export for your compliance team, auditors, regulators.</p>
@@ -176,21 +176,21 @@ stylesheets:
             </div>
             <ul class="detail-list">
                 <li>
-                    <span class="icon">⛓️</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-chain"></use></svg></span>
                     <div class="text">
                         <h4>On-Chain Form (Solana)</h4>
                         <p>24/7 settlement. Programmable compliance. Self-custody or qualified custodian.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">🏛</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-bank"></use></svg></span>
                     <div class="text">
                         <h4>Bankable Form (ISIN/Clearstream)</h4>
                         <p>ISIN identifier. Clearstream settlement. Compatible with any private bank worldwide.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">📈</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-trending-up"></use></svg></span>
                     <div class="text">
                         <h4>Exchange Listing</h4>
                         <p>Optional Vienna MTF listing for public price discovery. You decide which CrossSecurities qualify.</p>
@@ -208,32 +208,32 @@ stylesheets:
         </div>
         <div class="feature-grid three-col">
             <div class="feature-card">
-                <span class="feature-icon">🖥️</span>
+                <span class="icon-wrapper"><svg><use href="#icon-mobile"></use></svg></span>
                 <h3>White-Label Portals</h3>
                 <p>Investor portal, issuer dashboard, admin console. All branded to your identity. Your domain, your logo, and your UX.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">👑</span>
+                <span class="icon-wrapper"><svg><use href="#icon-crown"></use></svg></span>
                 <h3>Admin Controls</h3>
                 <p>Approve issuers, authorize actors, configure permissions, monitor activity. Full platform governance in your hands.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">🔧</span>
+                <span class="icon-wrapper"><svg><use href="#icon-settings"></use></svg></span>
                 <h3>API Access</h3>
                 <p>Full API for integration with your existing systems. Webhooks, data exports, custom workflows.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">📑</span>
+                <span class="icon-wrapper"><svg><use href="#icon-document"></use></svg></span>
                 <h3>Document Management</h3>
                 <p>Offering documents, subscription agreements, corporate records. Versioned, auditable, always accessible.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">🤝</span>
+                <span class="icon-wrapper"><svg><use href="#icon-handshake"></use></svg></span>
                 <h3>Dedicated Support</h3>
                 <p>Named account manager. Technical integration support. Compliance consultation available.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">🔒</span>
+                <span class="icon-wrapper"><svg><use href="#icon-lock"></use></svg></span>
                 <h3>Enterprise Security</h3>
                 <p>SOC 2 compliant infrastructure. Role-based access. Multi-sig where required. Your security policies enforced.</p>
             </div>
@@ -250,21 +250,21 @@ stylesheets:
             </div>
             <ul class="detail-list">
                 <li>
-                    <span class="icon">📄</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-document"></use></svg></span>
                     <div class="text">
                         <h4>Annual License</h4>
                         <p>Platform access, updates, support, and maintenance. Scales with your usage tier.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">💳</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-credit-card"></use></svg></span>
                     <div class="text">
                         <h4>Transaction Fees</h4>
                         <p>Per-issuance and per-trade fees at institutional rates. Pass through or absorb: your choice.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">🚀</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-zap"></use></svg></span>
                     <div class="text">
                         <h4>Implementation</h4>
                         <p>Dedicated onboarding team. Branding setup, integration support, compliance configuration, training.</p>

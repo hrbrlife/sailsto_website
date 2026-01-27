@@ -23,24 +23,24 @@ stylesheets:
 <section class="content-section">
 <div class="content-container">
 
-<div class="feature-grid">
+<div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
 <div class="feature-card">
-<div class="feature-icon">👁️</div>
+<span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-target"></use></svg></span>
 <h3>Issuer Monitoring</h3>
 <p>Ongoing monitoring of issuer financial health, milestone delivery, and covenant compliance throughout the security lifecycle.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">📊</div>
+<span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-chart"></use></svg></span>
 <h3>Reporting Requirements</h3>
 <p>Mandatory quarterly reporting from issuers. Financial statements, operational updates, and material event disclosures.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">⚖️</div>
+<span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-legal"></use></svg></span>
 <h3>Dispute Resolution</h3>
 <p>Established procedures for investor complaints and disputes. Escalation paths and arbitration mechanisms built into offering terms.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">🚨</div>
+<span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-alert"></use></svg></span>
 <h3>Early Warning System</h3>
 <p>Automated monitoring of payment schedules, covenant triggers, and issuer communications. Proactive investor alerts.</p>
 </div>

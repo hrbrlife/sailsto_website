@@ -35,21 +35,21 @@ scripts:
             </div>
             <ul class="detail-list">
                 <li>
-                    <span class="icon">💰</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-money"></use></svg></span>
                     <div class="text">
                         <h4>Primary Placement: up to 5%</h4>
                         <p>Up to 3% issuer reward + 2% from Sails.to's 6% fee. <em>(After soft cap)</em></p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">🔄</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-refresh"></use></svg></span>
                     <div class="text">
                         <h4>Secondary Trades: 0.5%</h4>
                         <p>Split ⅓ platform, ⅓ buy-side broker, ⅓ sell-side broker.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">⚡</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-lightning"></use></svg></span>
                     <div class="text">
                         <h4>Instant Settlement</h4>
                         <p>Commissions distribute on-chain at trade execution. No T+2, no invoice cycles.</p>
@@ -193,7 +193,7 @@ scripts:
             }
         </style>
         <div class="calc-card">
-            <h2>💰 Broker Earnings Calculator</h2>
+            <h2><svg class="inline-icon"><use href="#icon-coins"></use></svg> Broker Earnings Calculator</h2>
             <p class="intro">Estimate your annual earnings from primary placements and secondary trading activity.</p>
             <div class="calc-grid">
                 <div class="calc-inputs">
@@ -247,21 +247,21 @@ scripts:
             </div>
             <ul class="detail-list">
                 <li>
-                    <span class="icon">🔗</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-chain"></use></svg></span>
                     <div class="text">
                         <h4>Atomic Execution</h4>
                         <p>All-or-nothing settlement. No partial fills that leave positions hanging.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">🛡️</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-shield"></use></svg></span>
                     <div class="text">
                         <h4>Zero Counterparty Risk</h4>
                         <p>Settlement and delivery happen simultaneously. No credit exposure between brokers.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">📊</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-chart"></use></svg></span>
                     <div class="text">
                         <h4>Automatic Reconciliation</h4>
                         <p>On-chain transactions are the source of truth. No end-of-day matching required.</p>
@@ -281,21 +281,21 @@ scripts:
             </div>
             <ul class="detail-list">
                 <li>
-                    <span class="icon">🌐</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-globe"></use></svg></span>
                     <div class="text">
                         <h4>Cross-Broker Routing</h4>
                         <p>Access liquidity from the entire network when your book can't fill an order.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">✓</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-user-check"></use></svg></span>
                     <div class="text">
                         <h4>Pre-Verified Investors</h4>
                         <p>Only eligible investors in the system. KYC and accreditation already complete.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">📋</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-clipboard"></use></svg></span>
                     <div class="text">
                         <h4>Automatic Audit Trail</h4>
                         <p>Every quote, order, and settlement recorded on-chain. Compliance reporting built in.</p>
@@ -313,32 +313,32 @@ scripts:
         </div>
         <div class="feature-grid three-col">
             <div class="feature-card">
-                <span class="feature-icon">📱</span>
+                <span class="icon-wrapper"><svg><use href="#icon-mobile"></use></svg></span>
                 <h3>Trading Interface</h3>
                 <p>Web-based order entry for primary subscriptions and secondary trading. White-label available for your own clients.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">🔐</span>
+                <span class="icon-wrapper"><svg><use href="#icon-lock"></use></svg></span>
                 <h3>Custody Options</h3>
                 <p>Hold client CrossSecurities on-chain (Solana) or CrossConvert to bankable ISIN form via Clearstream. You choose what fits each client.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">📊</span>
+                <span class="icon-wrapper"><svg><use href="#icon-chart"></use></svg></span>
                 <h3>Position & P&L Reporting</h3>
                 <p>Real-time positions, transaction history, and performance reporting. Export for your back office systems.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">📄</span>
+                <span class="icon-wrapper"><svg><use href="#icon-document"></use></svg></span>
                 <h3>Deal Flow Access</h3>
                 <p>See all active offerings with full disclosure documents. Filter by asset type, geography, minimum investment.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">🤝</span>
+                <span class="icon-wrapper"><svg><use href="#icon-handshake"></use></svg></span>
                 <h3>Investor Onboarding</h3>
                 <p>Platform handles KYC/AML verification. Bring your clients, we verify eligibility and maintain the records.</p>
             </div>
             <div class="feature-card">
-                <span class="feature-icon">💼</span>
+                <span class="icon-wrapper"><svg><use href="#icon-briefcase"></use></svg></span>
                 <h3>Commission Dashboard</h3>
                 <p>Track earned commissions in real-time. See pending distributions and historical payouts.</p>
             </div>

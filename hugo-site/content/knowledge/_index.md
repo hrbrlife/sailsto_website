@@ -49,7 +49,7 @@ scripts:
         <h2 class="kb-section-title">Featured Resources</h2>
         <div class="kb-featured-grid">
             <a href="/knowledge/docs/getting-started/" class="kb-card kb-card-featured" data-category="docs">
-                <div class="kb-card-icon">🚀</div>
+                <div class="kb-card-icon"><svg><use href="#icon-zap"></use></svg></div>
                 <div class="kb-card-content">
                     <span class="kb-card-category">Getting Started</span>
                     <h3>Quick Start Guide</h3>
@@ -58,7 +58,7 @@ scripts:
                 <span class="kb-card-arrow">→</span>
             </a>
             <a href="/knowledge/docs/hybrid-architecture/" class="kb-card kb-card-featured" data-category="docs">
-                <div class="kb-card-icon">🔗</div>
+                <div class="kb-card-icon"><svg><use href="#icon-convert"></use></svg></div>
                 <div class="kb-card-content">
                     <span class="kb-card-category">Architecture</span>
                     <h3>Understanding CrossConversion</h3>
@@ -67,7 +67,7 @@ scripts:
                 <span class="kb-card-arrow">→</span>
             </a>
             <a href="/knowledge/faq/" class="kb-card kb-card-featured" data-category="faq">
-                <div class="kb-card-icon">❓</div>
+                <div class="kb-card-icon"><svg><use href="#icon-info"></use></svg></div>
                 <div class="kb-card-content">
                     <span class="kb-card-category">Support</span>
                     <h3>Frequently Asked Questions</h3>
@@ -82,7 +82,7 @@ scripts:
     <div class="kb-container">
         <div class="kb-resource-section" data-category="guides">
             <div class="kb-section-header">
-                <h2>📚 Guides</h2>
+                <h2><svg class="section-icon"><use href="#icon-document"></use></svg> Guides</h2>
                 <p>Step-by-step tutorials and conceptual explanations</p>
             </div>
             <div class="kb-grid">
@@ -146,7 +146,7 @@ scripts:
         </div>
         <div class="kb-resource-section" data-category="faq">
             <div class="kb-section-header">
-                <h2>❓ FAQ</h2>
+                <h2><svg class="section-icon"><use href="#icon-info"></use></svg> FAQ</h2>
                 <p>Quick answers to common questions</p>
             </div>
             <div class="kb-grid">
@@ -178,7 +178,7 @@ scripts:
         </div>
         <div class="kb-resource-section" data-category="glossary">
             <div class="kb-section-header">
-                <h2>📖 Glossary</h2>
+                <h2><svg class="section-icon"><use href="#icon-clipboard"></use></svg> Glossary</h2>
                 <p>Definitions of key terms and concepts</p>
                 <a href="/knowledge/glossary/" class="kb-section-link">View Full Glossary →</a>
             </div>
@@ -247,7 +247,7 @@ scripts:
         </div>
         <div class="kb-resource-section" data-category="roadmap">
             <div class="kb-section-header">
-                <h2>🗺️ Roadmap</h2>
+                <h2><svg class="section-icon"><use href="#icon-calendar"></use></svg> Roadmap</h2>
                 <p>Track our development progress and upcoming features</p>
                 <a href="/knowledge/roadmap/" class="kb-section-link">View Full Roadmap →</a>
             </div>

@@ -10,7 +10,7 @@ title = 'Sails.to | Hybrid Securities Infrastructure'
   siteName = "Sails.to"
 
 [outputs]
-  home = ["HTML", "RSS", "SITEMAP"]
+  home = ["HTML", "RSS"]
   section = ["HTML", "RSS"]
   page = ["HTML"]
 

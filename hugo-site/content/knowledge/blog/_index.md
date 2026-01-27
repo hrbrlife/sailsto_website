@@ -182,7 +182,7 @@ scripts:
             </a>
         </div>
         <div class="blog-no-results" style="display: none;">
-            <span class="icon">📭</span>
+            <span class="icon-wrapper"><svg><use href="#icon-mail"></use></svg></span>
             <h3>No posts in this category yet</h3>
             <p>Check back soon for new content, or <a href="/signup/">subscribe</a> to get notified.</p>
         </div>

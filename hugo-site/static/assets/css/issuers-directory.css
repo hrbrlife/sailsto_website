@@ -330,13 +330,24 @@
     opacity: 0.4;
 }
 
-.trust-icon {
+.trust-icon,
+.icon-wrapper.small {
     width: 20px;
     height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 0.85rem;
+}
+
+.icon-wrapper.small svg {
+    width: 16px;
+    height: 16px;
+    color: var(--primary);
+}
+
+.trust-item.inactive .icon-wrapper.small svg {
+    color: var(--silver);
 }
 
 .trust-item.active .trust-icon {

@@ -52,7 +52,7 @@ scripts:
 <section class="faq-section" id="general">
     <div class="faq-container">
         <div class="faq-header">
-            <span class="faq-icon">💡</span>
+            <span class="icon-wrapper"><svg><use href="#icon-info"></use></svg></span>
             <h2>General Questions</h2>
         </div>
         <div class="faq-list">
@@ -115,7 +115,7 @@ scripts:
 <section class="faq-section alt" id="issuers">
     <div class="faq-container">
         <div class="faq-header">
-            <span class="faq-icon">🏢</span>
+            <span class="icon-wrapper"><svg><use href="#icon-building"></use></svg></span>
             <h2>For Issuers</h2>
         </div>
         <div class="faq-list">
@@ -187,7 +187,7 @@ scripts:
 <section class="faq-section" id="investors">
     <div class="faq-container">
         <div class="faq-header">
-            <span class="faq-icon">💼</span>
+            <span class="icon-wrapper"><svg><use href="#icon-briefcase"></use></svg></span>
             <h2>For Investors</h2>
         </div>
         <div class="faq-list">
@@ -260,7 +260,7 @@ scripts:
 <section class="faq-section alt" id="compliance">
     <div class="faq-container">
         <div class="faq-header">
-            <span class="faq-icon">⚖️</span>
+            <span class="icon-wrapper"><svg><use href="#icon-legal"></use></svg></span>
             <h2>Compliance & Legal</h2>
         </div>
         <div class="faq-list">
@@ -317,7 +317,7 @@ scripts:
 <section class="faq-section" id="technical">
     <div class="faq-container">
         <div class="faq-header">
-            <span class="faq-icon">⚙️</span>
+            <span class="icon-wrapper"><svg><use href="#icon-settings"></use></svg></span>
             <h2>Technical Questions</h2>
         </div>
         <div class="faq-list">

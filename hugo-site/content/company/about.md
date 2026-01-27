@@ -36,28 +36,28 @@ scripts:
             <div class="detail-aside">
                 <ul class="detail-list">
                     <li>
-                        <span class="icon">🎯</span>
+                        <span class="icon-wrapper"><svg><use href="#icon-target"></use></svg></span>
                         <div class="text">
                             <h4>Democratize Access</h4>
                             <p>Lower barriers for issuers and investors worldwide</p>
                         </div>
                     </li>
                     <li>
-                        <span class="icon">⚖️</span>
+                        <span class="icon-wrapper"><svg><use href="#icon-legal"></use></svg></span>
                         <div class="text">
                             <h4>Compliance First</h4>
                             <p>Every feature built with regulation in mind</p>
                         </div>
                     </li>
                     <li>
-                        <span class="icon">🔗</span>
+                        <span class="icon-wrapper"><svg><use href="#icon-chain"></use></svg></span>
                         <div class="text">
                             <h4>Bridge Worlds</h4>
                             <p>Connect on-chain innovation with bankable trust</p>
                         </div>
                     </li>
                     <li>
-                        <span class="icon">🚀</span>
+                        <span class="icon-wrapper"><svg><use href="#icon-zap"></use></svg></span>
                         <div class="text">
                             <h4>Move Fast</h4>
                             <p>Weeks to launch, not months of paperwork</p>
@@ -196,22 +196,22 @@ scripts:
         </div>
         <div class="partner-grid">
             <div class="partner-card">
-                <span class="partner-icon">🏛️</span>
+                <span class="icon-wrapper"><svg><use href="#icon-landmark"></use></svg></span>
                 <h4>Wyoming Secretary of State</h4>
                 <p>Registered DAO LLC jurisdiction</p>
             </div>
             <div class="partner-card">
-                <span class="partner-icon">☀️</span>
+                <span class="icon-wrapper"><svg><use href="#icon-globe"></use></svg></span>
                 <h4>Solana</h4>
                 <p>High-performance blockchain infrastructure</p>
             </div>
             <div class="partner-card">
-                <span class="partner-icon">🏦</span>
+                <span class="icon-wrapper"><svg><use href="#icon-bank"></use></svg></span>
                 <h4>Clearstream</h4>
                 <p>International securities depository</p>
             </div>
             <div class="partner-card">
-                <span class="partner-icon">🔐</span>
+                <span class="icon-wrapper"><svg><use href="#icon-lock"></use></svg></span>
                 <h4>Melusina OS</h4>
                 <p>Enterprise compliance & KYC platform</p>
             </div>
@@ -222,7 +222,7 @@ scripts:
         </div>
         <div class="partner-grid" style="grid-template-columns: 1fr; max-width: 500px; margin: 0 auto;">
             <div class="partner-card">
-                <span class="partner-icon">🏦</span>
+                <span class="icon-wrapper"><svg><use href="#icon-bank"></use></svg></span>
                 <h4>JurisTax</h4>
                 <p>One of the largest Trust & Management companies founded in Mauritius and licensed in Mauritius, Dubai IFSC, and RAK Freezone. Provides operational trust, escrow management, and fiduciary oversight for our platform.</p>
             </div>
@@ -233,7 +233,7 @@ scripts:
         </div>
         <div class="partner-grid" style="grid-template-columns: 1fr; max-width: 500px; margin: 0 auto;">
             <div class="partner-card">
-                <span class="partner-icon">✓</span>
+                <span class="icon-wrapper"><svg><use href="#icon-check"></use></svg></span>
                 <h4>Baker Tilly Mauritius</h4>
                 <p>Independent audit and assurance firm providing comprehensive financial and compliance audits.</p>
             </div>

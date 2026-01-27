@@ -50,14 +50,14 @@ scripts:
                 <p>This documentation covers everything you need to understand, integrate with, and build on the Sails.to CrossSecurities platform.</p>
                 <div class="docs-quick-links">
                     <a href="/knowledge/docs/getting-started/" class="docs-quick-link">
-                        <span class="icon">🚀</span>
+                        <span class="icon-wrapper"><svg><use href="#icon-zap"></use></svg></span>
                         <span class="text">
                             <strong>Quick Start</strong>
                             <small>Get up and running in minutes</small>
                         </span>
                     </a>
                     <a href="/knowledge/docs/api-reference/" class="docs-quick-link">
-                        <span class="icon">⚡</span>
+                        <span class="icon-wrapper"><svg><use href="#icon-lightning"></use></svg></span>
                         <span class="text">
                             <strong>API Reference</strong>
                             <small>Explore our REST APIs</small>
@@ -141,15 +141,15 @@ scripts:
                 <h3>Need Help?</h3>
                 <div class="docs-help-grid">
                     <a href="/knowledge/faq/" class="docs-help-link">
-                        <span class="icon">❓</span>
+                        <span class="icon-wrapper"><svg><use href="#icon-info"></use></svg></span>
                         <span class="text">FAQ</span>
                     </a>
                     <a href="https://github.com/sailsto" class="docs-help-link" target="_blank">
-                        <span class="icon">🐙</span>
+                        <span class="icon-wrapper"><svg><use href="#icon-external"></use></svg></span>
                         <span class="text">GitHub</span>
                     </a>
                     <a href="/company/contact/" class="docs-help-link">
-                        <span class="icon">💬</span>
+                        <span class="icon-wrapper"><svg><use href="#icon-message"></use></svg></span>
                         <span class="text">Contact</span>
                     </a>
                 </div>

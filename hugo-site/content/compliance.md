@@ -23,24 +23,24 @@ stylesheets:
 <section class="content-section">
 <div class="content-container">
 
-<div class="feature-grid">
+<div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
 <div class="feature-card">
-<div class="feature-icon">🔐</div>
+<span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-lock"></use></svg></span>
 <h3>KYC/AML</h3>
 <p>Professional investor verification with tiered KYC levels. Identity verification, source of funds, and accreditation checks built into every offering.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">📋</div>
+<span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-document"></use></svg></span>
 <h3>Securities Exemptions</h3>
 <p>Offerings structured under recognized exemptions including Regulation D (US), Regulation S (offshore), and equivalent frameworks globally.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">🌍</div>
+<span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-globe"></use></svg></span>
 <h3>Multi-Jurisdiction</h3>
 <p>Legal opinions and compliance frameworks covering EU, UK, US, and emerging markets. Clear investor eligibility by jurisdiction.</p>
 </div>
 <div class="feature-card">
-<div class="feature-icon">📄</div>
+<span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-folder"></use></svg></span>
 <h3>Documentation</h3>
 <p>Standardized offering documents including prospectus, subscription agreements, and risk disclosures reviewed by securities counsel.</p>
 </div>

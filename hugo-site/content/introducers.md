@@ -33,21 +33,21 @@ scripts:
             </div>
             <ul class="detail-list">
                 <li>
-                    <span class="icon">🤝</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-handshake"></use></svg></span>
                     <div class="text">
                         <h4>Make an Introduction</h4>
                         <p>Connect us with a business that could benefit from our platform. A warm intro, an email, a meeting.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">📋</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-clipboard"></use></svg></span>
                     <div class="text">
                         <h4>We Take It From There</h4>
                         <p>Our team handles everything: qualification, structuring, compliance, investor distribution.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">💰</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-money"></use></svg></span>
                     <div class="text">
                         <h4>Get Paid on Success</h4>
                         <p>When the raise closes, you receive 25% of Sails.to's commission. Paid directly to you.</p>
@@ -175,28 +175,28 @@ scripts:
             </div>
             <ul class="detail-list">
                 <li>
-                    <span class="icon">📊</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-chart"></use></svg></span>
                     <div class="text">
                         <h4>Accountants & Advisors</h4>
                         <p>You see your clients' financials. You know who's ready to raise and who could benefit from structured capital.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">⚖️</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-legal"></use></svg></span>
                     <div class="text">
                         <h4>Lawyers & Consultants</h4>
                         <p>Corporate counsel and business consultants often know when clients are exploring funding options.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">🏢</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-building"></use></svg></span>
                     <div class="text">
                         <h4>Industry Contacts</h4>
                         <p>Trade associations, industry groups, business networks. You hear about expansion plans before anyone else.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">👥</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-users"></use></svg></span>
                     <div class="text">
                         <h4>Former Colleagues</h4>
                         <p>Know a founder, CEO, or CFO from your network? That relationship has value.</p>
@@ -216,28 +216,28 @@ scripts:
             </div>
             <ul class="detail-list">
                 <li>
-                    <span class="icon">✓</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-check"></use></svg></span>
                     <div class="text">
                         <h4>Revenue-Generating</h4>
                         <p>At least 2 years operating history with demonstrable revenue.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">✓</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-check"></use></svg></span>
                     <div class="text">
                         <h4>Clear Use of Funds</h4>
                         <p>Expansion, equipment, inventory, project finance, working capital.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">✓</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-check"></use></svg></span>
                     <div class="text">
                         <h4>Professional Management</h4>
                         <p>Proper books, governance, and willingness to provide disclosure.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">✓</span>
+                    <span class="icon-wrapper"><svg><use href="#icon-check"></use></svg></span>
                     <div class="text">
                         <h4>$600K – $10M Raise</h4>
                         <p>Our infrastructure is optimized for this range. Larger deals welcome.</p>
