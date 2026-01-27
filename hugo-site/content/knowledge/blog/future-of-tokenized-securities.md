@@ -50,7 +50,7 @@ stylesheets:
         <h2>The Hybrid Model Wins</h2>
         <p>Perhaps the most significant development is recognition that the future isn't purely crypto or purely traditional — it's hybrid.</p>
         <p>Investors don't want to be forced into a single model. Some want the control and programmability of self-custody wallets. Others want the familiarity of holding securities through their existing bank or brokerage account. The winning platforms will support both.</p>
-        <p>This is why our <span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span> — enabling conversion between Solana tokens and <span class="glossary-term" data-term="isin">ISIN</span>-denominated securities at <span class="glossary-term" data-term="clearstream">Clearstream</span> — isn't just a feature. It's the architecture for how institutional-grade tokenization actually works.</p>
+        <p>This is why our <span class="glossary-term" data-term="crossconversion">CrossConversion</span> — enabling conversion between Solana tokens and <span class="glossary-term" data-term="isin">ISIN</span>-denominated securities at <span class="glossary-term" data-term="clearstream">Clearstream</span> — isn't just a feature. It's the architecture for how institutional-grade tokenization actually works.</p>
         <h2>What to Watch in 2025</h2>
         <ul>
             <li><strong>Real estate tokenization scale:</strong> Commercial real estate is the most obvious early use case, with several billion-dollar portfolios expected to tokenize this year.</li>

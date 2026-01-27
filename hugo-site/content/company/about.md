@@ -1,9 +1,9 @@
 ---
 title: "About Us"
-description: "Learn about Sails.to — the team building hybrid securities infrastructure that bridges blockchain innovation with traditional finance. Founded to democratize capital markets."
+description: "Learn about Sails.to — the team building CrossSecurities infrastructure that bridges blockchain innovation with traditional finance. Founded to democratize capital markets."
 keywords:
   - about sails.to
-  - hybrid securities
+  - CrossSecurities
   - blockchain finance
   - capital markets
   - tokenization company
@@ -53,7 +53,7 @@ scripts:
                         <span class="icon">🔗</span>
                         <div class="text">
                             <h4>Bridge Worlds</h4>
-                            <p>Connect DeFi innovation with TradFi trust</p>
+                            <p>Connect on-chain innovation with bankable trust</p>
                         </div>
                     </li>
                     <li>
@@ -72,15 +72,15 @@ scripts:
     <div class="detail-container">
         <div class="detail-grid">
             <div class="detail-content">
-                <h2>The Hybrid Approach</h2>
-                <p>We don't believe in forcing investors to choose between innovation and familiarity. Our <span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span> technology lets investors hold <span class="glossary-term" data-term="security-token">security tokens</span> either natively on <span class="glossary-term" data-term="solana">Solana</span> or converted to an <span class="glossary-term" data-term="isin">ISIN</span> in traditional custody via <span class="glossary-term" data-term="clearstream">Clearstream</span>.</p>
+                <h2>The CrossSecurities Approach</h2>
+                <p>We don't believe in forcing investors to choose between innovation and familiarity. Our <span class="glossary-term" data-term="crossconversion">CrossConversion</span> technology lets investors hold <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> either on-chain on <span class="glossary-term" data-term="solana">Solana</span> or CrossConverted to bankable <span class="glossary-term" data-term="isin">ISIN</span> form via <span class="glossary-term" data-term="clearstream">Clearstream</span>.</p>
                 <p>For issuers, we provide turnkey legal structure through <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO LLCs</span> with <span class="glossary-term" data-term="series-llc">Series LLC</span> architecture — giving you the liability protection of traditional corporate structures with the programmable governance of blockchain.</p>
                 <p>Built-in <span class="glossary-term" data-term="kyc">KYC</span>/<span class="glossary-term" data-term="aml">AML</span> compliance, <span class="glossary-term" data-term="reg-d">Reg D</span>/<span class="glossary-term" data-term="reg-s">Reg S</span> support, and a network of licensed brokers ensure your offering meets regulatory requirements from day one.</p>
             </div>
             <div class="detail-aside">
                 <div class="approach-diagram">
                     <div class="approach-box">
-                        <span class="label">DeFi Side</span>
+                        <span class="label">On-Chain Form</span>
                         <div class="items">
                             <span>Solana Blockchain</span>
                             <span>Smart Contracts</span>
@@ -90,10 +90,10 @@ scripts:
                     </div>
                     <div class="approach-bridge">
                         <span>⚡</span>
-                        <span>TradFi Bridge</span>
+                        <span>CrossConversion</span>
                     </div>
                     <div class="approach-box">
-                        <span class="label">TradFi Side</span>
+                        <span class="label">Bankable Form</span>
                         <div class="items">
                             <span>ISIN Identifiers</span>
                             <span>Clearstream</span>
@@ -242,7 +242,7 @@ scripts:
 </section>
 <section class="cta-section">
     <h2>Ready to Get Started?</h2>
-    <p>Join the future of compliant tokenized securities.</p>
+    <p>Join the future of compliant CrossSecurities.</p>
     <a href="/signup/" class="btn btn-primary">
         Start Your Journey
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

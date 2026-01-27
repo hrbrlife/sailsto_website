@@ -1,6 +1,6 @@
 ---
 title: "Glossary"
-description: "Complete glossary of terms for tokenized securities, blockchain, compliance, and traditional finance. Definitions for security tokens, KYC, ISIN, Wyoming DAO, and more."
+description: "Complete glossary of terms for CrossSecurities, tokenized securities, blockchain, compliance, and traditional finance. Definitions for CrossSecurities, CrossConversion, security tokens, KYC, ISIN, Wyoming DAO, and more."
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
@@ -14,7 +14,7 @@ scripts:
 <section class="page-hero">
     <span class="section-label">Reference</span>
     <h1 class="section-title">Glossary</h1>
-    <p class="section-desc">Key terms and concepts for understanding hybrid securities infrastructure.</p>
+    <p class="section-desc">Key terms and concepts for understanding Sails CrossSecurities infrastructure.</p>
     <div class="glossary-search">
         <input type="text" id="glossary-search-input" placeholder="Search terms..." class="glossary-search-input">
         <svg class="glossary-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -75,6 +75,16 @@ scripts:
                     <span class="glossary-card-category finance">Finance</span>
                     <h3>Clearstream</h3>
                     <p>A Luxembourg-based international central securities depository providing settlement, custody, and asset servicing for securities.</p>
+                </a>
+                <a href="/knowledge/glossary/crossconversion/" class="glossary-card" data-category="technology">
+                    <span class="glossary-card-category technology">Technology</span>
+                    <h3>CrossConversion</h3>
+                    <p>The process of converting Sails CrossSecurities between on-chain form (Solana) and bankable form (ISIN/Clearstream).</p>
+                </a>
+                <a href="/knowledge/glossary/crosssecurities/" class="glossary-card" data-category="finance">
+                    <span class="glossary-card-category finance">Finance</span>
+                    <h3>CrossSecurities</h3>
+                    <p>Sails' dual-format securities that can be held on-chain (Solana) or in bankable form (ISIN/Clearstream) and converted between forms at will.</p>
                 </a>
                 <a href="/knowledge/glossary/custody/" class="glossary-card" data-category="finance">
                     <span class="glossary-card-category finance">Finance</span>
@@ -149,7 +159,7 @@ scripts:
                 <a href="/knowledge/glossary/security-token/" class="glossary-card" data-category="technology">
                     <span class="glossary-card-category technology">Technology</span>
                     <h3>Security Token</h3>
-                    <p>A blockchain-based token representing ownership in a real-world asset or security, subject to securities regulations.</p>
+                    <p>A blockchain-based token representing ownership in a security, subject to securities regulations. See CrossSecurities for Sails' implementation.</p>
                 </a>
                 <a href="/knowledge/glossary/series-llc/" class="glossary-card" data-category="legal">
                     <span class="glossary-card-category legal">Legal</span>
@@ -183,8 +193,8 @@ scripts:
                 </a>
                 <a href="/knowledge/glossary/tradfi-bridge/" class="glossary-card" data-category="technology">
                     <span class="glossary-card-category technology">Technology</span>
-                    <h3>TradFi Bridge</h3>
-                    <p>Sails.to's system for converting between blockchain tokens and traditional securities with ISIN identifiers at Clearstream.</p>
+                    <h3>TradFi Bridge (CrossConversion)</h3>
+                    <p>Sails.to's CrossConversion system for converting CrossSecurities between on-chain and bankable form.</p>
                 </a>
             </div>
         </div>
@@ -207,7 +217,7 @@ scripts:
 </section>
 <section class="cta-section">
     <h2>Ready to Put Knowledge into Action?</h2>
-    <p>Start your journey with hybrid securities infrastructure.</p>
+    <p>Start your journey with Sails CrossSecurities.</p>
     <a href="/signup/" class="btn btn-primary">
         Get Started
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">

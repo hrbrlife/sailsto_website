@@ -1,9 +1,10 @@
 ---
 title: "Sails.to"
-description: "A sovereign capital-raising and trading platform for established businesses. Self-hosted compliance, global investor access, and total flexibility across blockchain and traditional finance."
+description: "Issue Sails CrossSecurities — bonds, shares, and RWA tokens that investors can hold on-chain or via traditional bank custody, and cross between forms at will."
 keywords:
+  - CrossSecurities
   - capital raising
-  - security tokens
+  - CrossConversion
   - tokenization
   - Solana
   - private placement
@@ -11,9 +12,9 @@ keywords:
   - Wyoming DAO
   - Reg D
   - Reg S
-  - hybrid securities
-  - DeFi
-  - TradFi
+  - bankable securities
+  - ISIN
+  - on-chain securities
 ogImage: "/og-image.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
@@ -32,19 +33,19 @@ scripts:
         <h1>
             <span class="line"><span class="line-inner">Raise your sails</span></span>
         </h1>
-        <p class="hero-tagline">to go beyond with securities that cross the line.</p>
-        <p class="hero-subline" style="font-size: 1rem; opacity: 0.85; margin-top: 1rem; color: var(--ivory);">Introducing Sails.to — a sovereign capital-raising and trading platform for established businesses and professional investors.</p>
+        <p class="hero-tagline">to go beyond with <strong>Sails CrossSecurities</strong>.</p>
+        <p class="hero-subline" style="font-size: 1rem; opacity: 0.85; margin-top: 1rem; color: var(--ivory);">Bonds, shares, and RWA tokens that can be held on-chain or via traditional bank custody — and crossed between forms at will.</p>
     </div>
     <div class="hero-editorial" id="heroEditorial">
         <div class="editorial-header">
-            <span class="line1">Sails.to provides a secure, regulated environment connecting established companies seeking to raise capital with professional and institutional investors globally.</span>
+            <span class="line1">Sails CrossSecurities provide a secure, regulated environment connecting established companies seeking to raise capital with professional and institutional investors globally.</span>
         </div>
         <div class="editorial-grid">
             <div class="editorial-col">
                 <p><strong>For Issuers:</strong> A streamlined, self-hosted, compliant capital-raising infrastructure designed to support sustainable growth and long-term value creation. You control your own KYC/KYT, investor communications, and governance—sovereign infrastructure that works however you need it to.</p>
             </div>
             <div class="editorial-col">
-                <p><strong>For Investors:</strong> Curated investment opportunities supported by comprehensive disclosures, robust risk management frameworks, self-hosted compliance, and institutional-grade security. Access deals globally with the flexibility to hold and trade across both blockchain and traditional rails.</p>
+                <p><strong>For Investors:</strong> Curated investment opportunities supported by comprehensive disclosures, robust risk management frameworks, self-hosted compliance, and institutional-grade security. Access deals globally — hold CrossSecurities on-chain or cross to bankable ISIN format for traditional custody.</p>
             </div>
         </div>
     </div>
@@ -66,7 +67,7 @@ scripts:
             </div>
             <div style="background: var(--ivory); padding: 36px 28px; position: relative;">
                 <div style="position: absolute; top: 16px; right: 16px; background: transparent; border: 1px solid var(--silver); color: var(--silver); font-family: var(--font-ui); font-size: 0.55rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 8px;">Coming Soon</div>
-                <div style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--slate); margin-bottom: 8px;">Tokenized Shares</div>
+                <div style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--slate); margin-bottom: 8px;">CrossShares</div>
                 <div style="font-family: var(--font-display); font-size: 1.3rem; color: var(--ink); margin-bottom: 8px; line-height: 1.2; opacity: 0.6;">DAO Investment & Control</div>
                 <p style="font-size: 0.8rem; color: var(--slate); margin-bottom: 20px; line-height: 1.5; opacity: 0.6;">Governance rights and equity participation with on-chain transparency.</p>
                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: var(--slate); line-height: 2; opacity: 0.6;">
@@ -78,7 +79,7 @@ scripts:
             </div>
             <div style="background: var(--ivory); padding: 36px 28px; position: relative;">
                 <div style="position: absolute; top: 16px; right: 16px; background: transparent; border: 1px solid var(--silver); color: var(--silver); font-family: var(--font-ui); font-size: 0.55rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 8px;">Coming Soon</div>
-                <div style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--slate); margin-bottom: 8px;">RWA Tokens</div>
+                <div style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--slate); margin-bottom: 8px;">CrossRWA</div>
                 <div style="font-family: var(--font-display); font-size: 1.3rem; color: var(--ink); margin-bottom: 8px; line-height: 1.2; opacity: 0.6;">Liquidity on Illiquid Assets</div>
                 <p style="font-size: 0.8rem; color: var(--slate); margin-bottom: 20px; line-height: 1.5; opacity: 0.6;">Fractional ownership and trading of real-world assets.</p>
                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: var(--slate); line-height: 2; opacity: 0.6;">
@@ -209,8 +210,8 @@ scripts:
             </div>
             <div class="feature-card">
                 <span class="feature-icon">🌐</span>
-                <h3>Total Flexibility</h3>
-                <p><strong>Issuers:</strong> One offering reaches both blockchain-native and traditional investors. Unified cap table regardless of format.<br><strong>Investors:</strong> Hold on blockchain or through your bank. Convert between formats as your requirements change. Same security, your choice.</p>
+                <h3>CrossSecurities Flexibility</h3>
+                <p><strong>Issuers:</strong> One offering reaches both on-chain and traditional investors. Unified cap table regardless of form.<br><strong>Investors:</strong> Hold on-chain or cross to bankable ISIN format. CrossConvert between forms as your requirements change. Same security, your choice.</p>
             </div>
         </div>
     </div>
@@ -218,11 +219,11 @@ scripts:
 <section class="global-section">
     <div class="global-container">
         <div class="global-card">
-            <span class="section-label">Bridge to Traditional Finance</span>
-            <h2 class="section-title">When traditional custody is required</h2>
-            <p>Some investors or institutions require securities held through traditional custodians. No problem. Any holder can request conversion to ISIN-identified format settled via Clearstream—accessible through any bank worldwide. Convert back to blockchain when it makes sense. Optional public listing on Vienna MTF for exchange visibility.</p>
-            <p style="margin-top: 1rem;"><strong>For Issuers:</strong> Reach investors who can't or won't hold blockchain assets directly. Your offering stays unified—one cap table, one governance structure—regardless of which format investors choose.</p>
-            <p style="margin-top: 0.5rem;"><strong>For Investors:</strong> Hold where your compliance requires. Move between formats as circumstances change. Your position remains the same security with the same rights, just different custody rails.</p>
+            <span class="section-label">CrossConversion</span>
+            <h2 class="section-title">Cross between on-chain and bankable</h2>
+            <p>CrossSecurities can be held on-chain (Solana) or in bankable form (ISIN via Clearstream) — and crossed between forms at will. Any holder can request CrossConversion for ~1.5% of nominal value. Cross to bankable when your bank requires ISIN custody. Cross back to on-chain when you want 24/7 liquidity. Optional Vienna MTF listing for exchange visibility.</p>
+            <p style="margin-top: 1rem;"><strong>For Issuers:</strong> One offering reaches both crypto-native and traditional investors. Unified cap table regardless of which form investors hold.</p>
+            <p style="margin-top: 0.5rem;"><strong>For Investors:</strong> Hold in whichever form your compliance requires. Cross between forms as circumstances change. Same security, same rights — different custody rails.</p>
         </div>
     </div>
 </section>

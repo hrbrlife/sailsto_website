@@ -26,11 +26,12 @@ stylesheets:
         <section class="term-section">
             <h2>Why It Matters</h2>
             <p>Security tokens represent the evolution of capital markets infrastructure. By encoding compliance rules directly into <a href="/knowledge/glossary/smart-contract/">smart contracts</a>, they eliminate the need for intermediaries while maintaining regulatory compliance. Investors benefit from increased liquidity through fractional ownership, while issuers gain access to global capital markets with reduced costs.</p>
-            <p>On Sails.to, every security token is backed by a real legal entity (typically a <a href="/knowledge/glossary/wyoming-dao-llc/">Wyoming DAO LLC</a> or <a href="/knowledge/glossary/series-llc/">Series LLC</a>), ensuring clear ownership rights and regulatory standing.</p>
+            <p>On Sails.to, security tokens are issued as <a href="/knowledge/glossary/crosssecurities/">CrossSecurities</a> — backed by a real legal entity (typically a <a href="/knowledge/glossary/wyoming-dao-llc/">Wyoming DAO LLC</a> or <a href="/knowledge/glossary/series-llc/">Series LLC</a>), ensuring clear ownership rights and regulatory standing. CrossSecurities can be held on-chain or <a href="/knowledge/glossary/crossconversion/">CrossConverted</a> to bankable ISIN form.</p>
         </section>
         <section class="term-section">
             <h2>Related Terms</h2>
             <div class="related-terms">
+                <a href="/knowledge/glossary/crosssecurities/" class="related-term-link">CrossSecurities</a>
                 <a href="/knowledge/glossary/tokenization/" class="related-term-link">Tokenization</a>
                 <a href="/knowledge/glossary/isin/" class="related-term-link">ISIN</a>
                 <a href="/knowledge/glossary/smart-contract/" class="related-term-link">Smart Contract</a>
@@ -38,8 +39,8 @@ stylesheets:
             </div>
         </section>
         <div class="term-cta">
-            <h3>Ready to issue your own security tokens?</h3>
-            <p>Launch your tokenized offering on Sails.to with full regulatory compliance.</p>
+            <h3>Ready to issue CrossSecurities?</h3>
+            <p>Launch your offering on Sails.to with full regulatory compliance.</p>
             <a href="/signup/?type=issuer" class="btn">Start Issuing</a>
         </div>
     </div>

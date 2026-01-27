@@ -1,11 +1,11 @@
 ---
 title: "For Brokers"
-description: "Expand your product offering with tokenized securities. 6% placement fee, secondary trading commissions, white-label capabilities."
+description: "Expand your product offering with Sails CrossSecurities. 6% placement fee, secondary trading commissions, white-label capabilities."
 keywords:
   - broker network
-  - securities distribution
+  - CrossSecurities distribution
   - OTC settlement
-  - tokenized securities
+  - on-chain securities
   - commission sharing
   - broker-dealer
   - securities trading
@@ -21,8 +21,8 @@ scripts:
 
 <section class="page-hero" style="background: var(--navy);">
     <span class="section-label">For Brokers</span>
-    <h1 class="section-title">Add tokenized securities<br>to your offering. Today.</h1>
-    <p class="section-desc">Primary placements, secondary trading, commission sharing — all ready. No platform to build, no compliance infrastructure to create. Plug in, access deal flow, earn from day one. Serve clients who want both blockchain efficiency and traditional custody.</p>
+    <h1 class="section-title">Add CrossSecurities<br>to your offering. Today.</h1>
+    <p class="section-desc">Primary placements, secondary trading, commission sharing — all ready. No platform to build, no compliance infrastructure to create. Plug in, access deal flow, earn from day one. Serve clients who want both on-chain efficiency and bankable custody.</p>
 </section>
 <section class="detail-section">
     <div class="detail-container">
@@ -320,7 +320,7 @@ scripts:
             <div class="feature-card">
                 <span class="feature-icon">🔐</span>
                 <h3>Custody Options</h3>
-                <p>Hold client assets on Solana or convert to ISIN for traditional custody via Clearstream. You choose what fits each client.</p>
+                <p>Hold client CrossSecurities on-chain (Solana) or CrossConvert to bankable ISIN form via Clearstream. You choose what fits each client.</p>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">📊</span>

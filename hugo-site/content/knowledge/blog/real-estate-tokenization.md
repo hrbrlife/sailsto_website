@@ -129,12 +129,12 @@ stylesheets:
             <li><strong>Sponsor track record:</strong> Investor confidence matters</li>
         </ul>
         <h2>Custody Options</h2>
-        <p>Real estate investors span from crypto-native to traditional institutional. Sails.to accommodates both:</p>
-        <h3>Self-Custody (Solana)</h3>
-        <p>Tokens held directly in investor's <span class="glossary-term" data-term="solana">Solana</span> wallet. Full control, no intermediary. Ideal for DeFi-comfortable investors.</p>
-        <h3>TradFi Bridge (Clearstream)</h3>
-        <p>For institutional investors requiring traditional <span class="glossary-term" data-term="custody">custody</span>, the <span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span> converts tokens to <span class="glossary-term" data-term="isin">ISIN</span>-bearing instruments held at <span class="glossary-term" data-term="clearstream">Clearstream</span>.</p>
-        <p>Same underlying security—different wrappers for different investor preferences.</p>
+        <p>Real estate investors span from crypto-native to traditional institutional. Sails CrossSecurities accommodates both:</p>
+        <h3>On-Chain Form (Solana)</h3>
+        <p>CrossSecurities held directly in investor's <span class="glossary-term" data-term="solana">Solana</span> wallet. Full control, no intermediary. Ideal for crypto-comfortable investors.</p>
+        <h3>Bankable Form (Clearstream)</h3>
+        <p>For institutional investors requiring traditional <span class="glossary-term" data-term="custody">custody</span>, <span class="glossary-term" data-term="crossconversion">CrossConversion</span> converts tokens to <span class="glossary-term" data-term="isin">ISIN</span>-bearing instruments held at <span class="glossary-term" data-term="clearstream">Clearstream</span>.</p>
+        <p>Same underlying security—different forms for different investor preferences.</p>
         <h2>The Distribution Advantage</h2>
         <p>Real estate generates regular income—rents, refinancing proceeds, sale proceeds. Traditional distribution is manual:</p>
         <ol>

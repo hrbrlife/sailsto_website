@@ -38,8 +38,8 @@ scripts:
                 <a href="/knowledge/docs/compliance-framework/" class="docs-link">Compliance Framework</a>
                 <a href="/knowledge/docs/kyc-integration/" class="docs-link">KYC Integration</a>
                 <a href="/knowledge/docs/transfer-rules/" class="docs-link">Transfer Rules</a>
-                <h4>TradFi Bridge</h4>
-                <a href="/knowledge/docs/tradfi-bridge/" class="docs-link">Bridge Overview</a>
+                <h4>CrossConversion</h4>
+                <a href="/knowledge/docs/tradfi-bridge/" class="docs-link">CrossConversion Overview</a>
                 <a href="/knowledge/docs/isin-conversion/" class="docs-link">ISIN Conversion</a>
                 <a href="/knowledge/docs/clearstream/" class="docs-link">Clearstream Integration</a>
             </nav>
@@ -47,7 +47,7 @@ scripts:
         <main class="docs-content">
             <div class="docs-hero-card">
                 <h2>Welcome to Sails.to Docs</h2>
-                <p>This documentation covers everything you need to understand, integrate with, and build on the Sails.to hybrid securities platform.</p>
+                <p>This documentation covers everything you need to understand, integrate with, and build on the Sails.to CrossSecurities platform.</p>
                 <div class="docs-quick-links">
                     <a href="/knowledge/docs/getting-started/" class="docs-quick-link">
                         <span class="icon">🚀</span>
@@ -117,8 +117,8 @@ scripts:
                 <a href="/knowledge/docs/api-reference/" class="docs-section-link">View Full API Reference →</a>
             </section>
             <section class="docs-section">
-                <h3>TradFi Bridge</h3>
-                <p>The TradFi Bridge enables seamless conversion between Solana tokens and ISIN-denominated securities at Clearstream.</p>
+                <h3>CrossConversion</h3>
+                <p>CrossConversion enables seamless conversion between Solana tokens and ISIN-denominated securities at Clearstream.</p>
                 <div class="docs-diagram">
                     <div class="docs-diagram-step">
                         <span class="step-num">1</span>
@@ -135,7 +135,7 @@ scripts:
                         <span class="step-text">ISIN securities credited at Clearstream</span>
                     </div>
                 </div>
-                <a href="/knowledge/docs/tradfi-bridge/" class="docs-section-link">Learn More About the Bridge →</a>
+                <a href="/knowledge/docs/tradfi-bridge/" class="docs-section-link">Learn More About CrossConversion →</a>
             </section>
             <section class="docs-section">
                 <h3>Need Help?</h3>

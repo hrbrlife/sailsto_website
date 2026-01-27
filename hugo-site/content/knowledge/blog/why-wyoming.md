@@ -51,9 +51,9 @@ stylesheets:
             "Wyoming has done more for blockchain innovation than any other jurisdiction in the world. It's not about deregulation—it's about clarity."
             <cite>— Caitlin Long, Founder of Custodia Bank</cite>
         </blockquote>
-        <h2>Beyond Wyoming: The TradFi Bridge</h2>
-        <p>Wyoming gives us legal foundation. Our <span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span> gives us global reach. By converting tokens to <span class="glossary-term" data-term="isin">ISIN</span> format and settling through <span class="glossary-term" data-term="clearstream">Clearstream</span>, we make Wyoming-based tokens accessible to any investor with a brokerage account.</p>
-        <p>This hybrid approach—blockchain innovation backed by traditional finance infrastructure—is what makes Sails.to unique. We're not asking investors to choose between crypto and TradFi. We're giving them both.</p>
+        <h2>Beyond Wyoming: CrossConversion</h2>
+        <p>Wyoming gives us legal foundation. Our <span class="glossary-term" data-term="crossconversion">CrossConversion</span> gives us global reach. By converting tokens to <span class="glossary-term" data-term="isin">ISIN</span> format and settling through <span class="glossary-term" data-term="clearstream">Clearstream</span>, we make Wyoming-based tokens accessible to any investor with a brokerage account.</p>
+        <p>This hybrid approach—blockchain innovation backed by bankable finance infrastructure—is what makes Sails.to unique. We're not asking investors to choose between on-chain and bankable. We're giving them both.</p>
         <h2>The Future of Crypto Regulation</h2>
         <p>Other states are watching Wyoming closely. Texas, Colorado, and Arizona have all passed blockchain-friendly legislation. At the federal level, the conversation is shifting from "should we regulate crypto?" to "how should we regulate crypto?"</p>
         <p>By building on Wyoming's legal framework now, Sails.to is positioned for whatever comes next. We're not operating in a regulatory gray area—we're building on explicit, tested law that's already survived multiple legislative sessions and legal challenges.</p>

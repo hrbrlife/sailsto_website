@@ -1,6 +1,6 @@
 ---
 title: "Contact Us"
-description: "Get in touch with the Sails.to team. For issuers, investors, brokers, or general inquiries about our hybrid securities platform."
+description: "Get in touch with the Sails.to team. For issuers, investors, brokers, or general inquiries about our CrossSecurities platform."
 keywords:
   - contact sails.to
   - get in touch
