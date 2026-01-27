@@ -142,8 +142,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 4rem;
     position: relative;
+}
+
+.card-hero .card-emoji {
+    font-size: 4rem;
 }
 
 
@@ -395,5 +398,191 @@
 
     .trust-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   FLIP CARD STYLES
+═══════════════════════════════════════════════════════════════ */
+.flip-card-container {
+    perspective: 1000px;
+    height: 520px;
+}
+
+.flip-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.flip-card-container:hover .flip-card {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+.flip-card-front {
+    background: white;
+    position: relative;
+}
+
+/* Badge - direct child of flip-card-front, outside card-hero */
+.flip-card-front > .card-type-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 10px;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-radius: 4px;
+    z-index: 10;
+    line-height: 1.4;
+    background: #2563eb;
+    color: white;
+}
+
+.flip-card-front > .card-type-badge.profit-share {
+    background: #16a34a;
+}
+
+.flip-card-front > .card-type-badge.hybrid {
+    background: linear-gradient(135deg, #2563eb 50%, #16a34a 50%);
+}
+
+.flip-card-back {
+    background: #1a202c;
+    transform: rotateY(180deg);
+    color: white;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Front Card - Enhanced */
+.flip-card-front .card-hero {
+    height: 120px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Emoji icon in card hero */
+/* Emoji icon in card hero */
+.flip-card-front .card-hero .card-emoji {
+    font-size: 3.5rem;
+}
+
+.flip-card-front .card-content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.card-issuer-name {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.flip-card-front .flip-hint {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    font-size: 0.7rem;
+    color: var(--silver);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Back Card Styles */
+.back-header {
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+    padding-bottom: 16px;
+    margin-bottom: 16px;
+}
+
+.back-issuer {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #f6e05e;
+    margin-bottom: 4px;
+}
+
+.back-meta {
+    font-size: 0.75rem;
+    color: rgba(255,255,255,0.6);
+}
+
+.back-section {
+    margin-bottom: 14px;
+}
+
+.back-section-title {
+    font-size: 0.6rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #f6e05e;
+    margin-bottom: 6px;
+}
+
+.back-section p {
+    font-size: 0.78rem;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.85);
+    margin: 0;
+}
+
+.back-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+    padding-top: 14px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+.back-tag {
+    font-size: 0.6rem;
+    padding: 4px 8px;
+    background: rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.8);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.back-tag.security {
+    background: rgba(246,224,94,0.25);
+    color: #f6e05e;
+}
+
+.flip-card-front .card-cta {
+    margin-top: auto;
+}
+
+@media (max-width: 768px) {
+    .flip-card-container {
+        height: 540px;
     }
 }
