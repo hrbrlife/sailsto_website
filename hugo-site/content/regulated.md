@@ -1,14 +1,16 @@
 ---
 title: "For Regulated Institutions"
-description: "Wyoming DAO LLC legal structure, Reg D/Reg S compliance, full KYC/AML verification, Clearstream custody integration."
+description: "Wyoming DAO LLC legal structure, Reg D/Reg S compliance, full KYC/AML verification, CrossConversion to bankable ISIN custody."
 keywords:
   - regulated institutions
   - institutional custody
+  - CrossSecurities
   - Clearstream
   - ISIN
   - compliance
   - KYC AML
   - institutional investors
+  - CrossConversion
 ogImage: "/og-institutions.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
@@ -18,8 +20,8 @@ stylesheets:
 
 <section class="page-hero" style="background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0a 100%);">
     <span class="section-label">For Trust Companies, VCs & Multi-Family Offices</span>
-    <h1 class="section-title">Full platform sovereignty.<br>Your regulatory wrapper.</h1>
-    <p class="section-desc">Deploy a complete securities infrastructure under your brand: issuance, compliance, trading, custody bridge. You approve every issuer, authorize every trustee, control every broker relationship. We're the invisible technology layer. You're the platform operator.</p>
+    <h1 class="section-title">Full CrossSecurities sovereignty.<br>Your regulatory wrapper.</h1>
+    <p class="section-desc">Deploy a complete CrossSecurities infrastructure under your brand: issuance, compliance, trading, CrossConversion custody bridge. You approve every issuer, authorize every trustee, control every broker relationship. We're the invisible technology layer. You're the platform operator.</p>
 </section>
 <section class="detail-section">
     <div class="detail-container">
@@ -168,22 +170,22 @@ stylesheets:
     <div class="detail-container">
         <div class="detail-grid">
             <div class="detail-content">
-                <h2>Custody flexibility</h2>
-                <p>Securities settle on Solana by default. For investors requiring traditional custody, convert to ISIN-identified format via Clearstream. Settles to any bank worldwide.</p>
-                <p>You control the conversion process. Issuer-level permissions. Trust oversight configurable. Always 1:1 backed between formats.</p>
+                <h2>CrossSecurities custody flexibility</h2>
+                <p>CrossSecurities settle on Solana by default. For investors requiring bankable custody, CrossConvert to ISIN-identified format via Clearstream. Settles to any bank worldwide.</p>
+                <p>You control the CrossConversion process. Issuer-level permissions. Trust oversight configurable. Always 1:1 backed between forms.</p>
             </div>
             <ul class="detail-list">
                 <li>
                     <span class="icon">⛓️</span>
                     <div class="text">
-                        <h4>On-Chain (Solana)</h4>
+                        <h4>On-Chain Form (Solana)</h4>
                         <p>24/7 settlement. Programmable compliance. Self-custody or qualified custodian.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">🏦</span>
+                    <span class="icon">🏛</span>
                     <div class="text">
-                        <h4>Traditional (ISIN/Clearstream)</h4>
+                        <h4>Bankable Form (ISIN/Clearstream)</h4>
                         <p>ISIN identifier. Clearstream settlement. Compatible with any private bank worldwide.</p>
                     </div>
                 </li>
@@ -191,7 +193,7 @@ stylesheets:
                     <span class="icon">📈</span>
                     <div class="text">
                         <h4>Exchange Listing</h4>
-                        <p>Optional Vienna MTF listing for public price discovery. You decide which securities qualify.</p>
+                        <p>Optional Vienna MTF listing for public price discovery. You decide which CrossSecurities qualify.</p>
                     </div>
                 </li>
             </ul>
@@ -202,7 +204,7 @@ stylesheets:
     <div class="features-container">
         <div class="features-header">
             <span class="section-label">Platform Capabilities</span>
-            <h2 class="section-title">Everything to run your own<br>securities infrastructure</h2>
+            <h2 class="section-title">Everything to run your own<br>CrossSecurities infrastructure</h2>
         </div>
         <div class="feature-grid three-col">
             <div class="feature-card">

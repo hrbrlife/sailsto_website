@@ -132,8 +132,8 @@ scripts:
                 <div class="step-number">4</div>
                 <div class="step-content">
                     <h4>Choose Your Custody Model</h4>
-                    <p><strong>Self-custody:</strong> Connect or create a Solana wallet for direct token ownership.<br>
-                    <strong>TradFi Bridge:</strong> Select institutional custody via Clearstream with <span class="glossary-term" data-term="isin">ISIN</span> assignment.</p>
+                    <p><strong>On-Chain Form:</strong> Connect or create a Solana wallet for direct token ownership.<br>
+                    <strong>Bankable Form:</strong> Select institutional custody via <span class="glossary-term" data-term="crossconversion">CrossConversion</span> to Clearstream with <span class="glossary-term" data-term="isin">ISIN</span> assignment.</p>
                 </div>
             </div>
             <div class="step-card">

@@ -41,18 +41,18 @@ scripts:
                     <span class="milestone-check">✓</span>
                     <div class="milestone-icon">🏛️</div>
                     <h3 class="milestone-title">Wyoming DAO LLC Formation</h3>
-                    <p class="milestone-desc">Legal entity established with full compliance framework for tokenized securities.</p>
+                    <p class="milestone-desc">Legal entity established with full compliance framework for CrossSecurities.</p>
                 </div>
                 <div class="milestone-card completed">
                     <span class="milestone-check">✓</span>
                     <div class="milestone-icon">⚙️</div>
                     <h3 class="milestone-title">Core Platform Architecture</h3>
-                    <p class="milestone-desc">Solana smart contracts designed and audited for security token issuance.</p>
+                    <p class="milestone-desc">Solana smart contracts designed and audited for CrossSecurities issuance.</p>
                 </div>
                 <div class="milestone-card completed">
                     <span class="milestone-check">✓</span>
                     <div class="milestone-icon">🔗</div>
-                    <h3 class="milestone-title">TradFi Bridge Design</h3>
+                    <h3 class="milestone-title">CrossConversion Design</h3>
                     <p class="milestone-desc">ISIN integration pathway and Clearstream custody protocol finalized.</p>
                 </div>
                 <div class="milestone-card completed">
@@ -85,8 +85,8 @@ scripts:
                 </div>
                 <div class="milestone-card">
                     <div class="milestone-icon">💰</div>
-                    <h3 class="milestone-title">First Offering Launch</h3>
-                    <p class="milestone-desc">Inaugural tokenized security offering goes live on the platform.</p>
+                    <h3 class="milestone-title">First CrossSecurities Launch</h3>
+                    <p class="milestone-desc">Inaugural CrossSecurities offering goes live on the platform.</p>
                 </div>
                 <div class="milestone-card">
                     <div class="milestone-icon">✅</div>
@@ -106,7 +106,7 @@ scripts:
             <div class="milestones-grid">
                 <div class="milestone-card">
                     <div class="milestone-icon">🏦</div>
-                    <h3 class="milestone-title">TradFi Bridge Live</h3>
+                    <h3 class="milestone-title">CrossConversion Live</h3>
                     <p class="milestone-desc">Full ISIN conversion and Clearstream custody operational.</p>
                 </div>
                 <div class="milestone-card">
@@ -184,7 +184,7 @@ scripts:
                 <div class="milestone-card">
                     <div class="milestone-icon">🌐</div>
                     <h3 class="milestone-title">Global Standard</h3>
-                    <p class="milestone-desc">Become the reference implementation for hybrid securities infrastructure.</p>
+                    <p class="milestone-desc">Become the reference implementation for CrossSecurities infrastructure.</p>
                 </div>
             </div>
         </div>
@@ -194,8 +194,8 @@ scripts:
     <div class="vision-container">
         <span class="section-label">Our Vision</span>
         <h2 class="vision-title">Building the Rails for Tomorrow's Capital Markets</h2>
-        <p class="vision-text">We believe the future of finance isn't about choosing between traditional and decentralized systems—it's about seamlessly bridging both. Sails.to is building the infrastructure that makes this possible.</p>
-        <p class="vision-text">Every milestone on this roadmap brings us closer to a world where any asset can be tokenized, any investor can participate (within regulatory bounds), and capital flows freely across borders while maintaining full compliance.</p>
+        <p class="vision-text">We believe the future of finance isn't about choosing between traditional and decentralized systems—it's about seamlessly bridging both. Sails.to is building the CrossSecurities infrastructure that makes this possible.</p>
+        <p class="vision-text">Every milestone on this roadmap brings us closer to a world where any asset can be tokenized as CrossSecurities, any investor can participate (within regulatory bounds), and capital flows freely across borders while maintaining full compliance.</p>
         <p class="vision-text">This isn't just a product roadmap. It's a blueprint for how securities will work in the 21st century.</p>
     </div>
 </section>

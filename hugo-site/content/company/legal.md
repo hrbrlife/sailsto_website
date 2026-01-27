@@ -1,6 +1,6 @@
 ---
 title: "Legal"
-description: "Legal information, terms of service, privacy policy, and regulatory disclosures for Sails.to hybrid securities platform."
+description: "Legal information, terms of service, privacy policy, and regulatory disclosures for Sails.to CrossSecurities platform."
 keywords:
   - terms of service
   - privacy policy
@@ -167,7 +167,7 @@ scripts:
                 <li><strong>Blockchain Risks:</strong> Smart contracts may contain bugs; blockchain networks may experience congestion or forks</li>
                 <li><strong>Custody Risks:</strong> Loss of private keys results in permanent loss of tokens; custodial services have counterparty risk</li>
                 <li><strong>Cybersecurity:</strong> Hacking, phishing, and other cyber threats may result in loss of assets</li>
-                <li><strong>Interoperability:</strong> The TradFi Bridge system, while designed for reliability, introduces additional technical dependencies</li>
+                <li><strong>Interoperability:</strong> The CrossConversion system, while designed for reliability, introduces additional technical dependencies</li>
             </ul>
             <h3>3. Regulatory Risks</h3>
             <ul>

@@ -1,11 +1,11 @@
 ---
 title: "Get Started"
-description: "Join the Sails.to platform. Whether you're an issuer, investor, broker, or institution, start your journey with compliant tokenized securities."
+description: "Join the Sails.to platform. Whether you're an issuer, investor, broker, or institution, start your journey with compliant Sails CrossSecurities."
 keywords:
   - sign up
   - get started
   - register
-  - tokenized securities
+  - CrossSecurities
   - issuer registration
   - investor onboarding
   - broker application
@@ -23,7 +23,7 @@ scripts:
 <section class="signup-section">
     <div class="signup-container">
         <div class="signup-content">
-            <h1>Start Your Journey with Hybrid Securities</h1>
+            <h1>Start Your Journey with Sails CrossSecurities</h1>
             <p>Join the platform that bridges blockchain innovation with traditional finance infrastructure. Whether you're raising capital or seeking investment opportunities, we're here to help.</p>
             <ul class="signup-benefits">
                 <li>
@@ -43,8 +43,8 @@ scripts:
                 <li>
                     <span class="icon">🔄</span>
                     <div class="text">
-                        <h4>Hybrid Custody</h4>
-                        <p>Hold on Solana or convert to ISIN for bank custody</p>
+                        <h4>CrossConversion Custody</h4>
+                        <p>Hold on-chain (Solana) or CrossConvert to bankable ISIN form</p>
                     </div>
                 </li>
                 <li>

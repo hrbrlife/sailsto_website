@@ -1,9 +1,10 @@
 ---
 title: "FAQ"
-description: "Frequently asked questions about Sails.to tokenized securities platform. Learn about tokenization, compliance, costs, timelines, and how to get started."
+description: "Frequently asked questions about Sails.to CrossSecurities platform. Learn about CrossSecurities, CrossConversion, compliance, costs, timelines, and how to get started."
 keywords:
-  - tokenization FAQ
-  - security token questions
+  - crosssecurities FAQ
+  - tokenization questions
+  - CrossConversion questions
   - compliance questions
   - how to tokenize
   - tokenization costs
@@ -11,7 +12,7 @@ ogImage: "/og-faq.png"
 faqSchema: true
 faqItems:
   - question: "What is Sails.to?"
-    answer: "Sails.to is a hybrid securities infrastructure platform that bridges blockchain technology with traditional finance. We enable businesses to issue compliant security tokens that can be held natively on the Solana blockchain or converted to traditional securities with an ISIN for custody at institutions like Clearstream."
+    answer: "Sails.to is a CrossSecurities infrastructure platform that bridges blockchain technology with traditional finance. We enable businesses to issue compliant CrossSecurities that can be held on-chain on the Solana blockchain or CrossConverted to bankable securities with an ISIN for custody at institutions like Clearstream."
   - question: "How much does it cost to launch a token?"
     answer: "Zero upfront cost. We operate on a success-based fee model. Direct investors pay 1% distribution fee, broker-introduced investors pay 6% (includes broker commission). Secondary trades incur 0.5% fee. If soft cap fails, investors get full refund."
   - question: "How long does it take to launch?"
@@ -19,7 +20,7 @@ faqItems:
   - question: "Who can invest on Sails.to?"
     answer: "Offerings are available to accredited investors (U.S.) and professional investors (international) only. Requirements include net worth over $1M, annual income over $200K, professional certifications, or institutional status."
   - question: "How do I custody my tokens?"
-    answer: "Two options: Self-custody on Solana using any compatible wallet (Phantom, Solflare, Ledger), or traditional custody via ISIN at Clearstream accessible through your bank. You can switch between formats anytime."
+    answer: "Two options: Self-custody on Solana using any compatible wallet (Phantom, Solflare, Ledger), or bankable custody via ISIN at Clearstream accessible through your bank. You can CrossConvert between formats anytime."
   - question: "What legal structure do you provide?"
     answer: "We create a Wyoming DAO LLC with Series LLC architecture. Each offering exists as an isolated series with its own assets, liabilities, and investors, providing liability protection while maintaining operational efficiency."
 stylesheets:
@@ -35,7 +36,7 @@ scripts:
 <section class="page-hero">
     <span class="section-label">Support</span>
     <h1 class="section-title">Frequently Asked Questions</h1>
-    <p class="section-desc">Find answers to common questions about tokenized securities and our platform.</p>
+    <p class="section-desc">Find answers to common questions about Sails CrossSecurities and our platform.</p>
 </section>
 <section class="faq-nav-section">
     <div class="faq-container">
@@ -61,7 +62,7 @@ scripts:
                     <span class="faq-toggle">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Sails.to is a hybrid securities infrastructure platform that bridges blockchain technology with traditional finance. We enable businesses to issue compliant <span class="glossary-term" data-term="security-token">security tokens</span> that can be held either natively on the <span class="glossary-term" data-term="solana">Solana</span> blockchain or converted to traditional securities with an <span class="glossary-term" data-term="isin">ISIN</span> for custody at institutions like <span class="glossary-term" data-term="clearstream">Clearstream</span>.</p>
+                    <p>Sails.to is a CrossSecurities infrastructure platform that bridges blockchain technology with traditional finance. We enable businesses to issue compliant <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> that can be held either on-chain on the <span class="glossary-term" data-term="solana">Solana</span> blockchain or <span class="glossary-term" data-term="crossconversion">CrossConverted</span> to bankable securities with an <span class="glossary-term" data-term="isin">ISIN</span> for custody at institutions like <span class="glossary-term" data-term="clearstream">Clearstream</span>.</p>
                 </div>
             </div>
             <div class="faq-item">
@@ -70,7 +71,7 @@ scripts:
                     <span class="faq-toggle">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Most tokenization platforms force you to choose: either blockchain-native tokens (inaccessible to traditional investors) or traditional securities (missing blockchain benefits). Our <span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span> technology lets investors choose their preferred format — and switch between them. You get blockchain speed and programmability with traditional finance legitimacy and accessibility.</p>
+                    <p>Most tokenization platforms force you to choose: either blockchain-native tokens (inaccessible to traditional investors) or traditional securities (missing blockchain benefits). Our <span class="glossary-term" data-term="crossconversion">CrossConversion</span> technology lets investors choose their preferred format — and switch between them. You get blockchain speed and programmability with traditional finance legitimacy and accessibility. That's what makes our <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> unique.</p>
                 </div>
             </div>
             <div class="faq-item">
@@ -177,7 +178,7 @@ scripts:
                     <span class="faq-toggle">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p><span class="glossary-term" data-term="distributions">Distributions</span> can be paid in stablecoins (USDC) directly to investor wallets, or via traditional bank transfer for investors holding securities in ISIN format. Our <span class="glossary-term" data-term="cap-table">cap table</span> management automatically tracks ownership and calculates pro-rata distributions.</p>
+                    <p><span class="glossary-term" data-term="distributions">Distributions</span> can be paid in stablecoins (USDC) directly to investor wallets for on-chain CrossSecurities, or via traditional bank transfer for CrossSecurities held in bankable ISIN format. Our <span class="glossary-term" data-term="cap-table">cap table</span> management automatically tracks ownership and calculates pro-rata distributions.</p>
                 </div>
             </div>
         </div>
@@ -214,10 +215,10 @@ scripts:
                 <div class="faq-answer">
                     <p>You have two options:</p>
                     <ol>
-                        <li><strong>Self-custody (Solana):</strong> Hold tokens in any Solana-compatible wallet (Phantom, Solflare, Ledger). You control your private keys.</li>
-                        <li><strong>Traditional custody (ISIN):</strong> Convert tokens to securities held at <span class="glossary-term" data-term="clearstream">Clearstream</span>, accessible through your bank or brokerage account.</li>
+                        <li><strong>On-chain form (Solana):</strong> Hold CrossSecurities in any Solana-compatible wallet (Phantom, Solflare, Ledger). You control your private keys.</li>
+                        <li><strong>Bankable form (ISIN):</strong> CrossConvert to securities held at <span class="glossary-term" data-term="clearstream">Clearstream</span>, accessible through your bank or brokerage account.</li>
                     </ol>
-                    <p>You can switch between formats at any time via our <span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span>.</p>
+                    <p>You can <span class="glossary-term" data-term="crossconversion">CrossConvert</span> between formats at any time.</p>
                 </div>
             </div>
             <div class="faq-item">
@@ -354,16 +355,16 @@ scripts:
             </div>
             <div class="faq-item">
                 <button class="faq-question">
-                    <span>How does the TradFi Bridge work?</span>
+                    <span>How does CrossConversion work?</span>
                     <span class="faq-toggle">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>The <span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span> converts between blockchain tokens and traditional securities:</p>
+                    <p><span class="glossary-term" data-term="crossconversion">CrossConversion</span> converts <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> between on-chain and bankable form:</p>
                     <ol>
-                        <li><strong>Token → ISIN:</strong> Burn tokens on Solana, issue equivalent securities at Clearstream with <span class="glossary-term" data-term="isin">ISIN</span> identifier</li>
-                        <li><strong>ISIN → Token:</strong> Cancel Clearstream position, mint equivalent tokens to verified wallet</li>
+                        <li><strong>Cross to Bankable:</strong> Burn tokens on Solana, issue equivalent securities at Clearstream with <span class="glossary-term" data-term="isin">ISIN</span> identifier</li>
+                        <li><strong>Cross to On-Chain:</strong> Cancel Clearstream position, mint equivalent tokens to verified wallet</li>
                     </ol>
-                    <p>Conversion takes 1-3 business days and maintains 1:1 correspondence. Total supply is always preserved.</p>
+                    <p>CrossConversion takes 1-3 business days and maintains 1:1 correspondence. Total supply is always preserved.</p>
                 </div>
             </div>
             <div class="faq-item">

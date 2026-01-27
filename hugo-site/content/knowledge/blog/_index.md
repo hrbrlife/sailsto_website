@@ -80,7 +80,7 @@ scripts:
                         <span class="blog-date">Jan 5, 2025</span>
                     </div>
                     <h3>Hybrid Custody: Best of Both Worlds</h3>
-                    <p>How our TradFi Bridge lets investors choose their preferred custody model — self-custody on Solana or traditional custody via Clearstream.</p>
+                    <p>How CrossConversion lets investors choose their preferred custody model — self-custody on Solana or bankable custody via Clearstream.</p>
                     <span class="blog-read-time">6 min read</span>
                 </div>
             </a>

@@ -1,13 +1,13 @@
 ---
 title: "Pricing"
-description: "Transparent pricing calculator. Understand your costs based on investor sourcing and offering size."
+description: "Transparent pricing calculator for Sails CrossSecurities. Understand your costs based on investor sourcing and offering size."
 keywords:
-  - tokenization pricing
-  - security token costs
+  - CrossSecurities pricing
+  - tokenization costs
   - capital raising fees
   - success-based pricing
   - no upfront fees
-  - STO pricing
+  - CrossSecurities offering
 ogImage: "/og-pricing.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
@@ -220,9 +220,9 @@ scripts:
                     <td>Clearstream</td>
                 </tr>
                 <tr>
-                    <td><strong>Conversion Fee</strong></td>
+                    <td><strong>CrossConversion Fee</strong></td>
                     <td><span class="fee-highlight">0.10-0.25%</span></td>
-                    <td>When wrapping/unwrapping Solana ↔ Clearstream</td>
+                    <td>When CrossConverting between On-Chain ↔ Bankable form</td>
                     <td>Requester</td>
                     <td>Sails.to + Trust</td>
                 </tr>

@@ -1,11 +1,13 @@
 ---
 title: "How It Works"
-description: "Understand how Sails.to works: Wyoming DAO LLC structure, tokenized securities, OTC trading, ISIN conversion, smart contracts, and Melusina OS infrastructure."
+description: "Understand how Sails CrossSecurities work: Wyoming DAO LLC structure, on-chain and bankable forms, CrossConversion between formats, OTC trading, smart contracts, and Melusina OS infrastructure."
 keywords:
   - how it works
+  - CrossSecurities
   - Wyoming DAO
-  - tokenized securities
-  - OTC trading
+  - CrossConversion
+  - on-chain securities
+  - bankable securities
   - ISIN conversion
   - smart contracts
   - Solana
@@ -24,8 +26,8 @@ scripts:
 
 <section class="page-hero" style="background: var(--ink);">
     <span class="section-label">How It Works</span>
-    <h1 class="section-title">Hybrid securities<br>infrastructure</h1>
-    <p class="section-desc">The complete platform: Wyoming DAO LLC structure, tokenized securities on Solana, OTC broker network, traditional finance bridges, smart contracts, and Melusina OS operating system. Everything needed to raise capital on your own terms.</p>
+    <h1 class="section-title">CrossSecurities<br>infrastructure</h1>
+    <p class="section-desc">The complete platform: Wyoming DAO LLC structure, CrossSecurities on Solana with CrossConversion to bankable ISIN format, OTC broker network, smart contracts, and Melusina OS operating system. Everything needed to raise capital on your own terms.</p>
 </section>
 <style>
     .toc-box {
@@ -204,8 +206,8 @@ scripts:
         <div class="toc-item">
             <div class="toc-item-num">5</div>
             <div class="toc-item-content">
-                <h3><a href="#conversion">Conversion</a></h3>
-                <p>Between blockchain and traditional finance</p>
+                <h3><a href="#conversion">CrossConversion</a></h3>
+                <p>Between on-chain and bankable forms</p>
             </div>
         </div>
         <div class="toc-item">
@@ -234,7 +236,7 @@ scripts:
 <section class="content-section" id="overview">
     <div class="content-container">
         <h2>1. Platform Overview</h2>
-        <p>Sails.to is built in five layers. Each layer solves a specific problem; together they enable compliant, transparent, automated securities operations:</p>
+        <p>Sails CrossSecurities are built on five layers. Each layer solves a specific problem; together they enable compliant, transparent, automated securities operations:</p>
         <div class="mermaid">
         flowchart TB
             subgraph Layer1[Layer 1: Issuer]
@@ -250,13 +252,13 @@ scripts:
             subgraph Layer4[Layer 4: Infrastructure]
                 SOL[⚡ Solana<br/>Settlement & credentials]
             end
-            subgraph Layer5[Layer 5: Traditional Finance]
+            subgraph Layer5[Layer 5: Bankable Form]
                 CLEAR[📄 Clearstream<br/>ISIN-identified holdings]
             end
             Layer1 --> Layer2
             Layer2 --> Layer3
             Layer3 --> Layer4
-            Layer1 -.->|optional bridge| Layer5
+            Layer1 -.->|CrossConversion| Layer5
             style Layer1 fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
             style Layer2 fill:#d69e2e,color:#fff,stroke:#c05621,stroke-width:2px
             style Layer3 fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
@@ -336,7 +338,7 @@ scripts:
             subgraph Series[Separate Series Within Your LLC]
                 S1[💼 Series A: Operating<br/>Pledges, Revenue, Assets]
                 S2[💰 Series B: Treasury<br/>Reserves, Distributions]
-                S3[🔒 Series C: TradFi Bridge<br/>Solana ↔ ISIN Conversion]
+                S3[🔒 Series C: CrossConversion<br/>On-Chain ↔ Bankable ISIN]
                 S4[📄 Series D: Future Offerings]
             end
             DAO --> S1
@@ -375,23 +377,23 @@ scripts:
                     <td>Trust oversight</td>
                 </tr>
                 <tr>
-                    <td><strong>TradFi Bridge Series</strong></td>
-                    <td>Handles Solana token ↔ ISIN-identified security conversion. Any token holder can request conversion for 1.5% of nominal value. (see <a href="#conversion">Section 5</a>)</td>
+                    <td><strong>CrossConversion Series</strong></td>
+                    <td>Handles on-chain token ↔ bankable ISIN-identified security conversion. Any token holder can request CrossConversion for 1.5% of nominal value. (see <a href="#conversion">Section 5</a>)</td>
                     <td>Issuer + Trust oversight</td>
                 </tr>
             </tbody>
         </table>
         <div class="concept-box">
-            <h4>Optional Level-Ups for Traditional Infrastructure</h4>
-            <p><strong>ISIN + Clearstream Registration</strong>: An ISIN is a security identifier, not a security itself. When required, issuers can register an ISIN and enable settlement via Clearstream (at cost, approximately <strong>&lt;$4k</strong>). The TradFi Bridge handles the 1:1 relationship between on-chain tokens and traditional holdings.</p>
-            <p><strong>ViennaMTF Public Listing</strong>: If you require your securities to be publicly listed on an exchange, ViennaMTF registration is available (at cost, approximately <strong>&lt;$3k</strong>).</p>
+            <h4>Optional Level-Ups for Bankable Form</h4>
+            <p><strong>ISIN + Clearstream Registration</strong>: An ISIN is a security identifier that enables CrossConversion to bankable form. When required, issuers can register an ISIN and enable settlement via Clearstream (at cost, approximately <strong>&lt;$4k</strong>). The CrossConversion Series handles the 1:1 relationship between on-chain tokens and bankable holdings.</p>
+            <p><strong>ViennaMTF Public Listing</strong>: If you require your CrossSecurities to be publicly listed on an exchange, ViennaMTF registration is available (at cost, approximately <strong>&lt;$3k</strong>).</p>
             <p><em>Sails.to supports the workflow and required data for these optional services; registration is completed through the appropriate traditional infrastructure partners.</em></p>
         </div>
     </div>
 </section>
 <section class="content-section" id="issuance">
     <div class="content-container">
-        <h2>3. How New Securities Are Created</h2>
+        <h2>3. How CrossSecurities Are Created</h2>
         <h3>The Fundraising System</h3>
         <p>Every offering has three parameters and two pricing phases:</p>
         <table>
@@ -453,13 +455,13 @@ scripts:
             MINT[🏭 Tokens Minted<br/>Amount = Hard Cap] -->|held in| TREASURY[Issuer Treasury Account]
             TREASURY -->|direct to<br/>referral investors| CH1[📋 Channel 1<br/>Direct Sales]
             TREASURY -->|via licensed<br/>brokers| CH2[🏦 Channel 2<br/>Broker Network]
-            TREASURY -->|wrapped for<br/>traditional rails| CH3[🌐 Channel 3<br/>ISIN / Clearstream]
+            TREASURY -->|crossed for<br/>bankable rails| CH3[🌐 Channel 3<br/>ISIN / Clearstream]
             CH1 -->|on-chain| INV1[Partners &<br/>Co-investors]
             CH2 -->|on-chain| INV2[KYC'd Professional<br/>Investors]
-            CH3 -->|locked| WRAP[TradFi Bridge]
-            WRAP -->|1:1 wrapped| ISIN[ISIN-Identified Security<br/>via Clearstream]
+            CH3 -->|locked| WRAP[CrossConversion Series]
+            WRAP -->|1:1 crossed| ISIN[Bankable ISIN Security<br/>via Clearstream]
             ISIN -->|distributed by| BANK[Paying Agent Bank]
-            BANK -->|Clearstream| INV3[Traditional<br/>Investors]
+            BANK -->|Clearstream| INV3[Bankable-Preferred<br/>Investors]
             style MINT fill:#2c5282,color:#fff
             style TREASURY fill:#3182ce,color:#fff
             style CH1 fill:#38a169,color:#fff
@@ -498,20 +500,20 @@ scripts:
                 <tr>
                     <td><strong style="color:#805ad5;">3. ISIN / Clearstream</strong></td>
                     <td>Paying agent bank</td>
-                    <td>Traditional/institutional investors</td>
-                    <td>Clearstream (traditional rails)</td>
+                    <td>Bankable-preferred/institutional investors</td>
+                    <td>Clearstream (bankable rails)</td>
                 </tr>
             </tbody>
         </table>
         <div class="concept-box">
-            <h4>How Channel 3 Works</h4>
-            <p>Some investors only work with traditional securities infrastructure. Channel 3 bridges that gap:</p>
+            <h4>How Channel 3 Works (CrossConversion)</h4>
+            <p>Some investors only work with bankable securities infrastructure. Channel 3 bridges that gap via CrossConversion:</p>
             <ol>
-                <li>You lock tokens in your <strong>TradFi Bridge Series</strong></li>
-                <li>Tokens are wrapped 1:1 into ISIN-identified securities (you self-register the ISIN)</li>
+                <li>You lock tokens in your <strong>CrossConversion Series</strong></li>
+                <li>Tokens are crossed 1:1 into bankable ISIN-identified securities</li>
                 <li>Your <strong>paying agent bank</strong> distributes them via Clearstream</li>
             </ol>
-            <p>The same investment, accessible through traditional finance rails, under your control.</p>
+            <p>The same CrossSecurity, accessible through bankable rails, under your control.</p>
         </div>
         <div class="concept-box">
             <h4>Fees</h4>
@@ -574,7 +576,7 @@ scripts:
                     <td>Open to all KYC'd Professional Investors</td>
                 </tr>
                 <tr>
-                    <td><strong>Conversions (Solana ↔ Clearstream)</strong></td>
+                    <td><strong>CrossConversions (On-Chain ↔ Bankable)</strong></td>
                     <td>You only</td>
                     <td>You only</td>
                     <td>Open to all KYC'd Professional Investors</td>
@@ -807,38 +809,38 @@ scripts:
 </section>
 <section class="content-section" id="conversion">
     <div class="content-container">
-        <h2>5. Converting Between Blockchain & Traditional Finance</h2>
-        <p>The same security can exist in two forms: a <strong>Solana token</strong> or an <strong>ISIN-identified security held via Clearstream</strong>. The TradFi Bridge Series handles the conversion. Any Solana token holder can request conversion for 1.5% of nominal value.</p>
+        <h2>5. CrossConversion: Between On-Chain & Bankable Forms</h2>
+        <p>The same CrossSecurity can exist in two forms: an <strong>on-chain Solana token</strong> or a <strong>bankable ISIN-identified security held via Clearstream</strong>. The CrossConversion Series handles the conversion. Any Solana token holder can request CrossConversion for 1.5% of nominal value.</p>
         <div class="mermaid">
         flowchart LR
             subgraph Solana
-                ST["🪙 Security Token<br/>on Solana"]
+                ST["🪙 CrossSecurity<br/>On-Chain Form"]
             end
-            subgraph IssuerLLC["TradFi Bridge Series"]
+            subgraph IssuerLLC["CrossConversion Series"]
                 LOCK["🔒 Tokens locked<br/>1:1 backing"]
             end
             subgraph Clearstream
-                ISIN["📄 ISIN-Identified Security<br/>held via Clearstream"]
+                ISIN["📄 CrossSecurity<br/>Bankable ISIN Form"]
             end
-            ST -->|Wrap: Lock tokens| LOCK
+            ST -->|Cross to Bankable: Lock tokens| LOCK
             LOCK -->|Issue| ISIN
-            ISIN -->|Unwrap: Redeem| LOCK
+            ISIN -->|Cross to On-Chain: Redeem| LOCK
             LOCK -->|Release tokens| ST
         </div>
         <div class="concept-box">
-            <h4>Who Can Convert</h4>
-            <p>The TradFi Bridge is a Series within the DAO LLC. <strong>Any Solana token holder can request conversion for 1.5% of nominal value.</strong> During initial placement, the issuer typically handles conversions to distribute via Channel 3. After the offering closes, any eligible holder may initiate conversion in either direction.</p>
-            <p>When tokens are locked, ISIN-identified securities are issued via Clearstream. When those securities are redeemed, tokens are released. Always 1:1.</p>
+            <h4>Who Can CrossConvert</h4>
+            <p>The CrossConversion Series is a Series within the DAO LLC. <strong>Any on-chain token holder can request CrossConversion for 1.5% of nominal value.</strong> During initial placement, the issuer typically handles CrossConversions to distribute via Channel 3. After the offering closes, any eligible holder may initiate CrossConversion in either direction.</p>
+            <p>When tokens are locked, bankable ISIN-identified securities are issued via Clearstream. When those securities are redeemed, tokens are released. Always 1:1.</p>
             <p><strong>No third-party crypto custodian required for the on-chain token.</strong> The issuer controls custody via its own legal structure.</p>
-            <p><em>Note: If conversion fees occur during soft cap phase and soft cap is not reached, fees will be rebilled at actual cost + 20%.</em></p>
+            <p><em>Note: If CrossConversion fees occur during soft cap phase and soft cap is not reached, fees will be rebilled at actual cost + 20%.</em></p>
         </div>
         <div class="concept-box">
             <h4>The Single Source of Truth</h4>
-            <p>The Solana token is the canonical (original) security. The ISIN-identified security is a representation: essentially a receipt that says "the issuer's lockbox is holding X tokens backing this."</p>
-            <p><strong>Critical rule:</strong> ISIN-identified securities outstanding can never exceed tokens locked in the lockbox. The system is always 1:1 backed.</p>
-            <p><strong>The issuer sets the conversion policy; when enabled, eligible holders may initiate conversions.</strong></p>
+            <p>The on-chain Solana token is the canonical (original) CrossSecurity. The bankable ISIN-identified security is a representation: essentially a receipt that says "the issuer's lockbox is holding X tokens backing this."</p>
+            <p><strong>Critical rule:</strong> Bankable ISIN-identified securities outstanding can never exceed tokens locked in the lockbox. The system is always 1:1 backed.</p>
+            <p><strong>The issuer sets the CrossConversion policy; when enabled, eligible holders may initiate CrossConversions.</strong></p>
         </div>
-        <h3>Why Would Someone Convert?</h3>
+        <h3>Why Would Someone CrossConvert?</h3>
         <table>
             <thead>
                 <tr>
@@ -849,18 +851,18 @@ scripts:
             </thead>
             <tbody>
                 <tr>
-                    <td>Traditional fund manager with mandate restrictions</td>
-                    <td>Solana → Clearstream</td>
+                    <td>Fund manager with mandate restrictions</td>
+                    <td>On-Chain → Bankable</td>
                     <td>Their rules require holding ISIN-identified securities</td>
                 </tr>
                 <tr>
                     <td>Crypto-native investor wants self-custody</td>
-                    <td>Clearstream → Solana</td>
+                    <td>Bankable → On-Chain</td>
                     <td>Wants to hold in their own wallet, not through a broker</td>
                 </tr>
                 <tr>
-                    <td>Selling to a buyer who only uses traditional rails</td>
-                    <td>Solana → Clearstream</td>
+                    <td>Selling to a buyer who only uses bankable rails</td>
+                    <td>On-Chain → Bankable</td>
                     <td>Buyer's bank can only settle via Clearstream</td>
                 </tr>
             </tbody>
@@ -935,9 +937,9 @@ scripts:
                     <td>Clearstream</td>
                 </tr>
                 <tr>
-                    <td><strong>Conversion Fee</strong></td>
+                    <td><strong>CrossConversion Fee</strong></td>
                     <td><span class="fee-highlight">0.10-0.25%</span> (capped)</td>
-                    <td>When wrapping/unwrapping Solana ↔ Clearstream</td>
+                    <td>When crossing On-Chain ↔ Bankable forms</td>
                     <td>Requester</td>
                     <td>Sails.to + Trust</td>
                 </tr>
@@ -990,8 +992,8 @@ scripts:
                 </tr>
                 <tr>
                     <td><strong>Finance & Corporate Actions</strong></td>
-                    <td>Fee Splitter, Conversion Lockbox, Corporate Actions, Audit Log</td>
-                    <td>Distribute fees, handle conversions, process payments</td>
+                    <td>Fee Splitter, CrossConversion Lockbox, Corporate Actions, Audit Log</td>
+                    <td>Distribute fees, handle CrossConversions, process payments</td>
                 </tr>
             </tbody>
         </table>
@@ -1069,7 +1071,7 @@ scripts:
         <div class="mermaid">
         flowchart TB
             subgraph Layer1["Issuer Legal Structure"]
-                LLC["🏢 Issuer DAO Series LLC<br/>Operating · Treasury · TradFi Bridge"]
+                LLC["🏢 Issuer DAO Series LLC<br/>Operating · Treasury · CrossConversion"]
             end
             subgraph Layer2["Service Providers"]
                 TRUST["🔐 Operational Trust<br/>Escrow & Distributions"]
@@ -1079,7 +1081,7 @@ scripts:
                 FOUND["🏛️ Standards Layer<br/>Protocol Standards"]
                 SOL["⚡ Solana<br/>Settlement & Credentials"]
             end
-            subgraph Layer4["Traditional Finance"]
+            subgraph Layer4["Bankable Form"]
                 CLEAR["📄 Clearstream<br/>ISIN-Identified Settlement"]
             end
             LLC --> TRUST
@@ -1097,15 +1099,15 @@ scripts:
         </div>
         <div style="background: linear-gradient(135deg, var(--ink) 0%, #2c5282 100%); color: white; padding: 40px; border-radius: 8px; margin: 40px 0;">
             <h3 style="color: white; margin-top: 0;">The Big Picture</h3>
-            <p>Sails.to provides the tools to raise capital on your own terms:</p>
+            <p>Sails CrossSecurities provide the infrastructure to raise capital on your own terms:</p>
             <ul>
-                <li><strong>Issuer DAO LLC</strong>: Own your legal structure and control your securities</li>
-                <li><strong>ISIN + Clearstream option</strong>: For traditional settlement when required</li>
+                <li><strong>Issuer DAO LLC</strong>: Own your legal structure and control your CrossSecurities</li>
+                <li><strong>CrossConversion option</strong>: Cross between on-chain and bankable ISIN form when required</li>
                 <li><strong>Licensed brokers</strong>: Distribute to their investor networks</li>
                 <li><strong>Trust oversight</strong>: Escrow and distributions handled by a licensed fiduciary</li>
                 <li><strong>Solana settlement</strong>: Instant, atomic, transparent</li>
             </ul>
-            <p>The smart contracts enforce the rules automatically. The credentials ensure only eligible parties participate. The conversion system enables investments to flow between blockchain and traditional rails. All under issuer control.</p>
+            <p>The smart contracts enforce the rules automatically. The credentials ensure only eligible parties participate. The CrossConversion system enables CrossSecurities to flow between on-chain and bankable rails. All under issuer control.</p>
         </div>
     </div>
 </section>

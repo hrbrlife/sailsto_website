@@ -1,15 +1,17 @@
 ---
 title: "For Investors"
-description: "Access institutional-grade tokenized securities. Self-custody on Solana or traditional custody via Clearstream. $150K minimum."
+description: "Access institutional-grade Sails CrossSecurities. Hold on-chain (Solana) or cross to bankable ISIN form via Clearstream. $150K minimum."
 keywords:
   - professional investors
   - accredited investor
-  - security tokens
-  - tokenized securities
+  - CrossSecurities
+  - on-chain securities
+  - bankable securities
   - custody
   - compliance
   - private placement
   - alternative investments
+  - CrossConversion
 ogImage: "/og-investors.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
@@ -20,7 +22,7 @@ stylesheets:
 <section class="page-hero" style="background: linear-gradient(135deg, var(--navy) 0%, var(--charcoal) 100%);">
     <span class="section-label">For Investors</span>
     <h1 class="section-title">Private market deals.<br>Institutional protections.</h1>
-    <p class="section-desc">Access curated opportunities from established businesses — with full disclosures, verified issuers, and clear governance. Trade through a multi-broker OTC network with real liquidity. Hold on blockchain or through your bank. No platform lock-in.</p>
+    <p class="section-desc">Access curated opportunities from established businesses — with full disclosures, verified issuers, and clear governance. Trade through a multi-broker OTC network with real liquidity. Hold CrossSecurities on-chain or cross to bankable ISIN form. No platform lock-in.</p>
     <p class="section-desc" style="margin-top: 15px; opacity: 0.8; font-size: 0.95rem;">Minimum investment: $150,000 • Accredited/Professional investors only</p>
 </section>
 <section class="detail-section">
@@ -61,30 +63,30 @@ stylesheets:
     <div class="detail-container">
         <div class="detail-grid">
             <div class="detail-content">
-                <h2>Custody your way</h2>
-                <p>Hold positions on Solana for 24/7 liquidity and instant settlement. Or convert to ISIN-identified format and custody through Clearstream. Settles to any bank worldwide.</p>
-                <p>The format can change without changing what the instrument is. Convert when your custody requirements change, convert back when they don't.</p>
+                <h2>CrossSecurities: Hold your way</h2>
+                <p>Hold CrossSecurities on-chain (Solana) for 24/7 liquidity and instant settlement. Or cross to bankable ISIN form and custody through Clearstream — settles to any bank worldwide.</p>
+                <p>The form can change without changing what the CrossSecurity is. CrossConvert when your custody requirements change, cross back when they don't.</p>
             </div>
             <ul class="detail-list">
                 <li>
                     <span class="icon">⛓️</span>
                     <div class="text">
-                        <h4>On-Chain (Solana)</h4>
+                        <h4>On-Chain Form (Solana)</h4>
                         <p>Self-custody or qualified custodian. 24/7 trading. Instant settlement. Programmable compliance.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">🏦</span>
+                    <span class="icon">🏛</span>
                     <div class="text">
-                        <h4>Traditional (ISIN/Clearstream)</h4>
-                        <p>Convert to ISIN format. Hold through your private bank. Standard custody workflow.</p>
+                        <h4>Bankable Form (ISIN/Clearstream)</h4>
+                        <p>CrossConvert to ISIN format. Hold through your private bank. Standard custody workflow.</p>
                     </div>
                 </li>
                 <li>
                     <span class="icon">🔄</span>
                     <div class="text">
-                        <h4>Bidirectional Conversion</h4>
-                        <p>Move between formats as needed. Any token holder can request conversion for 1.5% of nominal value. Always 1:1 backed.</p>
+                        <h4>Bidirectional CrossConversion</h4>
+                        <p>Cross between forms as needed. Any token holder can request CrossConversion for 1.5% of nominal value. Always 1:1 backed.</p>
                     </div>
                 </li>
             </ul>
@@ -192,9 +194,9 @@ stylesheets:
 <section class="global-section">
     <div class="global-container">
         <div class="global-card">
-            <span class="section-label">TradFi Bridge</span>
-            <h2 class="section-title">Solana wallet today,<br>private bank tomorrow</h2>
-            <p>Any Solana token holder can request conversion to traditional format for 1.5% of nominal value. Lock tokens on-chain, receive 1:1 backed ISIN-identified securities via Clearstream. Reverse when needed. During initial placement, issuers typically handle conversions; afterward, any holder can initiate. Your security adapts to custody requirements, not the other way around.</p>
+            <span class="section-label">CrossConversion</span>
+            <h2 class="section-title">On-chain today,<br>private bank tomorrow</h2>
+            <p>Any on-chain holder can request CrossConversion to bankable form for 1.5% of nominal value. Lock tokens on-chain, receive 1:1 backed bankable ISIN-identified securities via Clearstream. Cross back when needed. During initial placement, issuers typically handle CrossConversions; afterward, any holder can initiate. Your CrossSecurity adapts to custody requirements, not the other way around.</p>
             <div class="global-stats">
                 <div class="global-stat">
                     <div class="value">1:1</div>
@@ -202,7 +204,7 @@ stylesheets:
                 </div>
                 <div class="global-stat">
                     <div class="value">1.5%</div>
-                    <div class="label">Conversion fee</div>
+                    <div class="label">CrossConversion fee</div>
                 </div>
                 <div class="global-stat">
                     <div class="value">Global</div>

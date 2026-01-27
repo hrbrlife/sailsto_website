@@ -89,11 +89,11 @@ stylesheets:
             <li><strong>Legal structure:</strong> <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO LLC</span> with <span class="glossary-term" data-term="series-llc">Series LLC</span> isolation</li>
             <li><strong>Compliance:</strong> <span class="glossary-term" data-term="reg-d">Reg D 506(c)</span> for US, <span class="glossary-term" data-term="reg-s">Reg S</span> for international</li>
             <li><strong>Verification:</strong> Full <span class="glossary-term" data-term="kyc">KYC</span>/<span class="glossary-term" data-term="aml">AML</span> on all investors</li>
-            <li><strong>Custody options:</strong> Self-custody on <span class="glossary-term" data-term="solana">Solana</span> or <span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span> to <span class="glossary-term" data-term="clearstream">Clearstream</span></li>
+            <li><strong>Custody options:</strong> Self-custody on <span class="glossary-term" data-term="solana">Solana</span> or <span class="glossary-term" data-term="crossconversion">CrossConversion</span> to <span class="glossary-term" data-term="clearstream">Clearstream</span></li>
         </ul>
         <h2>The Future Is Hybrid</h2>
-        <p>Security tokens aren't replacing traditional finance—they're upgrading it. The infrastructure that handles trillions in daily transactions isn't going away. But it's becoming programmable, accessible, and efficient.</p>
-        <p>That's why our <span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span> is so important. Tokens can move between blockchain and traditional custody seamlessly. The same security can exist as a Solana token or an <span class="glossary-term" data-term="isin">ISIN</span>-bearing instrument in Clearstream. Your choice.</p>
+        <p>CrossSecurities aren't replacing traditional finance—they're upgrading it. The infrastructure that handles trillions in daily transactions isn't going away. But it's becoming programmable, accessible, and efficient.</p>
+        <p>That's why our <span class="glossary-term" data-term="crossconversion">CrossConversion</span> is so important. Tokens can move between on-chain and bankable custody seamlessly. The same security can exist as a Solana token or an <span class="glossary-term" data-term="isin">ISIN</span>-bearing instrument in Clearstream. Your choice.</p>
         <div class="blog-cta">
             <h3>Ready to explore security tokens?</h3>
             <p>Access institutional-grade tokenized offerings on Sails.to.</p>

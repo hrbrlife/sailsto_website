@@ -1,9 +1,9 @@
 ---
 title: "For Issuers"
-description: "Launch tokenized securities with compliant infrastructure. Wyoming DAO Series LLC structure, global distribution, 1% direct referral fee."
+description: "Launch Sails CrossSecurities with compliant infrastructure. Wyoming DAO Series LLC structure, global distribution, 1% direct referral fee."
 keywords:
   - raise capital
-  - tokenized securities
+  - CrossSecurities
   - Wyoming DAO
   - Reg D
   - Reg S
@@ -12,6 +12,7 @@ keywords:
   - private placement
   - broker network
   - ISIN
+  - CrossConversion
 ogImage: "/og-issuers.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
@@ -137,23 +138,23 @@ stylesheets:
     <div class="detail-container">
         <div class="detail-grid">
             <div class="detail-content">
-                <h2>Format flexibility</h2>
-                <p>Securities settle on Solana for 24/7 trading and instant settlement. When investors need traditional custody, convert to ISIN-identified format via Clearstream.</p>
-                <p>The holding format can change without changing what the instrument is. Same security, both worlds.</p>
+                <h2>CrossSecurities format flexibility</h2>
+                <p>CrossSecurities settle on Solana for 24/7 trading and instant settlement. When investors need bankable custody, they can CrossConvert to ISIN-identified format via Clearstream.</p>
+                <p>The holding form can change without changing what the CrossSecurity is. Same security, both worlds.</p>
             </div>
             <ul class="detail-list">
                 <li>
                     <span class="icon">⛓️</span>
                     <div class="text">
-                        <h4>Solana Settlement</h4>
+                        <h4>On-Chain Form (Solana)</h4>
                         <p>Default format. 24/7 trading, instant settlement, programmable compliance.</p>
                     </div>
                 </li>
                 <li>
-                    <span class="icon">🏦</span>
+                    <span class="icon">🏛</span>
                     <div class="text">
-                        <h4>ISIN/Clearstream</h4>
-                        <p>Optional upgrade (~$4K). Convert to ISIN format for traditional bank custody worldwide.</p>
+                        <h4>Bankable Form (ISIN/Clearstream)</h4>
+                        <p>Optional upgrade (~$4K). CrossConvert to ISIN format for traditional bank custody worldwide.</p>
                     </div>
                 </li>
                 <li>
@@ -215,7 +216,7 @@ stylesheets:
             <div class="structure-content">
                 <span class="section-label">Isolated by Design</span>
                 <h2 class="section-title">One entity,<br>many compartments</h2>
-                <p class="section-desc">Your issuance is organized into separate internal compartments for the different jobs a serious security needs: operations, reserves/distributions, and the TradFi bridge. Clear separation, clean governance, full control.</p>
+                <p class="section-desc">Your issuance is organized into separate internal compartments for the different jobs a serious CrossSecurity needs: operations, reserves/distributions, and CrossConversion. Clear separation, clean governance, full control.</p>
             </div>
             <div class="structure-cards">
                 <div class="structure-card">
@@ -227,8 +228,8 @@ stylesheets:
                     <p>Reserves, operational funds, unclaimed distributions. Neutral trust oversight.</p>
                 </div>
                 <div class="structure-card">
-                    <h4>TradFi Bridge Series</h4>
-                    <p>Convert between on-chain form and ISIN form so eligible investors can hold through traditional custody without losing interoperability.</p>
+                    <h4>CrossConversion Series</h4>
+                    <p>CrossConvert between on-chain form and bankable ISIN form so eligible investors can hold through traditional custody without losing interoperability.</p>
                 </div>
             </div>
         </div>

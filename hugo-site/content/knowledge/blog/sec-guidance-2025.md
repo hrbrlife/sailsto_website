@@ -72,7 +72,7 @@ stylesheets:
         <p>The SEC has emphasized proper custody arrangements for digital asset securities. This is why Sails.to offers both:</p>
         <ul>
             <li><strong>Self-custody on <span class="glossary-term" data-term="solana">Solana</span>:</strong> For crypto-native investors who control their keys</li>
-            <li><strong><span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span> to <span class="glossary-term" data-term="clearstream">Clearstream</span>:</strong> Institutional-grade <span class="glossary-term" data-term="custody">custody</span> with <span class="glossary-term" data-term="isin">ISIN</span> assignment</li>
+            <li><strong><span class="glossary-term" data-term="crossconversion">CrossConversion</span> to <span class="glossary-term" data-term="clearstream">Clearstream</span>:</strong> Institutional-grade <span class="glossary-term" data-term="custody">custody</span> with <span class="glossary-term" data-term="isin">ISIN</span> assignment</li>
         </ul>
         <h2>What Changed in 2025</h2>
         <h3>Staff Accounting Bulletin Updates</h3>

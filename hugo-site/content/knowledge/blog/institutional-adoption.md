@@ -72,10 +72,10 @@ stylesheets:
         <p>The fastest-growing category. Tokenized MMFs provide instant settlement, 24/7 access, and programmable cash management. BlackRock's BUIDL proved the model.</p>
         <h2>The Hybrid Future</h2>
         <p>Institutions aren't abandoning traditional infrastructure—they're enhancing it. The winning approach connects blockchain efficiency with established custody, settlement, and regulatory frameworks.</p>
-        <p>This is exactly what Sails.to's <span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span> provides:</p>
+        <p>This is exactly what Sails.to's <span class="glossary-term" data-term="crossconversion">CrossConversion</span> provides:</p>
         <ul>
-            <li><strong>Blockchain layer:</strong> <span class="glossary-term" data-term="solana">Solana</span> for issuance, compliance, and crypto-native investors</li>
-            <li><strong>TradFi layer:</strong> <span class="glossary-term" data-term="clearstream">Clearstream</span> <span class="glossary-term" data-term="custody">custody</span> with <span class="glossary-term" data-term="isin">ISIN</span> assignment for institutional compatibility</li>
+            <li><strong>On-chain layer:</strong> <span class="glossary-term" data-term="solana">Solana</span> for issuance, compliance, and crypto-native investors</li>
+            <li><strong>Bankable layer:</strong> <span class="glossary-term" data-term="clearstream">Clearstream</span> <span class="glossary-term" data-term="custody">custody</span> with <span class="glossary-term" data-term="isin">ISIN</span> assignment for institutional compatibility</li>
             <li><strong>Seamless conversion:</strong> Move between layers as needed</li>
         </ul>
         <p>Institutions get familiar custody. Crypto-natives get self-sovereignty. Same security, interoperable formats.</p>

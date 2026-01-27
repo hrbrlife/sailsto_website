@@ -1,12 +1,12 @@
 ---
 title: "Knowledge Base"
-description: "Learn everything about tokenized securities, compliance, blockchain infrastructure, and traditional finance integration. Guides, documentation, FAQ, and glossary."
+description: "Learn everything about Sails CrossSecurities, compliance, blockchain infrastructure, and traditional finance integration. Guides, documentation, FAQ, and glossary."
 keywords:
-  - tokenization guide
-  - security token education
+  - CrossSecurities guide
+  - tokenization education
   - blockchain securities
   - compliance guide
-  - DeFi TradFi
+  - CrossConversion
   - knowledge base
 ogImage: "/og-knowledge.png"
 stylesheets:
@@ -22,7 +22,7 @@ scripts:
 <section class="page-hero">
     <span class="section-label">Learn</span>
     <h1 class="section-title">Knowledge Base</h1>
-    <p class="section-desc">Everything you need to understand hybrid securities infrastructure — from blockchain basics to regulatory compliance.</p>
+    <p class="section-desc">Everything you need to understand Sails CrossSecurities infrastructure — from blockchain basics to regulatory compliance.</p>
     <div class="kb-search">
         <input type="text" id="kb-search-input" placeholder="Search articles, guides, and terms..." class="kb-search-input">
         <svg class="kb-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -61,8 +61,8 @@ scripts:
                 <div class="kb-card-icon">🔗</div>
                 <div class="kb-card-content">
                     <span class="kb-card-category">Architecture</span>
-                    <h3>Understanding the TradFi Bridge</h3>
-                    <p>Deep dive into how tokens flow between Solana and traditional custody via ISIN conversion.</p>
+                    <h3>Understanding CrossConversion</h3>
+                    <p>Deep dive into how CrossSecurities flow between Solana and bankable custody via ISIN conversion.</p>
                 </div>
                 <span class="kb-card-arrow">→</span>
             </a>
@@ -71,7 +71,7 @@ scripts:
                 <div class="kb-card-content">
                     <span class="kb-card-category">Support</span>
                     <h3>Frequently Asked Questions</h3>
-                    <p>Answers to the most common questions about tokenization, compliance, and using the platform.</p>
+                    <p>Answers to the most common questions about CrossSecurities, compliance, and using the platform.</p>
                 </div>
                 <span class="kb-card-arrow">→</span>
             </a>
@@ -106,8 +106,8 @@ scripts:
                 </a>
                 <a href="/knowledge/guides/isin-conversion/" class="kb-card">
                     <span class="kb-card-category">Technical</span>
-                    <h3>Token to ISIN Conversion</h3>
-                    <p>How the TradFi Bridge converts Solana tokens to traditional securities identifiers.</p>
+                    <h3>CrossConversion: Token to ISIN</h3>
+                    <p>How CrossConversion converts on-chain CrossSecurities to bankable securities identifiers.</p>
                     <span class="kb-card-meta">12 min read</span>
                 </a>
             </div>
@@ -208,11 +208,11 @@ scripts:
                 <div class="kb-glossary-featured">
                     <h4>Popular Terms</h4>
                     <div class="kb-glossary-terms">
-                        <a href="/knowledge/glossary/security-token/" class="glossary-term-pill">Security Token</a>
+                        <a href="/knowledge/glossary/crosssecurities/" class="glossary-term-pill">CrossSecurities</a>
+                        <a href="/knowledge/glossary/crossconversion/" class="glossary-term-pill">CrossConversion</a>
                         <a href="/knowledge/glossary/wyoming-dao-llc/" class="glossary-term-pill">Wyoming DAO LLC</a>
                         <a href="/knowledge/glossary/isin/" class="glossary-term-pill">ISIN</a>
                         <a href="/knowledge/glossary/clearstream/" class="glossary-term-pill">Clearstream</a>
-                        <a href="/knowledge/glossary/tradfi-bridge/" class="glossary-term-pill">TradFi Bridge</a>
                         <a href="/knowledge/glossary/kyc/" class="glossary-term-pill">KYC</a>
                     </div>
                 </div>
@@ -239,8 +239,8 @@ scripts:
                 </a>
                 <a href="/knowledge/blog/hybrid-custody-explained/" class="kb-card kb-card-blog">
                     <span class="kb-card-date">Jan 5, 2025</span>
-                    <h3>Hybrid Custody: Best of Both Worlds</h3>
-                    <p>How our TradFi Bridge lets investors choose their custody model.</p>
+                    <h3>CrossSecurities Custody: Best of Both Worlds</h3>
+                    <p>How CrossConversion lets investors choose their custody model.</p>
                     <span class="kb-card-meta">6 min read</span>
                 </a>
             </div>
@@ -282,7 +282,7 @@ scripts:
                 <a href="/knowledge/roadmap/#tradfi-bridge-design" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="technical infrastructure">
                     <span class="kb-roadmap-status completed">✓</span>
                     <span class="kb-card-category">Technical</span>
-                    <h3>TradFi Bridge Design</h3>
+                    <h3>CrossConversion Design</h3>
                     <p>ISIN integration pathway and Clearstream custody protocol finalized.</p>
                     <div class="kb-card-tags">
                         <span class="kb-tag temporal">Completed</span>
@@ -322,8 +322,8 @@ scripts:
                 <a href="/knowledge/roadmap/#first-offering" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product milestone">
                     <span class="kb-roadmap-status current">●</span>
                     <span class="kb-card-category">Product</span>
-                    <h3>First Offering Launch</h3>
-                    <p>Inaugural tokenized security offering goes live on the platform.</p>
+                    <h3>First CrossSecurities Launch</h3>
+                    <p>Inaugural CrossSecurities offering goes live on the platform.</p>
                     <div class="kb-card-tags">
                         <span class="kb-tag temporal current">Beta</span>
                         <span class="kb-tag category">Milestone</span>
@@ -342,7 +342,7 @@ scripts:
                 <a href="/knowledge/roadmap/#tradfi-bridge-live" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="technical infrastructure">
                     <span class="kb-roadmap-status upcoming">○</span>
                     <span class="kb-card-category">Technical</span>
-                    <h3>TradFi Bridge Live</h3>
+                    <h3>CrossConversion Live</h3>
                     <p>Full ISIN conversion and Clearstream custody operational.</p>
                     <div class="kb-card-tags">
                         <span class="kb-tag temporal">Public Launch</span>

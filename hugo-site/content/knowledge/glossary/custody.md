@@ -20,19 +20,20 @@ stylesheets:
     <div class="term-content-inner">
         <section class="term-section">
             <h2>Full Definition</h2>
-            <p>Securities custody involves holding assets safely on behalf of clients and handling administrative duties like dividend collection, proxy voting, and corporate action processing. Sails.to offers hybrid custody: tokens can be self-custodied in Solana wallets or held in qualified custody through the ISIN/Clearstream bridge. This flexibility allows investors to choose between DeFi-style control and TradFi-style institutional services.</p>
+            <p>Securities custody involves holding assets safely on behalf of clients and handling administrative duties like dividend collection, proxy voting, and corporate action processing. Sails.to offers CrossSecurities custody: tokens can be self-custodied in Solana wallets (on-chain form) or held via ISIN at Clearstream (bankable form). This flexibility allows investors to choose between on-chain control and institutional services.</p>
         </section>
         <section class="term-section">
             <h2>Why It Matters</h2>
             <p>Custody is the elephant in the room for crypto adoption. Institutions need qualified custodians for regulatory reasons. Retail investors want the security (and insurance) that comes with professional custody. But crypto natives want self-custody—"not your keys, not your coins."</p>
-            <p>Sails.to solves this with hybrid custody. Keep your tokens in your <a href="/knowledge/glossary/solana/">Solana</a> wallet for DeFi-style control. Or use our <a href="/knowledge/glossary/tradfi-bridge/">TradFi Bridge</a> to move them to <a href="/knowledge/glossary/clearstream/">Clearstream</a> for institutional-grade custody. Same tokens, your choice of rails.</p>
+            <p>Sails.to solves this with <a href="/knowledge/glossary/crosssecurities/">CrossSecurities</a>. Keep your tokens in your <a href="/knowledge/glossary/solana/">Solana</a> wallet for on-chain control. Or use <a href="/knowledge/glossary/crossconversion/">CrossConversion</a> to move them to bankable form at <a href="/knowledge/glossary/clearstream/">Clearstream</a>. Same securities, your choice of rails.</p>
         </section>
         <section class="term-section">
             <h2>Related Terms</h2>
             <div class="related-terms">
                 <a href="/knowledge/glossary/clearstream/" class="related-term-link">Clearstream</a>
                 <a href="/knowledge/glossary/isin/" class="related-term-link">ISIN</a>
-                <a href="/knowledge/glossary/tradfi-bridge/" class="related-term-link">TradFi Bridge</a>
+                <a href="/knowledge/glossary/crossconversion/" class="related-term-link">CrossConversion</a>
+                <a href="/knowledge/glossary/crosssecurities/" class="related-term-link">CrossSecurities</a>
             </div>
         </section>
         <div class="term-cta">

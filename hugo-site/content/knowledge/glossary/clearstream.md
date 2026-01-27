@@ -20,7 +20,7 @@ stylesheets:
     <div class="term-content-inner">
         <section class="term-section">
             <h2>Full Definition</h2>
-            <p>Clearstream Banking S.A. is one of the world's largest settlement and custody organizations, part of Deutsche Börse Group. It provides post-trade infrastructure services for domestic and international securities. Through Sails.to's TradFi bridge, security tokens can be converted to ISIN format and held in Clearstream, allowing traditional financial institutions to custody tokenized assets within their existing infrastructure.</p>
+            <p>Clearstream Banking S.A. is one of the world's largest settlement and custody organizations, part of Deutsche Börse Group. It provides post-trade infrastructure services for domestic and international securities. Through Sails.to's <a href="/knowledge/glossary/crossconversion/">CrossConversion</a>, CrossSecurities can be converted to bankable ISIN format and held in Clearstream, allowing traditional financial institutions to custody these assets within their existing infrastructure.</p>
         </section>
         <section class="term-section">
             <h2>Why It Matters</h2>
@@ -32,12 +32,13 @@ stylesheets:
             <div class="related-terms">
                 <a href="/knowledge/glossary/isin/" class="related-term-link">ISIN</a>
                 <a href="/knowledge/glossary/custody/" class="related-term-link">Custody</a>
-                <a href="/knowledge/glossary/tradfi-bridge/" class="related-term-link">TradFi Bridge</a>
+                <a href="/knowledge/glossary/crossconversion/" class="related-term-link">CrossConversion</a>
+                <a href="/knowledge/glossary/crosssecurities/" class="related-term-link">CrossSecurities</a>
             </div>
         </section>
         <div class="term-cta">
             <h3>Institutional-grade custody</h3>
-            <p>Access Clearstream settlement through our TradFi Bridge.</p>
+            <p>Access Clearstream settlement through CrossConversion.</p>
             <a href="/signup/?type=institution" class="btn">Learn More</a>
         </div>
     </div>
