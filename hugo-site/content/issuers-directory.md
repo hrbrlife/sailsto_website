@@ -1,14 +1,14 @@
 ---
-title: "Active Offerings"
-description: "Browse active CrossSecurities offerings on Sails.to. Tokenized bonds from verified issuers with flip cards showing full issuer details and security packages."
+title: "Platform Offerings Preview"
+description: "Illustrative examples of CrossSecurities offerings on Sails.to. See the types of tokenized bonds available from verified issuers after completing investor verification."
 keywords:
-  - active offerings
+  - offerings preview
   - CrossSecurities
   - tokenized bonds
   - security tokens
-  - investment opportunities
+  - investment examples
   - verified issuers
-  - trust indicators
+  - platform capabilities
 ogImage: "/og-platform.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
@@ -17,6 +17,68 @@ stylesheets:
 scripts:
   - "/js/issuers-directory.js"
 ---
+
+<!-- FULLSCREEN COMPLIANCE GATE -->
+<div class="compliance-gate" id="complianceGate">
+<div class="compliance-gate-content">
+<div class="compliance-gate-icon">⚠️</div>
+<h1>Important Notice</h1>
+<h2>This Page Does Not Constitute an Offer to Invest</h2>
+
+<div class="compliance-gate-body">
+<p class="compliance-lead">The content on this page is provided for <strong>informational and illustrative purposes only</strong>. It is intended exclusively for professional and sophisticated investors evaluating the types of opportunities that may become available through our platform.</p>
+
+<div class="compliance-section">
+<h3>Why This Is Not an Offer</h3>
+<p>Under securities regulations, a valid investment offer must contain specific, material information about the issuer, the terms, and the risks involved. <strong>We have intentionally removed or anonymized all such identifying information</strong> from this page, including:</p>
+<ul>
+<li>Issuer names and corporate identities</li>
+<li>Exact coupon rates, yields, and financial terms</li>
+<li>Specific raise amounts and funding targets</li>
+<li>Precise reserve figures and production data</li>
+<li>Named counterparties, partners, and offtakers</li>
+</ul>
+<p>Because this essential information has been stripped, <strong>what remains cannot legally or practically constitute an offer to sell securities</strong>. You cannot invest based on what you see here.</p>
+</div>
+
+<div class="compliance-section">
+<h3>How to Access Actual Offerings</h3>
+<p>To view real offerings with complete terms and make investment decisions, you must be verified as a professional or accredited investor. This can be done through:</p>
+<ul>
+<li><strong>Direct verification with the Issuer</strong> — Complete KYC/AML and professional investor certification directly with the issuing entity</li>
+<li><strong>Through a licensed broker</strong> — Work with any of our network brokers who will verify your status and provide access to offerings appropriate for your profile</li>
+</ul>
+</div>
+
+<div class="compliance-section">
+<h3>Who This Page Is For</h3>
+<p>This preview is designed for professional investors, family offices, and institutional allocators who want to understand the <em>types</em> of deals available on our platform before beginning the verification process. If you are a retail investor, this page—and our platform—is not intended for you.</p>
+</div>
+</div>
+
+<div class="compliance-gate-actions">
+<p class="compliance-acknowledgment">By continuing, you confirm that you understand this page contains illustrative examples only and does not constitute an offer, solicitation, or recommendation to invest in any security.</p>
+<button class="compliance-gate-btn" onclick="dismissComplianceGate()">I Understand — Continue to Preview</button>
+<a href="/" class="compliance-gate-link">← Return to Homepage</a>
+</div>
+</div>
+</div>
+
+<script>
+function dismissComplianceGate() {
+    document.getElementById('complianceGate').classList.add('dismissed');
+    document.body.style.overflow = '';
+    sessionStorage.setItem('complianceGateAcknowledged', 'true');
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    if (sessionStorage.getItem('complianceGateAcknowledged') !== 'true') {
+        document.body.style.overflow = 'hidden';
+    } else {
+        document.getElementById('complianceGate').classList.add('dismissed');
+    }
+});
+</script>
 
 <!-- SVG Sprite Definitions -->
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -35,8 +97,8 @@ scripts:
 </svg>
 
 <section class="page-hero">
-<h1>Active Offerings</h1>
-<p>CrossSecurities bonds from verified issuers. Hover to see issuer profile and security package.</p>
+<h1>Platform Offerings Preview</h1>
+<p>Illustrative examples of CrossSecurities bonds on our platform. For professional investors only.</p>
 </section>
 <div class="filter-section">
 <div class="filter-container">
@@ -56,7 +118,7 @@ scripts:
 <button class="filter-pill" data-filter="trust" data-value="regulated">Regulated</button>
 </div>
 </div>
-<span class="results-count"><span id="count">6</span> offerings</span>
+<span class="results-count"><span id="count">6</span> example types</span>
 </div>
 </div>
 </div>
@@ -64,38 +126,39 @@ scripts:
 <div class="issuers-container">
 <div class="issuers-grid">
 
-<!-- Card 1: OUG Group Mongolia - Lithium (Hybrid) -->
+<!-- Card 1: Mining Project - Lithium (Hybrid) -->
 <div class="flip-card-container" data-structure="profit" data-audited="true" data-regulated="true">
 <div class="flip-card">
 <div class="flip-card-front">
+<span class="example-badge">Example</span>
 <span class="card-type-badge hybrid">Coupon + Profit</span>
 <div class="card-hero">
 <span class="card-emoji">⛏️</span>
 </div>
 <div class="card-content">
     <div class="card-header">
-        <div class="card-issuer-name">OUG Group Mongolia</div>
-        <div class="card-location">🇲🇳 Mongolia</div>
+        <div class="card-issuer-name"><span class="redacted-light">[Issuer Redacted]</span></div>
+        <div class="card-location">🌏 Central Asia / Mongolia</div>
         <h3 class="card-title">Lithium & Rare Earth Project Bond</h3>
     </div>
-    <p class="card-description">Mine development and processing facility for lithium, tungsten, and cobalt extraction in the Gobi region.</p>
+    <p class="card-description">Greenfield lithium-spodumene mine with integrated beneficiation plant. Extraction of lithium, tungsten, and cobalt in the Gobi basin.</p>
     <div class="structure-row">
-        <span class="structure-pill coupon">2% Coupon</span>
-        <span class="structure-pill profit">+18% Sales</span>
-        <span class="structure-pill maturity">15 Years</span>
+        <span class="structure-pill coupon">1-3% Coupon</span>
+        <span class="structure-pill profit">+15-20% Revenue</span>
+        <span class="structure-pill maturity">12-18 Years</span>
     </div>
     <div class="funding-section">
         <div class="funding-header">
             <span class="funding-label">Funding Progress</span>
-            <span class="funding-amount">$127M raised</span>
+            <span class="funding-amount"><span class="redacted-light">$100-150M raised</span></span>
         </div>
         <div class="funding-bar-container">
             <div class="funding-bar" style="width: 36%;"></div>
             <div class="soft-cap-marker" style="left: 57%;"></div>
         </div>
         <div class="funding-caps">
-            <span class="cap-label"><span class="cap-dot soft"></span> Soft $200M</span>
-            <span class="cap-label"><span class="cap-dot hard"></span> Hard $350M</span>
+            <span class="cap-label"><span class="cap-dot soft"></span> Soft $150-250M</span>
+            <span class="cap-label"><span class="cap-dot hard"></span> Hard $300-400M</span>
         </div>
     </div>
     <div class="trust-section">
@@ -124,62 +187,63 @@ scripts:
 </div>
 <div class="flip-card-back">
 <div class="back-header">
-    <div class="back-issuer">OUG Group Mongolia LLC</div>
-    <div class="back-meta">Est. 2008 • Ulaanbaatar, Mongolia</div>
+    <div class="back-issuer">[Issuer Redacted]</div>
+    <div class="back-meta">Top-5 regional mining group • 15+ years operational</div>
 </div>
 <div class="back-section">
     <div class="back-section-title">Issuer Profile</div>
-    <p>Top-5 Mongolian mining conglomerate with 15+ years operational history. JV partner with Rio Tinto on copper projects. 2,400 employees across 6 active sites. MSE listed (OUG).</p>
+    <p>Major mining conglomerate with joint ventures alongside tier-1 global majors on copper and gold projects. 2,000+ employees across multiple active sites. Publicly listed on regional stock exchange.</p>
 </div>
 <div class="back-section">
     <div class="back-section-title">Project</div>
-    <p>Greenfield lithium-spodumene mine with integrated processing. 42M tonnes proven reserves verified by Pincock Minerco. Offtake agreements with CATL and Samsung SDI for 70% of production.</p>
+    <p>40M+ tonne proven reserves verified by independent geological consultants. Integrated processing facility producing battery-grade lithium hydroxide. Binding offtake agreements with leading EV battery manufacturers covering 70%+ of projected output.</p>
 </div>
 <div class="back-section">
     <div class="back-section-title">Security Package</div>
-    <p>First-ranking charge over mining license and equipment. Isolated SPV with monitored sales flows. Feasibility study by German Engineering Anstalt. CPA audited financials.</p>
+    <p>First-ranking charge over mining license and all processing equipment. Ring-fenced SPV with monitored sales account. Bankable feasibility study by international engineering firm. Annually audited financials.</p>
 </div>
 <div class="back-tags">
     <span class="back-tag security">Mining License Pledge</span>
     <span class="back-tag security">Equipment Charge</span>
-    <span class="back-tag">Offtake Secured</span>
-    <span class="back-tag">Rio Tinto JV Partner</span>
+    <span class="back-tag">70%+ Offtake</span>
+    <span class="back-tag">Major JV Partner</span>
 </div>
 </div>
 </div>
 </div>
 
-<!-- Card 2: DNA Genetics - Cannabis (Profit Share Only) -->
+<!-- Card 2: Life Sciences - Cultivation (Profit Share Only) -->
 <div class="flip-card-container" data-structure="profit" data-audited="true" data-regulated="true">
 <div class="flip-card">
 <div class="flip-card-front">
+<span class="example-badge">Example</span>
 <span class="card-type-badge profit-share">Profit Share</span>
 <div class="card-hero">
 <span class="card-emoji">🌿</span>
 </div>
 <div class="card-content">
     <div class="card-header">
-        <div class="card-issuer-name">DNA Genetics</div>
-        <div class="card-location">🇳🇱 Netherlands</div>
-        <h3 class="card-title">European Cultivation Expansion Bond</h3>
+        <div class="card-issuer-name"><span class="redacted-light">[Issuer Redacted]</span></div>
+        <div class="card-location">🇳🇱 Netherlands / EU</div>
+        <h3 class="card-title">Medical Cannabis Cultivation Bond</h3>
     </div>
-    <p class="card-description">Funding for 3 licensed EU-GMP medical cannabis facilities across Germany, Portugal, and Malta.</p>
+    <p class="card-description">EU-GMP licensed medical cannabis cultivation and processing. Multiple facilities across Germany, Portugal, and Malta with pharmacy distribution agreements.</p>
     <div class="structure-row">
-        <span class="structure-pill profit">25% EBITDA</span>
-        <span class="structure-pill maturity">7 Years</span>
+        <span class="structure-pill profit">20-30% EBITDA</span>
+        <span class="structure-pill maturity">5-8 Years</span>
     </div>
     <div class="funding-section">
         <div class="funding-header">
             <span class="funding-label">Funding Progress</span>
-            <span class="funding-amount">$18.2M raised</span>
+            <span class="funding-amount"><span class="redacted-light">$15-25M raised</span></span>
         </div>
         <div class="funding-bar-container">
             <div class="funding-bar" style="width: 40%;"></div>
             <div class="soft-cap-marker" style="left: 67%;"></div>
         </div>
         <div class="funding-caps">
-            <span class="cap-label"><span class="cap-dot soft"></span> Soft $30M</span>
-            <span class="cap-label"><span class="cap-dot hard"></span> Hard $45M</span>
+            <span class="cap-label"><span class="cap-dot soft"></span> Soft $25-35M</span>
+            <span class="cap-label"><span class="cap-dot hard"></span> Hard $40-50M</span>
         </div>
     </div>
     <div class="trust-section">
@@ -208,62 +272,63 @@ scripts:
 </div>
 <div class="flip-card-back">
 <div class="back-header">
-    <div class="back-issuer">DNA Genetics BV</div>
-    <div class="back-meta">Est. 2004 • Amsterdam, Netherlands</div>
+    <div class="back-issuer">[Issuer Redacted]</div>
+    <div class="back-meta">Pioneer genetics company • 20+ years in industry</div>
 </div>
 <div class="back-section">
     <div class="back-section-title">Issuer Profile</div>
-    <p>Pioneer cannabis genetics company with 20+ Cannabis Cup wins. Exclusive cultivar library of 200+ strains. Licensing agreements with 40+ licensed producers globally including Tilray and Aurora.</p>
+    <p>Award-winning cannabis genetics company with proprietary cultivar library of 200+ strains. Licensing agreements with 40+ licensed producers globally. Industry pioneer with two decades of track record.</p>
 </div>
 <div class="back-section">
     <div class="back-section-title">Project</div>
-    <p>Three EU-GMP certified cultivation facilities totaling 85,000 sqm. German pharmacy distribution secured via Cansativa. Portugal export license enables EU-wide medical supply.</p>
+    <p>Three EU-GMP certified cultivation facilities totaling 80,000+ sqm. German pharmacy distribution agreements in place. Portugal export license enables EU-wide medical supply chain.</p>
 </div>
 <div class="back-section">
     <div class="back-section-title">Security Package</div>
-    <p>Revenue waterfall with quarterly distributions. IP pledge over proprietary genetics library. Facility equipment as secondary collateral. Deloitte audited financials.</p>
+    <p>Revenue waterfall with quarterly distributions. IP pledge over proprietary genetics library. Facility equipment as secondary collateral. Big Four audited financials.</p>
 </div>
 <div class="back-tags">
     <span class="back-tag security">IP Pledge</span>
     <span class="back-tag security">Revenue Waterfall</span>
     <span class="back-tag">EU-GMP Licensed</span>
-    <span class="back-tag">20+ Awards</span>
+    <span class="back-tag">20+ Industry Awards</span>
 </div>
 </div>
 </div>
 </div>
 
-<!-- Card 3: Zav Go Co - Gold Mining (Coupon Only) -->
+<!-- Card 3: Precious Metals - Gold Mining (Coupon Only) -->
 <div class="flip-card-container" data-structure="coupon" data-audited="true" data-regulated="true">
 <div class="flip-card">
 <div class="flip-card-front">
+<span class="example-badge">Example</span>
 <span class="card-type-badge coupon-only">Fixed Coupon</span>
 <div class="card-hero">
 <span class="card-emoji">🥇</span>
 </div>
 <div class="card-content">
     <div class="card-header">
-        <div class="card-issuer-name">Zav Go Co</div>
-        <div class="card-location">🇲🇳 Mongolia</div>
+        <div class="card-issuer-name"><span class="redacted-light">[Issuer Redacted]</span></div>
+        <div class="card-location">🌏 Central Asia / Mongolia</div>
         <h3 class="card-title">Gold Mining Operations Bond</h3>
     </div>
-    <p class="card-description">Working capital and equipment upgrade for producing alluvial gold operations in Tuv Province.</p>
+    <p class="card-description">Working capital and equipment upgrade for producing alluvial gold mine. Annual production 40,000-50,000 oz with 8+ year mine life at expanded capacity.</p>
     <div class="structure-row">
-        <span class="structure-pill coupon">8.5% Coupon</span>
-        <span class="structure-pill maturity">5 Years</span>
+        <span class="structure-pill coupon">7-10% Coupon</span>
+        <span class="structure-pill maturity">4-6 Years</span>
     </div>
     <div class="funding-section">
         <div class="funding-header">
             <span class="funding-label">Funding Progress</span>
-            <span class="funding-amount">$21.4M raised</span>
+            <span class="funding-amount"><span class="redacted-light">$18-25M raised</span></span>
         </div>
         <div class="funding-bar-container">
             <div class="funding-bar" style="width: 76%;"></div>
             <div class="soft-cap-marker" style="left: 54%;"></div>
         </div>
         <div class="funding-caps">
-            <span class="cap-label"><span class="cap-dot soft"></span> Soft $15M</span>
-            <span class="cap-label"><span class="cap-dot hard"></span> Hard $28M</span>
+            <span class="cap-label"><span class="cap-dot soft"></span> Soft $12-18M</span>
+            <span class="cap-label"><span class="cap-dot hard"></span> Hard $25-35M</span>
         </div>
     </div>
     <div class="trust-section">
@@ -283,7 +348,7 @@ scripts:
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-landmark"></use></svg></span>
-                <span class="trust-text">MSE Listed</span>
+                <span class="trust-text">Listed</span>
             </div>
         </div>
     </div>
@@ -292,63 +357,64 @@ scripts:
 </div>
 <div class="flip-card-back">
 <div class="back-header">
-    <div class="back-issuer">Zav Go Co LLC</div>
-    <div class="back-meta">Est. 2012 • Ulaanbaatar, Mongolia • MSE: ZAGO</div>
+    <div class="back-issuer">[Issuer Redacted]</div>
+    <div class="back-meta">Mid-tier producer • 12+ years operation • Exchange listed</div>
 </div>
 <div class="back-section">
     <div class="back-section-title">Issuer Profile</div>
-    <p>Mid-tier gold producer with 12 years continuous operation. Annual production 45,000 oz. Listed on Mongolian Stock Exchange. Clean regulatory record. Member of Responsible Gold Mining Council.</p>
+    <p>Mid-tier gold producer with 12 years continuous operation. Annual production ~45,000 oz. Listed on regional stock exchange. Clean regulatory record. Member of Responsible Gold Mining Council.</p>
 </div>
 <div class="back-section">
     <div class="back-section-title">Project</div>
-    <p>Equipment upgrade to increase throughput 40%. New processing plant reduces recovery losses from 12% to 4%. Proven reserves support 8+ years mine life at expanded capacity.</p>
+    <p>Equipment upgrade to increase throughput 40%. New processing plant reduces recovery losses from 12% to 4%. Proven reserves support 8+ years mine life at expanded production levels.</p>
 </div>
 <div class="back-section">
     <div class="back-section-title">Security Package</div>
-    <p>Gold inventory hedge via 6-month forward sales with LBMA refiners. Corporate guarantee from parent. First charge over processing equipment. Monitored concentrate sales account.</p>
+    <p>Gold inventory hedge via 6-month forward sales with LBMA refiners. Corporate guarantee from parent company. First charge over processing equipment. Monitored concentrate sales account.</p>
 </div>
 <div class="back-tags">
     <span class="back-tag security">Gold Hedge</span>
     <span class="back-tag security">Equipment Charge</span>
-    <span class="back-tag">MSE Listed</span>
+    <span class="back-tag">Exchange Listed</span>
     <span class="back-tag">12yr Track Record</span>
 </div>
 </div>
 </div>
 </div>
 
-<!-- Card 4: Plastex Circular - Plastic Upcycling (Hybrid) -->
+<!-- Card 4: CleanTech - Plastic Upcycling (Hybrid) -->
 <div class="flip-card-container" data-structure="profit" data-audited="true" data-regulated="true">
 <div class="flip-card">
 <div class="flip-card-front">
+<span class="example-badge">Example</span>
 <span class="card-type-badge hybrid">Coupon + Profit</span>
 <div class="card-hero">
 <span class="card-emoji">♻️</span>
 </div>
 <div class="card-content">
     <div class="card-header">
-        <div class="card-issuer-name">Plastex Circular AG</div>
-        <div class="card-location">🇨🇭 Switzerland</div>
-        <h3 class="card-title">Plastic-to-Hydrocarbon Expansion</h3>
+        <div class="card-issuer-name"><span class="redacted-light">[Issuer Redacted]</span></div>
+        <div class="card-location">🇨🇭 Switzerland / EU</div>
+        <h3 class="card-title">Plastic-to-Hydrocarbon Expansion Bond</h3>
     </div>
-    <p class="card-description">Scale-up of pyrolysis technology converting mixed plastics to industrial-grade hydrocarbons across 3 EU plants.</p>
+    <p class="card-description">Patented pyrolysis technology converting mixed plastic waste to virgin-quality naphtha. Scale-up across 3 EU industrial sites: Germany, Belgium, Spain.</p>
     <div class="structure-row">
-        <span class="structure-pill coupon">4% Coupon</span>
-        <span class="structure-pill profit">+12% EBITDA</span>
-        <span class="structure-pill maturity">10 Years</span>
+        <span class="structure-pill coupon">3-5% Coupon</span>
+        <span class="structure-pill profit">+10-15% EBITDA</span>
+        <span class="structure-pill maturity">8-12 Years</span>
     </div>
     <div class="funding-section">
         <div class="funding-header">
             <span class="funding-label">Funding Progress</span>
-            <span class="funding-amount">$84M raised</span>
+            <span class="funding-amount"><span class="redacted-light">$70-100M raised</span></span>
         </div>
         <div class="funding-bar-container">
             <div class="funding-bar" style="width: 70%;"></div>
             <div class="soft-cap-marker" style="left: 58%;"></div>
         </div>
         <div class="funding-caps">
-            <span class="cap-label"><span class="cap-dot soft"></span> Soft $70M</span>
-            <span class="cap-label"><span class="cap-dot hard"></span> Hard $120M</span>
+            <span class="cap-label"><span class="cap-dot soft"></span> Soft $60-80M</span>
+            <span class="cap-label"><span class="cap-dot hard"></span> Hard $100-140M</span>
         </div>
     </div>
     <div class="trust-section">
@@ -377,62 +443,66 @@ scripts:
 </div>
 <div class="flip-card-back">
 <div class="back-header">
-    <div class="back-issuer">Plastex Circular AG</div>
-    <div class="back-meta">Est. 2018 • Zürich, Switzerland</div>
+    <div class="back-issuer">[Issuer Redacted]</div>
+    <div class="back-meta">CleanTech leader • Operational since 2021 • Patented tech</div>
 </div>
 <div class="back-section">
     <div class="back-section-title">Issuer Profile</div>
-    <p>Clean-tech leader in chemical recycling. Patented pyrolysis process converts mixed plastic waste to virgin-quality naphtha for industrial and scientific use. Rotterdam plant operational since 2021.</p>
+    <p>Clean-tech leader in chemical recycling. Patented pyrolysis process converts mixed plastic waste to virgin-quality naphtha for industrial use. Rotterdam pilot plant operational since 2021.</p>
 </div>
 <div class="back-section">
     <div class="back-section-title">Project</div>
-    <p>Three new facilities: Hamburg (Germany), Antwerp (Belgium), Tarragona (Spain). Combined capacity 180,000 tonnes/year. Offtake agreements with BASF and Dow Chemical for 100% output.</p>
+    <p>Three new facilities: Hamburg, Antwerp, Tarragona. Combined capacity 150,000-200,000 tonnes/year. Binding offtake agreements with major chemical producers for 100% of output.</p>
 </div>
 <div class="back-section">
     <div class="back-section-title">Security Package</div>
-    <p>EU Innovation Fund co-investment (€40M grant secured). Plant & equipment mortgage. Technology license escrow. Feedstock supply agreements with 12 municipal waste authorities.</p>
+    <p>EU Innovation Fund co-investment (€30-50M grant secured). Plant & equipment mortgage. Technology license held in escrow. Feedstock supply agreements with 10+ municipal waste authorities.</p>
 </div>
 <div class="back-tags">
     <span class="back-tag security">Plant Mortgage</span>
     <span class="back-tag security">EU Grant Backed</span>
-    <span class="back-tag">BASF Offtake</span>
+    <span class="back-tag">100% Offtake</span>
     <span class="back-tag">Patented Tech</span>
 </div>
 </div>
 </div>
 </div>
+</div>
+</div>
+</div>
 
-<!-- Card 5: Azuri Ocean Developments - Mauritius Real Estate (Coupon Only) -->
+<!-- Card 5: Real Estate - Luxury Development (Coupon Only) -->
 <div class="flip-card-container" data-structure="coupon" data-audited="true" data-regulated="true">
 <div class="flip-card">
 <div class="flip-card-front">
+<span class="example-badge">Example</span>
 <span class="card-type-badge coupon-only">Fixed Coupon</span>
 <div class="card-hero">
 <span class="card-emoji">🏝️</span>
 </div>
 <div class="card-content">
     <div class="card-header">
-        <div class="card-issuer-name">Azuri Ocean Developments</div>
+        <div class="card-issuer-name"><span class="redacted-light">[Issuer Redacted]</span></div>
         <div class="card-location">🇲🇺 Mauritius</div>
-        <h3 class="card-title">Luxury Residence Development Bond</h3>
+        <h3 class="card-title">Luxury Oceanfront Development Bond</h3>
     </div>
-    <p class="card-description">Development financing for 84-unit oceanfront condominium in Grand Baie with IRS residency qualification.</p>
+    <p class="card-description">80-100 unit oceanfront condominium with marina and beach club. IRS (Integrated Resort Scheme) residency qualification for buyers. Grand Baie location.</p>
     <div class="structure-row">
-        <span class="structure-pill coupon">7% Coupon</span>
-        <span class="structure-pill maturity">3 Years</span>
+        <span class="structure-pill coupon">6-8% Coupon</span>
+        <span class="structure-pill maturity">2-4 Years</span>
     </div>
     <div class="funding-section">
         <div class="funding-header">
             <span class="funding-label">Funding Progress</span>
-            <span class="funding-amount">$38M raised</span>
+            <span class="funding-amount"><span class="redacted-light">$30-45M raised</span></span>
         </div>
         <div class="funding-bar-container">
             <div class="funding-bar" style="width: 73%;"></div>
             <div class="soft-cap-marker" style="left: 58%;"></div>
         </div>
         <div class="funding-caps">
-            <span class="cap-label"><span class="cap-dot soft"></span> Soft $30M</span>
-            <span class="cap-label"><span class="cap-dot hard"></span> Hard $52M</span>
+            <span class="cap-label"><span class="cap-dot soft"></span> Soft $25-35M</span>
+            <span class="cap-label"><span class="cap-dot hard"></span> Hard $45-60M</span>
         </div>
     </div>
     <div class="trust-section">
@@ -452,7 +522,7 @@ scripts:
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-landmark"></use></svg></span>
-                <span class="trust-text">IRS Scheme</span>
+                <span class="trust-text">Gov't Scheme</span>
             </div>
         </div>
     </div>
@@ -461,63 +531,64 @@ scripts:
 </div>
 <div class="flip-card-back">
 <div class="back-header">
-    <div class="back-issuer">Azuri Ocean Developments Ltd</div>
-    <div class="back-meta">Est. 2015 • Port Louis, Mauritius</div>
+    <div class="back-issuer">[Issuer Redacted]</div>
+    <div class="back-meta">Premium developer • 4+ completed IRS projects • 95% sell-through</div>
 </div>
 <div class="back-section">
     <div class="back-section-title">Issuer Profile</div>
-    <p>Premium developer with 4 completed IRS projects. 280+ units delivered to international buyers from EU, UK, and South Africa. Subsidiary of Ciel Group (SEM listed, $2B market cap). 95% sell-through rate.</p>
+    <p>Premium developer with 4+ completed IRS luxury projects. 250+ units delivered to EU, UK, and South African buyers. Subsidiary of publicly listed group with $1B+ market cap. 95% historical sell-through rate.</p>
 </div>
 <div class="back-section">
     <div class="back-section-title">Project</div>
-    <p>84 luxury condos ranging $650K–$2.1M per unit. 60% pre-sold to EU/UK buyers. IRS scheme grants buyers Mauritius residency permit. Completion Q4 2027. Beach club, marina berths, concierge.</p>
+    <p>80-100 luxury condos ranging $600K–$2M per unit. 55-65% pre-sold to EU/UK buyers. IRS scheme grants buyers Mauritius residency permit. Beach club, marina berths, concierge services.</p>
 </div>
 <div class="back-section">
     <div class="back-section-title">Security Package</div>
-    <p>First-ranking mortgage over development land (independent valuation $95M). Escrow of pre-sale deposits. Ciel Group corporate guarantee. Completion guarantee from Allianz Insurance.</p>
+    <p>First-ranking mortgage over development land (independent valuation $80-100M). Escrow of all pre-sale deposits. Corporate guarantee from listed parent. Completion guarantee from major international insurer.</p>
 </div>
 <div class="back-tags">
     <span class="back-tag security">Land Mortgage</span>
     <span class="back-tag security">Corporate Guarantee</span>
-    <span class="back-tag">60% Pre-Sold</span>
+    <span class="back-tag">55%+ Pre-Sold</span>
     <span class="back-tag">IRS Residency</span>
 </div>
 </div>
 </div>
 </div>
 
-<!-- Card 6: Nordic Solar Parks - Renewable (Hybrid) -->
+<!-- Card 6: Renewable Energy - Solar (Hybrid) -->
 <div class="flip-card-container" data-structure="profit" data-audited="true" data-regulated="true">
 <div class="flip-card">
 <div class="flip-card-front">
+<span class="example-badge">Example</span>
 <span class="card-type-badge hybrid">Coupon + Profit</span>
 <div class="card-hero">
 <span class="card-emoji">☀️</span>
 </div>
 <div class="card-content">
     <div class="card-header">
-        <div class="card-issuer-name">Nordic Solar Parks A/S</div>
-        <div class="card-location">🇩🇰 Denmark</div>
-        <h3 class="card-title">Scandinavian Solar Portfolio Bond</h3>
+        <div class="card-issuer-name"><span class="redacted-light">[Issuer Redacted]</span></div>
+        <div class="card-location">🇩🇰 Scandinavia</div>
+        <h3 class="card-title">Nordic Solar Portfolio Bond</h3>
     </div>
-    <p class="card-description">Construction and operation of 12 utility-scale solar installations across Sweden and Finland.</p>
+    <p class="card-description">Construction of 10-15 utility-scale solar parks totaling 350-500MW across Sweden and Finland. 20-25 year PPAs with Nordic utilities.</p>
     <div class="structure-row">
-        <span class="structure-pill coupon">3.5% Coupon</span>
-        <span class="structure-pill profit">+15% Cash Flow</span>
-        <span class="structure-pill maturity">20 Years</span>
+        <span class="structure-pill coupon">3-4% Coupon</span>
+        <span class="structure-pill profit">+12-18% Cash Flow</span>
+        <span class="structure-pill maturity">18-25 Years</span>
     </div>
     <div class="funding-section">
         <div class="funding-header">
             <span class="funding-label">Funding Progress</span>
-            <span class="funding-amount">$142M raised</span>
+            <span class="funding-amount"><span class="redacted-light">$120-160M raised</span></span>
         </div>
         <div class="funding-bar-container">
             <div class="funding-bar" style="width: 79%;"></div>
             <div class="soft-cap-marker" style="left: 56%;"></div>
         </div>
         <div class="funding-caps">
-            <span class="cap-label"><span class="cap-dot soft"></span> Soft $100M</span>
-            <span class="cap-label"><span class="cap-dot hard"></span> Hard $180M</span>
+            <span class="cap-label"><span class="cap-dot soft"></span> Soft $80-120M</span>
+            <span class="cap-label"><span class="cap-dot hard"></span> Hard $150-200M</span>
         </div>
     </div>
     <div class="trust-section">
@@ -537,7 +608,7 @@ scripts:
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-landmark"></use></svg></span>
-                <span class="trust-text">Nasdaq</span>
+                <span class="trust-text">Listed</span>
             </div>
         </div>
     </div>
@@ -546,25 +617,25 @@ scripts:
 </div>
 <div class="flip-card-back">
 <div class="back-header">
-    <div class="back-issuer">Nordic Solar Parks A/S</div>
-    <div class="back-meta">Est. 2012 • Copenhagen, Denmark • Nasdaq: NSP</div>
+    <div class="back-issuer">[Issuer Redacted]</div>
+    <div class="back-meta">Leading developer • Nasdaq listed • BBB rated</div>
 </div>
 <div class="back-section">
     <div class="back-section-title">Issuer Profile</div>
-    <p>Leading Nordic solar developer with 850MW operational portfolio. Nasdaq Copenhagen listed. Investment-grade rated (BBB by S&P). €1.2B assets under management. Carbon-neutral since 2019.</p>
+    <p>Leading Nordic solar developer with 700-900MW operational portfolio. Major European exchange listed. Investment-grade rated (BBB). €1B+ assets under management. Carbon-neutral operations since 2019.</p>
 </div>
 <div class="back-section">
     <div class="back-section-title">Project</div>
-    <p>12 new solar parks totaling 420MW across Sweden and Finland. 25-year PPAs with Vattenfall and Fortum covering 85% of output. Grid connection permits secured. EU Taxonomy aligned green investment.</p>
+    <p>10-15 new solar parks totaling 350-500MW across Sweden and Finland. 20-25 year PPAs with major Nordic utilities covering 80-90% of output. All grid connection permits secured. EU Taxonomy aligned.</p>
 </div>
 <div class="back-section">
     <div class="back-section-title">Security Package</div>
-    <p>Project finance structure with senior cash flow waterfall. Share pledge over all project SPVs. 12-month debt service reserve account (DSRA). EPC performance guarantee from JinkoSolar.</p>
+    <p>Project finance structure with senior cash flow waterfall. Share pledge over all project SPVs. 12-month debt service reserve account (DSRA). EPC performance guarantee from tier-1 panel manufacturer.</p>
 </div>
 <div class="back-tags">
     <span class="back-tag security">SPV Share Pledge</span>
     <span class="back-tag security">PPA Secured</span>
-    <span class="back-tag">Nasdaq Listed</span>
+    <span class="back-tag">Exchange Listed</span>
     <span class="back-tag">BBB Rated</span>
 </div>
 </div>
@@ -575,6 +646,7 @@ scripts:
 </div>
 </section>
 <section style="background: var(--cream); padding: 40px 30px 60px; text-align: center;">
-<p style="font-size: 0.85rem; color: var(--silver); font-style: italic; margin-bottom: 16px;">All offerings are CrossSecurities — hold on-chain or cross to bankable ISIN form via Clearstream.</p>
-<p style="font-size: 0.75rem; color: var(--silver);">Professional investors only. Minimum $150,000. Past performance does not guarantee future results.</p>
+<p style="font-size: 0.85rem; color: var(--silver); font-style: italic; margin-bottom: 16px;">The examples above are for illustrative purposes only and do not constitute an offer to sell or solicitation to buy any securities. All offerings are CrossSecurities — hold on-chain or cross to bankable ISIN form via Clearstream.</p>
+<p style="font-size: 0.75rem; color: var(--silver); margin-bottom: 20px;">Professional investors only. Minimum $150,000. Past performance does not guarantee future results. Actual offering terms available after investor verification.</p>
+<a href="/signup/" style="display: inline-block; padding: 12px 28px; background: #3182ce; color: white; text-decoration: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem;">Request Access to Live Offerings</a>
 </section>
