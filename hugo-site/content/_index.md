@@ -33,7 +33,7 @@ scripts:
         <h1>
             <span class="line"><span class="line-inner">Raise your sails</span></span>
         </h1>
-        <p class="hero-tagline">to go beyond with <strong>Sails CrossSecurities</strong>.</p>
+        <p class="hero-tagline">GO <span class="beyond-text">BEYOND</span> WITH SECURITIES THAT CROSS THE LINE</p>
         <p class="hero-subline" style="font-size: 1rem; opacity: 0.85; margin-top: 1rem; color: var(--ivory);">Bonds, shares, and RWA tokens that can be held on-chain or via traditional bank custody — and crossed between forms at will.</p>
     </div>
     <div class="hero-editorial" id="heroEditorial">

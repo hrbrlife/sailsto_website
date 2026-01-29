@@ -21,44 +21,17 @@ scripts:
 <!-- FULLSCREEN COMPLIANCE GATE -->
 <div class="compliance-gate" id="complianceGate">
 <div class="compliance-gate-content">
-<div class="compliance-gate-icon">⚠️</div>
-<h1>Important Notice</h1>
-<h2>This Page Does Not Constitute an Offer to Invest</h2>
+<div class="compliance-gate-icon">📋</div>
+<h1>Illustrative Examples Only</h1>
 
 <div class="compliance-gate-body">
-<p class="compliance-lead">The content on this page is provided for <strong>informational and illustrative purposes only</strong>. It is intended exclusively for professional and sophisticated investors evaluating the types of opportunities that may become available through our platform.</p>
+<p class="compliance-lead">The offerings shown on this page are <strong>representative examples</strong> of the types of deals available through our platform.</p>
 
-<div class="compliance-section">
-<h3>Why This Is Not an Offer</h3>
-<p>Under securities regulations, a valid investment offer must contain specific, material information about the issuer, the terms, and the risks involved. <strong>We have intentionally removed or anonymized all such identifying information</strong> from this page, including:</p>
-<ul>
-<li>Issuer names and corporate identities</li>
-<li>Exact coupon rates, yields, and financial terms</li>
-<li>Specific raise amounts and funding targets</li>
-<li>Precise reserve figures and production data</li>
-<li>Named counterparties, partners, and offtakers</li>
-</ul>
-<p>Because this essential information has been stripped, <strong>what remains cannot legally or practically constitute an offer to sell securities</strong>. You cannot invest based on what you see here.</p>
-</div>
-
-<div class="compliance-section">
-<h3>How to Access Actual Offerings</h3>
-<p>To view real offerings with complete terms and make investment decisions, you must be verified as a professional or accredited investor. This can be done through:</p>
-<ul>
-<li><strong>Direct verification with the Issuer</strong> — Complete KYC/AML and professional investor certification directly with the issuing entity</li>
-<li><strong>Through a licensed broker</strong> — Work with any of our network brokers who will verify your status and provide access to offerings appropriate for your profile</li>
-</ul>
-</div>
-
-<div class="compliance-section">
-<h3>Who This Page Is For</h3>
-<p>This preview is designed for professional investors, family offices, and institutional allocators who want to understand the <em>types</em> of deals available on our platform before beginning the verification process. If you are a retail investor, this page—and our platform—is not intended for you.</p>
-</div>
+<p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.7;">All identifying details have been anonymized or randomized, including issuer names, exact terms, raise amounts, and counterparties. To access real offerings with complete information, you'll need to complete investor verification.</p>
 </div>
 
 <div class="compliance-gate-actions">
-<p class="compliance-acknowledgment">By continuing, you confirm that you understand this page contains illustrative examples only and does not constitute an offer, solicitation, or recommendation to invest in any security.</p>
-<button class="compliance-gate-btn" onclick="dismissComplianceGate()">I Understand — Continue to Preview</button>
+<button class="compliance-gate-btn" onclick="dismissComplianceGate()">Continue to Preview</button>
 <a href="/" class="compliance-gate-link">← Return to Homepage</a>
 </div>
 </div>
@@ -463,9 +436,6 @@ document.addEventListener('DOMContentLoaded', function() {
     <span class="back-tag security">EU Grant Backed</span>
     <span class="back-tag">100% Offtake</span>
     <span class="back-tag">Patented Tech</span>
-</div>
-</div>
-</div>
 </div>
 </div>
 </div>
