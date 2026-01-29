@@ -517,13 +517,49 @@
         .hero-tagline {
             font-family: 'Lato', sans-serif;
             font-size: 1.05rem;
-            font-weight: 300;
+            font-weight: 700;
             font-style: normal;
             text-transform: none;
             letter-spacing: 0.04em;
             color: #ffffff;
             margin-top: 28px;
             opacity: 0.92;
+        }
+        
+        /* BEYOND text - slightly fatter with FPV hyperspace streaking lines */
+        .beyond-text {
+            font-weight: 800;
+            position: relative;
+            display: inline;
+            background: 
+                repeating-conic-gradient(from 0deg at 50% 50%,
+                    #ffffff 0deg,
+                    #0a0a0a 2deg,
+                    #C9A227 4deg,
+                    #0a0a0a 6deg,
+                    #ffffff 8deg,
+                    #0a0a0a 10deg,
+                    #87CEEB 12deg,
+                    #0a0a0a 14deg,
+                    #ffffff 16deg,
+                    #0a0a0a 18deg);
+            background-size: 100% 100%;
+            background-position: center center;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: warpSpeed 3s linear infinite;
+        }
+        
+        @keyframes warpSpeed {
+            0% { 
+                transform: rotate(0deg);
+                filter: blur(0px);
+            }
+            100% { 
+                transform: rotate(360deg);
+                filter: blur(0px);
+            }
         }
         
         .hero-desc {
