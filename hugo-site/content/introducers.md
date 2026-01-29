@@ -98,19 +98,71 @@ scripts:
                 letter-spacing: 0.08em;
                 color: var(--ink);
             }
-            .intro-input-group input {
+            .intro-input-group input[type="text"] {
                 padding: 14px 18px;
                 border: 1px solid rgba(0,0,0,0.12);
                 font-size: 1.1rem;
                 color: var(--ink);
             }
-            .intro-input-group input:focus {
+            .intro-input-group input[type="text"]:focus {
                 outline: none;
                 border-color: var(--gold);
             }
             .intro-input-group .hint {
                 font-size: 0.8rem;
                 color: var(--silver);
+            }
+            .intro-input-group input[type="range"] {
+                width: 100%;
+                height: 8px;
+                -webkit-appearance: none;
+                appearance: none;
+                background: rgba(0,0,0,0.1);
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 8px;
+            }
+            .intro-input-group input[type="range"]::-webkit-slider-runnable-track {
+                height: 8px;
+                background: linear-gradient(to right, var(--gold) 0%, var(--gold) var(--slider-pct, 7%), rgba(0,0,0,0.1) var(--slider-pct, 7%), rgba(0,0,0,0.1) 100%);
+                border-radius: 4px;
+            }
+            .intro-input-group input[type="range"]::-moz-range-track {
+                height: 8px;
+                background: rgba(0,0,0,0.1);
+                border-radius: 4px;
+            }
+            .intro-input-group input[type="range"]::-moz-range-progress {
+                height: 8px;
+                background: var(--gold);
+                border-radius: 4px 0 0 4px;
+            }
+            .intro-input-group input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 24px;
+                height: 24px;
+                background: var(--ink);
+                border-radius: 50%;
+                cursor: pointer;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+                margin-top: -8px;
+            }
+            .intro-input-group input[type="range"]::-moz-range-thumb {
+                width: 24px;
+                height: 24px;
+                background: var(--ink);
+                border-radius: 50%;
+                cursor: pointer;
+                border: none;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            .intro-slider-labels {
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.7rem;
+                color: var(--silver);
+                margin-top: 4px;
             }
             .intro-result-box {
                 background: var(--ink);
@@ -153,8 +205,13 @@ scripts:
             <div class="intro-calc-grid">
                 <div class="intro-input-group">
                     <label for="raiseAmount">Successful Raise Amount</label>
-                    <input type="text" id="raiseAmount" value="2,000,000">
-                    <span class="hint">Total amount the issuer raises</span>
+                    <input type="text" id="raiseAmount" value="10,000,000" readonly>
+                    <input type="range" id="raiseSlider" min="3000000" max="100000000" value="10000000" step="500000">
+                    <div class="intro-slider-labels">
+                        <span>$3M</span>
+                        <span>$100M</span>
+                    </div>
+                    <span class="hint">Our sweet spot: $3M to $100M raises</span>
                 </div>
                 <div class="intro-result-box" id="introResult">
                 </div>

@@ -18,6 +18,15 @@ const nav = document.querySelector('nav');
             return parseFloat(str.replace(/[^0-9.-]/g, '')) || 0;
         }
 
+        function updateSliderBackground() {
+            const slider = document.getElementById('raiseSlider');
+            const min = parseFloat(slider.min);
+            const max = parseFloat(slider.max);
+            const val = parseFloat(slider.value);
+            const pct = ((val - min) / (max - min)) * 100;
+            slider.style.setProperty('--slider-pct', pct + '%');
+        }
+
         function calculateIntroReward() {
             const raise = parseAmount(document.getElementById('raiseAmount').value);
             
@@ -37,14 +46,14 @@ const nav = document.querySelector('nav');
             `;
         }
 
-        // Format input on blur
-        document.getElementById('raiseAmount').addEventListener('blur', function() {
-            const val = parseAmount(this.value);
-            this.value = val.toLocaleString('en-US');
+        // Slider controls the input
+        document.getElementById('raiseSlider').addEventListener('input', function() {
+            const val = parseFloat(this.value);
+            document.getElementById('raiseAmount').value = val.toLocaleString('en-US');
+            updateSliderBackground();
             calculateIntroReward();
         });
 
-        document.getElementById('raiseAmount').addEventListener('input', calculateIntroReward);
-
-        // Initial calculation
+        // Initial calculation and slider position
+        updateSliderBackground();
         calculateIntroReward();
