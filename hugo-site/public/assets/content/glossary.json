@@ -138,5 +138,208 @@
     "longDefinition": "Distributions are payments from issuers to token holders, representing their share of profits, income, or proceeds. On Sails.to, distributions are automated through smart contracts: when an issuer initiates a distribution, the system calculates each holder's share based on the real-time cap table and executes payments directly to their wallets (or traditional accounts for ISIN holders). This eliminates intermediaries and ensures instant, error-free dividend processing.",
     "category": "Finance",
     "relatedTerms": ["dividends", "smart-contract", "cap-table", "yield"]
+  },
+  "coupon": {
+    "term": "Coupon",
+    "shortDefinition": "The periodic interest payment made to bondholders, typically expressed as an annual percentage of the bond's nominal value.",
+    "longDefinition": "A coupon (also known as the coupon rate or interest rate) is the annual interest payment that a bond issuer agrees to pay bondholders. It is expressed as a percentage of the bond's nominal (face) value and determines the periodic cash flows the bondholder will receive. For example, a bond with a €1,000 nominal value and a 6% coupon pays €60 per year in interest.",
+    "category": "Finance",
+    "relatedTerms": ["nominal-value", "maturity", "distributions"]
+  },
+  "maturity": {
+    "term": "Maturity",
+    "shortDefinition": "The date on which a bond's principal amount becomes due and payable to the bondholder.",
+    "longDefinition": "Maturity refers to the specific date when a debt instrument's principal (face value) must be repaid to the investor. At maturity, bondholders receive their original investment back plus any final interest payment. Bond terms can range from short-term (under 1 year) to long-term (30+ years). The maturity date, combined with coupon rate and current price, determines a bond's yield.",
+    "category": "Finance",
+    "relatedTerms": ["coupon", "nominal-value", "distributions"]
+  },
+  "nominal-value": {
+    "term": "Nominal Value",
+    "shortDefinition": "The face value of a security as stated by the issuer, representing the principal amount for bonds or stated value per share for equity.",
+    "longDefinition": "Nominal value (also called face value or par value) is the stated value of a security as declared by the issuer. For bonds, it represents the amount that will be repaid at maturity. For equity, it's the minimum legal value assigned to each share. CrossSecurities bonds typically have a nominal value that determines the coupon payments and redemption amount.",
+    "category": "Finance",
+    "relatedTerms": ["coupon", "maturity", "hard-cap"]
+  },
+  "soft-cap": {
+    "term": "Soft Cap",
+    "shortDefinition": "The minimum funding threshold an offering must reach for the capital raise to proceed. If the soft cap is not met, investor funds are typically returned.",
+    "longDefinition": "A soft cap is the minimum amount of capital an issuer must raise for a securities offering to be considered successful. If the soft cap is not reached by the offering deadline, the raise is typically cancelled and all investor funds are returned in full. On Sails.to, investor funds are held in escrow until the soft cap is reached, protecting investors from committing capital to underfunded offerings.",
+    "category": "Finance",
+    "relatedTerms": ["hard-cap", "escrow", "security-token"]
+  },
+  "trustee": {
+    "term": "Trustee",
+    "shortDefinition": "An independent fiduciary entity that represents and protects the interests of bondholders or investors, ensuring issuers meet their obligations.",
+    "longDefinition": "A trustee is an independent party (typically a regulated financial institution) appointed to represent the collective interests of bondholders or other security holders. The trustee monitors the issuer's compliance with bond covenants, holds collateral on behalf of investors, and can take action to protect investor rights if the issuer defaults. For CrossSecurities, the trustee ensures continuity of investor protections regardless of holding form.",
+    "category": "Legal",
+    "relatedTerms": ["escrow", "custody", "distributions"]
+  },
+  "otc": {
+    "term": "OTC (Over-the-Counter)",
+    "shortDefinition": "Securities trading conducted directly between two parties without a centralized exchange, facilitated through a network of licensed brokers.",
+    "longDefinition": "Over-the-counter (OTC) trading refers to securities transactions conducted directly between two parties, rather than through a centralized exchange. OTC markets offer flexibility for trading less liquid securities and allow for negotiated terms. Sails.to's multi-broker OTC network facilitates compliant secondary trading of CrossSecurities with atomic settlement on Solana.",
+    "category": "Finance",
+    "relatedTerms": ["secondary-trading", "atomic-settlement", "vienna-mtf"]
+  },
+  "broker-dealer": {
+    "term": "Broker-Dealer",
+    "shortDefinition": "A licensed securities professional who can execute trades and place investors in CrossSecurities offerings through the Sails.to network.",
+    "longDefinition": "A broker-dealer is a regulated financial professional or firm licensed to buy and sell securities on behalf of clients (broker function) and for their own account (dealer function). On Sails.to, broker-dealers can participate in the multi-broker network to distribute offerings, facilitate secondary trading, and provide liquidity to investors while ensuring regulatory compliance.",
+    "category": "Finance",
+    "relatedTerms": ["otc", "secondary-trading", "distribution-fee", "brokerage-fee"]
+  },
+  "liquidity": {
+    "term": "Liquidity",
+    "shortDefinition": "The ease of buying or selling a security without significantly affecting its price — provided for CrossSecurities through the multi-broker OTC network.",
+    "longDefinition": "Liquidity measures how quickly and easily an asset can be converted to cash without a significant price discount. High liquidity means many buyers and sellers, tight bid-ask spreads, and minimal price impact. Sails.to's multi-broker OTC network enhances liquidity for CrossSecurities by connecting multiple market makers and enabling cross-broker trading with atomic settlement.",
+    "category": "Finance",
+    "relatedTerms": ["otc", "secondary-trading", "vienna-mtf", "atomic-settlement"]
+  },
+  "crosssecurities": {
+    "term": "Sails CrossSecurities",
+    "shortDefinition": "Securities that can be held on-chain or via traditional bank/brokerage custody — and crossed from one form to another at will.",
+    "longDefinition": "Sails CrossSecurities are a new class of securities that exist simultaneously in blockchain and traditional finance formats. Investors can hold them on-chain on Solana with direct wallet custody, or CrossConvert them to bankable ISIN form held via Clearstream. This hybrid approach combines DeFi benefits (instant settlement, programmable compliance) with TradFi compatibility (bank custody, brokerage integration).",
+    "category": "Finance",
+    "relatedTerms": ["crossconversion", "isin", "clearstream", "solana", "custody"]
+  },
+  "on-chain": {
+    "term": "On-Chain",
+    "shortDefinition": "Recorded directly on a blockchain — CrossSecurities exist on-chain on Solana with ownership, transfers, and compliance enforced by smart contracts.",
+    "longDefinition": "On-chain refers to data and transactions that are recorded directly on a blockchain, providing immutability, transparency, and programmatic enforcement. For CrossSecurities, on-chain holdings mean tokens exist in the investor's Solana wallet with ownership verified by the blockchain, transfers executed via smart contracts, and compliance rules automatically enforced.",
+    "category": "Technology",
+    "relatedTerms": ["solana", "smart-contract", "crossconversion", "atomic-settlement"]
+  },
+  "bankable": {
+    "term": "Bankable",
+    "shortDefinition": "Securities in a format recognized by traditional banking infrastructure — CrossSecurities can CrossConvert to bankable ISIN form held via Clearstream.",
+    "longDefinition": "Bankable refers to securities that can be held and processed by traditional banking and brokerage infrastructure. CrossSecurities achieve bankable status through CrossConversion to ISIN format, enabling settlement via Clearstream and custody through conventional financial institutions. This allows institutional investors to hold tokenized assets within their existing operational frameworks.",
+    "category": "Finance",
+    "relatedTerms": ["crossconversion", "isin", "clearstream", "custody"]
+  },
+  "crossconversion": {
+    "term": "CrossConversion",
+    "shortDefinition": "The process of moving Sails CrossSecurities between on-chain and bankable forms while maintaining 1:1 backing.",
+    "longDefinition": "CrossConversion is Sails.to's proprietary mechanism for converting securities between blockchain and traditional formats. Tokens held on Solana can be CrossConverted to bankable ISIN form held via Clearstream, and vice versa. The process maintains 1:1 backing — tokens are burned when converted to ISIN and minted when converted back — ensuring total supply integrity across both formats.",
+    "category": "Finance",
+    "relatedTerms": ["crosssecurities", "isin", "clearstream", "solana", "custody"]
+  },
+  "vienna-mtf": {
+    "term": "Vienna MTF",
+    "shortDefinition": "A regulated Multilateral Trading Facility providing compliant secondary trading for security tokens and traditional securities.",
+    "longDefinition": "Vienna MTF is a regulated multilateral trading facility that enables compliant secondary market trading for security tokens alongside traditional securities. As a licensed venue under EU financial regulations, it provides a regulated environment for price discovery and liquidity. CrossSecurities in bankable form can be traded on Vienna MTF, offering investors an additional liquidity venue.",
+    "category": "Finance",
+    "relatedTerms": ["secondary-trading", "crosssecurities", "isin"]
+  },
+  "compliance": {
+    "term": "Compliance",
+    "shortDefinition": "Adherence to legal, regulatory, and internal requirements — automated and enforced on-chain for CrossSecurities through KYC/AML, investor eligibility, and transfer restrictions.",
+    "longDefinition": "Compliance encompasses all activities ensuring adherence to applicable laws, regulations, and internal policies. For CrossSecurities, compliance is automated through smart contracts that enforce investor eligibility (KYC/AML verification, accreditation status), transfer restrictions (lock-up periods, investor limits), and regulatory reporting. This programmable compliance reduces operational burden while maintaining regulatory standing.",
+    "category": "Compliance",
+    "relatedTerms": ["kyc", "aml", "reg-d", "reg-s", "smart-contract"]
+  },
+  "investor-verification": {
+    "term": "Investor Verification",
+    "shortDefinition": "The process of confirming an investor's identity, financial status, and eligibility to participate in private securities offerings.",
+    "longDefinition": "Investor verification is the comprehensive process of confirming that potential investors meet all requirements to participate in a securities offering. This includes identity verification (KYC), anti-money laundering checks (AML), accreditation or professional investor status verification, and suitability assessment. On Sails.to, verification is completed once and enables investment across all platform offerings.",
+    "category": "Compliance",
+    "relatedTerms": ["kyc", "aml", "accredited-investor", "professional-investor"]
+  },
+  "brokerage-fee": {
+    "term": "Brokerage Fee",
+    "shortDefinition": "A fee charged by a broker for executing securities transactions on behalf of clients, typically a percentage of transaction value.",
+    "longDefinition": "Brokerage fees are charges levied by broker-dealers for executing buy or sell orders on behalf of clients. In secondary trading of CrossSecurities, brokerage fees compensate brokers for matching counterparties, ensuring compliance, and facilitating atomic settlement. Fee structures vary by broker and may be fixed amounts or percentages of transaction value.",
+    "category": "Finance",
+    "relatedTerms": ["distribution-fee", "secondary-trading", "otc"]
+  },
+  "distribution-fee": {
+    "term": "Distribution Fee",
+    "shortDefinition": "A fee charged for placing investors in a primary securities offering, compensating brokers and platforms for distribution services.",
+    "longDefinition": "Distribution fees are charges for placing investors during the primary offering of securities. These fees compensate broker-dealers and platforms for investor outreach, due diligence support, subscription processing, and compliance. On Sails.to, distribution fees are success-based, meaning issuers only pay when capital is successfully raised.",
+    "category": "Finance",
+    "relatedTerms": ["tokenization", "brokerage-fee", "security-token"]
+  },
+  "atomic-settlement": {
+    "term": "Atomic Settlement",
+    "shortDefinition": "A transaction mechanism where all parts of a trade execute simultaneously and completely, or not at all — eliminating settlement risk.",
+    "longDefinition": "Atomic settlement is a blockchain-native feature ensuring that all components of a transaction complete simultaneously or none complete at all. For CrossSecurities trading, this means token delivery and payment happen in the same transaction block — eliminating the counterparty risk inherent in traditional T+2 settlement. If any part fails, the entire transaction reverts.",
+    "category": "Technology",
+    "relatedTerms": ["solana", "smart-contract", "secondary-trading"]
+  },
+  "offering-memorandum": {
+    "term": "Offering Memorandum",
+    "shortDefinition": "Legal document detailing investment terms, risks, use of proceeds, and issuer information — required for all CrossSecurities offerings on Sails.to.",
+    "longDefinition": "An offering memorandum (also called private placement memorandum or PPM) is the comprehensive legal disclosure document provided to potential investors in a private securities offering. It details the investment opportunity, terms, risks, use of proceeds, issuer background, and legal structure. All CrossSecurities offerings require a complete offering memorandum reviewed for regulatory compliance.",
+    "category": "Legal",
+    "relatedTerms": ["private-placement", "reg-d", "reg-s", "kyc"]
+  },
+  "private-placement": {
+    "term": "Private Placement",
+    "shortDefinition": "Sale of securities directly to qualified investors without public offering registration — the primary method for issuing CrossSecurities on Sails.to.",
+    "longDefinition": "A private placement is a securities offering sold directly to a limited number of qualified investors rather than through a public offering. This approach allows issuers to raise capital without the cost and disclosure requirements of public registration, under exemptions like Reg D (US) and Reg S (international). Most CrossSecurities are issued through private placement structures.",
+    "category": "Finance",
+    "relatedTerms": ["reg-d", "reg-s", "accredited-investor", "professional-investor", "offering-memorandum"]
+  },
+  "commission": {
+    "term": "Commission",
+    "shortDefinition": "Fees paid to brokers and introducers for placing investors or facilitating trades — typically a percentage of the investment or transaction value.",
+    "longDefinition": "Commissions are fees paid to intermediaries (brokers, introducers, placement agents) for their role in bringing investors to an offering or facilitating trades. Commission structures vary but are typically expressed as a percentage of capital placed or transaction value. Sails.to's transparent fee structure ensures all parties understand commission arrangements upfront.",
+    "category": "Finance",
+    "relatedTerms": ["distribution-fee", "brokerage-fee", "broker-dealer", "soft-cap"]
+  },
+  "hard-cap": {
+    "term": "Hard Cap",
+    "shortDefinition": "The maximum amount of capital an issuer will accept in a securities offering, enforced automatically by smart contracts.",
+    "longDefinition": "A hard cap is the absolute maximum amount of capital an issuer will raise in a securities offering. Once reached, no additional investments are accepted. On Sails.to, hard caps are enforced automatically by smart contracts — when the cap is reached, subscription transactions are rejected. This ensures issuers don't over-dilute and investors have certainty about total raise size.",
+    "category": "Finance",
+    "relatedTerms": ["soft-cap", "nominal-value", "cap-table"]
+  },
+  "minimum-investment": {
+    "term": "Minimum Investment",
+    "shortDefinition": "$150,000 minimum investment threshold for CrossSecurities — set to comply with professional and accredited investor regulations globally.",
+    "longDefinition": "The minimum investment is the smallest amount an investor can commit to a securities offering. For CrossSecurities, the $150,000 minimum ensures compliance with professional investor thresholds across multiple jurisdictions and reflects the target investor base of qualified, sophisticated investors. This threshold helps maintain regulatory compliance under Reg D, Reg S, and MiFID II frameworks.",
+    "category": "Finance",
+    "relatedTerms": ["professional-investor", "accredited-investor", "nominal-value", "reg-d"]
+  },
+  "security-deposit": {
+    "term": "Security Deposit",
+    "shortDefinition": "An upfront payment required from issuers to initiate onboarding and cover preliminary structuring costs on Sails.to.",
+    "longDefinition": "A security deposit is a refundable or partially refundable payment required from issuers at the beginning of the onboarding process. It covers preliminary costs for legal structuring, compliance review, and platform setup. The deposit demonstrates issuer commitment and is typically credited against success fees when the offering completes successfully.",
+    "category": "Finance",
+    "relatedTerms": ["distribution-fee", "series-llc", "spv"]
+  },
+  "operating-series": {
+    "term": "Operating Series",
+    "shortDefinition": "A dedicated series within a Series LLC structure that holds an issuer's specific project assets and liabilities, isolating them from other offerings.",
+    "longDefinition": "An operating series is a segregated cell within a Series LLC structure that holds the assets, liabilities, and operations of a specific project or offering. Each issuer on Sails.to receives their own operating series under the Wyoming DAO Series LLC, providing complete liability isolation from other issuers while sharing administrative infrastructure.",
+    "category": "Legal",
+    "relatedTerms": ["series-llc", "wyoming-dao-llc", "treasury-series"]
+  },
+  "treasury-series": {
+    "term": "Treasury Series",
+    "shortDefinition": "A dedicated series within a Series LLC structure that holds un-issued or repurchased tokens, managing token supply.",
+    "longDefinition": "A treasury series is a segregated cell within the Series LLC structure that holds tokens not yet distributed to investors or tokens that have been repurchased. This series manages token supply, facilitates corporate actions, and provides a mechanism for issuers to maintain or adjust their capital structure over time.",
+    "category": "Legal",
+    "relatedTerms": ["series-llc", "operating-series", "cap-table"]
+  },
+  "crossconversion-series": {
+    "term": "CrossConversion Series",
+    "shortDefinition": "A dedicated series that facilitates conversion of securities between on-chain tokens and bankable ISIN format, maintaining 1:1 backing.",
+    "longDefinition": "The CrossConversion series is a specialized cell within the Series LLC structure that manages the conversion of securities between on-chain and bankable formats. It holds the backing for both token forms, ensuring 1:1 correspondence between total on-chain tokens and total ISIN-held securities. This series enables the seamless CrossConversion that makes CrossSecurities unique.",
+    "category": "Legal",
+    "relatedTerms": ["crossconversion", "crosssecurities", "series-llc"]
+  },
+  "escrow": {
+    "term": "Escrow",
+    "shortDefinition": "A neutral holding arrangement where investor funds are held by a trusted third party until predetermined conditions (like soft cap) are met.",
+    "longDefinition": "Escrow is a financial arrangement where funds are held by a neutral third party until specific conditions are satisfied. For CrossSecurities offerings, investor funds are held in escrow until the soft cap is reached. If the offering fails to meet its soft cap, escrowed funds are returned to investors automatically. This protects investors from committing capital to unsuccessful raises.",
+    "category": "Finance",
+    "relatedTerms": ["soft-cap", "smart-contract", "trustee"]
+  },
+  "operational-trust": {
+    "term": "Operational Trust",
+    "shortDefinition": "A trust structure used to hold and manage operational assets on behalf of investors, providing independent oversight and administration.",
+    "longDefinition": "An operational trust is a legal arrangement where assets are held and managed by an independent trustee for the benefit of investors. This structure provides additional governance and protection beyond corporate structures, with the trustee having fiduciary duties to act in investors' best interests. Operational trusts may be used for specific asset classes or jurisdictional requirements.",
+    "category": "Legal",
+    "relatedTerms": ["trustee", "custody", "escrow"]
   }
 }
