@@ -55,22 +55,27 @@ Two specialized AI agents analyze each page:
 
 ## 🎯 Page Tiers
 
-Pages are organized by priority:
+Pages are organized by priority for testing:
 
-### Tier 1: Critical (Conversion Pages)
+### Tier 1: Critical (5 pages)
 - Homepage, For Issuers, For Investors, Pricing, Signup
 
-### Tier 2: High (Value Pages)
+### Tier 2: High (5 pages)
 - For Brokers, For Institutions, Introducers, How It Works, Issuers Directory
 
-### Tier 3: Trust (Credibility Pages)
-- Security, Compliance, Oversight, About, Contact, Legal
+### Tier 3: Trust (7 pages)
+- Security, Compliance, Oversight, Company Index, About, Contact, Legal
 
-### Tier 4: Knowledge (Content Pages)
-- Knowledge Hub, FAQ, Roadmap, Glossary Index, Blog Index, Docs Index
+### Tier 4: Knowledge (8 pages)
+- Knowledge Hub, FAQ, Roadmap, Glossary Index, Blog Index, Docs Index, Guides Index, Getting Started Guide
 
-### Tier 5: Samples (Spot Checks)
-- Sample glossary terms, blog posts
+### Tier 5: Samples (11 pages)
+- Sample glossary terms (CrossSecurities, Tokenization, Wyoming DAO, Security Token, ISIN, KYC)
+- Sample blog posts (Security Tokens, Why Wyoming, Future of Tokenization)
+- Sample docs (Platform Overview, Getting Started)
+
+### Tier 6: Extended (17 pages)
+- Additional glossary, blog, and docs pages for comprehensive audit
 
 ## ⚙️ Configuration
 
