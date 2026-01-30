@@ -59,7 +59,7 @@ scripts:
                 <div style="font-family: var(--font-display); font-size: 1.3rem; color: var(--ink); margin-bottom: 8px; line-height: 1.2;">Maximum Flexibility</div>
                 <p style="font-size: 0.8rem; color: var(--slate); margin-bottom: 20px; line-height: 1.5;">Structure the deal your way—fixed income, profit participation, or hybrid.</p>
                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: var(--graphite); line-height: 2;">
-                    <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">✓</span>Fixed coupon payments</li>
+                    <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">✓</span>Fixed <span class="glossary-term" data-term="coupon">coupon</span> payments</li>
                     <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">✓</span>Profit-sharing participations</li>
                     <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">✓</span>Royalty arrangements</li>
                     <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0; color: var(--gold);">✓</span>Project or corporate finance</li>
@@ -72,8 +72,8 @@ scripts:
                 <p style="font-size: 0.8rem; color: var(--slate); margin-bottom: 20px; line-height: 1.5; opacity: 0.6;">Governance rights and equity participation with on-chain transparency.</p>
                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: var(--slate); line-height: 2; opacity: 0.6;">
                     <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0;">○</span>Voting rights</li>
-                    <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0;">○</span>Dividend distributions</li>
-                    <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0;">○</span>Cap table management</li>
+                    <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0;">○</span><span class="glossary-term" data-term="distributions">Dividend distributions</span></li>
+                    <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0;">○</span><span class="glossary-term" data-term="cap-table">Cap table</span> management</li>
                     <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0;">○</span>Exit participation</li>
                 </ul>
             </div>
@@ -81,7 +81,7 @@ scripts:
                 <div style="position: absolute; top: 16px; right: 16px; background: transparent; border: 1px solid var(--silver); color: var(--silver); font-family: var(--font-ui); font-size: 0.55rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 8px;">Coming Soon</div>
                 <div style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--slate); margin-bottom: 8px;">CrossRWA</div>
                 <div style="font-family: var(--font-display); font-size: 1.3rem; color: var(--ink); margin-bottom: 8px; line-height: 1.2; opacity: 0.6;">Liquidity on Illiquid Assets</div>
-                <p style="font-size: 0.8rem; color: var(--slate); margin-bottom: 20px; line-height: 1.5; opacity: 0.6;">Fractional ownership and trading of real-world assets.</p>
+                <p style="font-size: 0.8rem; color: var(--slate); margin-bottom: 20px; line-height: 1.5; opacity: 0.6;">Fractional ownership and trading of <span class="glossary-term" data-term="tokenization">real-world assets</span>.</p>
                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: var(--slate); line-height: 2; opacity: 0.6;">
                     <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0;">○</span>Real estate</li>
                     <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0;">○</span>Commodities</li>
@@ -111,7 +111,7 @@ scripts:
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div>
                                     <div style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--slate); margin-bottom: 6px;">Issuer</div>
-                                    <div style="font-size: 1rem; color: var(--ink); font-weight: 500;">Project SPV</div>
+                                    <div style="font-size: 1rem; color: var(--ink); font-weight: 500;">Project <span class="glossary-term" data-term="spv">SPV</span></div>
                                 </div>
                                 <div>
                                     <div style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--slate); margin-bottom: 6px;">Project Manager</div>
@@ -120,11 +120,11 @@ scripts:
                             </div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
                                 <div>
-                                    <div style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--slate); margin-bottom: 6px;">Maturity</div>
+                                    <div style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--slate); margin-bottom: 6px;"><span class="glossary-term" data-term="maturity">Maturity</span></div>
                                     <div style="font-size: 1rem; color: var(--ink); font-weight: 500;">15 Years</div>
                                 </div>
                                 <div>
-                                    <div style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--slate); margin-bottom: 6px;">Coupon</div>
+                                    <div style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--slate); margin-bottom: 6px;"><span class="glossary-term" data-term="coupon">Coupon</span></div>
                                     <div style="font-size: 1rem; color: var(--ink); font-weight: 500;">2% p.a. Quarterly</div>
                                 </div>
                             </div>
@@ -140,7 +140,7 @@ scripts:
                             <div style="font-family: var(--font-display); font-size: 2.8rem; font-weight: 400; color: var(--ink); letter-spacing: -0.02em;">$350M</div>
                         </div>
                         <div style="text-align: center; padding-top: 24px; flex: 1; display: flex; flex-direction: column; justify-content: center;">
-                            <div style="font-family: var(--font-ui); font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--slate); margin-bottom: 8px;">Bond Nominal</div>
+                            <div style="font-family: var(--font-ui); font-size: 0.6rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--slate); margin-bottom: 8px;">Bond <span class="glossary-term" data-term="nominal-value">Nominal</span></div>
                             <div style="font-family: var(--font-display); font-size: 1.6rem; font-weight: 400; color: var(--ink);">$150,000</div>
                             <div style="font-size: 0.8rem; color: var(--silver); margin-top: 8px; font-style: italic;">per unit</div>
                         </div>
@@ -166,7 +166,7 @@ scripts:
             <div class="fees-content">
                 <span class="section-label">Pay After Success</span>
                 <h2 class="section-title">Zero risk<br>to launch</h2>
-                <p class="section-desc">No setup fees. No monthly fees. You pay only when capital is successfully raised — between 1% and 6% depending on how investors find you. Miss your target? Everyone gets reimbursed automatically.</p>
+                <p class="section-desc">No setup fees. No monthly fees. You pay only when capital is successfully raised — between 1% and 6% depending on how investors find you. Miss your <span class="glossary-term" data-term="soft-cap">soft cap</span>? Everyone gets reimbursed automatically.</p>
                 <p class="section-desc" style="margin-top: 1rem;"><a href="/pricing/" style="color: var(--gold); text-decoration: underline;">See full pricing details →</a></p>
             </div>
             <div class="fees-summary" style="display: flex; flex-direction: column; gap: 1.5rem;">
@@ -196,22 +196,22 @@ scripts:
             <div class="feature-card">
                 <span class="icon-wrapper"><svg><use href="#icon-legal"></use></svg></span>
                 <h3>Turnkey Legal Structure</h3>
-                <p><strong>Issuers:</strong> Wyoming DAO Series LLC, Reg S/Reg D compliance, KYC platform, document vault—all provided. Launch in weeks, not months.<br><strong>Investors:</strong> Clear legal framework, verified issuer identity, comprehensive disclosures. Know exactly what you're investing in.</p>
+                <p><strong>Issuers:</strong> <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO Series LLC</span>, <span class="glossary-term" data-term="reg-s">Reg S</span>/<span class="glossary-term" data-term="reg-d">Reg D</span> compliance, <span class="glossary-term" data-term="kyc">KYC</span> platform, document vault—all provided. Launch in weeks, not months.<br><strong>Investors:</strong> Clear legal framework, verified issuer identity, comprehensive disclosures. Know exactly what you're investing in.</p>
             </div>
             <div class="feature-card">
                 <span class="icon-wrapper"><svg><use href="#icon-shield-check"></use></svg></span>
                 <h3>Independent Oversight</h3>
-                <p><strong>Issuers:</strong> Appoint a trustee from the network or bring your own. Independent verification builds investor confidence.<br><strong>Investors:</strong> Licensed trustee oversight on every offering. Your interests are independently protected.</p>
+                <p><strong>Issuers:</strong> Appoint a <span class="glossary-term" data-term="trustee">trustee</span> from the network or bring your own. Independent verification builds investor confidence.<br><strong>Investors:</strong> Licensed <span class="glossary-term" data-term="trustee">trustee</span> oversight on every offering. Your interests are independently protected.</p>
             </div>
             <div class="feature-card">
                 <span class="icon-wrapper"><svg><use href="#icon-network"></use></svg></span>
-                <h3>Multi-Broker OTC Network</h3>
-                <p><strong>Issuers:</strong> Access a network of licensed brokers for distribution. Reach investors globally without building relationships from scratch.<br><strong>Investors:</strong> Trade through your broker of choice. Cross-broker liquidity means better execution and real secondary markets.</p>
+                <h3>Multi-Broker <span class="glossary-term" data-term="otc">OTC</span> Network</h3>
+                <p><strong>Issuers:</strong> Access a network of licensed <span class="glossary-term" data-term="broker-dealer">brokers</span> for distribution. Reach investors globally without building relationships from scratch.<br><strong>Investors:</strong> Trade through your broker of choice. Cross-broker <span class="glossary-term" data-term="liquidity">liquidity</span> means better execution and real <span class="glossary-term" data-term="secondary-trading">secondary markets</span>.</p>
             </div>
             <div class="feature-card">
                 <span class="icon-wrapper"><svg><use href="#icon-convert"></use></svg></span>
-                <h3>CrossSecurities Flexibility</h3>
-                <p><strong>Issuers:</strong> One offering reaches both on-chain and traditional investors. Unified cap table regardless of form.<br><strong>Investors:</strong> Hold on-chain or cross to bankable ISIN format. CrossConvert between forms as your requirements change. Same security, your choice.</p>
+                <h3><span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> Flexibility</h3>
+                <p><strong>Issuers:</strong> One offering reaches both <span class="glossary-term" data-term="on-chain">on-chain</span> and traditional investors. Unified <span class="glossary-term" data-term="cap-table">cap table</span> regardless of form.<br><strong>Investors:</strong> Hold <span class="glossary-term" data-term="on-chain">on-chain</span> or cross to <span class="glossary-term" data-term="bankable">bankable</span> <span class="glossary-term" data-term="isin">ISIN</span> format. <span class="glossary-term" data-term="crossconversion">CrossConvert</span> between forms as your requirements change. Same security, your choice.</p>
             </div>
         </div>
     </div>
@@ -219,11 +219,11 @@ scripts:
 <section class="global-section">
     <div class="global-container">
         <div class="global-card">
-            <span class="section-label">CrossConversion</span>
-            <h2 class="section-title">Cross between on-chain and bankable</h2>
-            <p>CrossSecurities can be held on-chain (Solana) or in bankable form (ISIN via Clearstream) — and crossed between forms at will. Any holder can request CrossConversion for ~1.5% of nominal value. Cross to bankable when your bank requires ISIN custody. Cross back to on-chain when you want 24/7 liquidity. Optional Vienna MTF listing for exchange visibility.</p>
-            <p style="margin-top: 1rem;"><strong>For Issuers:</strong> One offering reaches both crypto-native and traditional investors. Unified cap table regardless of which form investors hold.</p>
-            <p style="margin-top: 0.5rem;"><strong>For Investors:</strong> Hold in whichever form your compliance requires. Cross between forms as circumstances change. Same security, same rights — different custody rails.</p>
+            <span class="section-label"><span class="glossary-term" data-term="crossconversion">CrossConversion</span></span>
+            <h2 class="section-title">Cross between <span class="glossary-term" data-term="on-chain">on-chain</span> and <span class="glossary-term" data-term="bankable">bankable</span></h2>
+            <p><span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> can be held <span class="glossary-term" data-term="on-chain">on-chain</span> (<span class="glossary-term" data-term="solana">Solana</span>) or in <span class="glossary-term" data-term="bankable">bankable</span> form (<span class="glossary-term" data-term="isin">ISIN</span> via <span class="glossary-term" data-term="clearstream">Clearstream</span>) — and crossed between forms at will. Any holder can request <span class="glossary-term" data-term="crossconversion">CrossConversion</span> for ~1.5% of <span class="glossary-term" data-term="nominal-value">nominal value</span>. Cross to <span class="glossary-term" data-term="bankable">bankable</span> when your bank requires <span class="glossary-term" data-term="isin">ISIN</span> <span class="glossary-term" data-term="custody">custody</span>. Cross back to <span class="glossary-term" data-term="on-chain">on-chain</span> when you want 24/7 <span class="glossary-term" data-term="liquidity">liquidity</span>. Optional <span class="glossary-term" data-term="vienna-mtf">Vienna MTF</span> listing for exchange visibility.</p>
+            <p style="margin-top: 1rem;"><strong>For Issuers:</strong> One offering reaches both crypto-native and traditional investors. Unified <span class="glossary-term" data-term="cap-table">cap table</span> regardless of which form investors hold.</p>
+            <p style="margin-top: 0.5rem;"><strong>For Investors:</strong> Hold in whichever form your <span class="glossary-term" data-term="compliance">compliance</span> requires. Cross between forms as circumstances change. Same security, same rights — different <span class="glossary-term" data-term="custody">custody</span> rails.</p>
         </div>
     </div>
 </section>
@@ -238,15 +238,15 @@ scripts:
             <div class="structure-cards">
                 <div class="structure-card">
                     <h4>Data Sovereignty</h4>
-                    <p>Your KYC and investor data stays on your infrastructure. Verification credentials travel with investors across the network — the underlying data doesn't.</p>
+                    <p>Your <span class="glossary-term" data-term="kyc">KYC</span> and investor data stays on your infrastructure. <span class="glossary-term" data-term="investor-verification">Verification</span> credentials travel with investors across the network — the underlying data doesn't.</p>
                 </div>
                 <div class="structure-card">
                     <h4>Legal Isolation</h4>
-                    <p>Each offering operates in its own legal compartment. Other issuers' problems never touch your raise or your investors.</p>
+                    <p>Each offering operates in its own legal compartment via <span class="glossary-term" data-term="series-llc">Series LLC</span> structure. Other issuers' problems never touch your raise or your investors.</p>
                 </div>
                 <div class="structure-card">
                     <h4>Independent Oversight</h4>
-                    <p>Licensed trustee monitors every offering. Reserves handled neutrally. Full on-chain audit trail for complete transparency.</p>
+                    <p>Licensed <span class="glossary-term" data-term="trustee">trustee</span> monitors every offering. Reserves handled neutrally. Full <span class="glossary-term" data-term="on-chain">on-chain</span> audit trail for complete transparency.</p>
                 </div>
             </div>
         </div>
