@@ -1,0 +1,46 @@
+---
+title: "Soft Cap - Glossary"
+description: "The minimum funding threshold an offering must reach for the capital raise to proceed. If the soft cap is not met, investor funds are typically returned."
+stylesheets:
+  - "/assets/fonts/fonts.css"
+  - "/styles.css"
+  - "/assets/css/glossary.css"
+  - "/assets/css/glossary-term.css"
+---
+
+<header class="term-page-header">
+    <div class="container">
+        <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
+        <span class="term-category">Finance</span>
+        <h1 class="term-title">Soft Cap</h1>
+        <p class="term-short">The minimum funding threshold an offering must reach for the capital raise to proceed.</p>
+    </div>
+</header>
+<main class="term-content">
+    <div class="term-content-inner">
+        <section class="term-section">
+            <h2>Full Definition</h2>
+            <p>A <strong>soft cap</strong> is the minimum amount of capital an issuer must raise for a securities offering to be considered successful. If the soft cap is not reached by the offering deadline, the raise is typically cancelled and all investor funds are returned in full.</p>
+            <p>The soft cap represents the minimum viable funding level that allows the issuer to execute their business plan. It's a protective mechanism for both issuers (ensuring they have enough capital to proceed) and investors (guaranteeing their funds won't be deployed into an underfunded venture).</p>
+        </section>
+        <section class="term-section">
+            <h2>Why It Matters</h2>
+            <p>On Sails.to, investor funds are held in escrow until the soft cap is reached. This protects investors from committing capital to offerings that fail to gain sufficient traction. Once the soft cap is reached, tokens are issued and the offering continues accepting investments up to the <a href="/knowledge/glossary/hard-cap/">hard cap</a>.</p>
+            <p>For issuers, setting an appropriate soft cap signals confidence and ensures you only proceed when you have the resources to deliver on your commitments.</p>
+        </section>
+        <section class="term-section">
+            <h2>Related Terms</h2>
+            <div class="related-terms">
+                <a href="/knowledge/glossary/hard-cap/" class="related-term-link">Hard Cap</a>
+                <a href="/knowledge/glossary/escrow/" class="related-term-link">Escrow</a>
+                <a href="/knowledge/glossary/security-token/" class="related-term-link">Security Token</a>
+            </div>
+        </section>
+        <div class="term-cta">
+            <h3>Launch your offering with confidence</h3>
+            <p>Set your funding parameters and start raising capital on Sails.to.</p>
+            <a href="/issuers/" class="btn">Learn About Issuing</a>
+        </div>
+    </div>
+</main>
+<script src="/assets/js/glossary.js"></script>

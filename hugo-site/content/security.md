@@ -12,6 +12,7 @@ ogImage: "/og-security.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
+  - "/assets/css/glossary.css"
 ---
 
 <section class="page-hero">
@@ -32,7 +33,7 @@ stylesheets:
 <div class="feature-card">
 <span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-lock"></use></svg></span>
 <h3>Isolated by Design</h3>
-<p>Each issuer's data lives in its own sealed container. A breach elsewhere can't cascade to you. Smaller attack surface means fewer things that can go wrong.</p>
+<p>Each issuer's data lives in its own sealed container via <span class="glossary-term" data-term="series-llc">Series LLC</span> separation. A breach elsewhere can't cascade to you. Smaller attack surface means fewer things that can go wrong.</p>
 </div>
 <div class="feature-card">
 <span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-users"></use></svg></span>
@@ -42,7 +43,7 @@ stylesheets:
 <div class="feature-card">
 <span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-shield"></use></svg></span>
 <h3>Audited Smart Contracts</h3>
-<p>All CrossSecurities smart contracts undergo third-party security audits before deployment. Published audit reports available for review.</p>
+<p>All <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> <span class="glossary-term" data-term="smart-contract">smart contracts</span> undergo third-party security audits before deployment. Published audit reports available for review.</p>
 </div>
 </div>
 
@@ -55,13 +56,13 @@ stylesheets:
 <li><strong>Data isolation:</strong> Your offering's data is walled off from every other offering</li>
 <li><strong>Encrypted everything:</strong> Data encrypted at rest and in transit with keys we rotate regularly</li>
 <li><strong>Multi-party controls:</strong> Sensitive operations require approval from multiple independent keyholders</li>
-<li><strong>Minimal footprint:</strong> We collect only what's legally required—less data stored means less data at risk</li>
+<li><strong>Minimal footprint:</strong> We collect only what's legally required for <span class="glossary-term" data-term="kyc">KYC</span>/<span class="glossary-term" data-term="aml">AML</span>—less data stored means less data at risk</li>
 </ul>
 </div>
 
 <div class="info-block">
-<h2>Custody & Funds</h2>
-<p>Investor funds are held with regulated custodians in segregated accounts—never commingled with platform operations. Multi-signature controls mean no single party can move funds unilaterally.</p>
+<h2><span class="glossary-term" data-term="custody">Custody</span> & Funds</h2>
+<p>Investor funds are held with regulated custodians in <span class="glossary-term" data-term="escrow">segregated accounts</span>—never commingled with platform operations. <span class="glossary-term" data-term="atomic-settlement">Multi-signature controls</span> mean no single party can move funds unilaterally. <span class="glossary-term" data-term="on-chain">On-chain</span> holdings are on <span class="glossary-term" data-term="solana">Solana</span>; <span class="glossary-term" data-term="bankable">bankable</span> holdings are via <span class="glossary-term" data-term="clearstream">Clearstream</span>.</p>
 </div>
 
 <div class="info-block">

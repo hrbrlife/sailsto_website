@@ -184,6 +184,91 @@
                 "term": "Distributions",
                 "shortDefinition": "Payments made to security holders, including dividends, interest, or return of capital.",
                 "category": "Finance"
+            },
+            "soft-cap": {
+                "term": "Soft Cap",
+                "shortDefinition": "The minimum funding threshold an offering must reach for the capital raise to proceed.",
+                "category": "Finance"
+            },
+            "hard-cap": {
+                "term": "Hard Cap",
+                "shortDefinition": "The maximum amount of capital an issuer will accept in a securities offering.",
+                "category": "Finance"
+            },
+            "coupon": {
+                "term": "Coupon",
+                "shortDefinition": "The periodic interest payment made to bondholders, typically expressed as an annual percentage of nominal value.",
+                "category": "Finance"
+            },
+            "maturity": {
+                "term": "Maturity",
+                "shortDefinition": "The date on which a bond's principal amount becomes due and payable to the bondholder.",
+                "category": "Finance"
+            },
+            "nominal-value": {
+                "term": "Nominal Value",
+                "shortDefinition": "The face value of a security as stated by the issuer, representing the principal amount for bonds.",
+                "category": "Finance"
+            },
+            "escrow": {
+                "term": "Escrow",
+                "shortDefinition": "A neutral holding arrangement where funds are held by a trusted third party until conditions are met.",
+                "category": "Finance"
+            },
+            "trustee": {
+                "term": "Trustee",
+                "shortDefinition": "An independent fiduciary entity that represents and protects the interests of bondholders or investors.",
+                "category": "Legal"
+            },
+            "otc": {
+                "term": "OTC (Over-the-Counter)",
+                "shortDefinition": "Securities trading conducted directly between two parties without a centralized exchange.",
+                "category": "Finance"
+            },
+            "atomic-settlement": {
+                "term": "Atomic Settlement",
+                "shortDefinition": "A transaction mechanism where all parts of a trade execute simultaneously and completely, or not at all.",
+                "category": "Technology"
+            },
+            "vienna-mtf": {
+                "term": "Vienna MTF",
+                "shortDefinition": "A regulated Multilateral Trading Facility providing compliant secondary trading for security tokens.",
+                "category": "Finance"
+            },
+            "distribution-fee": {
+                "term": "Distribution Fee",
+                "shortDefinition": "A fee charged to distribute securities tokens to investors during an offering.",
+                "category": "Finance"
+            },
+            "brokerage-fee": {
+                "term": "Brokerage Fee",
+                "shortDefinition": "A fee charged by a broker for executing securities transactions on behalf of clients.",
+                "category": "Finance"
+            },
+            "security-deposit": {
+                "term": "Security Deposit",
+                "shortDefinition": "An upfront payment required from issuers to initiate onboarding and cover structuring costs.",
+                "category": "Finance"
+            },
+            "operating-series": {
+                "term": "Operating Series",
+                "shortDefinition": "A dedicated series within a Series LLC structure holding an issuer's project assets and liabilities.",
+                "category": "Legal"
+            },
+            "treasury-series": {
+                "term": "Treasury Series",
+                "shortDefinition": "A dedicated series within a Series LLC structure that holds un-issued or repurchased tokens.",
+                "category": "Legal"
+            },
+            "crossconversion-series": {
+                "term": "CrossConversion Series",
+                "shortDefinition": "A dedicated series that facilitates conversion between on-chain tokens and bankable ISIN format.",
+                "category": "Legal"
+            },
+            "operational-trust": {
+                "term": "Operational Trust",
+                "shortDefinition": "A trust structure used to hold and manage operational assets on behalf of investors.",
+                "category": "Legal"
             }
         };
     }

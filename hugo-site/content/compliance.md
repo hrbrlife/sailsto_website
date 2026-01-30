@@ -12,12 +12,13 @@ ogImage: "/og-compliance.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
+  - "/assets/css/glossary.css"
 ---
 
 <section class="page-hero">
 <span class="section-label">Compliance</span>
 <h1 class="section-title">Built for Regulatory Clarity</h1>
-<p class="section-desc">CrossSecurities are designed from the ground up to meet securities regulations across multiple jurisdictions.</p>
+<p class="section-desc"><span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> are designed from the ground up to meet securities regulations across multiple jurisdictions.</p>
 </section>
 
 <section class="content-section">
@@ -26,23 +27,23 @@ stylesheets:
 <div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
 <div class="feature-card">
 <span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-lock"></use></svg></span>
-<h3>KYC/AML</h3>
-<p>Professional investor verification with tiered KYC levels. Identity verification, source of funds, and accreditation checks built into every offering.</p>
+<h3><span class="glossary-term" data-term="kyc">KYC</span>/<span class="glossary-term" data-term="aml">AML</span></h3>
+<p><span class="glossary-term" data-term="professional-investor">Professional investor</span> verification with tiered KYC levels. Identity verification, source of funds, and accreditation checks built into every offering.</p>
 </div>
 <div class="feature-card">
 <span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-document"></use></svg></span>
 <h3>Securities Exemptions</h3>
-<p>Offerings structured under recognized exemptions including Regulation D (US), Regulation S (offshore), and equivalent frameworks globally.</p>
+<p>Offerings structured under recognized exemptions including <span class="glossary-term" data-term="reg-d">Regulation D</span> (US), <span class="glossary-term" data-term="reg-s">Regulation S</span> (offshore), and equivalent frameworks globally.</p>
 </div>
 <div class="feature-card">
 <span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-globe"></use></svg></span>
 <h3>Multi-Jurisdiction</h3>
-<p>Legal opinions and compliance frameworks covering EU, UK, US, and emerging markets. Clear investor eligibility by jurisdiction.</p>
+<p>Legal opinions and <span class="glossary-term" data-term="compliance">compliance</span> frameworks covering EU, UK, US, and emerging markets. Clear investor eligibility by jurisdiction. <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO Series LLC</span> legal structure.</p>
 </div>
 <div class="feature-card">
 <span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-folder"></use></svg></span>
 <h3>Documentation</h3>
-<p>Standardized offering documents including prospectus, subscription agreements, and risk disclosures reviewed by securities counsel.</p>
+<p>Standardized offering documents including <span class="glossary-term" data-term="offering-memorandum">prospectus</span>, subscription agreements, and risk disclosures reviewed by securities counsel.</p>
 </div>
 </div>
 
@@ -50,9 +51,9 @@ stylesheets:
 <h2>Compliance Infrastructure</h2>
 <p>Every CrossSecurities offering on Sails.to includes:</p>
 <ul>
-<li><strong>Investor Verification:</strong> Multi-level KYC with professional investor certification</li>
+<li><strong><span class="glossary-term" data-term="investor-verification">Investor Verification</span>:</strong> Multi-level <span class="glossary-term" data-term="kyc">KYC</span> with <span class="glossary-term" data-term="professional-investor">professional investor</span> certification</li>
 <li><strong>Jurisdictional Controls:</strong> Automated geo-blocking and eligibility enforcement</li>
-<li><strong>Transfer Restrictions:</strong> Smart contract enforcement of holding periods and transfer rules</li>
+<li><strong>Transfer Restrictions:</strong> <span class="glossary-term" data-term="smart-contract">Smart contract</span> enforcement of holding periods and transfer rules</li>
 <li><strong>Reporting:</strong> Automated regulatory reporting and investor communications</li>
 <li><strong>Audit Trail:</strong> Complete transaction history for regulatory inquiries</li>
 </ul>
