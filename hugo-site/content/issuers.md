@@ -52,8 +52,8 @@ stylesheets:
         <div class="detail-grid">
             <div class="detail-content">
                 <h2>Turnkey legal structure</h2>
-                <p>Your offering gets its own Wyoming DAO Series LLC: a legally isolated compartment that keeps your raise separate from everything else on the platform.</p>
-                <p>Reg S for non-US investors, Reg D for accredited US investors. The structure is already in place. You bring the deal. We provide the rails.</p>
+                <p>Your offering gets its own <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO Series LLC</span>: a legally isolated compartment that keeps your raise separate from everything else on the platform.</p>
+                <p><span class="glossary-term" data-term="reg-s">Reg S</span> for non-US investors, <span class="glossary-term" data-term="reg-d">Reg D</span> for <span class="glossary-term" data-term="accredited-investor">accredited US investors</span>. The structure is already in place. You bring the deal. We provide the rails.</p>
             </div>
             <ul class="detail-list">
                 <li>
@@ -86,7 +86,7 @@ stylesheets:
         <div class="detail-grid">
             <div class="detail-content">
                 <h2>Built-in infrastructure</h2>
-                <p>KYC/AML verification you control. No data leaks to third-party processors. Document vault for all offering materials. Investor communications platform for updates and distributions.</p>
+                <p><span class="glossary-term" data-term="kyc">KYC</span>/<span class="glossary-term" data-term="aml">AML</span> verification you control. No data leaks to third-party processors. Document vault for all offering materials. Investor communications platform for updates and <span class="glossary-term" data-term="distributions">distributions</span>.</p>
                 <p>Everything an institutional-grade raise requires, without hiring a team to build it.</p>
             </div>
             <ul class="detail-list">
@@ -115,7 +115,7 @@ stylesheets:
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg></span>
                     <div class="text">
                         <h4>Compliance Reporting</h4>
-                        <p>Cap table management, investor registry, transaction logs. Export for auditors and regulators.</p>
+                        <p><span class="glossary-term" data-term="cap-table">Cap table</span> management, investor registry, transaction logs. Export for auditors and regulators.</p>
                     </div>
                 </li>
             </ul>
@@ -148,7 +148,7 @@ stylesheets:
                 <li>
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg></span>
                     <div class="text">
-                        <h4>Soft Cap Protection</h4>
+                        <h4><span class="glossary-term" data-term="soft-cap">Soft Cap</span> Protection</h4>
                         <p>Set your minimum raise target. If it is not reached, investors are automatically reimbursed.</p>
                     </div>
                 </li>
@@ -160,8 +160,8 @@ stylesheets:
     <div class="detail-container">
         <div class="detail-grid">
             <div class="detail-content">
-                <h2>CrossSecurities format flexibility</h2>
-                <p>CrossSecurities settle on Solana for 24/7 trading and instant settlement. When investors need bankable custody, they can CrossConvert to ISIN-identified format via Clearstream.</p>
+                <h2><span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> format flexibility</h2>
+                <p><span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> settle on <span class="glossary-term" data-term="solana">Solana</span> for 24/7 trading and instant settlement. When investors need bankable <span class="glossary-term" data-term="custody">custody</span>, they can <span class="glossary-term" data-term="crossconversion">CrossConvert</span> to <span class="glossary-term" data-term="isin">ISIN</span>-identified format via <span class="glossary-term" data-term="clearstream">Clearstream</span>.</p>
                 <p>The holding form can change without changing what the CrossSecurity is. Same security, both worlds.</p>
             </div>
             <ul class="detail-list">
@@ -175,14 +175,14 @@ stylesheets:
                 <li>
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg></span>
                     <div class="text">
-                        <h4>Bankable Form (ISIN/Clearstream)</h4>
-                        <p>Optional upgrade (~$4K). CrossConvert to ISIN format for traditional bank custody worldwide.</p>
+                        <h4>Bankable Form (<span class="glossary-term" data-term="isin">ISIN</span>/<span class="glossary-term" data-term="clearstream">Clearstream</span>)</h4>
+                        <p>Optional upgrade (~$4K). <span class="glossary-term" data-term="crossconversion">CrossConvert</span> to <span class="glossary-term" data-term="isin">ISIN</span> format for traditional bank <span class="glossary-term" data-term="custody">custody</span> worldwide.</p>
                     </div>
                 </li>
                 <li>
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" /></svg></span>
                     <div class="text">
-                        <h4>Vienna MTF Listing</h4>
+                        <h4><span class="glossary-term" data-term="vienna-mtf">Vienna MTF</span> Listing</h4>
                         <p>Optional (~$3K). Public exchange listing for price discovery and visibility.</p>
                     </div>
                 </li>
@@ -196,12 +196,12 @@ stylesheets:
             <div class="fees-content">
                 <span class="section-label">Pay After Success</span>
                 <h2 class="section-title">Zero risk<br>to launch</h2>
-                <p class="section-desc">No setup fees. No monthly fees. You pay only on successfully raised capital. Miss your soft cap? Everyone gets reimbursed automatically.</p>
+                <p class="section-desc">No setup fees. No monthly fees. You pay only on successfully raised capital. Miss your <span class="glossary-term" data-term="soft-cap">soft cap</span>? Everyone gets reimbursed automatically.</p>
             </div>
             <div>
                 <div class="fee-table">
                     <div class="fee-row">
-                        <span class="label">Soft cap phase</span>
+                        <span class="label"><span class="glossary-term" data-term="soft-cap">Soft cap</span> phase</span>
                         <span class="value" style="color:#38a169;">0%</span>
                     </div>
                     <div class="fee-row">
@@ -213,7 +213,7 @@ stylesheets:
                         <span class="value">6%</span>
                     </div>
                     <div class="fee-row">
-                        <span class="label">Secondary trades</span>
+                        <span class="label"><span class="glossary-term" data-term="secondary-trading">Secondary trades</span></span>
                         <span class="value">0.5%</span>
                     </div>
                     <div class="fee-row">
@@ -221,7 +221,7 @@ stylesheets:
                         <span class="value">1%/yr</span>
                     </div>
                     <div class="fee-row">
-                        <span class="label">Security deposit (refundable)</span>
+                        <span class="label"><span class="glossary-term" data-term="security-deposit">Security deposit</span> (refundable)</span>
                         <span class="value">3%</span>
                     </div>
                 </div>
@@ -242,16 +242,16 @@ stylesheets:
             </div>
             <div class="structure-cards">
                 <div class="structure-card">
-                    <h4>Operating Series</h4>
+                    <h4><span class="glossary-term" data-term="operating-series">Operating Series</span></h4>
                     <p>Holds pledges, underlying assets, and receives revenue for your specific offering.</p>
                 </div>
                 <div class="structure-card">
-                    <h4>Treasury Series</h4>
-                    <p>Reserves, operational funds, unclaimed distributions. Neutral trust oversight.</p>
+                    <h4><span class="glossary-term" data-term="treasury-series">Treasury Series</span></h4>
+                    <p>Reserves, operational funds, unclaimed <span class="glossary-term" data-term="distributions">distributions</span>. Neutral <span class="glossary-term" data-term="trustee">trust</span> oversight.</p>
                 </div>
                 <div class="structure-card">
-                    <h4>CrossConversion Series</h4>
-                    <p>CrossConvert between on-chain form and bankable ISIN form so eligible investors can hold through traditional custody without losing interoperability.</p>
+                    <h4><span class="glossary-term" data-term="crossconversion-series">CrossConversion Series</span></h4>
+                    <p><span class="glossary-term" data-term="crossconversion">CrossConvert</span> between on-chain form and bankable <span class="glossary-term" data-term="isin">ISIN</span> form so eligible investors can hold through traditional <span class="glossary-term" data-term="custody">custody</span> without losing interoperability.</p>
                 </div>
             </div>
         </div>

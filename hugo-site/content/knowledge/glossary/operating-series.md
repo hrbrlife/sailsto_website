@@ -1,0 +1,51 @@
+---
+title: "Operating Series - Glossary"
+description: "A dedicated series within a Series LLC structure that holds an issuer's specific project assets and liabilities, isolated from other series."
+stylesheets:
+  - "/assets/fonts/fonts.css"
+  - "/styles.css"
+  - "/assets/css/glossary.css"
+  - "/assets/css/glossary-term.css"
+---
+
+<header class="term-page-header">
+    <div class="container">
+        <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
+        <span class="term-category">Legal</span>
+        <h1 class="term-title">Operating Series</h1>
+        <p class="term-short">A dedicated series within a Series LLC structure holding an issuer's specific project assets and liabilities.</p>
+    </div>
+</header>
+<main class="term-content">
+    <div class="term-content-inner">
+        <section class="term-section">
+            <h2>Full Definition</h2>
+            <p>An <strong>Operating Series</strong> is one type of compartment within a <a href="/knowledge/glossary/series-llc/">Series LLC</a> structure. Each Operating Series functions as a legally distinct entity that holds the assets, liabilities, and contractual relationships for a specific project or investment.</p>
+            <p>The Operating Series is where the actual business activity occurs—it holds the real estate, makes the loans, owns the revenue-generating assets, or conducts whatever activity the offering is designed to fund.</p>
+        </section>
+        <section class="term-section">
+            <h2>Why It Matters</h2>
+            <p>On Sails.to's <a href="/knowledge/glossary/wyoming-dao-llc/">Wyoming DAO LLC</a> platform, each issuer's project is structured within an Operating Series. This provides:</p>
+            <ul>
+                <li><strong>Liability isolation</strong>: Problems in one Operating Series don't affect other series or the parent structure</li>
+                <li><strong>Clear ownership</strong>: Investors' tokens represent interests in this specific Operating Series</li>
+                <li><strong>Regulatory clarity</strong>: Each series can have distinct securities registrations and investor eligibility requirements</li>
+            </ul>
+            <p>The Operating Series works alongside the <a href="/knowledge/glossary/treasury-series/">Treasury Series</a> and <a href="/knowledge/glossary/crossconversion-series/">CrossConversion Series</a> to create a complete, compliant structure.</p>
+        </section>
+        <section class="term-section">
+            <h2>Related Terms</h2>
+            <div class="related-terms">
+                <a href="/knowledge/glossary/series-llc/" class="related-term-link">Series LLC</a>
+                <a href="/knowledge/glossary/wyoming-dao-llc/" class="related-term-link">Wyoming DAO LLC</a>
+                <a href="/knowledge/glossary/treasury-series/" class="related-term-link">Treasury Series</a>
+            </div>
+        </section>
+        <div class="term-cta">
+            <h3>Structured for success</h3>
+            <p>Learn how Sails.to structures compliant offerings.</p>
+            <a href="/regulated/" class="btn">Our Legal Framework</a>
+        </div>
+    </div>
+</main>
+<script src="/assets/js/glossary.js"></script>

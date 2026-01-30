@@ -21,7 +21,7 @@ scripts:
 <section class="page-hero" style="background: linear-gradient(135deg, var(--ink) 0%, #2d3748 100%);">
     <span class="section-label">For Business Introducers</span>
     <h1 class="section-title">Know a business that<br>should be raising capital?</h1>
-    <p class="section-desc">Make one introduction. We handle everything — onboarding, compliance, structuring, distribution. When they close, you earn 25% of Sails.to's fee. A $2M raise through broker network = $30,000 to you. No license. No ongoing work.</p>
+    <p class="section-desc">Make one introduction. We handle everything — onboarding, <span class="glossary-term" data-term="compliance">compliance</span>, structuring, distribution. When they close, you earn 25% of Sails.to's fee. A $2M raise through <span class="glossary-term" data-term="broker-dealer">broker network</span> = $30,000 to you. No license. No ongoing work.</p>
 </section>
 <section class="detail-section">
     <div class="detail-container">
@@ -43,7 +43,7 @@ scripts:
                     <span class="icon-wrapper"><svg><use href="#icon-clipboard"></use></svg></span>
                     <div class="text">
                         <h4>We Take It From There</h4>
-                        <p>Our team handles everything: qualification, structuring, compliance, investor distribution.</p>
+                        <p>Our team handles everything: qualification, structuring, <span class="glossary-term" data-term="compliance">compliance</span>, investor distribution.</p>
                     </div>
                 </li>
                 <li>
@@ -217,7 +217,7 @@ scripts:
                 </div>
             </div>
             <div class="fee-note">
-                <strong>How it works:</strong> Sails.to earns a distribution fee on successful raises (typically 1-6% depending on investor sourcing). You receive 25% of whatever Sails.to earns from the initial placement. The example above assumes average platform commission of ~3.5%.
+                <strong>How it works:</strong> Sails.to earns a <span class="glossary-term" data-term="distribution-fee">distribution fee</span> on successful raises (typically 1-6% depending on investor sourcing). You receive 25% of whatever Sails.to earns from the initial <span class="glossary-term" data-term="private-placement">placement</span>. The example above assumes average platform <span class="glossary-term" data-term="commission">commission</span> of ~3.5%.
             </div>
         </div>
     </div>
@@ -268,8 +268,8 @@ scripts:
         <div class="detail-grid">
             <div class="detail-content">
                 <h2>What businesses are we looking for?</h2>
-                <p>Established businesses with real revenue and a clear use of funds. Not early-stage startups. Not speculative ventures. Companies that would traditionally raise from banks or private equity, but want more flexibility.</p>
-                <p>Our sweet spot: $600K to $10M raises for expansion, equipment, working capital, or project finance.</p>
+                <p>Established businesses with real revenue and a clear use of funds. Not early-stage startups. Not speculative ventures. Companies that would traditionally raise from banks or <span class="glossary-term" data-term="private-placement">private equity</span>, but want more flexibility.</p>
+                <p>Our sweet spot: $600K to $10M raises for expansion, equipment, working capital, or project finance. All offerings have a <span class="glossary-term" data-term="soft-cap">soft cap</span> (minimum) and <span class="glossary-term" data-term="hard-cap">hard cap</span> (maximum).</p>
             </div>
             <ul class="detail-list">
                 <li>

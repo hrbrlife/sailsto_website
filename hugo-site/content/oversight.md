@@ -12,6 +12,7 @@ ogImage: "/og-oversight.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
+  - "/assets/css/glossary.css"
 ---
 
 <section class="page-hero">
@@ -27,12 +28,12 @@ stylesheets:
 <div class="feature-card">
 <span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-target"></use></svg></span>
 <h3>Issuer Monitoring</h3>
-<p>Ongoing monitoring of issuer financial health, milestone delivery, and covenant compliance throughout the security lifecycle.</p>
+<p>Ongoing monitoring of issuer financial health, milestone delivery, and covenant compliance throughout the <span class="glossary-term" data-term="security-token">security</span> lifecycle.</p>
 </div>
 <div class="feature-card">
 <span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-chart"></use></svg></span>
 <h3>Reporting Requirements</h3>
-<p>Mandatory quarterly reporting from issuers. Financial statements, operational updates, and material event disclosures.</p>
+<p>Mandatory quarterly reporting from issuers. Financial statements, operational updates, and material event disclosures per <span class="glossary-term" data-term="offering-memorandum">offering memorandum</span> terms.</p>
 </div>
 <div class="feature-card">
 <span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-legal"></use></svg></span>
@@ -48,11 +49,11 @@ stylesheets:
 
 <div class="info-block">
 <h2>Trust Indicators</h2>
-<p>Each offering displays verified trust indicators:</p>
+<p>Each <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> offering displays verified trust indicators:</p>
 <ul>
 <li><strong>Audited:</strong> Financial statements verified by independent auditors</li>
 <li><strong>CPA/Big Four:</strong> Level of auditor credentialing</li>
-<li><strong>Prospectus:</strong> Formal offering document filed or delivered</li>
+<li><strong>Prospectus:</strong> Formal <span class="glossary-term" data-term="offering-memorandum">offering document</span> filed or delivered</li>
 <li><strong>Regulated:</strong> Issuer operates in regulated industry or jurisdiction</li>
 <li><strong>Collateralized:</strong> Security backed by pledged assets</li>
 </ul>
@@ -60,12 +61,13 @@ stylesheets:
 
 <div class="info-block">
 <h2>Governance Framework</h2>
-<p>CrossSecurities offerings include governance provisions protecting investor rights:</p>
+<p><span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> offerings include governance provisions protecting investor rights via <span class="glossary-term" data-term="smart-contract">smart contract</span> enforcement:</p>
 <ul>
 <li>Bondholder voting on material changes</li>
 <li>Information rights and inspection provisions</li>
 <li>Default triggers and remediation procedures</li>
-<li>Transfer agent and paying agent appointments</li>
+<li>Transfer agent and <span class="glossary-term" data-term="distributions">paying agent</span> appointments</li>
+<li><span class="glossary-term" data-term="trustee">Trustee</span> oversight on every offering</li>
 </ul>
 </div>
 

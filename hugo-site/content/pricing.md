@@ -12,6 +12,7 @@ ogImage: "/og-pricing.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
+  - "/assets/css/glossary.css"
   - "/assets/css/pricing.css"
 scripts:
   - "/js/pricing.js"
@@ -24,16 +25,20 @@ scripts:
     <p class="section-desc">Model your offering costs based on size, caps, and investor sourcing. All amounts in multiples of $150,000.</p>
     <div class="trust-badges light">
         <span class="trust-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+            SEC Reg D/Reg S
+        </span>
+        <span class="trust-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21" /></svg>
+            Wyoming DAO LLC
+        </span>
+        <span class="trust-badge">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
             Zero Upfront Fees
         </span>
         <span class="trust-badge">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
             Success-Based Only
-        </span>
-        <span class="trust-badge">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" /></svg>
-            Transparent Pricing
         </span>
     </div>
 </section>
@@ -44,7 +49,7 @@ scripts:
         <div class="calc-grid">
             <div class="calc-inputs">
                 <div class="input-group">
-                    <label for="softCap">Soft Cap (Minimum Goal)</label>
+                    <label for="softCap"><span class="glossary-term" data-term="soft-cap">Soft Cap</span> (Minimum Goal)</label>
                     <div class="amount-input-wrapper">
                         <input type="text" id="softCap" value="600,000" inputmode="numeric">
                         <div class="increment-buttons">
@@ -56,7 +61,7 @@ scripts:
                     <span class="input-hint">Minimum funding required to proceed</span>
                 </div>
                 <div class="input-group">
-                    <label for="hardCap">Hard Cap (Maximum Goal)</label>
+                    <label for="hardCap"><span class="glossary-term" data-term="hard-cap">Hard Cap</span> (Maximum Goal)</label>
                     <div class="amount-input-wrapper">
                         <input type="text" id="hardCap" value="1,500,000" inputmode="numeric">
                         <div class="increment-buttons">
@@ -146,14 +151,14 @@ scripts:
                     <span class="input-hint">Additional incentive for brokers on their placed amount</span>
                 </div>
                 <div class="input-group">
-                    <label for="couponRate">Annual Coupon Rate (%)</label>
+                    <label for="couponRate">Annual <span class="glossary-term" data-term="coupon">Coupon</span> Rate (%)</label>
                     <input type="number" id="couponRate" value="8" min="0" max="30" step="0.1">
                     <span class="input-hint">Annual interest rate paid to investors</span>
                 </div>
                 <div class="input-group">
                     <label for="termYears">Term (Years)</label>
                     <input type="number" id="termYears" value="3" min="1" max="30" step="1">
-                    <span class="input-hint">Bond maturity period</span>
+                    <span class="input-hint">Bond <span class="glossary-term" data-term="maturity">maturity</span> period</span>
                 </div>
                 <div class="input-group">
                     <label for="paymentFreq">Payment Frequency</label>
@@ -163,7 +168,7 @@ scripts:
                         <option value="4">Quarterly</option>
                         <option value="12">Monthly</option>
                     </select>
-                    <span class="input-hint">How often coupon payments are made</span>
+                    <span class="input-hint">How often <span class="glossary-term" data-term="coupon">coupon</span> payments are made</span>
                 </div>
             </div>
             <div class="calc-results" id="results">
@@ -185,16 +190,16 @@ scripts:
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Brokerage Fee</strong></td>
+                    <td><strong><span class="glossary-term" data-term="brokerage-fee">Brokerage Fee</span></strong></td>
                     <td><span class="fee-highlight">0.5%</span></td>
-                    <td>Secondary trades + post-soft-cap primary<br><em style="color:#38a169; font-size:0.85em;">⚡ Waived during soft cap phase</em></td>
+                    <td><span class="glossary-term" data-term="secondary-trading">Secondary trades</span> + post-<span class="glossary-term" data-term="soft-cap">soft cap</span> primary<br><em style="color:#38a169; font-size:0.85em;">⚡ Waived during <span class="glossary-term" data-term="soft-cap">soft cap</span> phase</em></td>
                     <td>Buyer</td>
                     <td>⅓ Platform + ⅓ Buy-side + ⅓ Sell-side</td>
                 </tr>
                 <tr>
-                    <td><strong>Distribution Fee</strong></td>
+                    <td><strong><span class="glossary-term" data-term="distribution-fee">Distribution Fee</span></strong></td>
                     <td><span class="fee-highlight">6% OR 1%</span></td>
-                    <td>Deducted from soft cap when reached<br><em style="color:#38a169; font-size:0.85em;">⚡ Not charged until soft cap reached</em></td>
+                    <td>Deducted from <span class="glossary-term" data-term="soft-cap">soft cap</span> when reached<br><em style="color:#38a169; font-size:0.85em;">⚡ Not charged until <span class="glossary-term" data-term="soft-cap">soft cap</span> reached</em></td>
                     <td>Issuer (from proceeds)</td>
                     <td>See below</td>
                 </tr>
@@ -220,23 +225,23 @@ scripts:
                     <td>Trust + Sails.to</td>
                 </tr>
                 <tr>
-                    <td><strong>Security Deposit</strong></td>
+                    <td><strong><span class="glossary-term" data-term="security-deposit">Security Deposit</span></strong></td>
                     <td><span class="fee-highlight">3% of issuance</span></td>
-                    <td>At issuance, reserved under trust</td>
+                    <td>At issuance, reserved under <span class="glossary-term" data-term="trustee">trust</span></td>
                     <td>Issuer (from proceeds)</td>
                     <td>Reserved, returned at end</td>
                 </tr>
                 <tr>
-                    <td><strong>Clearstream Fees</strong></td>
+                    <td><strong><span class="glossary-term" data-term="clearstream">Clearstream</span> Fees</strong></td>
                     <td>Variable</td>
                     <td>Channel 3 transactions</td>
                     <td>Investor</td>
                     <td>Clearstream</td>
                 </tr>
                 <tr>
-                    <td><strong>CrossConversion Fee</strong></td>
+                    <td><strong><span class="glossary-term" data-term="crossconversion">CrossConversion</span> Fee</strong></td>
                     <td><span class="fee-highlight">0.10-0.25%</span></td>
-                    <td>When CrossConverting between On-Chain ↔ Bankable form</td>
+                    <td>When <span class="glossary-term" data-term="crossconversion">CrossConverting</span> between On-Chain ↔ Bankable form</td>
                     <td>Requester</td>
                     <td>Sails.to + Trust</td>
                 </tr>
@@ -245,10 +250,10 @@ scripts:
         <div class="note-box">
             <strong>📌 Key Points</strong>
             <ul>
-                <li><strong>Soft cap phase is fee-free:</strong> Brokerage (0.5%) waived, distribution fees deferred until soft cap reached</li>
-                <li><strong>If soft cap fails:</strong> Full refund to investors (only Clearstream fees at cost, if used)</li>
+                <li><strong><span class="glossary-term" data-term="soft-cap">Soft cap</span> phase is fee-free:</strong> <span class="glossary-term" data-term="brokerage-fee">Brokerage</span> (0.5%) waived, <span class="glossary-term" data-term="distribution-fee">distribution fees</span> deferred until <span class="glossary-term" data-term="soft-cap">soft cap</span> reached</li>
+                <li><strong>If <span class="glossary-term" data-term="soft-cap">soft cap</span> fails:</strong> Full refund to investors (only <span class="glossary-term" data-term="clearstream">Clearstream</span> fees at cost, if used)</li>
                 <li><strong>No upfront costs:</strong> All fees deducted from proceeds when offering succeeds</li>
-                <li><strong>Security deposit:</strong> Returned at end of bond term if no issues</li>
+                <li><strong><span class="glossary-term" data-term="security-deposit">Security deposit</span>:</strong> Returned at end of bond term if no issues</li>
             </ul>
         </div>
     </div>

@@ -22,11 +22,11 @@ stylesheets:
 <section class="page-hero" style="background: linear-gradient(135deg, var(--navy) 0%, var(--charcoal) 100%);">
     <span class="section-label">For Investors</span>
     <h1 class="section-title">Private market deals.<br>Institutional protections.</h1>
-    <p class="section-desc">Access curated opportunities from established businesses — with full disclosures, verified issuers, and clear governance. Trade through a multi-broker OTC network with real liquidity. Hold CrossSecurities on-chain or cross to bankable ISIN form. No platform lock-in.</p>
+    <p class="section-desc">Access curated opportunities from established businesses — with full disclosures, verified issuers, and clear governance. Trade through a multi-broker OTC network with real <span class="glossary-term" data-term="liquidity">liquidity</span>. Hold <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> <span class="glossary-term" data-term="on-chain">on-chain</span> or cross to <span class="glossary-term" data-term="bankable">bankable</span> <span class="glossary-term" data-term="isin">ISIN</span> form. No platform lock-in.</p>
     <div class="important-notice">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
         <div class="important-notice-content">
-            <strong>$150,000 Minimum Investment</strong>
+            <strong><span class="glossary-term" data-term="minimum-investment">$150,000 Minimum Investment</span></strong>
             <span>Accredited/Professional investors only • 1.5% CrossConversion fee applies</span>
         </div>
     </div>
@@ -73,14 +73,14 @@ stylesheets:
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z" /></svg></span>
                     <div class="text">
                         <h4>Verified Issuers</h4>
-                        <p>KYC on issuers, not just investors. Know who you're investing with.</p>
+                        <p><span class="glossary-term" data-term="kyc">KYC</span> on issuers, not just investors. Know who you're investing with.</p>
                     </div>
                 </li>
                 <li>
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v17.25m0 0c-1.472 0-2.882.265-4.185.75M12 20.25c1.472 0 2.882.265 4.185.75M18.75 4.97A48.416 48.416 0 0012 4.5c-2.291 0-4.545.16-6.75.47m13.5 0c1.01.143 2.01.317 3 .52m-3-.52l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.988 5.988 0 01-2.031.352 5.988 5.988 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L18.75 4.971zm-16.5.52c.99-.203 1.99-.377 3-.52m0 0l2.62 10.726c.122.499-.106 1.028-.589 1.202a5.989 5.989 0 01-2.031.352 5.989 5.989 0 01-2.031-.352c-.483-.174-.711-.703-.59-1.202L5.25 4.971z" /></svg></span>
                     <div class="text">
                         <h4>Clear Governance</h4>
-                        <p>Wyoming DAO Series LLC structure. Your investment is legally isolated from other offerings.</p>
+                        <p><span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO Series LLC</span> structure. Your investment is legally isolated from other offerings.</p>
                     </div>
                 </li>
             </ul>
@@ -91,30 +91,30 @@ stylesheets:
     <div class="detail-container">
         <div class="detail-grid">
             <div class="detail-content">
-                <h2>CrossSecurities: Hold your way</h2>
-                <p>Hold CrossSecurities on-chain (Solana) for 24/7 liquidity and instant settlement. Or cross to bankable ISIN form and custody through Clearstream — settles to any bank worldwide.</p>
-                <p>The form can change without changing what the CrossSecurity is. CrossConvert when your custody requirements change, cross back when they don't.</p>
+                <h2><span class="glossary-term" data-term="crosssecurities">CrossSecurities</span>: Hold your way</h2>
+                <p>Hold <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> on-chain (<span class="glossary-term" data-term="solana">Solana</span>) for 24/7 liquidity and instant settlement. Or cross to bankable <span class="glossary-term" data-term="isin">ISIN</span> form and <span class="glossary-term" data-term="custody">custody</span> through <span class="glossary-term" data-term="clearstream">Clearstream</span> — settles to any bank worldwide.</p>
+                <p>The form can change without changing what the CrossSecurity is. <span class="glossary-term" data-term="crossconversion">CrossConvert</span> when your <span class="glossary-term" data-term="custody">custody</span> requirements change, cross back when they don't.</p>
             </div>
             <ul class="detail-list">
                 <li>
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" /></svg></span>
                     <div class="text">
-                        <h4>On-Chain Form (Solana)</h4>
-                        <p>Self-custody or qualified custodian. 24/7 trading. Instant settlement. Programmable compliance.</p>
+                        <h4>On-Chain Form (<span class="glossary-term" data-term="solana">Solana</span>)</h4>
+                        <p>Self-<span class="glossary-term" data-term="custody">custody</span> or qualified custodian. 24/7 trading. Instant settlement. Programmable compliance.</p>
                     </div>
                 </li>
                 <li>
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg></span>
                     <div class="text">
-                        <h4>Bankable Form (ISIN/Clearstream)</h4>
-                        <p>CrossConvert to ISIN format. Hold through your private bank. Standard custody workflow.</p>
+                        <h4>Bankable Form (<span class="glossary-term" data-term="isin">ISIN</span>/<span class="glossary-term" data-term="clearstream">Clearstream</span>)</h4>
+                        <p><span class="glossary-term" data-term="crossconversion">CrossConvert</span> to <span class="glossary-term" data-term="isin">ISIN</span> format. Hold through your private bank. Standard <span class="glossary-term" data-term="custody">custody</span> workflow.</p>
                     </div>
                 </li>
                 <li>
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg></span>
                     <div class="text">
-                        <h4>Bidirectional CrossConversion</h4>
-                        <p>Cross between forms as needed. Any token holder can request CrossConversion for 1.5% of nominal value. Always 1:1 backed.</p>
+                        <h4>Bidirectional <span class="glossary-term" data-term="crossconversion">CrossConversion</span></h4>
+                        <p>Cross between forms as needed. Any token holder can request <span class="glossary-term" data-term="crossconversion">CrossConversion</span> for 1.5% of <span class="glossary-term" data-term="nominal-value">nominal value</span>. Always 1:1 backed.</p>
                     </div>
                 </li>
             </ul>
@@ -133,8 +133,8 @@ stylesheets:
                 <li>
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg></span>
                     <div class="text">
-                        <h4>OTC Marketplace</h4>
-                        <p>Request quotes, post indications. Trade with other verified investors on the platform.</p>
+                        <h4><span class="glossary-term" data-term="otc">OTC</span> Marketplace</h4>
+                        <p>Request quotes, post indications. Trade with other verified investors on the platform.</p></p>
                     </div>
                 </li>
                 <li>
@@ -148,7 +148,7 @@ stylesheets:
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" /></svg></span>
                     <div class="text">
                         <h4>Exchange Option</h4>
-                        <p>Some instruments list on Vienna MTF for public price discovery and exchange-based trading.</p>
+                        <p>Some instruments list on <span class="glossary-term" data-term="vienna-mtf">Vienna MTF</span> for public price discovery and exchange-based trading.</p>
                     </div>
                 </li>
             </ul>
@@ -168,14 +168,14 @@ stylesheets:
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.864 4.243A7.5 7.5 0 0119.5 10.5c0 2.92-.556 5.709-1.568 8.268M5.742 6.364A7.465 7.465 0 004.5 10.5a7.464 7.464 0 01-1.15 3.993m1.989 3.559A11.209 11.209 0 008.25 10.5a3.75 3.75 0 117.5 0c0 .527-.021 1.049-.064 1.565M12 10.5a14.94 14.94 0 01-3.6 9.75m6.633-4.596a18.666 18.666 0 01-2.485 5.33" /></svg></span>
                     <div class="text">
                         <h4>One-Time Verification</h4>
-                        <p>Complete KYC/AML once. Accreditation verified. Access all eligible offerings.</p>
+                        <p>Complete <span class="glossary-term" data-term="kyc">KYC</span>/<span class="glossary-term" data-term="aml">AML</span> once. Accreditation verified. Access all eligible offerings.</p>
                     </div>
                 </li>
                 <li>
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg></span>
                     <div class="text">
                         <h4>Protocol-Level Enforcement</h4>
-                        <p>Transfer restrictions enforced by smart contract. No accidental violations.</p>
+                        <p>Transfer restrictions enforced by <span class="glossary-term" data-term="smart-contract">smart contract</span>. No accidental violations.</p>
                     </div>
                 </li>
                 <li>
@@ -204,7 +204,7 @@ stylesheets:
             <div class="feature-card">
                 <span class="feature-icon">📊</span>
                 <h3>Portfolio View</h3>
-                <p>All your positions in one dashboard. Track performance, upcoming distributions, corporate actions.</p>
+                <p>All your positions in one dashboard. Track performance, upcoming <span class="glossary-term" data-term="distributions">distributions</span>, corporate actions.</p>
             </div>
             <div class="feature-card">
                 <span class="feature-icon">📁</span>
@@ -222,9 +222,9 @@ stylesheets:
 <section class="global-section">
     <div class="global-container">
         <div class="global-card">
-            <span class="section-label">CrossConversion</span>
+            <span class="section-label"><span class="glossary-term" data-term="crossconversion">CrossConversion</span></span>
             <h2 class="section-title">On-chain today,<br>private bank tomorrow</h2>
-            <p>Any on-chain holder can request CrossConversion to bankable form for 1.5% of nominal value. Lock tokens on-chain, receive 1:1 backed bankable ISIN-identified securities via Clearstream. Cross back when needed. During initial placement, issuers typically handle CrossConversions; afterward, any holder can initiate. Your CrossSecurity adapts to custody requirements, not the other way around.</p>
+            <p>Any on-chain holder can request <span class="glossary-term" data-term="crossconversion">CrossConversion</span> to bankable form for 1.5% of <span class="glossary-term" data-term="nominal-value">nominal value</span>. Lock tokens on-chain, receive 1:1 backed bankable <span class="glossary-term" data-term="isin">ISIN</span>-identified <span class="glossary-term" data-term="security-token">securities</span> via <span class="glossary-term" data-term="clearstream">Clearstream</span>. Cross back when needed. During initial placement, issuers typically handle CrossConversions; afterward, any holder can initiate. Your CrossSecurity adapts to <span class="glossary-term" data-term="custody">custody</span> requirements, not the other way around.</p>
             <div class="global-stats">
                 <div class="global-stat">
                     <div class="value">1:1</div>

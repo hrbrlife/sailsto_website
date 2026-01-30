@@ -31,7 +31,7 @@ scripts:
                 <h2>Commission sharing built in</h2>
                 <p>Every trade on the platform generates revenue that flows directly to participating brokers. No negotiation, no manual billing. Commissions are calculated and distributed automatically on-chain.</p>
                 <p>When you place investors in a primary offering, you earn commission from the <strong>6% distribution fee</strong>: the issuer may offer a placement reward (typically 3%), and Sails.to automatically shares 2% of its 6% fee with you. Secondary trading carries a 0.5% fee split equally: ⅓ platform, ⅓ buy-side broker, ⅓ sell-side broker.</p>
-                <p><em style="color:#38a169;"><strong>Note:</strong> During soft cap phase, brokerage fees are waived. Primary placement commissions only apply to distributions after soft cap is reached.</em></p>
+                <p><em style="color:#38a169;"><strong>Note:</strong> During <span class="glossary-term" data-term="soft-cap">soft cap</span> phase, <span class="glossary-term" data-term="brokerage-fee">brokerage fees</span> are waived. Primary placement commissions only apply to <span class="glossary-term" data-term="distributions">distributions</span> after <span class="glossary-term" data-term="soft-cap">soft cap</span> is reached.</em></p>
             </div>
             <ul class="detail-list">
                 <li>
@@ -210,7 +210,7 @@ scripts:
                     <div class="input-group">
                         <label for="sailsShare">Sails.to Share (%)</label>
                         <input type="number" id="sailsShare" value="2" min="0" max="6" step="0.5">
-                        <span class="input-hint">Sails.to shares from its 6% distribution fee</span>
+                        <span class="input-hint">Sails.to shares from its 6% <span class="glossary-term" data-term="distribution-fee">distribution fee</span></span>
                     </div>
                     <div class="input-group">
                         <label for="annualTurnover">Annual Turnover (%)</label>
@@ -232,7 +232,7 @@ scripts:
                 </div>
             </div>
             <div class="assumptions">
-                <strong>Assumptions:</strong> Secondary trading commission is 0.5% total, split ⅓ platform, ⅓ buy-side broker, ⅓ sell-side broker (~0.17% each). Primary placement commissions only apply after soft cap is reached. Your share depends on deal structure and whether you represent one or both sides.
+                <strong>Assumptions:</strong> <span class="glossary-term" data-term="secondary-trading">Secondary trading</span> commission is 0.5% total, split ⅓ platform, ⅓ buy-side broker, ⅓ sell-side broker (~0.17% each). Primary placement commissions only apply after <span class="glossary-term" data-term="soft-cap">soft cap</span> is reached. Your share depends on deal structure and whether you represent one or both sides.
             </div>
         </div>
     </div>
@@ -241,9 +241,9 @@ scripts:
     <div class="detail-container">
         <div class="detail-grid">
             <div class="detail-content">
-                <h2>Multi-broker atomic settlement</h2>
+                <h2>Multi-broker <span class="glossary-term" data-term="atomic-settlement">atomic settlement</span></h2>
                 <p>A single order can fill across multiple brokers in one on-chain transaction. No counterparty risk: either the entire trade settles or none of it does.</p>
-                <p>This means better fills for clients, more commission opportunities for brokers, and zero manual reconciliation. The smart contract handles matching, netting, and distribution in a single atomic operation.</p>
+                <p>This means better fills for clients, more commission opportunities for brokers, and zero manual reconciliation. The <span class="glossary-term" data-term="smart-contract">smart contract</span> handles matching, netting, and distribution in a single atomic operation.</p>
             </div>
             <ul class="detail-list">
                 <li>
@@ -275,7 +275,7 @@ scripts:
     <div class="detail-container">
         <div class="detail-grid">
             <div class="detail-content">
-                <h2>OTC liquidity network</h2>
+                <h2><span class="glossary-term" data-term="otc">OTC</span> liquidity network</h2>
                 <p>Quote and trade within a verified universe of eligible investors. When your client needs broader liquidity, route to the network and access inventory across all participating brokers.</p>
                 <p>All trades remain compliant. Investor eligibility is enforced at the protocol level, audit trails are automatic, and settlement is instant.</p>
             </div>
@@ -291,7 +291,7 @@ scripts:
                     <span class="icon-wrapper"><svg><use href="#icon-user-check"></use></svg></span>
                     <div class="text">
                         <h4>Pre-Verified Investors</h4>
-                        <p>Only eligible investors in the system. KYC and accreditation already complete.</p>
+                        <p>Only eligible investors in the system. <span class="glossary-term" data-term="kyc">KYC</span> and accreditation already complete.</p>
                     </div>
                 </li>
                 <li>
@@ -319,8 +319,8 @@ scripts:
             </div>
             <div class="feature-card">
                 <span class="icon-wrapper"><svg><use href="#icon-lock"></use></svg></span>
-                <h3>Custody Options</h3>
-                <p>Hold client CrossSecurities on-chain (Solana) or CrossConvert to bankable ISIN form via Clearstream. You choose what fits each client.</p>
+                <h3><span class="glossary-term" data-term="custody">Custody</span> Options</h3>
+                <p>Hold client <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> on-chain (<span class="glossary-term" data-term="solana">Solana</span>) or <span class="glossary-term" data-term="crossconversion">CrossConvert</span> to bankable <span class="glossary-term" data-term="isin">ISIN</span> form via <span class="glossary-term" data-term="clearstream">Clearstream</span>. You choose what fits each client.</p>
             </div>
             <div class="feature-card">
                 <span class="icon-wrapper"><svg><use href="#icon-chart"></use></svg></span>
@@ -335,7 +335,7 @@ scripts:
             <div class="feature-card">
                 <span class="icon-wrapper"><svg><use href="#icon-handshake"></use></svg></span>
                 <h3>Investor Onboarding</h3>
-                <p>Platform handles KYC/AML verification. Bring your clients, we verify eligibility and maintain the records.</p>
+                <p>Platform handles <span class="glossary-term" data-term="kyc">KYC</span>/<span class="glossary-term" data-term="aml">AML</span> verification. Bring your clients, we verify eligibility and maintain the records.</p>
             </div>
             <div class="feature-card">
                 <span class="icon-wrapper"><svg><use href="#icon-briefcase"></use></svg></span>

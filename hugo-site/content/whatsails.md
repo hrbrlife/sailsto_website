@@ -19,6 +19,7 @@ headScripts:
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
+  - "/assets/css/glossary.css"
   - "/assets/css/whatsails.css"
 scripts:
   - "/js/whatsails.js"
@@ -281,14 +282,14 @@ scripts:
                 </tr>
                 <tr>
                     <td><strong>Investors</strong></td>
-                    <td>KYC'd Professional Investors who purchase securities through licensed brokers</td>
+                    <td><span class="glossary-term" data-term="kyc">KYC'd</span> <span class="glossary-term" data-term="professional-investor">Professional Investors</span> who purchase securities through licensed brokers</td>
                 </tr>
                 <tr>
                     <td><strong>Licensed Brokers</strong></td>
                     <td>Licensed firms that perform compliance checks, maintain client relationships, distribute offerings, and handle secondary trading</td>
                 </tr>
                 <tr>
-                    <td><strong>Operational Trust</strong></td>
+                    <td><strong><span class="glossary-term" data-term="operational-trust">Operational Trust</span></strong></td>
                     <td>Licensed fiduciary (SVG Financial Trustee) that holds funds in escrow during issuance and distributes payments to investors after</td>
                 </tr>
                 <tr>
@@ -298,7 +299,7 @@ scripts:
             </tbody>
         </table>
         <div class="warning-box">
-            <strong>⚠️ Important:</strong> Only KYC'd Professional Investors may participate, subject to jurisdictional requirements. Offerings may set a minimum investment amount (a typical minimum is $150,000). Eligibility and investor classification depend on jurisdiction and verification standards. US investors are typically verified as accredited investors under Regulation D. Non-US investors typically participate under Regulation S.
+            <strong>⚠️ Important:</strong> Only <span class="glossary-term" data-term="kyc">KYC'd</span> <span class="glossary-term" data-term="professional-investor">Professional Investors</span> may participate, subject to jurisdictional requirements. Offerings may set a minimum investment amount (a typical minimum is $150,000). Eligibility and investor classification depend on jurisdiction and verification standards. US investors are typically verified as <span class="glossary-term" data-term="accredited-investor">accredited investors</span> under <span class="glossary-term" data-term="reg-d">Regulation D</span>. Non-US investors typically participate under <span class="glossary-term" data-term="reg-s">Regulation S</span>.
             <p style="margin-top: 10px; font-size: 0.9em;"><em>This is a general framework and not legal advice; offering terms may vary.</em></p>
         </div>
     </div>
@@ -306,7 +307,7 @@ scripts:
 <section class="content-section" id="structure">
     <div class="content-container">
         <h2>2. Your Legal Structure</h2>
-        <p>When you raise capital through Sails.to, you get a bundle of Series specific to your offering within a <strong>Wyoming DAO LLC</strong> (Decentralized Autonomous Organization). Wyoming's DAO framework legally recognizes corporate actions executed through smart contracts as valid. What would traditionally require a complex multi-section SPV structure and mountains of paperwork to execute becomes a smart-contract-governed entity. The Platform controls both the SPV administration and the issuance itself, both as on-chain smart contracts linked to the legal DAO entity.</p>
+        <p>When you raise capital through Sails.to, you get a bundle of Series specific to your offering within a <strong><span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO LLC</span></strong> (Decentralized Autonomous Organization). Wyoming's DAO framework legally recognizes corporate actions executed through <span class="glossary-term" data-term="smart-contract">smart contracts</span> as valid. What would traditionally require a complex multi-section <span class="glossary-term" data-term="spv">SPV</span> structure and mountains of paperwork to execute becomes a smart-contract-governed entity. The Platform controls both the <span class="glossary-term" data-term="spv">SPV</span> administration and the issuance itself, both as on-chain <span class="glossary-term" data-term="smart-contract">smart contracts</span> linked to the legal DAO entity.</p>
         <p>The default option is:</p>
         <div class="success-box">
             <h4>Wyoming DAO LLC: New Series (Free)</h4>
@@ -315,14 +316,14 @@ scripts:
         <h4>Optional Upgrades</h4>
         <ul>
             <li><strong>Own Standalone Wyoming DAO LLC (at extra cost)</strong>: ~1 day setup</li>
-            <li><strong>ISIN + Clearstream</strong> (~$4k, does not require own entity): Traditional settlement rails</li>
-            <li><strong>ISIN + Clearstream + ViennaMTF</strong> (~$3k additional, does not require own entity): Public listing on exchange</li>
+            <li><strong><span class="glossary-term" data-term="isin">ISIN</span> + <span class="glossary-term" data-term="clearstream">Clearstream</span></strong> (~$4k, does not require own entity): Traditional settlement rails</li>
+            <li><strong><span class="glossary-term" data-term="isin">ISIN</span> + <span class="glossary-term" data-term="clearstream">Clearstream</span> + <span class="glossary-term" data-term="vienna-mtf">ViennaMTF</span></strong> (~$3k additional, does not require own entity): Public listing on exchange</li>
         </ul>
         <p>Your securities are issued within your Series. You control them. Securities can be settled:</p>
         <ul>
-            <li><strong>P2P</strong> (peer-to-peer on Solana)</li>
-            <li><strong>OTC network</strong> (optional, via licensed brokers)</li>
-            <li><strong>Traditional fiat rails</strong> (optional, via Clearstream)</li>
+            <li><strong>P2P</strong> (peer-to-peer on <span class="glossary-term" data-term="solana">Solana</span>)</li>
+            <li><strong><span class="glossary-term" data-term="otc">OTC</span> network</strong> (optional, via licensed brokers)</li>
+            <li><strong>Traditional fiat rails</strong> (optional, via <span class="glossary-term" data-term="clearstream">Clearstream</span>)</li>
         </ul>
         <p><em>A DAO is a governance model where rules can be executed by smart contracts. The legal entity is the DAO Series LLC (or equivalent) that adopts this governance.</em></p>
         <h3>Series Structure</h3>
@@ -367,26 +368,26 @@ scripts:
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Operating Series</strong></td>
+                    <td><strong><span class="glossary-term" data-term="operating-series">Operating Series</span></strong></td>
                     <td>Holds pledges, receives revenue, manages underlying assets for a specific offering</td>
-                    <td>Issuer + Trust oversight</td>
+                    <td>Issuer + <span class="glossary-term" data-term="trustee">Trust</span> oversight</td>
                 </tr>
                 <tr>
-                    <td><strong>Treasury Series</strong></td>
-                    <td>Holds operational reserves and unclaimed distributions (legal series, not an on-chain wallet)</td>
-                    <td>Trust oversight</td>
+                    <td><strong><span class="glossary-term" data-term="treasury-series">Treasury Series</span></strong></td>
+                    <td>Holds operational reserves and unclaimed <span class="glossary-term" data-term="distributions">distributions</span> (legal series, not an on-chain wallet)</td>
+                    <td><span class="glossary-term" data-term="trustee">Trust</span> oversight</td>
                 </tr>
                 <tr>
-                    <td><strong>CrossConversion Series</strong></td>
-                    <td>Handles on-chain token ↔ bankable ISIN-identified security conversion. Any token holder can request CrossConversion for 1.5% of nominal value. (see <a href="#conversion">Section 5</a>)</td>
-                    <td>Issuer + Trust oversight</td>
+                    <td><strong><span class="glossary-term" data-term="crossconversion-series">CrossConversion Series</span></strong></td>
+                    <td>Handles on-chain token ↔ bankable <span class="glossary-term" data-term="isin">ISIN</span>-identified <span class="glossary-term" data-term="security-token">security</span> conversion. Any token holder can request <span class="glossary-term" data-term="crossconversion">CrossConversion</span> for 1.5% of <span class="glossary-term" data-term="nominal-value">nominal value</span>. (see <a href="#conversion">Section 5</a>)</td>
+                    <td>Issuer + <span class="glossary-term" data-term="trustee">Trust</span> oversight</td>
                 </tr>
             </tbody>
         </table>
         <div class="concept-box">
             <h4>Optional Level-Ups for Bankable Form</h4>
-            <p><strong>ISIN + Clearstream Registration</strong>: An ISIN is a security identifier that enables CrossConversion to bankable form. When required, issuers can register an ISIN and enable settlement via Clearstream (at cost, approximately <strong>&lt;$4k</strong>). The CrossConversion Series handles the 1:1 relationship between on-chain tokens and bankable holdings.</p>
-            <p><strong>ViennaMTF Public Listing</strong>: If you require your CrossSecurities to be publicly listed on an exchange, ViennaMTF registration is available (at cost, approximately <strong>&lt;$3k</strong>).</p>
+            <p><strong><span class="glossary-term" data-term="isin">ISIN</span> + <span class="glossary-term" data-term="clearstream">Clearstream</span> Registration</strong>: An <span class="glossary-term" data-term="isin">ISIN</span> is a security identifier that enables <span class="glossary-term" data-term="crossconversion">CrossConversion</span> to bankable form. When required, issuers can register an <span class="glossary-term" data-term="isin">ISIN</span> and enable settlement via <span class="glossary-term" data-term="clearstream">Clearstream</span> (at cost, approximately <strong>&lt;$4k</strong>). The <span class="glossary-term" data-term="crossconversion-series">CrossConversion Series</span> handles the 1:1 relationship between on-chain tokens and bankable holdings.</p>
+            <p><strong><span class="glossary-term" data-term="vienna-mtf">ViennaMTF</span> Public Listing</strong>: If you require your <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> to be publicly listed on an exchange, <span class="glossary-term" data-term="vienna-mtf">ViennaMTF</span> registration is available (at cost, approximately <strong>&lt;$3k</strong>).</p>
             <p><em>Sails.to supports the workflow and required data for these optional services; registration is completed through the appropriate traditional infrastructure partners.</em></p>
         </div>
     </div>
@@ -405,11 +406,11 @@ scripts:
             </thead>
             <tbody>
                 <tr>
-                    <td><strong>Soft Cap</strong></td>
+                    <td><strong><span class="glossary-term" data-term="soft-cap">Soft Cap</span></strong></td>
                     <td>The minimum amount that must be raised for the deal to happen</td>
                 </tr>
                 <tr>
-                    <td><strong>Hard Cap</strong></td>
+                    <td><strong><span class="glossary-term" data-term="hard-cap">Hard Cap</span></strong></td>
                     <td>The maximum amount that can be raised</td>
                 </tr>
                 <tr>
@@ -489,31 +490,31 @@ scripts:
                     <td><strong style="color:#38a169;">1. Direct Sales</strong></td>
                     <td>Issuer directly</td>
                     <td>Existing network (partners, contacts)</td>
-                    <td>On-chain (Solana)</td>
+                    <td>On-chain (<span class="glossary-term" data-term="solana">Solana</span>)</td>
                 </tr>
                 <tr>
                     <td><strong style="color:#38a169;">2. Broker Network</strong></td>
                     <td>Licensed brokers</td>
-                    <td>KYC'd Professional Investors</td>
-                    <td>On-chain (Solana)</td>
+                    <td><span class="glossary-term" data-term="kyc">KYC'd</span> <span class="glossary-term" data-term="professional-investor">Professional Investors</span></td>
+                    <td>On-chain (<span class="glossary-term" data-term="solana">Solana</span>)</td>
                 </tr>
                 <tr>
-                    <td><strong style="color:#805ad5;">3. ISIN / Clearstream</strong></td>
+                    <td><strong style="color:#805ad5;">3. <span class="glossary-term" data-term="isin">ISIN</span> / <span class="glossary-term" data-term="clearstream">Clearstream</span></strong></td>
                     <td>Paying agent bank</td>
                     <td>Bankable-preferred/institutional investors</td>
-                    <td>Clearstream (bankable rails)</td>
+                    <td><span class="glossary-term" data-term="clearstream">Clearstream</span> (bankable rails)</td>
                 </tr>
             </tbody>
         </table>
         <div class="concept-box">
-            <h4>How Channel 3 Works (CrossConversion)</h4>
-            <p>Some investors only work with bankable securities infrastructure. Channel 3 bridges that gap via CrossConversion:</p>
+            <h4>How Channel 3 Works (<span class="glossary-term" data-term="crossconversion">CrossConversion</span>)</h4>
+            <p>Some investors only work with <span class="glossary-term" data-term="bankable">bankable</span> securities infrastructure. Channel 3 is the <span class="glossary-term" data-term="tradfi-bridge">TradFi bridge</span> — via <span class="glossary-term" data-term="crossconversion">CrossConversion</span>:</p>
             <ol>
-                <li>You lock tokens in your <strong>CrossConversion Series</strong></li>
-                <li>Tokens are crossed 1:1 into bankable ISIN-identified securities</li>
-                <li>Your <strong>paying agent bank</strong> distributes them via Clearstream</li>
+                <li>You lock tokens in your <strong><span class="glossary-term" data-term="crossconversion-series">CrossConversion Series</span></strong></li>
+                <li>Tokens are crossed 1:1 into bankable <span class="glossary-term" data-term="isin">ISIN</span>-identified <span class="glossary-term" data-term="security-token">securities</span></li>
+                <li>Your <strong>paying agent bank</strong> distributes them via <span class="glossary-term" data-term="clearstream">Clearstream</span></li>
             </ol>
-            <p>The same CrossSecurity, accessible through bankable rails, under your control.</p>
+            <p>The same <span class="glossary-term" data-term="crosssecurities">CrossSecurity</span>, accessible through bankable rails, under your control.</p>
         </div>
         <div class="concept-box">
             <h4>Fees</h4>

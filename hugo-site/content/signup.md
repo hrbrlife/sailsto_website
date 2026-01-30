@@ -23,8 +23,8 @@ scripts:
 <section class="signup-section">
     <div class="signup-container">
         <div class="signup-content">
-            <h1>Start Your Journey with Sails CrossSecurities</h1>
-            <p>Join the platform that bridges blockchain innovation with traditional finance infrastructure. Whether you're raising capital or seeking investment opportunities, we're here to help.</p>
+            <h1>Apply for Access to Tokenized Securities</h1>
+            <p>Raise capital via compliant digital bonds, or invest in verified <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> offerings. SEC <span class="glossary-term" data-term="reg-d">Reg D</span>/<span class="glossary-term" data-term="reg-s">Reg S</span> structure, <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO LLC</span>, institutional-grade <span class="glossary-term" data-term="custody">custody</span>.</p>
             <div class="trust-badges light" style="margin: 24px 0; border-top: none; justify-content: flex-start;">
                 <span class="trust-badge">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
@@ -42,7 +42,7 @@ scripts:
                     </span>
                     <div class="text">
                         <h4>Zero Upfront Cost</h4>
-                        <p>Soft cap phase is fee-free. After soft cap: 1% direct, 6% via broker</p>
+                        <p><span class="glossary-term" data-term="soft-cap">Soft cap</span> phase is fee-free. After soft cap: 1% direct, 6% via <span class="glossary-term" data-term="broker-dealer">broker</span></p>
                     </div>
                 </li>
                 <li>
@@ -51,7 +51,7 @@ scripts:
                     </span>
                     <div class="text">
                         <h4>1-2 Weeks to Launch</h4>
-                        <p>Turnkey Wyoming DAO LLC structure included</p>
+                        <p>Turnkey <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO Series LLC</span> structure included</p>
                     </div>
                 </li>
                 <li>
@@ -59,8 +59,8 @@ scripts:
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:24px;height:24px;color:var(--gold);"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 00-3.7-3.7 48.678 48.678 0 00-7.324 0 4.006 4.006 0 00-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3l-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 003.7 3.7 48.656 48.656 0 007.324 0 4.006 4.006 0 003.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3l-3 3" /></svg>
                     </span>
                     <div class="text">
-                        <h4>CrossConversion Custody</h4>
-                        <p>Hold on-chain (Solana) or CrossConvert to bankable ISIN form</p>
+                        <h4><span class="glossary-term" data-term="crossconversion">CrossConversion</span> Custody</h4>
+                        <p>Hold <span class="glossary-term" data-term="on-chain">on-chain</span> (<span class="glossary-term" data-term="solana">Solana</span>) or CrossConvert to <span class="glossary-term" data-term="bankable">bankable</span> <span class="glossary-term" data-term="isin">ISIN</span> form</p>
                     </div>
                 </li>
                 <li>
@@ -68,8 +68,8 @@ scripts:
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:24px;height:24px;color:var(--gold);"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
                     </span>
                     <div class="text">
-                        <h4>Built-in Compliance</h4>
-                        <p>KYC/AML, Reg S/Reg D, investor eligibility on-chain</p>
+                        <h4>Built-in <span class="glossary-term" data-term="compliance">Compliance</span></h4>
+                        <p><span class="glossary-term" data-term="kyc">KYC</span>/<span class="glossary-term" data-term="aml">AML</span>, <span class="glossary-term" data-term="reg-s">Reg S</span>/<span class="glossary-term" data-term="reg-d">Reg D</span>, investor eligibility on-chain</p>
                     </div>
                 </li>
             </ul>

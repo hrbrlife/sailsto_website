@@ -20,8 +20,8 @@ stylesheets:
 
 <section class="page-hero" style="background: linear-gradient(135deg, #1a1a2e 0%, #0a0a0a 100%);">
     <span class="section-label">For Trust Companies, VCs & Multi-Family Offices</span>
-    <h1 class="section-title">Full CrossSecurities sovereignty.<br>Your regulatory wrapper.</h1>
-    <p class="section-desc">Deploy a complete CrossSecurities infrastructure under your brand: issuance, compliance, trading, CrossConversion custody bridge. You approve every issuer, authorize every trustee, control every broker relationship. We're the invisible technology layer. You're the platform operator.</p>
+    <h1 class="section-title">Full CrossSecurities Sovereignty.<br>Your Regulatory Wrapper.</h1>
+    <p class="section-desc">Deploy a complete <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> infrastructure under your brand: issuance, compliance, trading, and <span class="glossary-term" data-term="crossconversion">CrossConversion</span> <span class="glossary-term" data-term="custody">custody</span> bridge. You approve every issuer, authorize every <span class="glossary-term" data-term="trustee">trustee</span>, and control every broker relationship. We provide the invisible technology layer—you're the platform operator.</p>
 </section>
 <section class="detail-section">
     <div class="detail-container">
@@ -77,7 +77,7 @@ stylesheets:
                     <span class="icon-wrapper"><svg><use href="#icon-briefcase"></use></svg></span>
                     <div class="text">
                         <h4>Venture Capital Funds</h4>
-                        <p>Registered fund managers who want to tokenize portfolio company securities for LP liquidity.</p>
+                        <p>Registered fund managers who want to <span class="glossary-term" data-term="tokenization">tokenize</span> portfolio company securities for LP liquidity.</p>
                     </div>
                 </li>
                 <li>
@@ -124,8 +124,8 @@ stylesheets:
                 <li>
                     <span class="icon-wrapper"><svg><use href="#icon-refresh"></use></svg></span>
                     <div class="text">
-                        <h4>Secondary Marketplace</h4>
-                        <p>OTC trading within your investor universe. Cross-broker routing optional. You control access.</p>
+                        <h4><span class="glossary-term" data-term="secondary-trading">Secondary</span> Marketplace</h4>
+                        <p><span class="glossary-term" data-term="otc">OTC</span> trading within your investor universe. Cross-broker routing optional. You control access.</p></p>
                     </div>
                 </li>
             </ul>
@@ -138,14 +138,14 @@ stylesheets:
             <div class="detail-content">
                 <h2>Your compliance framework</h2>
                 <p>Configure investor eligibility rules, transfer restrictions, holding limits, and jurisdiction controls to match your regulatory requirements. The platform enforces what you define.</p>
-                <p>Self-hosted KYC/AML keeps all investor data under your control. No third-party data processors. No data leaks. Your clients' information stays with you.</p>
+                <p>Self-hosted <span class="glossary-term" data-term="kyc">KYC</span>/<span class="glossary-term" data-term="aml">AML</span> keeps all investor data under your control. No third-party data processors. No data leaks. Your clients' information stays with you.</p>
             </div>
             <ul class="detail-list">
                 <li>
                     <span class="icon-wrapper"><svg><use href="#icon-lock"></use></svg></span>
                     <div class="text">
                         <h4>Self-Hosted Verification</h4>
-                        <p>Run KYC/AML on your infrastructure. Integrate your existing providers. Maintain data sovereignty.</p>
+                        <p>Run <span class="glossary-term" data-term="kyc">KYC</span>/<span class="glossary-term" data-term="aml">AML</span> on your infrastructure. Integrate your existing providers. Maintain data sovereignty.</p>
                     </div>
                 </li>
                 <li>
@@ -170,30 +170,30 @@ stylesheets:
     <div class="detail-container">
         <div class="detail-grid">
             <div class="detail-content">
-                <h2>CrossSecurities custody flexibility</h2>
-                <p>CrossSecurities settle on Solana by default. For investors requiring bankable custody, CrossConvert to ISIN-identified format via Clearstream. Settles to any bank worldwide.</p>
-                <p>You control the CrossConversion process. Issuer-level permissions. Trust oversight configurable. Always 1:1 backed between forms.</p>
+                <h2><span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> <span class="glossary-term" data-term="custody">custody</span> flexibility</h2>
+                <p><span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> settle on <span class="glossary-term" data-term="solana">Solana</span> by default. For investors requiring bankable <span class="glossary-term" data-term="custody">custody</span>, <span class="glossary-term" data-term="crossconversion">CrossConvert</span> to <span class="glossary-term" data-term="isin">ISIN</span>-identified format via <span class="glossary-term" data-term="clearstream">Clearstream</span>. Settles to any bank worldwide.</p>
+                <p>You control the <span class="glossary-term" data-term="crossconversion">CrossConversion</span> process. Issuer-level permissions. <span class="glossary-term" data-term="trustee">Trust</span> oversight configurable. Always 1:1 backed between forms.</p>
             </div>
             <ul class="detail-list">
                 <li>
                     <span class="icon-wrapper"><svg><use href="#icon-chain"></use></svg></span>
                     <div class="text">
-                        <h4>On-Chain Form (Solana)</h4>
-                        <p>24/7 settlement. Programmable compliance. Self-custody or qualified custodian.</p>
+                        <h4>On-Chain Form (<span class="glossary-term" data-term="solana">Solana</span>)</h4>
+                        <p>24/7 settlement. Programmable compliance. Self-<span class="glossary-term" data-term="custody">custody</span> or qualified custodian.</p>
                     </div>
                 </li>
                 <li>
                     <span class="icon-wrapper"><svg><use href="#icon-bank"></use></svg></span>
                     <div class="text">
-                        <h4>Bankable Form (ISIN/Clearstream)</h4>
-                        <p>ISIN identifier. Clearstream settlement. Compatible with any private bank worldwide.</p>
+                        <h4>Bankable Form (<span class="glossary-term" data-term="isin">ISIN</span>/<span class="glossary-term" data-term="clearstream">Clearstream</span>)</h4>
+                        <p><span class="glossary-term" data-term="isin">ISIN</span> identifier. <span class="glossary-term" data-term="clearstream">Clearstream</span> settlement. Compatible with any private bank worldwide.</p>
                     </div>
                 </li>
                 <li>
                     <span class="icon-wrapper"><svg><use href="#icon-trending-up"></use></svg></span>
                     <div class="text">
                         <h4>Exchange Listing</h4>
-                        <p>Optional Vienna MTF listing for public price discovery. You decide which CrossSecurities qualify.</p>
+                        <p>Optional <span class="glossary-term" data-term="vienna-mtf">Vienna MTF</span> listing for public price discovery. You decide which <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> qualify.</p>
                     </div>
                 </li>
             </ul>

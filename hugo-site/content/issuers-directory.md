@@ -13,6 +13,7 @@ ogImage: "/og-platform.png"
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
+  - "/assets/css/glossary.css"
   - "/assets/css/issuers-directory.css"
 scripts:
   - "/js/issuers-directory.js"
@@ -22,10 +23,10 @@ scripts:
 <div class="compliance-gate" id="complianceGate">
 <div class="compliance-gate-content">
 <div class="compliance-gate-icon">📋</div>
-<h1>Illustrative Examples Only</h1>
+<h1>Platform Offerings Preview</h1>
 
 <div class="compliance-gate-body">
-<p class="compliance-lead">The offerings shown on this page are <strong>representative examples</strong> of the types of deals available through our platform.</p>
+<p class="compliance-lead">The offerings shown below are <strong>illustrative examples</strong> of CrossSecurities available through our platform.</p>
 
 <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.7;">All identifying details have been anonymized or randomized, including issuer names, exact terms, raise amounts, and counterparties. To access real offerings with complete information, you'll need to complete investor verification.</p>
 </div>
@@ -71,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <section class="page-hero">
 <h1>Platform Offerings Preview</h1>
-<p>Illustrative examples of CrossSecurities bonds on our platform. For professional investors only.</p>
+<p>Illustrative examples of <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> bonds on our platform. For <span class="glossary-term" data-term="professional-investor">professional investors</span> only.</p>
 </section>
 <div class="filter-section">
 <div class="filter-container">
