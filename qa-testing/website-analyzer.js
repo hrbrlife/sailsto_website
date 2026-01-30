@@ -37,51 +37,134 @@ const __dirname = path.dirname(__filename);
 // SITE MAP - ALL SAILS.TO PAGES CATEGORIZED
 // ═══════════════════════════════════════════════════════════════════════════════════════
 
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// SITE OVERVIEW - SHARED CONTEXT FOR ALL AGENTS
+// ═══════════════════════════════════════════════════════════════════════════════════════
+
+const SITE_OVERVIEW = `
+## SAILS.TO PLATFORM OVERVIEW
+
+Sails.to is a CrossSecurities platform enabling companies to issue regulated security tokens
+(tokenized bonds, equity, revenue share agreements) using Wyoming DAO LLC legal structures
+with Solana blockchain infrastructure and TradFi integration via Clearstream for ISINs.
+
+### TARGET AUDIENCES:
+1. **Issuers** - Companies raising capital ($1M-$50M via bonds/securities)
+2. **Investors** - Professional & accredited investors (high net worth individuals)
+3. **Brokers** - Licensed securities dealers seeking digital asset offerings
+4. **Institutions** - Trust companies, VCs, MFOs, family offices
+5. **Introducers** - Referral partners earning commissions
+
+### KEY VALUE PROPOSITIONS:
+- Regulatory compliance (Wyoming DAO LLC + SEC Reg D/S frameworks)
+- TradFi bridge (ISIN numbers, Clearstream settlement)
+- Lower costs vs traditional securities issuance
+- Self-custody hybrid model (investors control their own tokens)
+- Secondary trading capability via compliant ATS partnerships
+
+### SITE STRUCTURE:
+- **Landing Pages**: Audience-specific (Issuers, Investors, Brokers, Institutions, Introducers)
+- **Core Pages**: Pricing, How It Works, Signup, Issuers Directory
+- **Trust Pages**: Security, Compliance, Oversight
+- **Company**: About, Contact, Legal
+- **Knowledge Base**: FAQ, Roadmap, Blog, Glossary, Docs, Guides
+
+### BRAND VOICE:
+- Professional financial services (not crypto-bro)
+- Authoritative but accessible
+- Trust-building through transparency
+- Technical accuracy with plain-language explanations
+`;
+
+// ═══════════════════════════════════════════════════════════════════════════════════════
+// SITE MAP - ALL SAILS.TO PAGES CATEGORIZED BY PRIORITY
+// ═══════════════════════════════════════════════════════════════════════════════════════
+
 const SITE_MAP = {
-  // TIER 1: Critical conversion pages
+  // TIER 1: Critical conversion pages - highest traffic & revenue impact
   critical: [
-    { path: '/', name: 'Homepage', desc: 'Main landing - must convert visitors to leads' },
-    { path: '/issuers/', name: 'For Issuers', desc: 'Primary audience landing page' },
-    { path: '/investors/', name: 'For Investors', desc: 'Investor audience landing' },
-    { path: '/pricing/', name: 'Pricing', desc: 'Revenue page - must be crystal clear' },
-    { path: '/signup/', name: 'Signup', desc: 'Conversion endpoint - minimize friction' },
+    { path: '/', name: 'Homepage', desc: 'Main landing - must convert visitors to leads, establish credibility in 5 seconds' },
+    { path: '/issuers/', name: 'For Issuers', desc: 'Primary audience - companies wanting to raise capital via tokenized securities' },
+    { path: '/investors/', name: 'For Investors', desc: 'Investor audience - accredited/professional investors seeking opportunities' },
+    { path: '/pricing/', name: 'Pricing', desc: 'Revenue page - must be crystal clear on costs vs. value' },
+    { path: '/signup/', name: 'Signup', desc: 'Conversion endpoint - minimize friction, maximize trust signals' },
   ],
   
-  // TIER 2: High-value pages
+  // TIER 2: High-value pages - key audience segments & product understanding
   high: [
-    { path: '/brokers/', name: 'For Brokers', desc: 'Broker partner landing' },
-    { path: '/regulated/', name: 'For Institutions', desc: 'Trust companies, VCs, MFOs' },
-    { path: '/introducers/', name: 'For Introducers', desc: 'Referral partner landing' },
-    { path: '/whatsails/', name: 'How It Works', desc: 'Deep-dive explainer - builds trust' },
-    { path: '/issuers-directory/', name: 'Issuers Directory', desc: 'Live offerings showcase' },
+    { path: '/brokers/', name: 'For Brokers', desc: 'Licensed securities dealers - partnership/white-label opportunity' },
+    { path: '/regulated/', name: 'For Institutions', desc: 'Trust companies, VCs, MFOs - institutional-grade compliance messaging' },
+    { path: '/introducers/', name: 'For Introducers', desc: 'Referral partners - commission structure & easy onboarding' },
+    { path: '/whatsails/', name: 'How It Works', desc: 'Deep-dive explainer - builds understanding and trust' },
+    { path: '/issuers-directory/', name: 'Issuers Directory', desc: 'Live offerings showcase - social proof & discovery' },
   ],
   
-  // TIER 3: Trust & credibility pages
+  // TIER 3: Trust & credibility pages - essential for regulated finance
   trust: [
-    { path: '/security/', name: 'Security', desc: 'Infrastructure security - builds trust' },
-    { path: '/compliance/', name: 'Compliance', desc: 'Regulatory compliance - essential for finance' },
-    { path: '/oversight/', name: 'Oversight', desc: 'Governance & monitoring' },
-    { path: '/company/about/', name: 'About Us', desc: 'Company credibility' },
-    { path: '/company/contact/', name: 'Contact', desc: 'Accessibility signal' },
-    { path: '/company/legal/', name: 'Legal', desc: 'Legal disclosures' },
+    { path: '/security/', name: 'Security', desc: 'Infrastructure security - SOC2, encryption, custody model' },
+    { path: '/compliance/', name: 'Compliance', desc: 'Regulatory framework - SEC, Wyoming DAO, KYC/AML' },
+    { path: '/oversight/', name: 'Oversight', desc: 'Governance, monitoring, audit trails' },
+    { path: '/company/', name: 'Company Index', desc: 'Company section hub' },
+    { path: '/company/about/', name: 'About Us', desc: 'Team, mission, company credibility' },
+    { path: '/company/contact/', name: 'Contact', desc: 'Accessibility signal - multiple contact methods' },
+    { path: '/company/legal/', name: 'Legal', desc: 'Terms, privacy, legal disclosures' },
   ],
   
-  // TIER 4: Knowledge base (sample key pages)
+  // TIER 4: Knowledge base - educational content & SEO
   knowledge: [
-    { path: '/knowledge/', name: 'Knowledge Hub', desc: 'Central resource hub' },
-    { path: '/knowledge/faq/', name: 'FAQ', desc: 'Common questions - reduces support' },
-    { path: '/knowledge/roadmap/', name: 'Roadmap', desc: 'Product direction transparency' },
-    { path: '/knowledge/glossary/', name: 'Glossary Index', desc: 'Term definitions hub' },
-    { path: '/knowledge/blog/', name: 'Blog Index', desc: 'Content marketing hub' },
-    { path: '/knowledge/docs/', name: 'Docs Index', desc: 'Technical documentation' },
+    { path: '/knowledge/', name: 'Knowledge Hub', desc: 'Central resource hub - navigation to all educational content' },
+    { path: '/knowledge/faq/', name: 'FAQ', desc: 'Common questions - reduces support burden, builds confidence' },
+    { path: '/knowledge/roadmap/', name: 'Roadmap', desc: 'Product direction transparency - shows commitment' },
+    { path: '/knowledge/glossary/', name: 'Glossary Index', desc: 'Securities/crypto term definitions hub' },
+    { path: '/knowledge/blog/', name: 'Blog Index', desc: 'Content marketing hub - thought leadership' },
+    { path: '/knowledge/docs/', name: 'Docs Index', desc: 'Technical documentation for integration partners' },
+    { path: '/knowledge/guides/', name: 'Guides Index', desc: 'Step-by-step tutorials' },
+    { path: '/knowledge/guides/getting-started/', name: 'Getting Started Guide', desc: 'Onboarding tutorial for new users' },
   ],
   
-  // TIER 5: Sample glossary/blog (spot check)
+  // TIER 5: Key content samples - spot check quality of dynamic content
   samples: [
-    { path: '/knowledge/glossary/crosssecurities/', name: 'Glossary: CrossSecurities', desc: 'Core term definition' },
-    { path: '/knowledge/glossary/tokenization/', name: 'Glossary: Tokenization', desc: 'Key concept' },
-    { path: '/knowledge/glossary/wyoming-dao-llc/', name: 'Glossary: Wyoming DAO', desc: 'Legal structure' },
-    { path: '/knowledge/blog/security-tokens-explained/', name: 'Blog: Security Tokens', desc: 'Educational content' },
+    // Core glossary terms
+    { path: '/knowledge/glossary/crosssecurities/', name: 'Glossary: CrossSecurities', desc: 'Core product term - must be clear' },
+    { path: '/knowledge/glossary/tokenization/', name: 'Glossary: Tokenization', desc: 'Fundamental concept explanation' },
+    { path: '/knowledge/glossary/wyoming-dao-llc/', name: 'Glossary: Wyoming DAO LLC', desc: 'Legal structure explanation' },
+    { path: '/knowledge/glossary/security-token/', name: 'Glossary: Security Token', desc: 'Core product definition' },
+    { path: '/knowledge/glossary/isin/', name: 'Glossary: ISIN', desc: 'TradFi bridge concept' },
+    { path: '/knowledge/glossary/reg-d/', name: 'Glossary: Reg D', desc: 'Regulatory framework term' },
+    // Key blog posts
+    { path: '/knowledge/blog/security-tokens-explained/', name: 'Blog: Security Tokens', desc: 'Educational pillar content' },
+    { path: '/knowledge/blog/why-wyoming/', name: 'Blog: Why Wyoming', desc: 'Legal structure rationale' },
+    { path: '/knowledge/blog/future-of-tokenized-securities/', name: 'Blog: Future of Tokenization', desc: 'Thought leadership' },
+    // Key docs
+    { path: '/knowledge/docs/platform-overview/', name: 'Docs: Platform Overview', desc: 'Technical architecture intro' },
+    { path: '/knowledge/docs/getting-started/', name: 'Docs: Getting Started', desc: 'Developer onboarding' },
+  ],
+  
+  // TIER 6: Extended content - comprehensive audit (use with --all flag)
+  extended: [
+    // Additional glossary terms
+    { path: '/knowledge/glossary/accredited-investor/', name: 'Glossary: Accredited Investor', desc: 'Investor qualification' },
+    { path: '/knowledge/glossary/aml/', name: 'Glossary: AML', desc: 'Anti-money laundering' },
+    { path: '/knowledge/glossary/kyc/', name: 'Glossary: KYC', desc: 'Know Your Customer' },
+    { path: '/knowledge/glossary/spv/', name: 'Glossary: SPV', desc: 'Special Purpose Vehicle' },
+    { path: '/knowledge/glossary/custody/', name: 'Glossary: Custody', desc: 'Asset custody model' },
+    { path: '/knowledge/glossary/solana/', name: 'Glossary: Solana', desc: 'Blockchain infrastructure' },
+    { path: '/knowledge/glossary/tradfi-bridge/', name: 'Glossary: TradFi Bridge', desc: 'Traditional finance integration' },
+    // Additional blog posts
+    { path: '/knowledge/blog/hybrid-custody-explained/', name: 'Blog: Hybrid Custody', desc: 'Custody model explanation' },
+    { path: '/knowledge/blog/institutional-adoption/', name: 'Blog: Institutional Adoption', desc: 'Market trends' },
+    { path: '/knowledge/blog/kyc-compliance-guide/', name: 'Blog: KYC Guide', desc: 'Compliance process' },
+    { path: '/knowledge/blog/real-estate-tokenization/', name: 'Blog: Real Estate Tokenization', desc: 'Use case example' },
+    { path: '/knowledge/blog/solana-for-securities/', name: 'Blog: Solana for Securities', desc: 'Technology rationale' },
+    // Additional docs
+    { path: '/knowledge/docs/api-reference/', name: 'Docs: API Reference', desc: 'Technical API documentation' },
+    { path: '/knowledge/docs/compliance-framework/', name: 'Docs: Compliance Framework', desc: 'Regulatory integration' },
+    { path: '/knowledge/docs/kyc-integration/', name: 'Docs: KYC Integration', desc: 'KYC API documentation' },
+    { path: '/knowledge/docs/token-standard/', name: 'Docs: Token Standard', desc: 'CrossSecurities token spec' },
+    // Additional guides
+    { path: '/knowledge/guides/tokenization-101/', name: 'Guide: Tokenization 101', desc: 'Beginner tutorial' },
+    { path: '/knowledge/guides/investor-eligibility/', name: 'Guide: Investor Eligibility', desc: 'Qualification requirements' },
+    { path: '/knowledge/guides/wyoming-dao-explained/', name: 'Guide: Wyoming DAO', desc: 'Legal structure guide' },
   ]
 };
 
@@ -99,9 +182,9 @@ const CONFIG = {
   
   // What to test (CLI args or default to critical + high)
   testTiers: process.argv.includes('--all') 
-    ? ['critical', 'high', 'trust', 'knowledge', 'samples']
+    ? ['critical', 'high', 'trust', 'knowledge', 'samples', 'extended']
     : process.argv.includes('--full')
-      ? ['critical', 'high', 'trust', 'knowledge']
+      ? ['critical', 'high', 'trust', 'knowledge', 'samples']
       : process.argv.includes('--quick')
         ? ['critical']
         : ['critical', 'high'],
@@ -128,7 +211,7 @@ const CONFIG = {
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════════════
-// AGENT PROMPTS - SAILS.TO SPECIFIC
+// AGENT PROMPTS - SAILS.TO SPECIFIC WITH FULL SITE CONTEXT
 // ═══════════════════════════════════════════════════════════════════════════════════════
 
 const AGENT_PROMPTS = {
@@ -137,42 +220,51 @@ const AGENT_PROMPTS = {
     emoji: '🎯',
     systemPrompt: `You are a SENIOR UX EXPERT reviewing Sails.to - a platform for issuing tokenized securities (CrossSecurities).
 
-TARGET AUDIENCE: Sophisticated but not necessarily crypto-native users
-- Issuers: Companies wanting to raise capital via bonds/securities
-- Investors: Professional/accredited investors (high net worth)
-- Brokers: Licensed securities dealers
-- Institutions: Trust companies, VCs, family offices
+${SITE_OVERVIEW}
+
+## YOUR ROLE
+You are analyzing ONE PAGE within the context of this larger site. Consider how this page fits into the overall user journey and information architecture.
+
+## TARGET AUDIENCE: Sophisticated but not necessarily crypto-native users
+- Issuers: Companies wanting to raise capital via bonds/securities (CFOs, founders)
+- Investors: Professional/accredited investors (high net worth individuals, family offices)
+- Brokers: Licensed securities dealers seeking digital asset offerings
+- Institutions: Trust companies, VCs, MFOs seeking compliant tokenization
 
 ## CRITICAL UX PRINCIPLES FOR FINANCIAL PLATFORMS
 
-### 1. TRUST & CREDIBILITY (Most Important)
+### 1. TRUST & CREDIBILITY (Most Important for Finance)
 - Does the page feel legitimate and professional?
 - Are there appropriate trust signals (regulated, audited, established)?
 - Is the tone authoritative but accessible?
 - Would a CFO/compliance officer feel comfortable?
+- Does it avoid crypto/meme coin aesthetics?
 
 ### 2. CLARITY OF VALUE PROPOSITION
-- Within 5 seconds, can a visitor understand what this is?
+- Within 5 seconds, can a visitor understand what this page offers?
 - Is the benefit clear before features are listed?
 - Is financial/legal jargon explained when used?
-- Are complex concepts broken down?
+- Are complex concepts broken down appropriately for the audience?
 
 ### 3. NAVIGATION & INFORMATION ARCHITECTURE
 - Can users find what they need quickly?
 - Is the navigation logical for the audience?
 - Are related pages linked appropriately?
 - Is the content hierarchy sensible?
+- Are there clear pathways to conversion?
 
 ### 4. CONVERSION PATH
 - Is the next step obvious on every page?
 - Are CTAs clear, specific, and compelling?
 - Is friction minimized (forms, steps, confusion)?
 - Is there a logical funnel (learn → trust → convert)?
+- Does the page guide users toward signup/contact?
 
 ### 5. MOBILE EXPERIENCE
 - Does the page work well on phone/tablet?
-- Are touch targets adequate?
+- Are touch targets adequate (min 44px)?
 - Is content readable without zooming?
+- Does navigation work on mobile?
 
 ## SCORING RUBRIC
 - 9-10: Exceptional - Clear, trustworthy, would convert skeptical finance professional
@@ -201,47 +293,59 @@ RESPOND WITH JSON ONLY:
     emoji: '🎨',
     systemPrompt: `You are a SENIOR UI DESIGNER reviewing Sails.to - a financial services platform for tokenized securities.
 
-BRAND CONTEXT:
-- Professional financial services aesthetic
-- Modern but not flashy (not a crypto meme site)
+${SITE_OVERVIEW}
+
+## YOUR ROLE
+You are analyzing ONE PAGE within the context of this larger site. Consider visual consistency with the overall brand and design system.
+
+## BRAND CONTEXT:
+- Professional financial services aesthetic (think Bloomberg, Carta, AngelList)
+- Modern but not flashy (NOT a crypto meme site)
 - Trust-building design language
-- Target: CFOs, investors, compliance officers
+- Primary audience: CFOs, investors, compliance officers
+- Color palette: Deep purples, professional blues, clean whites
+- Typography: Clean, readable, professional sans-serif
 
 ## VISUAL DESIGN CRITERIA
 
 ### 1. VISUAL HIERARCHY
 - Does the most important content stand out?
-- Are headings properly weighted?
+- Are headings properly weighted (H1 > H2 > H3)?
 - Is there clear distinction between sections?
 - Do the eyes flow naturally down the page?
+- Are CTAs visually prominent?
 
-### 2. CONSISTENCY
+### 2. CONSISTENCY (Critical for Trust)
 - Are colors consistent with brand (purples, blues)?
 - Are fonts consistent throughout?
 - Do similar elements look similar?
-- Are spacings predictable?
+- Are spacings predictable and rhythmic?
+- Does this page match other pages on the site?
 
 ### 3. PROFESSIONAL POLISH
 - Does this look like a legitimate financial platform?
-- Are there any amateur design tells?
+- Are there any amateur design tells (bad alignment, inconsistent spacing)?
 - Is imagery appropriate and high quality?
 - Do icons and illustrations fit the brand?
+- Are there any visual bugs or glitches?
 
 ### 4. WHITESPACE & BREATHING ROOM
 - Is content crowded or well-spaced?
 - Do sections have clear boundaries?
 - Is text readable with good line height?
+- Is there sufficient padding around elements?
 
 ### 5. RESPONSIVE QUALITY
 - Does the layout adapt gracefully?
 - Are elements properly sized for the viewport?
 - Do cards/grids reorganize sensibly?
+- No horizontal scrolling?
 
 ### 6. INTERACTIVE ELEMENTS
-- Are buttons clearly buttons?
-- Are links distinguishable?
+- Are buttons clearly buttons (not flat text)?
+- Are links distinguishable from regular text?
 - Are hover states appropriate?
-- Are forms well-designed?
+- Are forms well-designed with clear labels?
 
 ## SCORING RUBRIC
 - 9-10: Polished - Production-ready, would impress institutional clients

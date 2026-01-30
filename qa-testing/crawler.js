@@ -18,47 +18,66 @@ const CONFIG = {
     tablet: { width: 768, height: 1024, name: 'tablet' },
     mobile: { width: 375, height: 812, name: 'mobile' }
   },
-  // Pages to test (based on Hugo site structure)
+  // Pages to test - COMPREHENSIVE COVERAGE matching website-analyzer.js
   pages: [
-    // Main pages
-    { path: '/', name: 'home' },
-    { path: '/issuers/', name: 'issuers' },
-    { path: '/investors/', name: 'investors' },
-    { path: '/brokers/', name: 'brokers' },
-    { path: '/introducers/', name: 'introducers' },
-    { path: '/regulated/', name: 'regulated' },
-    { path: '/issuers-directory/', name: 'issuers-directory' },
-    { path: '/whatsails/', name: 'whatsails' },
-    { path: '/pricing/', name: 'pricing' },
-    { path: '/signup/', name: 'signup' },
+    // ═══════════════════════════════════════════════════════════════════
+    // TIER 1: CRITICAL - Conversion Pages
+    // ═══════════════════════════════════════════════════════════════════
+    { path: '/', name: 'home', tier: 'critical' },
+    { path: '/issuers/', name: 'issuers', tier: 'critical' },
+    { path: '/investors/', name: 'investors', tier: 'critical' },
+    { path: '/pricing/', name: 'pricing', tier: 'critical' },
+    { path: '/signup/', name: 'signup', tier: 'critical' },
     
-    // Company pages
-    { path: '/company/about/', name: 'company-about' },
-    { path: '/company/contact/', name: 'company-contact' },
-    { path: '/company/legal/', name: 'company-legal' },
+    // ═══════════════════════════════════════════════════════════════════
+    // TIER 2: HIGH - Audience & Product Pages
+    // ═══════════════════════════════════════════════════════════════════
+    { path: '/brokers/', name: 'brokers', tier: 'high' },
+    { path: '/regulated/', name: 'regulated', tier: 'high' },
+    { path: '/introducers/', name: 'introducers', tier: 'high' },
+    { path: '/whatsails/', name: 'whatsails', tier: 'high' },
+    { path: '/issuers-directory/', name: 'issuers-directory', tier: 'high' },
     
-    // Knowledge pages
-    { path: '/knowledge/', name: 'knowledge-index' },
-    { path: '/knowledge/faq/', name: 'knowledge-faq' },
-    { path: '/knowledge/roadmap/', name: 'knowledge-roadmap' },
+    // ═══════════════════════════════════════════════════════════════════
+    // TIER 3: TRUST - Credibility Pages
+    // ═══════════════════════════════════════════════════════════════════
+    { path: '/security/', name: 'security', tier: 'trust' },
+    { path: '/compliance/', name: 'compliance', tier: 'trust' },
+    { path: '/oversight/', name: 'oversight', tier: 'trust' },
+    { path: '/company/', name: 'company-index', tier: 'trust' },
+    { path: '/company/about/', name: 'company-about', tier: 'trust' },
+    { path: '/company/contact/', name: 'company-contact', tier: 'trust' },
+    { path: '/company/legal/', name: 'company-legal', tier: 'trust' },
     
-    // Blog pages
-    { path: '/knowledge/blog/', name: 'blog-index' },
-    { path: '/knowledge/blog/future-of-tokenized-securities/', name: 'blog-future-tokenized' },
-    { path: '/knowledge/blog/security-tokens-explained/', name: 'blog-security-tokens' },
-    { path: '/knowledge/blog/why-wyoming/', name: 'blog-why-wyoming' },
+    // ═══════════════════════════════════════════════════════════════════
+    // TIER 4: KNOWLEDGE - Educational Content
+    // ═══════════════════════════════════════════════════════════════════
+    { path: '/knowledge/', name: 'knowledge-index', tier: 'knowledge' },
+    { path: '/knowledge/faq/', name: 'knowledge-faq', tier: 'knowledge' },
+    { path: '/knowledge/roadmap/', name: 'knowledge-roadmap', tier: 'knowledge' },
+    { path: '/knowledge/glossary/', name: 'glossary-index', tier: 'knowledge' },
+    { path: '/knowledge/blog/', name: 'blog-index', tier: 'knowledge' },
+    { path: '/knowledge/docs/', name: 'docs-index', tier: 'knowledge' },
+    { path: '/knowledge/guides/', name: 'guides-index', tier: 'knowledge' },
+    { path: '/knowledge/guides/getting-started/', name: 'guides-getting-started', tier: 'knowledge' },
     
-    // Glossary (sample)
-    { path: '/knowledge/glossary/', name: 'glossary-index' },
-    { path: '/knowledge/glossary/security-token/', name: 'glossary-security-token' },
-    { path: '/knowledge/glossary/kyc/', name: 'glossary-kyc' },
-    { path: '/knowledge/glossary/isin/', name: 'glossary-isin' },
-    
-    // Guides
-    { path: '/knowledge/guides/getting-started/', name: 'guides-getting-started' },
-    
-    // Docs
-    { path: '/knowledge/docs/', name: 'docs-index' }
+    // ═══════════════════════════════════════════════════════════════════
+    // TIER 5: SAMPLES - Spot Check Content Quality
+    // ═══════════════════════════════════════════════════════════════════
+    // Key glossary terms
+    { path: '/knowledge/glossary/crosssecurities/', name: 'glossary-crosssecurities', tier: 'samples' },
+    { path: '/knowledge/glossary/tokenization/', name: 'glossary-tokenization', tier: 'samples' },
+    { path: '/knowledge/glossary/wyoming-dao-llc/', name: 'glossary-wyoming-dao', tier: 'samples' },
+    { path: '/knowledge/glossary/security-token/', name: 'glossary-security-token', tier: 'samples' },
+    { path: '/knowledge/glossary/isin/', name: 'glossary-isin', tier: 'samples' },
+    { path: '/knowledge/glossary/kyc/', name: 'glossary-kyc', tier: 'samples' },
+    // Key blog posts
+    { path: '/knowledge/blog/security-tokens-explained/', name: 'blog-security-tokens', tier: 'samples' },
+    { path: '/knowledge/blog/why-wyoming/', name: 'blog-why-wyoming', tier: 'samples' },
+    { path: '/knowledge/blog/future-of-tokenized-securities/', name: 'blog-future-tokenized', tier: 'samples' },
+    // Key docs
+    { path: '/knowledge/docs/platform-overview/', name: 'docs-platform-overview', tier: 'samples' },
+    { path: '/knowledge/docs/getting-started/', name: 'docs-getting-started', tier: 'samples' },
   ],
   scrollPositions: ['top', '25%', '50%', '75%', 'bottom'],
   waitTime: 500, // ms to wait after scroll for animations

@@ -1,271 +1,254 @@
-# BLOOM KYC UX & Style Guide
+# Sails.to UX & Style Guide
 
-## Reference: What GOOD Looks Like
+## Platform Overview
 
-Compare our KYC flow to the attached bond marketplace screenshot - clean cards, clear visual hierarchy, professional styling.
+Sails.to is a CrossSecurities platform for issuing tokenized securities (bonds, equity, revenue share agreements) using Wyoming DAO LLC legal structures with Solana blockchain infrastructure and TradFi integration via Clearstream for ISINs.
 
 ---
 
-## 🚨 CRITICAL UX RULES
+## 🎯 Target Audiences
 
-### Rule 1: ONE Thing Per Screen
-**BAD:** Email input + captcha + OTP on same page with show/hide
-**GOOD:** 
-- Screen 1: Just email input + "Continue" button
-- Screen 2: Just captcha (if needed)
-- Screen 3: Just OTP input + "Verify" button
+| Audience | Profile | Key Concerns |
+|----------|---------|--------------|
+| **Issuers** | Companies raising $1M-$50M via bonds/securities | Cost, compliance, control, speed |
+| **Investors** | Professional/accredited (high net worth) | Security, returns, liquidity, legitimacy |
+| **Brokers** | Licensed securities dealers | Regulatory compliance, white-label, fees |
+| **Institutions** | Trust companies, VCs, MFOs | Due diligence, custody, reporting |
+| **Introducers** | Referral partners | Commission structure, easy onboarding |
 
-**Why:** Mobile users get overwhelmed. Each step should be obvious.
+---
 
-### Rule 2: NO Native Browser Elements
-**BAD:** `<input type="file">` with "Choose File" and "No file chosen"
-**GOOD:** Custom styled upload button with:
-- Large tap target (min 48x48px)
-- Icon + clear label
-- Drag & drop zone on desktop
-- Camera icon for mobile
+## 🚨 CRITICAL UX RULES FOR FINANCIAL PLATFORMS
 
-**Example HTML:**
-```html
-<label class="upload-zone">
-  <div class="upload-icon">📷</div>
-  <span class="upload-text">Tap to take photo or upload</span>
-  <input type="file" accept="image/*" capture="environment" class="sr-only">
-</label>
-```
+### Rule 1: Trust Above All Else
+**WHY:** We're asking people to invest money. Any doubt = no conversion.
 
-### Rule 3: Progress Should Be Visual, Not Text
-**BAD:** "0%" or "50% complete" as plain text
-**GOOD:** 
-- Stepper component showing current step
-- Visual progress bar (filled portion)
-- Step icons that change state
+**Requirements:**
+- Professional, clean aesthetic (NOT crypto-bro/meme coin vibes)
+- Visible trust signals (regulated, audited, established)
+- Real company info (address, team, contact methods)
+- Clear legal disclosures without being overwhelming
 
-**Example:**
-```
-[✓ Terms] → [✓ Contact] → [● Document] → [○ Face] → [○ Review]
-```
+**Good Examples:**
+- Carta, AngelList, Republic, Bloomberg
+- Clean cards, professional typography, muted colors
 
-### Rule 4: Buttons Must Be Obvious
-**BAD:** No visible button after file selection
-**GOOD:**
-- Primary action button always visible at bottom
-- Button text describes action: "Upload Document", "Take Selfie", "Submit"
-- Button disabled until valid input provided
-- Loading state when processing
+**Bad Examples:**
+- Flashy animations, neon colors, rocket ship emojis
+- Vague team info, hidden contact details
+- Crypto jargon without explanation
 
-### Rule 5: Mobile-First Input Types
-**REQUIRED:**
-- Email: `type="email"` (brings up @ keyboard)
-- Phone: `type="tel"` (numeric pad)
-- OTP: `inputmode="numeric" pattern="[0-9]*"` 
-- Camera: `capture="user"` (selfie) or `capture="environment"` (document)
+### Rule 2: Clarity Over Cleverness
+**WHY:** Financial products are complex. Don't add confusion.
 
-### Rule 6: No Random Text/States Visible
-**BAD:** "0%" showing before any progress
-**BAD:** Empty preview areas
-**BAD:** Hidden divs that flash on load
-**GOOD:** Only show elements when they have meaningful content
+**Requirements:**
+- Explain what we do in 5 seconds (value prop first)
+- Define financial/crypto terms when first used
+- Use progressive disclosure (simple → detailed)
+- Avoid industry jargon in headlines
+
+**Good:**
+> "Issue compliant security tokens in 30 days"
+
+**Bad:**
+> "Leveraging DLT infrastructure for capital formation optimization"
+
+### Rule 3: One Primary Action Per Section
+**WHY:** Decision fatigue kills conversions.
+
+**Requirements:**
+- Single clear CTA per hero section
+- Secondary actions styled differently (ghost buttons, links)
+- Progressive calls-to-action down the page
+- Navigation should not compete with conversion CTAs
+
+### Rule 4: Mobile-First is Non-Negotiable
+**WHY:** Investors check opportunities on phones.
+
+**Requirements:**
+- Touch targets min 44x44px
+- No horizontal scrolling
+- Readable text without zooming (16px+ body)
+- Forms work on mobile keyboards
+- Navigation accessible via hamburger menu
+
+### Rule 5: Load Time = Trust Time
+**WHY:** Slow sites feel untrustworthy and amateurish.
+
+**Requirements:**
+- First contentful paint < 1.5s
+- No layout shift after load
+- Optimized images (WebP, proper sizing)
+- Lazy load below-fold content
 
 ---
 
 ## 📐 Visual Design Standards
 
-### Colors (TailwindCSS)
+### Color Palette
 ```
-Primary Button: bg-blue-600 hover:bg-blue-700 text-white
-Secondary Button: bg-gray-100 hover:bg-gray-200 text-gray-800
-Success: bg-green-50 border-green-500 text-green-700
-Error: bg-red-50 border-red-500 text-red-700
-Warning: bg-yellow-50 border-yellow-500 text-yellow-700
-Card: bg-white rounded-xl shadow-sm border border-gray-100
+Primary:        #1E1B4B (Deep Purple) - Headers, primary buttons
+Secondary:      #3730A3 (Indigo) - Accents, links
+Surface:        #F8FAFC (Light) / #0F172A (Dark) - Backgrounds
+Text Primary:   #1E293B (Slate 800)
+Text Secondary: #64748B (Slate 500)
+Success:        #22C55E (Green 500)
+Warning:        #F59E0B (Amber 500)
+Error:          #EF4444 (Red 500)
+Gold Accent:    #C9A227 (Brand gold)
 ```
 
 ### Typography
 ```
-Page Title: text-2xl font-bold text-gray-900
-Section Title: text-lg font-semibold text-gray-800
-Body Text: text-base text-gray-600
-Help Text: text-sm text-gray-500
-Label: text-sm font-medium text-gray-700
+Font Family:    Inter, system-ui, sans-serif
+H1:             text-4xl (2.25rem) font-bold tracking-tight
+H2:             text-3xl (1.875rem) font-semibold
+H3:             text-2xl (1.5rem) font-semibold
+H4:             text-xl (1.25rem) font-medium
+Body:           text-base (1rem) leading-relaxed
+Small:          text-sm (0.875rem)
+Caption:        text-xs (0.75rem) text-gray-500
 ```
 
-### Spacing
+### Spacing System
 ```
-Card Padding: p-6 (24px)
-Section Gap: space-y-6 (24px)
-Form Field Gap: space-y-4 (16px)
-Inline Gap: gap-3 (12px)
+Section Padding:  py-16 md:py-24 (64px / 96px)
+Card Padding:     p-6 (24px)
+Section Gap:      space-y-8 (32px)
+Element Gap:      space-y-4 (16px)
+Inline Gap:       gap-3 (12px)
 ```
 
-### Touch Targets (Mobile)
+### Component Standards
+
+#### Buttons
 ```
-Minimum button height: 48px (h-12)
-Minimum tap area: 44x44px
-Input height: 48-56px
+Primary:    bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg px-6 py-3 font-medium
+Secondary:  bg-white border border-gray-200 hover:bg-gray-50 text-gray-900 rounded-lg px-6 py-3
+Ghost:      text-indigo-600 hover:text-indigo-800 hover:underline
+Disabled:   bg-gray-200 text-gray-400 cursor-not-allowed
+Min Height: 48px for mobile touch targets
+```
+
+#### Cards
+```
+Base:       bg-white rounded-xl shadow-sm border border-gray-100
+Hover:      hover:shadow-md transition-shadow
+Padding:    p-6
+Gap:        space-y-4
+```
+
+#### Forms
+```
+Input:      w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500
+Label:      text-sm font-medium text-gray-700 mb-2
+Error:      border-red-500 text-red-600 text-sm mt-1
+Help:       text-sm text-gray-500 mt-1
 ```
 
 ---
 
-## 📱 Mobile-Specific Requirements
+## 📱 Responsive Breakpoints
 
-### 1. Viewport
-- Must work at 375px width (iPhone SE)
-- No horizontal scrolling ever
-- Full-width buttons on mobile
-
-### 2. File Upload on Mobile
-```html
-<!-- Document (back camera) -->
-<input type="file" accept="image/*" capture="environment">
-
-<!-- Selfie (front camera) -->  
-<input type="file" accept="image/*" capture="user">
+```
+Mobile:     < 640px  (sm)
+Tablet:     640-1024px (md)
+Desktop:    > 1024px (lg)
+Wide:       > 1280px (xl)
 ```
 
-### 3. Keyboard Handling
-- Form should not be obscured by keyboard
-- "Next" button above keyboard or scrollable
-- Auto-focus first input on step load
-
-### 4. Touch Feedback
-- Buttons must have hover/active states
-- Tap feedback visible (scale or color change)
+### Mobile Requirements
+- Full-width buttons
+- Stacked layouts (no side-by-side cards)
+- Hamburger navigation
+- Larger touch targets
+- No hover-dependent interactions
 
 ---
 
-## ✅ Step-by-Step Checklist
+## ✅ Page-Type Checklists
 
-### For EVERY Step Screen:
-- [ ] Clear title explaining what to do
-- [ ] Only 1-2 inputs maximum  
-- [ ] Primary action button visible without scrolling
-- [ ] Button text is action-specific (not "Submit" or "OK")
-- [ ] Progress indicator shows current position
-- [ ] No unused/empty UI elements visible
-- [ ] Works at 375px width
-- [ ] Touch targets >= 44px
+### Landing Pages (Issuers, Investors, Brokers, etc.)
+- [ ] Clear value proposition in hero (5-second test)
+- [ ] Primary CTA visible without scrolling
+- [ ] Trust signals present (regulatory, security, social proof)
+- [ ] Benefits before features
+- [ ] Mobile navigation works
+- [ ] Page loads in < 2s
+- [ ] No broken images or links
 
-### For File Upload Steps:
-- [ ] Custom styled upload (no native file input visible)
-- [ ] Clear instructions on what to photograph
-- [ ] Preview shows after selection
-- [ ] "Retake" option available
-- [ ] Continue button appears after valid upload
-- [ ] Mobile has `capture` attribute
+### Trust Pages (Security, Compliance, Oversight)
+- [ ] Authoritative, factual tone
+- [ ] Specific claims (not vague promises)
+- [ ] Links to verification where possible
+- [ ] Legal disclaimers appropriately placed
+- [ ] Contact method available
 
-### For OTP/Code Entry:
-- [ ] Large, centered input
-- [ ] Numeric keyboard on mobile (`inputmode="numeric"`)
-- [ ] Auto-submit when complete (optional)
-- [ ] Clear "Resend" option with timer
-- [ ] Shows where code was sent
+### Knowledge Pages (Blog, Glossary, Docs)
+- [ ] Clear hierarchy and navigation
+- [ ] Readable typography (line height, width)
+- [ ] Related content links
+- [ ] Search or filter available for indexes
+- [ ] Breadcrumb navigation
 
-### For Review/Confirm Steps:
-- [ ] Extracted data displayed clearly
-- [ ] Each field is editable
-- [ ] Photo previews visible
-- [ ] Final "Confirm & Submit" button
-- [ ] Clear what happens next
+### Conversion Pages (Signup, Contact)
+- [ ] Minimal fields (ask only what's needed)
+- [ ] Progress indicator if multi-step
+- [ ] Error messages are helpful
+- [ ] Success state is clear
+- [ ] Privacy/terms links present
 
 ---
 
-## 🔴 Automatic Failures (Score = 0)
+## 🔍 Common UX Issues to Flag
 
-The following issues should result in BLOCKING scores:
+### High Severity
+- Page doesn't load or shows errors
+- CTA button doesn't work
+- Forms are broken
+- Trust signals missing on conversion pages
+- Mobile navigation broken
+- Horizontal scrolling
 
-1. **Native file input visible** - "Choose File | No file chosen"
-2. **No continue/submit button** visible after completing input
-3. **More than 3 inputs** on single mobile screen
-4. **Random percentages** showing (0%, 50%) without context
-5. **Horizontal scrolling** required on mobile
-6. **Touch targets < 44px**
-7. **Missing form labels**
-8. **No error messages** when validation fails
+### Medium Severity
+- Slow load time (> 3s)
+- Confusing value proposition
+- Multiple competing CTAs
+- Poor color contrast
+- Missing alt text on images
+- Inconsistent styling between pages
 
----
-
-## 📊 Scoring Guide
-
-### Usability Score (1-10)
-- **10**: Perfect single-step, clear action, beautiful UI
-- **8-9**: Good focus, minor polish issues
-- **6-7**: Functional but cluttered or unclear
-- **4-5**: Multiple issues, confusing flow
-- **1-3**: Broken, inaccessible, or unusable
-
-### Mobile Score (1-10)
-- **10**: Native-app quality on mobile
-- **8-9**: Works well, minor touch issues
-- **6-7**: Usable but not optimized
-- **4-5**: Difficult to use on mobile
-- **1-3**: Broken on mobile
-
-### Step Focus Score (1-10)
-- **10**: Single focused action
-- **8-9**: 1-2 related inputs
-- **6-7**: 3 inputs or minor bundling
-- **4-5**: 4+ inputs bundled
-- **1-3**: Kitchen sink approach
+### Low Severity
+- Minor spacing inconsistencies
+- Hover states could be improved
+- Could use better iconography
+- Content could be more concise
 
 ---
 
-## Example: Good vs Bad
+## 📊 Scoring Framework
 
-### BAD: Current Face Upload
-```
-Face Verification
-Please upload or capture a clear photo...
-Upload Face Photo *
-  📷 Upload Face Photo [Choose File] No file chosen
-Accepted formats: PNG, JPEG (max 20MB)
-0%
-• Face the camera directly
-• Ensure good lighting
-...
-```
-
-**Problems:**
-- Native file input showing
-- "0%" random text
-- No submit button
-- Bullet points take up space
-
-### GOOD: Ideal Face Upload
-```
-┌─────────────────────────────────┐
-│         Take a Selfie           │
-│                                 │
-│  ┌─────────────────────────┐   │
-│  │                         │   │
-│  │    [Camera Preview]     │   │
-│  │         📷              │   │
-│  │   Tap to take photo     │   │
-│  │                         │   │
-│  └─────────────────────────┘   │
-│                                 │
-│  Tips: Good lighting, face     │
-│  camera directly, neutral      │
-│  expression                    │
-│                                 │
-│  ┌─────────────────────────┐   │
-│  │    📸 Take Photo        │   │
-│  └─────────────────────────┘   │
-└─────────────────────────────────┘
-```
-
-**Better because:**
-- Clear title (action-focused)
-- Large visual tap zone
-- Tips condensed to one line
-- Clear primary button
-- No random text/percentages
+| Score | Description | Action |
+|-------|-------------|--------|
+| 9-10 | Exceptional | Ship it, iterate later |
+| 7-8 | Good | Minor polish, low priority |
+| 5-6 | Adequate | Needs attention, medium priority |
+| 3-4 | Problematic | Significant issues, high priority |
+| 1-2 | Critical | Blocking issues, fix immediately |
 
 ---
 
-## Implementation Priority
+## 🔗 Reference Sites
 
-1. **P0 - BLOCKING:** Fix native file inputs, add continue buttons
-2. **P1 - HIGH:** Split bundled steps into single-focus screens  
-3. **P2 - MEDIUM:** Improve visual styling, add stepper
-4. **P3 - LOW:** Polish animations, micro-interactions
+**Good Examples (Professional Finance):**
+- carta.com - Clean, professional, trustworthy
+- angellist.com - Modern but serious
+- republic.com - Accessible securities investing
+- stripe.com - Technical excellence, clarity
+
+**Avoid These Patterns:**
+- Excessive animations/parallax
+- Crypto meme aesthetics (rocket ships, moon references)
+- Vague buzzword-heavy copy
+- Dark patterns or pushy CTAs
+- Missing contact/company info
