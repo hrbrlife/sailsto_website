@@ -81,7 +81,7 @@ scripts:
                 <div style="position: absolute; top: 16px; right: 16px; background: transparent; border: 1px solid var(--silver); color: var(--silver); font-family: var(--font-ui); font-size: 0.55rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 8px;">Coming Soon</div>
                 <div style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--slate); margin-bottom: 8px;">CrossRWA</div>
                 <div style="font-family: var(--font-display); font-size: 1.3rem; color: var(--ink); margin-bottom: 8px; line-height: 1.2; opacity: 0.6;">Liquidity on Illiquid Assets</div>
-                <p style="font-size: 0.8rem; color: var(--slate); margin-bottom: 20px; line-height: 1.5; opacity: 0.6;">Fractional ownership and trading of <span class="glossary-term" data-term="tokenization">real-world assets</span>.</p>
+                <p style="font-size: 0.8rem; color: var(--slate); margin-bottom: 20px; line-height: 1.5; opacity: 0.6;">Fractional ownership and trading of real-world assets via <span class="glossary-term" data-term="tokenization">tokenization</span>.</p>
                 <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.8rem; color: var(--slate); line-height: 2; opacity: 0.6;">
                     <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0;">○</span>Real estate</li>
                     <li style="padding-left: 18px; position: relative;"><span style="position: absolute; left: 0;">○</span>Commodities</li>

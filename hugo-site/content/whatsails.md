@@ -290,7 +290,7 @@ scripts:
                 </tr>
                 <tr>
                     <td><strong><span class="glossary-term" data-term="operational-trust">Operational Trust</span></strong></td>
-                    <td>Licensed fiduciary (SVG Financial Trustee) that holds funds in escrow during issuance and distributes payments to investors after</td>
+                    <td>Licensed fiduciary (SVG Financial Trustee) that holds funds in <span class="glossary-term" data-term="escrow">escrow</span> during issuance and distributes payments to investors after</td>
                 </tr>
                 <tr>
                     <td><strong>Standards Layer</strong></td>

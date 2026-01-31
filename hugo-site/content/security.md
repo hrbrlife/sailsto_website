@@ -62,7 +62,7 @@ stylesheets:
 
 <div class="info-block">
 <h2><span class="glossary-term" data-term="custody">Custody</span> & Funds</h2>
-<p>Investor funds are held with regulated custodians in <span class="glossary-term" data-term="escrow">segregated accounts</span>—never commingled with platform operations. <span class="glossary-term" data-term="atomic-settlement">Multi-signature controls</span> mean no single party can move funds unilaterally. <span class="glossary-term" data-term="on-chain">On-chain</span> holdings are on <span class="glossary-term" data-term="solana">Solana</span>; <span class="glossary-term" data-term="bankable">bankable</span> holdings are via <span class="glossary-term" data-term="clearstream">Clearstream</span>.</p>
+<p>Investor funds are held with regulated custodians in segregated accounts—never commingled with platform operations. Multi-signature controls mean no single party can move funds unilaterally. <span class="glossary-term" data-term="on-chain">On-chain</span> holdings are on <span class="glossary-term" data-term="solana">Solana</span>; <span class="glossary-term" data-term="bankable">bankable</span> holdings are via <span class="glossary-term" data-term="clearstream">Clearstream</span>.</p>
 </div>
 
 <div class="info-block">
