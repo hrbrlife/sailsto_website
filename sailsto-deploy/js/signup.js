@@ -1,59 +1,24 @@
-// Signup form handling with conditional fields per user type
+// Signup form handling with multi-select interest checkboxes
 
 document.addEventListener('DOMContentLoaded', function() {
     
-    // Form title/subtitle text per user type
-    const formTitles = {
-        issuer: {
-            title: "Start Your Capital Raise",
-            subtitle: "Tell us about your project and we'll guide you through the process"
-        },
-        investor: {
-            title: "Access Investment Opportunities",
-            subtitle: "Join our network of professional investors in compliant tokenized securities"
-        },
-        broker: {
-            title: "Partner With Us",
-            subtitle: "Expand your offerings with compliant CrossSecurities for your clients"
-        },
-        institution: {
-            title: "Institutional Solutions",
-            subtitle: "White-label tokenization, custody, and distribution infrastructure"
-        },
-        introducer: {
-            title: "Become an Introducer",
-            subtitle: "Earn referral fees by connecting issuers with our platform"
-        },
-        default: {
-            title: "Join the Waitlist",
-            subtitle: "Tell us about yourself and we'll be in touch within 24 hours"
-        }
-    };
-    
-    // Success messages per user type
+    // Success messages based on selected interests
     const successMessages = {
-        issuer: "Your capital raise inquiry has been received. A member of our issuer relations team will contact you within 24 hours to discuss your project and next steps.",
-        investor: "Your investor application has been received. We'll be in touch within 24 hours with information about current and upcoming offerings that match your criteria.",
-        broker: "Your partnership inquiry has been received. Our broker relations team will contact you within 24 hours to discuss integration and onboarding.",
-        institution: "Your institutional inquiry has been received. A senior member of our team will contact you within 24 hours to discuss enterprise solutions.",
-        introducer: "Your introducer application has been received. We'll be in touch within 24 hours with details about our referral program and commission structure.",
-        default: "Your application has been received. A member of our team will be in touch within 24 hours."
+        issuer: "issuer capital raise",
+        investor: "investment opportunities",
+        broker: "brokerage partnership",
+        institution: "institutional solutions",
+        introducer: "introducer referral program"
     };
     
-    // Update form UI based on selected user type
-    function updateFormUI(type) {
-        // Update title and subtitle
-        const titleEl = document.getElementById('form-title');
-        const subtitleEl = document.getElementById('form-subtitle');
-        const config = formTitles[type] || formTitles.default;
-        
-        if (titleEl) titleEl.textContent = config.title;
-        if (subtitleEl) subtitleEl.textContent = config.subtitle;
-        
-        // Show/hide conditional fields
+    // Track selected interests
+    let selectedInterests = new Set();
+    
+    // Update which conditional sections are visible
+    function updateVisibleSections() {
         document.querySelectorAll('.conditional-fields').forEach(section => {
             const showFor = section.dataset.showFor;
-            if (showFor === type) {
+            if (selectedInterests.has(showFor)) {
                 section.classList.add('active');
             } else {
                 section.classList.remove('active');
@@ -61,47 +26,59 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Handle country change for investor accreditation field
-    function handleCountryChange() {
-        const countrySelect = document.getElementById('country');
-        const accreditationGroup = document.getElementById('accreditation-method-group');
-        const investorTypeSelect = document.getElementById('investor-type');
-        
-        if (countrySelect && accreditationGroup) {
-            const isUS = countrySelect.value === 'US';
-            const isInvestor = document.getElementById('user-type-input')?.value === 'investor';
-            const isIndividual = investorTypeSelect?.value?.includes('individual');
-            
-            // Show accreditation method only for US individual investors
-            if (isUS && isInvestor && isIndividual) {
-                accreditationGroup.style.display = 'block';
+    // Update checkbox visual state
+    function updateCheckboxVisual(checkbox, isChecked) {
+        const label = checkbox.closest('.interest-checkbox');
+        if (label) {
+            if (isChecked) {
+                label.classList.add('selected');
             } else {
-                accreditationGroup.style.display = 'none';
+                label.classList.remove('selected');
             }
         }
     }
     
-    // User type selection
-    document.querySelectorAll('.user-type-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
-            document.querySelectorAll('.user-type-btn').forEach(b => b.classList.remove('selected'));
-            btn.classList.add('selected');
-            const type = btn.dataset.type;
-            document.getElementById('user-type-input').value = type;
-            updateFormUI(type);
-            handleCountryChange(); // Re-evaluate accreditation visibility
+    // Handle interest checkbox changes
+    const interestCheckboxes = document.querySelectorAll('.interest-checkbox input[type="checkbox"]');
+    
+    interestCheckboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', (e) => {
+            const interest = e.target.value;
+            if (e.target.checked) {
+                selectedInterests.add(interest);
+            } else {
+                selectedInterests.delete(interest);
+            }
+            updateCheckboxVisual(e.target, e.target.checked);
+            updateVisibleSections();
+        });
+    });
+    
+    // Also handle clicks on the label container
+    document.querySelectorAll('.interest-checkbox').forEach(label => {
+        label.addEventListener('click', (e) => {
+            // Don't double-trigger if clicking directly on checkbox
+            if (e.target.type === 'checkbox') return;
+            
+            const checkbox = label.querySelector('input[type="checkbox"]');
+            if (checkbox) {
+                checkbox.checked = !checkbox.checked;
+                checkbox.dispatchEvent(new Event('change'));
+            }
         });
     });
     
     // Check URL params for pre-selection
     const urlParams = new URLSearchParams(window.location.search);
     const preselectedType = urlParams.get('type');
+    
     if (preselectedType) {
-        const btn = document.querySelector(`.user-type-btn[data-type="${preselectedType}"]`);
-        if (btn) {
-            btn.classList.add('selected');
-            document.getElementById('user-type-input').value = preselectedType;
-            updateFormUI(preselectedType);
+        const checkbox = document.querySelector(`.interest-checkbox input[value="${preselectedType}"]`);
+        if (checkbox) {
+            checkbox.checked = true;
+            selectedInterests.add(preselectedType);
+            updateCheckboxVisual(checkbox, true);
+            updateVisibleSections();
         }
     }
     
@@ -111,16 +88,21 @@ document.addEventListener('DOMContentLoaded', function() {
         sourcePageInput.value = document.referrer || window.location.href;
     }
     
-    // Country change listener
-    const countrySelect = document.getElementById('country');
-    if (countrySelect) {
-        countrySelect.addEventListener('change', handleCountryChange);
-    }
-    
-    // Investor type change listener
+    // Investor type change listener for accreditation field
     const investorTypeSelect = document.getElementById('investor-type');
     if (investorTypeSelect) {
-        investorTypeSelect.addEventListener('change', handleCountryChange);
+        investorTypeSelect.addEventListener('change', () => {
+            const accreditationGroup = document.getElementById('accreditation-method-group');
+            if (accreditationGroup) {
+                const isIndividual = investorTypeSelect.value?.includes('individual');
+                // For US individuals only - simplified for now
+                if (isIndividual && investorTypeSelect.value === 'individual-accredited') {
+                    accreditationGroup.style.display = 'block';
+                } else {
+                    accreditationGroup.style.display = 'none';
+                }
+            }
+        });
     }
     
     // Form submission handling
@@ -128,6 +110,12 @@ document.addEventListener('DOMContentLoaded', function() {
     if (form) {
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
+            
+            // Validate at least one interest selected
+            if (selectedInterests.size === 0) {
+                alert('Please select at least one area of interest.');
+                return;
+            }
             
             const submitBtn = form.querySelector('.form-submit');
             const submitText = submitBtn.querySelector('.submit-text');
@@ -143,8 +131,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 timestampInput.value = new Date().toISOString();
             }
             
-            // Get selected type for success message
-            const selectedType = document.getElementById('user-type-input').value;
+            // Build success message from selected interests
+            const interestsList = Array.from(selectedInterests).map(i => successMessages[i] || i);
+            let successText = "Your inquiry has been received. We'll be in touch within 24 hours regarding ";
+            if (interestsList.length === 1) {
+                successText += interestsList[0] + ".";
+            } else if (interestsList.length === 2) {
+                successText += interestsList.join(' and ') + ".";
+            } else {
+                successText += interestsList.slice(0, -1).join(', ') + ', and ' + interestsList.slice(-1) + ".";
+            }
             
             try {
                 const response = await fetch(form.action, {
@@ -154,10 +150,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
                 
                 if (response.ok) {
-                    // Update success message based on type
+                    // Update success message
                     const successMsgEl = document.getElementById('success-message');
                     if (successMsgEl) {
-                        successMsgEl.textContent = successMessages[selectedType] || successMessages.default;
+                        successMsgEl.textContent = successText;
                     }
                     
                     document.getElementById('signup-form-wrapper').style.display = 'none';
@@ -186,7 +182,4 @@ document.addEventListener('DOMContentLoaded', function() {
             nav.classList.remove('scrolled');
         }
     });
-    
-    // Initial call to handle any pre-selected values
-    handleCountryChange();
 });
