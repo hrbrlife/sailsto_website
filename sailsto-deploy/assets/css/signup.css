@@ -5,12 +5,10 @@
         .signup-section {
             min-height: 100vh;
             padding: 160px 48px 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: block;
             background: linear-gradient(135deg, var(--navy) 0%, #1a2a3a 100%);
             position: relative;
-            overflow: hidden;
+            overflow: visible;
         }
         
         .signup-section::before {
@@ -35,10 +33,21 @@
             z-index: 1;
         }
         
+        /* Wrapper to maintain grid space when content becomes fixed */
+        .signup-content-wrapper {
+            min-height: 400px;
+        }
+        
         .signup-content {
-            position: sticky;
-            top: 140px;
             padding-right: 20px;
+            align-self: start;
+            transition: transform 0.15s ease-out;
+        }
+        
+        .signup-content.is-sticky {
+            position: fixed;
+            top: 120px;
+            /* width and left set by JS */
         }
         
         .signup-content h1 {
@@ -138,6 +147,15 @@
             cursor: pointer;
             transition: all 0.3s ease;
             position: relative;
+            user-select: none;
+        }
+        
+        .interest-checkbox * {
+            pointer-events: none;
+        }
+        
+        .interest-checkbox input[type="checkbox"] {
+            pointer-events: auto;
         }
         
         .interest-checkbox:hover {
@@ -333,6 +351,109 @@
             text-decoration: underline;
         }
         
+        /* Marketing checkbox with glow */
+        .marketing-checkbox {
+            position: relative;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(201, 162, 39, 0.08) 0%, rgba(201, 162, 39, 0.02) 100%);
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            border-radius: 8px;
+            padding: 14px 16px;
+            margin-bottom: 16px;
+            animation: subtleGlow 2s ease-in-out infinite;
+            overflow: visible;
+        }
+        
+        .marketing-checkbox .hug-emoji {
+            font-size: 1.3rem;
+            line-height: 1;
+            margin-right: 10px;
+            flex-shrink: 0;
+            animation: wiggle 3s ease-in-out infinite;
+        }
+        
+        .marketing-checkbox input[type="checkbox"] {
+            margin-top: 0;
+            margin-right: 10px;
+        }
+        
+        .marketing-checkbox label {
+            margin: 0;
+            line-height: 1.4;
+        }
+        
+        @keyframes subtleGlow {
+            0%, 100% {
+                box-shadow: 0 0 8px rgba(201, 162, 39, 0.15);
+                border-color: rgba(201, 162, 39, 0.2);
+            }
+            50% {
+                box-shadow: 0 0 16px rgba(201, 162, 39, 0.3);
+                border-color: rgba(201, 162, 39, 0.4);
+            }
+        }
+        
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+        
+        /* Burst effect when checked */
+        .marketing-checkbox.checked {
+            animation: none;
+            border-color: rgba(34, 197, 94, 0.5);
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(34, 197, 94, 0.02) 100%);
+        }
+        
+        .marketing-checkbox.checked .hug-emoji {
+            animation: none;
+        }
+        
+        /* Sparkle particles */
+        .marketing-checkbox .sparkles {
+            position: absolute;
+            top: 50%;
+            left: 28px;
+            width: 0;
+            height: 0;
+            pointer-events: none;
+        }
+        
+        .marketing-checkbox .sparkle {
+            position: absolute;
+            width: 6px;
+            height: 6px;
+            background: var(--gold);
+            border-radius: 50%;
+            opacity: 0;
+        }
+        
+        .marketing-checkbox.burst .sparkle {
+            animation: sparkle 0.6s ease-out forwards;
+        }
+        
+        .marketing-checkbox.burst .sparkle:nth-child(1) { --angle: 0deg; --distance: 60px; }
+        .marketing-checkbox.burst .sparkle:nth-child(2) { --angle: 45deg; --distance: 70px; animation-delay: 0.05s; }
+        .marketing-checkbox.burst .sparkle:nth-child(3) { --angle: 90deg; --distance: 55px; animation-delay: 0.1s; }
+        .marketing-checkbox.burst .sparkle:nth-child(4) { --angle: 135deg; --distance: 65px; animation-delay: 0.05s; }
+        .marketing-checkbox.burst .sparkle:nth-child(5) { --angle: 180deg; --distance: 60px; }
+        .marketing-checkbox.burst .sparkle:nth-child(6) { --angle: 225deg; --distance: 70px; animation-delay: 0.1s; }
+        .marketing-checkbox.burst .sparkle:nth-child(7) { --angle: 270deg; --distance: 55px; animation-delay: 0.05s; }
+        .marketing-checkbox.burst .sparkle:nth-child(8) { --angle: 315deg; --distance: 65px; }
+        
+        @keyframes sparkle {
+            0% {
+                transform: rotate(var(--angle)) translateY(0);
+                opacity: 1;
+            }
+            100% {
+                transform: rotate(var(--angle)) translateY(calc(var(--distance) * -1));
+                opacity: 0;
+            }
+        }
+        
         /* Submit button */
         .form-submit {
             width: 100%;
@@ -470,6 +591,93 @@
             }
         }
         
+        /* Two-step form flow */
+        .form-step {
+            display: none;
+            animation: fadeIn 0.3s ease-out;
+        }
+        
+        .form-step.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Step 1 success state */
+        .step-success-content {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .step-success-content h3 {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--ivory);
+            margin: 16px 0 12px;
+        }
+        
+        .step-success-content p {
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+        
+        .step-success-content .form-submit {
+            margin-top: 8px;
+        }
+        
+        .skip-text {
+            margin-top: 16px;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .skip-text a {
+            color: var(--gold);
+            text-decoration: underline;
+        }
+        
+        /* Success banner (shown at top of step 2) */
+        .step-success-banner {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15) 0%, rgba(34, 197, 94, 0.05) 100%);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-left: 3px solid #22c55e;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            border-radius: 6px;
+        }
+        
+        .step-success-banner .icon {
+            color: #22c55e;
+            flex-shrink: 0;
+        }
+        
+        .step-success-banner .banner-text {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+        }
+        
+        .step-success-banner .banner-text strong {
+            color: #22c55e;
+        }
+        
+        /* Step indicator */
+        .step-indicator {
+            font-family: var(--font-ui);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+        
         /* Conditional fields - hidden by default, shown when active */
         .conditional-fields {
             display: none;
@@ -491,19 +699,39 @@
             }
         }
         
-        /* Section divider for conditional fields */
-        .conditional-fields::before {
-            content: '';
-            display: block;
-            height: 1px;
-            background: linear-gradient(to right, transparent, var(--gold), transparent);
+        /* Conditional fields section - distinct visual block */
+        .conditional-fields {
+            display: none;
+            animation: slideDown 0.3s ease-out;
+            background: rgba(0, 0, 0, 0.25);
+            border: 1px solid rgba(201, 162, 39, 0.15);
+            border-radius: 8px;
+            padding: 24px;
             margin: 24px 0;
         }
+        
+        .conditional-fields.active {
+            display: block;
+        }
+        
+        /* Section header styles for each category */
+        .section-header-issuer { color: #4ade80; border-color: rgba(74, 222, 128, 0.3); }
+        .section-header-investor { color: var(--gold); border-color: rgba(201, 162, 39, 0.3); }
+        .section-header-broker { color: #60a5fa; border-color: rgba(96, 165, 250, 0.3); }
+        .section-header-institution { color: #c084fc; border-color: rgba(192, 132, 252, 0.3); }
+        .section-header-introducer { color: #f472b6; border-color: rgba(244, 114, 182, 0.3); }
+        
+        /* Category indicator bar on left */
+        .conditional-fields[data-show-for="issuer"] { border-left: 3px solid #4ade80; }
+        .conditional-fields[data-show-for="investor"] { border-left: 3px solid var(--gold); }
+        .conditional-fields[data-show-for="broker"] { border-left: 3px solid #60a5fa; }
+        .conditional-fields[data-show-for="institution"] { border-left: 3px solid #c084fc; }
+        .conditional-fields[data-show-for="introducer"] { border-left: 3px solid #f472b6; }
         
         /* Form section labels */
         .form-section-label {
             font-family: var(--font-ui);
-            font-size: 0.65rem;
+            font-size: 0.7rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.15em;
@@ -515,6 +743,8 @@
         
         .conditional-fields .form-section-label:first-child {
             margin-top: 0;
+            font-size: 0.85rem;
+            letter-spacing: 0.1em;
         }
         
         /* Field helper text */
@@ -613,6 +843,108 @@
         @media (max-width: 600px) {
             .checkbox-grid {
                 grid-template-columns: 1fr;
+            }
+        }
+        
+        /* ========================================
+           SLIDESHOW STYLES
+           ======================================== */
+        
+        .signup-slideshow {
+            position: relative;
+            min-height: 320px;
+        }
+        
+        .signup-slide {
+            opacity: 0;
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        
+        .signup-slide.active {
+            opacity: 1;
+            visibility: visible;
+            position: relative;
+        }
+        
+        /* Slideshow dots navigation */
+        .slideshow-dots {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+            padding: 8px 0;
+        }
+        
+        .slideshow-dots .dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.25);
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .slideshow-dots .dot:hover {
+            background: rgba(255,255,255,0.5);
+            transform: scale(1.2);
+        }
+        
+        .slideshow-dots .dot.active {
+            background: var(--gold);
+            transform: scale(1.1);
+        }
+        
+        /* Slide content fade-in animation */
+        .signup-slide.active h1 {
+            animation: slideIn 0.5s ease forwards;
+        }
+        
+        .signup-slide.active p {
+            animation: slideIn 0.5s ease 0.1s forwards;
+        }
+        
+        .signup-slide.active .signup-benefits li {
+            animation: slideIn 0.4s ease forwards;
+        }
+        
+        .signup-slide.active .signup-benefits li:nth-child(1) { animation-delay: 0.15s; }
+        .signup-slide.active .signup-benefits li:nth-child(2) { animation-delay: 0.25s; }
+        .signup-slide.active .signup-benefits li:nth-child(3) { animation-delay: 0.35s; }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive: Stack layout on mobile */
+        @media (max-width: 900px) {
+            .signup-slideshow {
+                min-height: auto;
+            }
+            
+            .signup-slide {
+                position: relative;
+                display: none;
+            }
+            
+            .signup-slide.active {
+                display: block;
+            }
+            
+            .slideshow-dots {
+                justify-content: center;
             }
         }
     
