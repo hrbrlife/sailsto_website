@@ -25,7 +25,7 @@ stylesheets:
     <h1 class="section-title">Your raise. Fully equipped.<br>Day one.</h1>
     <p class="section-desc">We provide everything: legal entity, compliance structure, KYC platform, document vault, investor communications, and a global broker network ready to distribute. Plug into a multi-broker OTC network for automatic liquidity. You bring the deal. We provide the rails. Pay nothing until you succeed.</p>
     <div class="hero-ctas">
-        <a href="/signup/" class="btn-hero primary">Schedule Consultation</a>
+        <a href="/signup/?type=issuer" class="btn-hero primary">Schedule Consultation</a>
         <a href="/pricing/" class="btn-hero secondary">View Pricing</a>
     </div>
     <div class="trust-badges">
