@@ -1,6 +1,11 @@
 /* ═══════════════════════════════════════════════════════════════
    SAILS.TO GLOSSARY TOOLTIPS
    Automatic term detection and tooltip display
+   
+   Features:
+   - First-occurrence-only: subsequent uses of same term are plain text
+   - Audience-aware: pages with data-audience="professional" skip basic terms
+   - Smart positioning: auto-adjusts to viewport boundaries
    ═══════════════════════════════════════════════════════════════ */
 
 (function() {
@@ -12,6 +17,16 @@
     // Tooltip element
     let tooltipEl = null;
     let hideTimeout = null;
+    
+    // Track which terms have been seen on this page (first-occurrence-only)
+    const seenTerms = new Set();
+    
+    // Basic terms that professionals already know - skip on professional pages
+    const basicTermsForProfessionals = new Set([
+        'kyc', 'aml', 'custody', 'liquidity', 'otc', 'compliance',
+        'broker-dealer', 'accredited-investor', 'professional-investor',
+        'escrow', 'distributions', 'cap-table'
+    ]);
     
     // Initialize on DOM ready
     if (document.readyState === 'loading') {
@@ -27,7 +42,7 @@
         // Load glossary data
         await loadGlossaryData();
         
-        // Find and enhance glossary terms
+        // Find and enhance glossary terms (with first-occurrence logic)
         enhanceGlossaryTerms();
         
         // Set up event listeners
@@ -336,9 +351,40 @@
     function enhanceGlossaryTerms() {
         if (!glossaryData) return;
         
+        // Check if this is a professional-audience page
+        const isProfessionalPage = document.body.hasAttribute('data-audience') && 
+            document.body.getAttribute('data-audience') === 'professional';
+        
+        // Also detect professional pages by URL pattern
+        const path = window.location.pathname;
+        const professionalPaths = ['/brokers/', '/regulated/', '/introducers/'];
+        const isImplicitProfessionalPage = professionalPaths.some(p => path.includes(p));
+        const skipBasicTerms = isProfessionalPage || isImplicitProfessionalPage;
+        
         // Find all elements with data-term attribute (explicitly marked)
         const explicitTerms = document.querySelectorAll('[data-term]');
+        
         explicitTerms.forEach(el => {
+            const termKey = el.getAttribute('data-term');
+            
+            // Skip basic terms on professional pages
+            if (skipBasicTerms && basicTermsForProfessionals.has(termKey)) {
+                el.removeAttribute('data-term');
+                el.classList.remove('glossary-term');
+                return;
+            }
+            
+            // First-occurrence-only: disable tooltip for subsequent uses
+            if (seenTerms.has(termKey)) {
+                el.removeAttribute('data-term');
+                el.classList.remove('glossary-term');
+                // Keep the text content, just remove the tooltip behavior
+                return;
+            }
+            
+            // Mark this term as seen
+            seenTerms.add(termKey);
+            
             if (!el.classList.contains('glossary-term')) {
                 el.classList.add('glossary-term');
             }
@@ -351,7 +397,18 @@
             const text = el.textContent.toLowerCase().trim();
             for (const [key, data] of Object.entries(glossaryData)) {
                 if (data.term && data.term.toLowerCase() === text) {
-                    el.setAttribute('data-term', key);
+                    // Check first-occurrence rule
+                    if (!seenTerms.has(key)) {
+                        // Skip basic terms on professional pages
+                        if (skipBasicTerms && basicTermsForProfessionals.has(key)) {
+                            el.classList.remove('glossary-term');
+                            break;
+                        }
+                        el.setAttribute('data-term', key);
+                        seenTerms.add(key);
+                    } else {
+                        el.classList.remove('glossary-term');
+                    }
                     break;
                 }
             }

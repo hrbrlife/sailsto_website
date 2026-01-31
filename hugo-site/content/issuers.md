@@ -247,7 +247,7 @@ stylesheets:
                 </div>
                 <div class="structure-card">
                     <h4><span class="glossary-term" data-term="treasury-series">Treasury Series</span></h4>
-                    <p>Reserves, operational funds, unclaimed <span class="glossary-term" data-term="distributions">distributions</span>. Neutral <span class="glossary-term" data-term="trustee">trust</span> oversight.</p>
+                    <p>Reserves, operational funds, unclaimed <span class="glossary-term" data-term="distributions">distributions</span>. Neutral <span class="glossary-term" data-term="trustee">trustee</span> oversight.</p>
                 </div>
                 <div class="structure-card">
                     <h4><span class="glossary-term" data-term="crossconversion-series">CrossConversion Series</span></h4>
