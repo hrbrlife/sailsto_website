@@ -138,13 +138,13 @@
         /* User type selection */
         .user-type-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             gap: 12px;
             margin-bottom: 28px;
         }
         
         .user-type-btn {
-            padding: 16px;
+            padding: 16px 8px;
             background: var(--cream);
             border: 2px solid transparent;
             cursor: pointer;
@@ -352,6 +352,10 @@
                 justify-content: center;
                 text-align: left;
             }
+            
+            .user-type-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
         }
         
         @media (max-width: 600px) {
@@ -364,10 +368,181 @@
             }
             
             .user-type-grid {
-                grid-template-columns: 1fr;
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .user-type-btn {
+                padding: 12px 8px;
+            }
+            
+            .user-type-btn .label {
+                font-size: 0.6rem;
             }
             
             .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Conditional fields - hidden by default, shown when active */
+        .conditional-fields {
+            display: none;
+            animation: slideDown 0.3s ease-out;
+        }
+        
+        .conditional-fields.active {
+            display: block;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Section divider for conditional fields */
+        .conditional-fields::before {
+            content: '';
+            display: block;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            margin: 24px 0;
+        }
+        
+        /* Form section labels */
+        .form-section-label {
+            font-family: var(--font-ui);
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--gold);
+            margin: 24px 0 16px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.2);
+        }
+        
+        .conditional-fields .form-section-label:first-child {
+            margin-top: 0;
+        }
+        
+        /* Field helper text */
+        .field-helper {
+            display: block;
+            font-size: 0.75rem;
+            color: var(--slate);
+            margin-top: 6px;
+            line-height: 1.4;
+            font-style: italic;
+        }
+        
+        /* Required asterisk */
+        .required {
+            color: var(--crimson);
+            font-weight: 600;
+        }
+        
+        /* Info boxes */
+        .form-info-box {
+            background: linear-gradient(135deg, rgba(201, 162, 39, 0.08) 0%, rgba(201, 162, 39, 0.04) 100%);
+            border: 1px solid rgba(201, 162, 39, 0.2);
+            border-left: 3px solid var(--gold);
+            padding: 16px 20px;
+            margin: 24px 0 16px;
+            font-size: 0.85rem;
+        }
+        
+        .form-info-box strong {
+            display: block;
+            font-family: var(--font-ui);
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink);
+            margin-bottom: 10px;
+        }
+        
+        .form-info-box ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+        
+        .form-info-box li {
+            color: var(--graphite);
+            margin-bottom: 4px;
+            line-height: 1.5;
+        }
+        
+        .form-info-box li:last-child {
+            margin-bottom: 0;
+        }
+        
+        /* Checkbox grid for multi-select */
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px 16px;
+            margin-top: 8px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: var(--graphite);
+            cursor: pointer;
+            padding: 6px 0;
+        }
+        
+        .checkbox-item input[type="checkbox"] {
+            width: 16px;
+            height: 16px;
+            accent-color: var(--gold);
+            flex-shrink: 0;
+        }
+        
+        .checkbox-item:hover {
+            color: var(--ink);
+        }
+        
+        /* Optgroup styling */
+        optgroup {
+            font-weight: 600;
+            color: var(--ink);
+        }
+        
+        optgroup option {
+            font-weight: 400;
+            padding-left: 8px;
+        }
+        
+        /* Placeholder styling */
+        input::placeholder,
+        textarea::placeholder {
+            color: rgba(0, 0, 0, 0.35);
+            font-style: italic;
+        }
+        
+        /* Focus states enhanced */
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--gold);
+            box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.15);
+            background: #fff;
+        }
+        
+        /* Responsive checkbox grid */
+        @media (max-width: 600px) {
+            .checkbox-grid {
                 grid-template-columns: 1fr;
             }
         }
