@@ -52,7 +52,7 @@ scripts:
 </section>
 <section class="editorial-section">
     <div class="editorial-container">
-        <div class="product-grid" style="max-width: 960px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(0,0,0,0.08);">
+        <div class="product-grid" style="max-width: 1500px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(0,0,0,0.08);">
             <div style="background: #fff; padding: 36px 28px; position: relative;">
                 <div style="position: absolute; top: 16px; right: 16px; background: var(--gold); color: var(--ink); font-family: var(--font-ui); font-size: 0.55rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 8px;">Live</div>
                 <div style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--gold); margin-bottom: 8px;">Bonds</div>
@@ -92,8 +92,8 @@ scripts:
         </div>
     </div>
 </section>
-<section class="example-section" style="background: #fff; padding: 80px 48px;">
-    <div style="max-width: 960px; margin: 0 auto;">
+<section class="example-section" style="background: #fff; padding: 60px 24px;">
+    <div style="max-width: 1500px; margin: 0 auto;">
         <div style="text-align: center; margin-bottom: 40px;">
             <span style="font-family: var(--font-ui); font-size: 0.65rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold);">Example Offering</span>
             <h2 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 400; color: var(--ink); margin-top: 12px;">See what's possible</h2>
