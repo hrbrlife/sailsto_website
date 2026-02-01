@@ -291,7 +291,7 @@ scripts:
    <input type="hidden" name="interests" id="step2-interests" value="">
    
    <div class="conditional-fields" data-show-for="issuer">
-   <div class="form-section-label section-header-issuer">About Your Raise</div>
+   <div class="form-section-label section-header-issuer">Your Interest: Raising Funds</div>
    <div class="form-row">
    <div class="form-group">
    <label for="soft-cap">Soft Cap (Minimum Raise)</label>
@@ -372,8 +372,6 @@ scripts:
    <label for="profit-participation">Profit Participation Details</label>
    <textarea id="profit-participation" name="profit_participation" rows="3" placeholder="Describe how profit sharing will work: calculation method, expected figures, which returns are guaranteed vs variable..."></textarea>
    </div>
-   
-   <div class="form-section-label">Business Information</div>
    
    <div class="form-row">
    <div class="form-group">
@@ -471,7 +469,7 @@ scripts:
    <!-- ═══════════════════════════════════════════════════════════════ -->
    
    <div class="conditional-fields" data-show-for="investor">
-   <div class="form-section-label section-header-investor">Investment Preferences</div>
+   <div class="form-section-label section-header-investor">Your Interest: Investor Platform Access</div>
    
    <div class="form-row">
    <div class="form-group">
@@ -524,15 +522,6 @@ scripts:
    <input type="checkbox" id="professional-investor" name="professional_investor_confirm">
    <label for="professional-investor">I confirm that I am a <span class="glossary-term" data-term="professional-investor">professional</span> or <span class="glossary-term" data-term="accredited-investor">accredited investor</span>, or I am inquiring on behalf of a professional entity.</label>
    </div>
-   
-   <div class="form-info-box">
-   <strong>Investor Requirements:</strong>
-   <ul>
-   <li>Minimum investment: <strong>$150,000</strong> per offering</li>
-   <li>US investors: Accredited investor verification required</li>
-   <li>Non-US investors: Professional investor status (MiFID II)</li>
-   </ul>
-   </div>
    </div>
    
    <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -540,7 +529,7 @@ scripts:
    <!-- ═══════════════════════════════════════════════════════════════ -->
    
    <div class="conditional-fields" data-show-for="broker">
-   <div class="form-section-label section-header-broker">Broker Details</div>
+   <div class="form-section-label section-header-broker">Your Interest: Broker Partnership</div>
    
    <div class="form-row">
    <div class="form-group">
@@ -584,8 +573,6 @@ scripts:
    </select>
    </div>
    </div>
-   
-   <div class="form-section-label">Business Profile</div>
    
    <div class="form-row">
    <div class="form-group">
@@ -640,16 +627,6 @@ scripts:
    <label for="broker-notes">Additional Notes</label>
    <textarea id="broker-notes" name="broker_notes" rows="2" placeholder="Anything else about your firm or specific offerings you're interested in..."></textarea>
    </div>
-   
-   <div class="form-info-box">
-   <strong>Broker Earnings:</strong>
-   <ul>
-   <li>Primary placement: <strong>Up to 5%</strong> (3% issuer reward + 2% from platform)</li>
-   <li>Secondary trading: <strong>~0.17%</strong> per side</li>
-   <li>Settlement: <strong>T+0</strong> instant (on-chain) or T+2 (bankable)</li>
-   <li>Platform fees: <strong>$0</strong></li>
-   </ul>
-   </div>
    </div>
    
    <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -657,7 +634,7 @@ scripts:
    <!-- ═══════════════════════════════════════════════════════════════ -->
    
    <div class="conditional-fields" data-show-for="institution">
-   <div class="form-section-label section-header-institution">Platform Requirements</div>
+   <div class="form-section-label section-header-institution">Your Interest: White-Label Platform</div>
    
    <div class="form-row">
    <div class="form-group">
@@ -698,8 +675,6 @@ scripts:
    </select>
    </div>
    </div>
-   
-   <div class="form-section-label">Interest & Use Case</div>
    
    <div class="form-group">
    <label for="use-case">Primary Use Case</label>
@@ -756,17 +731,6 @@ scripts:
    <label for="institution-notes">Additional Notes</label>
    <textarea id="institution-notes" name="institution_notes" rows="2" placeholder="Specific requirements, existing infrastructure, or questions..."></textarea>
    </div>
-   
-   <div class="form-info-box">
-   <strong>Institutional Solutions:</strong>
-   <ul>
-   <li>Full platform operator capabilities</li>
-   <li>White-label branding options</li>
-   <li>Custom fee structures</li>
-   <li>API integration for existing systems</li>
-   <li>Dedicated account management</li>
-   </ul>
-   </div>
    </div>
    
    <!-- ═══════════════════════════════════════════════════════════════ -->
@@ -774,7 +738,7 @@ scripts:
    <!-- ═══════════════════════════════════════════════════════════════ -->
    
    <div class="conditional-fields" data-show-for="introducer">
-   <div class="form-section-label section-header-introducer">Your Network</div>
+   <div class="form-section-label section-header-introducer">Your Interest: Introducing Issuers</div>
    
    <div class="form-row">
    <div class="form-group">
@@ -804,8 +768,6 @@ scripts:
    </select>
    </div>
    </div>
-   
-   <div class="form-section-label">Network & Referral Potential</div>
    
    <div class="form-row">
    <div class="form-group">
@@ -854,17 +816,6 @@ scripts:
    <div class="form-group">
    <label for="introducer-notes">Additional Notes</label>
    <textarea id="introducer-notes" name="introducer_notes" rows="2" placeholder="Tell us about your network, any specific deals in mind, or questions about the introducer program..."></textarea>
-   </div>
-   
-   <div class="form-info-box">
-   <strong>Introducer Program:</strong>
-   <ul>
-   <li>Earn <strong>25% of Sails.to's commission</strong> on referred deals</li>
-   <li>Example: $2M raise via broker network = <strong>$30,000</strong> to you</li>
-   <li>No license required, no capital required</li>
-   <li>No ongoing work – just make the introduction</li>
-   <li>Ideal referrals: Revenue-generating businesses with 2+ years history seeking $600K–$10M</li>
-   </ul>
    </div>
    </div>
    

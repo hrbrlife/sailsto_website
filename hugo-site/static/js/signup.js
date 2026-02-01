@@ -65,10 +65,11 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Handle clicks on the label container
+    // Handle clicks on the entire interest card - make whole card clickable
     document.querySelectorAll('.interest-checkbox').forEach(label => {
         label.addEventListener('click', (e) => {
-            if (e.target.type === 'checkbox') return;
+            // Always handle the click ourselves to ensure consistent behavior
+            e.preventDefault();
             
             const checkbox = label.querySelector('input[type="checkbox"]');
             if (checkbox) {
