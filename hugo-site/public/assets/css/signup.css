@@ -155,7 +155,7 @@
         }
         
         .interest-checkbox input[type="checkbox"] {
-            pointer-events: auto;
+            pointer-events: none;
         }
         
         .interest-checkbox:hover {
@@ -699,52 +699,75 @@
             }
         }
         
-        /* Conditional fields section - distinct visual block */
+        /* Conditional fields section - distinct visual block per category */
         .conditional-fields {
             display: none;
             animation: slideDown 0.3s ease-out;
-            background: rgba(0, 0, 0, 0.25);
-            border: 1px solid rgba(201, 162, 39, 0.15);
+            border: none;
             border-radius: 8px;
             padding: 24px;
-            margin: 24px 0;
+            margin: 16px 0;
         }
         
         .conditional-fields.active {
             display: block;
         }
         
-        /* Section header styles for each category */
-        .section-header-issuer { color: #4ade80; border-color: rgba(74, 222, 128, 0.3); }
-        .section-header-investor { color: var(--gold); border-color: rgba(201, 162, 39, 0.3); }
-        .section-header-broker { color: #60a5fa; border-color: rgba(96, 165, 250, 0.3); }
-        .section-header-institution { color: #c084fc; border-color: rgba(192, 132, 252, 0.3); }
-        .section-header-introducer { color: #f472b6; border-color: rgba(244, 114, 182, 0.3); }
+        /* Category-specific backgrounds - subtle differentiation like table rows */
+        .conditional-fields[data-show-for="issuer"] { 
+            background: rgba(74, 222, 128, 0.08);
+            border-top: 3px solid #4ade80;
+        }
+        .conditional-fields[data-show-for="investor"] { 
+            background: rgba(201, 162, 39, 0.08);
+            border-top: 3px solid var(--gold);
+        }
+        .conditional-fields[data-show-for="broker"] { 
+            background: rgba(96, 165, 250, 0.08);
+            border-top: 3px solid #60a5fa;
+        }
+        .conditional-fields[data-show-for="institution"] { 
+            background: rgba(192, 132, 252, 0.08);
+            border-top: 3px solid #c084fc;
+        }
+        .conditional-fields[data-show-for="introducer"] { 
+            background: rgba(244, 114, 182, 0.08);
+            border-top: 3px solid #f472b6;
+        }
         
-        /* Category indicator bar on left */
-        .conditional-fields[data-show-for="issuer"] { border-left: 3px solid #4ade80; }
-        .conditional-fields[data-show-for="investor"] { border-left: 3px solid var(--gold); }
-        .conditional-fields[data-show-for="broker"] { border-left: 3px solid #60a5fa; }
-        .conditional-fields[data-show-for="institution"] { border-left: 3px solid #c084fc; }
-        .conditional-fields[data-show-for="introducer"] { border-left: 3px solid #f472b6; }
+        /* Section header styles for each category */
+        .section-header-issuer { 
+            color: #4ade80; 
+            border-bottom-color: rgba(74, 222, 128, 0.3); 
+        }
+        .section-header-investor { 
+            color: var(--gold); 
+            border-bottom-color: rgba(201, 162, 39, 0.3); 
+        }
+        .section-header-broker { 
+            color: #60a5fa; 
+            border-bottom-color: rgba(96, 165, 250, 0.3); 
+        }
+        .section-header-institution { 
+            color: #c084fc; 
+            border-bottom-color: rgba(192, 132, 252, 0.3); 
+        }
+        .section-header-introducer { 
+            color: #f472b6; 
+            border-bottom-color: rgba(244, 114, 182, 0.3); 
+        }
         
         /* Form section labels */
         .form-section-label {
             font-family: var(--font-ui);
-            font-size: 0.7rem;
+            font-size: 0.85rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.15em;
-            color: var(--gold);
-            margin: 24px 0 16px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid rgba(201, 162, 39, 0.2);
-        }
-        
-        .conditional-fields .form-section-label:first-child {
-            margin-top: 0;
-            font-size: 0.85rem;
             letter-spacing: 0.1em;
+            color: var(--gold);
+            margin: 0 0 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(201, 162, 39, 0.2);
         }
         
         /* Field helper text */
