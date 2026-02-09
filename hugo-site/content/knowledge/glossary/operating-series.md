@@ -1,6 +1,8 @@
 ---
 title: "Operating Series - Glossary"
 description: "A dedicated series within a Series LLC structure that holds an issuer's specific project assets and liabilities, isolated from other series."
+ogImage: "/og-image.png"
+keywords: ["operating", "series", "glossary", "dedicated", "within", "llc", "structure", "holds"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

@@ -1,6 +1,8 @@
 ---
 title: "Cap Table (Capitalization Table) - Glossary"
 description: "A complete record of a company's securities ownership, showing all shareholders, their holdings, and ownership percentages, updated in real-time on blockchain."
+ogImage: "/og-image.png"
+keywords: ["cap", "table", "capitalization", "glossary", "complete", "record", "company", "securities"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

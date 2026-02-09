@@ -7,7 +7,7 @@ set -e
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 HUGO_DIR="$SCRIPT_DIR/hugo-site"
 DEPLOY_DIR="$SCRIPT_DIR/sailsto-deploy"
-DEPLOY_REMOTE="https://nzatjbqc@api-f6411e4a4942c0b80d4b7ad39af36744.melusina-os.org/"
+DEPLOY_REMOTE="${DEPLOY_REMOTE:-}" # Set via environment variable, e.g. export DEPLOY_REMOTE="https://user@host/"
 
 echo "🚀 Sails.to Deploy Script"
 echo "========================="

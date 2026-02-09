@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else if .Title }}{{ .Title }} | {{ .Site.Params.siteName }}{{ else }}{{ .Site.Title }}{{ end }}</title>
     {{ with .Params.description | default .Site.Params.description }}
     <meta name="description" content="{{ . }}">
     {{ end }}

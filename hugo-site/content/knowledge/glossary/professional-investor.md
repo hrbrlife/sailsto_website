@@ -1,6 +1,8 @@
 ---
 title: "Professional Investor - Glossary"
 description: "Under EU/international regulations, an investor with sufficient experience, knowledge, and expertise to make independent investment decisions and assess risks."
+ogImage: "/og-image.png"
+keywords: ["professional", "investor", "glossary", "international", "regulations", "sufficient", "experience", "knowledge"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

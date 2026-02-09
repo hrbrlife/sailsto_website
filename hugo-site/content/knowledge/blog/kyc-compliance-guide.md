@@ -1,6 +1,9 @@
 ---
 title: "KYC/AML Compliance Guide for Security Token Offerings"
+date: 2025-01-20
 description: "A practical guide to KYC and AML compliance for security token issuers—what's required, why it matters, and how to streamline verification."
+ogImage: "/og-image.png"
+keywords: ["kyc", "aml", "compliance", "guide", "security", "token", "offerings", "practical"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

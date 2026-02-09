@@ -1,6 +1,8 @@
 ---
 title: "Maturity - Glossary"
 description: "The date on which a bond's principal amount becomes due and payable to the bondholder, marking the end of the bond's term."
+ogImage: "/og-image.png"
+keywords: ["maturity", "glossary", "date", "bond", "principal", "amount", "becomes", "due"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

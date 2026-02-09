@@ -1,6 +1,8 @@
 ---
 title: "Regulation S (Reg S) - Glossary"
 description: "SEC regulation providing a safe harbor for securities offerings made outside the United States to non-US persons, exempt from SEC registration requirements."
+ogImage: "/og-image.png"
+keywords: ["regulation", "reg", "glossary", "sec", "providing", "safe", "harbor", "securities"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
