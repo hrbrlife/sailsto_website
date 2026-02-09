@@ -1,25 +1,4 @@
-        :root {
-            /* THE PALETTE: Bold, print-inspired, luxury magazine */
-            --ivory: #FFFEF8;
-            --cream: #F7F5ED;
-            --champagne: #EDE8DC;
-            --ink: #0A0A0A;
-            --charcoal: #1A1A1A;
-            --graphite: #2D2D2D;
-            --slate: #4A4A4A;
-            --silver: #8A8A8A;
-            --gold: #C9A227;
-            --crimson: #B8192B;
-            --navy: #0D1B2A;
-            
-            --font-display: 'Cormorant Garamond', Georgia, serif;
-            --font-body: 'DM Sans', -apple-system, sans-serif;
-            --font-ui: 'DM Sans', -apple-system, sans-serif;
-            --font-accent: 'Playfair Display', Georgia, serif;
-            
-            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
-            --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
-        }
+        /* home.css - inherits :root vars from styles.css */
         
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
