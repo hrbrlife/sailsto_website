@@ -158,6 +158,24 @@
     </script>
     {{ end }}
     
+    <!-- DefinedTerm Schema for glossary terms -->
+    {{ if and (in .RelPermalink "/glossary/") (not .IsSection) }}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "{{ .Title | replaceRE " - Glossary$" "" }}",
+        "description": "{{ .Params.description }}",
+        "url": "{{ .Permalink }}",
+        "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "name": "Sails.to Glossary",
+            "url": "{{ "knowledge/glossary/" | absURL }}"
+        }
+    }
+    </script>
+    {{ end }}
+    
     <!-- Head scripts (loaded synchronously before body) -->
     {{ range .Params.headScripts }}
     <script src="{{ . }}"></script>

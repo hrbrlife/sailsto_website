@@ -1,14 +1,5 @@
 // Scripts for brokers.html
 
-const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 60) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
-        });
-
         // Broker Earnings Calculator
         function formatCurrency(amount) {
             return '$' + amount.toLocaleString('en-US', { maximumFractionDigits: 0 });
