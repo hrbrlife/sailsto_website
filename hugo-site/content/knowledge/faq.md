@@ -56,7 +56,7 @@ scripts:
             <h2>General Questions</h2>
         </div>
         <div class="faq-list">
-            <div class="faq-item">
+            <div class="faq-item featured">
                 <button class="faq-question">
                     <span>What is Sails.to?</span>
                     <span class="faq-toggle">+</span>
@@ -83,7 +83,7 @@ scripts:
                     <p>Sails.to is a Wyoming Decentralized Autonomous Organization LLC. We provide technology infrastructure and administrative services. Securities offerings are conducted through licensed broker-dealers in applicable jurisdictions, ensuring full regulatory compliance. We are not ourselves a broker-dealer or investment adviser.</p>
                 </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item featured">
                 <button class="faq-question">
                     <span>What types of assets can be tokenized?</span>
                     <span class="faq-toggle">+</span>
@@ -119,7 +119,7 @@ scripts:
             <h2>For Issuers</h2>
         </div>
         <div class="faq-list">
-            <div class="faq-item">
+            <div class="faq-item featured">
                 <button class="faq-question">
                     <span>How much does it cost to launch a token?</span>
                     <span class="faq-toggle">+</span>
@@ -138,7 +138,7 @@ scripts:
                     <p>If soft cap fails, investors get a <strong>full refund</strong> (only Clearstream fees at cost, if used). This includes legal structure setup (<span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO LLC</span>), token deployment, <span class="glossary-term" data-term="kyc">KYC</span>/<span class="glossary-term" data-term="aml">AML</span> integration, and investor portal.</p>
                 </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item featured">
                 <button class="faq-question">
                     <span>How long does it take to launch?</span>
                     <span class="faq-toggle">+</span>
@@ -154,7 +154,7 @@ scripts:
                     <p>Complex offerings with custom terms may take longer.</p>
                 </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item featured">
                 <button class="faq-question">
                     <span>What legal structure do you provide?</span>
                     <span class="faq-toggle">+</span>
@@ -191,7 +191,7 @@ scripts:
             <h2>For Investors</h2>
         </div>
         <div class="faq-list">
-            <div class="faq-item">
+            <div class="faq-item featured">
                 <button class="faq-question">
                     <span>Who can invest on Sails.to?</span>
                     <span class="faq-toggle">+</span>
@@ -207,7 +207,7 @@ scripts:
                     <p>All investors must complete <span class="glossary-term" data-term="kyc">KYC</span>/<span class="glossary-term" data-term="aml">AML</span> verification.</p>
                 </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item featured">
                 <button class="faq-question">
                     <span>How do I custody my tokens?</span>
                     <span class="faq-toggle">+</span>
@@ -353,7 +353,7 @@ scripts:
                     <p>For large holdings, we strongly recommend hardware wallet custody.</p>
                 </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item featured">
                 <button class="faq-question">
                     <span>How does CrossConversion work?</span>
                     <span class="faq-toggle">+</span>
