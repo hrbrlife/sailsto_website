@@ -139,6 +139,7 @@
             <div class="nav-dropdown-menu" role="menu">
                 <a href="/issuers/" role="menuitem">Business - Raise Funds</a>
                 <a href="/investors/" role="menuitem">Professional Investors - Grow</a>
+                <a href="/trustees/" role="menuitem">Trust Companies &amp; Fiduciaries</a>
                 <a href="/brokers/" role="menuitem">For Brokers</a>
                 <a href="/introducers/" role="menuitem">Business Introducers</a>
                 <a href="/regulated/" role="menuitem">For Institutions</a>
@@ -149,6 +150,7 @@
             <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false">Understand</a>
             <div class="nav-dropdown-menu" role="menu">
                 <a href="/whatsails/" role="menuitem">How It Works</a>
+                <a href="/players/" role="menuitem">Players</a>
                 <a href="/pricing/" role="menuitem">Pricing</a>
                 <a href="/compliance/" role="menuitem">Compliance</a>
                 <a href="/security/" role="menuitem">Security</a>
@@ -279,6 +281,25 @@
    </li>
    </ul>
    </div>
+   <!-- Slide 6: Trust Company / Fiduciary -->
+   <div class="signup-slide" data-slide="trustee">
+   <h1>Participate as a Trust Company</h1>
+   <p>Act as a platform-approved trustee overseeing issuances, introduce clients for capital raises, or operate your own white-label platform.</p>
+   <ul class="signup-benefits">
+   <li>
+   <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:24px;height:24px;color:var(--gold);"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg></span>
+   <div class="text"><h4>⅔ of Annual Trust Fee</h4><p>~0.67% annually on issuance value under your mandate</p></div>
+   </li>
+   <li>
+   <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:24px;height:24px;color:var(--gold);"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg></span>
+   <div class="text"><h4>Security Deposit Oversight</h4><p>3% deposit under your fiduciary control</p></div>
+   </li>
+   <li>
+   <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" style="width:24px;height:24px;color:var(--gold);"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg></span>
+   <div class="text"><h4>Introduce &amp; Earn</h4><p>25% commission on client referrals, or go white-label</p></div>
+   </li>
+   </ul>
+   </div>
    </div>
    <!-- Slideshow dots -->
    <div class="slideshow-dots" id="slideshow-dots">
@@ -287,6 +308,7 @@
    <button class="dot" data-slide="2" aria-label="Slide 3"></button>
    <button class="dot" data-slide="3" aria-label="Slide 4"></button>
    <button class="dot" data-slide="4" aria-label="Slide 5"></button>
+   <button class="dot" data-slide="5" aria-label="Slide 6"></button>
    </div>
    <div class="trust-badges light" style="margin: 24px 0; border-top: none; justify-content: flex-start;">
    <span class="trust-badge">
@@ -379,6 +401,14 @@
    </span>
    <span class="interest-label">Introducing Issuers</span>
    <span class="interest-desc">Earn 25% of platform fees as referrer</span>
+   </label>
+   <label class="interest-checkbox" data-interest="trustee">
+   <input type="checkbox" name="interests[]" value="trustee">
+   <span class="interest-icon">
+   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>
+   </span>
+   <span class="interest-label">Trust Company / Fiduciary</span>
+   <span class="interest-desc">Trustee role, introductions, or white-label</span>
    </label>
    </div>
    <input type="hidden" name="source_page" id="source-page-input" value="">
@@ -920,6 +950,88 @@
    </div>
    </div>
    <!-- ═══════════════════════════════════════════════════════════════ -->
+   <!-- TRUSTEE FIELDS -->
+   <!-- ═══════════════════════════════════════════════════════════════ -->
+   <div class="conditional-fields" data-show-for="trustee">
+   <div class="form-section-label section-header-trustee">Your Interest: Trust Company / Fiduciary</div>
+   <div class="form-row">
+   <div class="form-group">
+   <label for="trustee-entity-type">Entity Type</label>
+   <select id="trustee-entity-type" name="trustee_entity_type">
+   <option value="">Select type</option>
+   <option value="licensed-trust-company">Licensed Trust Company</option>
+   <option value="corporate-trustee">Corporate Trustee</option>
+   <option value="cpa-firm">CPA / Accountancy Firm</option>
+   <option value="corporate-services">Corporate Service Provider</option>
+   <option value="family-office-admin">Family Office Administrator</option>
+   <option value="fiduciary-other">Other Licensed Fiduciary</option>
+   </select>
+   </div>
+   <div class="form-group">
+   <label for="trustee-jurisdiction">Primary Jurisdiction</label>
+   <select id="trustee-jurisdiction" name="trustee_jurisdiction">
+   <option value="">Select jurisdiction</option>
+   <option value="us-wyoming">United States – Wyoming</option>
+   <option value="us-delaware">United States – Delaware</option>
+   <option value="us-south-dakota">United States – South Dakota</option>
+   <option value="us-nevada">United States – Nevada</option>
+   <option value="us-other">United States – Other</option>
+   <option value="uk">United Kingdom</option>
+   <option value="switzerland">Switzerland</option>
+   <option value="liechtenstein">Liechtenstein</option>
+   <option value="cayman">Cayman Islands</option>
+   <option value="bvi">British Virgin Islands</option>
+   <option value="singapore">Singapore</option>
+   <option value="hong-kong">Hong Kong</option>
+   <option value="uae">UAE / DIFC</option>
+   <option value="other">Other</option>
+   </select>
+   </div>
+   </div>
+   <div class="form-group">
+   <label for="trustee-role-interest">Roles of Interest</label>
+   <div class="checkbox-grid">
+   <label class="checkbox-item"><input type="checkbox" name="trustee_roles[]" value="platform-trustee"> Platform-Approved Trustee (oversee issuances)</label>
+   <label class="checkbox-item"><input type="checkbox" name="trustee_roles[]" value="introducer"> Introducer (refer clients for 25% commission)</label>
+   <label class="checkbox-item"><input type="checkbox" name="trustee_roles[]" value="white-label"> White-Label Operator (run own branded platform)</label>
+   </div>
+   </div>
+   <div class="form-row">
+   <div class="form-group">
+   <label for="trustee-client-count">Number of Business Clients</label>
+   <select id="trustee-client-count" name="trustee_client_count">
+   <option value="">Select range</option>
+   <option value="under-25">Under 25</option>
+   <option value="25-50">25 – 50</option>
+   <option value="50-100">50 – 100</option>
+   <option value="100-250">100 – 250</option>
+   <option value="250-plus">250+</option>
+   </select>
+   <span class="field-helper">Business clients who may benefit from capital raises</span>
+   </div>
+   <div class="form-group">
+   <label for="trustee-aua">Assets Under Administration</label>
+   <select id="trustee-aua" name="trustee_aua">
+   <option value="">Select range</option>
+   <option value="under-50m">Under $50M</option>
+   <option value="50m-100m">$50M – $100M</option>
+   <option value="100m-500m">$100M – $500M</option>
+   <option value="500m-1b">$500M – $1B</option>
+   <option value="1b-plus">$1B+</option>
+   </select>
+   </div>
+   </div>
+   <div class="form-group">
+   <label for="trustee-license">Trust License / Registration Number</label>
+   <input type="text" id="trustee-license" name="trustee_license" placeholder="e.g., Charter number, state registration, or firm registration...">
+   <span class="field-helper">Required for Platform Trustee role; optional for Introducer role</span>
+   </div>
+   <div class="form-group">
+   <label for="trustee-notes">Additional Notes</label>
+   <textarea id="trustee-notes" name="trustee_notes" rows="2" placeholder="Tell us about your trust practice, client base, specific questions about trustee or introducer participation..."></textarea>
+   </div>
+   </div>
+   <!-- ═══════════════════════════════════════════════════════════════ -->
    <!-- GENERAL FIELDS (All Types) -->
    <!-- ═══════════════════════════════════════════════════════════════ -->
    <div class="form-group" id="general-interest-group">
@@ -991,6 +1103,7 @@
             <h4>For Me</h4>
             <a href="/issuers/">Business - Raise Funds</a>
             <a href="/investors/">Professional Investors</a>
+            <a href="/trustees/">Trust Companies</a>
             <a href="/brokers/">Brokers</a>
             <a href="/introducers/">Business Introducers</a>
             <a href="/regulated/">Institutions</a>
@@ -998,6 +1111,7 @@
         <div class="footer-col">
             <h4>Understand</h4>
             <a href="/whatsails/">How It Works</a>
+            <a href="/players/">Players</a>
             <a href="/pricing/">Pricing</a>
             <a href="/compliance/">Compliance</a>
             <a href="/security/">Security</a>
