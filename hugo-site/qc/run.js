@@ -26,6 +26,7 @@
 const { validateGlossary } = require('./validate-glossary');
 const { validateLinks } = require('./validate-links');
 const { validateImages } = require('./validate-images');
+const { validateContrast } = require('./validate-contrast');
 
 // ANSI colors
 const RED = '\x1b[31m';
@@ -53,6 +54,11 @@ const VALIDATORS = {
         name: 'Image Validation',
         description: 'Check image references, alt text, and unused files',
         fn: validateImages
+    },
+    contrast: {
+        name: 'Contrast Validation',
+        description: 'Check WCAG 2.1 AA contrast ratios (needs running server)',
+        fn: validateContrast
     }
 };
 
@@ -126,7 +132,7 @@ async function runValidators(validatorKeys) {
         printDivider(validator.name);
         
         try {
-            const result = validator.fn();
+            const result = await validator.fn();
             results[key] = result;
             totalErrors += result.errors || 0;
             totalWarnings += result.warnings || 0;
