@@ -230,6 +230,8 @@ nav.scrolled .logo .logo-light {
 /* Navigation Dropdowns */
 .nav-dropdown {
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .nav-dropdown-trigger {
