@@ -1,21 +1,16 @@
 // Scripts for knowledge/faq.html
 
-// FAQ accordion
+// FAQ accordion — independent toggle, featured items pre-expanded
         document.querySelectorAll('.faq-question').forEach(button => {
             button.addEventListener('click', () => {
                 const item = button.parentElement;
-                const isOpen = item.classList.contains('open');
-                
-                // Close all others in same section
-                item.parentElement.querySelectorAll('.faq-item').forEach(i => {
-                    i.classList.remove('open');
-                });
-                
-                // Toggle current
-                if (!isOpen) {
-                    item.classList.add('open');
-                }
+                item.classList.toggle('open');
             });
+        });
+
+        // Pre-expand featured FAQ items on page load
+        document.querySelectorAll('.faq-item.featured').forEach(item => {
+            item.classList.add('open');
         });
         
         // FAQ nav active state on scroll
