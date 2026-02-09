@@ -27,7 +27,7 @@ stylesheets:
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" /></svg>
         <div class="important-notice-content">
             <strong><span class="glossary-term" data-term="minimum-investment">$150,000 Minimum Investment</span></strong>
-            <span>Accredited/Professional investors only • 1.5% CrossConversion fee applies</span>
+            <span>Accredited/Professional investors only • 0.75% CrossConversion fee applies</span>
         </div>
     </div>
     <div class="hero-ctas">
@@ -114,7 +114,7 @@ stylesheets:
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg></span>
                     <div class="text">
                         <h4>Bidirectional <span class="glossary-term" data-term="crossconversion">CrossConversion</span></h4>
-                        <p>Cross between forms as needed. Any token holder can request <span class="glossary-term" data-term="crossconversion">CrossConversion</span> for 1.5% of <span class="glossary-term" data-term="nominal-value">nominal value</span>. Always 1:1 backed.</p>
+                        <p>Cross between forms as needed. Any token holder can request <span class="glossary-term" data-term="crossconversion">CrossConversion</span> for 0.75% of <span class="glossary-term" data-term="nominal-value">nominal value</span>. Always 1:1 backed.</p>
                     </div>
                 </li>
             </ul>
@@ -134,7 +134,7 @@ stylesheets:
                     <span class="icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5" /></svg></span>
                     <div class="text">
                         <h4><span class="glossary-term" data-term="otc">OTC</span> Marketplace</h4>
-                        <p>Request quotes, post indications. Trade with other verified investors on the platform.</p></p>
+                        <p>Request quotes, post indications. Trade with other verified investors on the platform.</p>
                     </div>
                 </li>
                 <li>
@@ -224,14 +224,14 @@ stylesheets:
         <div class="global-card">
             <span class="section-label"><span class="glossary-term" data-term="crossconversion">CrossConversion</span></span>
             <h2 class="section-title">On-chain today,<br>private bank tomorrow</h2>
-            <p>Any on-chain holder can request <span class="glossary-term" data-term="crossconversion">CrossConversion</span> to bankable form for 1.5% of <span class="glossary-term" data-term="nominal-value">nominal value</span>. Lock tokens on-chain, receive 1:1 backed bankable <span class="glossary-term" data-term="isin">ISIN</span>-identified <span class="glossary-term" data-term="security-token">securities</span> via <span class="glossary-term" data-term="clearstream">Clearstream</span>. Cross back when needed. During initial placement, issuers typically handle CrossConversions; afterward, any holder can initiate. Your CrossSecurity adapts to <span class="glossary-term" data-term="custody">custody</span> requirements, not the other way around.</p>
+            <p>Any on-chain holder can request <span class="glossary-term" data-term="crossconversion">CrossConversion</span> to bankable form for 0.75% of <span class="glossary-term" data-term="nominal-value">nominal value</span>. Lock tokens on-chain, receive 1:1 backed bankable <span class="glossary-term" data-term="isin">ISIN</span>-identified <span class="glossary-term" data-term="security-token">securities</span> via <span class="glossary-term" data-term="clearstream">Clearstream</span>. Cross back when needed. During initial placement, issuers typically handle CrossConversions; afterward, any holder can initiate. Your CrossSecurity adapts to <span class="glossary-term" data-term="custody">custody</span> requirements, not the other way around.</p>
             <div class="global-stats">
                 <div class="global-stat">
                     <div class="value">1:1</div>
                     <div class="label">Always backed</div>
                 </div>
                 <div class="global-stat">
-                    <div class="value">1.5%</div>
+                    <div class="value">0.75%</div>
                     <div class="label">CrossConversion fee</div>
                 </div>
                 <div class="global-stat">

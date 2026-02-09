@@ -43,7 +43,7 @@ stylesheets:
 <div class="feature-card">
 <span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-folder"></use></svg></span>
 <h3>Documentation</h3>
-<p>Standardized offering documents including <span class="glossary-term" data-term="offering-memorandum">prospectus</span>, subscription agreements, and risk disclosures reviewed by securities counsel.</p>
+<p>Standardized offering documents including <span class="glossary-term" data-term="offering-memorandum">private placement memorandum (PPM)</span>, subscription agreements, and risk disclosures reviewed by securities counsel.</p>
 </div>
 </div>
 
@@ -59,11 +59,11 @@ stylesheets:
 </ul>
 </div>
 
-<div class="cta-section">
+</div>
+</section>
+
+<section class="cta-section">
 <h2>Questions About Compliance?</h2>
 <p>Our team can walk you through our compliance framework and how it applies to your specific situation.</p>
 <a href="/company/contact/" class="btn btn-primary">Contact Us</a>
-</div>
-
-</div>
 </section>

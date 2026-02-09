@@ -148,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-document"></use></svg></span>
-                <span class="trust-text">Prospectus</span>
+                <span class="trust-text">PPM</span>
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-landmark"></use></svg></span>
@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-document"></use></svg></span>
-                <span class="trust-text">Prospectus</span>
+                <span class="trust-text">PPM</span>
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-landmark"></use></svg></span>
@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-document"></use></svg></span>
-                <span class="trust-text">Prospectus</span>
+                <span class="trust-text">PPM</span>
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-landmark"></use></svg></span>
@@ -404,7 +404,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-document"></use></svg></span>
-                <span class="trust-text">Prospectus</span>
+                <span class="trust-text">PPM</span>
             </div>
             <div class="trust-item active">
                 <span class="trust-icon">🇪🇺</span>
@@ -489,7 +489,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-document"></use></svg></span>
-                <span class="trust-text">Prospectus</span>
+                <span class="trust-text">PPM</span>
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-landmark"></use></svg></span>
@@ -575,7 +575,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-document"></use></svg></span>
-                <span class="trust-text">Prospectus</span>
+                <span class="trust-text">PPM</span>
             </div>
             <div class="trust-item active">
                 <span class="icon-wrapper small"><svg><use href="#icon-landmark"></use></svg></span>

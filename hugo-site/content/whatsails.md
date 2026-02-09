@@ -290,7 +290,7 @@ scripts:
                 </tr>
                 <tr>
                     <td><strong><span class="glossary-term" data-term="operational-trust">Operational Trust</span></strong></td>
-                    <td>Licensed fiduciary (SVG Financial Trustee) that holds funds in <span class="glossary-term" data-term="escrow">escrow</span> during issuance and distributes payments to investors after</td>
+                    <td>Licensed fiduciary that holds funds in <span class="glossary-term" data-term="escrow">escrow</span> during issuance and distributes payments to investors after</td>
                 </tr>
                 <tr>
                     <td><strong>Standards Layer</strong></td>
@@ -379,7 +379,7 @@ scripts:
                 </tr>
                 <tr>
                     <td><strong><span class="glossary-term" data-term="crossconversion-series">CrossConversion Series</span></strong></td>
-                    <td>Handles on-chain token ↔ bankable <span class="glossary-term" data-term="isin">ISIN</span>-identified <span class="glossary-term" data-term="security-token">security</span> conversion. Any token holder can request <span class="glossary-term" data-term="crossconversion">CrossConversion</span> for 1.5% of <span class="glossary-term" data-term="nominal-value">nominal value</span>. (see <a href="#conversion">Section 5</a>)</td>
+                    <td>Handles on-chain token ↔ bankable <span class="glossary-term" data-term="isin">ISIN</span>-identified <span class="glossary-term" data-term="security-token">security</span> conversion. Any token holder can request <span class="glossary-term" data-term="crossconversion">CrossConversion</span> for 0.75% of <span class="glossary-term" data-term="nominal-value">nominal value</span>. (see <a href="#conversion">Section 5</a>)</td>
                     <td>Issuer + <span class="glossary-term" data-term="trustee">Trust</span> oversight</td>
                 </tr>
             </tbody>
@@ -811,7 +811,7 @@ scripts:
 <section class="content-section" id="conversion">
     <div class="content-container">
         <h2>5. CrossConversion: Between On-Chain & Bankable Forms</h2>
-        <p>The same CrossSecurity can exist in two forms: an <strong>on-chain Solana token</strong> or a <strong>bankable ISIN-identified security held via Clearstream</strong>. The CrossConversion Series handles the conversion. Any Solana token holder can request CrossConversion for 1.5% of nominal value.</p>
+        <p>The same CrossSecurity can exist in two forms: an <strong>on-chain Solana token</strong> or a <strong>bankable ISIN-identified security held via Clearstream</strong>. The CrossConversion Series handles the conversion. Any Solana token holder can request CrossConversion for 0.75% of nominal value.</p>
         <div class="mermaid">
         flowchart LR
             subgraph Solana
@@ -830,7 +830,7 @@ scripts:
         </div>
         <div class="concept-box">
             <h4>Who Can CrossConvert</h4>
-            <p>The CrossConversion Series is a Series within the DAO LLC. <strong>Any on-chain token holder can request CrossConversion for 1.5% of nominal value.</strong> During initial placement, the issuer typically handles CrossConversions to distribute via Channel 3. After the offering closes, any eligible holder may initiate CrossConversion in either direction.</p>
+            <p>The CrossConversion Series is a Series within the DAO LLC. <strong>Any on-chain token holder can request CrossConversion for 0.75% of nominal value.</strong> During initial placement, the issuer typically handles CrossConversions to distribute via Channel 3. After the offering closes, any eligible holder may initiate CrossConversion in either direction.</p>
             <p>When tokens are locked, bankable ISIN-identified securities are issued via Clearstream. When those securities are redeemed, tokens are released. Always 1:1.</p>
             <p><strong>No third-party crypto custodian required for the on-chain token.</strong> The issuer controls custody via its own legal structure.</p>
             <p><em>Note: If CrossConversion fees occur during soft cap phase and soft cap is not reached, fees will be rebilled at actual cost + 20%.</em></p>
@@ -939,7 +939,7 @@ scripts:
                 </tr>
                 <tr>
                     <td><strong>CrossConversion Fee</strong></td>
-                    <td><span class="fee-highlight">0.10-0.25%</span> (capped)</td>
+                    <td><span class="fee-highlight">0.75%</span></td>
                     <td>When crossing On-Chain ↔ Bankable forms</td>
                     <td>Requester</td>
                     <td>Sails.to + Trust</td>

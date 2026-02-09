@@ -80,7 +80,7 @@ scripts:
                     <span class="faq-toggle">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p>Sails.to DAO LLC is a Wyoming Decentralized Autonomous Organization LLC. We provide technology infrastructure and administrative services. Securities offerings are conducted through licensed broker-dealers in applicable jurisdictions, ensuring full regulatory compliance. We are not ourselves a broker-dealer or investment adviser.</p>
+                    <p>Sails.to is a Wyoming Decentralized Autonomous Organization LLC. We provide technology infrastructure and administrative services. Securities offerings are conducted through licensed broker-dealers in applicable jurisdictions, ensuring full regulatory compliance. We are not ourselves a broker-dealer or investment adviser.</p>
                 </div>
             </div>
             <div class="faq-item">
