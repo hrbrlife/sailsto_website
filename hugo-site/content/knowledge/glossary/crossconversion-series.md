@@ -1,6 +1,8 @@
 ---
 title: "CrossConversion Series - Glossary"
 description: "A dedicated series within a Series LLC structure that facilitates the conversion of securities between on-chain tokens and bankable ISIN format."
+ogImage: "/og-image.png"
+keywords: ["crossconversion", "series", "glossary", "dedicated", "within", "llc", "structure", "facilitates"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

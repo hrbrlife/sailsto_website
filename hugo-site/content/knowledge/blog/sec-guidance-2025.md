@@ -1,6 +1,9 @@
 ---
 title: "SEC Digital Asset Guidance 2025: What It Means for Security Tokens"
+date: 2025-02-05
 description: "Understanding the SEC's evolving stance on digital assets and what recent guidance means for compliant security token offerings."
+ogImage: "/og-image.png"
+keywords: ["sec", "digital", "asset", "guidance", "2025", "security", "tokens", "understanding"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

@@ -1,6 +1,8 @@
 ---
 title: "Treasury Series - Glossary"
 description: "A dedicated series within a Series LLC structure that holds un-issued or repurchased tokens, managing the supply of securities."
+ogImage: "/og-image.png"
+keywords: ["treasury", "series", "glossary", "dedicated", "within", "llc", "structure", "holds"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

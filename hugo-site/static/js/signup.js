@@ -410,14 +410,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-    
-    // Nav scroll behavior
-    window.addEventListener('scroll', () => {
-        const nav = document.querySelector('nav');
-        if (nav && window.scrollY > 50) {
-            nav.classList.add('scrolled');
-        } else if (nav) {
-            nav.classList.remove('scrolled');
-        }
-    });
 });

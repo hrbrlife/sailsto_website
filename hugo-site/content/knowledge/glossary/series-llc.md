@@ -1,6 +1,8 @@
 ---
 title: "Series LLC - Glossary"
 description: "A corporate structure allowing a single LLC to create multiple segregated series, each with its own assets, liabilities, and members, providing liability isolation between series."
+ogImage: "/og-image.png"
+keywords: ["series", "llc", "glossary", "corporate", "structure", "allowing", "single", "create"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

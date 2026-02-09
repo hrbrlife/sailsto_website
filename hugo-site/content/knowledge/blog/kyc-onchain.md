@@ -5,6 +5,7 @@ stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
+draft: true
 ---
 
 <section class="page-hero">

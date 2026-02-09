@@ -1,6 +1,8 @@
 ---
 title: "Minimum Investment - Glossary"
 description: "$150,000 minimum investment threshold for CrossSecurities — set to comply with professional and accredited investor regulations globally."
+ogImage: "/og-image.png"
+keywords: ["minimum", "investment", "glossary", "150", "000", "threshold", "crosssecurities", "set"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

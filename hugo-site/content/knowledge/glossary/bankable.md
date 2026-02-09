@@ -1,6 +1,8 @@
 ---
 title: "Bankable - Glossary"
 description: "Securities in a format recognized by traditional banking infrastructure — CrossSecurities can CrossConvert to bankable ISIN form held via Clearstream."
+ogImage: "/og-image.png"
+keywords: ["bankable", "glossary", "securities", "format", "recognized", "traditional", "banking", "infrastructure"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

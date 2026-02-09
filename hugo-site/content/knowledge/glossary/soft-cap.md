@@ -1,6 +1,8 @@
 ---
 title: "Soft Cap - Glossary"
 description: "The minimum funding threshold an offering must reach for the capital raise to proceed. If the soft cap is not met, investor funds are typically returned."
+ogImage: "/og-image.png"
+keywords: ["soft", "cap", "glossary", "minimum", "funding", "threshold", "offering", "must"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

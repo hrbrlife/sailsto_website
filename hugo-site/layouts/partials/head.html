@@ -3,7 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+    <title>{{ if .IsHome }}{{ .Site.Title }}{{ else if .Title }}{{ .Title }} | {{ .Site.Params.siteName }}{{ else }}{{ .Site.Title }}{{ end }}</title>
     {{ with .Params.description | default .Site.Params.description }}
     <meta name="description" content="{{ . }}">
     {{ end }}
@@ -154,6 +154,24 @@
             }
             {{ end }}
         ]
+    }
+    </script>
+    {{ end }}
+    
+    <!-- DefinedTerm Schema for glossary terms -->
+    {{ if and (in .RelPermalink "/glossary/") (not .IsSection) }}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "DefinedTerm",
+        "name": "{{ .Title | replaceRE " - Glossary$" "" }}",
+        "description": "{{ .Params.description }}",
+        "url": "{{ .Permalink }}",
+        "inDefinedTermSet": {
+            "@type": "DefinedTermSet",
+            "name": "Sails.to Glossary",
+            "url": "{{ "knowledge/glossary/" | absURL }}"
+        }
     }
     </script>
     {{ end }}

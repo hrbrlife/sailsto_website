@@ -1,6 +1,8 @@
 ---
 title: "Clearstream - Glossary"
 description: "A major international securities depository and settlement system based in Luxembourg, enabling custody and settlement of securities across 110+ markets."
+ogImage: "/og-image.png"
+keywords: ["clearstream", "glossary", "major", "international", "securities", "depository", "settlement", "system"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

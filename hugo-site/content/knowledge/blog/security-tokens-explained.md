@@ -1,6 +1,9 @@
 ---
 title: "Security Tokens Explained: What They Are and Why They Matter"
+date: 2024-12-15
 description: "A comprehensive guide to security tokens—blockchain-based securities that combine traditional ownership rights with programmable compliance."
+ogImage: "/og-image.png"
+keywords: ["security", "tokens", "explained", "matter", "comprehensive", "guide", "blockchain-based", "securities"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

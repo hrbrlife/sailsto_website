@@ -1,6 +1,8 @@
 ---
 title: "OTC (Over-the-Counter) - Glossary"
 description: "Securities trading conducted directly between two parties without a centralized exchange, often used for larger transactions or less liquid securities."
+ogImage: "/og-image.png"
+keywords: ["otc", "over-the-counter", "glossary", "securities", "trading", "conducted", "directly", "two"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

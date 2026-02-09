@@ -1,6 +1,8 @@
 ---
 title: "CrossSecurities - Glossary"
 description: "Sails CrossSecurities are bonds, shares, or RWA tokens that can be held on-chain (Solana) or via traditional bank/brokerage custody (ISIN-bearing) — and moved from one form to another at will."
+ogImage: "/og-image.png"
+keywords: ["crosssecurities", "glossary", "sails", "bonds", "shares", "rwa", "tokens", "held"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
