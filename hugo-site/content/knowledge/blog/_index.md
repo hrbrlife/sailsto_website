@@ -1,6 +1,8 @@
 ---
 title: "Blog"
 description: "Insights, analysis, and updates on tokenized securities, blockchain infrastructure, regulatory developments, and the future of capital markets."
+ogImage: "/og-image.png"
+keywords: ["blog", "insights", "analysis", "updates", "tokenized", "securities", "blockchain", "infrastructure"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

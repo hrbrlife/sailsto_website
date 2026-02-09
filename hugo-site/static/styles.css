@@ -28,6 +28,34 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* Skip to content link for accessibility */
+.skip-to-content {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 10001;
+    padding: 12px 24px;
+    background: var(--gold);
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    font-family: var(--font-ui);
+}
+.skip-to-content:focus {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 html { 
     scroll-behavior: smooth;
     font-size: 16px;

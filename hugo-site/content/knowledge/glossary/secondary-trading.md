@@ -1,6 +1,8 @@
 ---
 title: "Secondary Trading - Glossary"
 description: "The buying and selling of securities after their initial issuance, providing liquidity and price discovery for investors seeking to exit positions."
+ogImage: "/og-image.png"
+keywords: ["secondary", "trading", "glossary", "buying", "selling", "securities", "initial", "issuance"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

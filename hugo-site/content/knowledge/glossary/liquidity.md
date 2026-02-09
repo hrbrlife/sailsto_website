@@ -1,6 +1,8 @@
 ---
 title: "Liquidity - Glossary"
 description: "The ease of buying or selling a security without significantly affecting its price — provided for CrossSecurities through our multi-broker OTC network."
+ogImage: "/og-image.png"
+keywords: ["liquidity", "glossary", "ease", "buying", "selling", "security", "without", "significantly"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

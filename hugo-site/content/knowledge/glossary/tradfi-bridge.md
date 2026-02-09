@@ -1,6 +1,8 @@
 ---
 title: "TradFi Bridge (CrossConversion) - Glossary"
 description: "Also known as CrossConversion — Sails.to's mechanism for converting on-chain CrossSecurities to bankable ISIN securities that can be held in conventional bank custody."
+ogImage: "/og-image.png"
+keywords: ["tradfi", "bridge", "crossconversion", "glossary", "known", "sails", "mechanism", "converting"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

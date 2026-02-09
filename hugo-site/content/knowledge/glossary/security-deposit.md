@@ -1,6 +1,8 @@
 ---
 title: "Security Deposit - Glossary"
 description: "An upfront payment required from issuers to initiate the onboarding process and cover preliminary legal, compliance, and structuring costs."
+ogImage: "/og-image.png"
+keywords: ["security", "deposit", "glossary", "upfront", "payment", "required", "issuers", "initiate"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

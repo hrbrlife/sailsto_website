@@ -1,6 +1,8 @@
 ---
 title: "Tokenization - Glossary"
 description: "The process of converting ownership rights in an asset into digital tokens on a blockchain, enabling fractional ownership and programmable compliance."
+ogImage: "/og-image.png"
+keywords: ["tokenization", "glossary", "process", "converting", "ownership", "rights", "asset", "digital"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

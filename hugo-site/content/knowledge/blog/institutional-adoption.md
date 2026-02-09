@@ -1,6 +1,9 @@
 ---
 title: "Institutional Adoption of Tokenized Securities: The Tipping Point"
+date: 2025-02-01
 description: "Major financial institutions are embracing tokenization. What's driving adoption and what does it mean for the market?"
+ogImage: "/og-image.png"
+keywords: ["institutional", "adoption", "tokenized", "securities", "tipping", "point", "major", "financial"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

@@ -1,6 +1,9 @@
 ---
 title: "CrossConversion Explained: Connecting On-Chain to Bankable Securities"
+date: 2025-01-25
 description: "How Sails.to's CrossConversion enables CrossSecurities to move seamlessly between Solana blockchain and Clearstream institutional custody."
+ogImage: "/og-image.png"
+keywords: ["crossconversion", "explained", "connecting", "on-chain", "bankable", "securities", "sails", "enables"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

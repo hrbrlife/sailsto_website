@@ -6,6 +6,9 @@
 (function() {
     'use strict';
     
+    // Respect reduced motion preferences
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    
     const heroEditorial = document.getElementById('heroEditorial');
     const editorialParagraphs = heroEditorial ? heroEditorial.querySelectorAll('p, .editorial-header .line1, .editorial-header .line2') : [];
     const editorialSection = document.querySelector('.editorial-section');

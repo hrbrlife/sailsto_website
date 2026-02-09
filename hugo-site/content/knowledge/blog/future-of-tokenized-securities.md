@@ -1,6 +1,9 @@
 ---
 title: "The Future of Tokenized Securities in 2025"
+date: 2025-01-15
 description: "How regulatory clarity, institutional adoption, and technological maturity are converging to reshape private capital markets in 2025 and beyond."
+ogImage: "/og-image.png"
+keywords: ["future", "tokenized", "securities", "2025", "regulatory", "clarity", "institutional", "adoption"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

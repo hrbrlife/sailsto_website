@@ -1,6 +1,8 @@
 ---
 title: "Coupon - Glossary"
 description: "The periodic interest payment made to bondholders, typically expressed as an annual percentage of the bond's nominal value."
+ogImage: "/og-image.png"
+keywords: ["coupon", "glossary", "periodic", "interest", "payment", "made", "bondholders", "typically"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

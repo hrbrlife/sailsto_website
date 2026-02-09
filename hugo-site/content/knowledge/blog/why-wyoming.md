@@ -1,6 +1,9 @@
 ---
 title: "Why Wyoming? The State Leading Crypto Innovation"
+date: 2024-12-20
 description: "Wyoming has become the most crypto-friendly state in America. Learn why we chose to incorporate as a Wyoming DAO LLC and what it means for investors."
+ogImage: "/og-image.png"
+keywords: ["wyoming", "state", "leading", "crypto", "innovation", "become", "crypto-friendly", "america"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

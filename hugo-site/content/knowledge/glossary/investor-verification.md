@@ -1,6 +1,8 @@
 ---
 title: "Investor Verification - Glossary"
 description: "The process of confirming an investor's identity, financial status, and eligibility to participate in private securities offerings."
+ogImage: "/og-image.png"
+keywords: ["investor", "verification", "glossary", "process", "confirming", "identity", "financial", "status"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

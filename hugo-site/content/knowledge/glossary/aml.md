@@ -1,6 +1,8 @@
 ---
 title: "AML (Anti-Money Laundering) - Glossary"
 description: "Laws, regulations, and procedures designed to prevent criminals from disguising illegally obtained funds as legitimate income through financial transactions."
+ogImage: "/og-image.png"
+keywords: ["aml", "anti-money", "laundering", "glossary", "laws", "regulations", "procedures", "designed"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
