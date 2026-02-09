@@ -70,11 +70,11 @@ stylesheets:
 <p>Documented incident response procedures with 24/7 monitoring. Security incidents are communicated transparently to affected parties within regulatory timeframes.</p>
 </div>
 
-<div class="cta-section">
+</div>
+</section>
+
+<section class="cta-section">
 <h2>Security Questions?</h2>
 <p>Request our detailed security documentation or schedule a security review call.</p>
 <a href="/company/contact/" class="btn btn-primary">Contact Security Team</a>
-</div>
-
-</div>
 </section>

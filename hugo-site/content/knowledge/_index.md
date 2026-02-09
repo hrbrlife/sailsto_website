@@ -218,33 +218,6 @@ scripts:
                 </div>
             </div>
         </div>
-        <div class="kb-resource-section" data-category="blog">
-            <div class="kb-section-header">
-                <h2>📝 Blog</h2>
-                <p>Insights, updates, and industry analysis</p>
-                <a href="/knowledge/blog/" class="kb-section-link">View All Posts →</a>
-            </div>
-            <div class="kb-grid">
-                <a href="/knowledge/blog/future-of-tokenized-securities/" class="kb-card kb-card-blog">
-                    <span class="kb-card-date">Jan 15, 2025</span>
-                    <h3>The Future of Tokenized Securities in 2025</h3>
-                    <p>How regulatory clarity and institutional adoption are reshaping private markets.</p>
-                    <span class="kb-card-meta">5 min read</span>
-                </a>
-                <a href="/knowledge/blog/why-wyoming/" class="kb-card kb-card-blog">
-                    <span class="kb-card-date">Jan 10, 2025</span>
-                    <h3>Why Wyoming? The DAO LLC Advantage</h3>
-                    <p>Understanding why Wyoming has become the Delaware of blockchain.</p>
-                    <span class="kb-card-meta">4 min read</span>
-                </a>
-                <a href="/knowledge/blog/hybrid-custody-explained/" class="kb-card kb-card-blog">
-                    <span class="kb-card-date">Jan 5, 2025</span>
-                    <h3>CrossSecurities Custody: Best of Both Worlds</h3>
-                    <p>How CrossConversion lets investors choose their custody model.</p>
-                    <span class="kb-card-meta">6 min read</span>
-                </a>
-            </div>
-        </div>
         <div class="kb-resource-section" data-category="roadmap">
             <div class="kb-section-header">
                 <h2><svg class="section-icon"><use href="#icon-calendar"></use></svg> Roadmap</h2>

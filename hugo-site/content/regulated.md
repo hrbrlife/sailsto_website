@@ -125,7 +125,7 @@ stylesheets:
                     <span class="icon-wrapper"><svg><use href="#icon-refresh"></use></svg></span>
                     <div class="text">
                         <h4><span class="glossary-term" data-term="secondary-trading">Secondary</span> Marketplace</h4>
-                        <p><span class="glossary-term" data-term="otc">OTC</span> trading within your investor universe. Cross-broker routing optional. You control access.</p></p>
+                        <p><span class="glossary-term" data-term="otc">OTC</span> trading within your investor universe. Cross-broker routing optional. You control access.</p>
                     </div>
                 </li>
             </ul>

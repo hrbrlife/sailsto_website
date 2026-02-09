@@ -1,6 +1,6 @@
 ---
 title: "About Us"
-description: "Learn about Sails.to — the team building CrossSecurities infrastructure that bridges blockchain innovation with traditional finance. Founded to democratize capital markets."
+description: "Learn about Sails.to — the team building CrossSecurities infrastructure that bridges blockchain innovation with traditional finance."
 keywords:
   - about sails.to
   - CrossSecurities
@@ -22,7 +22,7 @@ scripts:
 <section class="page-hero">
     <span class="section-label">Our Story</span>
     <h1 class="section-title">Building the Future of Capital Markets</h1>
-    <p class="section-desc">We're bridging the gap between blockchain innovation and traditional finance infrastructure, making compliant securities accessible to everyone.</p>
+    <p class="section-desc">We're bridging the gap between blockchain innovation and traditional finance infrastructure, making compliant securities accessible to professional investors globally.</p>
 </section>
 <section class="detail-section">
     <div class="detail-container">
@@ -38,8 +38,8 @@ scripts:
                     <li>
                         <span class="icon-wrapper"><svg><use href="#icon-target"></use></svg></span>
                         <div class="text">
-                            <h4>Democratize Access</h4>
-                            <p>Lower barriers for issuers and investors worldwide</p>
+                            <h4>Broaden Access</h4>
+                            <p>Lower barriers for issuers and professional investors worldwide</p>
                         </div>
                     </li>
                     <li>
@@ -111,7 +111,7 @@ scripts:
         <div style="text-align: center; margin-bottom: 60px;">
             <span class="section-label">Leadership</span>
             <h2 class="section-title">The Team</h2>
-            <p class="section-desc" style="max-width: 700px; margin: 20px auto 0;">The people who built the institutions we're now disrupting.</p>
+            <p class="section-desc" style="max-width: 700px; margin: 20px auto 0;">Experienced professionals from traditional finance and technology.</p>
         </div>
         <div class="team-grid team-grid-full">
             <div class="team-card">
@@ -216,17 +216,7 @@ scripts:
                 <p>Enterprise compliance & KYC platform</p>
             </div>
         </div>
-        <div style="text-align: center; margin: 80px 0 40px;">
-            <span class="section-label">Trust & Management</span>
-            <h3 style="font-size: 1.8rem; color: var(--ink); margin-top: 12px;">Partners</h3>
-        </div>
-        <div class="partner-grid" style="grid-template-columns: 1fr; max-width: 500px; margin: 0 auto;">
-            <div class="partner-card">
-                <span class="icon-wrapper"><svg><use href="#icon-bank"></use></svg></span>
-                <h4>JurisTax</h4>
-                <p>One of the largest Trust & Management companies founded in Mauritius and licensed in Mauritius, Dubai IFSC, and RAK Freezone. Provides operational trust, escrow management, and fiduciary oversight for our platform.</p>
-            </div>
-        </div>
+
         <div style="text-align: center; margin: 80px 0 40px;">
             <span class="section-label">External Oversight</span>
             <h3 style="font-size: 1.8rem; color: var(--ink); margin-top: 12px;">Auditors</h3>

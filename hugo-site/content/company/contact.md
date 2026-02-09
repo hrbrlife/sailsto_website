@@ -55,7 +55,7 @@ scripts:
                 <div class="contact-address">
                     <h4>Registered Address</h4>
                     <address>
-                        Sails.to DAO LLC<br>
+                        Sails.to<br>
                         1712 Pioneer Ave, Suite 500<br>
                         Cheyenne, WY 82001<br>
                         United States

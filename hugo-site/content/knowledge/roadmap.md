@@ -108,6 +108,7 @@ scripts:
                     <div class="milestone-icon"><svg><use href="#icon-bank"></use></svg></div>
                     <h3 class="milestone-title">CrossConversion Live</h3>
                     <p class="milestone-desc">Full ISIN conversion and Clearstream custody operational.</p>
+                    <span class="phase-status complete" style="font-size: 0.75rem; padding: 2px 8px;">Complete</span>
                 </div>
                 <div class="milestone-card">
                     <div class="milestone-icon"><svg><use href="#icon-trending-up"></use></svg></div>

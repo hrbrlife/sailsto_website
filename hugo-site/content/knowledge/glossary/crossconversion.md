@@ -27,7 +27,7 @@ stylesheets:
                 <li><strong>Cross to Bankable:</strong> Lock on-chain tokens in the CrossConversion Series → receive 1:1 ISIN-bearing securities via Clearstream</li>
                 <li><strong>Cross to On-Chain:</strong> Redeem ISIN securities → release locked tokens back to your Solana wallet</li>
             </ul>
-            <p>The conversion is always 1:1 — ISIN-identified securities outstanding can never exceed tokens locked. Any eligible holder can request CrossConversion for approximately 1.5% of nominal value.</p>
+            <p>The conversion is always 1:1 — ISIN-identified securities outstanding can never exceed tokens locked. Any eligible holder can request CrossConversion for approximately 0.75% of nominal value.</p>
         </section>
         <section class="term-section">
             <h2>Why It Matters</h2>
@@ -49,7 +49,7 @@ stylesheets:
                 <li>Securities appear in holder's bank/brokerage account</li>
                 <li><strong>Cross to On-Chain:</strong> Reverse process — redeem ISIN, release tokens</li>
             </ol>
-            <p>Processing typically takes 3-5 business days. Fee: ~1.5% of nominal value (0.10-0.25% for the conversion itself, plus Clearstream fees).</p>
+            <p>Processing typically takes 3-5 business days. Fee: ~0.75% of nominal value.</p>
         </section>
         <section class="term-section">
             <h2>Related Terms</h2>

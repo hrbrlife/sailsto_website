@@ -243,7 +243,6 @@ scripts:
                 <li><a href="/knowledge/faq/">FAQ</a> — Answers to common questions</li>
                 <li><a href="/knowledge/glossary/">Glossary</a> — Key terms explained</li>
                 <li><a href="/knowledge/docs/">Documentation</a> — Technical guides and API reference</li>
-                <li><a href="/knowledge/blog/">Blog</a> — Industry insights and updates</li>
             </ul>
             <h3>Contact Support</h3>
             <ul>
