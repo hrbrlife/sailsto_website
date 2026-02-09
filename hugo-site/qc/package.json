@@ -1,0 +1,17 @@
+{
+  "name": "sailsto-qc",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Quality control validators for the Sails.to Hugo site",
+  "scripts": {
+    "check": "node run.js",
+    "contrast": "node validate-contrast.js",
+    "glossary": "node run.js glossary",
+    "links": "node run.js links",
+    "images": "node run.js images",
+    "install:browsers": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}
