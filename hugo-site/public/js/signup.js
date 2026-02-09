@@ -106,7 +106,8 @@ document.addEventListener('DOMContentLoaded', function() {
         'investor': 1,
         'broker': 2,
         'institution': 3,
-        'introducer': 4
+        'introducer': 4,
+        'trustee': 5
     };
     
     function showSlide(index) {

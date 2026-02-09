@@ -1,0 +1,536 @@
+---
+title: "For Trust Companies"
+description: "Earn recurring revenue as a platform-approved trustee. Oversee CrossSecurities issuances, manage security deposits, and introduce issuers from your client base. Two ways to participate."
+keywords:
+  - trust company
+  - trustee
+  - fiduciary
+  - CPA
+  - accountant
+  - security deposit
+  - CrossSecurities trustee
+  - trust administration
+  - introducer
+  - white-label platform
+ogImage: "/og-trustees.png"
+stylesheets:
+  - "/assets/fonts/fonts.css"
+  - "/styles.css"
+  - "/assets/css/glossary.css"
+  - "/assets/css/trustees.css"
+scripts:
+  - "/js/trustees.js"
+---
+
+<section class="page-hero" style="background: linear-gradient(135deg, #1a1f3c 0%, #0d1117 100%);">
+    <span class="section-label">For Trust Companies &amp; Fiduciaries</span>
+    <h1 class="section-title">Trusted oversight.<br>Recurring revenue.</h1>
+    <p class="section-desc">Trust companies and licensed fiduciaries participate in <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> in two ways: act as a pre-approved <span class="glossary-term" data-term="trustee">trustee</span> overseeing issuances on the platform and earn a share of the annual <span class="glossary-term" data-term="management-fee">management fee</span>, or introduce businesses from your client portfolio and earn referral income. Many do both.</p>
+    <div class="hero-ctas">
+        <a href="/signup/?type=trustee" class="btn-hero primary">Apply as Trustee</a>
+        <a href="/pricing/" class="btn-hero secondary">View Fee Structure</a>
+    </div>
+    <div class="trust-badges">
+        <span class="trust-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            ⅔ of 1% Annual Fee
+        </span>
+        <span class="trust-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+            Deposit Oversight
+        </span>
+        <span class="trust-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" /></svg>
+            25% Introducer Commission
+        </span>
+        <span class="trust-badge">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0012 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75z" /></svg>
+            White-Label Option
+        </span>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- ROLE 1: PLATFORM TRUSTEE -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<section class="role-divider" id="trustee-role">
+    <div class="role-container">
+        <span class="role-number">Role 1</span>
+        <h2 class="role-title">Platform-Approved Trustee</h2>
+        <p class="role-subtitle">Oversee issuances, manage security deposits, earn recurring fees</p>
+    </div>
+</section>
+
+<section class="detail-section">
+    <div class="detail-container">
+        <div class="detail-grid">
+            <div class="detail-content">
+                <h2>How the trustee role works</h2>
+                <p>When a business issues <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> on the platform, they select a pre-approved trustee from the platform's registry. As trustee, you provide fiduciary oversight over the issuance — ensuring investor protections are maintained, deposits are properly held, and wind-down procedures are guaranteed.</p>
+                <p>This is not advisory work. It is structured, standardised trustee administration with clear responsibilities, documented procedures, and predictable revenue tied to the size of each issuance you oversee.</p>
+            </div>
+            <ul class="detail-list">
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-shield"></use></svg></span>
+                    <div class="text">
+                        <h4>Issuer Selects You</h4>
+                        <p>Issuers browse the pre-approved trustee registry and choose a trustee at the time of issuance. Your profile, jurisdiction, and specialisms are visible.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-document"></use></svg></span>
+                    <div class="text">
+                        <h4>Standardised Engagement</h4>
+                        <p>Platform-provided trust deed templates. Clear scope of duties. No bespoke negotiation for each deal — efficient, repeatable administration.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-check"></use></svg></span>
+                    <div class="text">
+                        <h4>Ongoing Oversight</h4>
+                        <p>Monitor compliance with issuance terms. Review distribution schedules. Authorise actions that require trustee consent under the trust deed.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="detail-section alt">
+    <div class="detail-container">
+        <div class="detail-grid">
+            <div class="detail-content">
+                <h2>Revenue: ⅔ of the annual management fee</h2>
+                <p>Each issuance on the platform carries a <strong>1% annual trust and administration fee</strong> charged on nominal value. As the appointed trustee, you receive <strong>two thirds</strong> of this fee — approximately <strong>0.67% per year</strong> on the total issuance value you oversee.</p>
+                <p>This is recurring revenue for the life of each issuance. A trustee overseeing $30M in active issuances earns roughly $200,000 per year in trust fees alone — with minimal ongoing effort beyond standard fiduciary monitoring.</p>
+            </div>
+            <ul class="detail-list">
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-money"></use></svg></span>
+                    <div class="text">
+                        <h4>~0.67% Annual Fee</h4>
+                        <p>Your share of the 1% trust &amp; administration fee. Paid from issuance proceeds, not out of pocket by anyone.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-refresh"></use></svg></span>
+                    <div class="text">
+                        <h4>Recurring for Life of Issuance</h4>
+                        <p>Fees continue annually as long as the <span class="glossary-term" data-term="crosssecurities">CrossSecurity</span> is outstanding. Multi-year bond terms = multi-year revenue.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-chart"></use></svg></span>
+                    <div class="text">
+                        <h4>Scales with Volume</h4>
+                        <p>No cap on the number of issuances you can oversee. Build a portfolio of trustee mandates across multiple issuers.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="detail-section">
+    <div class="detail-container">
+        <style>
+            .trustee-calc-card {
+                background: white;
+                padding: 40px;
+                border: 1px solid rgba(0,0,0,0.08);
+                max-width: 800px;
+                margin: 0 auto;
+            }
+            .trustee-calc-card h2 {
+                font-family: var(--font-display);
+                font-size: 1.8rem;
+                color: var(--ink);
+                margin-bottom: 8px;
+            }
+            .trustee-calc-card .intro {
+                color: var(--slate);
+                margin-bottom: 32px;
+            }
+            .trustee-calc-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 40px;
+                align-items: start;
+            }
+            @media (max-width: 700px) {
+                .trustee-calc-grid { grid-template-columns: 1fr; }
+            }
+            .trustee-input-group {
+                display: flex;
+                flex-direction: column;
+                gap: 6px;
+            }
+            .trustee-input-group label {
+                font-size: 0.75rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                color: var(--ink);
+            }
+            .trustee-input-group input[type="text"] {
+                padding: 14px 18px;
+                border: 1px solid rgba(0,0,0,0.12);
+                font-size: 1.1rem;
+                color: var(--ink);
+            }
+            .trustee-input-group input[type="text"]:focus {
+                outline: none;
+                border-color: var(--gold);
+            }
+            .trustee-input-group .hint {
+                font-size: 0.8rem;
+                color: var(--silver);
+            }
+            .trustee-input-group input[type="range"] {
+                width: 100%;
+                height: 8px;
+                -webkit-appearance: none;
+                appearance: none;
+                background: rgba(0,0,0,0.1);
+                border-radius: 4px;
+                cursor: pointer;
+                margin-top: 8px;
+            }
+            .trustee-input-group input[type="range"]::-webkit-slider-runnable-track {
+                height: 8px;
+                background: linear-gradient(to right, var(--gold) 0%, var(--gold) var(--slider-pct, 10%), rgba(0,0,0,0.1) var(--slider-pct, 10%), rgba(0,0,0,0.1) 100%);
+                border-radius: 4px;
+            }
+            .trustee-input-group input[type="range"]::-moz-range-track {
+                height: 8px;
+                background: rgba(0,0,0,0.1);
+                border-radius: 4px;
+            }
+            .trustee-input-group input[type="range"]::-moz-range-progress {
+                height: 8px;
+                background: var(--gold);
+                border-radius: 4px 0 0 4px;
+            }
+            .trustee-input-group input[type="range"]::-webkit-slider-thumb {
+                -webkit-appearance: none;
+                appearance: none;
+                width: 24px;
+                height: 24px;
+                background: var(--ink);
+                border-radius: 50%;
+                cursor: pointer;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+                margin-top: -8px;
+            }
+            .trustee-input-group input[type="range"]::-moz-range-thumb {
+                width: 24px;
+                height: 24px;
+                background: var(--ink);
+                border-radius: 50%;
+                cursor: pointer;
+                border: none;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+            }
+            .trustee-slider-labels {
+                display: flex;
+                justify-content: space-between;
+                font-size: 0.7rem;
+                color: var(--silver);
+                margin-top: 4px;
+            }
+            .trustee-result-box {
+                background: var(--ink);
+                color: white;
+                padding: 32px;
+                text-align: center;
+            }
+            .trustee-result-box .label {
+                font-size: 0.75rem;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                color: rgba(255,255,255,0.6);
+                margin-bottom: 8px;
+            }
+            .trustee-result-box .amount {
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: var(--gold);
+                margin-bottom: 16px;
+            }
+            .trustee-result-box .breakdown {
+                font-size: 0.85rem;
+                color: rgba(255,255,255,0.7);
+                line-height: 1.8;
+            }
+            .trustee-result-box .breakdown span {
+                display: block;
+            }
+            .trustee-fee-note {
+                margin-top: 24px;
+                padding: 16px;
+                background: rgba(201,162,39,0.08);
+                font-size: 0.85rem;
+                color: var(--slate);
+            }
+        </style>
+        <div class="trustee-calc-card">
+            <h2>🏛️ Trustee Revenue Calculator</h2>
+            <p class="intro">Estimate your annual trustee fees based on total issuance value under your oversight.</p>
+            <div class="trustee-calc-grid">
+                <div>
+                    <div class="trustee-input-group">
+                        <label for="issuanceValue">Total Issuance Value Under Trust</label>
+                        <input type="text" id="issuanceValue" value="30,000,000" readonly>
+                        <input type="range" id="issuanceSlider" min="1000000" max="200000000" value="30000000" step="1000000">
+                        <div class="trustee-slider-labels">
+                            <span>$1M</span>
+                            <span>$200M</span>
+                        </div>
+                        <span class="hint">Aggregate value of all issuances you oversee</span>
+                    </div>
+                </div>
+                <div class="trustee-result-box" id="trusteeResult">
+                </div>
+            </div>
+            <div class="trustee-fee-note">
+                <strong>How it works:</strong> Each issuance carries a 1% annual trust &amp; administration fee on nominal value. You receive ⅔ (~0.67%). The remaining ⅓ covers platform administration and compliance infrastructure. Fees are paid from issuance proceeds — not billed separately to clients.
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="detail-section alt">
+    <div class="detail-container">
+        <div class="detail-grid">
+            <div class="detail-content">
+                <h2>Security deposit &amp; wind-down authority</h2>
+                <p>Every issuance on the platform requires a <strong>3% security deposit</strong>, held under trustee oversight. This deposit guarantees that if an issuer defaults or the issuance needs to be wound down, there are resources available to execute an orderly process.</p>
+                <p>As trustee, lending against the security deposit and authorising wind-down procedures falls within your mandate. You protect investors while ensuring the issuer's obligations are met — a role trust companies are uniquely equipped to perform.</p>
+            </div>
+            <ul class="detail-list">
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-lock"></use></svg></span>
+                    <div class="text">
+                        <h4>3% Security Deposit</h4>
+                        <p>Reserved at issuance from proceeds. Held under your oversight for the life of the bond. Returned to issuer at maturity.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-trending-up"></use></svg></span>
+                    <div class="text">
+                        <h4>Lending Authority</h4>
+                        <p>Wind-down procedures backed by the security deposit. Your authority to deploy reserves if the issuer breaches covenants.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-clipboard"></use></svg></span>
+                    <div class="text">
+                        <h4>Investor Protection</h4>
+                        <p>Your fiduciary role gives investors confidence. Independent oversight of distributions, reserves, and covenant compliance.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- ROLE 2: INTRODUCER / WHITE-LABEL -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<section class="role-divider" id="introducer-role">
+    <div class="role-container">
+        <span class="role-number">Role 2</span>
+        <h2 class="role-title">Introducer &amp; White-Label Operator</h2>
+        <p class="role-subtitle">Leverage your client relationships to generate new revenue</p>
+    </div>
+</section>
+
+<section class="detail-section">
+    <div class="detail-container">
+        <div class="detail-grid">
+            <div class="detail-content">
+                <h2>Your clients are our ideal issuers</h2>
+                <p>Trust companies, accountants, and CPAs sit at the centre of their clients' financial lives. You see the balance sheets before anyone else. You know which businesses are ready to raise capital, restructure debt, or access new investors.</p>
+                <p>Every client conversation about growth, expansion, or liquidity is a potential introduction. You don't need to advise on securities — just connect a business with our platform and earn 25% of Sails.to's commission when the raise closes.</p>
+            </div>
+            <ul class="detail-list">
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-users"></use></svg></span>
+                    <div class="text">
+                        <h4>Natural Deal Flow</h4>
+                        <p>Your existing client relationships are the pipeline. Annual reviews, board meetings, advisory calls — every touchpoint is an opportunity.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-money"></use></svg></span>
+                    <div class="text">
+                        <h4>25% Referral Commission</h4>
+                        <p>Introduce a business. We handle onboarding, compliance, structuring, and distribution. When the raise closes, you earn 25% of platform fees.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-handshake"></use></svg></span>
+                    <div class="text">
+                        <h4>No Licensing Required</h4>
+                        <p>You are making an introduction, not advising on securities. No additional licence needed beyond your existing trust or accountancy credentials.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="detail-section alt">
+    <div class="detail-container">
+        <div class="detail-grid">
+            <div class="detail-content">
+                <h2>Or: run your own platform</h2>
+                <p>For trust companies with larger client portfolios, the <strong>white-label option</strong> lets you operate your own branded instance of the Sails.to infrastructure. You approve issuers, control the broker network, and manage the investor experience — all under your brand.</p>
+                <p>This is the same institutional-grade infrastructure available to regulated institutions, tailored for trust companies that want to offer <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> issuance as a service within their existing trust and fiduciary practice.</p>
+            </div>
+            <ul class="detail-list">
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-building"></use></svg></span>
+                    <div class="text">
+                        <h4>Your Brand, Your Platform</h4>
+                        <p>Deploy under your domain and branding. Your clients see your name, your interface, your terms.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-crown"></use></svg></span>
+                    <div class="text">
+                        <h4>Full Operator Control</h4>
+                        <p>Approve issuers, authorize trustees, manage compliance policies. You are the platform operator.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-settings"></use></svg></span>
+                    <div class="text">
+                        <h4>Complete Infrastructure</h4>
+                        <p>Issuance engine, investor onboarding, cap table, distributions, secondary trading, custody bridge. All included.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- WHO CAN PARTICIPATE -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+
+<section class="detail-section">
+    <div class="detail-container">
+        <div class="detail-grid">
+            <div class="detail-content">
+                <h2>Who can participate?</h2>
+                <p>The trustee role requires licensed fiduciary status. The introducer and white-label roles are available to a broader range of professional firms. Either way, your existing client relationships are the foundation.</p>
+            </div>
+            <ul class="detail-list">
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-landmark"></use></svg></span>
+                    <div class="text">
+                        <h4>Licensed Trust Companies</h4>
+                        <p>Chartered trust companies who can act as fiduciary trustee under applicable law. Eligible for both trustee and introducer roles.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-chart"></use></svg></span>
+                    <div class="text">
+                        <h4>CPAs &amp; Accountancy Firms</h4>
+                        <p>Licensed accountants, auditors, and tax advisors with business clients seeking capital. Eligible for the introducer role.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-legal"></use></svg></span>
+                    <div class="text">
+                        <h4>Corporate Service Providers</h4>
+                        <p>Company formation agents, registered agents, and corporate administrators. You know who needs capital before they start looking.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="icon-wrapper"><svg><use href="#icon-home"></use></svg></span>
+                    <div class="text">
+                        <h4>Family Office Administrators</h4>
+                        <p>Multi-family offices managing wealth for client families. Access both the trustee mandate and the introduction pipeline.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="features-section">
+    <div class="features-container">
+        <div class="features-header">
+            <span class="section-label">Two Revenue Streams</span>
+            <h2 class="section-title">Combine both roles<br>for maximum value</h2>
+        </div>
+        <div class="feature-grid three-col">
+            <div class="feature-card">
+                <span class="icon-wrapper"><svg><use href="#icon-shield"></use></svg></span>
+                <h3>Trustee Fees</h3>
+                <p>~0.67% annually on issuance value under your trust mandate. Recurring for the life of each bond.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon-wrapper"><svg><use href="#icon-money"></use></svg></span>
+                <h3>Introducer Commissions</h3>
+                <p>25% of Sails.to's commission on every raise you introduce. A $5M raise = ~$43,750 to you.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon-wrapper"><svg><use href="#icon-building"></use></svg></span>
+                <h3>White-Label Revenue</h3>
+                <p>Operate your own branded platform and set your own service terms. Revenue share on all activity.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon-wrapper"><svg><use href="#icon-lock"></use></svg></span>
+                <h3>Deposit Oversight</h3>
+                <p>Manage the 3% security deposit for each issuance. Lending and wind-down authority within your mandate.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon-wrapper"><svg><use href="#icon-clipboard"></use></svg></span>
+                <h3>Platform Dashboard</h3>
+                <p>Monitor all issuances under your trust. Covenant tracking, distribution schedules, compliance status — all in one place.</p>
+            </div>
+            <div class="feature-card">
+                <span class="icon-wrapper"><svg><use href="#icon-handshake"></use></svg></span>
+                <h3>Client Retention</h3>
+                <p>Offering capital markets access through your practice deepens client relationships and adds a new service line.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="detail-section alt">
+    <div class="detail-container">
+        <div class="stats-row" style="margin-top: 0; padding-top: 0; border-top: none;">
+            <div class="stat-item">
+                <div class="stat-value">⅔</div>
+                <div class="stat-label">Of 1% annual trust fee</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">25%</div>
+                <div class="stat-label">Introducer commission</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">3%</div>
+                <div class="stat-label">Security deposit oversight</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value">$0</div>
+                <div class="stat-label">Cost to join</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <h2>Ready to add CrossSecurities to your practice?</h2>
+    <p>Trust companies and fiduciaries can onboard in days. Choose the trustee role, the introducer role, or both.</p>
+    <a href="/signup/?type=trustee" class="btn btn-primary">
+        Apply as Trustee
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+    </a>
+</section>
