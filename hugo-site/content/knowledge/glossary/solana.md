@@ -1,6 +1,8 @@
 ---
 title: "Solana - Glossary"
 description: "A high-performance blockchain platform known for fast transaction speeds (400ms finality) and low fees, used by Sails.to for issuing CrossSecurities."
+ogImage: "/og-image.png"
+keywords: ["solana", "glossary", "high-performance", "blockchain", "platform", "known", "fast", "transaction"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

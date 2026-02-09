@@ -1,6 +1,8 @@
 ---
 title: "Brokerage Fee - Glossary"
 description: "A fee charged by a broker for executing securities transactions on behalf of clients, typically calculated as a percentage of the transaction value."
+ogImage: "/og-image.png"
+keywords: ["brokerage", "fee", "glossary", "charged", "broker", "executing", "securities", "transactions"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

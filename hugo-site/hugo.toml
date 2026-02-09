@@ -1,6 +1,7 @@
 baseURL = 'https://sails.to/'
-languageCode = 'en-us'
+languageCode = 'en'
 title = 'Sails.to | Hybrid Securities Infrastructure'
+disableHugoGeneratorInject = true
 
 [params]
   description = "Hybrid securities infrastructure bridging DeFi innovation with TradFi trust"
@@ -15,9 +16,12 @@ title = 'Sails.to | Hybrid Securities Infrastructure'
   page = ["HTML"]
 
 [sitemap]
-  changefreq = "weekly"
+  changefreq = "monthly"
   filename = "sitemap.xml"
   priority = 0.5
+
+# Disable empty taxonomy pages from being generated
+[taxonomies]
 
 [markup]
   [markup.goldmark]

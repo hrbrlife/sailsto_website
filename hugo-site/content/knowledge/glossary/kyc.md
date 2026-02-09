@@ -1,6 +1,8 @@
 ---
 title: "KYC (Know Your Customer) - Glossary"
 description: "Regulatory process to verify the identity of clients, assess their suitability, and understand the nature of their activities to prevent fraud and money laundering."
+ogImage: "/og-image.png"
+keywords: ["kyc", "know", "customer", "glossary", "regulatory", "process", "verify", "identity"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

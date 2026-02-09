@@ -1,6 +1,8 @@
 ---
 title: "Accredited Investor - Glossary"
 description: "An individual or entity meeting SEC financial thresholds ($200K+ annual income or $1M+ net worth) that qualifies to invest in unregistered securities offerings."
+ogImage: "/og-image.png"
+keywords: ["accredited", "investor", "glossary", "individual", "entity", "meeting", "sec", "financial"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

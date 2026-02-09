@@ -1,6 +1,9 @@
 ---
 title: "Real Estate Tokenization: Unlocking Liquidity in Illiquid Markets"
+date: 2025-01-10
 description: "How tokenization is transforming commercial real estate by enabling fractional ownership, secondary trading, and global investor access."
+ogImage: "/og-image.png"
+keywords: ["real", "estate", "tokenization", "unlocking", "liquidity", "illiquid", "markets", "transforming"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

@@ -1,6 +1,8 @@
 ---
 title: "Commission - Glossary"
 description: "Fees paid to brokers and introducers for placing investors or facilitating trades — typically a percentage of the investment or transaction value."
+ogImage: "/og-image.png"
+keywords: ["commission", "glossary", "fees", "paid", "brokers", "introducers", "placing", "investors"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

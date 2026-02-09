@@ -1,6 +1,8 @@
 ---
 title: "Security Token - Glossary"
 description: "A digital representation of a traditional security (equity, debt, or fund share) issued on a blockchain with built-in compliance rules enforced by smart contracts."
+ogImage: "/og-image.png"
+keywords: ["security", "token", "glossary", "digital", "representation", "traditional", "equity", "debt"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

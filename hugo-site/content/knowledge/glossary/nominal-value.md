@@ -1,6 +1,8 @@
 ---
 title: "Nominal Value - Glossary"
 description: "The face value of a security as stated by the issuer, representing the principal amount for bonds or the stated value per share for equity."
+ogImage: "/og-image.png"
+keywords: ["nominal", "value", "glossary", "face", "security", "stated", "issuer", "representing"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

@@ -1,6 +1,8 @@
 ---
 title: "Operational Trust - Glossary"
 description: "A trust structure used to hold and manage operational assets on behalf of investors, providing fiduciary oversight and legal protection."
+ogImage: "/og-image.png"
+keywords: ["operational", "trust", "glossary", "structure", "used", "hold", "manage", "assets"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

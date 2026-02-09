@@ -1,6 +1,8 @@
 ---
 title: "Private Placement - Glossary"
 description: "Sale of securities directly to qualified investors without public offering registration — the primary method for issuing CrossSecurities on Sails.to."
+ogImage: "/og-image.png"
+keywords: ["private", "placement", "glossary", "sale", "securities", "directly", "qualified", "investors"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

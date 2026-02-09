@@ -1,6 +1,8 @@
 ---
 title: "Escrow - Glossary"
 description: "A neutral holding arrangement where funds are held by a trusted third party until predetermined conditions are met, protecting both buyers and sellers."
+ogImage: "/og-image.png"
+keywords: ["escrow", "glossary", "neutral", "holding", "arrangement", "funds", "held", "trusted"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

@@ -1,6 +1,8 @@
 ---
 title: "Trustee - Glossary"
 description: "An independent fiduciary entity that represents and protects the interests of bondholders or investors, ensuring issuers meet their obligations."
+ogImage: "/og-image.png"
+keywords: ["trustee", "glossary", "independent", "fiduciary", "entity", "represents", "protects", "interests"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

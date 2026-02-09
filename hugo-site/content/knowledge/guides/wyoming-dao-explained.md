@@ -1,6 +1,8 @@
 ---
 title: "Wyoming DAO LLC Explained"
 description: "Understanding Wyoming DAO LLC and Series LLC structures—how they provide legal clarity for tokenized securities and protect both issuers and investors."
+ogImage: "/og-image.png"
+keywords: ["wyoming", "dao", "llc", "explained", "understanding", "series", "structures", "provide"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

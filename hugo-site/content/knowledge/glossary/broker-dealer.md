@@ -1,6 +1,8 @@
 ---
 title: "Broker-Dealer - Glossary"
 description: "Licensed securities professional who can execute trades and place investors in CrossSecurities offerings through our network."
+ogImage: "/og-image.png"
+keywords: ["broker-dealer", "glossary", "licensed", "securities", "professional", "execute", "trades", "place"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

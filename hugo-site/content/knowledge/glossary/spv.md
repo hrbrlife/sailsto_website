@@ -1,6 +1,8 @@
 ---
 title: "SPV (Special Purpose Vehicle) - Glossary"
 description: "A subsidiary entity created for a specific, limited purpose, typically to isolate financial risk and hold specific assets separate from a parent company."
+ogImage: "/og-image.png"
+keywords: ["spv", "special", "purpose", "vehicle", "glossary", "subsidiary", "entity", "created"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

@@ -1,6 +1,8 @@
 ---
 title: "On-Chain - Glossary"
 description: "Recorded directly on a blockchain — CrossSecurities exist on-chain on Solana with ownership, transfers, and compliance enforced by smart contracts."
+ogImage: "/og-image.png"
+keywords: ["on-chain", "glossary", "recorded", "directly", "blockchain", "crosssecurities", "exist", "solana"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

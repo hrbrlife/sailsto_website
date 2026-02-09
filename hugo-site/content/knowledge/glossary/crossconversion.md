@@ -1,6 +1,8 @@
 ---
 title: "CrossConversion - Glossary"
 description: "The process of moving Sails CrossSecurities between on-chain (Solana) and bankable (ISIN/Clearstream) forms while maintaining 1:1 backing."
+ogImage: "/og-image.png"
+keywords: ["crossconversion", "glossary", "process", "moving", "sails", "crosssecurities", "on-chain", "solana"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

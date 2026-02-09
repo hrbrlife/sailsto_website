@@ -1,6 +1,8 @@
 ---
 title: "Vienna MTF - Glossary"
 description: "A regulated Multilateral Trading Facility operated by the Vienna Stock Exchange group, providing compliant secondary trading venues for security tokens and traditional securities."
+ogImage: "/og-image.png"
+keywords: ["vienna", "mtf", "glossary", "regulated", "multilateral", "trading", "facility", "operated"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

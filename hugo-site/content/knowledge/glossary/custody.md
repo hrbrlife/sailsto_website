@@ -1,6 +1,8 @@
 ---
 title: "Custody - Glossary"
 description: "The safekeeping and administration of securities on behalf of investors, including settlement, corporate actions processing, and record-keeping."
+ogImage: "/og-image.png"
+keywords: ["custody", "glossary", "safekeeping", "administration", "securities", "behalf", "investors", "including"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

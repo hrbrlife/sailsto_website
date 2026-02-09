@@ -1,6 +1,8 @@
 ---
 title: "Distributions - Glossary"
 description: "Payments made to security token holders, including dividends, interest, rental income, or liquidation proceeds, automated via smart contracts."
+ogImage: "/og-image.png"
+keywords: ["distributions", "glossary", "payments", "made", "security", "token", "holders", "including"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"

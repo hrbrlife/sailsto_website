@@ -1,6 +1,8 @@
 ---
 title: "Offering Memorandum - Glossary"
 description: "Legal document detailing investment terms, risks, use of proceeds, and issuer information — required for all CrossSecurities offerings on Sails.to."
+ogImage: "/og-image.png"
+keywords: ["offering", "memorandum", "glossary", "legal", "document", "detailing", "investment", "terms"]
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
