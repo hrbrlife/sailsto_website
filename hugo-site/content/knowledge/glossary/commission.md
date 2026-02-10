@@ -33,7 +33,7 @@ stylesheets:
         <section class="term-section">
             <h2>Why It Matters</h2>
             <p>Transparent commission structures align incentives between all parties. Brokers are rewarded for bringing quality investors. Introducers are compensated for successful connections. Issuers know exactly what they're paying for distribution.</p>
-            <p>Note: During soft cap phase, brokerage fees are waived. Primary placement commissions only apply after soft cap is reached.</p>
+            <p>Note: During soft cap phase, all fees are deferred. Brokerage fees and primary placement commissions are charged once soft cap is reached, deducted from proceeds. If soft cap fails, no fees apply.</p>
         </section>
         <section class="term-section">
             <h2>Related Terms</h2>

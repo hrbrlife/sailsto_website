@@ -53,7 +53,7 @@ scripts:
                 <h2>Commission sharing built in</h2>
                 <p>Every trade on the platform generates revenue that flows directly to participating brokers. No negotiation, no manual billing. Commissions are calculated and distributed automatically on-chain.</p>
                 <p>When you place investors in a primary offering, you earn commission from the <strong>6% distribution fee</strong>: the issuer may offer a placement reward (typically 3%), and Sails.to automatically shares 2% of its 6% fee with you. Secondary trading carries a 0.5% fee split equally: ⅓ platform, ⅓ buy-side broker, ⅓ sell-side broker.</p>
-                <p><em style="color:#38a169;"><strong>Note:</strong> During <span class="glossary-term" data-term="soft-cap">soft cap</span> phase, <span class="glossary-term" data-term="brokerage-fee">brokerage fees</span> are waived. Primary placement commissions only apply to <span class="glossary-term" data-term="distributions">distributions</span> after <span class="glossary-term" data-term="soft-cap">soft cap</span> is reached.</em></p>
+                <p><em style="color:#38a169;"><strong>Note:</strong> During <span class="glossary-term" data-term="soft-cap">soft cap</span> phase, all fees are deferred — <span class="glossary-term" data-term="brokerage-fee">brokerage fees</span> and primary placement commissions are charged once <span class="glossary-term" data-term="soft-cap">soft cap</span> is reached, deducted from proceeds.</em></p>
             </div>
             <ul class="detail-list">
                 <li>

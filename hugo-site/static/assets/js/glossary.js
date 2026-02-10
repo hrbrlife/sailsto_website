@@ -267,7 +267,7 @@
             },
             "brokerage-fee": {
                 "term": "Brokerage Fee",
-                "shortDefinition": "0.5% fee on secondary trades split between platform and brokers. Waived during soft cap phase.",
+                "shortDefinition": "0.5% fee on secondary trades split between platform and brokers. Deferred during soft cap, charged when cap is reached.",
                 "category": "Finance"
             },
             "security-deposit": {

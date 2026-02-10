@@ -192,7 +192,7 @@ scripts:
                 <tr>
                     <td><strong><span class="glossary-term" data-term="brokerage-fee">Brokerage Fee</span></strong></td>
                     <td><span class="fee-highlight">0.5%</span></td>
-                    <td><span class="glossary-term" data-term="secondary-trading">Secondary trades</span> + post-<span class="glossary-term" data-term="soft-cap">soft cap</span> primary<br><em style="color:#38a169; font-size:0.85em;">⚡ Waived during <span class="glossary-term" data-term="soft-cap">soft cap</span> phase</em></td>
+                    <td><span class="glossary-term" data-term="secondary-trading">Secondary trades</span> + primary<br><em style="color:#38a169; font-size:0.85em;">⚡ Deferred during <span class="glossary-term" data-term="soft-cap">soft cap</span> — charged when cap is reached</em></td>
                     <td>Buyer</td>
                     <td>⅓ Platform + ⅓ Buy-side + ⅓ Sell-side</td>
                 </tr>
@@ -250,7 +250,7 @@ scripts:
         <div class="note-box">
             <strong>📌 Key Points</strong>
             <ul>
-                <li><strong><span class="glossary-term" data-term="soft-cap">Soft cap</span> phase is fee-free:</strong> <span class="glossary-term" data-term="brokerage-fee">Brokerage</span> (0.5%) waived, <span class="glossary-term" data-term="distribution-fee">distribution fees</span> deferred until <span class="glossary-term" data-term="soft-cap">soft cap</span> reached</li>
+                <li><strong><span class="glossary-term" data-term="soft-cap">Soft cap</span> phase fees are deferred:</strong> <span class="glossary-term" data-term="brokerage-fee">Brokerage</span> (0.5%) and <span class="glossary-term" data-term="distribution-fee">distribution fees</span> are charged once <span class="glossary-term" data-term="soft-cap">soft cap</span> is reached, deducted from proceeds</li>
                 <li><strong>If <span class="glossary-term" data-term="soft-cap">soft cap</span> fails:</strong> Full refund to investors (only <span class="glossary-term" data-term="clearstream">Clearstream</span> fees at cost, if used)</li>
                 <li><strong>No upfront costs:</strong> All fees deducted from proceeds when offering succeeds</li>
                 <li><strong><span class="glossary-term" data-term="security-deposit">Security deposit</span>:</strong> Returned at end of bond term if no issues</li>
