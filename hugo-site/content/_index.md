@@ -16,13 +16,17 @@ keywords:
 - ISIN
 - on-chain securities
 ogImage: "/og-image.png"
+headScripts:
+- "/assets/js/mermaid.min.js"
 stylesheets:
 - "/assets/fonts/fonts.css"
 - "/styles.css"
 - "/assets/css/home.css"
+- "/assets/css/players.css"
 - "/assets/css/glossary.css"
 scripts:
 - "/js/home.js"
+- "/js/home-stories.js"
 ---
 
 <section class="hero">
@@ -268,6 +272,647 @@ scripts:
 </div>
 </div>
 </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════ -->
+<!-- LIFE OF A DEAL                                  -->
+<!-- ═══════════════════════════════════════════════ -->
+
+<section class="content-section" style="background: var(--cream); padding: 60px 0 20px;">
+<div class="content-container" style="text-align: center;">
+<span class="section-label">Understand</span>
+<h2 class="section-title">Life of a Deal</h2>
+<p style="max-width: 640px; margin: 0 auto; color: var(--slate);">Three perspectives. One deal. Pick your vantage point and follow the CrossSecurities lifecycle from start to finish.</p>
+</div>
+</section>
+
+<section class="content-section" id="home-stories" style="background: var(--cream); padding: 0 0 40px;">
+<div class="content-container">
+<div class="story-nav">
+<button class="story-tab active" data-story="issuer">
+<span class="story-tab-icon">🏢</span>
+<span class="story-tab-text"><span class="story-tab-label">For Issuers</span><span class="story-tab-desc">Established companies that want to raise funds</span></span>
+</button>
+<button class="story-tab" data-story="investor">
+<span class="story-tab-icon">👤</span>
+<span class="story-tab-text"><span class="story-tab-label">For Professional Investors</span><span class="story-tab-desc">Access unique deals</span></span>
+</button>
+<button class="story-tab" data-story="trustee">
+<span class="story-tab-icon">🔐</span>
+<span class="story-tab-text"><span class="story-tab-label">For Trust Companies</span><span class="story-tab-desc">Authenticate &amp; administer every deal</span></span>
+</button>
+</div>
+</div>
+</section>
+
+<!-- STORY 1 — FOR ISSUERS -->
+<div class="story-panel active" id="story-issuer">
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">1</span>
+<div class="act-title">
+<h2>You Submit Your Deal</h2>
+<p>You're an established company that wants to raise capital. Sails.to structures your offering as <strong>CrossSecurities</strong> — securities that live on-chain (Solana) but can convert to bankable ISIN form via Clearstream. A Wyoming DAO Series LLC is created with five firewalled Series. A trustee is appointed to authenticate transactions on investors' behalf.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    YOU["🏢 You&lt;br/&gt;want to raise $10M"]
+    PLAT["🏛️ Platform&lt;br/&gt;structures the offering"]
+    subgraph DAO["Your DAO Series LLC — 5 firewalled Series"]
+        OPS["💼 Operating&lt;br/&gt;Cashflow &amp; pledges"]
+        REV["📊 Revenue&lt;br/&gt;Income collection"]
+        DEP["🔒 Deposit&lt;br/&gt;Security deposit"]
+        TRS["💰 Treasury&lt;br/&gt;Token reserves"]
+        CCS["🔄 CrossConversion&lt;br/&gt;On-chain ↔ ISIN"]
+    end
+    TRU["🔐 Trustee appointed"]
+    LIVE["✅ Offering goes live"]
+    YOU ==>|"submit deal"| PLAT
+    PLAT ==>|"creates"| DAO
+    PLAT ==>|"appoints"| TRU
+    TRU ==>|"trust deed executed"| LIVE
+    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style PLAT fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
+    style DAO fill:#f7fafc,color:#1a202c,stroke:#a0aec0,stroke-width:2px
+    style OPS fill:#9f7aea,color:#fff,stroke:#805ad5,stroke-width:2px
+    style REV fill:#319795,color:#fff,stroke:#2c7a7b,stroke-width:2px
+    style DEP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+    style TRS fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style CCS fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style TRU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style LIVE fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
+</div>
+<div class="act-details">
+<div class="detail-item">
+<strong>$0 upfront.</strong> No structuring fee, no legal fees, no listing charges. You only pay when real money comes in.
+</div>
+<div class="detail-item">
+<strong>Five Series, one LLC.</strong> Each Series is legally firewalled — creditors of one cannot reach assets of another.
+</div>
+</div>
+</div>
+</section>
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">2</span>
+<div class="act-title">
+<h2>Brokers Bring the Money</h2>
+<p>Your CrossSecurities offering is distributed through a global network of licensed brokers. Subscription funds sit in trust escrow — you don't touch them until the soft cap is hit.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    LIVE["✅ Your offering is live"]
+    BROKERS["🏦 Broker network&lt;br/&gt;distributes to their investors"]
+    ESC["🔐 Trust Escrow&lt;br/&gt;funds held safely"]
+    CAP["🎯 Soft cap reached"]
+    LIVE ==> BROKERS
+    BROKERS ==>|"subscriptions"| ESC
+    ESC ==>|"threshold met"| CAP
+    style LIVE fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style BROKERS fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
+    style ESC fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style CAP fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
+</div>
+<div class="act-details">
+<div class="detail-item">
+<strong>Soft cap protection.</strong> If the minimum isn't reached, investors get their principal returned — no fees are charged. Fees are deferred during the soft-cap phase and deducted from proceeds once the cap is reached.
+</div>
+</div>
+</div>
+</section>
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">3</span>
+<div class="act-title">
+<h2>You Receive Your Funds</h2>
+<p>Soft cap reached. Fees are deducted automatically from proceeds. The Deposit Series reserves a 3% security deposit. You receive the net amount. Investors already hold their CrossSecurities tokens (minted upfront from the Treasury Series) — their permissions now upgrade from non-transferable to fully active.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    RAISE["🎯 $10M raised"]
+    subgraph DEDUCT["Automatic deductions"]
+        D1["6% distribution&lt;br/&gt;broker-placed"]
+        D2["3% security deposit&lt;br/&gt;→ Deposit Series"]
+        D3["1%/yr trust &amp; admin"]
+    end
+    YOU["🏢 You receive&lt;br/&gt;~$9.0M net"]
+    INV["👤 Investors&lt;br/&gt;receive tokens"]
+    RAISE ==> DEDUCT
+    DEDUCT ==>|"net proceeds"| YOU
+    DEDUCT -.->|"tokens minted"| INV
+    style RAISE fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
+    style DEDUCT fill:#fff5f5,color:#1a202c,stroke:#d69e2e,stroke-width:2px
+    style D1 fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style D2 fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+    style D3 fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style INV fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+</div>
+<div class="fee-summary">
+<h3>What It Costs You</h3>
+<div class="fee-grid">
+<div class="fee-item">
+<span class="fee-amount">6%</span>
+<span class="fee-label">broker-placed investors</span>
+</div>
+<div class="fee-item">
+<span class="fee-amount">1%</span>
+<span class="fee-label">your own referrals</span>
+</div>
+<div class="fee-item">
+<span class="fee-amount">1%/yr</span>
+<span class="fee-label">trust &amp; administration</span>
+</div>
+<div class="fee-item">
+<span class="fee-amount">3%</span>
+<span class="fee-label">security deposit (returned)</span>
+</div>
+</div>
+<div style="text-align: center; margin-top: 20px;">
+<a href="/pricing/" class="btn-secondary">Full Pricing &amp; Calculator →</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">4</span>
+<div class="act-title">
+<h2>Revenue Flows to Investors</h2>
+<p>You generate returns — royalties, interest, dividends, or profit share. You deposit into the Revenue Series. Investors are paid first. The trustee authenticates each distribution — you initiate, the trustee validates, the smart contract executes.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    YOU["🏢 You&lt;br/&gt;deposit revenue"]
+    REV["📊 Revenue Series&lt;br/&gt;income collected"]
+    TRU["🔐 Trustee&lt;br/&gt;authenticates distribution"]
+    INV["👤 Investors&lt;br/&gt;paid first"]
+    BAL["💼 Balance&lt;br/&gt;to other interest holders"]
+    YOU ==>|"deposit"| REV
+    REV ==>|"you request distribution"| TRU
+    TRU ==>|"authenticated"| INV
+    INV -.->|"remainder"| BAL
+    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style REV fill:#319795,color:#fff,stroke:#2c7a7b,stroke-width:2px
+    style TRU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style INV fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style BAL fill:#9f7aea,color:#fff,stroke:#805ad5,stroke-width:2px
+</div>
+</div>
+</section>
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">5</span>
+<div class="act-title">
+<h2>Your Investors Trade — On-Chain and Off</h2>
+<p>Investors trade CrossSecurities through the multi-broker OTC network. On-chain trades settle atomically on Solana (T+0). Investors can CrossConvert to bankable ISIN form via Clearstream — or convert back.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    INV1["👤 On-chain holder"]
+    INV2["👤 ISIN holder"]
+    OTC["🔄 OTC Network&lt;br/&gt;atomic settlement (T+0)"]
+    CCS["🔒 CrossConversion&lt;br/&gt;0.75% fee"]
+    BANK["🏦 Clearstream&lt;br/&gt;bank custody"]
+    INV1 ==>|"trade"| OTC
+    INV1 ==>|"convert"| CCS
+    CCS ==>|"1:1 lockbox"| BANK
+    BANK -.->|"convert back"| CCS
+    INV2 -.->|"trade via broker"| OTC
+    style INV1 fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style INV2 fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style OTC fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style CCS fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style BANK fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
+</div>
+</div>
+</section>
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">6</span>
+<div class="act-title">
+<h2>The Deal Closes</h2>
+<p>At maturity you repay principal through the same flow. The trustee authenticates the final distribution. The Deposit Series returns your 3% security deposit. The DAO LLC can be wound down or re-used for your next offering.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    YOU["🏢 You&lt;br/&gt;repay principal"]
+    REV["📊 Revenue Series"]
+    TRU["🔐 Trustee&lt;br/&gt;authenticates"]
+    INV["👤 Investors&lt;br/&gt;principal returned"]
+    DEP["🔒 Deposit Series&lt;br/&gt;3% returned to you"]
+    DONE["✅ Deal complete"]
+    YOU ==>|"deposits"| REV
+    REV ==>|"final request"| TRU
+    TRU ==>|"distributed"| INV
+    TRU ==>|"released"| DEP
+    INV ==> DONE
+    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style REV fill:#319795,color:#fff,stroke:#2c7a7b,stroke-width:2px
+    style TRU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style INV fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style DEP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+    style DONE fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
+</div>
+</div>
+</section>
+
+<section class="content-section story-cta">
+<div class="content-container" style="text-align: center;">
+<a href="/issuers/" class="btn-secondary">Full Issuers Page →</a>
+<a href="/signup/" class="btn-primary" style="margin-left: 12px;">Start Your Raise</a>
+</div>
+</section>
+
+</div>
+
+<!-- STORY 2 — FOR PROFESSIONAL INVESTORS -->
+<div class="story-panel" id="story-investor">
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">1</span>
+<div class="act-title">
+<h2>Your Broker Brings You a Deal</h2>
+<p>Your broker presents a CrossSecurities offering — an established company raising capital through a Wyoming DAO Series LLC. The deal has an appointed trustee who authenticates every transaction, a trust deed protecting your interests, and a 3% security deposit in a dedicated Deposit Series.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    BRK["🏦 Your Broker&lt;br/&gt;presents opportunity"]
+    YOU["👤 You&lt;br/&gt;professional investor"]
+    DEAL["📋 The Offering&lt;br/&gt;$10M raise, DAO LLC"]
+    TRU["🔐 Trustee&lt;br/&gt;authenticates transactions"]
+    DEP["🔒 3% Deposit Series&lt;br/&gt;backs performance"]
+    BRK ==>|"presents deal"| YOU
+    YOU ==>|"reviews"| DEAL
+    DEAL --- TRU
+    DEAL --- DEP
+    style BRK fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
+    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style DEAL fill:#9f7aea,color:#fff,stroke:#805ad5,stroke-width:2px
+    style TRU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style DEP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+</div>
+<div class="act-details">
+<div class="detail-item">
+<strong>Structurally protected.</strong> Every deal has a licensed trust company. The issuer makes business decisions; the trustee validates them against your trust deed.
+</div>
+<div class="detail-item">
+<strong>$0 to subscribe.</strong> No fees at issuance. The issuer pays the distribution fee — you buy in at par.
+</div>
+</div>
+</div>
+</section>
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">2</span>
+<div class="act-title">
+<h2>You Subscribe</h2>
+<p>You commit capital through your broker. Funds go to trust escrow — not to the issuer. You receive your CrossSecurities token immediately — during the soft cap phase it functions as a zero-coupon bond (non-transferable, refundable). If the soft cap isn't reached, the security redeems at par and your full principal is returned. Once the cap is hit, your token's permissions upgrade: it becomes transferable and represents the full security.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    YOU["👤 You&lt;br/&gt;commit $500k"]
+    BRK["🏦 Your Broker&lt;br/&gt;verifies KYC"]
+    ESC["🔐 Trust Escrow&lt;br/&gt;funds held safely"]
+    TOK["🪙 You receive token&lt;br/&gt;(zero-coupon bond until soft cap)"]
+    CAP{{"Soft cap?"}}
+    LIVE["✅ Token upgrades&lt;br/&gt;full security, transferable"]
+    REF["💵 Redeems at par&lt;br/&gt;principal returned"]
+    YOU ==>|"subscribe"| BRK
+    BRK ==>|"forwards funds"| ESC
+    BRK ==>|"token issued"| TOK
+    TOK ==> CAP
+    CAP ==>|"reached"| LIVE
+    CAP -.->|"not reached"| REF
+    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style BRK fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
+    style ESC fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style TOK fill:#9f7aea,color:#fff,stroke:#805ad5,stroke-width:2px
+    style CAP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+    style LIVE fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style REF fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+</div>
+</div>
+</section>
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">3</span>
+<div class="act-title">
+<h2>You Trade</h2>
+<p>Your securities are live. You can sell to other investors through the multi-broker OTC network, or buy more. Trades settle atomically on Solana — token transfer, payment, and fees in one transaction. T+0, not T+2.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    YOU["👤 You&lt;br/&gt;want to sell"]
+    BRK["🏦 Your Broker"]
+    NET["🔄 OTC Network&lt;br/&gt;multi-broker matching"]
+    subgraph ATOMIC["⚡ Atomic Settlement"]
+        TX["Tokens + Payment + Fees&lt;br/&gt;all-or-nothing"]
+    end
+    BUYER["👤 Buyer"]
+    YOU ==>|"list"| BRK
+    BRK ==> NET
+    NET ==> TX
+    TX ==>|"payment"| YOU
+    TX ==>|"tokens"| BUYER
+    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style BRK fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
+    style NET fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
+    style ATOMIC fill:#f0fff4,color:#1a202c,stroke:#38a169,stroke-width:2px
+    style TX fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
+    style BUYER fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+</div>
+<div class="act-details">
+<div class="detail-item">
+<strong>0.5% brokerage fee</strong> — paid by the buyer. Split three ways: ⅓ buy-side broker, ⅓ sell-side broker, ⅓ platform. Deferred during soft-cap phase and charged once soft cap is reached.
+</div>
+<div class="detail-item">
+<strong>CrossConversion</strong> — prefer holding ISIN securities in a bank? CrossConvert your tokens via the lockbox: 1:1, 0.75% fee, settled through Clearstream. The reverse works too.
+</div>
+</div>
+</div>
+</section>
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">4</span>
+<div class="act-title">
+<h2>You Get Paid First</h2>
+<p>The issuer deposits revenue into the Revenue Series. The trustee authenticates the distribution. You — the investor — receive your share first. The smart contract pays you automatically.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    CO["🏢 Issuer&lt;br/&gt;deposits revenue"]
+    REV["📊 Revenue Series"]
+    TRU["🔐 Trustee&lt;br/&gt;authenticates"]
+    YOU1["👤 On-chain&lt;br/&gt;paid instantly"]
+    YOU2["👤 ISIN holder&lt;br/&gt;paid via Clearstream"]
+    CO ==>|"deposits"| REV
+    REV ==>|"issuer requests, trustee authenticates"| TRU
+    TRU ==>|"on-chain"| YOU1
+    TRU ==>|"Clearstream"| YOU2
+    style CO fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style REV fill:#319795,color:#fff,stroke:#2c7a7b,stroke-width:2px
+    style TRU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style YOU1 fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style YOU2 fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+</div>
+</div>
+</section>
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">5</span>
+<div class="act-title">
+<h2>You Get Your Principal Back</h2>
+<p>At maturity, the issuer repays principal through the same authenticated flow. Trustee confirms, smart contract distributes. Deal done.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    MAT["📅 Maturity"]
+    CO["🏢 Issuer&lt;br/&gt;repays principal"]
+    TRU["🔐 Trustee&lt;br/&gt;authenticates"]
+    YOU["👤 You&lt;br/&gt;principal returned"]
+    DONE["✅ Deal complete"]
+    MAT ==> CO
+    CO ==>|"deposits"| TRU
+    TRU ==>|"distributed"| YOU
+    YOU ==> DONE
+    style MAT fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+    style CO fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style TRU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style YOU fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style DONE fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
+</div>
+</div>
+</section>
+
+<section class="content-section story-cta">
+<div class="content-container" style="text-align: center;">
+<a href="/investors/" class="btn-secondary">Full Investors Page →</a>
+<a href="/signup/" class="btn-primary" style="margin-left: 12px;">Register Interest</a>
+</div>
+</section>
+
+</div>
+
+<!-- STORY 3 — FOR TRUST COMPANIES -->
+<div class="story-panel" id="story-trustee">
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">1</span>
+<div class="act-title">
+<h2>You're Appointed to a Deal</h2>
+<p>An issuer has submitted an offering. The platform selects your firm from the pre-approved trustee registry. You execute the trust deed and take responsibility for authenticating transactions across five Series within the DAO LLC.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    PLAT["🏛️ Platform&lt;br/&gt;appoints you"]
+    YOU["🔐 Your Firm&lt;br/&gt;executes trust deed"]
+    subgraph DAO["DAO Series LLC — your jurisdiction"]
+        OPS["💼 Operating&lt;br/&gt;Cashflow &amp; pledges"]
+        REV["📊 Revenue&lt;br/&gt;Income, investor-first waterfall"]
+        DEP["🔒 Deposit&lt;br/&gt;3% security deposit"]
+        TRS["💰 Treasury&lt;br/&gt;Token reserves"]
+        CCS["🔄 CrossConversion&lt;br/&gt;On-chain ↔ ISIN lockbox"]
+    end
+    YOU ==>|"authenticate"| OPS
+    YOU ==>|"authenticate"| REV
+    YOU ==>|"issuer + you"| DEP
+    YOU ==>|"oversee"| TRS
+    YOU ==>|"authenticate"| CCS
+    PLAT ==>|"appointment"| YOU
+    style PLAT fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
+    style YOU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style DAO fill:#f7fafc,color:#1a202c,stroke:#a0aec0,stroke-width:2px
+    style OPS fill:#9f7aea,color:#fff,stroke:#805ad5,stroke-width:2px
+    style REV fill:#319795,color:#fff,stroke:#2c7a7b,stroke-width:2px
+    style DEP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+    style TRS fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style CCS fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+</div>
+<div class="act-details">
+<div class="detail-item">
+<strong>Five Series, clear mandate.</strong> Operating, Revenue, Deposit, Treasury, and CrossConversion — each with defined authentication responsibilities.
+</div>
+<div class="detail-item">
+<strong>You authenticate, you don't control.</strong> The issuer makes business decisions. Your role is to validate that every transaction complies with the trust deed.
+</div>
+</div>
+</div>
+</section>
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">2</span>
+<div class="act-title">
+<h2>You Hold Escrow During Fundraise</h2>
+<p>Subscription funds flow into trust escrow under your authority. You monitor progress against the soft cap. If the cap isn't reached, you return the principal. If it is, you authenticate the release of proceeds.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    INV["👤 Investors&lt;br/&gt;subscribe via brokers"]
+    ESC["🔐 Trust Escrow&lt;br/&gt;under your authority"]
+    CAP{{"Soft cap?"}}
+    REL["✅ Authenticate release&lt;br/&gt;fees deducted, deposit reserved"]
+    RET["↩️ Return principal"]
+    INV ==>|"funds"| ESC
+    ESC ==> CAP
+    CAP ==>|"reached"| REL
+    CAP -.->|"not reached"| RET
+    style INV fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style ESC fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style CAP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+    style REL fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style RET fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+</div>
+</div>
+</section>
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">3</span>
+<div class="act-title">
+<h2>You Authenticate Every Distribution</h2>
+<p>The issuer deposits revenue and requests a distribution. You validate against the trust deed. The smart contract distributes automatically — investors receive their share first.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    CO["🏢 Issuer&lt;br/&gt;deposits revenue"]
+    REV["📊 Revenue Series&lt;br/&gt;income collected"]
+    YOU["🔐 You&lt;br/&gt;authenticate against trust deed"]
+    SC["⚡ Corporate Actions&lt;br/&gt;smart contract"]
+    INV["👤 Investors&lt;br/&gt;paid first"]
+    CO ==>|"deposits"| REV
+    REV ==>|"issuer requests distribution"| YOU
+    YOU ==>|"authenticated"| SC
+    SC ==>|"waterfall priority"| INV
+    style CO fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style REV fill:#319795,color:#fff,stroke:#2c7a7b,stroke-width:2px
+    style YOU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style SC fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
+    style INV fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+</div>
+</div>
+</section>
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">4</span>
+<div class="act-title">
+<h2>You Authenticate CrossConversions</h2>
+<p>Investors convert between on-chain tokens and bankable ISIN securities. The CrossConversion Series is a lockbox — tokens lock 1:1 and ISIN securities issue through Clearstream. You authenticate each conversion.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    INV["👤 Investor&lt;br/&gt;requests conversion"]
+    CCS["🔒 CrossConversion Series"]
+    YOU["🔐 You&lt;br/&gt;authenticate"]
+    subgraph LOCK["1:1 Lockbox"]
+        TOK["🪙 Token locked"]
+        ISIN["📄 ISIN issued via Clearstream"]
+    end
+    INV ==>|"0.75% fee"| CCS
+    CCS ==>|"request"| YOU
+    YOU ==> TOK
+    TOK ==> ISIN
+    style INV fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style CCS fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style YOU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style LOCK fill:#f0fff4,color:#1a202c,stroke:#38a169,stroke-width:2px
+    style TOK fill:#9f7aea,color:#fff,stroke:#805ad5,stroke-width:2px
+    style ISIN fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
+</div>
+</div>
+</section>
+
+<section class="content-section act-section">
+<div class="content-container">
+<div class="act-header">
+<span class="act-number">5</span>
+<div class="act-title">
+<h2>Deal Closes — You Earn Throughout</h2>
+<p>At maturity you authenticate the final distribution and release the Deposit Series back to the issuer. Your fee — ⅔ of the 1% annual trust and administration charge — runs for the life of every deal.</p>
+</div>
+</div>
+<div class="mermaid">
+flowchart TD
+    CO["🏢 Final principal"]
+    YOU["🔐 You&lt;br/&gt;authenticate"]
+    INV["👤 Investors&lt;br/&gt;principal returned"]
+    DEP["🔒 Deposit Series&lt;br/&gt;released to issuer"]
+    DONE["✅ Deal complete"]
+    subgraph FEE["Your Revenue"]
+        F1["⅔ of 1%/yr&lt;br/&gt;trust &amp; admin"]
+        F2["CrossConversion&lt;br/&gt;share of 0.75%"]
+    end
+    CO ==>|"deposits"| YOU
+    YOU ==>|"distributed"| INV
+    YOU ==>|"released"| DEP
+    INV ==> DONE
+    style CO fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style YOU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style INV fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style DEP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+    style DONE fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
+    style FEE fill:#fffff0,color:#1a202c,stroke:#d69e2e,stroke-width:2px
+    style F1 fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style F2 fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+</div>
+</div>
+</section>
+
+<section class="content-section story-cta">
+<div class="content-container" style="text-align: center;">
+<a href="/trustees/" class="btn-secondary">Full Trustees Page →</a>
+<a href="/signup/" class="btn-primary" style="margin-left: 12px;">Join the Registry</a>
+</div>
+</section>
+
+</div>
+
+<section class="content-section" style="text-align: center; padding: 20px 0 40px;">
+<a href="/players/" class="btn-secondary">See the full Life of a Deal page →</a>
 </section>
 
 <section class="cta-section">
