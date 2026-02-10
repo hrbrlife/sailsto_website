@@ -2,303 +2,303 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/company/about/</loc>
+    <loc>https://sails.to/company/about/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/accredited-investor/</loc>
+    <loc>https://sails.to/knowledge/glossary/accredited-investor/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/aml/</loc>
+    <loc>https://sails.to/knowledge/glossary/aml/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/atomic-settlement/</loc>
+    <loc>https://sails.to/knowledge/glossary/atomic-settlement/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/bankable/</loc>
+    <loc>https://sails.to/knowledge/glossary/bankable/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/broker-dealer/</loc>
+    <loc>https://sails.to/knowledge/glossary/broker-dealer/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/brokerage-fee/</loc>
+    <loc>https://sails.to/knowledge/glossary/brokerage-fee/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/cap-table/</loc>
+    <loc>https://sails.to/knowledge/glossary/cap-table/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/clearstream/</loc>
+    <loc>https://sails.to/knowledge/glossary/clearstream/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/commission/</loc>
+    <loc>https://sails.to/knowledge/glossary/commission/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/company/</loc>
+    <loc>https://sails.to/company/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/compliance/</loc>
+    <loc>https://sails.to/compliance/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/compliance/</loc>
+    <loc>https://sails.to/knowledge/glossary/compliance/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/company/contact/</loc>
+    <loc>https://sails.to/company/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/coupon/</loc>
+    <loc>https://sails.to/knowledge/glossary/coupon/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/crossconversion/</loc>
+    <loc>https://sails.to/knowledge/glossary/crossconversion/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/crossconversion-series/</loc>
+    <loc>https://sails.to/knowledge/glossary/crossconversion-series/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/crosssecurities/</loc>
+    <loc>https://sails.to/knowledge/glossary/crosssecurities/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/custody/</loc>
+    <loc>https://sails.to/knowledge/glossary/custody/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/distribution-fee/</loc>
+    <loc>https://sails.to/knowledge/glossary/distribution-fee/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/distributions/</loc>
+    <loc>https://sails.to/knowledge/glossary/distributions/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/docs/</loc>
+    <loc>https://sails.to/knowledge/docs/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/escrow/</loc>
+    <loc>https://sails.to/knowledge/glossary/escrow/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/faq/</loc>
+    <loc>https://sails.to/knowledge/faq/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/brokers/</loc>
+    <loc>https://sails.to/brokers/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/introducers/</loc>
+    <loc>https://sails.to/introducers/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/investors/</loc>
+    <loc>https://sails.to/investors/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/issuers/</loc>
+    <loc>https://sails.to/issuers/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/regulated/</loc>
+    <loc>https://sails.to/regulated/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/trustees/</loc>
+    <loc>https://sails.to/trustees/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/signup/</loc>
+    <loc>https://sails.to/signup/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/guides/getting-started/</loc>
+    <loc>https://sails.to/knowledge/guides/getting-started/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/</loc>
+    <loc>https://sails.to/knowledge/glossary/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/hard-cap/</loc>
+    <loc>https://sails.to/knowledge/glossary/hard-cap/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/whatsails/</loc>
+    <loc>https://sails.to/whatsails/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/investor-verification/</loc>
+    <loc>https://sails.to/knowledge/glossary/investor-verification/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/isin/</loc>
+    <loc>https://sails.to/knowledge/glossary/isin/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/</loc>
+    <loc>https://sails.to/knowledge/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/kyc/</loc>
+    <loc>https://sails.to/knowledge/glossary/kyc/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/company/legal/</loc>
+    <loc>https://sails.to/company/legal/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/players/</loc>
+    <loc>https://sails.to/players/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/liquidity/</loc>
+    <loc>https://sails.to/knowledge/glossary/liquidity/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/maturity/</loc>
+    <loc>https://sails.to/knowledge/glossary/maturity/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/minimum-investment/</loc>
+    <loc>https://sails.to/knowledge/glossary/minimum-investment/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/nominal-value/</loc>
+    <loc>https://sails.to/knowledge/glossary/nominal-value/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/offering-memorandum/</loc>
+    <loc>https://sails.to/knowledge/glossary/offering-memorandum/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/on-chain/</loc>
+    <loc>https://sails.to/knowledge/glossary/on-chain/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/operating-series/</loc>
+    <loc>https://sails.to/knowledge/glossary/operating-series/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/operational-trust/</loc>
+    <loc>https://sails.to/knowledge/glossary/operational-trust/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/otc/</loc>
+    <loc>https://sails.to/knowledge/glossary/otc/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/oversight/</loc>
+    <loc>https://sails.to/oversight/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/issuers-directory/</loc>
+    <loc>https://sails.to/issuers-directory/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/pricing/</loc>
+    <loc>https://sails.to/pricing/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/private-placement/</loc>
+    <loc>https://sails.to/knowledge/glossary/private-placement/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/professional-investor/</loc>
+    <loc>https://sails.to/knowledge/glossary/professional-investor/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/reg-d/</loc>
+    <loc>https://sails.to/knowledge/glossary/reg-d/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/reg-s/</loc>
+    <loc>https://sails.to/knowledge/glossary/reg-s/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/roadmap/</loc>
+    <loc>https://sails.to/knowledge/roadmap/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://sails.to/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/secondary-trading/</loc>
+    <loc>https://sails.to/knowledge/glossary/secondary-trading/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/security/</loc>
+    <loc>https://sails.to/security/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/security-deposit/</loc>
+    <loc>https://sails.to/knowledge/glossary/security-deposit/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/security-token/</loc>
+    <loc>https://sails.to/knowledge/glossary/security-token/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/series-llc/</loc>
+    <loc>https://sails.to/knowledge/glossary/series-llc/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/smart-contract/</loc>
+    <loc>https://sails.to/knowledge/glossary/smart-contract/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/soft-cap/</loc>
+    <loc>https://sails.to/knowledge/glossary/soft-cap/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/solana/</loc>
+    <loc>https://sails.to/knowledge/glossary/solana/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/spv/</loc>
+    <loc>https://sails.to/knowledge/glossary/spv/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/tokenization/</loc>
+    <loc>https://sails.to/knowledge/glossary/tokenization/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/tradfi-bridge/</loc>
+    <loc>https://sails.to/knowledge/glossary/tradfi-bridge/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/treasury-series/</loc>
+    <loc>https://sails.to/knowledge/glossary/treasury-series/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/trustee/</loc>
+    <loc>https://sails.to/knowledge/glossary/trustee/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/vienna-mtf/</loc>
+    <loc>https://sails.to/knowledge/glossary/vienna-mtf/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/guides/wyoming-dao-explained/</loc>
+    <loc>https://sails.to/knowledge/guides/wyoming-dao-explained/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url><url>
-    <loc>http://localhost:1313/knowledge/glossary/wyoming-dao-llc/</loc>
+    <loc>https://sails.to/knowledge/glossary/wyoming-dao-llc/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
