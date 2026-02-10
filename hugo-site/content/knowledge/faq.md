@@ -127,7 +127,7 @@ scripts:
                 <div class="faq-answer">
                     <p><strong>Zero upfront cost.</strong> We operate on a success-based fee model:</p>
                     <ul>
-                        <li><strong>Soft cap phase:</strong> 0% fees (brokerage waived, distribution deferred)</li>
+                        <li><strong>Soft cap phase:</strong> Fees are deferred — brokerage and distribution fees are charged once soft cap is reached, deducted from proceeds</li>
                         <li><strong>After soft cap reached:</strong></li>
                         <ul>
                             <li><strong>Direct/referral investors:</strong> 1% distribution fee</li>

@@ -337,24 +337,32 @@ scripts:
         flowchart TD
             DAO[🏢 Your Master DAO LLC<br/>Wyoming]
             subgraph Series[Separate Series Within Your LLC]
-                S1[💼 Series A: Operating<br/>Pledges, Revenue, Assets]
-                S2[💰 Series B: Treasury<br/>Reserves, Distributions]
-                S3[🔒 Series C: CrossConversion<br/>On-Chain ↔ Bankable ISIN]
-                S4[📄 Series D: Future Offerings]
+                S1[💼 Operating<br/>Cashflow & Pledges]
+                S5[📊 Revenue<br/>Income Collection]
+                S6[🔒 Deposit<br/>Security Deposit]
+                S2[💰 Treasury<br/>Token Reserves]
+                S3[🔄 CrossConversion<br/>On-Chain ↔ Bankable ISIN]
+                S4[📄 Future Offerings]
             end
             DAO --> S1
+            DAO --> S5
+            DAO --> S6
             DAO --> S2
             DAO --> S3
             DAO --> S4
             S1 --> T1[🪙 Security Tokens]
+            S5 --> WATER[Investor-First Waterfall]
             S2 --> TRUST[Trust Oversight]
             S3 --> ISIN[ISIN-Bearing Securities]
             style DAO fill:#805ad5,color:#fff
             style S1 fill:#9f7aea,color:#fff
-            style S2 fill:#9f7aea,color:#fff
-            style S3 fill:#9f7aea,color:#fff
+            style S5 fill:#319795,color:#fff
+            style S6 fill:#718096,color:#fff
+            style S2 fill:#d69e2e,color:#fff
+            style S3 fill:#38a169,color:#fff
             style S4 fill:#9f7aea,color:#fff
             style T1 fill:#38a169,color:#fff
+            style WATER fill:#319795,color:#fff
             style TRUST fill:#d69e2e,color:#fff
             style ISIN fill:#3182ce,color:#fff
         </div>
@@ -369,18 +377,28 @@ scripts:
             <tbody>
                 <tr>
                     <td><strong><span class="glossary-term" data-term="operating-series">Operating Series</span></strong></td>
-                    <td>Holds pledges, receives revenue, manages underlying assets for a specific offering</td>
-                    <td>Issuer + <span class="glossary-term" data-term="trustee">Trust</span> oversight</td>
+                    <td>Cashflow, pledges, and underlying assets for a specific offering</td>
+                    <td>Issuer operates, <span class="glossary-term" data-term="trustee">Trust</span> authenticates</td>
+                </tr>
+                <tr>
+                    <td><strong>Revenue Series</strong></td>
+                    <td>Collected income (royalties, interest, dividends). Investors paid first (waterfall priority), balance to other interest holders</td>
+                    <td>Issuer initiates, <span class="glossary-term" data-term="trustee">Trust</span> authenticates</td>
+                </tr>
+                <tr>
+                    <td><strong>Deposit Series</strong></td>
+                    <td>3% security deposit reserved from proceeds. Backs orderly wind-down and trustee remedies</td>
+                    <td>Issuer + <span class="glossary-term" data-term="trustee">Trust</span> (both access, trust authenticates use)</td>
                 </tr>
                 <tr>
                     <td><strong><span class="glossary-term" data-term="treasury-series">Treasury Series</span></strong></td>
-                    <td>Holds operational reserves and unclaimed <span class="glossary-term" data-term="distributions">distributions</span> (legal series, not an on-chain wallet)</td>
+                    <td>Token reserves, un-issued tokens, and unclaimed <span class="glossary-term" data-term="distributions">distributions</span> (legal series, not an on-chain wallet)</td>
                     <td><span class="glossary-term" data-term="trustee">Trust</span> oversight</td>
                 </tr>
                 <tr>
                     <td><strong><span class="glossary-term" data-term="crossconversion-series">CrossConversion Series</span></strong></td>
-                    <td>Handles on-chain token ↔ bankable <span class="glossary-term" data-term="isin">ISIN</span>-identified <span class="glossary-term" data-term="security-token">security</span> conversion. Any token holder can request <span class="glossary-term" data-term="crossconversion">CrossConversion</span> for 0.75% of <span class="glossary-term" data-term="nominal-value">nominal value</span>. (see <a href="#conversion">Section 5</a>)</td>
-                    <td>Issuer + <span class="glossary-term" data-term="trustee">Trust</span> oversight</td>
+                    <td>On-chain token ↔ bankable <span class="glossary-term" data-term="isin">ISIN</span>-identified <span class="glossary-term" data-term="security-token">security</span> conversion. Any token holder can request <span class="glossary-term" data-term="crossconversion">CrossConversion</span> for 0.75% of <span class="glossary-term" data-term="nominal-value">nominal value</span>. (see <a href="#conversion">Section 5</a>)</td>
+                    <td>Issuer requests, <span class="glossary-term" data-term="trustee">Trust</span> authenticates</td>
                 </tr>
             </tbody>
         </table>
@@ -596,11 +614,12 @@ scripts:
             <ul>
                 <li>Each investor receives back their <strong>full invested capital</strong> (the actual amount they paid)</li>
                 <li>Discounts are respected: if they paid a discounted price, they get back what they paid, not face value</li>
-                <li><strong>No fees are charged during soft cap phase:</strong>
+                <li><strong>Fees are deferred during soft cap phase and only charged once soft cap is reached:</strong>
                     <ul>
-                        <li>Brokerage fee (0.5%) is <strong>waived</strong> during soft cap phase</li>
-                        <li>Distribution fees (1%/6%) only apply when soft cap is reached</li>
-                        <li>Only Clearstream fees apply (if Channel 3 was used), charged at cost</li>
+                        <li>Brokerage fee (0.5%) — deferred, deducted from proceeds at soft cap</li>
+                        <li>Distribution fees (1%/6%) — deferred, deducted from proceeds at soft cap</li>
+                        <li>If soft cap fails, <strong>no platform fees are charged</strong></li>
+                        <li>Only Clearstream fees apply (if Channel 3 was used), charged at cost regardless</li>
                     </ul>
                 </li>
                 <li>This enables a <strong>smooth full refund</strong> if soft cap fails</li>
@@ -707,7 +726,7 @@ scripts:
                     <td>4b. Soft Cap NOT Reached</td>
                     <td>Duration expires: security redeems at par (zero-coupon redemption)</td>
                     <td>n/a</td>
-                    <td>Principal returned to investors (minus 0.5% brokerage + Clearstream fees)</td>
+                    <td>Principal returned to investors in full (no platform fees charged; only Clearstream fees at cost, if Channel 3 was used)</td>
                 </tr>
                 <tr>
                     <td>5. Distribution Continues</td>

@@ -226,7 +226,7 @@ stylesheets:
                     </div>
                 </div>
                 <div class="fee-note">
-                    <strong>Soft cap phase is fee-free.</strong> Miss soft cap = full refund. Security deposit returned at end of term.
+                    <strong>Fees deferred until soft cap.</strong> All fees are charged when soft cap is reached, deducted from proceeds. Miss soft cap = full refund, no fees. Security deposit returned at end of term.
                 </div>
             </div>
         </div>
