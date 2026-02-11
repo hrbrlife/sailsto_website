@@ -5,6 +5,7 @@ stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
+  - "/assets/css/docs.css"
   - "/assets/css/knowledge-docs-index.css"
 scripts:
   - "/js/knowledge-docs-index.js"

@@ -7,6 +7,7 @@ stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
+  - "/assets/css/docs.css"
 draft: false
 ---
 
@@ -18,15 +19,12 @@ draft: false
 
 <section class="features-section">
     <div class="container">
-
         <h2>Overview</h2>
         <p><span class="glossary-term" data-term="distributions">Distributions</span> on Sails.to are <span class="glossary-term" data-term="waterfall">waterfall</span>-based and enforced <span class="glossary-term" data-term="on-chain">on-chain</span>. The <code>sails_distributions</code> program is a dedicated <a href="/knowledge/glossary/solana/">Solana</a> Anchor program that handles everything from revenue receipt to investor payout. It is separate from the <code>sails_securities</code> token program — distributions are a first-class concern with their own instruction set, account structures, and authorization model.</p>
         <p>The design principle is simple: investors get paid before the platform. Revenue flows through a priority structure defined at offering creation, and every step is recorded on-chain. There are no off-chain side agreements, no manual overrides, no way to redirect funds outside the waterfall without <span class="glossary-term" data-term="trustee">Trustee</span> authentication. The <span class="glossary-term" data-term="paying-agent">Paying Agent</span> executes the waterfall; the Trustee authenticates it; the blockchain enforces it.</p>
-
         <h2>The Waterfall Model</h2>
         <p>Every offering on Sails.to defines a waterfall — a priority structure that determines the order in which revenue is distributed. The waterfall is configured when the offering is initialized via the <code>init_waterfall</code> instruction and cannot be modified after investors have committed capital.</p>
         <p>The waterfall executes in strict priority order. Each tranche must be fully satisfied before the next tranche receives any funds:</p>
-
         <table>
             <thead>
                 <tr>
@@ -58,12 +56,9 @@ draft: false
                 </tr>
             </tbody>
         </table>
-
         <p>The investor-first design is non-negotiable. The platform fee sits at priority 3 — below investor distributions. If revenue in a given epoch is insufficient to fully satisfy the investor tranche, the platform receives zero fees for that epoch. This alignment of incentives is encoded in the smart contract, not in a terms-of-service document.</p>
-
         <h2>Program Instructions</h2>
         <p>The <code>sails_distributions</code> program exposes five instructions. Each instruction enforces role-based authorization via the <span class="glossary-term" data-term="nft-hierarchy">NFT</span> hierarchy — you cannot call these instructions without holding the correct role NFT:</p>
-
         <table>
             <thead>
                 <tr>
@@ -106,7 +101,6 @@ draft: false
                 </tr>
             </tbody>
         </table>
-
         <h3>Authorization Flow</h3>
         <p>The dual-authorization model for <code>execute_waterfall</code> deserves emphasis. This is not a single-signer operation:</p>
         <ol>
@@ -114,10 +108,8 @@ draft: false
             <li><strong>Trustee authenticates</strong> — The Trustee (holding a Trustee role NFT) co-signs the transaction. The program verifies both NFTs before executing. For standard distributions, this is a <span class="glossary-term" data-term="threshold-signing">1-of-1 Trustee NFT</span> signature. For large distributions exceeding a configurable threshold, a 2-of-3 keyholder ceremony is required.</li>
             <li><strong>On-chain execution</strong> — The program snapshots token balances, runs the waterfall calculation, creates the <code>DistributionRecord</code>, and emits the <code>DistributionPaid</code> event. Funds are placed in escrow for investor claiming.</li>
         </ol>
-
         <h2>Distribution Records</h2>
         <p>Every executed waterfall creates a <code>DistributionRecord</code> — a <span class="glossary-term" data-term="pda">Program Derived Address</span> that stores the complete state of a single distribution epoch:</p>
-
         <pre><code>DistributionRecord PDA
 Seeds: ["distribution", offering_id, epoch]
 ├── offering_id: Pubkey        // The offering this distribution belongs to
@@ -129,7 +121,6 @@ Seeds: ["distribution", offering_id, epoch]
 ├── created_at: i64            // Timestamp of waterfall execution
 ├── trustee_signature: Pubkey  // Trustee who authenticated this distribution
 └── status: enum { Active, Reconciled, Disputed }</code></pre>
-
         <h3>The Claimed Bitmap</h3>
         <p>The <code>claimed_bitmap</code> is a compact bit array where each bit corresponds to an investor position index. When an investor calls <code>claim_distribution</code>, the program sets their bit to 1. This design has three advantages:</p>
         <ul>
@@ -138,10 +129,8 @@ Seeds: ["distribution", offering_id, epoch]
             <li><strong>Audit visibility:</strong> Anyone can read the bitmap to see exactly which investors have claimed and which have not. Unclaimed distributions are immediately visible to the Paying Agent and Trustee for follow-up.</li>
         </ul>
         <p>Investor position indices are assigned sequentially when tokens are first minted to a wallet. The mapping from wallet address to position index is stored in the <code>InvestorPosition</code> PDA and does not change — even if the investor transfers all their tokens and later reacquires them, they retain their original index.</p>
-
         <h2>Claiming Distributions</h2>
         <p>Distributions on Sails.to use a <strong>pull-based</strong> model. The <code>execute_waterfall</code> instruction calculates allocations and records them on-chain, but it does not push funds to investors. Instead, each investor calls <code>claim_distribution</code> to pull their allocation when they are ready.</p>
-
         <h3>On-Chain Holders</h3>
         <p>For investors holding <span class="glossary-term" data-term="security-token">security tokens</span> directly in their <a href="/knowledge/glossary/solana/">Solana</a> wallet, the claim process is straightforward:</p>
         <ol>
@@ -152,7 +141,6 @@ Seeds: ["distribution", offering_id, epoch]
             <li>The program checks the <code>claimed_bitmap</code> — if the investor's bit is already set, the instruction returns without transferring funds.</li>
             <li>The program transfers the calculated amount from the distribution escrow to the investor's wallet, sets the bitmap bit, and emits a claim event.</li>
         </ol>
-
         <h3>Bankable / Clearstream Holders</h3>
         <p>Investors who hold their position on the <span class="glossary-term" data-term="bankable">bankable</span> side via <span class="glossary-term" data-term="clearstream">Clearstream</span> (through <span class="glossary-term" data-term="crossconversion">CrossConversion</span>) do not claim distributions on-chain. Instead, distributions to these holders are processed as <strong>corporate actions</strong> through Clearstream's settlement infrastructure:</p>
         <ul>
@@ -162,10 +150,8 @@ Seeds: ["distribution", offering_id, epoch]
             <li>The <code>reconcile</code> instruction is then used to verify that the on-chain and bankable distributions match.</li>
         </ul>
         <p>This dual-track claiming model is what makes <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> work — the same offering can pay both on-chain and traditional finance investors from a single waterfall execution.</p>
-
         <h2>Reconciliation</h2>
         <p>Reconciliation is the process of cross-checking on-chain distribution records with the bankable side. This is critical for offerings that have investors on both sides of the <span class="glossary-term" data-term="crossconversion">CrossConversion</span> bridge.</p>
-
         <h3>The Reconcile Instruction</h3>
         <p>After a distribution epoch has been executed and Clearstream has settled the corresponding corporate action, the <span class="glossary-term" data-term="trustee">Trustee</span> calls the <code>reconcile</code> instruction:</p>
         <ol>
@@ -175,10 +161,8 @@ Seeds: ["distribution", offering_id, epoch]
             <li>If the amounts match, the <code>DistributionRecord</code> status is updated to <code>Reconciled</code>.</li>
             <li>If a discrepancy is detected, the status is set to <code>Disputed</code>, a <code>ComplianceViolation</code> event is emitted, and the DAO Manager <span class="glossary-term" data-term="grain">Grain</span> is alerted for investigation.</li>
         </ol>
-
         <h3>Reconciliation Schedule</h3>
         <p>The reconciliation engine runs on a configurable schedule — typically within 48 hours of each distribution execution. For high-frequency distributions (monthly), the nightly reconciliation job compares the on-chain lockbox state with Clearstream holdings and flags any drift. A discrepancy in the supply invariant (<code>tokens_locked == isin_outstanding</code>) triggers an immediate alert to the Trustee and platform operators.</p>
-
         <table>
             <thead>
                 <tr>
@@ -205,13 +189,10 @@ Seeds: ["distribution", offering_id, epoch]
                 </tr>
             </tbody>
         </table>
-
         <h2>API Endpoints</h2>
         <p>The Distributions API is exposed through the platform's API gateway at <code>api.sails.to</code>. Authentication uses <a href="/knowledge/docs/authentication/">Solana wallet signature + NFT verification</a>. All endpoints return JSON.</p>
-
         <h3>Investor Endpoints</h3>
         <p>Authenticated with investor wallet signature:</p>
-
         <table>
             <thead>
                 <tr>
@@ -233,10 +214,8 @@ Seeds: ["distribution", offering_id, epoch]
                 </tr>
             </tbody>
         </table>
-
         <h3>Issuer Endpoints</h3>
         <p>Authenticated with Issuer NFT:</p>
-
         <table>
             <thead>
                 <tr>
@@ -263,10 +242,8 @@ Seeds: ["distribution", offering_id, epoch]
                 </tr>
             </tbody>
         </table>
-
         <h3>Distribution Frequency</h3>
         <p>The distribution frequency is configured per offering in the <code>OfferingConfig</code> via the <code>distributionFrequency</code> field. Supported options:</p>
-
         <table>
             <thead>
                 <tr>
@@ -303,8 +280,6 @@ Seeds: ["distribution", offering_id, epoch]
                 </tr>
             </tbody>
         </table>
-
         <p>The frequency setting determines when the Paying Agent is expected to execute the waterfall, but it does not enforce timing at the program level — the <code>execute_waterfall</code> instruction can be called at any time, subject to the dual-authorization requirement. The frequency is a business-logic convention, not a smart contract constraint.</p>
-
     </div>
 </section>

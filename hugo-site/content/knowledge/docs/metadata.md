@@ -7,6 +7,7 @@ stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
+  - "/assets/css/docs.css"
 draft: false
 ---
 
@@ -18,15 +19,12 @@ draft: false
 
 <section class="features-section">
     <div class="container">
-
         <h2>Overview</h2>
         <p>Metadata is not decoration. On Sails.to, metadata is the mechanism by which <span class="glossary-term" data-term="smart-contract">smart contracts</span> enforce compliance, authorize actions, and maintain audit trails. Every NFT — whether it represents a <span class="glossary-term" data-term="kyc">KYC</span> credential, an operator role, or an offering configuration — carries a structured set of fields that the <a href="/knowledge/glossary/solana/">Solana</a> runtime reads and validates on every instruction.</p>
         <p>There are no optional fields in a "nice to have" sense. Each field exists because a specific compliance check, authorization gate, or audit requirement demands it. Remove a field and a smart contract check breaks. Add a field without purpose and you waste on-chain storage that every validator must replicate. The metadata schemas documented here are the product of that discipline.</p>
         <p>This page covers the six metadata categories on the platform: <strong>KYC Credential NFTs</strong>, <strong>Role NFTs</strong>, <strong>OfferingState PDAs</strong>, <strong>ComplianceConfig PDAs</strong>, <strong>Program Events</strong>, and the <strong>privacy architecture</strong> that binds them together.</p>
-
         <h2>KYC Credential NFT Metadata</h2>
         <p>Every investor on the platform carries a KYC Credential NFT — an on-chain attestation that a licensed verification provider has confirmed the investor's identity, classification, and regulatory status. This NFT contains <strong>zero personally identifiable information</strong>. What it does contain is everything the <span class="glossary-term" data-term="transfer-hook">Transfer Hook</span> needs to enforce compliance rules at the protocol level.</p>
-
         <pre><code>KYC NFT Metadata (on-chain, no PII):
 ├── investor_class:      enum { Accredited, Professional, QualifiedPurchaser, Retail }
 ├── jurisdiction_hash:   [u8; 32]   // SHA-256 of ISO country code
@@ -37,9 +35,7 @@ draft: false
 ├── expires_at:          i64        // Credential expiration
 ├── aml_clear:           bool       // Anti-money laundering clearance
 └── pep_clear:           bool       // Politically exposed person check</code></pre>
-
         <h3>Field-by-Field Breakdown</h3>
-
         <table>
             <thead>
                 <tr>
@@ -96,13 +92,10 @@ draft: false
                 </tr>
             </tbody>
         </table>
-
         <p>The critical design constraint: <strong>none of these fields contain PII</strong>. No names, no addresses, no document images, no phone numbers. The investor's actual identity documents are encrypted and stored off-chain in the KYC grain's journal with 7-year retention. The on-chain credential carries only the classification flags and cryptographic proofs that the smart contract needs to make compliance decisions.</p>
-
         <h2>Role NFT Metadata</h2>
         <p>The platform uses NFT-based authorization for every privileged action. There are no API keys, no admin passwords, no shared secrets. If you want to mint <span class="glossary-term" data-term="security-token">security tokens</span>, you need an Issuer NFT in your wallet. If you want to authenticate a <span class="glossary-term" data-term="crossconversion">CrossConversion</span>, you need a <span class="glossary-term" data-term="trustee">Trustee</span> NFT. The smart contract checks the caller's wallet for the required NFT on every instruction — no NFT, no authorization.</p>
         <p>Each Role NFT is a print edition from the <span class="glossary-term" data-term="master-nft">Sails Master NFT</span>, carrying role-specific metadata and optional expiration. All Role NFTs are recallable — if a participant's authorization is revoked, their NFT is burned and every instruction that checks for it will immediately fail.</p>
-
         <table>
             <thead>
                 <tr>
@@ -157,12 +150,9 @@ draft: false
                 </tr>
             </tbody>
         </table>
-
         <p>The hierarchy matters. A Platform Operator is issued by the Master NFT holders — the 3-of-5 keyholder set that controls the root of the authority chain. A Paying Agent is issued by a Trustee, not directly by the Platform Operator, because paying agent authority is scoped to the trust relationship. If a Trustee's NFT is recalled, every Paying Agent they issued is also invalidated. Authority flows downward; revocation propagates upward.</p>
-
         <h2>Offering State Metadata</h2>
         <p>Every offering on the platform is represented by an <code>OfferingState</code> <span class="glossary-term" data-term="pda">PDA</span> — a Program Derived Address account seeded by <code>["offering", series_id]</code>. This PDA is the canonical source of truth for the offering's current state, and every instruction that touches the offering reads from it.</p>
-
         <pre><code>OfferingState PDA Fields:
 ├── series_id:            Pubkey   // Links to the DAO Series LLC
 ├── max_supply:           u64      // Maximum tokens that can ever be minted
@@ -171,7 +161,6 @@ draft: false
 ├── nominal_value:        u64      // Face value per token (in cents)
 ├── status:               enum     // Active, Paused, Closed
 └── version:              u8       // PDA version for migration support</code></pre>
-
         <table>
             <thead>
                 <tr>
@@ -210,10 +199,8 @@ draft: false
                 </tr>
             </tbody>
         </table>
-
         <h2>ComplianceConfig Metadata</h2>
         <p>Every offering carries a companion <code>ComplianceConfig</code> <span class="glossary-term" data-term="pda">PDA</span>, seeded by <code>["compliance", offering_id]</code>. This is where the regulatory rules live — not in documentation, not in terms of service, but in on-chain data that the <span class="glossary-term" data-term="transfer-hook">Transfer Hook</span> reads on every single token transfer.</p>
-
         <pre><code>ComplianceConfig PDA Fields:
 ├── offering_id:              Pubkey              // The offering this config governs
 ├── allowed_jurisdictions:    Vec&lt;[u8; 32]&gt;       // SHA-256 hashes of allowed ISO codes
@@ -224,7 +211,6 @@ draft: false
 ├── reg_exemption:            enum                // Which regulatory exemption applies
 ├── features:                 u64                 // Bitmask for feature flags
 └── version:                  u8                  // PDA version for migration</code></pre>
-
         <table>
             <thead>
                 <tr>
@@ -271,12 +257,9 @@ draft: false
                 </tr>
             </tbody>
         </table>
-
         <p>The <code>ComplianceConfig</code> is set at offering creation by the Issuer with Platform Operator approval. Modifications after creation require the same dual authorization. This is compliance as data — stored on-chain, enforced by the runtime, auditable by anyone.</p>
-
         <h2>Event Metadata</h2>
         <p>The <code>sails_securities</code> program emits five structured events for every significant state change. These are not optional log messages — they are the mechanism by which the off-chain application layer stays synchronized with on-chain state. The Solana Event Watcher grain subscribes to these events and routes them to the appropriate application grains for processing.</p>
-
         <table>
             <thead>
                 <tr>
@@ -313,12 +296,9 @@ draft: false
                 </tr>
             </tbody>
         </table>
-
         <p>Every event is also written to the Solana Event Watcher's local event log for replay capability. If a grain misses an event — network partition, grain restart, temporary outage — the watcher replays the missed events in order. No event is ever lost. This is the foundation of the platform's eventual consistency model: on-chain state is the source of truth, events are the synchronization mechanism, and replay is the recovery path.</p>
-
         <h2>Privacy by Design</h2>
         <p>The metadata architecture is built on a single, non-negotiable principle: <strong>no personally identifiable information ever touches the blockchain</strong>. This is not a policy preference — it is a structural constraint enforced by the schema design itself.</p>
-
         <ul>
             <li><strong>Jurisdiction is hashed.</strong> The <code>jurisdiction_hash</code> field stores a SHA-256 hash of the ISO country code, not the code itself. An observer reading the blockchain sees a 32-byte hash — they cannot determine the investor's country without brute-forcing 249 possible ISO codes (trivial in theory, but the point is that jurisdiction is not stored in plaintext). The Transfer Hook compares hashes, not strings. The compliance check works without ever revealing the underlying data.</li>
             <li><strong>Verification level is categorical.</strong> The <code>verification_level</code> field is an enum — <code>Basic</code>, <code>Enhanced</code>, or <code>InstitutionalEDD</code>. It tells the smart contract how thoroughly the investor was vetted. It does not reveal what documents were submitted, what the documents contained, or who the investor is. The actual verification artifacts — passport scans, proof-of-address documents, selfie captures — are encrypted with AES-256 and stored in the KYC grain's append-only journal, never on-chain.</li>
@@ -326,8 +306,6 @@ draft: false
             <li><strong>Role NFTs carry authorization, not identity.</strong> A Trustee NFT proves that the holder is authorized to authenticate CrossConversions. It does not encode the trustee's name, their firm, or their license number. The mapping between NFT and real-world entity is maintained off-chain in the platform's grain journals.</li>
             <li><strong>Events carry addresses, not names.</strong> When <code>SecurityMinted</code> fires, the <code>investor</code> field is a wallet public key. When <code>ComplianceViolation</code> fires, the <code>investor</code> field is a wallet public key. At no point does any program event include a name, email, phone number, or any other PII.</li>
         </ul>
-
         <p>This architecture satisfies both regulatory requirements and privacy expectations. Regulators can audit compliance enforcement through on-chain events and metadata — they can verify that every transfer was compliant, every mint checked KYC credentials, and every distribution followed the waterfall rules. But they access investor identity through the off-chain KYC records, not through the blockchain. The chain proves <em>what happened</em>. The grain journals prove <em>who was involved</em>. Neither system exposes more than it needs to.</p>
-
     </div>
 </section>
