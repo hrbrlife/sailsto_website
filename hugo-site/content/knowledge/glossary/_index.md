@@ -42,8 +42,11 @@ scripts:
             <a href="#A" class="alpha-link">A</a>
             <a href="#C" class="alpha-link">C</a>
             <a href="#D" class="alpha-link">D</a>
+            <a href="#G" class="alpha-link">G</a>
             <a href="#I" class="alpha-link">I</a>
             <a href="#K" class="alpha-link">K</a>
+            <a href="#M" class="alpha-link">M</a>
+            <a href="#N" class="alpha-link">N</a>
             <a href="#P" class="alpha-link">P</a>
             <a href="#R" class="alpha-link">R</a>
             <a href="#S" class="alpha-link">S</a>
@@ -68,6 +71,11 @@ scripts:
         <div class="glossary-letter-section" id="C">
             <h2 class="glossary-letter">C</h2>
             <div class="glossary-grid">
+                <a href="/knowledge/glossary/cap-n-proto/" class="glossary-card" data-category="technology">
+                    <span class="glossary-card-category technology">Technology</span>
+                    <h3>Cap'n Proto</h3>
+                    <p>Zero-copy serialization protocol used for inter-grain RPC communication in the Sails.to platform, enabling native Sandstorm integration without HTTP bridges.</p>
+                </a>
                 <a href="/knowledge/glossary/cap-table/" class="glossary-card" data-category="finance">
                     <span class="glossary-card-category finance">Finance</span>
                     <h3>Cap Table</h3>
@@ -105,6 +113,16 @@ scripts:
                 </a>
             </div>
         </div>
+        <div class="glossary-letter-section" id="G">
+            <h2 class="glossary-letter">G</h2>
+            <div class="glossary-grid">
+                <a href="/knowledge/glossary/grain/" class="glossary-card" data-category="technology">
+                    <span class="glossary-card-category technology">Technology</span>
+                    <h3>Grain</h3>
+                    <p>The fundamental isolation unit in Sandstorm/Melusina OS — a sandboxed application instance with its own journal store, capabilities, and lifecycle.</p>
+                </a>
+            </div>
+        </div>
         <div class="glossary-letter-section" id="I">
             <h2 class="glossary-letter">I</h2>
             <div class="glossary-grid">
@@ -125,9 +143,49 @@ scripts:
                 </a>
             </div>
         </div>
+        <div class="glossary-letter-section" id="M">
+            <h2 class="glossary-letter">M</h2>
+            <div class="glossary-grid">
+                <a href="/knowledge/glossary/master-nft/" class="glossary-card" data-category="technology">
+                    <span class="glossary-card-category technology">Technology</span>
+                    <h3>Master NFT</h3>
+                    <p>The root authority token in Sails.to's 4-layer NFT hierarchy on Solana, controlled by 3-of-5 keyholder threshold signing.</p>
+                </a>
+                <a href="/knowledge/glossary/melusina/" class="glossary-card" data-category="technology">
+                    <span class="glossary-card-category technology">Technology</span>
+                    <h3>Melusina</h3>
+                    <p>The on-chain authority layer for Sails.to — a Solana-based system implementing NFT hierarchies, KYC credentialing, and threshold crypto operations.</p>
+                </a>
+            </div>
+        </div>
+        <div class="glossary-letter-section" id="N">
+            <h2 class="glossary-letter">N</h2>
+            <div class="glossary-grid">
+                <a href="/knowledge/glossary/nft-hierarchy/" class="glossary-card" data-category="technology">
+                    <span class="glossary-card-category technology">Technology</span>
+                    <h3>NFT Hierarchy</h3>
+                    <p>Sails.to's 4-layer authority structure on Solana: Master → Reseller → License → Share, ensuring cryptographic chain of trust.</p>
+                </a>
+            </div>
+        </div>
         <div class="glossary-letter-section" id="P">
             <h2 class="glossary-letter">P</h2>
             <div class="glossary-grid">
+                <a href="/knowledge/glossary/paying-agent/" class="glossary-card" data-category="finance">
+                    <span class="glossary-card-category finance">Finance</span>
+                    <h3>Paying Agent</h3>
+                    <p>The entity authorized to execute distributions and manage the revenue waterfall for a Sails.to offering, operating under Trustee oversight.</p>
+                </a>
+                <a href="/knowledge/glossary/pda/" class="glossary-card" data-category="technology">
+                    <span class="glossary-card-category technology">Technology</span>
+                    <h3>PDA (Program Derived Address)</h3>
+                    <p>A deterministic Solana account address derived from program seeds, enabling trustless programmatic state management for offerings and compliance.</p>
+                </a>
+                <a href="/knowledge/glossary/powerbox/" class="glossary-card" data-category="technology">
+                    <span class="glossary-card-category technology">Technology</span>
+                    <h3>Powerbox</h3>
+                    <p>The inter-grain capability sharing mechanism in Sandstorm/Melusina OS, enabling secure permission delegation via claim tokens and persistent sturdyRefs.</p>
+                </a>
                 <a href="/knowledge/glossary/professional-investor/" class="glossary-card" data-category="compliance">
                     <span class="glossary-card-category compliance">Compliance</span>
                     <h3>Professional Investor</h3>
@@ -188,6 +246,11 @@ scripts:
         <div class="glossary-letter-section" id="T">
             <h2 class="glossary-letter">T</h2>
             <div class="glossary-grid">
+                <a href="/knowledge/glossary/threshold-signing/" class="glossary-card" data-category="technology">
+                    <span class="glossary-card-category technology">Technology</span>
+                    <h3>Threshold Signing</h3>
+                    <p>M-of-N keyholder cryptographic operations used to protect critical Sails.to platform actions, from Master NFT control to emergency freezes.</p>
+                </a>
                 <a href="/knowledge/glossary/tokenization/" class="glossary-card" data-category="technology">
                     <span class="glossary-card-category technology">Technology</span>
                     <h3>Tokenization</h3>
@@ -198,11 +261,26 @@ scripts:
                     <h3>TradFi Bridge (CrossConversion)</h3>
                     <p>Sails.to's CrossConversion system for converting CrossSecurities between on-chain and bankable form.</p>
                 </a>
+                <a href="/knowledge/glossary/transfer-hook/" class="glossary-card" data-category="technology">
+                    <span class="glossary-card-category technology">Technology</span>
+                    <h3>Transfer Hook</h3>
+                    <p>A Solana SPL-2022 extension that intercepts token transfers and enforces compliance rules — KYC checks, jurisdiction whitelists, lock-up periods.</p>
+                </a>
             </div>
         </div>
         <div class="glossary-letter-section" id="W">
             <h2 class="glossary-letter">W</h2>
             <div class="glossary-grid">
+                <a href="/knowledge/glossary/waterfall/" class="glossary-card" data-category="finance">
+                    <span class="glossary-card-category finance">Finance</span>
+                    <h3>Waterfall</h3>
+                    <p>The revenue distribution priority structure for offerings — senior debt first, then investors pro-rata, then platform fee, then treasury.</p>
+                </a>
+                <a href="/knowledge/glossary/white-label/" class="glossary-card" data-category="finance">
+                    <span class="glossary-card-category finance">Finance</span>
+                    <h3>White-Label</h3>
+                    <p>Branded platform instances for regulated institutions, trust companies, and broker-dealers with custom theming and compliance controls.</p>
+                </a>
                 <a href="/knowledge/glossary/wyoming-dao-llc/" class="glossary-card" data-category="legal">
                     <span class="glossary-card-category legal">Legal</span>
                     <h3>Wyoming DAO LLC</h3>

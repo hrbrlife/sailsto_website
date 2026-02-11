@@ -23,6 +23,18 @@ faqItems:
     answer: "Two options: Self-custody on Solana using any compatible wallet (Phantom, Solflare, Ledger), or bankable custody via ISIN at Clearstream accessible through your bank. You can CrossConvert between formats anytime."
   - question: "What legal structure do you provide?"
     answer: "We create a Wyoming DAO LLC with Series LLC architecture. Each offering exists as an isolated series with its own assets, liabilities, and investors, providing liability protection while maintaining operational efficiency."
+  - question: "What is the NFT authority hierarchy?"
+    answer: "Sails.to uses a 4-layer NFT hierarchy on Solana: Master NFT (root authority, 3-of-5 threshold) → Reseller NFT (print editions, can issue licenses) → License NFT (per-installation, issues KYC credentials) → Share NFT (per-domain access tokens, up to 10,000 per license). This cryptographic chain of trust governs every platform operation."
+  - question: "What is a Grain?"
+    answer: "A Grain is the fundamental isolation unit in Sandstorm/Melusina OS. Each grain is a sandboxed application instance with its own journal store, capabilities, and lifecycle. Sails.to uses Station grains (orchestrators like DAO Manager, Broker Portal) and Instance grains (workers like Offering, KYC, Investor Self-Service)."
+  - question: "How does threshold signing protect critical operations?"
+    answer: "Critical platform operations require M-of-N keyholder approval using Shamir-like threshold cryptography on Solana. Master NFT operations and force transfers require 3-of-5 keyholders. Large CrossConversions over $1M require 2-of-3. Standard CrossConversions require 1-of-1 Trustee NFT authentication."
+  - question: "What is a Transfer Hook?"
+    answer: "A Transfer Hook is a Solana SPL-2022 extension that intercepts every token transfer and enforces compliance rules before allowing it. The hook checks both wallets have valid KYC NFTs, verifies jurisdiction whitelists, enforces lock-up periods, and validates accreditation tiers. Non-compliant transfers are rejected on-chain."
+  - question: "How does the waterfall distribution work?"
+    answer: "Revenue enters the Operating Series and flows through a priority waterfall enforced on-chain: (1) Senior debt holders first, (2) Investor distributions pro-rata by token holding, (3) Platform fee of 1%, (4) Excess to Treasury Series. Investors always get paid before the platform."
+  - question: "What is Cap'n Proto and why do you use it?"
+    answer: "Cap'n Proto is a zero-copy serialization protocol used for inter-grain RPC communication. Unlike JSON or Protocol Buffers, it requires no encoding or decoding step—data is read directly from the wire format. This enables native Sandstorm integration on FD3 without an HTTP bridge, giving maximum performance for capability-based security."
 stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
@@ -45,6 +57,7 @@ scripts:
             <a href="#issuers" class="faq-nav-link">For Issuers</a>
             <a href="#investors" class="faq-nav-link">For Investors</a>
             <a href="#compliance" class="faq-nav-link">Compliance</a>
+            <a href="#architecture" class="faq-nav-link">Architecture</a>
             <a href="#technical" class="faq-nav-link">Technical</a>
         </nav>
     </div>
@@ -309,6 +322,129 @@ scripts:
                         <li>Investor category restrictions (accredited only, etc.)</li>
                     </ul>
                     <p>Tokens can only be transferred to addresses that pass all compliance checks.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="faq-section alt" id="architecture">
+    <div class="faq-container">
+        <div class="faq-header">
+            <span class="icon-wrapper"><svg><use href="#icon-layers"></use></svg></span>
+            <h2>Architecture Questions</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item featured">
+                <button class="faq-question">
+                    <span>What is the NFT authority hierarchy?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Sails.to enforces a <span class="glossary-term" data-term="nft-hierarchy">4-layer NFT hierarchy</span> on <span class="glossary-term" data-term="solana">Solana</span> — a cryptographic chain of trust from root to leaf:</p>
+                    <ol>
+                        <li><strong><span class="glossary-term" data-term="master-nft">Master NFT</span>:</strong> Root authority, controlled by 3-of-5 <span class="glossary-term" data-term="threshold-signing">threshold signing</span>. The sovereign key.</li>
+                        <li><strong>Reseller NFT:</strong> Print Edition from Master. Can issue License NFTs to platform installations.</li>
+                        <li><strong>License NFT (pNFT):</strong> Per-installation authority. Issues KYC credential NFTs to verified users.</li>
+                        <li><strong>Share NFT:</strong> Per-domain access tokens — up to 10,000 per License. The leaf of the tree.</li>
+                    </ol>
+                    <p>Every operation on the platform traces its authority back through this hierarchy. No NFT, no authority. No exceptions.</p>
+                </div>
+            </div>
+            <div class="faq-item featured">
+                <button class="faq-question">
+                    <span>What is a Grain and how does Melusina OS work?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>A <span class="glossary-term" data-term="grain">Grain</span> is the fundamental isolation unit in Sandstorm/<span class="glossary-term" data-term="melusina">Melusina</span> OS. Each grain is a sandboxed application instance with its own append-only journal store, capability set, and lifecycle. Think of it as an indestructible, self-contained process that remembers everything.</p>
+                    <p>Sails.to uses two grain types:</p>
+                    <ul>
+                        <li><strong>Station Grains</strong> (orchestrators): DAO Manager, Broker Portal, Trustee Dashboard — one per organization</li>
+                        <li><strong>Instance Grains</strong> (workers): Offering, KYC/Onboarding, Investor Self-Service — one per entity</li>
+                    </ul>
+                    <p>Grains communicate via <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> RPC through the <span class="glossary-term" data-term="powerbox">Powerbox</span>. No HTTP bridge. No shared databases. Pure capability security.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does threshold signing protect critical operations?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p><span class="glossary-term" data-term="threshold-signing">Threshold signing</span> uses Shamir-like M-of-N keyholder cryptography on <span class="glossary-term" data-term="solana">Solana</span> to protect critical operations. No single person can act alone:</p>
+                    <ul>
+                        <li><strong>3-of-5 keyholders:</strong> Master NFT operations, force transfers, contract upgrades</li>
+                        <li><strong>2-of-3 keyholders:</strong> Large <span class="glossary-term" data-term="crossconversion">CrossConversions</span> exceeding $1M, emergency account freezes</li>
+                        <li><strong>1-of-1 (Trustee NFT):</strong> Standard CrossConversions, distribution authentication</li>
+                    </ul>
+                    <p>Keyholders are geographically distributed and use hardware wallets. Key rotation procedures are documented and tested.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is Cap'n Proto and why do you use it?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p><span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> is a zero-copy serialization protocol — data is read directly from the wire format with no encoding or decoding step. We use it for inter-<span class="glossary-term" data-term="grain">grain</span> RPC communication on FD3, enabling native Sandstorm integration without an HTTP bridge.</p>
+                    <p>Our Cap'n Proto schemas define the capability interfaces for:</p>
+                    <ul>
+                        <li><strong>OfferingAPI:</strong> Subscribe, cap table queries, CrossConversion requests, distribution claims</li>
+                        <li><strong>KYCVerifier:</strong> Start verification, check status, issue/revoke credentials</li>
+                        <li><strong>TrusteeAPI:</strong> Authenticate conversions, sign reconciliations, emergency freezes</li>
+                        <li><strong>BrokerAPI:</strong> Place investors, list for secondary trading, match trades</li>
+                        <li><strong>GovernanceAPI:</strong> Create proposals, vote, execute decisions</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How does the Powerbox enable secure grain communication?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>The <span class="glossary-term" data-term="powerbox">Powerbox</span> is the inter-grain capability sharing mechanism. When the DAO Manager <span class="glossary-term" data-term="grain">grain</span> needs to grant a Broker access to an Offering, it doesn't share a password or API key — it offers a capability through the Powerbox.</p>
+                    <p>The flow works like this:</p>
+                    <ol>
+                        <li>Offering Grain publishes a <strong>Powerbox offer</strong> (e.g., OfferingAPI capability)</li>
+                        <li>Broker Grain requests the capability via <strong>Powerbox claim</strong></li>
+                        <li>Claim token is converted to a persistent <strong>sturdyRef</strong></li>
+                        <li>The sturdyRef survives restarts and enables cross-session, cross-grain communication</li>
+                    </ol>
+                    <p>Capabilities are fine-grained and revocable. A Broker gets placement authority, not admin access. A Trustee gets authentication authority, not modification rights.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is the waterfall distribution model?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>The <span class="glossary-term" data-term="waterfall">waterfall</span> is the revenue distribution priority structure, enforced on-chain via the <code>sails_distributions</code> <span class="glossary-term" data-term="smart-contract">smart contract</span>:</p>
+                    <ol>
+                        <li><strong>Senior debt holders</strong> — first priority, always paid first</li>
+                        <li><strong>Investor <span class="glossary-term" data-term="distributions">distributions</span></strong> — pro-rata by token holding</li>
+                        <li><strong>Platform fee</strong> — 1% of revenue</li>
+                        <li><strong>Excess</strong> — flows to <span class="glossary-term" data-term="treasury-series">Treasury Series</span></li>
+                    </ol>
+                    <p>Revenue enters the <span class="glossary-term" data-term="operating-series">Operating Series</span>, the waterfall executes automatically, and investors claim their allocation on-chain. Investors always get paid before the platform. Always.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What is a Transfer Hook?</span>
+                    <span class="faq-toggle">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>A <span class="glossary-term" data-term="transfer-hook">Transfer Hook</span> is a Solana SPL-2022 extension that intercepts every token transfer and enforces <span class="glossary-term" data-term="compliance">compliance</span> rules before allowing it. On Sails.to, the hook performs five checks:</p>
+                    <ul>
+                        <li>Both sender and receiver wallets have valid <span class="glossary-term" data-term="kyc">KYC</span> NFTs</li>
+                        <li>Receiver's jurisdiction is on the offering's whitelist</li>
+                        <li>Lock-up period has expired for the sender's tokens</li>
+                        <li>Receiver meets the required accreditation tier</li>
+                        <li>Transfer would not exceed maximum investor count for the offering</li>
+                    </ul>
+                    <p>If any check fails, the transfer is rejected on-chain. No exceptions. No overrides (except court-ordered force transfers via 3-of-5 threshold).</p>
                 </div>
             </div>
         </div>
