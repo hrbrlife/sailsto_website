@@ -187,22 +187,22 @@ scripts:
                     <a href="glossary/index.html#finance" class="kb-glossary-cat">
                         <span class="kb-glossary-icon" style="color: var(--gold);">💰</span>
                         <span class="kb-glossary-label">Finance</span>
-                        <span class="kb-glossary-count">6 terms</span>
+                        <span class="kb-glossary-count">31 terms</span>
                     </a>
                     <a href="glossary/index.html#compliance" class="kb-glossary-cat">
                         <span class="kb-glossary-icon" style="color: var(--navy);">⚖️</span>
                         <span class="kb-glossary-label">Compliance</span>
-                        <span class="kb-glossary-count">5 terms</span>
+                        <span class="kb-glossary-count">8 terms</span>
                     </a>
                     <a href="glossary/index.html#legal" class="kb-glossary-cat">
                         <span class="kb-glossary-icon" style="color: var(--crimson);">📜</span>
                         <span class="kb-glossary-label">Legal</span>
-                        <span class="kb-glossary-count">5 terms</span>
+                        <span class="kb-glossary-count">9 terms</span>
                     </a>
                     <a href="glossary/index.html#technology" class="kb-glossary-cat">
                         <span class="kb-glossary-icon" style="color: var(--slate);">⚙️</span>
                         <span class="kb-glossary-label">Technology</span>
-                        <span class="kb-glossary-count">4 terms</span>
+                        <span class="kb-glossary-count">13 terms</span>
                     </a>
                 </div>
                 <div class="kb-glossary-featured">
@@ -214,6 +214,9 @@ scripts:
                         <a href="/knowledge/glossary/isin/" class="glossary-term-pill">ISIN</a>
                         <a href="/knowledge/glossary/clearstream/" class="glossary-term-pill">Clearstream</a>
                         <a href="/knowledge/glossary/kyc/" class="glossary-term-pill">KYC</a>
+                        <a href="/knowledge/glossary/nft-hierarchy/" class="glossary-term-pill">NFT Hierarchy</a>
+                        <a href="/knowledge/glossary/grain/" class="glossary-term-pill">Grain</a>
+                        <a href="/knowledge/glossary/threshold-signing/" class="glossary-term-pill">Threshold Signing</a>
                     </div>
                 </div>
             </div>
