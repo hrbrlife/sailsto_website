@@ -1,0 +1,507 @@
+/* ═══════════════════════════════════════════════════════════════
+   COMPARE PAGE STYLES
+   Competitor comparison matrix, detail sections, verdict cards
+═══════════════════════════════════════════════════════════════ */
+
+/* ── Matrix Table ─────────────────────────────────────────── */
+.compare-matrix-section {
+    padding: 100px 48px;
+    background: var(--ivory);
+    position: relative;
+    z-index: 10;
+}
+
+.compare-matrix-container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.compare-matrix-container > h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.compare-matrix-container > p {
+    color: var(--slate);
+    font-size: 1rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+.matrix-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 12px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.06);
+}
+
+.matrix-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    min-width: 1100px;
+}
+
+.matrix-table thead th {
+    background: var(--navy);
+    color: var(--ivory);
+    padding: 18px 16px;
+    font-family: var(--font-ui);
+    font-weight: 600;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-align: center;
+    border-bottom: 2px solid var(--gold);
+    white-space: nowrap;
+}
+
+.matrix-table thead th:first-child {
+    text-align: left;
+    min-width: 170px;
+}
+
+.matrix-table thead th.sails-col {
+    background: linear-gradient(135deg, var(--navy) 0%, #1a2d42 100%);
+    position: relative;
+}
+
+.matrix-table thead th.sails-col::after {
+    content: '★';
+    display: block;
+    font-size: 0.65rem;
+    color: var(--gold);
+    margin-top: 2px;
+}
+
+.matrix-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.matrix-table tbody tr:nth-child(even) {
+    background: rgba(247, 245, 237, 0.5);
+}
+
+.matrix-table tbody tr:hover {
+    background: rgba(201, 162, 39, 0.06);
+}
+
+.matrix-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    text-align: center;
+    vertical-align: top;
+    color: var(--charcoal);
+}
+
+.matrix-table td:first-child {
+    text-align: left;
+    font-weight: 600;
+    color: var(--ink);
+    font-family: var(--font-ui);
+    font-size: 0.82rem;
+    letter-spacing: 0.01em;
+}
+
+.matrix-table td.sails-cell {
+    background: rgba(201, 162, 39, 0.05);
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.matrix-table td .cell-label {
+    display: block;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 2px;
+}
+
+.matrix-table td .cell-note {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--silver);
+    line-height: 1.4;
+}
+
+.matrix-table td .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+}
+
+.badge-gold {
+    background: rgba(201, 162, 39, 0.12);
+    color: #9A7B1A;
+}
+
+.badge-green {
+    background: rgba(34, 139, 34, 0.1);
+    color: #1a7a1a;
+}
+
+.badge-navy {
+    background: rgba(13, 27, 42, 0.1);
+    color: var(--navy);
+}
+
+.badge-red {
+    background: rgba(184, 25, 43, 0.08);
+    color: var(--crimson);
+}
+
+.badge-gray {
+    background: rgba(0,0,0,0.06);
+    color: var(--slate);
+}
+
+/* ── Nuanced Differences Section ──────────────────────────── */
+.compare-details-section {
+    padding: 100px 48px;
+    background: var(--cream);
+    position: relative;
+    z-index: 10;
+}
+
+.compare-details-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.compare-details-container > h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.compare-details-container > p.section-intro {
+    color: var(--slate);
+    font-size: 1rem;
+    margin-bottom: 60px;
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+.compare-detail-block {
+    margin-bottom: 64px;
+}
+
+.compare-detail-block:last-child {
+    margin-bottom: 0;
+}
+
+.compare-detail-block h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 8px;
+    letter-spacing: -0.01em;
+}
+
+.compare-detail-block .detail-number {
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.compare-detail-block > p {
+    color: var(--slate);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 24px;
+    max-width: 800px;
+}
+
+.compare-detail-items {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.compare-detail-item {
+    background: white;
+    border-radius: 10px;
+    padding: 24px 28px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s ease;
+}
+
+.compare-detail-item:hover {
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+}
+
+.compare-detail-item.sails-highlight {
+    border-left: 3px solid var(--gold);
+    background: rgba(201, 162, 39, 0.03);
+}
+
+.compare-detail-item strong {
+    display: block;
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 6px;
+}
+
+.compare-detail-item p {
+    color: var(--slate);
+    font-size: 0.9rem;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ── Competitor Profiles Section ──────────────────────────── */
+.compare-profiles-section {
+    padding: 100px 48px;
+    background: var(--ivory);
+    position: relative;
+    z-index: 10;
+}
+
+.compare-profiles-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.compare-profiles-container > h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 40px;
+    letter-spacing: -0.02em;
+}
+
+.profiles-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.profile-card {
+    background: white;
+    border-radius: 12px;
+    padding: 32px;
+    box-shadow: 0 1px 12px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+.profile-card .profile-type {
+    font-family: var(--font-ui);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    color: var(--silver);
+    margin-bottom: 6px;
+    display: block;
+}
+
+.profile-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 12px;
+}
+
+.profile-card .profile-best {
+    font-size: 0.88rem;
+    color: var(--charcoal);
+    line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.profile-card .profile-tradeoff {
+    font-size: 0.85rem;
+    color: var(--silver);
+    line-height: 1.6;
+    padding-top: 12px;
+    border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.profile-card .profile-tradeoff strong {
+    color: var(--slate);
+}
+
+/* ── Verdict Section ──────────────────────────────────────── */
+.compare-verdict-section {
+    padding: 100px 48px;
+    background: var(--cream);
+    position: relative;
+    z-index: 10;
+}
+
+.compare-verdict-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.compare-verdict-container > h2 {
+    font-family: var(--font-display);
+    font-size: clamp(1.8rem, 3vw, 2.4rem);
+    font-weight: 400;
+    color: var(--ink);
+    margin-bottom: 12px;
+    letter-spacing: -0.02em;
+}
+
+.compare-verdict-container > p {
+    color: var(--slate);
+    font-size: 1rem;
+    margin-bottom: 48px;
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+.verdict-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.verdict-card {
+    background: white;
+    border-radius: 12px;
+    padding: 28px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.verdict-card h4 {
+    font-family: var(--font-ui);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--ink);
+    margin-bottom: 12px;
+}
+
+.verdict-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.verdict-card ul li {
+    font-size: 0.88rem;
+    color: var(--slate);
+    line-height: 1.6;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 6px;
+}
+
+.verdict-card ul li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--silver);
+}
+
+.verdict-sails {
+    background: var(--navy);
+    border-radius: 14px;
+    padding: 40px;
+    box-shadow: 0 4px 30px rgba(13, 27, 42, 0.15);
+    border: none;
+}
+
+.verdict-sails h4 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--ivory);
+    margin-bottom: 16px;
+}
+
+.verdict-sails ul li {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.92rem;
+    margin-bottom: 10px;
+}
+
+.verdict-sails ul li::before {
+    content: '✓';
+    color: var(--gold);
+    font-weight: 700;
+}
+
+/* ── Scroll Hint ──────────────────────────────────────────── */
+.scroll-hint {
+    display: none;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.75rem;
+    color: var(--silver);
+    font-family: var(--font-ui);
+    letter-spacing: 0.05em;
+}
+
+.scroll-hint svg {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-right: 4px;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════════ */
+@media (max-width: 1024px) {
+    .profiles-grid,
+    .verdict-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .compare-matrix-section,
+    .compare-details-section,
+    .compare-profiles-section,
+    .compare-verdict-section {
+        padding: 60px 24px;
+    }
+
+    .scroll-hint {
+        display: block;
+    }
+
+    .compare-detail-item {
+        padding: 20px;
+    }
+
+    .profile-card {
+        padding: 24px;
+    }
+
+    .verdict-sails {
+        padding: 28px;
+    }
+}
