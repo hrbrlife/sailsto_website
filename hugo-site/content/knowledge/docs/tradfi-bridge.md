@@ -7,6 +7,7 @@ stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
+  - "/assets/css/docs.css"
 draft: false
 ---
 
@@ -18,11 +19,9 @@ draft: false
 
 <section class="features-section">
     <div class="container">
-
         <h2>Overview</h2>
         <p>The <span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span> is not a single service. It is the entire integration layer that connects the on-chain world of <a href="/knowledge/glossary/solana/">Solana</a> programs and <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> to the traditional financial system — <span class="glossary-term" data-term="clearstream">Clearstream</span> settlement, SWIFT messaging, SEC regulatory filings, investor notifications, and revenue distribution. Every service that touches an external system or translates between on-chain events and off-chain actions lives here.</p>
         <p>The bridge is composed of five cooperating services, each running as a <span class="glossary-term" data-term="grain">grain</span> or sidecar within the Sandstorm/Melusina OS environment:</p>
-
         <table>
             <thead>
                 <tr>
@@ -59,12 +58,9 @@ draft: false
                 </tr>
             </tbody>
         </table>
-
         <p>All bridge services share two non-negotiable constraints: every action is logged to an append-only journal with <strong>7-year retention</strong>, and every service must tolerate restarts via deterministic journal replay. If a grain crashes mid-operation, it recovers to exact state on restart. No data loss. No missed events.</p>
-
         <h2>Architecture</h2>
         <p>The bridge services form a directed pipeline. On-chain events flow in through the Solana Event Watcher, fan out to the appropriate grains, and ultimately produce off-chain effects — settlement instructions, notifications, regulatory filings, and distribution payments.</p>
-
         <pre><code>┌──────────────────────┐
 │  Solana Programs     │
 │  (sails_securities,  │
@@ -100,12 +96,9 @@ draft: false
 │  Notification Service (Go)   │
 │  Email · Webhook · WebSocket │
 └──────────────────────────────┘</code></pre>
-
         <p>The <span class="glossary-term" data-term="powerbox">Powerbox</span> capability system governs all inter-grain communication. The Event Watcher holds capabilities to the Offering Grain, CrossConversion Operator, DAO Manager, Broker Grain, and Investor Grains. Each capability is a persistent <code>SturdyRef</code> — surviving grain restarts and session boundaries. No service can call another service it hasn't been explicitly granted access to.</p>
-
         <h2>Solana Event Watcher</h2>
         <p>The Solana Event Watcher is a Go grain that subscribes to program events via WebSocket RPC and routes them to the appropriate grain for processing. It is the single entry point for all on-chain activity into the off-chain platform.</p>
-
         <pre><code>Service: solana-watcher (Go, runs as grain)
 ├── Subscribe to program events via WebSocket RPC
 ├── Route events to appropriate grains:
@@ -116,7 +109,6 @@ draft: false
 │   └── TransferCompleted → Broker Grain (settlement confirmation)
 ├── Maintain local event log for replay
 └── Health monitoring &amp; reconnection logic</code></pre>
-
         <h3>Event Routing Table</h3>
         <table>
             <thead>
@@ -160,7 +152,6 @@ draft: false
                 </tr>
             </tbody>
         </table>
-
         <h3>Connection Management</h3>
         <p>The watcher maintains a persistent WebSocket connection to the Solana RPC node. Connection resilience is critical — a dropped connection means missed events, which means the off-chain state drifts from on-chain reality.</p>
         <ul>
@@ -169,7 +160,6 @@ draft: false
             <li><strong>Local event log:</strong> Every event received is written to the grain's append-only journal <em>before</em> routing. On crash recovery, the journal replay re-delivers any events that were received but not yet acknowledged by their destination grain.</li>
             <li><strong>Deduplication:</strong> Each event carries a unique <code>(slot, tx_signature, log_index)</code> tuple. Destination grains reject duplicate deliveries idempotently.</li>
         </ul>
-
         <h3>Watcher Configuration</h3>
         <pre><code># solana-watcher.toml
 [rpc]
@@ -191,10 +181,8 @@ cross_conversion       = "crossconv-operator"
 distribution_paid      = "investor-grains"
 compliance_violation   = "dao-manager"
 transfer_completed     = "broker-grain"</code></pre>
-
         <h2>Notification Service</h2>
         <p>The Notification Service is a Go grain that delivers messages to every participant in the platform — investors, brokers, trustees, issuers, and compliance officers. It supports three delivery channels: email, webhooks, and in-app WebSocket push.</p>
-
         <pre><code>Service: notification-grain (Go)
 ├── Email (via Sandstorm email capability or external SMTP)
 │   ├── Investor subscription confirmations
@@ -204,7 +192,6 @@ transfer_completed     = "broker-grain"</code></pre>
 │   └── Regulatory notices
 ├── Webhook notifications to broker systems
 └── In-app notifications via WebSocket hub</code></pre>
-
         <h3>Notification Types</h3>
         <table>
             <thead>
@@ -260,7 +247,6 @@ transfer_completed     = "broker-grain"</code></pre>
                 </tr>
             </tbody>
         </table>
-
         <h3>Email Delivery</h3>
         <p>The notification grain uses the Sandstorm email capability when available, falling back to external SMTP (e.g., SendGrid, SES) for high-volume delivery. All emails are template-driven, rendered server-side with Go's <code>html/template</code> package. Templates are versioned in the grain's journal — every email sent is reproducible from the journal state at send time.</p>
         <ul>
@@ -268,16 +254,12 @@ transfer_completed     = "broker-grain"</code></pre>
             <li><strong>Rate limiting:</strong> Per-recipient rate limits prevent notification fatigue. Distribution notifications for the same offering are batched into a single daily digest if the investor holds positions in multiple tranches.</li>
             <li><strong>Unsubscribe:</strong> Regulatory notices and compliance alerts cannot be unsubscribed. All other notification categories support per-investor preference management.</li>
         </ul>
-
         <h3>Webhook Delivery</h3>
         <p>Broker systems receive real-time event data via authenticated HTTPS webhooks. The notification grain signs each webhook payload with the broker's shared HMAC secret. Delivery uses at-least-once semantics with exponential backoff retries (1s, 2s, 4s, up to 5 minutes). Brokers must respond with HTTP 2xx within 10 seconds or the delivery is retried.</p>
-
         <h3>In-App WebSocket</h3>
         <p>Real-time notifications are pushed to connected clients via <code>WebSession_WebSocketStream</code> — the <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> WebSocket interface native to Sandstorm grains. Each grain maintains its own WebSocket hub. When a notification targets a specific investor, the notification grain sends it to that investor's Self-Service Grain, which pushes it to any connected browser sessions.</p>
-
         <h2>Revenue &amp; Distribution Bridge</h2>
         <p>The Distribution Bridge connects the on-chain <code>sails_distributions</code> waterfall program to the <span class="glossary-term" data-term="bankable">bankable</span> side of the platform. When revenue enters and the waterfall executes, token holders on-chain claim their distributions directly from the program. But investors who have converted to <span class="glossary-term" data-term="isin">ISIN</span>-identified securities via <span class="glossary-term" data-term="crossconversion">CrossConversion</span> are not on-chain — their positions live at <span class="glossary-term" data-term="clearstream">Clearstream</span>. The Distribution Bridge ensures they receive their pro-rata share through traditional corporate action channels.</p>
-
         <h3>Distribution Flow</h3>
         <ol>
             <li><strong>Revenue enters the Operating Series</strong> — Cash from the underlying asset (rent, revenue, interest) is deposited into the Operating Series account via the <code>deposit_revenue</code> instruction on the <code>sails_distributions</code> program.</li>
@@ -293,7 +275,6 @@ transfer_completed     = "broker-grain"</code></pre>
             <li><strong>Bankable holders receive corporate actions</strong> — For investors whose tokens are locked in the <span class="glossary-term" data-term="crossconversion">CrossConversion</span> lockbox, the Distribution Bridge calculates their pro-rata share based on lockbox position records and instructs the Clearstream Adapter to issue a corporate action (ISO 20022 <code>seev.031</code> notification followed by <code>seev.035</code> movement confirmation) crediting the investor's Clearstream cash account.</li>
             <li><strong>Reconciliation</strong> — The <code>reconcile</code> instruction on the distributions program cross-checks on-chain claim records with Clearstream corporate action confirmations. Total distributed must equal total waterfall output for the epoch. The <span class="glossary-term" data-term="trustee">Trustee</span> signs the reconciliation report.</li>
         </ol>
-
         <h3>Bankable Distribution Detail</h3>
         <table>
             <thead>
@@ -331,10 +312,8 @@ transfer_completed     = "broker-grain"</code></pre>
                 </tr>
             </tbody>
         </table>
-
         <h2>Regulatory Filing Service</h2>
         <p>The Regulatory Filing Service is a Go <span class="glossary-term" data-term="grain">grain</span> (<code>compliance-grain</code>) responsible for generating the documents and data feeds that regulators require. Every offering on the platform operates under a specific regulatory exemption — <span class="glossary-term" data-term="reg-d">Reg D</span> 506(b), Reg D 506(c), <span class="glossary-term" data-term="reg-s">Reg S</span>, Reg A+, or Reg CF — and each exemption carries its own filing and reporting obligations.</p>
-
         <pre><code>Service: compliance-grain (Go)
 ├── Form D Filing (SEC) — generate XML for EDGAR
 ├── Blue Sky State Filings — track per-state exemptions
@@ -343,7 +322,6 @@ transfer_completed     = "broker-grain"</code></pre>
 ├── Cap Table Reporting — ownership snapshots for tax season
 ├── K-1 Generation — for LLC pass-through taxation
 └── Audit Export — full audit trail in standard format</code></pre>
-
         <h3>Form D (SEC EDGAR)</h3>
         <p>Every Reg D offering must file Form D with the SEC within 15 days of first sale. The compliance grain generates the complete Form D XML document conforming to the SEC's EDGAR schema, populated from on-chain offering state and issuer metadata stored in the Offering Grain journal.</p>
         <ul>
@@ -351,7 +329,6 @@ transfer_completed     = "broker-grain"</code></pre>
             <li><strong>Annual amendments:</strong> The grain tracks the 12-month filing anniversary and generates amendment XML with updated sales totals, investor counts, and use-of-proceeds data.</li>
             <li><strong>Human review:</strong> All generated filings are routed to the compliance officer for review and approval before EDGAR submission. The grain surfaces the filing in the DAO Manager compliance dashboard with a review/approve/reject workflow.</li>
         </ul>
-
         <h3>Blue Sky State Filings</h3>
         <p>Reg D offerings require notice filings in each state where securities are sold. The compliance grain tracks investor jurisdictions (from <span class="glossary-term" data-term="kyc">KYC</span> credential metadata — jurisdiction hash, not raw PII) and maintains a per-state filing status matrix.</p>
         <table>
@@ -385,10 +362,8 @@ transfer_completed     = "broker-grain"</code></pre>
                 </tr>
             </tbody>
         </table>
-
         <h3>AML/SAR Reporting</h3>
         <p>The compliance grain monitors transaction patterns for suspicious activity. When the <code>sails_securities</code> transfer hook or the KYC grain flags anomalous behavior — unusual transfer volumes, rapid CrossConversion cycling, jurisdiction mismatches — the grain generates a Suspicious Activity Report (SAR) draft for compliance officer review. SAR filing is never automated; the grain produces the draft, the compliance officer decides whether to file.</p>
-
         <h3>K-1 Tax Documents</h3>
         <p>Because the <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO Series LLC</span> structure uses pass-through taxation, every investor who received distributions during the tax year needs a Schedule K-1. The compliance grain generates K-1 documents by combining:</p>
         <ul>
@@ -397,10 +372,8 @@ transfer_completed     = "broker-grain"</code></pre>
             <li>Investor tax identification data (stored encrypted in the KYC grain journal — accessed via Powerbox capability, never copied)</li>
         </ul>
         <p>K-1 documents are generated annually, routed to the issuer's tax preparer for review, and delivered to investors via the Notification Service.</p>
-
         <h2>Monitoring &amp; Health</h2>
         <p>The TradFi Bridge spans two fundamentally different systems — a blockchain with deterministic state and a traditional settlement infrastructure with batch processing and business-hours operations. Monitoring must cover both sides and the connection between them.</p>
-
         <h3>Solana Program Monitoring</h3>
         <table>
             <thead>
@@ -438,7 +411,6 @@ transfer_completed     = "broker-grain"</code></pre>
                 </tr>
             </tbody>
         </table>
-
         <h3>Grain Health</h3>
         <table>
             <thead>
@@ -476,7 +448,6 @@ transfer_completed     = "broker-grain"</code></pre>
                 </tr>
             </tbody>
         </table>
-
         <h3>CrossConversion Reconciliation Dashboard</h3>
         <p>A real-time dashboard that visualizes the core 1:1 invariant across every offering with <span class="glossary-term" data-term="crossconversion">CrossConversion</span> enabled:</p>
         <ul>
@@ -485,7 +456,6 @@ transfer_completed     = "broker-grain"</code></pre>
             <li><strong>Last reconciliation timestamp:</strong> Time since the last Trustee-signed reconciliation per offering. Stale reconciliation (&gt; 36 hours) triggers a P1 alert.</li>
             <li><strong>Pending conversions:</strong> CrossConversion requests in flight — submitted but not yet confirmed by Clearstream. Pending &gt; 4 hours triggers a P1 alert.</li>
         </ul>
-
         <h3>Alerting Tiers</h3>
         <table>
             <thead>
@@ -517,7 +487,6 @@ transfer_completed     = "broker-grain"</code></pre>
                 </tr>
             </tbody>
         </table>
-
         <h2>Next Steps</h2>
         <ul>
             <li><a href="/knowledge/docs/clearstream/">Clearstream Integration</a> — Deep dive into the Clearstream Adapter: ISIN registration, SWIFT settlement, reconciliation, and communication protocols</li>
@@ -527,6 +496,5 @@ transfer_completed     = "broker-grain"</code></pre>
             <li><a href="/knowledge/docs/compliance-framework/">Compliance Framework</a> — KYC credentials, jurisdiction rules, and transfer enforcement</li>
             <li><a href="/knowledge/docs/platform-overview/">Platform Overview</a> — The three-pillar architecture and grain types</li>
         </ul>
-
     </div>
 </section>

@@ -216,7 +216,6 @@ scripts:
                 <p>Enterprise compliance & KYC platform</p>
             </div>
         </div>
-
         <div style="text-align: center; margin: 80px 0 40px;">
             <span class="section-label">External Oversight</span>
             <h3 style="font-size: 1.8rem; color: var(--ink); margin-top: 12px;">Auditors</h3>
