@@ -1,0 +1,860 @@
+# 🏗️ Sails.to
+
+## Executive Summary
+
+**Sails.to** is a regulated platform for tokenized securities issuance, compliance, and broker-mediated secondary trading. It is built on three pillars:
+
+1. **`sailsto_website`** — The business: marketing site, legal templates, and the product definition (Wyoming DAO Series LLC + CrossSecurities + CrossConversion + multi-broker OTC)
+2. **`Melusina`** — The on-chain authority layer: Solana NFT-based licensing, KYC credentialing, hierarchical access control (Master → Reseller → License → Share), and threshold crypto operations
+3. **`BLOOM_FINAL`** — The application engine: Sandstorm/Melusina OS grains, Cap'n Proto RPC, Go+HTMX native stack, KYC workflow orchestration, powerbox-based capability sharing
+
+The plan below describes **everything that must be built** to bring Sails.to live, organized into six pillars. Each section is self-standing.
+
+---
+
+## Table of Contents
+
+1. [Pillar 1: Smart Contracts & NFT Authority Suite (Solana)](#pillar-1-smart-contracts--nft-authority-suite-solana)
+2. [Pillar 2: CrossConversion Engine (On-Chain ↔ Bankable Bridge)](#pillar-2-crossconversion-engine-on-chain--bankable-bridge)
+3. [Pillar 3: Multi-Grain Application Platform (Sandstorm/Melusina OS)](#pillar-3-multi-grain-application-platform-sandstormmelusina-os)
+4. [Pillar 4: Cap'n Proto Schema & Capability Graph](#pillar-4-capn-proto-schema--capability-graph)
+5. [Pillar 5: Integration Layer & External Systems](#pillar-5-integration-layer--external-systems)
+6. [Pillar 6: Website → Platform Connection](#pillar-6-website--platform-connection)
+7. [Build Sequence (Recommended Phases)](#build-sequence-recommended-phases)
+8. [Cross-Cutting Concerns](#cross-cutting-concerns)
+9. [Testing Strategy](#testing-strategy)
+10. [Infrastructure & DevOps](#infrastructure--devops)
+11. [Risk Management](#risk-management)
+12. [Success Criteria & Definition of Done](#success-criteria--definition-of-done)
+
+---
+
+## Prerequisites & External Dependencies
+
+Before development begins, the following must be in place:
+
+| Dependency | Type | Status | Lead Time |
+|------------|------|--------|-----------|
+| Wyoming DAO Series LLC formation | Legal | Required before launch | 2–4 weeks |
+| Clearstream account & API access | Integration | Required for Phase 3 | 4–8 weeks (application + onboarding) |
+| SEC Reg D / Reg S exemption filings | Regulatory | Required before first offering | 2–4 weeks per filing |
+| Solana devnet/mainnet RPC provider | Infrastructure | Required for Phase 1 | Immediate |
+| Sandstorm/Melusina OS build environment | Infrastructure | Required for Phase 1 | 1–2 weeks setup |
+| Cap'n Proto toolchain (Go bindings) | Tooling | Required for Phase 1 | Immediate |
+| KYC data provider API (e.g., Onfido, Jumio) | Integration | Required for Phase 2 | 2–4 weeks (contract + integration) |
+| SMTP / email service (e.g., SendGrid, SES) | Integration | Required for Phase 2 | Immediate |
+| Legal counsel review of smart contracts | Legal | Required before mainnet deployment | Ongoing |
+| External security audit firm engagement | Security | Required before Phase 4 launch | 4–8 weeks lead time |
+
+> **Audit update (2026-02-11):** Dependencies with multi-week lead times (Clearstream onboarding, legal/audit engagements) must be initiated during Phase 1 to avoid blocking Phase 3+. Owners and target dates should be tracked alongside this table.
+
+---
+
+## Pillar 1: Smart Contracts & NFT Authority Suite (Solana)
+
+### 1.1 Existing Foundation (from `Melusina`)
+
+The `melusina_solana_dev-license` program (Anchor/Rust) already implements a **4-layer NFT hierarchy**:
+
+| Layer | NFT Type | Purpose | Who Creates |
+|-------|----------|---------|-------------|
+| 1 | **Master NFT** | Root authority, 3-of-5 keyholder threshold | Platform bootstrap |
+| 2 | **Reseller NFT** | Print Edition from Master; can issue licenses | Master holder |
+| 3 | **License NFT** (pNFT) | Per-installation authority; issues KYC NFTs | Reseller |
+| 4 | **Share NFT** | Per-domain access tokens (up to 10,000 per license) | License holder |
+
+Additional existing components:
+- **KYC NFT minting** (`mintKyc`) — license holder issues KYC credential to verified users
+- **SPL-2022 token minting** (`mintSpl`) — only to KYC-verified wallets
+- **Transfer Hook** — rejects all user-to-user transfers (compliance enforcement)
+- **Admin NFT system** — Operator/Manager/Security/Root roles with optional expiration and recall
+- **Threshold crypto** (`solana-threshold.py`) — Shamir-like M-of-N keyholder signing
+- **SDK** (`melusina-sdk.ts`) — TypeScript client for all 4 layers
+
+### 1.2 What Must Be Built for Sails.to
+
+#### A. CrossSecurities Token Program (New Anchor Program)
+
+A **new Solana program** specifically for Sails.to securities, extending the Melusina pattern:
+
+```
+Program: sails_securities
+├── Instructions:
+│   ├── init_offering(series_id, token_config, max_supply, nominal_value)
+│   │   → Creates PDA for offering, links to DAO Series LLC
+│   ├── mint_security_token(offering_id, investor_wallet, amount)
+│   │   → Requires valid KYC NFT + accreditation check
+│   ├── burn_for_crossconversion(offering_id, amount)
+│   │   → Locks tokens, emits event for ISIN issuance
+│   ├── redeem_from_crossconversion(offering_id, amount, clearstream_proof)
+│   │   → Unlocks tokens from CrossConversion lockbox
+│   ├── distribute(offering_id, amount_per_token)
+│   │   → Dividend/interest distribution to all holders
+│   ├── transfer_with_compliance(from, to, amount)
+│   │   → Checks both wallets have valid KYC, checks lock-up period,
+│   │     checks jurisdiction whitelist, checks accreditation tier
+│   ├── freeze_account(investor_wallet, reason)
+│   │   → Regulatory freeze (requires Admin NFT level=Security)
+│   ├── force_transfer(from, to, amount, court_order_hash)
+│   │   → Court-ordered transfer (requires 3-of-5 keyholder threshold)
+│   └── close_offering(offering_id)
+│       → Final redemption, burn remaining tokens
+├── Accounts (PDAs):
+│   ├── OfferingState: [series_id, max_supply, minted, locked_in_crossconv, nominal_value, status]
+│   ├── InvestorPosition: [offering_id, wallet, balance, locked_until, accreditation_tier, jurisdiction]
+│   ├── CrossConversionLockbox: [offering_id, total_locked, isin_code, clearstream_ref]
+│   ├── DistributionRecord: [offering_id, epoch, amount_per_token, claimed_bitmap]
+│   └── ComplianceConfig: [offering_id, allowed_jurisdictions, min_investment, lock_up_days, max_investors]
+└── Events:
+    ├── SecurityMinted { offering, investor, amount, timestamp }
+    ├── CrossConversionRequested { offering, amount, direction, isin }
+    ├── DistributionPaid { offering, epoch, total_amount }
+    ├── ComplianceViolation { offering, investor, reason }
+    └── TransferCompleted { offering, from, to, amount }
+```
+
+#### B. KYC Credential NFT (Sails-specific Extension)
+
+Extend the existing Melusina KYC NFT to encode **Sails.to-specific investor classifications**:
+
+```
+KYC NFT Metadata (on-chain, no PII):
+├── investor_class: enum { Accredited, Professional, QualifiedPurchaser, Retail }
+├── jurisdiction_hash: [u8; 32]  // SHA256 of ISO country code, anonymized
+├── reg_exemption: enum { RegD506b, RegD506c, RegS, RegA, RegCF }
+├── verification_level: enum { Basic, Enhanced, InstitutionalEDD }
+├── issued_by: Pubkey  // Licensed KYC provider's license NFT
+├── issued_at: i64
+├── expires_at: i64
+├── aml_clear: bool
+└── pep_clear: bool
+```
+
+#### C. Operator/Trustee/Broker Authorization NFTs
+
+Adapt the existing Admin NFT system for Sails.to's participant roles:
+
+| Role NFT | Capabilities | Issued By | Recallable |
+|----------|-------------|-----------|------------|
+| **Platform Operator** | Deploy offerings, manage platform config | Master (3-of-5) | Yes |
+| **White-Label Operator** | Operate branded instance, manage own issuers | Platform Operator | Yes |
+| **Trustee** | Authenticate transactions, validate CrossConversions | Platform Operator | Yes |
+| **KYC Issuer** | Issue KYC credential NFTs to verified investors | Platform Operator | Yes |
+| **Broker** | Place investors, execute secondary trades | Platform Operator | Yes |
+| **Issuer** | Create offerings within their Series, manage investors | Platform Operator | Yes |
+| **Paying Agent** | Execute distributions, manage revenue waterfall | Trustee | Yes |
+
+Each is a print edition from the **Sails Master NFT**, with role-specific metadata and optional expiration.
+
+#### D. Distribution & Waterfall Smart Contract
+
+```
+Program: sails_distributions
+├── init_waterfall(offering_id, tranches[])
+│   → Define investor-first waterfall structure
+├── deposit_revenue(offering_id, amount, source)
+│   → Revenue enters from Operating Series
+├── execute_waterfall(offering_id)
+│   → Auto-distribute per tranche priority:
+│     1. Senior debt holders
+│     2. Investor distributions (pro-rata by token holding)
+│     3. Platform fee (1%)
+│     4. Excess to Treasury Series
+├── claim_distribution(offering_id, epoch)
+│   → Investor pulls their allocation
+└── reconcile(offering_id, epoch, clearstream_data)
+    → Cross-check on-chain distributions with bankable side
+```
+
+---
+
+## Pillar 2: CrossConversion Engine (On-Chain ↔ Bankable Bridge)
+
+### 2.1 Architecture
+
+CrossConversion is the mechanism that makes Sails CrossSecurities "hybrid":
+- **Cross to Bankable**: Lock Solana tokens → Issue ISIN-identified securities via Clearstream
+- **Cross to On-Chain**: Cancel Clearstream position → Unlock Solana tokens
+
+The 1:1 invariant MUST always hold: `tokens_locked == isin_outstanding`
+
+### 2.2 Components to Build
+
+#### A. CrossConversion Series Smart Contract (on-chain)
+
+```
+Program: sails_crossconversion
+├── init_lockbox(offering_id, isin_code, clearstream_account)
+├── lock_tokens(offering_id, amount)
+│   → Transfer tokens to lockbox PDA, emit CrossConversionRequested event
+├── unlock_tokens(offering_id, amount, trustee_signature, clearstream_proof)
+│   → Verify Clearstream cancellation, release tokens
+├── get_lockbox_state(offering_id) → { locked, isin_outstanding }
+└── reconcile(offering_id, clearstream_snapshot_hash)
+    → Trustee-signed reconciliation (periodic, e.g., daily)
+```
+
+#### B. CrossConversion Operator Service (off-chain)
+
+A **Sandstorm grain** (Go+HTMX) that:
+1. Listens for `CrossConversionRequested` Solana events
+2. Validates the requesting investor's KYC NFT & eligibility
+3. Initiates ISIN issuance workflow with Clearstream (API integration)
+4. Stores proof-of-issuance on-chain once Clearstream confirms
+5. For reverse conversions: verifies Clearstream cancellation, triggers `unlock_tokens`
+6. Maintains audit trail and reconciliation logs
+7. Trustee must authenticate each conversion (Trustee NFT required)
+
+#### C. Reconciliation Engine
+
+- Nightly job comparing on-chain lockbox state with Clearstream holdings
+- Generates discrepancy reports for Trustee review
+- Alerts on supply mismatch (critical: this should never happen)
+
+---
+
+## Pillar 3: Multi-Grain Application Platform (Sandstorm/Melusina OS)
+
+### 3.1 Architecture Pattern (from `BLOOM_FINAL`)
+
+The gohtmx example establishes the **canonical pattern** for Sails.to apps:
+
+```
+┌─────────────────────────────────────────────────────┐
+│  Sandstorm/Melusina OS                               │
+│  ┌───────────────┐  ┌───────────────┐                │
+│  │ Station Grain  │  │ Instance Grain │               │
+│  │ (Orchestrator) │  │ (Worker)       │               │
+│  │                │  │                │               │
+│  │ Go binary      │  │ Go binary      │               │
+│  │ FD3 → Cap'n    │  │ FD3 → Cap'n    │               │
+│  │ Proto RPC      │  │ Proto RPC      │               │
+│  │                │  │                │               │
+│  │ UiView Server  │  │ UiView Server  │               │
+│  │ WebSession     │  │ WebSession     │               │
+│  │ (HTMX+Templ)   │  │ (HTMX+Templ)   │               │
+│  │                │  │                │               │
+│  │ Journal Store  │  │ Journal Store  │               │
+│  │ Workflow Engine │  │ Process Engine │               │
+│  │ WebSocket Hub  │  │ WebSocket Hub  │               │
+│  └───────┬───────┘  └───────┬───────┘                │
+│          │ Powerbox           │ Powerbox               │
+│          └───────────────────┘                         │
+│         Cap'n Proto capabilities                       │
+└─────────────────────────────────────────────────────┘
+```
+
+**Key architectural decisions**:
+- **No HTTP bridge** — Native Cap'n Proto on FD3, Go implements `UiView`, `WebSession` directly
+- **HTMX** — Server-rendered HTML fragments over WebSession, no SPA
+- **Journal-based storage** — Append-only log per grain, deterministic replay
+- **Powerbox** — Inter-grain capability sharing (claim token → sturdyRef lifecycle)
+- **WebSocket via Cap'n Proto** — `WebSession_WebSocketStream` for real-time updates
+
+### 3.2 Grains to Build for Sails.to
+
+#### A. **DAO Manager Grain** (Station-type, one per DAO LLC)
+
+**Purpose**: Central governance hub for a DAO Series LLC
+
+```
+Capabilities:
+├── Create/manage Series within the DAO
+├── Appoint trustees, paying agents, auditors
+├── Configure governance rules (voting thresholds, quorum)
+├── Monitor all Series status and compliance
+├── Manage Master NFT keyholder roster
+└── Emergency actions (freeze, force-transfer) via threshold signing
+
+Permissions (Sandstorm):
+├── admin: Full DAO control (Master NFT holder)
+├── trustee: Authenticate transactions, view all Series
+├── auditor: Read-only access to all records
+├── operator: Day-to-day operations
+└── observer: Dashboard-only access
+
+UI (HTMX):
+├── /dashboard — All Series overview, AUM, investor count
+├── /series/:id — Individual Series detail
+├── /governance — Voting, proposals, keyholder management
+├── /compliance — Regulatory status, audit logs
+├── /participants — Trustees, brokers, agents directory
+└── /settings — DAO configuration
+```
+
+#### B. **Offering Grain** (Instance-type, one per Series/offering)
+
+**Purpose**: Lifecycle management for a single securities offering
+
+```
+Capabilities:
+├── Configure offering parameters (token supply, nominal value, pricing)
+├── Manage investor whitelist (linked to KYC Grains via Powerbox)
+├── Execute token minting upon subscription confirmation
+├── Track cap table in real-time
+├── Process CrossConversion requests
+├── Execute distributions via waterfall
+├── Generate investor communications
+└── Close offering and handle redemption
+
+Cap'n Proto Schema:
+struct OfferingConfig {
+  seriesId @0 :Text;
+  tokenMint @1 :Text;         # Solana mint address
+  isinCode @2 :Text;          # Optional: ISIN if CrossConversion enabled
+  maxSupply @3 :UInt64;
+  nominalValue @4 :UInt64;    # In cents
+  minInvestment @5 :UInt64;
+  lockUpDays @6 :UInt32;
+  allowedJurisdictions @7 :List(Text);
+  regExemption @8 :Text;      # "RegD506b", "RegS", etc.
+  crossConversionEnabled @9 :Bool;
+  distributionFrequency @10 :Text;  # "quarterly", "monthly", etc.
+}
+
+Powerbox Offers:
+├── OfferingAPI — For brokers to place investors
+├── InvestorView — For individual investor self-service
+└── TrusteeView — For trustee authentication
+```
+
+#### C. **KYC/Investor Onboarding Grain** (Instance-type, one per verification)
+
+**Purpose**: Complete KYC verification workflow for a single investor
+
+The KYC flow from `BLOOM_FINAL` maps directly and must be **ported to the Go+HTMX grain pattern** (the BLOOM_FINAL reference implementations in `docs/flows/kyc-verification-flow.md` and `capnp/kyc.capnp` serve as the specification, not ready-to-use code):
+
+```
+Workflow Steps (from docs/flows/kyc-verification-flow.md):
+1. Terms acceptance (scroll + checkbox)
+2. Email verification (OTP)
+3. Phone verification (OTP)
+4. Document upload (passport/ID + proof of address)
+5. Face capture (selfie + liveness)
+6. AI processing (OCR, face match, document verification)
+7. Risk assessment (jurisdiction, PEP, sanctions)
+8. Accreditation verification (income/assets for Reg D)
+9. Respondent review (human compliance officer)
+10. Approval → Mint KYC NFT on Solana
+
+Cap'n Proto Schema (from capnp/kyc.capnp):
+enum CaseStatus { draft, termsAccepted, contactVerification, documentUpload,
+                   faceCapture, questionnaire, pendingReview, approved, rejected, expired }
+enum DocumentType { passport, nationalId, driversLicense, residencePermit }
+enum RiskLevel { lowest, low, medium, high, prohibited }
+
+Output on approval:
+├── Mint Sails KYC Credential NFT (on-chain, no PII)
+├── Store encrypted PII in grain journal (7-year retention)
+├── Issue audit trail entries
+└── Link to Offering Grain via Powerbox capability
+```
+
+#### D. **Broker Portal Grain** (Station-type, one per broker firm)
+
+**Purpose**: Dashboard for broker-dealers to manage their offerings and investors
+
+```
+Capabilities:
+├── View available offerings they are approved to place
+├── Submit investor subscriptions (linked to KYC Grains)
+├── Track commissions (6% placement fee, secondary trading commissions)
+├── Manage secondary trading (OTC order matching within compliance rules)
+├── White-label configuration (branded investor-facing pages)
+├── Generate regulatory reports (Form D filings, blue sky, etc.)
+└── API access for programmatic order submission
+
+Powerbox Requests:
+├── Request OfferingAPI from Offering Grains
+├── Request KYC credentials for investor verification
+└── Request Trustee authentication for settlement
+```
+
+#### E. **Trustee Dashboard Grain** (Station-type, one per trust company)
+
+**Purpose**: Authenticated oversight for appointed trustees
+
+```
+Capabilities:
+├── View all Series under their trust jurisdiction
+├── Authenticate CrossConversions (sign with Trustee NFT)
+├── Authenticate distributions and waterfall executions
+├── Review and sign reconciliation reports
+├── Emergency freeze/unfreeze capabilities
+├── Audit trail for all authenticated actions
+└── Generate trust company compliance reports
+
+Authentication:
+├── Trustee NFT verification on every action
+├── Multi-sig for high-value operations
+└── Time-bound session tokens
+```
+
+#### F. **Investor Self-Service Grain** (Instance-type, one per investor)
+
+**Purpose**: Personal dashboard for each investor
+
+```
+Capabilities:
+├── View portfolio (all offerings they hold tokens in)
+├── Track distributions and yields
+├── Request CrossConversion (on-chain ↔ bankable)
+├── Manage wallet connections
+├── Download tax documents and statements
+├── Participate in DAO governance votes
+├── View cap table position and ownership percentage
+└── Secondary trading: list tokens for OTC sale
+
+Powerbox:
+├── Receive InvestorView capabilities from Offering Grains
+├── Receive KYC status from KYC Grains
+└── Request Broker assistance for trades
+```
+
+#### G. **Introducer Tracking Grain** (Lightweight)
+
+**Purpose**: Track referrals and commission calculations
+
+```
+Capabilities:
+├── Generate unique referral links
+├── Track introductions through to funded offerings
+├── Calculate 25% commission share
+├── Generate payout reports
+└── Dashboard showing pipeline and earnings
+```
+
+---
+
+## Pillar 4: Cap'n Proto Schema & Capability Graph
+
+### 4.1 Core Schemas to Define
+
+Building on the patterns from `BLOOM_FINAL`:
+
+```capnp
+# sails/offering.capnp
+interface OfferingAPI {
+  subscribe @0 (investor :InvestorCredential, amount :UInt64) -> (result :SubscriptionResult);
+  getCapTable @1 () -> (investors :List(InvestorPosition));
+  requestCrossConversion @2 (direction :ConversionDirection, amount :UInt64) -> (request :ConversionRequest);
+  claimDistribution @3 (epoch :UInt32) -> (amount :UInt64);
+  getOfferingInfo @4 () -> (info :OfferingInfo);
+}
+
+# sails/kyc.capnp (extends BLOOM's capnp/kyc.capnp)
+interface KYCVerifier {
+  startVerification @0 (investorData :InvestorSubmission) -> (caseId :Text);
+  getStatus @1 (caseId :Text) -> (status :CaseStatus);
+  getCredential @2 (caseId :Text) -> (credential :KYCCredential);
+  revokeCredential @3 (caseId :Text, reason :Text) -> (success :Bool);
+}
+
+# sails/trustee.capnp
+interface TrusteeAPI {
+  authenticateConversion @0 (request :ConversionRequest) -> (authenticated :Bool);
+  authenticateDistribution @1 (offering :Text, epoch :UInt32) -> (authenticated :Bool);
+  signReconciliation @2 (report :ReconciliationReport) -> (signature :Data);
+  freeze @3 (investor :Text, reason :Text) -> (success :Bool);
+}
+
+# sails/broker.capnp
+interface BrokerAPI {
+  placeInvestor @0 (offering :Text, investor :InvestorCredential, amount :UInt64) -> (result :PlacementResult);
+  listForSecondaryTrading @1 (offering :Text, amount :UInt64, price :UInt64) -> (listing :TradeListing);
+  matchTrade @2 (listing :TradeListing, buyer :InvestorCredential) -> (settlement :TradeSettlement);
+}
+
+# sails/governance.capnp
+interface GovernanceAPI {
+  createProposal @0 (title :Text, description :Text, actions :List(GovernanceAction)) -> (proposalId :Text);
+  vote @1 (proposalId :Text, vote :VoteChoice, weight :UInt64) -> (success :Bool);
+  executeProposal @2 (proposalId :Text) -> (result :ExecutionResult);
+  getProposals @3 () -> (proposals :List(Proposal));
+}
+```
+
+### 4.2 Powerbox Capability Flow
+
+```
+DAO Manager ──(Powerbox offer)──► Offering Grain
+    │                                    │
+    ├──(Powerbox offer)──► Trustee Grain  ├──(Powerbox offer)──► Broker Grain
+    │                          │          │
+    └──(Powerbox offer)──►     │          ├──(Powerbox offer)──► Investor Grain
+       KYC Issuer Grain        │          │
+            │                  │          │
+            └──(KYC result)────┘──────────┘
+                                    │
+                              Claim Token → SturdyRef
+                              (persistent, cross-session)
+```
+
+---
+
+## Pillar 5: Integration Layer & External Systems
+
+### 5.1 Clearstream Integration Service
+
+```
+Service: clearstream-adapter (Go, runs as grain or sidecar)
+├── ISIN Registration
+│   ├── Submit ISIN application (~$4K, ~1 week)
+│   ├── Track application status
+│   └── Store ISIN code in OfferingState
+├── Settlement
+│   ├── Credit investor's Clearstream account (on CrossConversion)
+│   ├── Cancel Clearstream position (on reverse CrossConversion)
+│   └── Handle corporate actions (distributions, votes)
+├── Reconciliation
+│   ├── Pull daily Clearstream position report
+│   ├── Compare with on-chain lockbox state
+│   └── Generate discrepancy report for Trustee
+└── Communication
+    ├── MT540/MT542 SWIFT messages (settlement instructions)
+    ├── ISO 20022 messages (corporate actions)
+    └── Webhook notifications for real-time updates
+```
+
+### 5.2 Solana Event Listener Service
+
+```
+Service: solana-watcher (Go, runs as grain)
+├── Subscribe to program events via WebSocket RPC
+├── Route events to appropriate grains:
+│   ├── SecurityMinted → Offering Grain (update cap table)
+│   ├── CrossConversionRequested → CrossConversion Operator
+│   ├── DistributionPaid → Investor Grains (notify)
+│   ├── ComplianceViolation → DAO Manager (alert)
+│   └── TransferCompleted → Broker Grain (settlement confirmation)
+├── Maintain local event log for replay
+└── Health monitoring & reconnection logic
+```
+
+### 5.3 Email/Notification Service
+
+Building on BLOOM_FINAL's pattern:
+```
+Service: notification-grain (Go)
+├── Email (via Sandstorm email capability or external SMTP)
+│   ├── Investor subscription confirmations
+│   ├── Distribution payment notifications
+│   ├── CrossConversion status updates
+│   ├── KYC status changes
+│   └── Regulatory notices
+├── Webhook notifications to broker systems
+└── In-app notifications via WebSocket hub
+```
+
+### 5.4 Regulatory Reporting Service
+
+```
+Service: compliance-grain (Go)
+├── Form D Filing (SEC) — generate XML for EDGAR
+├── Blue Sky State Filings — track per-state exemptions
+├── Reg S Compliance — non-US investor tracking
+├── AML/SAR Reporting — suspicious activity flagging
+├── Cap Table Reporting — ownership snapshots for tax season
+├── K-1 Generation — for LLC pass-through taxation
+└── Audit Export — full audit trail in standard format
+```
+
+---
+
+## Pillar 6: Website → Platform Connection
+
+### 6.1 Current Website State (from `sailsto_website`)
+
+The Hugo-based website is **well-developed** with:
+- Audience-specific landing pages (Issuers, Investors, Brokers, Institutions, Introducers)
+- Comprehensive knowledge base (glossary, FAQ, blog, guides)
+- Legal templates in `Legal/Client_Series/` directory
+- Pricing calculator
+- Full glossary system with linked terms
+- SEO/structured data implemented
+
+### 6.2 What Must Be Added to the Website
+
+#### A. Signup → Grain Provisioning Pipeline
+
+```
+User Journey:
+1. User signs up on sails.to (role selection: Issuer/Investor/Broker/etc.)
+2. Website creates Sandstorm account + provisions initial grain:
+   ├── Issuer → DAO Manager Grain (Station)
+   ├── Investor → Investor Self-Service Grain (Instance)
+   ├── Broker → Broker Portal Grain (Station)
+   ├── Trustee → Trustee Dashboard Grain (Station)
+   └── Introducer → Introducer Tracking Grain (Instance)
+3. KYC Grain automatically provisioned and linked via Powerbox
+4. User redirected to their grain URL (sandstorm-hosted)
+```
+
+#### B. Issuers Directory (Live Offerings)
+
+The `/issuers-directory/` page needs a real backend:
+```
+├── Pull live offering data from Offering Grains
+├── Display: offering name, Series, target raise, % funded, token price, yield
+├── Filter by: asset class, jurisdiction, min investment, status
+├── Link to individual offering details (public-facing grain page)
+└── Real-time updates via SSE/WebSocket
+```
+
+#### C. API Gateway
+
+```
+Route: api.sails.to
+├── /v1/offerings — List/detail offerings (public)
+├── /v1/kyc — Start/status verification (authenticated)
+├── /v1/broker — Placement, trading (Broker NFT required)
+├── /v1/trustee — Authentication endpoints (Trustee NFT required)
+├── /v1/investor — Portfolio, distributions (Investor wallet auth)
+└── /v1/admin — Platform management (Master NFT required)
+
+Authentication: Solana wallet signature + NFT verification
+Rate limiting per NFT tier
+```
+
+---
+
+## Build Sequence (Recommended Phases)
+
+> **Estimated team**: 3–5 engineers (2 Rust/Solana, 2 Go/Sandstorm, 1 full-stack/integration) + 1 part-time compliance/legal advisor. Phases assume parallel workstreams where noted.
+
+### Phase 1: Foundation (Weeks 1–6)
+**Entry criteria**
+- Sandstorm/Melusina build environment and devnet RPC provider are operational.
+- Cap'n Proto toolchain installed with initial schema baseline drafted.
+- Clearstream onboarding application submitted (to cover lead time ahead of Phase 3).
+1. **Extend Melusina NFT contracts** (from existing §1.1 foundation) → Adapt for Sails.to role NFTs (Operator, Trustee, Broker, Issuer, KYC Issuer)
+2. **Build `sails_securities` Anchor program** — Core token issuance with compliance hooks
+3. **Build DAO Manager Grain** using gohtmx template — HTMX dashboard, basic Series management
+4. **Build KYC Onboarding Grain** — Port BLOOM's KYC workflow to Go+HTMX native grain
+5. **Define all Cap'n Proto schemas** (offering, kyc, trustee, broker, governance)
+
+*Parallelism: Items 1–2 (Solana team) run concurrently with items 3–5 (Grain team).*
+
+**Milestone**: All devnet contracts pass tests; DAO Manager and KYC grains render functional UIs.
+
+### Phase 2: Core Product (Weeks 7–14)
+**Entry criteria**
+- Phase 1 devnet tests are passing for `sails_securities` + role NFT flows.
+- Operator/Trustee/Broker NFT issuance + recall runbook approved by compliance.
+- Token metadata/KYC classification fields reviewed by counsel for Reg D/S alignment.
+6. **Build Offering Grain** — Full lifecycle: configure, whitelist, mint, distribute
+7. **Build CrossConversion lockbox contract** — Lock/unlock with trustee authentication
+8. **Build Broker Portal Grain** — Offering discovery, investor placement, commission tracking
+9. **Build Trustee Dashboard Grain** — Authentication workflows, reconciliation signing
+10. **Build Investor Self-Service Grain** — Portfolio, distributions, CrossConversion requests
+11. **Integrate Powerbox flows** between all grains (claim token → sturdyRef lifecycle)
+
+*Parallelism: Items 6–7 (Solana team) run concurrently with items 8–10 (Grain team). Item 11 is a cross-team integration sprint at end of phase.*
+
+**Milestone**: End-to-end offering lifecycle works on devnet with all grains communicating.
+
+### Phase 3: Bridge & Compliance (Weeks 15–22)
+**Entry criteria**
+- Clearstream sandbox credentials and technical contact confirmed.
+- Trustee/KYC issuer keyholders live with threshold signing ceremonies documented.
+- CrossConversion threat model + supply invariant checklist reviewed and approved.
+12. **Build CrossConversion Operator Service** — Event listener + Clearstream API adapter
+13. **Build Distribution Waterfall Contract** — Revenue receipt → investor-first distribution
+14. **Build Reconciliation Engine** — Daily Clearstream ↔ on-chain comparison
+15. **Build Regulatory Reporting Grain** — Form D, blue sky, AML/SAR, K-1
+16. **Build Solana Event Watcher** — Real-time event routing to grains
+
+*Note: Extended from 6 weeks to 8 weeks to account for Clearstream integration complexity and regulatory review cycles.*
+
+**Milestone**: CrossConversion round-trip with Clearstream sandbox; reconciliation engine operational.
+
+### Phase 4: Integration & Launch (Weeks 23–30)
+**Entry criteria**
+- External audit + penetration test vendors contracted with dates inside this phase.
+- Staging environment mirrors production topology with load-test baselines captured.
+- Devnet → mainnet migration runbook rehearsed at least once with 3-of-5 approval flow.
+17. **Website → Platform connector** — Signup flow provisions Sandstorm grains
+18. **API Gateway** — Public/authenticated endpoints backed by grain capabilities
+19. **Issuers Directory** — Live feed from Offering Grains
+20. **Introducer Tracking** — Referral links, commission calculation
+21. **White-label system** — Broker-branded interfaces (CSS theming + subdomain routing)
+22. **Load testing, security audit, penetration testing**
+23. **Devnet → Mainnet migration** — Deploy contracts, migrate NFTs, go live
+
+*Note: Extended from 6 weeks to 8 weeks to accommodate security audit lead time and mainnet deployment rehearsals.*
+
+**Milestone**: First offering live on mainnet with completed end-to-end investor lifecycle.
+
+---
+
+## Cross-Cutting Concerns
+
+### Authentication Model
+```
+Layer 1: Solana Wallet Signature (proves wallet ownership)
+Layer 2: NFT Verification (proves role authorization)
+Layer 3: Sandstorm Session (proves grain access)
+Layer 4: Powerbox Capability (proves inter-grain authority)
+```
+
+### Data Sovereignty
+- **On-chain**: Token balances, NFT authority, compliance flags, distribution records (no PII)
+- **In-grain journal**: Encrypted PII, KYC documents, audit trails, business logic state
+- **Clearstream**: ISIN positions, bankable custody records
+- **Never on-chain**: Names, addresses, document images, phone numbers, emails
+
+### Audit Trail
+Every action across every grain and smart contract must be logged:
+```
+AuditEvent {
+  id, timestamp, severity, category,
+  actor_id, actor_type,  // wallet address + NFT role
+  action, resource, resource_type,
+  success, error_message,
+  grain_id, offering_id, series_id,
+  metadata (JSON)
+}
+```
+7-year retention for regulatory compliance.
+
+### Threshold Operations
+Critical operations require M-of-N keyholder approval (from Melusina's threshold crypto):
+- **3-of-5** for: Master NFT operations, force transfers, contract upgrades
+- **2-of-3** for: Large CrossConversions (>$1M), emergency freezes
+- **1-of-1** (Trustee NFT) for: Standard CrossConversions, distribution authentication
+
+### Privacy & Data Protection
+
+- **GDPR Compliance**: Investor PII stored in grain journals must be encrypted at rest; right-to-erasure handled via cryptographic shredding (delete encryption key)
+- **CCPA Compliance**: California investors must be able to request data export and deletion
+- **Data Minimization**: On-chain data contains **zero PII** — only hashes, public keys, and compliance flags
+- **Encryption**: AES-256 at rest for grain journals; TLS 1.3 in transit for all API and inter-grain communication
+- **Data Retention**: 7-year regulatory retention period; automated purge after expiration (with legal hold override)
+
+### Smart Contract Upgrade & Migration Strategy
+
+Solana programs are **immutable once deployed**. The following strategies address upgradability:
+
+- **Upgradeable program pattern**: Deploy all Anchor programs with `declare_id!` and upgrade authority held by the 3-of-5 Master NFT keyholder set
+- **PDA versioning**: Include a `version` field in all PDA account structures to support data migration
+- **Parallel deployment**: New program versions deployed alongside old ones; migration instructions move state from old PDAs to new PDAs
+- **Feature flags**: `ComplianceConfig` includes a `features` bitmask for enabling/disabling capabilities without redeployment
+- **Emergency pause**: All programs include a `pause` instruction gated by Admin NFT (Security level) for circuit-breaker scenarios
+- **Devnet testing**: All upgrades must pass full regression on devnet before mainnet deployment
+
+---
+
+## Testing Strategy
+
+### Smart Contract Testing (Pillar 1 & 2)
+- **Unit tests**: Anchor test suite for every instruction (happy path + error cases)
+- **Integration tests**: Multi-instruction flows (mint → transfer → distribute → CrossConversion)
+- **Fuzzing**: Property-based testing for compliance rules (e.g., no transfer without KYC)
+- **Invariant tests**: Continuous verification of `tokens_locked == isin_outstanding` invariant
+- **Devnet end-to-end**: Full lifecycle test on Solana devnet before mainnet
+
+### Grain Testing (Pillar 3)
+- **Unit tests**: Go test suite for each grain's business logic
+- **Cap'n Proto schema tests**: Serialization/deserialization roundtrip for all message types
+- **Powerbox integration tests**: Capability grant → claim → use → revoke lifecycle
+- **WebSession tests**: HTMX fragment rendering, form submission, WebSocket message delivery
+- **Journal replay tests**: Deterministic replay produces identical state from the same event log
+
+### Integration & End-to-End Testing (Pillar 5 & 6)
+- **Clearstream adapter**: Mock Clearstream API for CI; sandbox environment for staging
+- **Solana event watcher**: Simulated program events with expected grain state transitions
+- **Signup → grain provisioning**: Full user journey from website signup to operational grain
+- **Multi-actor scenarios**: Issuer creates offering → Broker places investor → Trustee authenticates → Investor receives distribution
+
+### Security & Compliance Testing
+- **External penetration testing**: Engage third-party firm before Phase 4 launch
+- **Smart contract audit**: Professional audit of all Anchor programs before mainnet
+- **Compliance scenario testing**: Reg D investor limits, jurisdiction restrictions, lock-up enforcement
+- **Threshold signing tests**: M-of-N keyholder flows with partial signer failures
+
+---
+
+## Infrastructure & DevOps
+
+### Environments
+| Environment | Purpose | Solana Network | Sandstorm Instance |
+|-------------|---------|----------------|--------------------|
+| Local dev | Individual developer | localhost validator | Local Sandstorm |
+| CI | Automated testing | Ephemeral validator | Ephemeral grains |
+| Staging | Integration testing, UAT | Devnet | Staging Sandstorm cluster |
+| Production | Live platform | Mainnet-beta | Production Sandstorm cluster |
+
+### CI/CD Pipeline
+```
+Push → Lint → Unit Test → Build → Integration Test → Deploy to Staging → Smoke Test → Manual Approval → Deploy to Production
+```
+- **Smart contracts**: `anchor test` in CI; `anchor deploy` to devnet on merge to `main`; mainnet deploy is manual with 3-of-5 keyholder approval
+- **Grains**: `go test` + `go build` in CI; SPK packaging + Sandstorm deploy on merge
+- **Website**: Hugo build + deploy on merge
+
+### Monitoring & Observability
+- **Solana program monitoring**: Track instruction success/failure rates, compute unit usage, account sizes approaching limits
+- **Grain health**: CPU, memory, journal size, WebSocket connection count per grain
+- **CrossConversion reconciliation**: Real-time dashboard of on-chain lockbox state vs. Clearstream positions; alerts on any discrepancy
+- **Business metrics**: AUM, investor count, active offerings, distribution totals, KYC conversion rates
+- **Alerting tiers**:
+  - **P0 (immediate)**: Supply invariant mismatch, security breach, program failure
+  - **P1 (< 1 hour)**: KYC service degradation, Clearstream API failures, threshold signing failures
+  - **P2 (< 24 hours)**: Elevated error rates, approaching account size limits, certificate expiration
+
+### Disaster Recovery
+- **Grain journals**: Replicated storage with point-in-time recovery; journal replay reconstructs full state
+- **Solana state**: On-chain data is inherently replicated; local RPC node snapshot backups for fast recovery
+- **Clearstream**: Clearstream maintains its own records; reconciliation engine detects drift
+- **RPO**: Zero data loss for on-chain and journal state (append-only, replicated)
+- **RTO**: < 4 hours for full platform recovery; < 15 minutes for individual grain recovery
+
+---
+
+## Risk Management
+
+| Risk | Likelihood | Impact | Mitigation |
+|------|-----------|--------|------------|
+| Regulatory action (SEC enforcement) | Medium | Critical | Engage securities counsel early; strict Reg D/S compliance; maintain full audit trail |
+| Clearstream integration delays | High | High | Begin Clearstream onboarding in Phase 1; design CrossConversion as optional feature per offering |
+| Smart contract vulnerability | Medium | Critical | Professional audit before mainnet; bug bounty program; emergency pause capability; upgradeable programs |
+| Solana network instability | Low | High | Circuit breaker patterns; queued retry for failed transactions; multi-RPC provider failover |
+| KYC provider downtime | Medium | Medium | Support multiple KYC providers; queue-based processing with retry; manual override for Respondent review |
+| Key compromise (Master NFT) | Low | Critical | 3-of-5 threshold; hardware wallet enforcement; key rotation procedures; geographic distribution of keyholders |
+| Scope creep / timeline overrun | High | High | Strict phase gates; MVP-first approach per grain; defer nice-to-have features to post-launch |
+| Team capacity constraints | Medium | High | Cross-train on all pillars; document all architecture decisions; keep grain boundaries clean for parallel development |
+
+---
+
+## Success Criteria & Definition of Done
+
+### Phase 1: Foundation ✓ when:
+- [ ] All Sails.to role NFTs mintable and recallable on devnet
+- [ ] `sails_securities` program passes full Anchor test suite on devnet
+- [ ] DAO Manager Grain renders dashboard with mock data via HTMX
+- [ ] KYC Onboarding Grain completes all 10 workflow steps with test data
+- [ ] All Cap'n Proto schemas compile and have roundtrip tests
+
+### Phase 2: Core Product ✓ when:
+- [ ] Full offering lifecycle (create → mint → distribute → close) works end-to-end on devnet
+- [ ] CrossConversion lockbox correctly locks/unlocks with Trustee authentication on devnet
+- [ ] Broker Portal can place an investor into an offering and track commission
+- [ ] Investor Self-Service shows portfolio, claims distribution
+- [ ] All grains communicate via Powerbox capabilities (claim token → sturdyRef)
+
+### Phase 3: Bridge & Compliance ✓ when:
+- [ ] CrossConversion Operator processes lock/unlock events with Clearstream sandbox
+- [ ] Reconciliation engine detects intentionally introduced discrepancy in test
+- [ ] Waterfall distribution executes correctly with multi-tranche investor set
+- [ ] Form D XML validates against SEC EDGAR schema
+- [ ] Solana event watcher routes all event types to correct grains
+
+### Phase 4: Integration & Launch ✓ when:
+- [ ] Signup flow provisions correct grain type for each user role
+- [ ] API Gateway serves all endpoints with proper NFT-based authentication
+- [ ] External penetration test report shows no critical or high findings
+- [ ] Smart contract audit report shows no critical findings (highs addressed or accepted with justification)
+- [ ] Mainnet deployment completed with 3-of-5 keyholder approval
+- [ ] First offering live with at least one completed CrossConversion
+
+---
