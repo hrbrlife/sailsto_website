@@ -1,7 +1,7 @@
 <nav>
-    <a href="{{ .Site.BaseURL }}" class="logo">
-        <img src="/sail_logo.png" alt="Sails.to" class="logo-dark">
-        <img src="/sail_logo_w.png" alt="Sails.to" class="logo-light">
+    <a href="{{ .Site.BaseURL }}{{ .Site.Language.Lang }}/" class="logo">
+        <img src="{{ "sail_logo.png" | relURL }}" alt="Sails.to" class="logo-dark">
+        <img src="{{ "sail_logo_w.png" | relURL }}" alt="Sails.to" class="logo-light">
     </a>
     <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
         <span></span>
@@ -10,44 +10,45 @@
     </button>
     <div class="nav-links nav-collapse" id="nav-links">
         <div class="nav-dropdown">
-            <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false">For Me</a>
+            <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false">{{ i18n "nav_for_me" }}</a>
             <div class="nav-dropdown-menu" role="menu">
-                <a href="/issuers/" role="menuitem">Business - Raise Funds</a>
-                <a href="/investors/" role="menuitem">Professional Investors - Grow</a>
-                <a href="/trustees/" role="menuitem">Trust Companies &amp; Fiduciaries</a>
-                <a href="/brokers/" role="menuitem">For Brokers</a>
-                <a href="/introducers/" role="menuitem">Business Introducers</a>
-                <a href="/regulated/" role="menuitem">For Institutions</a>
+                <a href="{{ "issuers/" | relURL }}" role="menuitem">{{ i18n "nav_issuers" }}</a>
+                <a href="{{ "investors/" | relURL }}" role="menuitem">{{ i18n "nav_investors" }}</a>
+                <a href="{{ "trustees/" | relURL }}" role="menuitem">{{ i18n "nav_trustees" }}</a>
+                <a href="{{ "brokers/" | relURL }}" role="menuitem">{{ i18n "nav_brokers" }}</a>
+                <a href="{{ "introducers/" | relURL }}" role="menuitem">{{ i18n "nav_introducers" }}</a>
+                <a href="{{ "regulated/" | relURL }}" role="menuitem">{{ i18n "nav_regulated" }}</a>
             </div>
         </div>
-        <a href="/issuers-directory/">Platform</a>
-        <a href="/compare/">Compare</a>
+        <a href="{{ "issuers-directory/" | relURL }}">{{ i18n "nav_platform" }}</a>
+        <a href="{{ "compare/" | relURL }}">{{ i18n "nav_compare" }}</a>
         <div class="nav-dropdown">
-            <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false">Understand</a>
+            <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false">{{ i18n "nav_understand" }}</a>
             <div class="nav-dropdown-menu" role="menu">
-                <a href="/whatsails/" role="menuitem">How It Works</a>
-                <a href="/players/" role="menuitem">Life of a Deal</a>
-                <a href="/pricing/" role="menuitem">Pricing</a>
-                <a href="/compliance/" role="menuitem">Compliance</a>
-                <a href="/security/" role="menuitem">Security</a>
-                <a href="/oversight/" role="menuitem">Oversight</a>
+                <a href="{{ "whatsails/" | relURL }}" role="menuitem">{{ i18n "nav_how_it_works" }}</a>
+                <a href="{{ "players/" | relURL }}" role="menuitem">{{ i18n "nav_life_of_deal" }}</a>
+                <a href="{{ "pricing/" | relURL }}" role="menuitem">{{ i18n "nav_pricing" }}</a>
+                <a href="{{ "compliance/" | relURL }}" role="menuitem">{{ i18n "nav_compliance" }}</a>
+                <a href="{{ "security/" | relURL }}" role="menuitem">{{ i18n "nav_security" }}</a>
+                <a href="{{ "oversight/" | relURL }}" role="menuitem">{{ i18n "nav_oversight" }}</a>
                 <div class="dropdown-divider" role="separator"></div>
-                <a href="/knowledge/" role="menuitem">Knowledge Base</a>
-                <a href="/knowledge/blog/" role="menuitem">Blog</a>
-                <a href="/knowledge/docs/" role="menuitem">Documentation</a>
-                <a href="/knowledge/faq/" role="menuitem">FAQ</a>
-                <a href="/knowledge/glossary/" role="menuitem">Glossary</a>
-                <a href="/knowledge/roadmap/" role="menuitem">Roadmap</a>
+                <a href="{{ "knowledge/" | relURL }}" role="menuitem">{{ i18n "nav_knowledge_base" }}</a>
+                <a href="{{ "knowledge/blog/" | relURL }}" role="menuitem">{{ i18n "nav_blog" }}</a>
+                <a href="{{ "knowledge/docs/" | relURL }}" role="menuitem">{{ i18n "nav_docs" }}</a>
+                <a href="{{ "knowledge/faq/" | relURL }}" role="menuitem">{{ i18n "nav_faq" }}</a>
+                <a href="{{ "knowledge/glossary/" | relURL }}" role="menuitem">{{ i18n "nav_glossary" }}</a>
+                <a href="{{ "knowledge/roadmap/" | relURL }}" role="menuitem">{{ i18n "nav_roadmap" }}</a>
             </div>
         </div>
         <div class="nav-dropdown">
-            <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false">Company</a>
+            <a href="#" class="nav-dropdown-trigger" role="button" aria-haspopup="true" aria-expanded="false">{{ i18n "nav_company" }}</a>
             <div class="nav-dropdown-menu" role="menu">
-                <a href="/company/about/" role="menuitem">About</a>
-                <a href="/company/contact/" role="menuitem">Contact</a>
-                <a href="/company/legal/" role="menuitem">Legal</a>
+                <a href="{{ "company/about/" | relURL }}" role="menuitem">{{ i18n "nav_about" }}</a>
+                <a href="{{ "company/contact/" | relURL }}" role="menuitem">{{ i18n "nav_contact" }}</a>
+                <a href="{{ "company/legal/" | relURL }}" role="menuitem">{{ i18n "nav_legal" }}</a>
             </div>
         </div>
-        <a href="/signup/" class="btn-nav">Get Started</a>
+        {{ partial "lang-switcher.html" . }}
+        <a href="{{ "signup/" | relURL }}" class="btn-nav">{{ i18n "nav_get_started" }}</a>
     </div>
 </nav>

@@ -1,7 +1,19 @@
-baseURL = 'https://sails.to/'
+baseURL = 'https://hrbrlife.github.io/sailsto_website/'
 languageCode = 'en'
 title = 'Sails.to | Hybrid Securities Infrastructure'
 disableHugoGeneratorInject = true
+defaultContentLanguage = 'en'
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    languageName = 'English'
+    weight = 1
+    title = 'Sails.to | Hybrid Securities Infrastructure'
+  [languages.fr]
+    languageName = 'Français'
+    weight = 2
+    title = 'Sails.to | Infrastructure de Titres Hybrides'
 
 [params]
   description = "Hybrid securities infrastructure bridging DeFi innovation with TradFi trust"

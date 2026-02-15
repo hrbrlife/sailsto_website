@@ -477,7 +477,6 @@ stylesheets:
         <span class="section-label">Deep Dive</span>
         <h2>The Nuanced Differences</h2>
         <p class="section-intro">Beyond the feature matrix, the real differences lie in who controls the legal entity, how the banking bridge works, how liquidity is generated, and how costs are aligned with your success.</p>
-
         <!-- 1. Trust & DAO -->
         <div class="compare-detail-block">
             <span class="detail-number">01</span>
@@ -502,7 +501,6 @@ stylesheets:
                 </div>
             </div>
         </div>
-
         <!-- 2. Bankable Bridge -->
         <div class="compare-detail-block">
             <span class="detail-number">02</span>
@@ -527,7 +525,6 @@ stylesheets:
                 </div>
             </div>
         </div>
-
         <!-- 3. Liquidity -->
         <div class="compare-detail-block">
             <span class="detail-number">03</span>
@@ -552,7 +549,6 @@ stylesheets:
                 </div>
             </div>
         </div>
-
         <!-- 4. Cost Model -->
         <div class="compare-detail-block">
             <span class="detail-number">04</span>
@@ -577,7 +573,6 @@ stylesheets:
                 </div>
             </div>
         </div>
-
         <!-- 5. Asset Flexibility -->
         <div class="compare-detail-block">
             <span class="detail-number">05</span>
@@ -598,7 +593,6 @@ stylesheets:
                 </div>
             </div>
         </div>
-
         <!-- 6. Investor Data -->
         <div class="compare-detail-block">
             <span class="detail-number">06</span>

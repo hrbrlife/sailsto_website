@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ .Site.LanguageCode }}">
+<html lang="{{ .Site.Language.Lang }}">
 {{ partial "head.html" . }}
 <body>
     <a href="#main-content" class="skip-to-content">Skip to content</a>
@@ -15,10 +15,10 @@
     {{ partial "footer.html" . }}
     {{ end }}
     
-    <script src="/js/nav.js" defer></script>
-    <script src="/assets/js/glossary.js" defer></script>
+    <script src="{{ "js/nav.js" | relURL }}" defer></script>
+    <script src="{{ "assets/js/glossary.js" | relURL }}" defer></script>
     {{ range .Params.scripts }}
-    <script src="{{ . }}" defer></script>
+    <script src="{{ strings.TrimLeft "/" . | relURL }}" defer></script>
     {{ end }}
     {{ block "scripts" . }}{{ end }}
 </body>

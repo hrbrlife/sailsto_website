@@ -28,6 +28,10 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
+/* ─── Global: icon-wrapper ─── */
+.icon-wrapper { display: block; }
+.icon-wrapper svg { width: 32px; height: 32px; color: var(--gold); }
+
 /* ─── Global Base: inline code ─── */
 code {
     font-family: 'SFMono-Regular', 'Consolas', 'Liberation Mono', 'Menlo', monospace;
@@ -327,6 +331,42 @@ nav.scrolled .logo .logo-light {
 .btn-nav:hover {
     background: var(--ivory);
     color: var(--ink) !important;
+}
+
+/* Language Switcher */
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-ui);
+    font-size: 0.68rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 8px;
+}
+
+.lang-current {
+    font-weight: 700;
+    color: var(--ink);
+    opacity: 1;
+}
+
+.lang-link {
+    color: var(--silver) !important;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.lang-link:hover {
+    color: var(--ink) !important;
+}
+
+.lang-switcher .lang-current + .lang-link::before,
+.lang-switcher .lang-link + .lang-current::before,
+.lang-switcher .lang-link + .lang-link::before {
+    content: "|";
+    margin-right: 6px;
+    color: var(--silver);
 }
 
 /* Navigation Dropdowns */

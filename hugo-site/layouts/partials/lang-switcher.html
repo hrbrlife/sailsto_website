@@ -1,0 +1,20 @@
+<div class="lang-switcher">
+    {{ range .Site.Languages }}
+    {{ $isCurrent := eq .Lang $.Site.Language.Lang }}
+    {{ if $isCurrent }}
+    <span class="lang-current" aria-current="true">{{ .LanguageName }}</span>
+    {{ else }}
+    {{ $translation := false }}
+    {{ range $.Translations }}
+    {{ if eq .Lang $.Site.Language.Lang }}{{ else }}
+    {{ $translation = . }}
+    {{ end }}
+    {{ end }}
+    {{ if $translation }}
+    <a href="{{ $translation.Permalink }}" hreflang="{{ .Lang }}" class="lang-link">{{ .LanguageName }}</a>
+    {{ else }}
+    <a href="{{ .Lang | relLangURL }}/" hreflang="{{ .Lang }}" class="lang-link">{{ .LanguageName }}</a>
+    {{ end }}
+    {{ end }}
+    {{ end }}
+</div>

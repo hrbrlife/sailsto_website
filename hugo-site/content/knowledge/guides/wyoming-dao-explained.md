@@ -7,7 +7,7 @@ stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
-  - "/assets/css/knowledge-guides-wyoming-dao-explained.css"
+  - "/assets/css/guides.css"
 scripts:
   - "/js/knowledge-guides-wyoming-dao-explained.js"
 ---

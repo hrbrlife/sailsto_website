@@ -2,9 +2,9 @@
     <div class="footer-grid">
         <div class="footer-brand">
             <a href="{{ .Site.BaseURL }}" class="logo">
-                <img src="/sail_logo.png" alt="Sails.to">
+                <img src="{{ "sail_logo.png" | relURL }}" alt="Sails.to">
             </a>
-            <p>Where companies raise capital and professional investors access deals—on blockchain or traditional rails.</p>
+            <p>{{ i18n "footer_tagline" }}</p>
             <div class="social-links" style="display: flex; gap: 16px; margin-top: 16px;">
                 <a href="https://twitter.com/sailsto" target="_blank" rel="noopener" aria-label="Twitter" style="color: var(--silver); transition: color 0.2s;">
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -21,42 +21,42 @@
             </div>
         </div>
         <div class="footer-col">
-            <h4>For Me</h4>
-            <a href="/issuers/">Business - Raise Funds</a>
-            <a href="/investors/">Professional Investors</a>
-            <a href="/trustees/">Trust Companies</a>
-            <a href="/brokers/">Brokers</a>
-            <a href="/introducers/">Business Introducers</a>
-            <a href="/regulated/">Institutions</a>
+            <h4>{{ i18n "nav_for_me" }}</h4>
+            <a href="{{ "issuers/" | relURL }}">{{ i18n "nav_issuers" }}</a>
+            <a href="{{ "investors/" | relURL }}">{{ i18n "nav_investors" }}</a>
+            <a href="{{ "trustees/" | relURL }}">{{ i18n "nav_trustees" }}</a>
+            <a href="{{ "brokers/" | relURL }}">{{ i18n "nav_brokers" }}</a>
+            <a href="{{ "introducers/" | relURL }}">{{ i18n "nav_introducers" }}</a>
+            <a href="{{ "regulated/" | relURL }}">{{ i18n "nav_regulated" }}</a>
         </div>
         <div class="footer-col">
-            <h4>Understand</h4>
-            <a href="/whatsails/">How It Works</a>
-            <a href="/players/">Life of a Deal</a>
-            <a href="/pricing/">Pricing</a>
-            <a href="/compliance/">Compliance</a>
-            <a href="/security/">Security</a>
-            <a href="/oversight/">Oversight</a>
-            <a href="/knowledge/">Knowledge Base</a>
-            <a href="/knowledge/faq/">FAQ</a>
-            <a href="/knowledge/glossary/">Glossary</a>
-            <a href="/knowledge/roadmap/">Roadmap</a>
+            <h4>{{ i18n "nav_understand" }}</h4>
+            <a href="{{ "whatsails/" | relURL }}">{{ i18n "nav_how_it_works" }}</a>
+            <a href="{{ "players/" | relURL }}">{{ i18n "nav_life_of_deal" }}</a>
+            <a href="{{ "pricing/" | relURL }}">{{ i18n "nav_pricing" }}</a>
+            <a href="{{ "compliance/" | relURL }}">{{ i18n "nav_compliance" }}</a>
+            <a href="{{ "security/" | relURL }}">{{ i18n "nav_security" }}</a>
+            <a href="{{ "oversight/" | relURL }}">{{ i18n "nav_oversight" }}</a>
+            <a href="{{ "knowledge/" | relURL }}">{{ i18n "nav_knowledge_base" }}</a>
+            <a href="{{ "knowledge/faq/" | relURL }}">{{ i18n "nav_faq" }}</a>
+            <a href="{{ "knowledge/glossary/" | relURL }}">{{ i18n "nav_glossary" }}</a>
+            <a href="{{ "knowledge/roadmap/" | relURL }}">{{ i18n "nav_roadmap" }}</a>
         </div>
         <div class="footer-col">
-            <h4>Company</h4>
-            <a href="/company/about/">About</a>
-            <a href="/company/contact/">Contact</a>
-            <a href="/company/legal/">Legal</a>
-            <a href="/knowledge/blog/">Blog</a>
-            <a href="/knowledge/docs/">Documentation</a>
+            <h4>{{ i18n "nav_company" }}</h4>
+            <a href="{{ "company/about/" | relURL }}">{{ i18n "nav_about" }}</a>
+            <a href="{{ "company/contact/" | relURL }}">{{ i18n "nav_contact" }}</a>
+            <a href="{{ "company/legal/" | relURL }}">{{ i18n "nav_legal" }}</a>
+            <a href="{{ "knowledge/blog/" | relURL }}">{{ i18n "nav_blog" }}</a>
+            <a href="{{ "knowledge/docs/" | relURL }}">{{ i18n "nav_docs" }}</a>
         </div>
         <div class="footer-col">
-            <h4>Support</h4>
-            <a href="/company/contact/">Contact Us</a>
-            <a href="https://status.sails.to" target="_blank" rel="noopener">System Status</a>
+            <h4>{{ i18n "footer_support" }}</h4>
+            <a href="{{ "company/contact/" | relURL }}">{{ i18n "footer_contact_us" }}</a>
+            <a href="https://status.sails.to" target="_blank" rel="noopener">{{ i18n "footer_system_status" }}</a>
         </div>
     </div>
     <div class="footer-bottom">
-        <span>© 2026 Sails.to DAO LLC. All rights reserved.</span>
+        <span>{{ i18n "footer_copyright" }}</span>
     </div>
 </footer>

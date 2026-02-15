@@ -1,0 +1,97 @@
+# Navigation
+[nav_for_me]
+other = "Pour Moi"
+
+[nav_issuers]
+other = "Entreprises — Lever des Fonds"
+
+[nav_investors]
+other = "Investisseurs Professionnels"
+
+[nav_trustees]
+other = "Sociétés Fiduciaires"
+
+[nav_brokers]
+other = "Courtiers"
+
+[nav_introducers]
+other = "Apporteurs d'Affaires"
+
+[nav_regulated]
+other = "Institutions"
+
+[nav_platform]
+other = "Plateforme"
+
+[nav_compare]
+other = "Comparer"
+
+[nav_understand]
+other = "Comprendre"
+
+[nav_how_it_works]
+other = "Comment ça Marche"
+
+[nav_life_of_deal]
+other = "Vie d'une Opération"
+
+[nav_pricing]
+other = "Tarifs"
+
+[nav_compliance]
+other = "Conformité"
+
+[nav_security]
+other = "Sécurité"
+
+[nav_oversight]
+other = "Supervision"
+
+[nav_knowledge_base]
+other = "Base de Connaissances"
+
+[nav_blog]
+other = "Blog"
+
+[nav_docs]
+other = "Documentation"
+
+[nav_faq]
+other = "FAQ"
+
+[nav_glossary]
+other = "Glossaire"
+
+[nav_roadmap]
+other = "Feuille de Route"
+
+[nav_company]
+other = "Société"
+
+[nav_about]
+other = "À Propos"
+
+[nav_contact]
+other = "Contact"
+
+[nav_legal]
+other = "Mentions Légales"
+
+[nav_get_started]
+other = "Commencer"
+
+# Footer
+[footer_tagline]
+other = "Là où les entreprises lèvent des capitaux et les investisseurs professionnels accèdent aux opérations — sur blockchain ou rails traditionnels."
+
+[footer_support]
+other = "Support"
+
+[footer_contact_us]
+other = "Nous Contacter"
+
+[footer_system_status]
+other = "État du Système"
+
+[footer_copyright]
+other = "© 2026 Sails.to DAO LLC. Tous droits réservés."

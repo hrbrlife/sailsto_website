@@ -7,7 +7,7 @@ stylesheets:
   - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
-  - "/assets/css/knowledge-guides-getting-started.css"
+  - "/assets/css/guides.css"
 scripts:
   - "/js/knowledge-guides-getting-started.js"
 ---

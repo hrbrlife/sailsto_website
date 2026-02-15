@@ -1,0 +1,97 @@
+# Navigation
+[nav_for_me]
+other = "For Me"
+
+[nav_issuers]
+other = "Business - Raise Funds"
+
+[nav_investors]
+other = "Professional Investors - Grow"
+
+[nav_trustees]
+other = "Trust Companies & Fiduciaries"
+
+[nav_brokers]
+other = "For Brokers"
+
+[nav_introducers]
+other = "Business Introducers"
+
+[nav_regulated]
+other = "For Institutions"
+
+[nav_platform]
+other = "Platform"
+
+[nav_compare]
+other = "Compare"
+
+[nav_understand]
+other = "Understand"
+
+[nav_how_it_works]
+other = "How It Works"
+
+[nav_life_of_deal]
+other = "Life of a Deal"
+
+[nav_pricing]
+other = "Pricing"
+
+[nav_compliance]
+other = "Compliance"
+
+[nav_security]
+other = "Security"
+
+[nav_oversight]
+other = "Oversight"
+
+[nav_knowledge_base]
+other = "Knowledge Base"
+
+[nav_blog]
+other = "Blog"
+
+[nav_docs]
+other = "Documentation"
+
+[nav_faq]
+other = "FAQ"
+
+[nav_glossary]
+other = "Glossary"
+
+[nav_roadmap]
+other = "Roadmap"
+
+[nav_company]
+other = "Company"
+
+[nav_about]
+other = "About"
+
+[nav_contact]
+other = "Contact"
+
+[nav_legal]
+other = "Legal"
+
+[nav_get_started]
+other = "Get Started"
+
+# Footer
+[footer_tagline]
+other = "Where companies raise capital and professional investors access deals—on blockchain or traditional rails."
+
+[footer_support]
+other = "Support"
+
+[footer_contact_us]
+other = "Contact Us"
+
+[footer_system_status]
+other = "System Status"
+
+[footer_copyright]
+other = "© 2026 Sails.to DAO LLC. All rights reserved."
