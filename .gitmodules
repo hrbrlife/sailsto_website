@@ -4,3 +4,6 @@
 [submodule "hrbrlife_website"]
 	path = hrbrlife_website
 	url = https://github.com/hrbrlife/hrbrlife_website.git
+[submodule "kyclat_website"]
+	path = kyclat_website
+	url = https://github.com/hrbrlife/kyclat_website.git
