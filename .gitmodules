@@ -16,3 +16,9 @@
 [submodule "ccash_site"]
 	path = ccash_site
 	url = https://github.com/hrbrlife/ccash_site.git
+[submodule "instatrust_site"]
+	path = instatrust_site
+	url = https://github.com/hrbrlife/instatrust_site.git
+[submodule "instadao_site"]
+	path = instadao_site
+	url = https://github.com/hrbrlife/instadao_site.git
