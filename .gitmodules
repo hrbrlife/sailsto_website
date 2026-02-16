@@ -1,6 +1,6 @@
 [submodule "static_store"]
 	path = static_store
 	url = https://github.com/hrbrlife/melusina-static-store.git
-[submodule "hrbr-life-deploy"]
-	path = hrbr-life-deploy
-	url = https://rxooceed@api-c2c8300905ded7fedac60907cee6001c.melusina-os.org/
+[submodule "hrbrlife_website"]
+	path = hrbrlife_website
+	url = https://github.com/hrbrlife/hrbrlife_website.git
