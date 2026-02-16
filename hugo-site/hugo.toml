@@ -1,4 +1,4 @@
-baseURL = 'https://hrbrlife.github.io/sailsto_website/'
+baseURL = 'https://sails.to/'
 languageCode = 'en'
 title = 'Sails.to | Hybrid Securities Infrastructure'
 disableHugoGeneratorInject = true
