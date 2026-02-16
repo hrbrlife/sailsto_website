@@ -7,3 +7,12 @@
 [submodule "kyclat_website"]
 	path = kyclat_website
 	url = https://github.com/hrbrlife/kyclat_website.git
+[submodule "freecoapp_site"]
+	path = freecoapp_site
+	url = https://github.com/hrbrlife/freecoapp_site.git
+[submodule "aitxpro_site"]
+	path = aitxpro_site
+	url = https://github.com/hrbrlife/aitxpro_site.git
+[submodule "ccash_site"]
+	path = ccash_site
+	url = https://github.com/hrbrlife/ccash_site.git
