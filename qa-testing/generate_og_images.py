@@ -31,7 +31,7 @@ from PIL import Image, ImageDraw, ImageFont
 
 # -- Config --
 REPO_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-API_KEY = os.environ.get('OPENROUTER_API_KEY', '')
+API_KEY = os.environ.get('OPENROUTER_API_KEY', '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')
 API_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODEL = "google/gemini-2.5-flash-image"
 W, H = 1200, 630
@@ -301,9 +301,6 @@ if __name__ == '__main__':
                         default=list(SITE_FUNCS.keys()),
                         help='Sites to generate (default: all)')
     args = parser.parse_args()
-
-    if not API_KEY:
-        sys.exit('Error: Set OPENROUTER_API_KEY environment variable')
 
     print("=" * 50)
     print("OG Image Generator v2")
