@@ -3,7 +3,7 @@ languageCode = 'en'
 title = 'Sails.to | Hybrid Securities Infrastructure'
 disableHugoGeneratorInject = true
 defaultContentLanguage = 'en'
-defaultContentLanguageInSubdir = true
+defaultContentLanguageInSubdir = false
 
 [languages]
   [languages.en]
