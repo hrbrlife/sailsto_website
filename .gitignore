@@ -8,7 +8,6 @@ melusinasite/
 # Social media assets
 social/
 qa-testing/node_modules/
-qa-testing/screenshots/
 hugo-site/public/
 hugo-site/qc/node_modules/
 hugo-site/public/
