@@ -260,7 +260,7 @@ def do_hrbr():
 def do_melusina():
     logo = os.path.join(REPO_ROOT, 'hugo-site', 'static', 'melulogoimage.png')
     shot = os.path.join(SCREENSHOTS_DIR, 'brand_melusina.png')
-    out = os.path.join(REPO_ROOT, 'INSTAKYCAPP_WEBSITE', 'public')
+    out = os.path.join(REPO_ROOT, 'melusina-os', 'public')
 
     print("\n[melusina-os.org] Generating background from site screenshot...")
     bg = call_ai(
