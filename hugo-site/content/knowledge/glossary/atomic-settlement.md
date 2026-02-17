@@ -1,6 +1,6 @@
 ---
 title: "Atomic Settlement - Glossary"
-description: "A transaction mechanism where all parts of a trade execute simultaneously and completely, or the entire transaction is cancelled - eliminating counterparty risk."
+description: "A transaction mechanism where all parts of a trade execute simultaneously and completely."
 ogImage: "/og-image.png"
 keywords: ["atomic", "settlement", "glossary", "transaction", "mechanism", "parts", "trade", "execute"]
 stylesheets:

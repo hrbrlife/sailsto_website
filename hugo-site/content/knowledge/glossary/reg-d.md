@@ -1,6 +1,6 @@
 ---
 title: "Regulation D (Reg D) - Glossary"
-description: "SEC regulation providing exemptions from registration for private placements, allowing companies to raise capital from accredited investors without a public offering."
+description: "SEC regulation providing exemptions from registration for private placements, allowing companies to raise capital from accredited investors without a."
 ogImage: "/og-image.png"
 keywords: ["regulation", "reg", "glossary", "sec", "providing", "exemptions", "registration", "private"]
 stylesheets:

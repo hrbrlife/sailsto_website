@@ -1,6 +1,6 @@
 ---
 title: "ISIN Conversion - Documentation"
-description: "The CrossConversion Engine in detail — how tokens are locked on Solana and issued as ISIN-identified securities via Clearstream, and how the reverse flow works. The lockbox contract, trustee authentication, reconciliation, and SWIFT messaging."
+description: "The CrossConversion Engine in detail — how tokens are locked on Solana and issued as ISIN-identified securities via Clearstream."
 ogImage: "/og-image.png"
 keywords: ["ISIN conversion", "CrossConversion", "lockbox", "Clearstream", "SWIFT", "MT540", "MT542", "reconciliation", "trustee authentication"]
 stylesheets:

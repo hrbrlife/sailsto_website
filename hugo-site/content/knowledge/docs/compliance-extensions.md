@@ -1,6 +1,6 @@
 ---
 title: "Compliance Extensions - Documentation"
-description: "Beyond the Transfer Hook — credential lifecycle, emergency powers, feature flags, jurisdictional adaptability, and regulatory reporting extensions that complete the compliance surface."
+description: "Beyond the Transfer Hook — credential lifecycle, emergency powers, feature flags, jurisdictional adaptability."
 ogImage: "/og-image.png"
 keywords: ["compliance extensions", "transfer hook", "credential lifecycle", "emergency powers", "feature flags", "jurisdictional adaptability", "regulatory reporting", "Form D", "Blue Sky", "AML", "K-1"]
 stylesheets:

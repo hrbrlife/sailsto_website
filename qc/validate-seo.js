@@ -15,13 +15,13 @@ const { c, findFiles, getSiteFiles } = require('./utils');
 
 const META_REGEX = {
     title:       /<title>([^<]*)<\/title>/i,
-    description: /<meta\s+name="description"\s+content="([^"]*)"/i,
-    ogTitle:     /<meta\s+property="og:title"\s+content="([^"]*)"/i,
-    ogDesc:      /<meta\s+property="og:description"\s+content="([^"]*)"/i,
-    ogImage:     /<meta\s+property="og:image"\s+content="([^"]*)"/i,
-    ogUrl:       /<meta\s+property="og:url"\s+content="([^"]*)"/i,
-    twitterCard: /<meta\s+name="twitter:card"\s+content="([^"]*)"/i,
-    canonical:   /<link\s+rel="canonical"\s+href="([^"]*)"/i,
+    description: /<meta\s+name="?description"?\s+content="([^"]*)"/i,
+    ogTitle:     /<meta\s+property="?og:title"?\s+content="([^"]*)"/i,
+    ogDesc:      /<meta\s+property="?og:description"?\s+content="([^"]*)"/i,
+    ogImage:     /<meta\s+property="?og:image"?\s+content="([^"]*)"/i,
+    ogUrl:       /<meta\s+property="?og:url"?\s+content="([^"]*)"/i,
+    twitterCard: /<meta\s+name="?twitter:card"?\s+content="([^"]*)"/i,
+    canonical:   /<link\s+rel="?canonical"?\s+href="([^"]*)"/i,
 };
 
 function extractMeta(html) {
@@ -36,6 +36,12 @@ function extractMeta(html) {
 function checkHtmlFile(file, site) {
     const content = fs.readFileSync(file, 'utf8');
     const relPath = path.relative(site.dir, file);
+
+    // Skip redirect pages and noindex pages (handle optional quotes from HTML minifiers)
+    if (/http-equiv="?refresh"?/.test(content) || /name="?robots"?.*content="?noindex"?/.test(content)) {
+        return { file: relPath, meta: {}, issues: [], skipped: true };
+    }
+
     const meta = extractMeta(content);
     const issues = [];
 

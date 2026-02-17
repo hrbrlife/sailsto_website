@@ -1,6 +1,6 @@
 ---
 title: "Authentication - Documentation"
-description: "The four-layer authentication model — from Solana wallet signatures through NFT role verification, Sandstorm sessions, and Powerbox capabilities. Defense in depth for regulated securities."
+description: "The four-layer authentication model — from Solana wallet signatures through NFT role verification, Sandstorm sessions, and Powerbox capabilities."
 ogImage: "/og-image.png"
 keywords: ["authentication", "NFT roles", "threshold signing", "wallet signature", "powerbox capabilities"]
 stylesheets:

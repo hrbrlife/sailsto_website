@@ -1,6 +1,6 @@
 ---
 title: "Clearstream Integration - Documentation"
-description: "How the Clearstream Adapter connects on-chain CrossSecurities to traditional financial infrastructure — ISIN registration, settlement operations, daily reconciliation, and SWIFT/ISO 20022 communication protocols."
+description: "How the Clearstream Adapter connects on-chain CrossSecurities to traditional financial infrastructure — ISIN registration, settlement operations."
 ogImage: "/og-image.png"
 keywords: ["Clearstream", "ISIN registration", "settlement", "reconciliation", "SWIFT", "MT540", "MT542", "ISO 20022", "CrossConversion", "bankable securities"]
 stylesheets:

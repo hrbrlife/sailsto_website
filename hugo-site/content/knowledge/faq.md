@@ -1,6 +1,6 @@
 ---
 title: "FAQ"
-description: "Frequently asked questions about Sails.to CrossSecurities platform. Learn about CrossSecurities, CrossConversion, compliance, costs, timelines, and how to get started."
+description: "Frequently asked questions about Sails.to CrossSecurities platform. Learn about CrossSecurities, CrossConversion, compliance, costs, timelines."
 keywords:
   - crosssecurities FAQ
   - tokenization questions

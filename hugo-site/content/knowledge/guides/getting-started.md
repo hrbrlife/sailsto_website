@@ -1,6 +1,6 @@
 ---
 title: "Getting Started with Sails.to"
-description: "Step-by-step guide to getting started on Sails.to—for issuers launching tokenized offerings, investors accessing opportunities, and brokers expanding their platform."
+description: "Step-by-step guide to getting started on Sails.to—for issuers launching tokenized offerings, investors accessing opportunities."
 ogImage: "/og-image.png"
 keywords: ["getting", "started", "sails", "step-by-step", "guide", "issuers", "launching", "tokenized"]
 stylesheets:

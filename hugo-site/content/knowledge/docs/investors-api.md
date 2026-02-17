@@ -1,6 +1,6 @@
 ---
 title: "Investors API - Documentation"
-description: "The Investor Self-Service Grain — portfolio management, distribution tracking, CrossConversion requests, secondary trading, tax documents, DAO governance, and the API endpoints that power the investor experience on Sails.to."
+description: "The Investor Self-Service Grain — portfolio management, distribution tracking, CrossConversion requests, secondary trading, tax documents, DAO governance."
 ogImage: "/og-image.png"
 keywords: ["investor API", "portfolio", "distributions", "CrossConversion", "secondary trading", "tax documents", "DAO governance", "OTC", "cap table"]
 stylesheets:

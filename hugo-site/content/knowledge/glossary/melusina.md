@@ -1,6 +1,6 @@
 ---
 title: "Melusina - Glossary"
-description: "The on-chain authority layer for Sails.to — a Solana-based system implementing NFT hierarchies, KYC credentialing, SPL-2022 compliance tokens, and threshold crypto."
+description: "The on-chain authority layer for Sails.to — a Solana-based system implementing NFT hierarchies, KYC credentialing, SPL-2022 compliance tokens."
 ogImage: "/og-image.png"
 keywords: ["melusina", "glossary", "on-chain", "authority", "solana", "nft", "compliance", "sails"]
 stylesheets:

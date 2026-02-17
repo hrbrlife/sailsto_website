@@ -1,6 +1,6 @@
 ---
 title: "Distributions API - Documentation"
-description: "The sails_distributions program — waterfall-based revenue distribution, investor claiming, reconciliation with Clearstream, and the API endpoints for managing payouts on Sails.to."
+description: "The sails_distributions program — waterfall-based revenue distribution, investor claiming, reconciliation with Clearstream."
 ogImage: "/og-image.png"
 keywords: ["distributions", "waterfall", "revenue", "investor payout", "claiming", "reconciliation"]
 stylesheets:

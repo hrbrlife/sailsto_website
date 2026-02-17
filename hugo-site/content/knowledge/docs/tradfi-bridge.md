@@ -1,6 +1,6 @@
 ---
 title: "TradFi Bridge - Documentation"
-description: "The full integration layer connecting on-chain Solana tokens to traditional financial infrastructure — Clearstream settlement, SWIFT messaging, regulatory filing, event routing, notification services, and operational monitoring."
+description: "The full integration layer connecting on-chain Solana tokens to traditional financial infrastructure — Clearstream settlement, SWIFT messaging."
 ogImage: "/og-image.png"
 keywords: ["TradFi bridge", "integration layer", "Solana event watcher", "Clearstream", "SWIFT", "notifications", "regulatory filing", "Form D", "EDGAR", "distributions", "waterfall", "monitoring"]
 stylesheets:

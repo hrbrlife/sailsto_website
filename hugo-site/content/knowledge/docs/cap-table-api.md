@@ -1,6 +1,6 @@
 ---
 title: "Cap Table API - Documentation"
-description: "The cap table on Sails.to is the live state of InvestorPosition PDAs on Solana — always current, always verifiable, always immutable. The Offering Grain reads and exposes this data through the OfferingAPI interface."
+description: "The cap table on Sails.to is the live state of InvestorPosition PDAs on Solana — always current, always verifiable, always immutable."
 ogImage: "/og-image.png"
 keywords: ["cap table", "InvestorPosition", "OfferingState", "PDA", "ownership", "snapshot", "audit", "CrossConversion", "access control"]
 stylesheets:

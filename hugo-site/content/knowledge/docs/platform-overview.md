@@ -1,6 +1,6 @@
 ---
 title: "Platform Overview - Documentation"
-description: "Complete architectural overview of the Sails.to platform — three pillars, seven grain types, and the data sovereignty model that makes regulated tokenized securities possible."
+description: "Complete architectural overview of the Sails.to platform — three pillars, seven grain types."
 ogImage: "/og-image.png"
 keywords: ["platform architecture", "sandstorm grains", "cap'n proto", "tokenized securities", "data sovereignty"]
 stylesheets:

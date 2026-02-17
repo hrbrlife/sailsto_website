@@ -1,6 +1,6 @@
 ---
 title: "Management Fee - Glossary"
-description: "An ongoing fee charged for the administration and management of a securities offering. Sails.to operates on a success-based model with no upfront management fees."
+description: "An ongoing fee charged for the administration and management of a securities offering. Sails."
 ogImage: "/og-image.png"
 keywords: ["management fee", "glossary", "administration", "securities", "offering", "success-based", "distribution fee"]
 stylesheets:

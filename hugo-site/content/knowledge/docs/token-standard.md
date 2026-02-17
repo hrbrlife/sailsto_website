@@ -1,6 +1,6 @@
 ---
 title: "Token Standard - Documentation"
-description: "The sails_securities Anchor program — instructions, PDA accounts, events, and SPL-2022 Transfer Hook compliance extensions for regulated security tokens on Solana."
+description: "The sails_securities Anchor program — instructions, PDA accounts, events, and SPL-2022 Transfer Hook compliance extensions for regulated security tokens."
 ogImage: "/og-image.png"
 keywords: ["security token", "SPL-2022", "anchor program", "solana", "transfer hook", "PDA"]
 stylesheets:

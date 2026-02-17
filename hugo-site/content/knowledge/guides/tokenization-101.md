@@ -1,6 +1,6 @@
 ---
 title: "Tokenization 101"
-description: "What tokenization is, why it matters, and how Sails.to's CrossSecurities architecture creates hybrid on-chain + bankable securities that actually work in the real world."
+description: "What tokenization is, why it matters, and how Sails.to's CrossSecurities architecture creates hybrid on-chain + bankable securities that actually work in."
 ogImage: "/og-image.png"
 keywords: ["tokenization", "security tokens", "CrossSecurities", "SPL-2022", "digital securities", "blockchain", "Solana", "compliance"]
 stylesheets:

@@ -1,6 +1,6 @@
 ---
 title: "Compare"
-description: "Compare Sails CrossSecurities against Securitize, Tokeny, Bitbond, ADDX, Obligate, Wefunder, and Sygnum. Transparent analysis of legal structure, cost, custody, liquidity, and bankability for professional investors."
+description: "Compare Sails CrossSecurities against Securitize, Tokeny, Bitbond, ADDX, Obligate, Wefunder, and Sygnum."
 keywords:
   - compare tokenization platforms
   - Sails vs Securitize

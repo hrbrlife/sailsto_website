@@ -1,6 +1,6 @@
 ---
 title: "Hybrid Architecture - Documentation"
-description: "The CrossConversion Engine — how Sails.to bridges on-chain Solana tokens to bankable ISIN-identified securities via Clearstream, maintaining a 1:1 invariant at all times."
+description: "The CrossConversion Engine — how Sails.to bridges on-chain Solana tokens to bankable ISIN-identified securities via Clearstream."
 ogImage: "/og-image.png"
 keywords: ["crossconversion", "hybrid securities", "clearstream", "ISIN", "lockbox", "reconciliation"]
 stylesheets:

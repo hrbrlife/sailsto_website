@@ -1,6 +1,6 @@
 ---
 title: "API Reference - Documentation"
-description: "The Sails.to REST gateway and Cap'n Proto RPC interfaces — endpoint groups, authentication model, response formats, error handling, and rate limits for every NFT tier."
+description: "The Sails.to REST gateway and Cap'n Proto RPC interfaces — endpoint groups, authentication model, response formats, error handling."
 ogImage: "/og-image.png"
 keywords: ["API", "REST", "Cap'n Proto", "endpoints", "rate limiting", "NFT authentication", "RPC"]
 stylesheets:

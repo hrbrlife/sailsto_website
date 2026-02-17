@@ -1,6 +1,6 @@
 ---
 title: "KYC Integration - Documentation"
-description: "KYC as a grain, not a service — the 10-step verification workflow, investor classifications, credential NFT lifecycle, Cap'n Proto interface, and Powerbox integration points."
+description: "KYC as a grain, not a service — the 10-step verification workflow, investor classifications, credential NFT lifecycle, Cap'n Proto interface."
 ogImage: "/og-image.png"
 keywords: ["KYC", "investor onboarding", "credential NFT", "accredited investor", "verification workflow", "Cap'n Proto", "Powerbox"]
 stylesheets:

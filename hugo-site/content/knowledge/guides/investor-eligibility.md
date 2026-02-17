@@ -1,6 +1,6 @@
 ---
 title: "Investor Eligibility Guide"
-description: "Who can invest on Sails.to—investor classifications, the 10-step KYC verification process, regulatory exemptions, geographic eligibility, and minimum requirements explained."
+description: "Who can invest on Sails.to—investor classifications, the 10-step KYC verification process, regulatory exemptions, geographic eligibility."
 ogImage: "/og-image.png"
 keywords: ["investor eligibility", "accredited investor", "KYC", "verification", "Reg D", "Reg S", "qualified purchaser", "compliance"]
 stylesheets:

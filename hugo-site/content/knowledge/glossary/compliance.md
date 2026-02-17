@@ -1,6 +1,6 @@
 ---
 title: "Compliance - Glossary"
-description: "Adherence to legal, regulatory, and internal requirements — automated and enforced on-chain for CrossSecurities through KYC/AML, investor eligibility, and transfer restrictions."
+description: "Adherence to legal, regulatory, and internal requirements — automated and enforced on-chain for CrossSecurities through KYC/AML, investor eligibility."
 ogImage: "/og-image.png"
 keywords: ["compliance", "glossary", "adherence", "legal", "regulatory", "internal", "requirements", "automated"]
 stylesheets:

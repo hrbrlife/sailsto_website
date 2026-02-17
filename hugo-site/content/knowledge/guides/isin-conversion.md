@@ -1,6 +1,6 @@
 ---
 title: "ISIN Conversion Guide"
-description: "How CrossConversion bridges on-chain tokens and bankable ISIN securities through Clearstream—step by step, with the 1:1 invariant, reconciliation, fees, and use cases explained."
+description: "How CrossConversion bridges on-chain tokens and bankable ISIN securities through Clearstream—step by step, with the 1:1 invariant, reconciliation, fees."
 ogImage: "/og-image.png"
 keywords: ["ISIN", "CrossConversion", "Clearstream", "bankable securities", "on-chain", "custody", "conversion", "settlement"]
 stylesheets:

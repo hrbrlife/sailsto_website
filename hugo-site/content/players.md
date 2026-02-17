@@ -1,6 +1,6 @@
 ---
 title: "Life of a Deal"
-description: "Follow a CrossSecurities deal from three vantage points — the issuer raising capital, the professional investor buying in, and the trust company authenticating every step."
+description: "Follow a CrossSecurities deal from three vantage points — the issuer raising capital, the professional investor buying in."
 keywords:
   - CrossSecurities lifecycle
   - DAO Series LLC

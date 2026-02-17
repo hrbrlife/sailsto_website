@@ -1,6 +1,6 @@
 ---
 title: "Platform Offerings Preview"
-description: "Illustrative examples of CrossSecurities offerings on Sails.to. See the types of tokenized bonds available from verified issuers after completing investor verification."
+description: "Illustrative examples of CrossSecurities offerings on Sails.to. See the types of tokenized bonds available from verified issuers after completing investor."
 keywords:
   - offerings preview
   - CrossSecurities

@@ -1,6 +1,6 @@
 ---
 title: "Transfer Rules - Documentation"
-description: "Transfer compliance checks, the SPL-2022 Transfer Hook mechanism, account freezing, forced transfers, and jurisdiction rules — every rule enforced at the protocol level."
+description: "Transfer compliance checks, the SPL-2022 Transfer Hook mechanism, account freezing, forced transfers."
 ogImage: "/og-image.png"
 keywords: ["transfer rules", "transfer hook", "compliance", "account freezing", "forced transfer", "jurisdiction"]
 stylesheets:

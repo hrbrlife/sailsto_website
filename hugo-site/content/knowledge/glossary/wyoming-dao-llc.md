@@ -1,6 +1,6 @@
 ---
 title: "Wyoming DAO Series LLC - Glossary"
-description: "Wyoming's legally-recognized DAO structure combined with Series LLC capability — each Sails.to offering gets its own isolated series with separate assets, liabilities, and governance."
+description: "Wyoming's legally-recognized DAO structure combined with Series LLC capability — each Sails."
 ogImage: "/og-image.png"
 keywords: ["wyoming", "dao", "series", "llc", "glossary", "legally-recognized", "structure", "combined"]
 stylesheets:

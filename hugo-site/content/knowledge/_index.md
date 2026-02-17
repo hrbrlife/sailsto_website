@@ -1,6 +1,6 @@
 ---
 title: "Knowledge Base"
-description: "Learn everything about Sails CrossSecurities, compliance, blockchain infrastructure, and traditional finance integration. Guides, documentation, FAQ, and glossary."
+description: "Learn everything about Sails CrossSecurities, compliance, blockchain infrastructure, and traditional finance integration."
 keywords:
   - CrossSecurities guide
   - tokenization education

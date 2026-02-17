@@ -1,6 +1,6 @@
 ---
 title: "Glossary"
-description: "Complete glossary of terms for CrossSecurities, tokenized securities, blockchain, compliance, and traditional finance. Definitions for CrossSecurities, CrossConversion, security tokens, KYC, ISIN, Wyoming DAO, and more."
+description: "Complete glossary of terms for CrossSecurities, tokenized securities, blockchain, compliance, and traditional finance."
 ogImage: "/og-image.png"
 keywords: ["glossary", "complete", "terms", "crosssecurities", "tokenized", "securities", "blockchain", "compliance"]
 stylesheets:

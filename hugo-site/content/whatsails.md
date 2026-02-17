@@ -1,6 +1,6 @@
 ---
 title: "How It Works"
-description: "Understand how Sails CrossSecurities work: Wyoming DAO LLC structure, on-chain and bankable forms, CrossConversion between formats, OTC trading, smart contracts, and Melusina OS infrastructure."
+description: "Understand how Sails CrossSecurities work: Wyoming DAO LLC structure, on-chain and bankable forms, CrossConversion between formats, OTC trading."
 keywords:
   - how it works
   - CrossSecurities

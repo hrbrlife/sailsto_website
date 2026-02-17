@@ -1,6 +1,6 @@
 ---
 title: "Sails.to"
-description: "Émettez des CrossSecurities Sails — obligations, actions et tokens RWA que les investisseurs peuvent détenir on-chain ou via une banque dépositaire traditionnelle, et convertir entre les deux à volonté."
+description: "Émettez des CrossSecurities Sails — obligations, actions et tokens RWA que les investisseurs peuvent détenir on-chain ou via une banque dépositaire."
 keywords:
 - CrossSecurities
 - levée de capitaux

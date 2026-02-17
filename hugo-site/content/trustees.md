@@ -1,6 +1,6 @@
 ---
 title: "For Trust Companies"
-description: "Earn recurring revenue as a platform-approved trustee. Oversee CrossSecurities issuances, manage security deposits, and introduce issuers from your client base. Two ways to participate."
+description: "Earn recurring revenue as a platform-approved trustee. Oversee CrossSecurities issuances, manage security deposits."
 keywords:
   - trust company
   - trustee
