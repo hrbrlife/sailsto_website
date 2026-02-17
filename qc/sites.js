@@ -125,6 +125,78 @@ const SITES = {
         devServer: null,
         fileExtensions: ['.html'],
     },
+
+    // ─── Coming-soon sites ──────────────────────────────────
+
+    aitxpro: {
+        name: 'AITX.pro',
+        domain: 'aitx.pro',
+        type: 'static',
+        dir: path.join(ROOT, 'aitxpro_site'),
+        contentDirs: [path.join(ROOT, 'aitxpro_site')],
+        layoutDirs: [],
+        staticDirs: [path.join(ROOT, 'aitxpro_site')],
+        publicDir: path.join(ROOT, 'aitxpro_site'),
+        glossary: null,
+        devServer: null,
+        fileExtensions: ['.html'],
+    },
+
+    ccash: {
+        name: 'CCA.sh',
+        domain: 'cca.sh',
+        type: 'static',
+        dir: path.join(ROOT, 'ccash_site'),
+        contentDirs: [path.join(ROOT, 'ccash_site')],
+        layoutDirs: [],
+        staticDirs: [path.join(ROOT, 'ccash_site')],
+        publicDir: path.join(ROOT, 'ccash_site'),
+        glossary: null,
+        devServer: null,
+        fileExtensions: ['.html'],
+    },
+
+    freecoapp: {
+        name: 'FreeCo.app',
+        domain: 'freeco.app',
+        type: 'static',
+        dir: path.join(ROOT, 'freecoapp_site'),
+        contentDirs: [path.join(ROOT, 'freecoapp_site')],
+        layoutDirs: [],
+        staticDirs: [path.join(ROOT, 'freecoapp_site')],
+        publicDir: path.join(ROOT, 'freecoapp_site'),
+        glossary: null,
+        devServer: null,
+        fileExtensions: ['.html'],
+    },
+
+    instadao: {
+        name: 'InstaDAO.app',
+        domain: 'instadao.app',
+        type: 'static',
+        dir: path.join(ROOT, 'instadao_site'),
+        contentDirs: [path.join(ROOT, 'instadao_site')],
+        layoutDirs: [],
+        staticDirs: [path.join(ROOT, 'instadao_site')],
+        publicDir: path.join(ROOT, 'instadao_site'),
+        glossary: null,
+        devServer: null,
+        fileExtensions: ['.html'],
+    },
+
+    instatrust: {
+        name: 'InstaTrust.app',
+        domain: 'instatrust.app',
+        type: 'static',
+        dir: path.join(ROOT, 'instatrust_site'),
+        contentDirs: [path.join(ROOT, 'instatrust_site')],
+        layoutDirs: [],
+        staticDirs: [path.join(ROOT, 'instatrust_site')],
+        publicDir: path.join(ROOT, 'instatrust_site'),
+        glossary: null,
+        devServer: null,
+        fileExtensions: ['.html'],
+    },
 };
 
 module.exports = { SITES, ROOT };
