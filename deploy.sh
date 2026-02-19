@@ -90,13 +90,23 @@ else
 fi
 
 # Step 5: Publish to website-publish branch (GitHub Pages)
+# Uses a temp directory since hugo-site/public/ is gitignored
 echo ""
 echo "🌍 Publishing to website-publish branch..."
 cd "$SCRIPT_DIR"
 if git remote get-url origin &>/dev/null; then
-    git subtree split --prefix hugo-site/public -b _temp_publish 2>/dev/null || true
-    git push origin _temp_publish:website-publish --force 2>&1
-    git branch -D _temp_publish 2>/dev/null || true
+    ORIGIN_URL=$(git remote get-url origin)
+    TMPDIR=$(mktemp -d)
+    cp -r "$HUGO_DIR/public/"* "$TMPDIR/"
+    touch "$TMPDIR/.nojekyll"
+    cd "$TMPDIR"
+    git init -b website-publish
+    git add -A
+    git commit -m "Deploy: ${GIT_HASH_SHORT} build #${BUILD_NUM} — $(date '+%Y-%m-%d %H:%M')"
+    git remote add origin "$ORIGIN_URL"
+    git push origin website-publish --force 2>&1
+    cd "$SCRIPT_DIR"
+    rm -rf "$TMPDIR"
     echo "✅ Published to website-publish branch"
 else
     echo "ℹ️  No GitHub remote configured. Skipping."
