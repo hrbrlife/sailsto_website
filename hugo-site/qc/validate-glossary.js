@@ -13,6 +13,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const yaml = require('js-yaml');
 
 // Configuration
 const HUGO_ROOT = path.join(__dirname, '..');
@@ -235,6 +236,99 @@ function validateGlossary() {
         console.log(`${YELLOW}⚠ ${orphanedDefs.length} terms are defined but never used:${RESET}\n`);
         for (const term of orphanedDefs) {
             console.log(`  ${YELLOW}•${RESET} ${term}`);
+        }
+        console.log();
+    }
+
+    // CHECK 5: Glossary frontmatter fields
+    console.log(`${BOLD}CHECK 5: Glossary page frontmatter fields${RESET}`);
+    console.log('────────────────────────────────────────────────────────────');
+
+    // Load valid categories from data/categories.yaml
+    let validCategories = new Set();
+    const categoriesPath = path.join(HUGO_ROOT, 'data', 'categories.yaml');
+    if (fs.existsSync(categoriesPath)) {
+        try {
+            const catData = yaml.load(fs.readFileSync(categoriesPath, 'utf8'));
+            if (catData && catData.glossary_categories) {
+                const gc = catData.glossary_categories;
+                if (Array.isArray(gc)) {
+                    for (const cat of gc) {
+                        if (cat.id) validCategories.add(cat.id);
+                    }
+                } else if (typeof gc === 'object') {
+                    // Map-style: { finance: {...}, compliance: {...} }
+                    for (const key of Object.keys(gc)) {
+                        validCategories.add(key);
+                    }
+                }
+            }
+        } catch (e) {
+            console.log(`  ${YELLOW}⚠ Could not parse categories.yaml: ${e.message}${RESET}`);
+        }
+    }
+
+    const fmIssues = [];
+    const glossaryFiles = fs.existsSync(GLOSSARY_PAGES_DIR)
+        ? fs.readdirSync(GLOSSARY_PAGES_DIR).filter(f => f.endsWith('.md') && f !== '_index.md')
+        : [];
+
+    for (const file of glossaryFiles) {
+        const fullPath = path.join(GLOSSARY_PAGES_DIR, file);
+        const content = fs.readFileSync(fullPath, 'utf8');
+        const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
+        if (!fmMatch) {
+            fmIssues.push({ file, issue: 'no frontmatter found' });
+            continue;
+        }
+
+        try {
+            const fm = yaml.load(fmMatch[1]);
+            const slug = file.replace('.md', '');
+
+            // Check category
+            if (!fm.category) {
+                fmIssues.push({ file, issue: 'missing category field' });
+            } else if (validCategories.size > 0 && !validCategories.has(fm.category)) {
+                fmIssues.push({ file, issue: `invalid category "${fm.category}"` });
+            }
+
+            // Check tags
+            if (!fm.tags || !Array.isArray(fm.tags) || fm.tags.length === 0) {
+                fmIssues.push({ file, issue: 'missing or empty tags array' });
+            }
+
+            // Check relatedTerms references
+            if (fm.relatedTerms && Array.isArray(fm.relatedTerms)) {
+                for (const ref of fm.relatedTerms) {
+                    if (!glossaryPages.has(ref)) {
+                        fmIssues.push({ file, issue: `relatedTerms "${ref}" has no glossary page` });
+                    }
+                }
+            }
+        } catch (e) {
+            fmIssues.push({ file, issue: `YAML parse error: ${e.message}` });
+        }
+    }
+
+    if (fmIssues.length === 0) {
+        console.log(`${GREEN}✓ All ${glossaryFiles.length} glossary pages have valid frontmatter${RESET}\n`);
+    } else {
+        const fmErrors = fmIssues.filter(i => !i.issue.startsWith('missing or empty tags'));
+        const fmWarns = fmIssues.filter(i => i.issue.startsWith('missing or empty tags'));
+        errors += fmErrors.length;
+        warnings += fmWarns.length;
+        if (fmErrors.length > 0) {
+            console.log(`${RED}✗ ${fmErrors.length} frontmatter error(s):${RESET}`);
+            for (const { file, issue } of fmErrors) {
+                console.log(`  ${RED}•${RESET} ${file}: ${issue}`);
+            }
+        }
+        if (fmWarns.length > 0) {
+            console.log(`${YELLOW}⚠ ${fmWarns.length} frontmatter warning(s):${RESET}`);
+            for (const { file, issue } of fmWarns) {
+                console.log(`  ${YELLOW}•${RESET} ${file}: ${issue}`);
+            }
         }
         console.log();
     }

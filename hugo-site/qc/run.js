@@ -7,9 +7,13 @@
  * ═══════════════════════════════════════════════════════════════
  * 
  * Runs all validation checks:
- *   • Glossary: term definitions, pages, and usage
+ *   • Glossary: term definitions, pages, usage, and frontmatter
  *   • Links: internal page links and static resources
  *   • Images: references, alt text, and unused files
+ *   • Data: YAML data files integrity and i18n completeness
+ *   • Frontmatter: content metadata consistency
+ *   • Icons: SVG icon sprite completeness
+ *   • Shortcodes: template references and Hugo build
  * 
  * Usage:
  *   node qc/run.js           Run all checks
@@ -27,6 +31,10 @@ const { validateGlossary } = require('./validate-glossary');
 const { validateLinks } = require('./validate-links');
 const { validateImages } = require('./validate-images');
 const { validateContrast } = require('./validate-contrast');
+const { validateData } = require('./validate-data');
+const { validateFrontmatter } = require('./validate-frontmatter');
+const { validateIcons } = require('./validate-icons');
+const { validateShortcodes } = require('./validate-shortcodes');
 
 // ANSI colors
 const RED = '\x1b[31m';
@@ -59,6 +67,26 @@ const VALIDATORS = {
         name: 'Contrast Validation',
         description: 'Check WCAG 2.1 AA contrast ratios (needs running server)',
         fn: validateContrast
+    },
+    data: {
+        name: 'Data File Validation',
+        description: 'Check YAML data files (categories, roadmap) integrity & i18n',
+        fn: validateData
+    },
+    frontmatter: {
+        name: 'Frontmatter Validation',
+        description: 'Check content frontmatter consistency (categories, tags, scripts)',
+        fn: validateFrontmatter
+    },
+    icons: {
+        name: 'Icon Sprite Validation',
+        description: 'Check SVG icon sprite completeness and usage',
+        fn: validateIcons
+    },
+    shortcodes: {
+        name: 'Shortcode Validation',
+        description: 'Check shortcode/partial/data references and Hugo build',
+        fn: validateShortcodes
     }
 };
 

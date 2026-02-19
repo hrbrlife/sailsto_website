@@ -12,6 +12,7 @@
     "install:browsers": "npx playwright install chromium"
   },
   "dependencies": {
+    "js-yaml": "^4.1.1",
     "playwright": "^1.40.0"
   }
 }
