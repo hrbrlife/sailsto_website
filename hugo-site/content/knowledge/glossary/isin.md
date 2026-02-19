@@ -8,6 +8,16 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "tradfi"
+relatedTerms:
+  - "clearstream"
+  - "crossconversion"
+  - "crosssecurities"
+  - "custody"
+  - "security-token"
 ---
 
 <header class="term-page-header">

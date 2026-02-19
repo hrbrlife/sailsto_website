@@ -8,6 +8,15 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "legal"
+tags:
+  - "legal-structure"
+relatedTerms:
+  - "crosssecurities"
+  - "custody"
+  - "distributions"
+  - "escrow"
 ---
 
 <header class="term-page-header">

@@ -1,0 +1,46 @@
+{{/* 
+  Shortcode: roadmap-cards
+  Renders roadmap milestone cards for the KB index from data/roadmap.yaml
+*/}}
+{{ $lang := .Page.Language.Lang }}
+{{ $roadmap := .Site.Data.roadmap }}
+{{ $cats := .Site.Data.categories }}
+
+<div class="kb-temporal-filters">
+    <button class="kb-temporal-tag active" data-temporal="all">{{ if eq $lang "fr" }}Toutes les phases{{ else }}All Phases{{ end }}</button>
+    <button class="kb-temporal-tag" data-temporal="completed">✓ {{ if eq $lang "fr" }}Terminé{{ else }}Completed{{ end }}</button>
+    <button class="kb-temporal-tag" data-temporal="beta">● Beta</button>
+    <button class="kb-temporal-tag" data-temporal="public">○ {{ if eq $lang "fr" }}Lancement{{ else }}Public Launch{{ end }}</button>
+    <button class="kb-temporal-tag" data-temporal="future">◇ {{ if eq $lang "fr" }}Futur{{ else }}Future{{ end }}</button>
+</div>
+<div class="kb-grid kb-roadmap-grid">
+    {{ range $roadmap.phases }}
+    {{ $phase := . }}
+    {{ range .milestones }}
+    {{ $m := . }}
+    {{ $status := $m.status }}
+    {{ $statusDef := index $cats.roadmap_statuses $status }}
+    {{ $statusIcon := $statusDef.icon }}
+    {{ $statusClass := $statusDef.css_class }}
+    {{/* Map status to temporal value for filtering */}}
+    {{ $temporal := "future" }}
+    {{ if eq $status "completed" }}{{ $temporal = "completed" }}
+    {{ else if eq $status "in-progress" }}{{ $temporal = "beta" }}
+    {{ else if eq $status "upcoming" }}{{ $temporal = "public" }}
+    {{ else }}{{ $temporal = "future" }}{{ end }}
+    {{ $tags := delimit $m.tags " " }}
+    <a href="/knowledge/roadmap/#{{ $m.id }}" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="{{ $temporal }}" data-tags="{{ $tags }}">
+        <span class="kb-roadmap-status {{ $statusClass }}">{{ $statusIcon }}</span>
+        <span class="kb-card-category">{{ $m.category }}</span>
+        <h3>{{ index $m.title $lang }}</h3>
+        <p>{{ index $m.description $lang }}</p>
+        <div class="kb-card-tags">
+            <span class="kb-tag temporal{{ if eq $statusClass "current" }} current{{ end }}">{{ $statusDef.en }}</span>
+            {{ range $m.tags }}
+            <span class="kb-tag category">{{ . | humanize | title }}</span>
+            {{ end }}
+        </div>
+    </a>
+    {{ end }}
+    {{ end }}
+</div>

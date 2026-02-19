@@ -8,6 +8,15 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "issuance"
+relatedTerms:
+  - "accredited-investor"
+  - "nominal-value"
+  - "professional-investor"
+  - "reg-d"
 ---
 
 <header class="term-page-header">

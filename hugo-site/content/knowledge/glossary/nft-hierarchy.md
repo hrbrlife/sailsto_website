@@ -8,6 +8,20 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "technology"
+tags:
+  - "defi"
+relatedTerms:
+  - "broker-dealer"
+  - "compliance"
+  - "crosssecurities"
+  - "kyc"
+  - "master-nft"
+  - "melusina"
+  - "smart-contract"
+  - "solana"
+  - "threshold-signing"
 ---
 
 <header class="term-page-header">

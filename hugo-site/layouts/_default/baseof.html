@@ -2,6 +2,7 @@
 <html lang="{{ .Site.Language.Lang }}">
 {{ partial "head.html" . }}
 <body>
+    {{ partial "icon-sprite.html" . }}
     <a href="#main-content" class="skip-to-content">Skip to content</a>
     {{ if not .Params.hideNav }}
     {{ partial "nav.html" . }}

@@ -8,6 +8,16 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "legal"
+tags:
+  - "legal-structure"
+relatedTerms:
+  - "cap-table"
+  - "crossconversion-series"
+  - "operating-series"
+  - "security-token"
+  - "series-llc"
 ---
 
 <header class="term-page-header">

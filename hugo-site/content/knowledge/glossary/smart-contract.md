@@ -8,6 +8,17 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "technology"
+tags:
+  - "defi"
+relatedTerms:
+  - "cap-table"
+  - "distributions"
+  - "kyc"
+  - "security-token"
+  - "solana"
+  - "tokenization"
 ---
 
 <header class="term-page-header">

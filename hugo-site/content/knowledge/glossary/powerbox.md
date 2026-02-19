@@ -8,6 +8,15 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "technology"
+tags:
+  - "infrastructure"
+relatedTerms:
+  - "cap-n-proto"
+  - "grain"
+  - "melusina"
+  - "trustee"
 ---
 
 <header class="term-page-header">

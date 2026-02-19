@@ -8,6 +8,15 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "finance"
+relatedTerms:
+  - "atomic-settlement"
+  - "otc"
+  - "secondary-trading"
+  - "vienna-mtf"
 ---
 
 <header class="term-page-header">

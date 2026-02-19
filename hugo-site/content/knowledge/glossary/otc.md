@@ -8,6 +8,15 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "tradfi"
+relatedTerms:
+  - "atomic-settlement"
+  - "secondary-trading"
+  - "solana"
+  - "vienna-mtf"
 ---
 
 <header class="term-page-header">

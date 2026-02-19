@@ -8,6 +8,22 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "fees"
+relatedTerms:
+  - "aml"
+  - "brokerage-fee"
+  - "broker-dealer"
+  - "commission"
+  - "compliance"
+  - "crossconversion"
+  - "crosssecurities"
+  - "kyc"
+  - "melusina"
+  - "nft-hierarchy"
+  - "trustee"
 ---
 
 <header class="term-page-header">

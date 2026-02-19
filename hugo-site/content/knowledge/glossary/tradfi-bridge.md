@@ -8,6 +8,18 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "tradfi"
+  - "bridge"
+relatedTerms:
+  - "clearstream"
+  - "crossconversion"
+  - "crosssecurities"
+  - "custody"
+  - "isin"
+  - "solana"
 ---
 
 <header class="term-page-header">

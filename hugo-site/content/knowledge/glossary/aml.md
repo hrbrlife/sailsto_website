@@ -8,6 +8,15 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "compliance"
+tags:
+  - "compliance"
+relatedTerms:
+  - "kyc"
+  - "reg-d"
+  - "reg-s"
+  - "smart-contract"
 ---
 
 <header class="term-page-header">

@@ -8,6 +8,19 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "defi"
+relatedTerms:
+  - "crossconversion"
+  - "crosssecurities"
+  - "isin"
+  - "series-llc"
+  - "smart-contract"
+  - "spv"
+  - "tokenization"
+  - "wyoming-dao-llc"
 ---
 
 

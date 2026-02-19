@@ -8,6 +8,15 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "fees"
+relatedTerms:
+  - "brokerage-fee"
+  - "distribution-fee"
+  - "otc"
+  - "secondary-trading"
 ---
 
 <header class="term-page-header">

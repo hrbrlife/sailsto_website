@@ -8,6 +8,15 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "compliance"
+tags:
+  - "compliance"
+relatedTerms:
+  - "kyc"
+  - "professional-investor"
+  - "reg-d"
+  - "reg-s"
 ---
 
 <header class="term-page-header">

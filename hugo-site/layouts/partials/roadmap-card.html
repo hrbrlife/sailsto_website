@@ -1,0 +1,42 @@
+{{/* 
+  Partial: roadmap-card.html
+  Renders a single roadmap milestone card for use in the KB index page.
+  
+  Accepts a dict with:
+    .milestone  — milestone object from data/roadmap.yaml
+    .phase      — parent phase object
+    .lang       — current language code ("en" or "fr")
+    .categories — site.Data.categories
+*/}}
+
+{{ $m := .milestone }}
+{{ $phase := .phase }}
+{{ $lang := .lang }}
+{{ $cats := .categories }}
+
+{{ $status := $m.status }}
+{{ $statusDef := index $cats.roadmap_statuses $status }}
+{{ $statusIcon := $statusDef.icon }}
+{{ $statusClass := $statusDef.css_class }}
+
+{{/* Map status to temporal value for filtering */}}
+{{ $temporal := "future" }}
+{{ if eq $status "completed" }}{{ $temporal = "completed" }}
+{{ else if eq $status "in-progress" }}{{ $temporal = "beta" }}
+{{ else if eq $status "upcoming" }}{{ $temporal = "public" }}
+{{ else }}{{ $temporal = "future" }}{{ end }}
+
+{{ $tags := delimit $m.tags " " }}
+
+<a href="/knowledge/roadmap/#{{ $m.id }}" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="{{ $temporal }}" data-tags="{{ $tags }}">
+    <span class="kb-roadmap-status {{ $statusClass }}">{{ $statusIcon }}</span>
+    <span class="kb-card-category">{{ $m.category }}</span>
+    <h3>{{ index $m.title $lang }}</h3>
+    <p>{{ index $m.description $lang }}</p>
+    <div class="kb-card-tags">
+        <span class="kb-tag temporal{{ if eq $statusClass "current" }} current{{ end }}">{{ $statusDef.en }}</span>
+        {{ range $m.tags }}
+        <span class="kb-tag category">{{ . | humanize | title }}</span>
+        {{ end }}
+    </div>
+</a>

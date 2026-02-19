@@ -8,6 +8,17 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "technology"
+tags:
+  - "infrastructure"
+relatedTerms:
+  - "cap-table"
+  - "clearstream"
+  - "crossconversion"
+  - "crosssecurities"
+  - "distributions"
+  - "smart-contract"
 ---
 
 <header class="term-page-header">

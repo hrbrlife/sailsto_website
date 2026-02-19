@@ -8,6 +8,15 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "finance"
+relatedTerms:
+  - "cap-table"
+  - "kyc"
+  - "security-token"
+  - "smart-contract"
 ---
 
 <header class="term-page-header">

@@ -8,6 +8,14 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "compliance"
+tags:
+  - "compliance"
+relatedTerms:
+  - "accredited-investor"
+  - "professional-investor"
+  - "reg-d"
 ---
 
 <header class="term-page-header">

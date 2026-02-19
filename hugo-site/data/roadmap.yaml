@@ -1,0 +1,350 @@
+# ─── ROADMAP DATA ──────────────────────────────────────────────────────────
+# Single source of truth for all roadmap milestones.
+# Used by both /knowledge/ index cards AND /knowledge/roadmap/ timeline.
+
+current_status: "beta"
+current_status_label:
+  en: "Currently in Beta"
+  fr: "Actuellement en bêta"
+
+hero:
+  label:
+    en: "Development"
+    fr: "Développement"
+  title:
+    en: "Roadmap"
+    fr: "Feuille de route"
+  description:
+    en: "Building the infrastructure for the next generation of capital markets. Track our progress from beta to global scale."
+    fr: "Construire l'infrastructure pour la prochaine génération de marchés de capitaux. Suivez notre progression de la bêta à l'échelle mondiale."
+
+vision:
+  label:
+    en: "Our Vision"
+    fr: "Notre Vision"
+  title:
+    en: "Building the Rails for Tomorrow's Capital Markets"
+    fr: "Construire les Rails des Marchés de Capitaux de Demain"
+  paragraphs:
+    - en: "We believe the future of finance isn't about choosing between traditional and decentralized systems — it's about seamlessly bridging both. Sails.to is building the CrossSecurities infrastructure that makes this possible."
+      fr: "Nous croyons que l'avenir de la finance n'est pas de choisir entre les systèmes traditionnels et décentralisés — c'est de les relier de manière transparente. Sails.to construit l'infrastructure CrossSecurities qui rend cela possible."
+    - en: "Every milestone on this roadmap brings us closer to a world where any asset can be tokenized as CrossSecurities, any investor can participate (within regulatory bounds), and capital flows freely across borders while maintaining full compliance."
+      fr: "Chaque jalon de cette feuille de route nous rapproche d'un monde où tout actif peut être tokenisé en tant que CrossSecurities, tout investisseur peut participer (dans les limites réglementaires), et les capitaux circulent librement à travers les frontières tout en maintenant une conformité totale."
+    - en: "This isn't just a product roadmap. It's a blueprint for how securities will work in the 21st century."
+      fr: "Ce n'est pas seulement une feuille de route produit. C'est un plan pour le fonctionnement des titres au 21ème siècle."
+
+phases:
+  - id: "foundation"
+    number: 1
+    title:
+      en: "Foundation"
+      fr: "Fondation"
+    date:
+      en: "Q3 2025 – Q4 2025"
+      fr: "T3 2025 – T4 2025"
+    status: "completed"
+    milestones:
+      - id: "wyoming-dao"
+        title:
+          en: "Wyoming DAO LLC Formation"
+          fr: "Création de la LLC DAO au Wyoming"
+        description:
+          en: "Legal entity established with full compliance framework for CrossSecurities."
+          fr: "Entité juridique établie avec un cadre de conformité complet pour les CrossSecurities."
+        status: "completed"
+        category: "legal"
+        tags: ["legal", "compliance"]
+        icon: "landmark"
+
+      - id: "core-platform"
+        title:
+          en: "Core Platform Architecture"
+          fr: "Architecture de la plateforme principale"
+        description:
+          en: "Solana smart contracts designed and audited for CrossSecurities issuance."
+          fr: "Contrats intelligents Solana conçus et audités pour l'émission de CrossSecurities."
+        status: "completed"
+        category: "technical"
+        tags: ["technical", "infrastructure"]
+        icon: "settings"
+
+      - id: "tradfi-bridge-design"
+        title:
+          en: "CrossConversion Design"
+          fr: "Conception du CrossConversion"
+        description:
+          en: "ISIN integration pathway and Clearstream custody protocol finalized."
+          fr: "Chemin d'intégration ISIN et protocole de custody Clearstream finalisés."
+        status: "completed"
+        category: "technical"
+        tags: ["technical", "infrastructure"]
+        icon: "convert"
+
+      - id: "regulatory-framework"
+        title:
+          en: "Regulatory Framework"
+          fr: "Cadre réglementaire"
+        description:
+          en: "Reg S/Reg D compliance structure with automated investor verification."
+          fr: "Structure de conformité Reg S/Reg D avec vérification automatisée des investisseurs."
+        status: "completed"
+        category: "compliance"
+        tags: ["legal", "compliance"]
+        icon: "clipboard"
+
+  - id: "beta-launch"
+    number: 2
+    title:
+      en: "Beta Launch"
+      fr: "Lancement bêta"
+    date:
+      en: "Q1 2026"
+      fr: "T1 2026"
+    status: "in-progress"
+    milestones:
+      - id: "platform-beta"
+        title:
+          en: "Platform Beta Live"
+          fr: "Plateforme bêta en ligne"
+        description:
+          en: "Public beta launch with full issuer and investor onboarding."
+          fr: "Lancement bêta public avec intégration complète des émetteurs et des investisseurs."
+        status: "completed"
+        category: "product"
+        tags: ["product", "launch"]
+        icon: "zap"
+
+      - id: "broker-network"
+        title:
+          en: "Broker Network Activation"
+          fr: "Activation du réseau de courtiers"
+        description:
+          en: "First licensed broker partners onboarded with white-label access."
+          fr: "Premiers courtiers partenaires accrédités intégrés avec accès marque blanche."
+        status: "in-progress"
+        category: "product"
+        tags: ["product", "infrastructure"]
+        icon: "handshake"
+
+      - id: "first-offering"
+        title:
+          en: "First CrossSecurities Launch"
+          fr: "Premier lancement de CrossSecurities"
+        description:
+          en: "Inaugural CrossSecurities offering goes live on the platform."
+          fr: "La première offre CrossSecurities est lancée sur la plateforme."
+        status: "in-progress"
+        category: "product"
+        tags: ["product", "milestone"]
+        icon: "money"
+
+      - id: "kyc-integration"
+        title:
+          en: "KYC/AML Integration"
+          fr: "Intégration KYC/AML"
+        description:
+          en: "Third-party verification partners integrated for automated compliance."
+          fr: "Partenaires de vérification tiers intégrés pour la conformité automatisée."
+        status: "in-progress"
+        category: "compliance"
+        tags: ["compliance", "technical"]
+        icon: "check"
+
+  - id: "growth-scale"
+    number: 3
+    title:
+      en: "Growth & Scale"
+      fr: "Croissance et montée en charge"
+    date:
+      en: "Q2 – Q3 2026"
+      fr: "T2 – T3 2026"
+    status: "upcoming"
+    milestones:
+      - id: "tradfi-bridge-live"
+        title:
+          en: "CrossConversion Live"
+          fr: "CrossConversion en production"
+        description:
+          en: "Full ISIN conversion and Clearstream custody operational."
+          fr: "Conversion ISIN complète et custody Clearstream opérationnelle."
+        status: "completed"
+        category: "technical"
+        tags: ["technical", "infrastructure"]
+        icon: "bank"
+
+      - id: "secondary-trading"
+        title:
+          en: "Secondary Trading"
+          fr: "Trading secondaire"
+        description:
+          en: "P2P secondary market for compliant token trading between verified investors."
+          fr: "Marché secondaire P2P pour le trading conforme de tokens entre investisseurs vérifiés."
+        status: "upcoming"
+        category: "product"
+        tags: ["product", "trading"]
+        icon: "trending-up"
+
+      - id: "institutional-partners"
+        title:
+          en: "Institutional Partners"
+          fr: "Partenaires institutionnels"
+        description:
+          en: "First institutional custodians and prime brokers integrated."
+          fr: "Premiers dépositaires institutionnels et courtiers principaux intégrés."
+        status: "upcoming"
+        category: "business"
+        tags: ["business", "partnerships"]
+        icon: "building"
+
+      - id: "mobile-app"
+        title:
+          en: "Mobile Experience"
+          fr: "Expérience mobile"
+        description:
+          en: "iOS and Android apps for investors with full portfolio management."
+          fr: "Applications iOS et Android pour les investisseurs avec gestion complète du portefeuille."
+        status: "upcoming"
+        category: "product"
+        tags: ["product", "mobile"]
+        icon: "mobile"
+
+  - id: "global-expansion"
+    number: 4
+    title:
+      en: "Global Expansion"
+      fr: "Expansion mondiale"
+    date:
+      en: "Q4 2026 – 2027"
+      fr: "T4 2026 – 2027"
+    status: "upcoming"
+    milestones:
+      - id: "eu-uk-licensing"
+        title:
+          en: "EU/UK Licensing"
+          fr: "Licences UE/RU"
+        description:
+          en: "MiFID II compliance and FCA registration for European markets."
+          fr: "Conformité MiFID II et enregistrement FCA pour les marchés européens."
+        status: "upcoming"
+        category: "legal"
+        tags: ["legal", "compliance", "expansion"]
+        icon: "globe"
+
+      - id: "apac-expansion"
+        title:
+          en: "APAC Expansion"
+          fr: "Expansion Asie-Pacifique"
+        description:
+          en: "Singapore MAS and Hong Kong SFC regulatory pathways."
+          fr: "Voies réglementaires MAS de Singapour et SFC de Hong Kong."
+        status: "upcoming"
+        category: "legal"
+        tags: ["legal", "compliance", "expansion"]
+        icon: "globe-asia"
+
+      - id: "cross-chain"
+        title:
+          en: "Cross-Chain Support"
+          fr: "Support multi-chaînes"
+        description:
+          en: "Ethereum and additional L1 integration for token portability."
+          fr: "Intégration Ethereum et L1 supplémentaire pour la portabilité des tokens."
+        status: "future"
+        category: "technical"
+        tags: ["technical", "infrastructure"]
+        icon: "refresh"
+
+      - id: "dao-governance"
+        title:
+          en: "DAO Governance"
+          fr: "Gouvernance DAO"
+        description:
+          en: "Token holder voting and decentralized protocol governance activated."
+          fr: "Vote des détenteurs de tokens et gouvernance décentralisée du protocole activée."
+        status: "future"
+        category: "product"
+        tags: ["product", "governance"]
+        icon: "landmark"
+
+  - id: "infrastructure-maturity"
+    number: 5
+    title:
+      en: "Infrastructure Maturity"
+      fr: "Maturité de l'infrastructure"
+    date:
+      en: "2027+"
+      fr: "2027+"
+    status: "future"
+    milestones:
+      - id: "open-api"
+        title:
+          en: "Open API Platform"
+          fr: "Plateforme API ouverte"
+        description:
+          en: "Full API access for third-party integrations and custom applications."
+          fr: "Accès API complet pour les intégrations tierces et les applications personnalisées."
+        status: "future"
+        category: "technical"
+        tags: ["technical", "infrastructure"]
+        icon: "plug"
+
+      - id: "ai-compliance"
+        title:
+          en: "AI-Powered Compliance"
+          fr: "Conformité pilotée par l'IA"
+        description:
+          en: "Machine learning for real-time regulatory monitoring and reporting."
+          fr: "Apprentissage automatique pour la surveillance réglementaire en temps réel et le reporting."
+        status: "future"
+        category: "compliance"
+        tags: ["compliance", "technical"]
+        icon: "robot"
+
+      - id: "instant-settlement"
+        title:
+          en: "Instant Settlement"
+          fr: "Règlement instantané"
+        description:
+          en: "T+0 settlement for all security types across jurisdictions."
+          fr: "Règlement T+0 pour tous les types de titres à travers les juridictions."
+        status: "future"
+        category: "technical"
+        tags: ["technical", "infrastructure"]
+        icon: "zap"
+
+      - id: "global-standard"
+        title:
+          en: "Global Standard"
+          fr: "Standard mondial"
+        description:
+          en: "Become the reference implementation for CrossSecurities infrastructure."
+          fr: "Devenir l'implémentation de référence pour l'infrastructure CrossSecurities."
+        status: "future"
+        category: "product"
+        tags: ["product", "milestone"]
+        icon: "globe"
+
+# ─── CTA SECTION ──────────────────────────────────────────────────────────
+cta:
+  title:
+    en: "Join Us on the Journey"
+    fr: "Rejoignez-nous dans cette aventure"
+  text:
+    en: "Be part of the next generation of capital markets infrastructure."
+    fr: "Faites partie de la prochaine génération de l'infrastructure des marchés de capitaux."
+  buttons:
+    - url: "/signup/?type=issuer"
+      label:
+        en: "Start Issuing"
+        fr: "Commencer à émettre"
+      style: "btn-primary"
+    - url: "/signup/?type=investor"
+      label:
+        en: "Become an Investor"
+        fr: "Devenir investisseur"
+      style: "btn-ghost"
+    - url: "/signup/?type=broker"
+      label:
+        en: "Partner as Broker"
+        fr: "Partenaire courtier"
+      style: "btn-ghost"

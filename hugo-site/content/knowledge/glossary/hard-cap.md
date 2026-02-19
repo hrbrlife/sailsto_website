@@ -8,6 +8,14 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "issuance"
+relatedTerms:
+  - "cap-table"
+  - "nominal-value"
+  - "soft-cap"
 ---
 
 <header class="term-page-header">

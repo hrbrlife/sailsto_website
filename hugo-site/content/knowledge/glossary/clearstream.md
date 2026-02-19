@@ -8,6 +8,15 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "tradfi"
+relatedTerms:
+  - "crossconversion"
+  - "crosssecurities"
+  - "custody"
+  - "isin"
 ---
 
 <header class="term-page-header">

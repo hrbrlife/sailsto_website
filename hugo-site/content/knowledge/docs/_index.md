@@ -8,6 +8,7 @@ stylesheets:
   - "/assets/css/docs.css"
   - "/assets/css/knowledge-docs-index.css"
 scripts:
+  - "/js/kb-filters.js"
   - "/js/knowledge-docs-index.js"
 ---
 

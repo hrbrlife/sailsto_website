@@ -1,0 +1,67 @@
+{{/* 
+  Shortcode: roadmap-timeline
+  Renders the full roadmap timeline from data/roadmap.yaml
+  Used on the dedicated roadmap page.
+*/}}
+{{ $lang := .Page.Language.Lang }}
+{{ $roadmap := .Site.Data.roadmap }}
+{{ $cats := .Site.Data.categories }}
+
+<section class="roadmap-hero">
+    <span class="section-label">{{ if eq $lang "fr" }}Développement{{ else }}Development{{ end }}</span>
+    <h1 class="section-title">{{ index $roadmap.hero.title $lang }}</h1>
+    <p class="section-desc">{{ index $roadmap.hero.subtitle $lang }}</p>
+    <div class="roadmap-status">
+        <span class="pulse"></span>
+        {{ $roadmap.current_status }}
+    </div>
+</section>
+
+<section class="roadmap-timeline">
+    <div class="timeline-container">
+        {{ range $roadmap.phases }}
+        {{ $phase := . }}
+        {{ $phaseStatus := index $cats.roadmap_statuses .status }}
+        <div class="timeline-phase">
+            <div class="phase-header">
+                <div class="phase-dot {{ $phaseStatus.css_class }}"></div>
+                <span class="phase-label">Phase {{ .number }}</span>
+                <h2 class="phase-title">{{ index .title $lang }}</h2>
+                <p class="phase-date">{{ index .date $lang }}</p>
+                <span class="phase-status {{ $phaseStatus.css_class }}">{{ $phaseStatus.icon }} {{ index $phaseStatus $lang }}</span>
+            </div>
+            <div class="milestones-grid">
+                {{ range .milestones }}
+                {{ $mStatus := index $cats.roadmap_statuses .status }}
+                <div class="milestone-card{{ if eq .status "completed" }} completed{{ end }}" id="{{ .id }}">
+                    {{ if eq .status "completed" }}<span class="milestone-check">✓</span>{{ end }}
+                    <div class="milestone-icon"><span class="icon-wrapper"><svg><use href="#icon-{{ .icon }}"></use></svg></span></div>
+                    <h3 class="milestone-title">{{ index .title $lang }}</h3>
+                    <p class="milestone-desc">{{ index .description $lang }}</p>
+                </div>
+                {{ end }}
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</section>
+
+<section class="roadmap-vision">
+    <div class="vision-container">
+        <span class="section-label">{{ if eq $lang "fr" }}Notre Vision{{ else }}Our Vision{{ end }}</span>
+        <h2 class="vision-title">{{ index $roadmap.vision.title $lang }}</h2>
+        {{ range $roadmap.vision.paragraphs }}
+        <p class="vision-text">{{ index . $lang }}</p>
+        {{ end }}
+    </div>
+</section>
+
+<section class="roadmap-cta">
+    <h2 class="cta-title">{{ index $roadmap.cta.title $lang }}</h2>
+    <p class="cta-text">{{ index $roadmap.cta.subtitle $lang }}</p>
+    <div class="cta-buttons">
+        {{ range $roadmap.cta.buttons }}
+        <a href="{{ .href }}" class="btn {{ .class }}">{{ index .label $lang }}</a>
+        {{ end }}
+    </div>
+</section>

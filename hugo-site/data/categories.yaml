@@ -1,0 +1,195 @@
+# ─── CENTRAL CATEGORY REGISTRY ─────────────────────────────────────────────
+# Single source of truth for all categories, tags, and statuses.
+# Referenced by Hugo partials and JS filter modules.
+
+# ─── CONTENT TYPE TABS ─────────────────────────────────────────────────────
+content_types:
+  all:
+    en: "All Resources"
+    fr: "Toutes les ressources"
+    icon: ""
+  guides:
+    en: "Guides"
+    fr: "Guides"
+    icon: "📖"
+  docs:
+    en: "Documentation"
+    fr: "Documentation"
+    icon: "📄"
+  faq:
+    en: "FAQ"
+    fr: "FAQ"
+    icon: "❓"
+  glossary:
+    en: "Glossary"
+    fr: "Glossaire"
+    icon: "📋"
+  blog:
+    en: "Blog"
+    fr: "Blog"
+    icon: "📰"
+  roadmap:
+    en: "Roadmap"
+    fr: "Feuille de route"
+    icon: "🗺️"
+
+# ─── GLOSSARY CATEGORIES ──────────────────────────────────────────────────
+glossary_categories:
+  finance:
+    en: "Finance"
+    fr: "Finance"
+    icon: "💰"
+    color: "var(--neon-orange)"
+  compliance:
+    en: "Compliance"
+    fr: "Conformité"
+    icon: "⚖️"
+    color: "var(--neon-blue)"
+  legal:
+    en: "Legal"
+    fr: "Juridique"
+    icon: "📜"
+    color: "var(--neon-pink)"
+  technology:
+    en: "Technology"
+    fr: "Technologie"
+    icon: "⚙️"
+    color: "var(--neon-teal)"
+
+# ─── CONTENT CATEGORIES ───────────────────────────────────────────────────
+# Used on guide, doc, FAQ & roadmap cards
+content_categories:
+  beginner:
+    en: "Beginner"
+    fr: "Débutant"
+    color: "var(--neon-teal)"
+  technical:
+    en: "Technical"
+    fr: "Technique"
+    color: "var(--neon-purple)"
+  legal:
+    en: "Legal"
+    fr: "Juridique"
+    color: "var(--neon-pink)"
+  compliance:
+    en: "Compliance"
+    fr: "Conformité"
+    color: "var(--neon-blue)"
+  overview:
+    en: "Overview"
+    fr: "Vue d'ensemble"
+    color: "var(--neon-teal)"
+  development:
+    en: "Development"
+    fr: "Développement"
+    color: "var(--neon-purple)"
+  api:
+    en: "API"
+    fr: "API"
+    color: "var(--neon-orange)"
+  architecture:
+    en: "Architecture"
+    fr: "Architecture"
+    color: "var(--neon-blue)"
+  getting-started:
+    en: "Getting Started"
+    fr: "Premiers pas"
+    color: "var(--neon-teal)"
+  support:
+    en: "Support"
+    fr: "Assistance"
+    color: "var(--neon-orange)"
+  general:
+    en: "General"
+    fr: "Général"
+    color: "var(--slate)"
+  for-issuers:
+    en: "For Issuers"
+    fr: "Pour les émetteurs"
+    color: "var(--neon-orange)"
+  for-investors:
+    en: "For Investors"
+    fr: "Pour les investisseurs"
+    color: "var(--neon-teal)"
+  product:
+    en: "Product"
+    fr: "Produit"
+    color: "var(--neon-blue)"
+  business:
+    en: "Business"
+    fr: "Affaires"
+    color: "var(--neon-orange)"
+
+# ─── ROADMAP STATUSES ──────────────────────────────────────────────────────
+roadmap_statuses:
+  completed:
+    en: "Completed"
+    fr: "Terminé"
+    icon: "✓"
+    css_class: "completed"
+  in-progress:
+    en: "In Progress"
+    fr: "En cours"
+    icon: "●"
+    css_class: "current"
+  upcoming:
+    en: "Upcoming"
+    fr: "À venir"
+    icon: "○"
+    css_class: "upcoming"
+  future:
+    en: "Future"
+    fr: "Futur"
+    icon: "◇"
+    css_class: "future"
+
+# ─── TAG LABELS ────────────────────────────────────────────────────────────
+# Secondary tags shown on roadmap and resource cards
+tags:
+  infrastructure:
+    en: "Infrastructure"
+    fr: "Infrastructure"
+  launch:
+    en: "Launch"
+    fr: "Lancement"
+  milestone:
+    en: "Milestone"
+    fr: "Jalon"
+  trading:
+    en: "Trading"
+    fr: "Négociation"
+  partnerships:
+    en: "Partnerships"
+    fr: "Partenariats"
+  mobile:
+    en: "Mobile"
+    fr: "Mobile"
+  expansion:
+    en: "Expansion"
+    fr: "Expansion"
+  governance:
+    en: "Governance"
+    fr: "Gouvernance"
+
+# ─── FAQ CATEGORIES ────────────────────────────────────────────────────────
+faq_categories:
+  general:
+    en: "General"
+    fr: "Général"
+    icon: "💬"
+  for-issuers:
+    en: "For Issuers"
+    fr: "Pour les émetteurs"
+    icon: "🏢"
+  for-investors:
+    en: "For Investors"
+    fr: "Pour les investisseurs"
+    icon: "💼"
+  compliance:
+    en: "Compliance"
+    fr: "Conformité"
+    icon: "⚖️"
+  technical:
+    en: "Technical"
+    fr: "Technique"
+    icon: "⚙️"

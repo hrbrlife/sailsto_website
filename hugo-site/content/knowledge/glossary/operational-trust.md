@@ -8,6 +8,14 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "legal"
+tags:
+  - "legal-structure"
+relatedTerms:
+  - "custody"
+  - "escrow"
+  - "trustee"
 ---
 
 <header class="term-page-header">

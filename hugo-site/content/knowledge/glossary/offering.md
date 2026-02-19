@@ -8,6 +8,17 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "issuance"
+relatedTerms:
+  - "cap-table"
+  - "crosssecurities"
+  - "distributions"
+  - "series-llc"
+  - "solana"
+  - "wyoming-dao-llc"
 ---
 
 <header class="term-page-header">

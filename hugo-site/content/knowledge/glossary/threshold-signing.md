@@ -8,6 +8,16 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "technology"
+tags:
+  - "defi"
+relatedTerms:
+  - "crossconversion"
+  - "master-nft"
+  - "melusina"
+  - "nft-hierarchy"
+  - "solana"
 ---
 
 <header class="term-page-header">

@@ -15,6 +15,7 @@ stylesheets:
   - "/assets/css/glossary.css"
   - "/assets/css/knowledge-index.css"
 scripts:
+  - "/js/kb-filters.js"
   - "/js/knowledge-index.js"
 ---
 
@@ -33,15 +34,7 @@ scripts:
 </section>
 <section class="kb-tabs-section">
     <div class="kb-container">
-        <div class="kb-tabs" id="kb-tabs">
-            <button class="kb-tab active" data-category="all">All Resources</button>
-            <button class="kb-tab" data-category="guides">Guides</button>
-            <button class="kb-tab" data-category="docs">Documentation</button>
-            <button class="kb-tab" data-category="faq">FAQ</button>
-            <button class="kb-tab" data-category="glossary">Glossary</button>
-            <button class="kb-tab" data-category="blog">Blog</button>
-            <button class="kb-tab" data-category="roadmap">Roadmap</button>
-        </div>
+        {{< kb-tabs >}}
     </div>
 </section>
 <section class="kb-featured">
@@ -183,42 +176,7 @@ scripts:
                 <a href="/knowledge/glossary/" class="kb-section-link">View Full Glossary →</a>
             </div>
             <div class="kb-glossary-preview">
-                <div class="kb-glossary-categories">
-                    <a href="glossary/index.html#finance" class="kb-glossary-cat">
-                        <span class="kb-glossary-icon" style="color: var(--gold);">💰</span>
-                        <span class="kb-glossary-label">Finance</span>
-                        <span class="kb-glossary-count">31 terms</span>
-                    </a>
-                    <a href="glossary/index.html#compliance" class="kb-glossary-cat">
-                        <span class="kb-glossary-icon" style="color: var(--navy);">⚖️</span>
-                        <span class="kb-glossary-label">Compliance</span>
-                        <span class="kb-glossary-count">8 terms</span>
-                    </a>
-                    <a href="glossary/index.html#legal" class="kb-glossary-cat">
-                        <span class="kb-glossary-icon" style="color: var(--crimson);">📜</span>
-                        <span class="kb-glossary-label">Legal</span>
-                        <span class="kb-glossary-count">9 terms</span>
-                    </a>
-                    <a href="glossary/index.html#technology" class="kb-glossary-cat">
-                        <span class="kb-glossary-icon" style="color: var(--slate);">⚙️</span>
-                        <span class="kb-glossary-label">Technology</span>
-                        <span class="kb-glossary-count">13 terms</span>
-                    </a>
-                </div>
-                <div class="kb-glossary-featured">
-                    <h4>Popular Terms</h4>
-                    <div class="kb-glossary-terms">
-                        <a href="/knowledge/glossary/crosssecurities/" class="glossary-term-pill">CrossSecurities</a>
-                        <a href="/knowledge/glossary/crossconversion/" class="glossary-term-pill">CrossConversion</a>
-                        <a href="/knowledge/glossary/wyoming-dao-llc/" class="glossary-term-pill">Wyoming DAO LLC</a>
-                        <a href="/knowledge/glossary/isin/" class="glossary-term-pill">ISIN</a>
-                        <a href="/knowledge/glossary/clearstream/" class="glossary-term-pill">Clearstream</a>
-                        <a href="/knowledge/glossary/kyc/" class="glossary-term-pill">KYC</a>
-                        <a href="/knowledge/glossary/nft-hierarchy/" class="glossary-term-pill">NFT Hierarchy</a>
-                        <a href="/knowledge/glossary/grain/" class="glossary-term-pill">Grain</a>
-                        <a href="/knowledge/glossary/threshold-signing/" class="glossary-term-pill">Threshold Signing</a>
-                    </div>
-                </div>
+                {{< glossary-preview >}}
             </div>
         </div>
         <div class="kb-resource-section" data-category="roadmap">
@@ -227,175 +185,7 @@ scripts:
                 <p>Track our development progress and upcoming features</p>
                 <a href="/knowledge/roadmap/" class="kb-section-link">View Full Roadmap →</a>
             </div>
-            <div class="kb-temporal-filters">
-                <button class="kb-temporal-tag active" data-temporal="all">All Phases</button>
-                <button class="kb-temporal-tag" data-temporal="completed">✓ Completed</button>
-                <button class="kb-temporal-tag" data-temporal="beta">● Beta</button>
-                <button class="kb-temporal-tag" data-temporal="public">○ Public Launch</button>
-                <button class="kb-temporal-tag" data-temporal="future">◇ Future</button>
-            </div>
-            <div class="kb-grid kb-roadmap-grid">
-                <a href="/knowledge/roadmap/#wyoming-dao" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="legal compliance">
-                    <span class="kb-roadmap-status completed">✓</span>
-                    <span class="kb-card-category">Legal</span>
-                    <h3>Wyoming DAO LLC Formation</h3>
-                    <p>Legal entity established with full compliance framework for tokenized securities.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal">Completed</span>
-                        <span class="kb-tag category">Compliance</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#core-platform" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="technical infrastructure">
-                    <span class="kb-roadmap-status completed">✓</span>
-                    <span class="kb-card-category">Technical</span>
-                    <h3>Core Platform Architecture</h3>
-                    <p>Solana smart contracts designed and audited for security token issuance.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal">Completed</span>
-                        <span class="kb-tag category">Infrastructure</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#tradfi-bridge-design" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="technical infrastructure">
-                    <span class="kb-roadmap-status completed">✓</span>
-                    <span class="kb-card-category">Technical</span>
-                    <h3>CrossConversion Design</h3>
-                    <p>ISIN integration pathway and Clearstream custody protocol finalized.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal">Completed</span>
-                        <span class="kb-tag category">Infrastructure</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#regulatory-framework" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="completed" data-tags="legal compliance">
-                    <span class="kb-roadmap-status completed">✓</span>
-                    <span class="kb-card-category">Compliance</span>
-                    <h3>Regulatory Framework</h3>
-                    <p>Reg S/Reg D compliance structure with automated investor verification.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal">Completed</span>
-                        <span class="kb-tag category">Legal</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#platform-beta" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product launch">
-                    <span class="kb-roadmap-status current">●</span>
-                    <span class="kb-card-category">Product</span>
-                    <h3>Platform Beta Live</h3>
-                    <p>Public beta launch with full issuer and investor onboarding.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal current">Beta</span>
-                        <span class="kb-tag category">Launch</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#broker-network" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product infrastructure">
-                    <span class="kb-roadmap-status current">●</span>
-                    <span class="kb-card-category">Product</span>
-                    <h3>Broker Network Activation</h3>
-                    <p>First licensed broker partners onboarded with white-label access.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal current">Beta</span>
-                        <span class="kb-tag category">Infrastructure</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#first-offering" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="product milestone">
-                    <span class="kb-roadmap-status current">●</span>
-                    <span class="kb-card-category">Product</span>
-                    <h3>First CrossSecurities Launch</h3>
-                    <p>Inaugural CrossSecurities offering goes live on the platform.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal current">Beta</span>
-                        <span class="kb-tag category">Milestone</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#kyc-integration" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="beta" data-tags="compliance technical">
-                    <span class="kb-roadmap-status current">●</span>
-                    <span class="kb-card-category">Compliance</span>
-                    <h3>KYC/AML Integration</h3>
-                    <p>Third-party verification partners integrated for automated compliance.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal current">Beta</span>
-                        <span class="kb-tag category">Technical</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#tradfi-bridge-live" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="technical infrastructure">
-                    <span class="kb-roadmap-status upcoming">○</span>
-                    <span class="kb-card-category">Technical</span>
-                    <h3>CrossConversion Live</h3>
-                    <p>Full ISIN conversion and Clearstream custody operational.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal">Public Launch</span>
-                        <span class="kb-tag category">Infrastructure</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#secondary-trading" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="product trading">
-                    <span class="kb-roadmap-status upcoming">○</span>
-                    <span class="kb-card-category">Product</span>
-                    <h3>Secondary Trading</h3>
-                    <p>P2P secondary market for compliant token trading between verified investors.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal">Public Launch</span>
-                        <span class="kb-tag category">Trading</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#institutional-partners" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="business partnerships">
-                    <span class="kb-roadmap-status upcoming">○</span>
-                    <span class="kb-card-category">Business</span>
-                    <h3>Institutional Partners</h3>
-                    <p>First institutional custodians and prime brokers integrated.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal">Public Launch</span>
-                        <span class="kb-tag category">Partnerships</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#mobile-app" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="public" data-tags="product mobile">
-                    <span class="kb-roadmap-status upcoming">○</span>
-                    <span class="kb-card-category">Product</span>
-                    <h3>Mobile Experience</h3>
-                    <p>iOS and Android apps for investors with full portfolio management.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal">Public Launch</span>
-                        <span class="kb-tag category">Mobile</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#eu-uk-licensing" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="legal compliance expansion">
-                    <span class="kb-roadmap-status future">◇</span>
-                    <span class="kb-card-category">Legal</span>
-                    <h3>EU/UK Licensing</h3>
-                    <p>MiFID II compliance and FCA registration for European markets.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal">Future</span>
-                        <span class="kb-tag category">Expansion</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#apac-expansion" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="legal compliance expansion">
-                    <span class="kb-roadmap-status future">◇</span>
-                    <span class="kb-card-category">Legal</span>
-                    <h3>APAC Expansion</h3>
-                    <p>Singapore MAS and Hong Kong SFC regulatory pathways.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal">Future</span>
-                        <span class="kb-tag category">Expansion</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#cross-chain" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="technical infrastructure">
-                    <span class="kb-roadmap-status future">◇</span>
-                    <span class="kb-card-category">Technical</span>
-                    <h3>Cross-Chain Support</h3>
-                    <p>Ethereum and additional L1 integration for token portability.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal">Future</span>
-                        <span class="kb-tag category">Infrastructure</span>
-                    </div>
-                </a>
-                <a href="/knowledge/roadmap/#dao-governance" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="future" data-tags="product governance">
-                    <span class="kb-roadmap-status future">◇</span>
-                    <span class="kb-card-category">Product</span>
-                    <h3>DAO Governance</h3>
-                    <p>Token holder voting and decentralized protocol governance activated.</p>
-                    <div class="kb-card-tags">
-                        <span class="kb-tag temporal">Future</span>
-                        <span class="kb-tag category">Governance</span>
-                    </div>
-                </a>
-            </div>
+            {{< roadmap-cards >}}
         </div>
     </div>
 </section>

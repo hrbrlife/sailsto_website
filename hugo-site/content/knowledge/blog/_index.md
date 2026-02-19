@@ -1,0 +1,28 @@
+---
+title: "Blog"
+description: "Insights, updates, and analysis from the Sails.to team — covering CrossSecurities, tokenization, DeFi-TradFi convergence, and regulatory developments."
+stylesheets:
+  - "/assets/fonts/fonts.css"
+  - "/styles.css"
+  - "/assets/css/glossary.css"
+  - "/assets/css/knowledge-blog-index.css"
+scripts:
+  - "/js/kb-filters.js"
+  - "/js/knowledge-blog-index.js"
+---
+
+
+<section class="page-hero">
+    <span class="section-label">Insights</span>
+    <h1 class="section-title">Blog</h1>
+    <p class="section-desc">Updates, analysis, and perspectives on CrossSecurities infrastructure, tokenization, and the future of capital markets.</p>
+</section>
+
+<section class="blog-content" style="max-width:900px;margin:3rem auto;padding:0 1.5rem;">
+    <div class="coming-soon-notice" style="text-align:center;padding:4rem 2rem;background:var(--bg-primary);border-radius:12px;border:1px solid rgba(0,0,0,0.06);">
+        <span style="font-size:3rem;">📝</span>
+        <h2 style="font-family:var(--font-display);margin:1rem 0 0.5rem;">Coming Soon</h2>
+        <p style="color:var(--text-secondary);max-width:480px;margin:0 auto 1.5rem;">We're preparing our first articles on CrossSecurities, regulatory frameworks, and the DeFi-TradFi bridge. Check back soon.</p>
+        <a href="/knowledge/" class="btn" style="display:inline-block;padding:0.75rem 1.5rem;background:var(--neon-orange);color:white;border-radius:8px;text-decoration:none;font-weight:600;">Browse Knowledge Base</a>
+    </div>
+</section>

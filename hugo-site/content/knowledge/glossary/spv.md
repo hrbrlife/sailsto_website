@@ -8,6 +8,14 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "legal"
+tags:
+  - "legal-structure"
+relatedTerms:
+  - "security-token"
+  - "series-llc"
+  - "wyoming-dao-llc"
 ---
 
 <header class="term-page-header">

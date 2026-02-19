@@ -8,6 +8,18 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "legal"
+tags:
+  - "legal-structure"
+relatedTerms:
+  - "cap-table"
+  - "clearstream"
+  - "crossconversion"
+  - "crosssecurities"
+  - "isin"
+  - "series-llc"
+  - "solana"
 ---
 
 <header class="term-page-header">

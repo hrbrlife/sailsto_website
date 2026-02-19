@@ -8,6 +8,18 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "technology"
+tags:
+  - "defi"
+relatedTerms:
+  - "accredited-investor"
+  - "compliance"
+  - "crosssecurities"
+  - "kyc"
+  - "melusina"
+  - "pda"
+  - "solana"
 ---
 
 <header class="term-page-header">

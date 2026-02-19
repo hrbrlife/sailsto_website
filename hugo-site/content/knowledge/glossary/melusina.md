@@ -8,6 +8,20 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "technology"
+tags:
+  - "infrastructure"
+relatedTerms:
+  - "compliance"
+  - "kyc"
+  - "master-nft"
+  - "nft-hierarchy"
+  - "pda"
+  - "smart-contract"
+  - "solana"
+  - "threshold-signing"
+  - "transfer-hook"
 ---
 
 <header class="term-page-header">

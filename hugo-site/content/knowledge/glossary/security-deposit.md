@@ -8,6 +8,15 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "fees"
+relatedTerms:
+  - "distribution-fee"
+  - "series-llc"
+  - "smart-contract"
+  - "spv"
 ---
 
 <header class="term-page-header">

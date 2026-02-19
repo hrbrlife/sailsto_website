@@ -8,6 +8,16 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "issuance"
+relatedTerms:
+  - "cap-table"
+  - "clearstream"
+  - "isin"
+  - "security-token"
+  - "smart-contract"
 ---
 
 <header class="term-page-header">

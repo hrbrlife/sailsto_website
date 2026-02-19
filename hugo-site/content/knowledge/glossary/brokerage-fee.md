@@ -8,6 +8,16 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "fees"
+relatedTerms:
+  - "crosssecurities"
+  - "distribution-fee"
+  - "otc"
+  - "secondary-trading"
+  - "solana"
 ---
 
 <header class="term-page-header">

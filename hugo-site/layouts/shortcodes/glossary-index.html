@@ -1,0 +1,88 @@
+{{/* 
+  Shortcode: glossary-index
+  Renders the full glossary index with filter buttons, alphabet nav, and term cards.
+  All data comes from the glossary term pages' frontmatter.
+*/}}
+{{ $lang := .Page.Language.Lang }}
+{{ $cats := .Site.Data.categories }}
+
+{{/* Get all glossary term pages */}}
+{{ $glossarySection := .Site.GetPage "/knowledge/glossary" }}
+{{ $glossaryPages := slice }}
+{{ if $glossarySection }}
+  {{ $glossaryPages = $glossarySection.Pages }}
+{{ end }}
+
+{{/* Sort by title */}}
+{{ $sortedPages := sort $glossaryPages "Title" "asc" }}
+
+<!-- Category Filters -->
+<div class="glossary-filters">
+    <button class="glossary-filter active" data-category="all">{{ if eq $lang "fr" }}Tous{{ else }}All{{ end }}</button>
+    {{ range $key, $def := $cats.glossary_categories }}
+    <button class="glossary-filter" data-category="{{ $key }}">{{ $def.icon }} {{ index $def $lang }}</button>
+    {{ end }}
+</div>
+
+<!-- Alphabet Navigation -->
+<div class="glossary-alphabet">
+    {{ $letters := slice "A" "B" "C" "D" "E" "F" "G" "H" "I" "J" "K" "L" "M" "N" "O" "P" "Q" "R" "S" "T" "U" "V" "W" "X" "Y" "Z" }}
+    {{ range $letters }}
+    {{ $letter := . }}
+    {{ $hasTerms := false }}
+    {{ range $sortedPages }}
+        {{ $title := .Title | replaceRE ` - Glossary$` "" }}
+        {{ if hasPrefix (upper $title) $letter }}
+            {{ $hasTerms = true }}
+        {{ end }}
+    {{ end }}
+    {{ if $hasTerms }}
+    <a href="#letter-{{ $letter }}" class="alpha-link">{{ $letter }}</a>
+    {{ else }}
+    <span class="alpha-link disabled">{{ $letter }}</span>
+    {{ end }}
+    {{ end }}
+</div>
+
+<!-- Term Cards grouped by letter -->
+{{ range $letters }}
+{{ $letter := . }}
+{{ $letterPages := slice }}
+{{ range $sortedPages }}
+    {{ $title := .Title | replaceRE ` - Glossary$` "" }}
+    {{ if hasPrefix (upper $title) $letter }}
+        {{ $letterPages = $letterPages | append . }}
+    {{ end }}
+{{ end }}
+{{ if gt (len $letterPages) 0 }}
+<div class="glossary-letter-section" id="letter-{{ $letter }}">
+    <h2 class="glossary-letter">{{ $letter }}</h2>
+    <div class="glossary-grid">
+        {{ range $letterPages }}
+        {{ $cat := .Params.category | default "finance" }}
+        {{ $catDef := index $cats.glossary_categories $cat }}
+        {{ $catLabel := $cat | humanize | title }}
+        {{ $catColor := "var(--text-secondary)" }}
+        {{ if $catDef }}
+            {{ $catLabel = index $catDef $lang }}
+            {{ $catColor = $catDef.color }}
+        {{ end }}
+        {{ $title := .Title | replaceRE ` - Glossary$` "" }}
+        <a href="{{ .RelPermalink }}" class="glossary-card" data-category="{{ $cat }}">
+            <div class="glossary-card-header">
+                <h3 class="glossary-card-title">{{ $title }}</h3>
+                <span class="glossary-card-category" style="color: {{ $catColor }}">{{ $catLabel }}</span>
+            </div>
+            {{ with .Description }}
+            <p class="glossary-card-desc">{{ . | truncate 120 }}</p>
+            {{ end }}
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+{{ end }}
+
+<div class="glossary-no-results" style="display: none;">
+    <p>{{ if eq $lang "fr" }}Aucun terme trouvé.{{ else }}No terms found matching your search.{{ end }}</p>
+</div>

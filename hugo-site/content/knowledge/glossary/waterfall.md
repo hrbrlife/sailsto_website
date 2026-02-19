@@ -8,6 +8,20 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "issuance"
+relatedTerms:
+  - "cap-table"
+  - "distributions"
+  - "operating-series"
+  - "paying-agent"
+  - "pda"
+  - "smart-contract"
+  - "solana"
+  - "treasury-series"
+  - "trustee"
 ---
 
 <header class="term-page-header">

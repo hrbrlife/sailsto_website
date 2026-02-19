@@ -8,6 +8,15 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "legal"
+tags:
+  - "issuance"
+relatedTerms:
+  - "kyc"
+  - "private-placement"
+  - "reg-d"
+  - "reg-s"
 ---
 
 <header class="term-page-header">

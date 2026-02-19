@@ -8,6 +8,16 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "issuance"
+relatedTerms:
+  - "accredited-investor"
+  - "offering-memorandum"
+  - "professional-investor"
+  - "reg-d"
+  - "reg-s"
 ---
 
 <header class="term-page-header">

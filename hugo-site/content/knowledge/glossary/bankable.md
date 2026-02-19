@@ -8,6 +8,16 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"
+
+category: "finance"
+tags:
+  - "tradfi"
+  - "bridge"
+relatedTerms:
+  - "clearstream"
+  - "crossconversion"
+  - "custody"
+  - "isin"
 ---
 
 <header class="term-page-header">
