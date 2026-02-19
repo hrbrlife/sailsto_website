@@ -176,20 +176,22 @@
     </script>
     {{ end }}
     
+    {{- $cacheBust := .Site.Data.version.hashShort | default "dev" -}}
+
     <!-- Head scripts (loaded synchronously before body) -->
     {{ range .Params.headScripts }}
-    <script src="{{ strings.TrimLeft "/" . | relURL }}"></script>
+    <script src="{{ strings.TrimLeft "/" . | relURL }}?v={{ $cacheBust }}"></script>
     {{ end }}
     
     <!-- Stylesheets -->
     {{ range .Params.stylesheets }}
-    <link rel="stylesheet" href="{{ strings.TrimLeft "/" . | relURL }}">
+    <link rel="stylesheet" href="{{ strings.TrimLeft "/" . | relURL }}?v={{ $cacheBust }}">
     {{ end }}
     
     <!-- Default stylesheets if none specified -->
     {{ if not .Params.stylesheets }}
-    <link rel="stylesheet" href="{{ "assets/fonts/fonts.css" | relURL }}">
-    <link rel="stylesheet" href="{{ "styles.css" | relURL }}">
+    <link rel="stylesheet" href="{{ "assets/fonts/fonts.css" | relURL }}?v={{ $cacheBust }}">
+    <link rel="stylesheet" href="{{ "styles.css" | relURL }}?v={{ $cacheBust }}">
     {{ end }}
     
     <!-- New Design System Fonts (Cyberpunk/Vintage) -->
@@ -197,6 +199,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     
+    <!-- Version meta -->
+    {{ partial "version-meta.html" . }}
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ "favicon.png" | relURL }}">
     <link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | relURL }}">

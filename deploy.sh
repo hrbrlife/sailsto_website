@@ -1,6 +1,7 @@
 #!/bin/bash
 # Sails.to Deployment Script
 # Builds Hugo site and deploys to both GitHub and Sandstorm hosting
+# Generates version.json from git for cache busting and version tracking
 
 set -e
 
@@ -11,6 +12,34 @@ DEPLOY_REMOTE="${DEPLOY_REMOTE:-}" # Set via environment variable, e.g. export D
 
 echo "🚀 Sails.to Deploy Script"
 echo "========================="
+
+# Step 0: Generate version.json from git
+echo ""
+echo "🔖 Generating version info..."
+cd "$SCRIPT_DIR"
+
+GIT_HASH=$(git rev-parse HEAD 2>/dev/null || echo "unknown")
+GIT_HASH_SHORT=$(git rev-parse --short HEAD 2>/dev/null || echo "dev")
+GIT_DATE=$(git log -1 --format=%cI 2>/dev/null || date -Iseconds)
+GIT_MSG=$(git log -1 --format=%s 2>/dev/null | sed 's/"/\\"/g' || echo "no message")
+GIT_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+BUILD_NUM=$(git rev-list --count HEAD 2>/dev/null || echo "0")
+
+cat > "$HUGO_DIR/data/version.json" << VEOF
+{
+  "hash": "${GIT_HASH}",
+  "hashShort": "${GIT_HASH_SHORT}",
+  "date": "${GIT_DATE}",
+  "message": "${GIT_MSG}",
+  "tag": "${GIT_TAG}",
+  "buildNumber": ${BUILD_NUM}
+}
+VEOF
+
+echo "  Commit: ${GIT_HASH_SHORT} (build #${BUILD_NUM})"
+echo "  Date:   ${GIT_DATE}"
+echo "  Tag:    ${GIT_TAG:-none}"
+echo "✅ Version info generated"
 
 # Step 1: Build Hugo site
 echo ""
@@ -60,7 +89,21 @@ else
     echo "ℹ️  No GitHub remote configured. Skipping."
 fi
 
+# Step 5: Publish to website-publish branch (GitHub Pages)
+echo ""
+echo "🌍 Publishing to website-publish branch..."
+cd "$SCRIPT_DIR"
+if git remote get-url origin &>/dev/null; then
+    git subtree split --prefix hugo-site/public -b _temp_publish 2>/dev/null || true
+    git push origin _temp_publish:website-publish --force 2>&1
+    git branch -D _temp_publish 2>/dev/null || true
+    echo "✅ Published to website-publish branch"
+else
+    echo "ℹ️  No GitHub remote configured. Skipping."
+fi
+
 echo ""
 echo "🎉 Deployment complete!"
 echo ""
+echo "Version: ${GIT_HASH_SHORT} (build #${BUILD_NUM})"
 echo "Your site should be live at the Sandstorm public URL shortly."

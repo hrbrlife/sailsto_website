@@ -64,5 +64,11 @@
     </div>
     <div class="footer-bottom">
         <span>{{ i18n "footer_copyright" }}</span>
+        {{ $v := .Site.Data.version }}
+        {{ if $v }}
+        <span class="site-version" title="Built {{ $v.date | default "" }} — {{ $v.message | default "" }}">
+            v{{ $v.hashShort | default "dev" }}
+        </span>
+        {{ end }}
     </div>
 </footer>

@@ -1188,6 +1188,13 @@ footer {
     letter-spacing: 0.04em;
     text-transform: uppercase;
 }
+.site-version {
+    color: var(--neon-teal, #00D4AA);
+    opacity: 0.7;
+    cursor: help;
+    transition: opacity 0.2s;
+}
+.site-version:hover { opacity: 1; }
 
 
 /* ═══════════════════════════════════════════════════════════════
