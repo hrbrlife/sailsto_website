@@ -104,12 +104,12 @@ scripts:
         box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
     .warning-box {
-        background: #fff5f5;
-        border-left: 4px solid #e53e3e;
+        background: #FFF4E0;
+        border-left: 4px solid #FF4444;
     }
     .success-box {
-        background: #f0fff4;
-        border-left: 4px solid #38a169;
+        background: #E0FFF0;
+        border-left: 4px solid #00E676;
     }
     .mermaid {
         background: white;
@@ -143,7 +143,7 @@ scripts:
         border-bottom: 1px solid var(--border);
     }
     tr:hover {
-        background: #f7fafc;
+        background: #E8F4FD;
     }
     .fee-highlight {
         display: inline-block;
@@ -260,11 +260,11 @@ scripts:
             Layer2 --> Layer3
             Layer3 --> Layer4
             Layer1 -.->|CrossConversion| Layer5
-            style Layer1 fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-            style Layer2 fill:#d69e2e,color:#fff,stroke:#c05621,stroke-width:2px
-            style Layer3 fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
-            style Layer4 fill:#3182ce,color:#fff,stroke:#1e40af,stroke-width:2px
-            style Layer5 fill:#ed8936,color:#fff,stroke:#c05621,stroke-width:2px
+            style Layer1 fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+            style Layer2 fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+            style Layer3 fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
+            style Layer4 fill:#4DA6FF,color:#fff,stroke:#3D86CF,stroke-width:2px
+            style Layer5 fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
         </div>
         <h3>The Five Participants</h3>
         <p>Every transaction involves five types of participants, each with a specific role:</p>
@@ -354,17 +354,17 @@ scripts:
             S5 --> WATER[Investor-First Waterfall]
             S2 --> TRUST[Trust Oversight]
             S3 --> ISIN[ISIN-Bearing Securities]
-            style DAO fill:#805ad5,color:#fff
-            style S1 fill:#9f7aea,color:#fff
-            style S5 fill:#319795,color:#fff
-            style S6 fill:#718096,color:#fff
-            style S2 fill:#d69e2e,color:#fff
-            style S3 fill:#38a169,color:#fff
-            style S4 fill:#9f7aea,color:#fff
-            style T1 fill:#38a169,color:#fff
-            style WATER fill:#319795,color:#fff
-            style TRUST fill:#d69e2e,color:#fff
-            style ISIN fill:#3182ce,color:#fff
+            style DAO fill:#7B68EE,color:#fff
+            style S1 fill:#FF69B4,color:#fff
+            style S5 fill:#00D4AA,color:#0F0F23
+            style S6 fill:#8892B0,color:#fff
+            style S2 fill:#FF6B35,color:#fff
+            style S3 fill:#00E676,color:#0F0F23
+            style S4 fill:#FF69B4,color:#fff
+            style T1 fill:#00E676,color:#0F0F23
+            style WATER fill:#00D4AA,color:#0F0F23
+            style TRUST fill:#FF6B35,color:#fff
+            style ISIN fill:#4DA6FF,color:#fff
         </div>
         <table>
             <thead>
@@ -481,17 +481,17 @@ scripts:
             WRAP -->|1:1 crossed| ISIN[Bankable ISIN Security<br/>via Clearstream]
             ISIN -->|distributed by| BANK[Paying Agent Bank]
             BANK -->|Clearstream| INV3[Bankable-Preferred<br/>Investors]
-            style MINT fill:#2c5282,color:#fff
-            style TREASURY fill:#3182ce,color:#fff
-            style CH1 fill:#38a169,color:#fff
-            style CH2 fill:#38a169,color:#fff
-            style CH3 fill:#805ad5,color:#fff
-            style INV1 fill:#48bb78,color:#fff
-            style INV2 fill:#48bb78,color:#fff
-            style INV3 fill:#9f7aea,color:#fff
-            style WRAP fill:#b794f4,color:#fff
-            style ISIN fill:#9f7aea,color:#fff
-            style BANK fill:#9f7aea,color:#fff
+            style MINT fill:#3D86CF,color:#fff
+            style TREASURY fill:#4DA6FF,color:#fff
+            style CH1 fill:#00E676,color:#0F0F23
+            style CH2 fill:#00E676,color:#0F0F23
+            style CH3 fill:#7B68EE,color:#fff
+            style INV1 fill:#00E676,color:#0F0F23
+            style INV2 fill:#00E676,color:#0F0F23
+            style INV3 fill:#FF69B4,color:#fff
+            style WRAP fill:#FF69B4,color:#fff
+            style ISIN fill:#FF69B4,color:#fff
+            style BANK fill:#FF69B4,color:#fff
         </div>
         <h3>The Three Distribution Channels</h3>
         <table>
@@ -505,19 +505,19 @@ scripts:
             </thead>
             <tbody>
                 <tr>
-                    <td><strong style="color:#38a169;">1. Direct Sales</strong></td>
+                    <td><strong style="color:#00E676;">1. Direct Sales</strong></td>
                     <td>Issuer directly</td>
                     <td>Existing network (partners, contacts)</td>
                     <td>On-chain (<span class="glossary-term" data-term="solana">Solana</span>)</td>
                 </tr>
                 <tr>
-                    <td><strong style="color:#38a169;">2. Broker Network</strong></td>
+                    <td><strong style="color:#00E676;">2. Broker Network</strong></td>
                     <td>Licensed brokers</td>
                     <td><span class="glossary-term" data-term="kyc">KYC'd</span> <span class="glossary-term" data-term="professional-investor">Professional Investors</span></td>
                     <td>On-chain (<span class="glossary-term" data-term="solana">Solana</span>)</td>
                 </tr>
                 <tr>
-                    <td><strong style="color:#805ad5;">3. <span class="glossary-term" data-term="isin">ISIN</span> / <span class="glossary-term" data-term="clearstream">Clearstream</span></strong></td>
+                    <td><strong style="color:#7B68EE;">3. <span class="glossary-term" data-term="isin">ISIN</span> / <span class="glossary-term" data-term="clearstream">Clearstream</span></strong></td>
                     <td>Paying agent bank</td>
                     <td>Bankable-preferred/institutional investors</td>
                     <td><span class="glossary-term" data-term="clearstream">Clearstream</span> (bankable rails)</td>
@@ -549,10 +549,10 @@ scripts:
             STAGE1 -->|Soft cap reached| STAGE2
             STAGE2 -->|Hard cap OR duration expires| STAGE3
             STAGE1 -->|Soft cap NOT reached| REFUND
-            style STAGE1 fill:#ebf8ff,stroke:#3182ce,stroke-width:2px
-            style STAGE2 fill:#f0fff4,stroke:#38a169,stroke-width:2px
-            style STAGE3 fill:#faf5ff,stroke:#805ad5,stroke-width:2px
-            style REFUND fill:#fff5f5,stroke:#e53e3e,stroke-width:2px
+            style STAGE1 fill:#E8F4FD,stroke:#4DA6FF,stroke-width:2px
+            style STAGE2 fill:#E0FFF0,stroke:#00E676,stroke-width:2px
+            style STAGE3 fill:#F0E8FD,stroke:#7B68EE,stroke-width:2px
+            style REFUND fill:#FFF4E0,stroke:#FF4444,stroke-width:2px
         </div>
         <table>
             <thead>
@@ -907,14 +907,14 @@ scripts:
                 <tr>
                     <td><strong>Brokerage Fee</strong></td>
                     <td><span class="fee-highlight">0.5%</span></td>
-                    <td>Secondary trades and post-soft-cap primary purchases<br><em style="color:#38a169; font-size:0.9em;">⚡ Waived during soft cap phase</em></td>
+                    <td>Secondary trades and post-soft-cap primary purchases<br><em style="color:#00E676; font-size:0.9em;">⚡ Waived during soft cap phase</em></td>
                     <td>Buyer</td>
                     <td>⅓ Platform + ⅓ Buy-side Broker + ⅓ Sell-side Broker</td>
                 </tr>
                 <tr>
                     <td><strong>Distribution Fee</strong></td>
                     <td><span class="fee-highlight">6% OR 1%</span></td>
-                    <td>Deducted from soft cap amount when reached<br><em style="color:#38a169; font-size:0.9em;">⚡ Not charged until soft cap is reached</em></td>
+                    <td>Deducted from soft cap amount when reached<br><em style="color:#00E676; font-size:0.9em;">⚡ Not charged until soft cap is reached</em></td>
                     <td>Issuer (from proceeds)</td>
                     <td>See details below</td>
                 </tr>
@@ -1110,14 +1110,14 @@ scripts:
             BROKERS --> FOUND
             FOUND --> SOL
             LLC --> CLEAR
-            style LLC fill:#805ad5,color:#fff
-            style TRUST fill:#d69e2e,color:#fff
-            style BROKERS fill:#2c5282,color:#fff
-            style FOUND fill:#1a365d,color:#fff
-            style SOL fill:#38a169,color:#fff
-            style CLEAR fill:#3182ce,color:#fff
+            style LLC fill:#7B68EE,color:#fff
+            style TRUST fill:#FF6B35,color:#fff
+            style BROKERS fill:#3D86CF,color:#fff
+            style FOUND fill:#0F0F23,color:#fff
+            style SOL fill:#00E676,color:#0F0F23
+            style CLEAR fill:#4DA6FF,color:#fff
         </div>
-        <div style="background: linear-gradient(135deg, var(--ink) 0%, #2c5282 100%); color: white; padding: 40px; border-radius: 8px; margin: 40px 0;">
+        <div style="background: linear-gradient(135deg, var(--ink) 0%, #3D86CF 100%); color: white; padding: 40px; border-radius: 8px; margin: 40px 0;">
             <h3 style="color: white; margin-top: 0;">The Big Picture</h3>
             <p>Sails CrossSecurities provide the infrastructure to raise capital on your own terms:</p>
             <ul>

@@ -87,23 +87,7 @@
     padding-top: 0;
 }
 
-/* ── Mermaid diagrams ──────────────────────────── */
-.mermaid {
-    background: var(--bg-card);
-    padding: 32px 24px;
-    margin: 32px 0 28px;
-    border: 2px solid var(--border);
-    border-left: 3px solid var(--neon-teal);
-    overflow-x: auto;
-    min-height: 200px;
-}
-
-.mermaid svg {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
+/* Mermaid: inherits global styles from styles.css */
 
 /* ── Act sections (timeline) ───────────────────── */
 .act-section {
@@ -344,7 +328,7 @@
     }
 
     .mermaid {
-        padding: 16px 12px;
+        padding: 16px 0;
     }
 }
 

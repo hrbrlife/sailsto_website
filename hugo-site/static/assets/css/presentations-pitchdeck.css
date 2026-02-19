@@ -254,12 +254,7 @@ table strong {
     white-space: pre;
 }
 
-.mermaid {
-    background: var(--bg-card);
-    padding: var(--space-md);
-    border: 2px solid var(--border);
-    margin: var(--space-md) 0;
-}
+/* Mermaid: inherits global styles from styles.css */
 
 /* ── BULLET POINTS ─────────────────────────────────────────── */
 ul, ol {

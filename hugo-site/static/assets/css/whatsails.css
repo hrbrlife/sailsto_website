@@ -154,13 +154,7 @@
 }
 
 
-/* ── MERMAID DIAGRAMS ──────────────────────────────────────── */
-.mermaid {
-    background: var(--bg-card);
-    padding: 24px;
-    margin: 24px 0;
-    border: 2px solid var(--border-strong);
-}
+/* Mermaid: inherits global styles from styles.css */
 
 
 /* ── FEE HIGHLIGHT ─────────────────────────────────────────── */

@@ -1191,6 +1191,90 @@ footer {
 
 
 /* ═══════════════════════════════════════════════════════════════
+   MERMAID DIAGRAMS — Transparent, borderless, cyberpunk palette
+═══════════════════════════════════════════════════════════════ */
+.mermaid {
+    background: transparent;
+    padding: 32px 0;
+    margin: 24px 0;
+    border: none;
+    border-left: none;
+    overflow-x: auto;
+    min-height: 100px;
+}
+
+.mermaid svg {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Override Mermaid's internal SVG node / edge colours */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon {
+    stroke: var(--neon-orange) !important;
+    stroke-width: 1.5px !important;
+}
+
+.mermaid .cluster rect {
+    fill: rgba(232, 244, 253, 0.35) !important;
+    stroke: var(--border-strong) !important;
+    stroke-width: 1.5px !important;
+    rx: 0 !important;
+    ry: 0 !important;
+}
+
+.mermaid .edgePath .path {
+    stroke: var(--slate) !important;
+    stroke-width: 1.5px !important;
+}
+
+.mermaid .arrowheadPath {
+    fill: var(--slate) !important;
+}
+
+.mermaid marker path {
+    fill: var(--slate) !important;
+}
+
+.mermaid text,
+.mermaid .nodeLabel,
+.mermaid .edgeLabel,
+.mermaid .labelText {
+    font-family: var(--font-mono) !important;
+    fill: var(--ink) !important;
+}
+
+.mermaid .edgeLabel {
+    background-color: transparent !important;
+}
+
+.mermaid .edgeLabel rect {
+    fill: transparent !important;
+    opacity: 0 !important;
+}
+
+.mermaid .edgeLabel span {
+    background: transparent !important;
+    color: var(--slate) !important;
+    font-family: var(--font-mono) !important;
+    font-size: 0.75rem !important;
+}
+
+.mermaid .label {
+    font-family: var(--font-mono) !important;
+    color: var(--ink) !important;
+}
+
+.mermaid .label foreignObject {
+    overflow: visible;
+}
+
+
+/* ═══════════════════════════════════════════════════════════════
    DETAIL LIST — Inner page content grids
 ═══════════════════════════════════════════════════════════════ */
 .detail-section {

@@ -334,16 +334,16 @@ flowchart TD
     PLAT ==>|"creates"| DAO
     PLAT ==>|"appoints"| TRU
     TRU ==>|"trust deed executed"| LIVE
-    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style PLAT fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
-    style DAO fill:#f7fafc,color:#1a202c,stroke:#a0aec0,stroke-width:2px
-    style OPS fill:#9f7aea,color:#fff,stroke:#805ad5,stroke-width:2px
-    style REV fill:#319795,color:#fff,stroke:#2c7a7b,stroke-width:2px
-    style DEP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
-    style TRS fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style CCS fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
-    style TRU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style LIVE fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
+    style YOU fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style PLAT fill:#4DA6FF,color:#fff,stroke:#3D86CF,stroke-width:2px
+    style DAO fill:#E8F4FD,color:#0F0F23,stroke:#8892B0,stroke-width:2px
+    style OPS fill:#FF69B4,color:#fff,stroke:#7B68EE,stroke-width:2px
+    style REV fill:#00D4AA,color:#0F0F23,stroke:#00A488,stroke-width:2px
+    style DEP fill:#8892B0,color:#fff,stroke:#6872A0,stroke-width:2px
+    style TRS fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style CCS fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
+    style TRU fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style LIVE fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:3px
 </div>
 <div class="act-details">
 <div class="detail-item">
@@ -374,10 +374,10 @@ flowchart TD
     LIVE ==> BROKERS
     BROKERS ==>|"subscriptions"| ESC
     ESC ==>|"threshold met"| CAP
-    style LIVE fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
-    style BROKERS fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
-    style ESC fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style CAP fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
+    style LIVE fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
+    style BROKERS fill:#4DA6FF,color:#fff,stroke:#3D86CF,stroke-width:2px
+    style ESC fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style CAP fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:3px
 </div>
 <div class="act-details">
 <div class="detail-item">
@@ -409,13 +409,13 @@ flowchart TD
     RAISE ==> DEDUCT
     DEDUCT ==>|"net proceeds"| YOU
     DEDUCT -.->|"tokens minted"| INV
-    style RAISE fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
-    style DEDUCT fill:#fff5f5,color:#1a202c,stroke:#d69e2e,stroke-width:2px
-    style D1 fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style D2 fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
-    style D3 fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style INV fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style RAISE fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:3px
+    style DEDUCT fill:#FFF4E0,color:#0F0F23,stroke:#FF6B35,stroke-width:2px
+    style D1 fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style D2 fill:#8892B0,color:#fff,stroke:#6872A0,stroke-width:2px
+    style D3 fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style YOU fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style INV fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
 </div>
 <div class="fee-summary">
 <h3>What It Costs You</h3>
@@ -464,11 +464,11 @@ flowchart TD
     REV ==>|"you request distribution"| TRU
     TRU ==>|"authenticated"| INV
     INV -.->|"remainder"| BAL
-    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style REV fill:#319795,color:#fff,stroke:#2c7a7b,stroke-width:2px
-    style TRU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style INV fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
-    style BAL fill:#9f7aea,color:#fff,stroke:#805ad5,stroke-width:2px
+    style YOU fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style REV fill:#00D4AA,color:#0F0F23,stroke:#00A488,stroke-width:2px
+    style TRU fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style INV fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
+    style BAL fill:#FF69B4,color:#fff,stroke:#7B68EE,stroke-width:2px
 </div>
 </div>
 </section>
@@ -494,11 +494,11 @@ flowchart TD
     CCS ==>|"1:1 lockbox"| BANK
     BANK -.->|"convert back"| CCS
     INV2 -.->|"trade via broker"| OTC
-    style INV1 fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style INV2 fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style OTC fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
-    style CCS fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
-    style BANK fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
+    style INV1 fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style INV2 fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style OTC fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
+    style CCS fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
+    style BANK fill:#4DA6FF,color:#fff,stroke:#3D86CF,stroke-width:2px
 </div>
 </div>
 </section>
@@ -525,12 +525,12 @@ flowchart TD
     TRU ==>|"distributed"| INV
     TRU ==>|"released"| DEP
     INV ==> DONE
-    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style REV fill:#319795,color:#fff,stroke:#2c7a7b,stroke-width:2px
-    style TRU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style INV fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
-    style DEP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
-    style DONE fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
+    style YOU fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style REV fill:#00D4AA,color:#0F0F23,stroke:#00A488,stroke-width:2px
+    style TRU fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style INV fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
+    style DEP fill:#8892B0,color:#fff,stroke:#6872A0,stroke-width:2px
+    style DONE fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:3px
 </div>
 </div>
 </section>
@@ -567,11 +567,11 @@ flowchart TD
     YOU ==>|"reviews"| DEAL
     DEAL --- TRU
     DEAL --- DEP
-    style BRK fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
-    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style DEAL fill:#9f7aea,color:#fff,stroke:#805ad5,stroke-width:2px
-    style TRU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style DEP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+    style BRK fill:#4DA6FF,color:#fff,stroke:#3D86CF,stroke-width:2px
+    style YOU fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style DEAL fill:#FF69B4,color:#fff,stroke:#7B68EE,stroke-width:2px
+    style TRU fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style DEP fill:#8892B0,color:#fff,stroke:#6872A0,stroke-width:2px
 </div>
 <div class="act-details">
 <div class="detail-item">
@@ -608,13 +608,13 @@ flowchart TD
     TOK ==> CAP
     CAP ==>|"reached"| LIVE
     CAP -.->|"not reached"| REF
-    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style BRK fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
-    style ESC fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style TOK fill:#9f7aea,color:#fff,stroke:#805ad5,stroke-width:2px
-    style CAP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
-    style LIVE fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
-    style REF fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+    style YOU fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style BRK fill:#4DA6FF,color:#fff,stroke:#3D86CF,stroke-width:2px
+    style ESC fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style TOK fill:#FF69B4,color:#fff,stroke:#7B68EE,stroke-width:2px
+    style CAP fill:#8892B0,color:#fff,stroke:#6872A0,stroke-width:2px
+    style LIVE fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
+    style REF fill:#8892B0,color:#fff,stroke:#6872A0,stroke-width:2px
 </div>
 </div>
 </section>
@@ -642,12 +642,12 @@ flowchart TD
     NET ==> TX
     TX ==>|"payment"| YOU
     TX ==>|"tokens"| BUYER
-    style YOU fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style BRK fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
-    style NET fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
-    style ATOMIC fill:#f0fff4,color:#1a202c,stroke:#38a169,stroke-width:2px
-    style TX fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
-    style BUYER fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
+    style YOU fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style BRK fill:#4DA6FF,color:#fff,stroke:#3D86CF,stroke-width:2px
+    style NET fill:#4DA6FF,color:#fff,stroke:#3D86CF,stroke-width:2px
+    style ATOMIC fill:#E0FFF0,color:#0F0F23,stroke:#00E676,stroke-width:2px
+    style TX fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:3px
+    style BUYER fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
 </div>
 <div class="act-details">
 <div class="detail-item">
@@ -680,11 +680,11 @@ flowchart TD
     REV ==>|"issuer requests, trustee authenticates"| TRU
     TRU ==>|"on-chain"| YOU1
     TRU ==>|"Clearstream"| YOU2
-    style CO fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style REV fill:#319795,color:#fff,stroke:#2c7a7b,stroke-width:2px
-    style TRU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style YOU1 fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
-    style YOU2 fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style CO fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style REV fill:#00D4AA,color:#0F0F23,stroke:#00A488,stroke-width:2px
+    style TRU fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style YOU1 fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
+    style YOU2 fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
 </div>
 </div>
 </section>
@@ -709,11 +709,11 @@ flowchart TD
     CO ==>|"deposits"| TRU
     TRU ==>|"distributed"| YOU
     YOU ==> DONE
-    style MAT fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
-    style CO fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style TRU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style YOU fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
-    style DONE fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
+    style MAT fill:#8892B0,color:#fff,stroke:#6872A0,stroke-width:2px
+    style CO fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style TRU fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style YOU fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
+    style DONE fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:3px
 </div>
 </div>
 </section>
@@ -756,14 +756,14 @@ flowchart TD
     YOU ==>|"oversee"| TRS
     YOU ==>|"authenticate"| CCS
     PLAT ==>|"appointment"| YOU
-    style PLAT fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
-    style YOU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style DAO fill:#f7fafc,color:#1a202c,stroke:#a0aec0,stroke-width:2px
-    style OPS fill:#9f7aea,color:#fff,stroke:#805ad5,stroke-width:2px
-    style REV fill:#319795,color:#fff,stroke:#2c7a7b,stroke-width:2px
-    style DEP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
-    style TRS fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style CCS fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style PLAT fill:#4DA6FF,color:#fff,stroke:#3D86CF,stroke-width:2px
+    style YOU fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style DAO fill:#E8F4FD,color:#0F0F23,stroke:#8892B0,stroke-width:2px
+    style OPS fill:#FF69B4,color:#fff,stroke:#7B68EE,stroke-width:2px
+    style REV fill:#00D4AA,color:#0F0F23,stroke:#00A488,stroke-width:2px
+    style DEP fill:#8892B0,color:#fff,stroke:#6872A0,stroke-width:2px
+    style TRS fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style CCS fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
 </div>
 <div class="act-details">
 <div class="detail-item">
@@ -796,11 +796,11 @@ flowchart TD
     ESC ==> CAP
     CAP ==>|"reached"| REL
     CAP -.->|"not reached"| RET
-    style INV fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style ESC fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style CAP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
-    style REL fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
-    style RET fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
+    style INV fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style ESC fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style CAP fill:#8892B0,color:#fff,stroke:#6872A0,stroke-width:2px
+    style REL fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
+    style RET fill:#8892B0,color:#fff,stroke:#6872A0,stroke-width:2px
 </div>
 </div>
 </section>
@@ -825,11 +825,11 @@ flowchart TD
     REV ==>|"issuer requests distribution"| YOU
     YOU ==>|"authenticated"| SC
     SC ==>|"waterfall priority"| INV
-    style CO fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style REV fill:#319795,color:#fff,stroke:#2c7a7b,stroke-width:2px
-    style YOU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style SC fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
-    style INV fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
+    style CO fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style REV fill:#00D4AA,color:#0F0F23,stroke:#00A488,stroke-width:2px
+    style YOU fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style SC fill:#4DA6FF,color:#fff,stroke:#3D86CF,stroke-width:2px
+    style INV fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
 </div>
 </div>
 </section>
@@ -856,12 +856,12 @@ flowchart TD
     CCS ==>|"request"| YOU
     YOU ==> TOK
     TOK ==> ISIN
-    style INV fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style CCS fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
-    style YOU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style LOCK fill:#f0fff4,color:#1a202c,stroke:#38a169,stroke-width:2px
-    style TOK fill:#9f7aea,color:#fff,stroke:#805ad5,stroke-width:2px
-    style ISIN fill:#3182ce,color:#fff,stroke:#2c5282,stroke-width:2px
+    style INV fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style CCS fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
+    style YOU fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style LOCK fill:#E0FFF0,color:#0F0F23,stroke:#00E676,stroke-width:2px
+    style TOK fill:#FF69B4,color:#fff,stroke:#7B68EE,stroke-width:2px
+    style ISIN fill:#4DA6FF,color:#fff,stroke:#3D86CF,stroke-width:2px
 </div>
 </div>
 </section>
@@ -890,14 +890,14 @@ flowchart TD
     YOU ==>|"distributed"| INV
     YOU ==>|"released"| DEP
     INV ==> DONE
-    style CO fill:#805ad5,color:#fff,stroke:#6b46c1,stroke-width:2px
-    style YOU fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style INV fill:#38a169,color:#fff,stroke:#276749,stroke-width:2px
-    style DEP fill:#718096,color:#fff,stroke:#4a5568,stroke-width:2px
-    style DONE fill:#38a169,color:#fff,stroke:#276749,stroke-width:3px
-    style FEE fill:#fffff0,color:#1a202c,stroke:#d69e2e,stroke-width:2px
-    style F1 fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
-    style F2 fill:#d69e2e,color:#fff,stroke:#b7791f,stroke-width:2px
+    style CO fill:#7B68EE,color:#fff,stroke:#5B48CE,stroke-width:2px
+    style YOU fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style INV fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:2px
+    style DEP fill:#8892B0,color:#fff,stroke:#6872A0,stroke-width:2px
+    style DONE fill:#00E676,color:#0F0F23,stroke:#00B656,stroke-width:3px
+    style FEE fill:#FFF4E0,color:#0F0F23,stroke:#FF6B35,stroke-width:2px
+    style F1 fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
+    style F2 fill:#FF6B35,color:#fff,stroke:#CF4B15,stroke-width:2px
 </div>
 </div>
 </section>
