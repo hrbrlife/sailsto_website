@@ -1,10 +1,11 @@
 /* ═══════════════════════════════════════════════════════════════
-   DOCS PAGE — Content Typography
-   Cyberpunk-Vintage · Pastel Neon
-   Tables & code blocks inherited from styles.css
+   SAILS.TO DOCUMENTATION PAGE STYLES
+   Content typography for docs pages (tables/code from styles.css)
    ═══════════════════════════════════════════════════════════════ */
 
-/* ── CONTENT CONTAINER ─────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────
+   DOCS CONTENT CONTAINER
+   ───────────────────────────────────────────────────────────── */
 .features-section .container {
     max-width: 900px;
     margin: 0 auto;
@@ -47,7 +48,9 @@
     font-weight: 600;
 }
 
-/* ── LISTS ─────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────
+   LISTS
+   ───────────────────────────────────────────────────────────── */
 .features-section ul {
     list-style: none;
     padding: 0;
@@ -60,7 +63,7 @@
     line-height: 1.8;
     padding: 8px 0 8px 24px;
     position: relative;
-    border-bottom: 2px solid rgba(10, 10, 42, 0.04);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 
 .features-section ul li:last-child {
@@ -74,7 +77,7 @@
     top: 16px;
     width: 8px;
     height: 2px;
-    background: var(--neon-orange);
+    background: var(--gold);
 }
 
 .features-section ul li strong {
@@ -94,7 +97,7 @@
     line-height: 1.8;
     padding: 12px 0 12px 40px;
     position: relative;
-    border-bottom: 2px solid rgba(10, 10, 42, 0.04);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
     counter-increment: docs-counter;
 }
 
@@ -109,34 +112,38 @@
     top: 12px;
     width: 24px;
     height: 24px;
-    background: var(--bg-dark);
-    color: var(--text-on-dark);
-    font-family: var(--font-mono);
+    background: var(--navy);
+    color: var(--ivory);
     font-size: 0.75rem;
     font-weight: 700;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 50%;
 }
 
 .features-section ol li strong {
     color: var(--ink);
 }
 
-/* ── LINKS ─────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────
+   LINKS
+   ───────────────────────────────────────────────────────────── */
 .features-section a:not(.btn):not(.glossary-term) {
     color: var(--charcoal);
     text-decoration: underline;
-    text-decoration-color: var(--neon-orange);
+    text-decoration-color: var(--gold);
     text-underline-offset: 3px;
-    transition: color var(--speed-fast) ease;
+    transition: color 0.2s ease;
 }
 
 .features-section a:not(.btn):not(.glossary-term):hover {
-    color: var(--neon-orange);
+    color: var(--gold);
 }
 
-/* ── RESPONSIVE ────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
     .features-section h2 {
         font-size: 1.5rem;

@@ -1,492 +1,496 @@
-/* Styles for knowledge/index.html */
+/* ═══════════════════════════════════════════════════════════════
+   KNOWLEDGE HUB INDEX — Page-Specific Styles
+   Cyberpunk-Vintage · Pastel Neon
+   ═══════════════════════════════════════════════════════════════ */
 
+/* ── SEARCH ────────────────────────────────────────────────── */
+.page-hero {
+    padding-bottom: 60px;
+}
 
-        /* Knowledge Base styles */
-        .page-hero {
-            padding-bottom: 60px;
-        }
-        
-        .kb-search {
-            max-width: 500px;
-            margin: 40px auto 0;
-            position: relative;
-        }
-        
-        .kb-search-input {
-            width: 100%;
-            padding: 16px 20px 16px 52px;
-            font-family: var(--font-body);
-            font-size: 1rem;
-            color: var(--ink);
-            background: var(--ivory);
-            border: 1px solid rgba(0,0,0,0.15);
-            transition: all 0.3s ease;
-        }
-        
-        .kb-search-input:focus {
-            outline: none;
-            border-color: var(--gold);
-            box-shadow: 0 0 0 3px rgba(201, 162, 39, 0.1);
-        }
-        
-        .kb-search-icon {
-            position: absolute;
-            left: 18px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 20px;
-            height: 20px;
-            color: var(--slate);
-            pointer-events: none;
-        }
-        
-        .kb-tabs-section {
-            background: var(--cream);
-            border-bottom: 1px solid rgba(0,0,0,0.08);
-            position: sticky;
-            top: 70px;
-            z-index: 50;
-        }
-        
-        .kb-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 48px;
-        }
-        
-        .kb-tabs {
-            display: flex;
-            gap: 8px;
-            padding: 16px 0;
-            overflow-x: auto;
-        }
-        
-        .kb-tab {
-            padding: 10px 20px;
-            font-family: var(--font-ui);
-            font-size: 0.75rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--slate);
-            background: transparent;
-            border: 1px solid transparent;
-            cursor: pointer;
-            white-space: nowrap;
-            transition: all 0.3s ease;
-        }
-        
-        .kb-tab:hover {
-            color: var(--ink);
-            border-color: rgba(0,0,0,0.15);
-        }
-        
-        .kb-tab.active {
-            color: var(--ivory);
-            background: var(--ink);
-            border-color: var(--ink);
-        }
-        
-        .kb-section-title {
-            font-family: var(--font-display);
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: var(--ink);
-            margin-bottom: 32px;
-        }
-        
-        /* Featured section */
-        .kb-featured {
-            padding: 80px 48px 40px;
-            background: var(--ivory);
-        }
-        
-        .kb-featured-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
-        
-        .kb-card {
-            display: block;
-            padding: 28px;
-            background: var(--ivory);
-            border: 1px solid rgba(0,0,0,0.08);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .kb-card:hover {
-            border-color: var(--gold);
-            transform: translateY(-4px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-        }
-        
-        .kb-card-featured {
-            display: flex;
-            align-items: flex-start;
-            gap: 20px;
-            padding: 32px;
-        }
-        
-        .kb-card-icon {
-            font-size: 2rem;
-            flex-shrink: 0;
-        }
-        
-        .kb-card-content {
-            flex: 1;
-        }
-        
-        .kb-card-category {
-            display: inline-block;
-            font-family: var(--font-ui);
-            font-size: 0.65rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--gold);
-            margin-bottom: 8px;
-        }
-        
-        .kb-card h3 {
-            font-family: var(--font-display);
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: var(--ink);
-            margin-bottom: 8px;
-            line-height: 1.3;
-        }
-        
-        .kb-card p {
-            font-size: 0.9rem;
-            color: var(--slate);
-            line-height: 1.6;
-            margin: 0;
-        }
-        
-        .kb-card-arrow {
-            font-size: 1.5rem;
-            color: var(--gold);
-            flex-shrink: 0;
-            transition: transform 0.3s ease;
-        }
-        
-        .kb-card:hover .kb-card-arrow {
-            transform: translateX(4px);
-        }
-        
-        .kb-card-meta {
-            display: block;
-            font-family: var(--font-ui);
-            font-size: 0.7rem;
-            font-weight: 500;
-            color: var(--graphite);
-            margin-top: 12px;
-        }
-        
-        /* Resource sections */
-        .kb-resources {
-            padding: 40px 48px 80px;
-        }
-        
-        .kb-resource-section {
-            padding: 40px 0;
-            border-bottom: 1px solid rgba(0,0,0,0.08);
-        }
-        
-        .kb-resource-section:last-child {
-            border-bottom: none;
-        }
-        
-        .kb-section-header {
-            margin-bottom: 32px;
-        }
-        
-        .kb-section-header h2 {
-            font-family: var(--font-display);
-            font-size: 1.4rem;
-            font-weight: 500;
-            color: var(--ink);
-            margin-bottom: 8px;
-        }
-        
-        .kb-section-header p {
-            font-size: 0.9rem;
-            color: var(--slate);
-        }
-        
-        .kb-section-link {
-            font-family: var(--font-ui);
-            font-size: 0.75rem;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--gold);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        
-        .kb-section-link:hover {
-            color: var(--ink);
-        }
-        
-        .kb-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
-        }
-        
-        /* Blog card date */
-        .kb-card-date {
-            display: block;
-            font-family: var(--font-ui);
-            font-size: 0.7rem;
-            font-weight: 500;
-            color: var(--slate);
-            margin-bottom: 8px;
-        }
-        
-        /* Glossary section */
-        .kb-glossary-preview {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-        }
-        
-        .kb-glossary-categories {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px;
-        }
-        
-        .kb-glossary-cat {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            padding: 20px;
-            background: var(--cream);
-            border: 1px solid rgba(0,0,0,0.08);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .kb-glossary-cat:hover {
-            border-color: var(--gold);
-            transform: translateY(-2px);
-        }
-        
-        .kb-glossary-icon {
-            font-size: 1.5rem;
-        }
-        
-        .kb-glossary-label {
-            font-family: var(--font-display);
-            font-size: 1rem;
-            font-weight: 500;
-            color: var(--ink);
-        }
-        
-        .kb-glossary-count {
-            font-size: 0.75rem;
-            color: var(--slate);
-            margin-left: auto;
-        }
-        
-        .kb-glossary-featured h4 {
-            font-family: var(--font-ui);
-            font-size: 0.7rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            color: var(--slate);
-            margin-bottom: 16px;
-        }
-        
-        .kb-glossary-terms {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        
-        .glossary-term-pill {
-            padding: 8px 16px;
-            font-family: var(--font-ui);
-            font-size: 0.8rem;
-            color: var(--ink);
-            background: var(--ivory);
-            border: 1px solid rgba(0,0,0,0.12);
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .glossary-term-pill:hover {
-            background: var(--ink);
-            border-color: var(--ink);
-            color: var(--ivory);
-        }
-        
-        /* Roadmap cards and filters */
-        .kb-temporal-filters {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 24px;
-        }
-        
-        .kb-temporal-tag {
-            padding: 8px 16px;
-            font-family: var(--font-ui);
-            font-size: 0.75rem;
-            font-weight: 500;
-            color: var(--slate);
-            background: var(--cream);
-            border: 1px solid rgba(0,0,0,0.1);
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .kb-temporal-tag:hover {
-            border-color: var(--gold);
-            color: var(--ink);
-        }
-        
-        .kb-temporal-tag.active {
-            background: var(--ink);
-            border-color: var(--ink);
-            color: var(--ivory);
-        }
-        
-        .kb-roadmap-grid {
-            grid-template-columns: repeat(4, 1fr);
-        }
-        
-        .kb-card-roadmap {
-            position: relative;
-            padding-left: 40px;
-        }
-        
-        .kb-roadmap-status {
-            position: absolute;
-            left: 16px;
-            top: 16px;
-            font-size: 1rem;
-            line-height: 1;
-        }
-        
-        .kb-roadmap-status.completed {
-            color: #2ECC71;
-        }
-        
-        .kb-roadmap-status.current {
-            color: var(--gold);
-            animation: pulseDot 2s infinite;
-        }
-        
-        .kb-roadmap-status.upcoming {
-            color: var(--silver);
-        }
-        
-        .kb-roadmap-status.future {
-            color: var(--slate);
-        }
-        
-        @keyframes pulseDot {
-            0%, 100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.6; transform: scale(1.2); }
-        }
-        
-        .kb-card-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-top: 12px;
-        }
-        
-        .kb-tag {
-            padding: 3px 8px;
-            font-family: var(--font-ui);
-            font-size: 0.6rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border-radius: 2px;
-        }
-        
-        .kb-tag.temporal {
-            background: rgba(201, 162, 39, 0.15);
-            color: #B8860B;
-        }
-        
-        .kb-tag.temporal.current {
-            background: rgba(201, 162, 39, 0.25);
-            color: #8B6914;
-        }
-        
-        .kb-tag.category {
-            background: rgba(0, 0, 0, 0.06);
-            color: var(--slate);
-        }
-        
-        @media (max-width: 1200px) {
-            .kb-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .kb-roadmap-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .kb-featured-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .kb-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .kb-glossary-preview {
-                grid-template-columns: 1fr;
-            }
-            
-            .kb-roadmap-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        
-        @media (max-width: 600px) {
-            .kb-container {
-                padding: 0 24px;
-            }
-            
-            .kb-featured,
-            .kb-resources {
-                padding-left: 24px;
-                padding-right: 24px;
-            }
-            
-            .kb-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .kb-glossary-categories {
-                grid-template-columns: 1fr;
-            }
-            
-            .kb-roadmap-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .kb-temporal-filters {
-                overflow-x: auto;
-                flex-wrap: nowrap;
-                -webkit-overflow-scrolling: touch;
-            }
-            
-            .kb-temporal-tag {
-                white-space: nowrap;
-            }
-        }
-    
+.kb-search {
+    max-width: 500px;
+    margin: 40px auto 0;
+    position: relative;
+}
+
+.kb-search-input {
+    width: 100%;
+    padding: 16px 20px 16px 52px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--ink);
+    background: var(--bg-primary);
+    border: 2px solid var(--border-strong);
+    transition: all var(--speed-normal) ease;
+}
+
+.kb-search-input:focus {
+    outline: none;
+    border-color: var(--neon-orange);
+    box-shadow: var(--glow-orange);
+}
+
+.kb-search-icon {
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: var(--slate);
+    pointer-events: none;
+}
+
+/* ── TABS ──────────────────────────────────────────────────── */
+.kb-tabs-section {
+    background: var(--bg-alt);
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: 70px;
+    z-index: 50;
+}
+
+.kb-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 48px;
+}
+
+.kb-tabs {
+    display: flex;
+    gap: 8px;
+    padding: 16px 0;
+    overflow-x: auto;
+}
+
+.kb-tab {
+    padding: 10px 20px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--slate);
+    background: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all var(--speed-normal) ease;
+}
+
+.kb-tab:hover {
+    color: var(--ink);
+    border-color: var(--border-strong);
+}
+
+.kb-tab.active {
+    color: var(--bg-primary);
+    background: var(--ink);
+    border-color: var(--ink);
+}
+
+/* ── SECTION TITLE ─────────────────────────────────────────── */
+.kb-section-title {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 32px;
+}
+
+/* ── FEATURED ──────────────────────────────────────────────── */
+.kb-featured {
+    padding: 80px 48px 40px;
+    background: var(--bg-primary);
+}
+
+.kb-featured-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* ── CARDS ──────────────────────────────────────────────────── */
+.kb-card {
+    display: block;
+    padding: 28px;
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    text-decoration: none;
+    transition: all var(--speed-normal) ease;
+}
+
+.kb-card:hover {
+    border-color: var(--neon-orange);
+    transform: translateY(-4px);
+    box-shadow: var(--glow-orange);
+}
+
+.kb-card-featured {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 32px;
+}
+
+.kb-card-icon {
+    font-size: 2rem;
+    flex-shrink: 0;
+}
+
+.kb-card-content {
+    flex: 1;
+}
+
+.kb-card-category {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--neon-orange);
+    margin-bottom: 8px;
+}
+
+.kb-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.kb-card p {
+    font-size: 0.9rem;
+    color: var(--slate);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.kb-card-arrow {
+    font-size: 1.5rem;
+    color: var(--neon-orange);
+    flex-shrink: 0;
+    transition: transform var(--speed-normal) ease;
+}
+
+.kb-card:hover .kb-card-arrow {
+    transform: translateX(4px);
+}
+
+.kb-card-meta {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--graphite);
+    margin-top: 12px;
+}
+
+/* ── RESOURCES ─────────────────────────────────────────────── */
+.kb-resources {
+    padding: 40px 48px 80px;
+}
+
+.kb-resource-section {
+    padding: 40px 0;
+    border-bottom: 2px solid var(--border);
+}
+
+.kb-resource-section:last-child {
+    border-bottom: none;
+}
+
+.kb-section-header {
+    margin-bottom: 32px;
+}
+
+.kb-section-header h2 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 8px;
+}
+
+.kb-section-header p {
+    font-size: 0.9rem;
+    color: var(--slate);
+}
+
+.kb-section-link {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--neon-orange);
+    text-decoration: none;
+    transition: color var(--speed-normal) ease;
+}
+
+.kb-section-link:hover {
+    color: var(--ink);
+}
+
+.kb-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+/* ── BLOG CARD DATE ────────────────────────────────────────── */
+.kb-card-date {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: var(--slate);
+    margin-bottom: 8px;
+}
+
+/* ── GLOSSARY PREVIEW ──────────────────────────────────────── */
+.kb-glossary-preview {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.kb-glossary-categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.kb-glossary-cat {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    background: var(--bg-alt);
+    border: 2px solid var(--border);
+    text-decoration: none;
+    transition: all var(--speed-normal) ease;
+}
+
+.kb-glossary-cat:hover {
+    border-color: var(--neon-orange);
+    transform: translateY(-2px);
+}
+
+.kb-glossary-icon {
+    font-size: 1.5rem;
+}
+
+.kb-glossary-label {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--ink);
+}
+
+.kb-glossary-count {
+    font-size: 0.75rem;
+    color: var(--slate);
+    margin-left: auto;
+}
+
+.kb-glossary-featured h4 {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--slate);
+    margin-bottom: 16px;
+}
+
+.kb-glossary-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.glossary-term-pill {
+    padding: 8px 16px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--ink);
+    background: var(--bg-primary);
+    border: 2px solid var(--border);
+    text-decoration: none;
+    transition: all var(--speed-normal) ease;
+}
+
+.glossary-term-pill:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--bg-primary);
+}
+
+/* ── ROADMAP CARDS & FILTERS ───────────────────────────────── */
+.kb-temporal-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.kb-temporal-tag {
+    padding: 8px 16px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--slate);
+    background: var(--bg-alt);
+    border: 2px solid var(--border);
+    cursor: pointer;
+    transition: all var(--speed-normal) ease;
+}
+
+.kb-temporal-tag:hover {
+    border-color: var(--neon-orange);
+    color: var(--ink);
+}
+
+.kb-temporal-tag.active {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--bg-primary);
+}
+
+.kb-roadmap-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.kb-card-roadmap {
+    position: relative;
+    padding-left: 40px;
+}
+
+.kb-roadmap-status {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    font-size: 1rem;
+    line-height: 1;
+}
+
+.kb-roadmap-status.completed {
+    color: var(--neon-teal);
+}
+
+.kb-roadmap-status.current {
+    color: var(--neon-orange);
+    animation: pulseDot 2s infinite;
+}
+
+.kb-roadmap-status.upcoming {
+    color: var(--silver);
+}
+
+.kb-roadmap-status.future {
+    color: var(--slate);
+}
+
+@keyframes pulseDot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.2); }
+}
+
+.kb-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+}
+
+.kb-tag {
+    padding: 3px 8px;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+}
+
+.kb-tag.temporal {
+    background: rgba(255, 107, 53, 0.15);
+    color: var(--neon-orange);
+}
+
+.kb-tag.temporal.current {
+    background: rgba(255, 107, 53, 0.25);
+    color: #CC4400;
+}
+
+.kb-tag.category {
+    background: rgba(10, 10, 42, 0.06);
+    color: var(--slate);
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 1200px) {
+    .kb-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .kb-roadmap-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .kb-featured-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kb-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .kb-glossary-preview {
+        grid-template-columns: 1fr;
+    }
+
+    .kb-roadmap-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .kb-container {
+        padding: 0 24px;
+    }
+
+    .kb-featured,
+    .kb-resources {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .kb-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kb-glossary-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .kb-roadmap-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kb-temporal-filters {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .kb-temporal-tag {
+        white-space: nowrap;
+    }
+}

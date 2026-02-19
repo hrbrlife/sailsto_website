@@ -1,24 +1,250 @@
-        .blog-header { background: linear-gradient(135deg, var(--navy) 0%, #2d4a5a 100%); padding: 80px 0 60px; color: white; }
-        .blog-category { display: inline-block; padding: 6px 16px; background: rgba(201, 162, 39, 0.2); border: 1px solid var(--gold); border-radius: 20px; font-size: 0.85rem; color: var(--gold); margin-bottom: 20px; text-transform: uppercase; letter-spacing: 1px; }
-        .blog-title { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 600; margin-bottom: 20px; line-height: 1.2; }
-        .blog-meta { display: flex; align-items: center; gap: 20px; font-size: 0.95rem; opacity: 0.9; }
-        .blog-content { padding: 60px 0; background: var(--ivory); }
-        .blog-content-inner { max-width: 800px; margin: 0 auto; padding: 0 20px; }
-        .blog-content h2 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--navy); margin: 40px 0 20px; }
-        .blog-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; color: var(--navy); margin: 30px 0 15px; }
-        .blog-content p { font-size: 1.1rem; line-height: 1.8; color: var(--slate); margin-bottom: 20px; }
-        .blog-content ul, .blog-content ol { margin: 20px 0; padding-left: 25px; }
-        .blog-content li { font-size: 1.1rem; line-height: 1.8; color: var(--slate); margin-bottom: 10px; }
-        .blog-content blockquote { border-left: 4px solid var(--gold); padding-left: 20px; margin: 30px 0; font-style: italic; color: #666; }
-        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--gold); text-decoration: none; font-weight: 500; margin-bottom: 20px; }
-        .back-link:hover { text-decoration: underline; }
-        .blog-cta { background: var(--cream); padding: 40px; border-radius: 12px; text-align: center; margin-top: 40px; }
-        .blog-cta h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 15px; }
-        .blog-cta .btn { display: inline-block; padding: 12px 30px; background: var(--gold); color: white; text-decoration: none; border-radius: 6px; font-weight: 500; }
-        .related-posts { margin-top: 60px; padding-top: 40px; border-top: 1px solid #e0ddd5; }
-        .related-posts h3 { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; margin-bottom: 20px; }
-        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-        .related-card { background: var(--cream); padding: 20px; border-radius: 8px; text-decoration: none; color: inherit; transition: transform 0.3s; }
-        .related-card:hover { transform: translateY(-3px); }
-        .related-card h4 { font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; margin-bottom: 10px; color: var(--navy); }
-        .related-card p { font-size: 0.9rem; color: #666; }
+/* ═══════════════════════════════════════════════════════════════
+   SAILS.TO — BLOG POST PAGE
+   Cyberpunk-Vintage · Pastel Neon
+   Page-specific styles only — inherits from styles.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── BLOG POST HEADER ──────────────────────────────────────── */
+.blog-header {
+    background: var(--bg-dark);
+    padding: 160px var(--space-lg) 80px;
+    color: var(--text-on-dark);
+    border-bottom: 3px solid var(--neon-orange);
+}
+
+.blog-category {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(255, 107, 53, 0.12);
+    border: 2px solid var(--neon-orange);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--neon-orange);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.blog-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.15;
+    color: var(--text-on-dark);
+}
+
+.blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: var(--text-muted-dk);
+}
+
+
+/* ── BLOG CONTENT ──────────────────────────────────────────── */
+.blog-content {
+    padding: var(--space-xl) var(--space-lg);
+    background: var(--bg-primary);
+}
+
+.blog-content-inner {
+    max-width: var(--max-prose);
+    margin: 0 auto;
+}
+
+.blog-content h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin: 48px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--neon-orange);
+}
+
+.blog-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin: 36px 0 16px;
+}
+
+.blog-content p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--graphite);
+    margin-bottom: 20px;
+}
+
+.blog-content ul,
+.blog-content ol {
+    margin: 20px 0;
+    padding-left: 25px;
+}
+
+.blog-content li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--graphite);
+    margin-bottom: 10px;
+}
+
+.blog-content blockquote {
+    padding: 16px 24px;
+    margin: 32px 0;
+    background: var(--bg-surface);
+    border: 2px solid var(--border);
+    border-left: 3px solid var(--neon-teal);
+}
+
+.blog-content blockquote p {
+    font-style: italic;
+    color: var(--slate);
+    margin-bottom: 0;
+}
+
+
+/* ── BACK LINK ─────────────────────────────────────────────── */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--neon-orange);
+    text-decoration: none;
+    margin-bottom: 24px;
+    transition: color var(--speed-fast) ease;
+}
+
+.back-link:hover {
+    color: var(--neon-pink);
+}
+
+
+/* ── BLOG CTA BOX ──────────────────────────────────────────── */
+.blog-cta {
+    background: var(--bg-dark);
+    color: var(--text-on-dark);
+    padding: 48px;
+    border: 2px solid var(--border-strong);
+    text-align: center;
+    margin-top: 48px;
+}
+
+.blog-cta h3 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: var(--text-on-dark);
+}
+
+.blog-cta p {
+    color: var(--text-muted-dk);
+    margin-bottom: 24px;
+}
+
+
+/* ── RELATED POSTS ─────────────────────────────────────────── */
+.related-posts {
+    margin-top: 64px;
+    padding-top: 48px;
+    border-top: 2px solid var(--border);
+}
+
+.related-posts h3 {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    color: var(--neon-orange);
+    margin-bottom: 24px;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 2px;
+    background: var(--border-strong);
+    border: 2px solid var(--border-strong);
+}
+
+.related-card {
+    background: var(--bg-card);
+    padding: 24px;
+    text-decoration: none;
+    color: inherit;
+    transition: all var(--speed-normal) var(--ease-out-expo);
+    position: relative;
+}
+
+.related-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--neon-orange);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--speed-normal) var(--ease-out-expo);
+}
+
+.related-card:hover {
+    background: var(--bg-surface);
+}
+
+.related-card:hover::after {
+    transform: scaleX(1);
+}
+
+.related-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--charcoal);
+}
+
+.related-card p {
+    font-size: 0.85rem;
+    color: var(--slate);
+    line-height: 1.6;
+}
+
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .blog-header {
+        padding: 140px var(--space-md) 60px;
+    }
+
+    .blog-content {
+        padding: 48px var(--space-md);
+    }
+
+    .blog-meta {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .blog-cta {
+        padding: 32px 24px;
+    }
+
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+}

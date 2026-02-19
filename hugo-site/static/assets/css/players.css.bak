@@ -1,6 +1,5 @@
 /* ═══════════════════════════════════════════════
    Players Page — Life of a Deal
-   Cyberpunk-Vintage Design System
    ═══════════════════════════════════════════════ */
 
 /* ── Story navigation tabs ─────────────────────── */
@@ -10,74 +9,62 @@
     justify-content: center;
     flex-wrap: wrap;
 }
-
 .story-tab {
     display: flex;
     align-items: center;
     gap: 14px;
     padding: 18px 28px;
-    border: 2px solid var(--border);
+    border: 2px solid var(--border, #e2e8f0);
+    border-radius: 12px;
     background: transparent;
     cursor: pointer;
     transition: all 0.25s ease;
-    font-family: var(--font-mono);
+    font-family: var(--font-ui, sans-serif);
     flex: 1;
     min-width: 200px;
     text-align: left;
 }
-
 .story-tab:hover {
-    border-color: var(--neon-orange);
-    background: rgba(255, 107, 53, 0.06);
+    border-color: var(--gold, #d69e2e);
+    background: rgba(214, 158, 46, 0.06);
 }
-
 .story-tab.active {
-    border-color: var(--neon-orange);
-    background: var(--neon-orange);
+    border-color: var(--gold, #d69e2e);
+    background: var(--gold, #d69e2e);
     color: #fff;
 }
-
 .story-tab-icon {
     font-size: 1.6rem;
 }
-
 .story-tab-label {
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 700;
-    color: var(--ink);
+    color: var(--ink, #1a202c);
     display: block;
-    font-family: var(--font-mono);
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
 }
-
 .story-tab.active .story-tab-label {
     color: #fff;
 }
-
 .story-tab-text {
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
-
 .story-tab-desc {
     display: block;
     font-size: 0.82rem;
     font-weight: 400;
-    color: var(--graphite);
+    color: var(--graphite, #4a5568);
     line-height: 1.3;
 }
-
 .story-tab.active .story-tab-desc {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255,255,255,0.8);
 }
 
 /* ── Story panels ──────────────────────────────── */
 .story-panel {
     display: none;
 }
-
 .story-panel.active {
     display: block;
 }
@@ -89,15 +76,14 @@
 
 /* ── Mermaid diagrams ──────────────────────────── */
 .mermaid {
-    background: var(--bg-card);
+    background: white;
     padding: 32px 24px;
+    border-radius: 16px;
     margin: 32px 0 28px;
-    border: 2px solid var(--border);
-    border-left: 3px solid var(--neon-teal);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     overflow-x: auto;
     min-height: 200px;
 }
-
 .mermaid svg {
     max-width: 100%;
     height: auto;
@@ -105,24 +91,24 @@
     margin: 0 auto;
 }
 
-/* ── Act sections (timeline) ───────────────────── */
+
+
+/* ── Act sections ──────────────────────────────── */
 .act-section {
     border-bottom: none;
     position: relative;
+    /* Override global .content-section padding so timeline connects */
     padding-top: 0;
     padding-bottom: 0;
 }
-
 .act-section .content-container {
     position: relative;
     padding-left: 72px;
     padding-top: 48px;
 }
-
 .act-section:first-of-type .content-container {
     padding-top: 0;
 }
-
 /* Vertical timeline line */
 .act-section .content-container::before {
     content: '';
@@ -131,31 +117,28 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: var(--border-strong);
+    background: var(--border, #e2e8f0);
 }
-
+/* First act: line starts at circle centre */
 .act-section:first-of-type .content-container::before {
     top: 28px;
 }
-
+/* Last act-section (second-to-last section, before the CTA): clip line at circle centre */
 .act-section:nth-last-of-type(2) .content-container::before {
     bottom: auto;
-    height: 76px;
+    height: 76px; /* 48px top-padding + 28px circle-centre */
 }
-
 .act-section:first-of-type:nth-last-of-type(2) .content-container::before {
     display: none;
 }
-
+/* No timeline on CTA blocks */
 .story-cta .content-container::before {
     display: none;
 }
-
 .story-cta .content-container {
     padding-left: 0;
 }
-
-/* Act header & number on timeline */
+/* Position the act number on the timeline */
 .act-header {
     display: flex;
     align-items: flex-start;
@@ -163,7 +146,6 @@
     margin-bottom: 8px;
     position: relative;
 }
-
 .act-number {
     display: flex;
     align-items: center;
@@ -171,31 +153,28 @@
     width: 56px;
     height: 56px;
     min-width: 56px;
-    background: var(--bg-dark);
-    color: var(--neon-orange);
-    font-family: var(--font-mono);
-    font-size: 1.4rem;
-    font-weight: 700;
+    background: var(--ink, #1a202c);
+    color: var(--gold, #d69e2e);
+    font-family: var(--font-display, serif);
+    font-size: 1.6rem;
+    font-weight: 800;
+    border-radius: 50%;
     line-height: 1;
     position: absolute;
     left: -72px;
     top: 0;
     z-index: 2;
-    border: 2px solid var(--neon-orange);
 }
-
 .act-title h2 {
     margin: 0 0 8px;
     font-size: 1.6rem;
 }
-
 .act-title p {
     margin: 0;
-    color: var(--graphite);
+    color: var(--graphite, #4a5568);
     font-size: 1.02rem;
     line-height: 1.6;
 }
-
 .act-title {
     flex: 1;
 }
@@ -207,62 +186,55 @@
     gap: 12px;
     margin-top: 8px;
 }
-
 .detail-item {
-    background: var(--bg-surface);
-    border-left: 3px solid var(--neon-orange);
+    background: rgba(255,255,255,0.5);
+    border-left: 3px solid var(--gold, #d69e2e);
     padding: 14px 18px;
+    border-radius: 0 8px 8px 0;
     font-size: 0.94rem;
     line-height: 1.55;
-    color: var(--graphite);
+    color: var(--graphite, #4a5568);
 }
-
 .detail-item strong {
-    color: var(--ink);
+    color: var(--ink, #1a202c);
 }
 
 /* ── Fee summary grid ──────────────────────────── */
 .fee-summary {
     margin-top: 8px;
 }
-
 .fee-summary h3 {
     font-size: 1.15rem;
     margin: 0 0 16px;
 }
-
 .fee-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2px;
-    background: var(--border-strong);
-    border: 2px solid var(--border-strong);
+    gap: 16px;
 }
-
 .fee-item {
-    background: var(--bg-card);
+    background: white;
+    border-radius: 12px;
     padding: 20px;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
 }
-
 .fee-amount {
     display: block;
-    font-family: var(--font-display);
+    font-family: var(--font-display, serif);
     font-size: 1.8rem;
-    font-weight: 400;
-    color: var(--neon-orange);
+    font-weight: 800;
+    color: var(--ink, #1a202c);
     margin-bottom: 6px;
 }
-
 .fee-label {
     display: block;
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: var(--slate);
+    font-size: 0.82rem;
+    color: var(--graphite, #4a5568);
     line-height: 1.4;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
 }
+
+
 
 /* ── CTA buttons ───────────────────────────────── */
 .cta-buttons {
@@ -272,25 +244,20 @@
     margin-top: 24px;
     flex-wrap: wrap;
 }
-
 .btn-secondary {
     display: inline-block;
     padding: 10px 22px;
-    border: 2px solid var(--neon-orange);
-    color: var(--neon-orange);
-    font-family: var(--font-mono);
+    border: 2px solid var(--gold, #d69e2e);
+    border-radius: 8px;
+    color: var(--gold, #d69e2e);
     font-weight: 600;
-    font-size: 0.72rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+    font-size: 0.92rem;
     text-decoration: none;
-    transition: all 0.25s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 }
-
 .btn-secondary:hover {
-    background: var(--neon-orange);
+    background: var(--gold, #d69e2e);
     color: #fff;
-    box-shadow: var(--glow-orange);
 }
 
 /* ── Responsive ────────────────────────────────── */
@@ -299,30 +266,24 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
 @media (max-width: 700px) {
     .story-nav {
         flex-direction: column;
         align-items: stretch;
     }
-
     .story-tab {
         justify-content: center;
     }
-
     .act-section .content-container {
         padding-left: 52px;
         padding-top: 36px;
     }
-
     .act-section:first-of-type .content-container {
         padding-top: 0;
     }
-
     .act-section .content-container::before {
         left: 18px;
     }
-
     .act-number {
         width: 38px;
         height: 38px;
@@ -330,24 +291,19 @@
         font-size: 1.1rem;
         left: -52px;
     }
-
     .act-section:first-of-type .content-container::before {
         top: 19px;
     }
-
     .act-section:nth-last-of-type(2) .content-container::before {
-        height: 55px;
+        height: 55px; /* 36px top-padding + 19px circle-centre */
     }
-
     .fee-grid {
         grid-template-columns: 1fr 1fr;
     }
-
     .mermaid {
         padding: 16px 12px;
     }
 }
-
 @media (max-width: 480px) {
     .fee-grid {
         grid-template-columns: 1fr;

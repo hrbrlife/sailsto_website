@@ -175,14 +175,9 @@ scripts:
                 <p>Court-witnessed expert in economic and accounting matters. Chartered Professional Accountant. FINMA-Authorized Shareholder and Co-Founder of CIM Bank Geneva.</p>
             </div>
             <div class="advisor-card">
-                <h4>Daniil Savitskii</h4>
-                <span class="advisor-org">Advokaadibüroo K&S Legal, Estonia 🇪🇪</span>
-                <p>Member of the Bar in Tallinn. Member of the EUFA Juridical Committee. Expert in cross-border regulatory frameworks.</p>
-            </div>
-            <div class="advisor-card">
-                <h4>Akis Papakyriacou, MCIArb</h4>
-                <span class="advisor-org">Akis Papakyriacou LLC, Cyprus 🇨🇾</span>
-                <p>Top securities and banking lawyer (Legal 500). Deep expertise in international securities law and dispute resolution.</p>
+                <h4>Advokaadibüroo K&S Legal</h4>
+                <span class="advisor-org">Estonia 🇪🇪</span>
+                <p>Founded by Daniil Savitski, Member of the Bar in Tallinn and Member of the EUFA Juridical Committee. Expert in cross-border regulatory frameworks.</p>
             </div>
         </div>
     </div>

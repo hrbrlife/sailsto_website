@@ -1,12 +1,12 @@
 /* ═══════════════════════════════════════════════════════════════
-   COMPARE PAGE — Cyberpunk-Vintage Design System
+   COMPARE PAGE STYLES
    Competitor comparison matrix, detail sections, verdict cards
 ═══════════════════════════════════════════════════════════════ */
 
-/* ── Matrix Table Section ─────────────────────────────────── */
+/* ── Matrix Table ─────────────────────────────────────────── */
 .compare-matrix-section {
     padding: 100px 48px;
-    background: var(--bg-primary);
+    background: var(--ivory);
     position: relative;
     z-index: 10;
 }
@@ -20,7 +20,7 @@
     font-family: var(--font-display);
     font-size: clamp(1.8rem, 3vw, 2.4rem);
     font-weight: 400;
-    color: var(--charcoal);
+    color: var(--ink);
     margin-bottom: 12px;
     letter-spacing: -0.02em;
 }
@@ -36,31 +36,30 @@
 .matrix-wrapper {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    border: 2px solid var(--border-strong);
+    border-radius: 12px;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.06);
 }
 
-/* Override global table styles for the matrix */
 .matrix-table {
     width: 100%;
     border-collapse: collapse;
     font-size: 0.88rem;
     line-height: 1.55;
     min-width: 1100px;
-    margin: 0;
-    border: none;
 }
 
 .matrix-table thead th {
-    background: var(--bg-dark);
-    color: var(--text-on-dark);
+    background: var(--navy);
+    color: var(--ivory);
     padding: 18px 16px;
-    font-family: var(--font-mono);
+    font-family: var(--font-ui);
     font-weight: 600;
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     text-transform: uppercase;
-    letter-spacing: 0.10em;
+    letter-spacing: 0.08em;
     text-align: center;
-    border-bottom: 2px solid var(--neon-orange);
+    border-bottom: 2px solid var(--gold);
     white-space: nowrap;
 }
 
@@ -70,7 +69,7 @@
 }
 
 .matrix-table thead th.sails-col {
-    background: var(--bg-dark-alt);
+    background: linear-gradient(135deg, var(--navy) 0%, #1a2d42 100%);
     position: relative;
 }
 
@@ -78,7 +77,7 @@
     content: '★';
     display: block;
     font-size: 0.65rem;
-    color: var(--neon-orange);
+    color: var(--gold);
     margin-top: 2px;
 }
 
@@ -87,32 +86,32 @@
 }
 
 .matrix-table tbody tr:nth-child(even) {
-    background: var(--bg-surface);
+    background: rgba(247, 245, 237, 0.5);
 }
 
 .matrix-table tbody tr:hover {
-    background: rgba(255, 107, 53, 0.06);
+    background: rgba(201, 162, 39, 0.06);
 }
 
 .matrix-table td {
     padding: 14px 16px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
     text-align: center;
     vertical-align: top;
-    color: var(--graphite);
+    color: var(--charcoal);
 }
 
 .matrix-table td:first-child {
     text-align: left;
     font-weight: 600;
     color: var(--ink);
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    letter-spacing: 0.02em;
+    font-family: var(--font-ui);
+    font-size: 0.82rem;
+    letter-spacing: 0.01em;
 }
 
 .matrix-table td.sails-cell {
-    background: rgba(255, 107, 53, 0.05);
+    background: rgba(201, 162, 39, 0.05);
     font-weight: 600;
     color: var(--ink);
 }
@@ -131,52 +130,44 @@
     line-height: 1.4;
 }
 
-/* ── Badges ───────────────────────────────────────────────── */
 .matrix-table td .badge {
     display: inline-block;
     padding: 3px 10px;
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
+    border-radius: 20px;
+    font-size: 0.72rem;
     font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    border: 2px solid transparent;
+    letter-spacing: 0.03em;
 }
 
 .badge-gold {
-    background: rgba(255, 107, 53, 0.10);
-    color: var(--neon-orange);
-    border-color: rgba(255, 107, 53, 0.25);
+    background: rgba(201, 162, 39, 0.12);
+    color: #9A7B1A;
 }
 
 .badge-green {
-    background: rgba(0, 212, 170, 0.10);
-    color: #00996b;
-    border-color: rgba(0, 212, 170, 0.25);
+    background: rgba(34, 139, 34, 0.1);
+    color: #1a7a1a;
 }
 
 .badge-navy {
-    background: rgba(15, 15, 35, 0.08);
-    color: var(--charcoal);
-    border-color: rgba(15, 15, 35, 0.15);
+    background: rgba(13, 27, 42, 0.1);
+    color: var(--navy);
 }
 
 .badge-red {
-    background: rgba(255, 105, 180, 0.08);
-    color: var(--neon-pink);
-    border-color: rgba(255, 105, 180, 0.20);
+    background: rgba(184, 25, 43, 0.08);
+    color: var(--crimson);
 }
 
 .badge-gray {
-    background: rgba(10, 10, 42, 0.04);
+    background: rgba(0,0,0,0.06);
     color: var(--slate);
-    border-color: var(--border);
 }
 
 /* ── Nuanced Differences Section ──────────────────────────── */
 .compare-details-section {
     padding: 100px 48px;
-    background: var(--bg-alt);
+    background: var(--cream);
     position: relative;
     z-index: 10;
 }
@@ -190,7 +181,7 @@
     font-family: var(--font-display);
     font-size: clamp(1.8rem, 3vw, 2.4rem);
     font-weight: 400;
-    color: var(--charcoal);
+    color: var(--ink);
     margin-bottom: 12px;
     letter-spacing: -0.02em;
 }
@@ -215,18 +206,18 @@
     font-family: var(--font-display);
     font-size: 1.5rem;
     font-weight: 400;
-    color: var(--charcoal);
+    color: var(--ink);
     margin-bottom: 8px;
     letter-spacing: -0.01em;
 }
 
 .compare-detail-block .detail-number {
-    font-family: var(--font-mono);
+    font-family: var(--font-ui);
     font-size: 0.65rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
-    color: var(--neon-orange);
+    letter-spacing: 0.2em;
+    color: var(--gold);
     display: block;
     margin-bottom: 8px;
 }
@@ -246,30 +237,30 @@
 }
 
 .compare-detail-item {
-    background: var(--bg-card);
+    background: white;
+    border-radius: 10px;
     padding: 24px 28px;
-    border: 2px solid var(--border);
-    transition: border-color 0.2s ease;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.04);
+    transition: box-shadow 0.2s ease;
 }
 
 .compare-detail-item:hover {
-    border-color: var(--border-strong);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
 }
 
 .compare-detail-item.sails-highlight {
-    border-left: 3px solid var(--neon-orange);
-    background: rgba(255, 107, 53, 0.03);
+    border-left: 3px solid var(--gold);
+    background: rgba(201, 162, 39, 0.03);
 }
 
 .compare-detail-item strong {
     display: block;
-    font-family: var(--font-mono);
-    font-size: 0.8rem;
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
     font-weight: 700;
     color: var(--ink);
     margin-bottom: 6px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
 }
 
 .compare-detail-item p {
@@ -282,7 +273,7 @@
 /* ── Competitor Profiles Section ──────────────────────────── */
 .compare-profiles-section {
     padding: 100px 48px;
-    background: var(--bg-primary);
+    background: var(--ivory);
     position: relative;
     z-index: 10;
 }
@@ -296,7 +287,7 @@
     font-family: var(--font-display);
     font-size: clamp(1.8rem, 3vw, 2.4rem);
     font-weight: 400;
-    color: var(--charcoal);
+    color: var(--ink);
     margin-bottom: 40px;
     letter-spacing: -0.02em;
 }
@@ -304,27 +295,29 @@
 .profiles-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
-    background: var(--border-strong);
-    border: 2px solid var(--border-strong);
+    gap: 24px;
 }
 
 .profile-card {
-    background: var(--bg-card);
+    background: white;
+    border-radius: 12px;
     padding: 32px;
-    transition: all 0.2s ease;
+    box-shadow: 0 1px 12px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .profile-card:hover {
-    background: var(--bg-surface);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
 }
 
 .profile-card .profile-type {
-    font-family: var(--font-mono);
+    font-family: var(--font-ui);
     font-size: 0.65rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.25em;
+    letter-spacing: 0.2em;
     color: var(--silver);
     margin-bottom: 6px;
     display: block;
@@ -333,14 +326,14 @@
 .profile-card h3 {
     font-family: var(--font-display);
     font-size: 1.3rem;
-    font-weight: 400;
-    color: var(--charcoal);
+    font-weight: 500;
+    color: var(--ink);
     margin-bottom: 12px;
 }
 
 .profile-card .profile-best {
     font-size: 0.88rem;
-    color: var(--graphite);
+    color: var(--charcoal);
     line-height: 1.6;
     margin-bottom: 12px;
 }
@@ -350,7 +343,7 @@
     color: var(--silver);
     line-height: 1.6;
     padding-top: 12px;
-    border-top: 2px solid var(--border);
+    border-top: 1px solid rgba(0,0,0,0.06);
 }
 
 .profile-card .profile-tradeoff strong {
@@ -360,7 +353,7 @@
 /* ── Verdict Section ──────────────────────────────────────── */
 .compare-verdict-section {
     padding: 100px 48px;
-    background: var(--bg-alt);
+    background: var(--cream);
     position: relative;
     z-index: 10;
 }
@@ -374,7 +367,7 @@
     font-family: var(--font-display);
     font-size: clamp(1.8rem, 3vw, 2.4rem);
     font-weight: 400;
-    color: var(--charcoal);
+    color: var(--ink);
     margin-bottom: 12px;
     letter-spacing: -0.02em;
 }
@@ -390,25 +383,24 @@
 .verdict-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
-    background: var(--border-strong);
-    border: 2px solid var(--border-strong);
+    gap: 24px;
     margin-bottom: 40px;
 }
 
 .verdict-card {
-    background: var(--bg-card);
+    background: white;
+    border-radius: 12px;
     padding: 28px;
+    box-shadow: 0 1px 8px rgba(0,0,0,0.04);
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .verdict-card h4 {
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
+    font-family: var(--font-ui);
+    font-size: 0.95rem;
     font-weight: 700;
     color: var(--ink);
     margin-bottom: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
 }
 
 .verdict-card ul {
@@ -431,34 +423,33 @@
     position: absolute;
     left: 0;
     color: var(--silver);
-    font-family: var(--font-mono);
 }
 
 .verdict-sails {
-    background: var(--bg-dark);
+    background: var(--navy);
+    border-radius: 14px;
     padding: 40px;
-    border: 2px solid var(--neon-orange);
+    box-shadow: 0 4px 30px rgba(13, 27, 42, 0.15);
+    border: none;
 }
 
 .verdict-sails h4 {
     font-family: var(--font-display);
     font-size: 1.4rem;
     font-weight: 400;
-    color: var(--text-on-dark);
+    color: var(--ivory);
     margin-bottom: 16px;
-    text-transform: none;
-    letter-spacing: -0.01em;
 }
 
 .verdict-sails ul li {
-    color: var(--text-muted-dk);
+    color: rgba(255,255,255,0.8);
     font-size: 0.92rem;
     margin-bottom: 10px;
 }
 
 .verdict-sails ul li::before {
     content: '✓';
-    color: var(--neon-teal);
+    color: var(--gold);
     font-weight: 700;
 }
 
@@ -467,11 +458,10 @@
     display: none;
     text-align: center;
     padding: 8px;
-    font-size: 0.72rem;
+    font-size: 0.75rem;
     color: var(--silver);
-    font-family: var(--font-mono);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
+    font-family: var(--font-ui);
+    letter-spacing: 0.05em;
 }
 
 .scroll-hint svg {

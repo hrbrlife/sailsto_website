@@ -1,26 +1,30 @@
 /* ═══════════════════════════════════════════════════════════════
-   SAILS.TO — GLOSSARY STYLES
-   Cyberpunk-Vintage · Pastel Neon
+   SAILS.TO GLOSSARY STYLES
    Tooltips, term highlighting, glossary pages
    ═══════════════════════════════════════════════════════════════ */
 
-/* ── INLINE GLOSSARY TERM HIGHLIGHTING ─────────────────────── */
+/* ─────────────────────────────────────────────────────────────────
+   INLINE GLOSSARY TERM HIGHLIGHTING
+   Subtle, elegant, magazine-worthy
+   ───────────────────────────────────────────────────────────────── */
 .glossary-term {
-    background: linear-gradient(to bottom, transparent 60%, rgba(255, 107, 53, 0.12) 60%);
-    border-bottom: 2px dashed var(--neon-orange);
+    background: linear-gradient(to bottom, transparent 60%, rgba(201, 162, 39, 0.15) 60%);
+    border-bottom: 1px dashed var(--gold);
     cursor: help;
-    transition: all var(--speed-fast) ease;
+    transition: all 0.2s ease;
     text-decoration: none;
     color: inherit;
 }
 
 .glossary-term:hover {
-    background: linear-gradient(to bottom, transparent 40%, rgba(255, 107, 53, 0.22) 40%);
+    background: linear-gradient(to bottom, transparent 40%, rgba(201, 162, 39, 0.25) 40%);
     border-bottom-style: solid;
-    box-shadow: 0 2px 8px rgba(255, 107, 53, 0.15);
 }
 
-/* ── TOOLTIP ───────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────────
+   TOOLTIP STYLES
+   Floating, elegant, informative
+   ───────────────────────────────────────────────────────────────── */
 .glossary-tooltip {
     position: fixed;
     z-index: 10000;
@@ -28,15 +32,17 @@
     min-width: 280px;
     pointer-events: auto;
     opacity: 0;
-    transition: opacity var(--speed-fast) ease;
+    transition: opacity 0.15s ease;
 }
 
 .glossary-tooltip-content {
-    background: var(--bg-card);
-    border: 2px solid var(--border-strong);
+    background: var(--ivory);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 
+                0 4px 12px rgba(0, 0, 0, 0.1);
     padding: 20px;
     position: relative;
-    box-shadow: 0 12px 40px rgba(10, 10, 42, 0.12);
 }
 
 .glossary-tooltip-header {
@@ -46,7 +52,7 @@
     gap: 12px;
     margin-bottom: 12px;
     padding-bottom: 12px;
-    border-bottom: 2px solid var(--border);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .glossary-tooltip-term {
@@ -58,78 +64,72 @@
 }
 
 .glossary-tooltip-category {
-    font-family: var(--font-mono);
+    font-family: var(--font-ui);
     font-size: 0.6rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     padding: 4px 10px;
+    border-radius: 2px;
     flex-shrink: 0;
-    border: 2px solid;
 }
 
-/* ── CATEGORY COLORS ───────────────────────────────────────── */
+/* Category colors */
 .category-finance {
-    background: rgba(255, 107, 53, 0.10);
-    color: var(--neon-orange);
-    border-color: var(--neon-orange);
+    background: rgba(201, 162, 39, 0.15);
+    color: #8B7355;
 }
 
 .category-compliance {
-    background: rgba(15, 15, 35, 0.06);
-    color: var(--bg-dark);
-    border-color: var(--bg-dark);
+    background: rgba(13, 27, 42, 0.1);
+    color: var(--navy);
 }
 
 .category-legal {
-    background: rgba(255, 105, 180, 0.10);
-    color: var(--neon-pink);
-    border-color: var(--neon-pink);
+    background: rgba(184, 25, 43, 0.1);
+    color: var(--crimson);
 }
 
 .category-technology {
-    background: rgba(123, 104, 238, 0.10);
-    color: var(--neon-purple);
-    border-color: var(--neon-purple);
+    background: rgba(74, 74, 74, 0.1);
+    color: var(--slate);
 }
 
-/* ── TOOLTIP BODY ──────────────────────────────────────────── */
 .glossary-tooltip-definition {
     font-family: var(--font-body);
     font-size: 0.9rem;
     color: var(--graphite);
     line-height: 1.7;
-    margin-bottom: var(--space-sm);
+    margin-bottom: 16px;
 }
 
 .glossary-tooltip-link {
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    font-family: var(--font-mono);
+    font-family: var(--font-ui);
     font-size: 0.7rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--neon-orange);
+    letter-spacing: 0.1em;
+    color: var(--gold);
     text-decoration: none;
-    transition: all var(--speed-fast) ease;
+    transition: all 0.2s ease;
 }
 
 .glossary-tooltip-link:hover {
-    color: var(--neon-teal);
-    text-shadow: 0 0 8px rgba(0, 212, 170, 0.3);
+    color: var(--ink);
 }
 
 .glossary-tooltip-link svg {
-    transition: transform var(--speed-fast) ease;
+    transition: transform 0.2s ease;
 }
 
 .glossary-tooltip-link:hover svg {
     transform: translateX(3px);
 }
 
-/* ── TOOLTIP ARROW ─────────────────────────────────────────── */
+/* Tooltip arrow */
 .glossary-tooltip-arrow {
     position: absolute;
     bottom: -8px;
@@ -139,26 +139,34 @@
     height: 0;
     border-left: 8px solid transparent;
     border-right: 8px solid transparent;
-    border-top: 8px solid var(--bg-card);
+    border-top: 8px solid var(--ivory);
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
 }
 
+/* When tooltip is below the element */
 .glossary-tooltip.tooltip-below .glossary-tooltip-arrow {
     bottom: auto;
     top: -8px;
     border-top: none;
-    border-bottom: 8px solid var(--bg-card);
+    border-bottom: 8px solid var(--ivory);
+    filter: drop-shadow(0 -2px 2px rgba(0, 0, 0, 0.1));
 }
 
-/* ── GLOSSARY PAGE — GRID ──────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────────
+   GLOSSARY PAGE STYLES
+   Term listing and detail pages
+   ───────────────────────────────────────────────────────────────── */
+
+/* Glossary grid */
 .glossary-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: var(--space-md);
+    gap: 24px;
 }
 
 .glossary-card {
-    background: var(--bg-card);
-    border: 2px solid var(--border);
+    background: var(--ivory);
+    border: 1px solid rgba(0, 0, 0, 0.08);
     padding: 28px;
     transition: all 0.4s var(--ease-out-expo);
     position: relative;
@@ -173,16 +181,16 @@
     top: 0;
     bottom: 0;
     width: 3px;
-    background: var(--neon-orange);
+    background: var(--gold);
     transform: scaleY(0);
     transform-origin: top;
     transition: transform 0.4s var(--ease-out-expo);
 }
 
 .glossary-card:hover {
-    border-color: var(--neon-orange);
+    border-color: rgba(0, 0, 0, 0.15);
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(255, 107, 53, 0.10);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
 .glossary-card:hover::before {
@@ -207,14 +215,14 @@
 }
 
 .glossary-card-category {
-    font-family: var(--font-mono);
+    font-family: var(--font-ui);
     font-size: 0.55rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    padding: 4px var(--space-xs);
+    letter-spacing: 0.1em;
+    padding: 4px 8px;
+    border-radius: 2px;
     flex-shrink: 0;
-    border: 2px solid var(--border);
 }
 
 .glossary-card p {
@@ -225,32 +233,32 @@
 }
 
 .glossary-card-arrow {
-    margin-top: var(--space-sm);
-    font-family: var(--font-mono);
+    margin-top: 16px;
+    font-family: var(--font-ui);
     font-size: 0.65rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--neon-orange);
+    letter-spacing: 0.1em;
+    color: var(--gold);
     display: flex;
     align-items: center;
     gap: 6px;
 }
 
 .glossary-card:hover .glossary-card-arrow {
-    color: var(--neon-teal);
+    color: var(--ink);
 }
 
-/* ── GLOSSARY DETAIL PAGE ──────────────────────────────────── */
+/* Glossary detail page */
 .glossary-detail {
-    max-width: var(--max-prose);
+    max-width: 800px;
     margin: 0 auto;
 }
 
 .glossary-detail-header {
     margin-bottom: 40px;
     padding-bottom: 32px;
-    border-bottom: 2px solid var(--border);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .glossary-detail-term {
@@ -258,7 +266,7 @@
     font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 400;
     color: var(--ink);
-    margin-bottom: var(--space-sm);
+    margin-bottom: 16px;
     line-height: 1.2;
 }
 
@@ -276,24 +284,23 @@
 }
 
 .glossary-detail-body p {
-    margin-bottom: var(--space-md);
+    margin-bottom: 24px;
 }
 
-/* ── RELATED TERMS ─────────────────────────────────────────── */
 .glossary-related {
-    margin-top: var(--space-lg);
+    margin-top: 48px;
     padding-top: 32px;
-    border-top: 2px solid var(--border);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .glossary-related h4 {
-    font-family: var(--font-mono);
+    font-family: var(--font-ui);
     font-size: 0.65rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--silver);
-    margin-bottom: var(--space-sm);
+    margin-bottom: 16px;
 }
 
 .glossary-related-terms {
@@ -303,23 +310,24 @@
 }
 
 .glossary-related-term {
-    font-family: var(--font-mono);
+    font-family: var(--font-ui);
     font-size: 0.8rem;
-    padding: var(--space-xs) var(--space-sm);
-    background: var(--bg-alt);
+    padding: 8px 16px;
+    background: var(--cream);
     color: var(--ink);
     text-decoration: none;
-    border: 2px solid transparent;
-    transition: all var(--speed-normal) ease;
+    border: 1px solid transparent;
+    transition: all 0.3s ease;
 }
 
 .glossary-related-term:hover {
-    border-color: var(--neon-orange);
-    background: var(--bg-primary);
-    box-shadow: 0 0 12px rgba(255, 107, 53, 0.12);
+    border-color: var(--gold);
+    background: var(--ivory);
 }
 
-/* ── GLOSSARY FILTER ───────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────────
+   GLOSSARY FILTER
+   ───────────────────────────────────────────────────────────────── */
 .glossary-filter {
     display: flex;
     flex-wrap: wrap;
@@ -328,28 +336,29 @@
 }
 
 .glossary-filter-btn {
-    font-family: var(--font-mono);
+    font-family: var(--font-ui);
     font-size: 0.7rem;
     font-weight: 500;
     text-transform: uppercase;
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1em;
     padding: 10px 20px;
     background: transparent;
-    border: 2px solid var(--border-strong);
+    border: 1px solid rgba(0, 0, 0, 0.15);
     color: var(--slate);
     cursor: pointer;
-    transition: all var(--speed-normal) ease;
+    transition: all 0.3s ease;
 }
 
 .glossary-filter-btn:hover,
 .glossary-filter-btn.active {
-    background: var(--bg-dark);
-    border-color: var(--bg-dark);
-    color: var(--text-on-dark);
-    box-shadow: 0 0 12px rgba(15, 15, 35, 0.15);
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--ivory);
 }
 
-/* ── RESPONSIVE ────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────────────────────────
+   RESPONSIVE
+   ───────────────────────────────────────────────────────────────── */
 @media (max-width: 768px) {
     .glossary-tooltip {
         max-width: calc(100vw - 32px);
@@ -360,7 +369,7 @@
     }
 
     .glossary-tooltip-content {
-        padding: var(--space-sm);
+        padding: 16px;
     }
 
     .glossary-tooltip-term {
@@ -378,7 +387,7 @@
     .glossary-filter {
         flex-wrap: nowrap;
         overflow-x: auto;
-        padding-bottom: var(--space-xs);
+        padding-bottom: 8px;
         -webkit-overflow-scrolling: touch;
     }
 
