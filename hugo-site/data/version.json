@@ -1,8 +1,8 @@
 {
-  "hash": "79620659b4a9844e835017dc29ad3ccdbd1d663c",
-  "hashShort": "7962065",
-  "date": "2026-02-19T15:55:41+04:00",
-  "message": "Add cache busting and git version tracking",
+  "hash": "40d2519e170aa5b2438e5d33c396b3f36474833c",
+  "hashShort": "40d2519",
+  "date": "2026-02-20T12:11:11+04:00",
+  "message": "chore: eliminate all CDN dependencies — self-host fonts + native emoji",
   "tag": "",
-  "buildNumber": 173
+  "buildNumber": 175
 }
