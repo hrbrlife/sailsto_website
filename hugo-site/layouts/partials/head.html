@@ -194,10 +194,8 @@
     <link rel="stylesheet" href="{{ "styles.css" | relURL }}?v={{ $cacheBust }}">
     {{ end }}
     
-    <!-- New Design System Fonts (Cyberpunk/Vintage) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <!-- Self-hosted Design System Fonts (no CDN) -->
+    <link rel="stylesheet" href="{{ "fonts/fonts.css" | relURL }}">
     
     <!-- Version meta -->
     {{ partial "version-meta.html" . }}
