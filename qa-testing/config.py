@@ -23,7 +23,8 @@ OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
 # ── Model routing (2 tiers) ─────────────────────────────────────────────────
 # Boss  = Opus 4.6 ($5/$25)  — legal + council (critical thinking)
 # Slave = Gemini 2.5 Flash ($0.30/$2.50) — everything else
-MODEL_BOSS  = os.environ.get("MODEL_BOSS",  "openrouter:anthropic/claude-opus-4.6")
+# TEST MODE: all agents use cheapest model to validate pipeline
+MODEL_BOSS  = os.environ.get("MODEL_BOSS",  "openrouter:google/gemini-2.5-flash")
 MODEL_SLAVE = os.environ.get("MODEL_SLAVE", "openrouter:google/gemini-2.5-flash")
 
 AGENT_MODELS = {
@@ -39,9 +40,11 @@ AGENT_MODELS = {
 }
 
 # ── Sites to test ────────────────────────────────────────────────────────────
+BASE_URL = os.environ.get("BASE_URL", "https://melusina-os.org")
+
 SITES = {
     "melusina-os": {
-        "base_url": "https://melusina-os.org",
+        "base_url": BASE_URL,
         "pages": [
             "/en",
             "/en/use-cases",
