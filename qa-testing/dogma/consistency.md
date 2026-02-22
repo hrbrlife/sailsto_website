@@ -19,9 +19,9 @@ These are the **correct** terms. Flag any deviation.
 
 | Correct Term | Wrong / Outdated | Notes |
 |---|---|---|
-| **grain** | pearl (when referring to a container instance) | "Grain" is the Sandstorm-native term. "Pearl" is acceptable as poetic shorthand but must not replace grain in technical contexts |
+| **pearl** | grain, container instance | "Pearl" is the canonical Melusina term for an isolated container. "Grain" is a legacy Sandstorm term — avoid except in deep technical docs. Always capitalized: "Pearl". |
 | **Grapple** | Pearlbox, Powerbox | The capability broker. Always capitalized. |
-| **Melusina** | Melusina OS, MelusOS | "Melusina" is the product name. "Melusina OS" acceptable in full form. Never "MelusOS" or "melusina" lowercase. |
+| **Melusina** | MelusOS | "Melusina" is the product name. "Melusina OS" and "WEB3 SUPERAPP OS" both acceptable in full form. Never "MelusOS" or "melusina" lowercase. |
 | **keyholder** | key holder, key-holder | One word, no hyphen |
 | **trust chain** | trust hierarchy, trust tree | NFT-based: Foundation → Reseller → License → Shares |
 | **TrustMaster** | Trust Master, trust master | One word, capitalized. The independent verification tool. |
@@ -55,7 +55,7 @@ The site should feel like **one person** wrote it. That person is:
 Every page should reinforce the same core promise. Check that these themes
 appear consistently (not contradicted) across all pages:
 - You own your data (it runs on YOUR hardware)
-- Everything is isolated (each app in its own grain)
+- Everything is isolated (each app in its own Pearl)
 - You can verify everything (blockchain, DNS, code hashes)
 - AI is private (prompts never leave your server)
 - Anyone can use it (families → institutions)
@@ -93,7 +93,7 @@ From crawl data, check:
 | Severity | Definition | Example |
 |----------|-----------|---------|
 | **critical** | Contradicts another page directly | Landing says "7 apps", FAQ says "growing library" |
-| **high** | Same concept, different words with no explanation | "Container" here, "grain" there, "pearl" elsewhere |
+| **high** | Same concept, different words with no explanation | "Container" here, "Pearl" there, "grain" elsewhere |
 | **medium** | Missing content that other pages have | Feature on landing, absent from compare |
 | **low** | Minor tone shift between pages | One section slightly more formal than others |
 

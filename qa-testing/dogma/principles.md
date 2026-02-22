@@ -21,7 +21,7 @@ These are non-negotiable facts. Every page must reinforce (never contradict) the
 Not in someone else's cloud. Not on a shared server. On hardware you control.
 This is THE core differentiator. If a page doesn't make this clear, it fails.
 
-### 2. Every app lives in its own isolated container (grain)
+### 2. Every app lives in its own isolated Pearl
 Each app, document, and conversation runs in its own sealed world.
 Apps can't see each other. Can't read each other's data. Can't phone home.
 
@@ -39,7 +39,7 @@ verifiable. A regulator, an auditor, a client — anyone can check independently
 No trust required.
 
 ### 6. AI stays private
-Your prompts never leave your server. AI models run inside isolated grains.
+Your prompts never leave your server. AI models run inside isolated Pearls.
 No training on your data. No data leakage. Private by architecture, not policy.
 
 ### 7. It's for EVERYONE
@@ -59,8 +59,8 @@ It is NOT a browser app. It RUNS on your server. You ACCESS it from a browser.
 Data portability. Export everything. No proprietary formats trapping you.
 
 ### 11. Built on battle-tested foundations
-Melusina is a fork of Sandstorm.io (open source since 2014).
-Cap'n Proto RPC (designed by Kenton Varda, creator of Protocol Buffers).
+Melusina builds on mature open-source foundations including Cap'n Proto RPC
+(designed by Kenton Varda, creator of Protocol Buffers).
 Real technology, not a prototype.
 
 ### 12. The trust chain is on-chain

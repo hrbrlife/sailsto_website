@@ -43,7 +43,7 @@
 - ✅ "Deployed on Solana since February 2026" — verifiable
 - ❌ "Cutting-edge blockchain" — marketing noise
 - Internal credibility: statistics, testable claims
-- External credibility: named tech (Sandstorm, Cap'n Proto), real deployments
+- External credibility: named tech (Cap'n Proto, Solana), real deployments
 
 ### E — Emotional
 - Does this make me feel something? Relief? Excitement? Recognition?
@@ -70,7 +70,7 @@ This is the supreme test. Apply it to every headline, every paragraph, every CTA
 
 **Fails the dinner test:**
 > "We do cryptographically verifiable sovereign infrastructure with capability-based
-> Pearl isolation and threshold keyholder operations"
+> pearl isolation and threshold keyholder operations"
 
 **Passes the dinner test:**
 > "We make it so anyone — a regulator, an auditor, your client — can independently
