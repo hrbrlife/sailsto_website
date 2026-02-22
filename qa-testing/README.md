@@ -1,171 +1,138 @@
-# Sails.to QA Testing Suite
+# QA Council — Multi-Agent Website Testing Suite
 
-Automated UX/UI testing for the Sails.to CrossSecurities platform using multi-agent AI analysis.
+A panel of 7 AI expert agents reviews your website from different perspectives,
+then convenes a council to produce a unified, prioritized HTML report.
 
-## 🚀 Quick Start
+## Architecture
+
+```
+┌──────────────────────────────────────────────────────┐
+│                  Playwright Crawler                   │
+│  Visits every page at desktop + mobile viewports      │
+│  Captures: screenshots, console logs, meta tags,      │
+│  network errors, page text, broken images              │
+└──────────────────┬───────────────────────────────────┘
+                   │ crawl_data.json
+                   ▼
+┌──────────────────────────────────────────────────────┐
+│              Expert Agent Panel (parallel)             │
+│                                                        │
+│  🔒 Legal          — GDPR, privacy, compliance         │
+│  🔄 Consistency    — terminology, tone, messaging      │
+│  ✍️  Editorial      — Made to Stick, jargon, clarity    │
+│  🎯 Principles     — core identity, dinner test        │
+│  📱 Mobile UX      — touch, readability, layout        │
+│  🖥️  Desktop UX     — hierarchy, CTAs, 5-second test    │
+│  🔍 SEO            — meta, headers, performance        │
+└──────────────────┬───────────────────────────────────┘
+                   │ 7 expert reports
+                   ▼
+┌──────────────────────────────────────────────────────┐
+│                   QA Council Chair                     │
+│  Reads all reports, resolves conflicts, prioritizes    │
+│  Produces: grade, decisions, quick wins, themes        │
+└──────────────────┬───────────────────────────────────┘
+                   │ council report
+                   ▼
+┌──────────────────────────────────────────────────────┐
+│               HTML Report Generator                    │
+│  Beautiful dark-themed report with:                    │
+│  - Overall grade + stats                              │
+│  - Executive summary                                  │
+│  - Prioritized decisions (P0/P1/P2)                   │
+│  - Per-expert findings with screenshots               │
+│  - Issue cards with severity badges                   │
+└──────────────────────────────────────────────────────┘
+```
+
+## Quick Start
 
 ```bash
-# Install dependencies
-npm install
+# 1. Set your OpenRouter API key
+export OPENROUTER_API_KEY="sk-or-..."
 
-# Install Playwright browsers
-npm run install:browsers
+# 2. Full run: crawl + agents + report
+make run
 
-# Make sure Hugo dev server is running
-cd ../hugo-site && hugo server -D &
-
-# Run website analysis (default: critical + high priority pages)
-npm run analyze
-
-# Quick check (critical pages only)
-npm run analyze -- --quick
-
-# Full analysis (all tiers)
-npm run analyze -- --full
+# Or step-by-step:
+make crawl          # Just crawl (no API key needed)
+make agents         # Run agents on saved crawl data
 ```
 
-## 🤖 Multi-Agent System
+## Files
 
-Two specialized AI agents analyze each page:
+| File | Purpose |
+|------|---------|
+| `run.py` | Main orchestrator — CLI entry point |
+| `crawler.py` | Playwright crawler — screenshots, console logs, meta tags |
+| `agents.py` | 7 expert agents + council agent (Pydantic AI + OpenRouter) |
+| `models.py` | Pydantic models for all agent outputs |
+| `report_generator.py` | HTML report with embedded screenshots |
+| `config.py` | Sites, viewports, model, paths |
 
-| Agent | Focus Areas |
-|-------|-------------|
-| 🎯 **UX Agent** | Trust & credibility, value proposition clarity, navigation, conversion path, mobile experience |
-| 🎨 **UI Agent** | Visual hierarchy, design consistency, professional polish, whitespace, responsive quality |
-
-### Models (via OpenRouter)
-
-| Model | Best For |
-|-------|----------|
-| `deepseek/deepseek-r1t2-chimera` | **Default** - Strong reasoning, detailed analysis |
-| `mistralai/devstral-2-2512` | Agentic tasks, 256K context |
-| `qwen/qwen3-coder-480b-a35b` | Tool use, function calling |
-
-## 📋 Scripts
-
-| Command | Description |
-|---------|-------------|
-| `npm run analyze` | Analyze critical + high priority pages (10 pages) |
-| `npm run analyze -- --quick` | Quick check - critical pages only (5 pages) |
-| `npm run analyze -- --full` | Comprehensive - includes knowledge base (20+ pages) |
-| `npm run analyze -- --all` | Everything including samples (25+ pages) |
-| `npm run analyze:headless` | Run in headless mode (no browser window) |
-| `npm run test` | Crawl site and capture screenshots |
-| `npm run full-audit` | Run crawl + collages + review + report |
-
-## 🎯 Page Tiers
-
-Pages are organized by priority for testing:
-
-### Tier 1: Critical (5 pages)
-- Homepage, For Issuers, For Investors, Pricing, Signup
-
-### Tier 2: High (5 pages)
-- For Brokers, For Institutions, Introducers, How It Works, Issuers Directory
-
-### Tier 3: Trust (7 pages)
-- Security, Compliance, Oversight, Company Index, About, Contact, Legal
-
-### Tier 4: Knowledge (8 pages)
-- Knowledge Hub, FAQ, Roadmap, Glossary Index, Blog Index, Docs Index, Guides Index, Getting Started Guide
-
-### Tier 5: Samples (11 pages)
-- Sample glossary terms (CrossSecurities, Tokenization, Wyoming DAO, Security Token, ISIN, KYC)
-- Sample blog posts (Security Tokens, Why Wyoming, Future of Tokenization)
-- Sample docs (Platform Overview, Getting Started)
-
-### Tier 6: Extended (17 pages)
-- Additional glossary, blog, and docs pages for comprehensive audit
-
-## ⚙️ Configuration
-
-### Environment Variables
-
-Create a `.env` file:
+## Commands
 
 ```bash
-# Required for AI analysis
-OPENROUTER_API_KEY=sk-or-v1-your-key-here
-
-# Model selection (optional)
-OPENROUTER_MODEL=deepseek/deepseek-r1t2-chimera
-
-# Site URL (optional, defaults to localhost:1313)
-BASE_URL=http://localhost:1313
-
-# Browser mode (optional)
-HEADLESS=true
-
-# Viewport: desktop, tablet, or mobile (optional)
-VIEWPORT=desktop
+python run.py                    # Full run
+python run.py --crawl-only       # Just crawl, save data
+python run.py --agents-only      # Skip crawl, use saved data
+python run.py --site melusina-os # Run for specific site
 ```
 
-### Get an API Key
+## Adding Sites
 
-1. Go to https://openrouter.ai/keys
-2. Create a free account
-3. Generate an API key
-4. Add to `.env` file
+Edit `config.py`:
 
-## 📊 Output
-
-After running analysis:
-
-| File | Description |
-|------|-------------|
-| `WEBSITE_ANALYSIS_REPORT.md` | Full markdown report with scores, issues, and recommendations |
-| `website-analysis.json` | Machine-readable JSON with all data |
-| `screenshots/website-analysis/*.png` | Full-page screenshots of each analyzed page |
-
-## 🎨 Scoring Rubric
-
-Both agents use a 1-10 scale:
-
-| Score | Meaning |
-|-------|---------|
-| 9-10 | Exceptional - Would convert skeptical finance professionals |
-| 7-8 | Good - Works well, minor polish needed |
-| 5-6 | Adequate - Gets the job done but not compelling |
-| 3-4 | Needs Work - Confusing or unprofessional elements |
-| 1-2 | Poor - Would erode trust or confuse visitors |
-
-## 📁 Directory Structure
-
-```
-qa-testing/
-├── .env                          # API key and config
-├── .env.example                  # Template for .env
-├── package.json                  # Dependencies and scripts
-├── website-analyzer.js           # Main multi-agent analyzer
-├── crawler.js                    # Screenshot crawler
-├── agent-review.js               # Single-agent review
-├── generate-collages.js          # Collage generator
-├── generate-report.js            # HTML report generator
-├── UX_STYLE_GUIDE.md            # UX standards reference
-├── WEBSITE_ANALYSIS_REPORT.md   # Generated analysis report
-├── website-analysis.json        # Generated JSON data
-└── screenshots/
-    └── website-analysis/        # Page screenshots
+```python
+SITES = {
+    "melusina-os": {
+        "base_url": "https://melusina-os.org",
+        "pages": ["/en", "/en/use-cases", ...],
+    },
+    "kyclat": {
+        "base_url": "https://kyclat.com",
+        "pages": ["/en", "/en/pricing", ...],
+    },
+}
 ```
 
-## 🔧 Advanced Usage
+## Changing the AI Model
 
-### Mobile Testing
-```bash
-VIEWPORT=mobile npm run analyze -- --quick
+Edit `config.py`:
+
+```python
+MODEL = "anthropic/claude-sonnet-4"     # default
+MODEL = "google/gemini-2.5-pro"           # alternative
+MODEL = "openai/gpt-4o"                   # another option
 ```
 
-### Different Model
-```bash
-OPENROUTER_MODEL=mistralai/devstral-2-2512 npm run analyze
+## Output Structure
+
+```
+reports/
+├── qa-report-melusina-os-latest.html   ← open this
+├── qa-report-melusina-os-20260222.html
+├── council-melusina-os.json
+├── screenshots/
+│   └── melusina-os/
+│       ├── desktop/          ← full-page screenshots
+│       └── mobile/
+├── crawl_data/
+│   └── melusina-os.json      ← raw crawl data
+└── experts/
+    └── melusina-os/
+        ├── legal.json
+        ├── consistency.json
+        ├── editorial.json
+        ├── principles.json
+        ├── mobile_ux.json
+        ├── desktop_ux.json
+        └── seo.json
 ```
 
-### Visible Browser (Debug)
-```bash
-HEADLESS=false npm run analyze -- --quick
-```
+## Tech Stack
 
-### Production Site
-```bash
-BASE_URL=https://sails.to npm run analyze -- --quick
-```
+- **Pydantic AI** — agent framework with first-class OpenRouter support
+- **OpenRouter** — LLM API gateway (Claude, GPT-4, Gemini, etc.)
+- **Playwright** — browser automation for crawling + screenshots
+- **Pydantic** — structured, validated agent outputs
