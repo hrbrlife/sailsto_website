@@ -14,37 +14,49 @@
 
 ---
 
-## The Hrbr.Life Corporate Ecosystem
+## The Dual-Entity Structure
 
-You MUST understand this structure. Melusina OS is infrastructure — it is NOT
-a financial product itself, but it underpins one. Claims on the site must be
-accurate about what Melusina is vs. what the broader ecosystem does.
+You MUST understand this structure. The site is operated by two legal entities:
 
-### Entity Map
+### Entity 1: Hrbr.Life Ltd. (Republic of the Marshall Islands)
 
-| Entity | Jurisdiction | Role | Status |
-|--------|-------------|------|--------|
-| **Hrbr.Life Ltd.** | Republic of the Marshall Islands (RMI) | Top-level holding company for entire ecosystem | Incorporated |
-| **Sails.to** | Operates under Hrbr.Life Ltd. | Securities issuance & distribution platform (STO) | Live — brand, not standalone legal entity |
-| **AiTX.pro** | Mauritius | Full Service Investment Dealer (OTC brokerage, excl. underwriting) | FSC Mauritius licensed |
-| **CCA.sh** (CCASH MONEY SERVICES) | Montana, USA + Canada | Money Services Business — corporate actions, payments, remittances | FinCEN MSB registered; Montana MCA § 35-8-304 |
-| **InstaTrust.app** (trust.sails.to) | St. Vincent & the Grenadines (SVG) | Operational Trust — escrow, distributions, fiduciary oversight | FSC SVG Financial Trustee License — **approval in principle** |
-| **InstaDAO.app** | RMI / Wyoming | DAO & company formation services | Authorised rep of RMI Registries Inc. and MIDAO |
-| **KYC.LAT** | (planned) | Self-hosted KYC/AML verification platform | Not yet live |
-| **Sails.to DAO LLC** | Wyoming (W.S. § 17-31-101 et seq.) | Master DAO LLC for securities issuance, holds Series per client | Wyoming DAO LLC operational |
-| **Melusina OS** | — | Technology platform / infrastructure layer | This is what melusina-os.org markets |
+- Owner of all Melusina OS intellectual property
+- Responsible for commercial licensing
+- Top-level holding company for the hrbr.life ecosystem
 
-### Key: Melusina's Position
+### Entity 2: Association Melusina-OS.org (Switzerland)
 
-Melusina OS is the **technology layer** that runs the infrastructure. It is:
-- ✅ An operating system / platform for self-hosted apps
-- ✅ Infrastructure that Sails.to, KYC.LAT, and other services run on
-- ❌ NOT a financial product
-- ❌ NOT a securities platform (that's Sails.to)
-- ❌ NOT a money transmitter (that's CCA.sh)
-- ❌ NOT a trust company (that's InstaTrust)
+- Steward of the underlying cryptographic protocol
+- Controller of open-source publishing (timing and scope of releases)
+- Independent authority over reseller authentication and licensing
+- Power to execute urgent security actions (including key freezes)
+- Duty to foster autonomous regional implementations
+- **Has NO operational control** over regional instances once established
+- May donate the platform to charitable/non-profit/government organisations
+- Duty to protect sovereignty and decentralisation of the ecosystem
 
-**Any claims on melusina-os.org that blur these lines are legal risks.**
+### pbay.app — Hosted SaaS
+
+- Freemium SaaS version of Melusina OS
+- Regional instances (lu.pbay.app, mu.pbay.app, us.pbay.app, etc.)
+- Regional instances are independently operated
+- Neither entity bears responsibility for regional instance content/compliance
+
+### Key Legal Positions Already in the TOS
+
+The Terms of Service (14 sections) now include:
+1. **"As is" product** — no warranties, express or implied
+2. **AI disclosure** — high rate of AI in code, docs, content; risks of hallucinations/inaccuracies
+3. **ISP safe harbour** — mere conduit / cache / host; no general monitoring obligation; EU E-Commerce Directive 2000/31/EC + Swiss telecom law
+4. **DMCA policy** — AI-assisted processing of takedown notices; DMCA policy to be published separately
+5. **Regional independence** — Association has NO control over regional implementations; user's legal relationship is with regional operator
+6. **AI in operations** — AI used in customer service, query analysis, compliance screening, DMCA processing
+7. **Split jurisdiction** — Swiss law for Association, RMI law for Hrbr.Life Ltd.
+8. **No professional advice** — nothing on the site is legal/financial/tax/investment advice
+
+**Your job**: Verify the SITE itself is consistent with these TOS positions. Flag
+any page content that contradicts or undermines the legal protections established
+in the TOS.
 
 ---
 
@@ -131,10 +143,11 @@ Hrbr.Life Ltd. is RMI-based, but if the site targets or reaches EU residents,
 GDPR applies extraterritorially (Article 3(2)).
 
 - [ ] **Privacy Policy** — link in footer, accessible from every page
-- [ ] States: data controller identity (Hrbr.Life Ltd., RMI), contact details,
+- [ ] States: data controller identity — **both** Hrbr.Life Ltd. (RMI) and Association
+      Melusina-OS.org (Switzerland) as joint controllers where applicable, contact details,
       purposes of processing, legal basis, recipients, retention periods,
       data subject rights (access, rectification, erasure, portability, objection)
-- [ ] Right to lodge complaint with relevant supervisory authority
+- [ ] Right to lodge complaint with relevant supervisory authority (FDPIC for Swiss entity)
 - [ ] **Cookie consent banner** — Accept All, Reject All, granular preferences
 - [ ] No pre-checked optional cookie boxes
 - [ ] Cookie policy listing each cookie
@@ -148,24 +161,36 @@ GDPR applies extraterritorially (Article 3(2)).
 
 ### Imprint / Legal Notice
 
-RMI-based entity — no EU imprint legally required, but best practice for trust:
-- [ ] Company name: Hrbr.Life Ltd.
-- [ ] Jurisdiction: Republic of the Marshall Islands
-- [ ] Contact email
-- [ ] Any relevant registration numbers
+Both entities must appear in the imprint/footer:
+- [ ] **Hrbr.Life Ltd.** — Republic of the Marshall Islands, IP owner & commercial licensing
+- [ ] **Association Melusina-OS.org** — Switzerland, protocol stewardship & open source
+- [ ] Contact email (legal@melusina-os.org)
+- [ ] Role description for each entity (who does what)
 
 ### Copyright & Footer
 
 Check for consistency. Known footer patterns:
 - Canonical: "© 2026 Hrbr.Life Ltd. All rights reserved."
 - **FLAG if melusina-os.org uses "LLC" instead of "Ltd."** — the correct entity is Hrbr.Life Ltd.
+- Footer must include both entities with roles
+- Footer disclaimer must include: "as is", AI risk acknowledgement, ISP no-monitoring-obligation, regional instance independence
+- Links to Privacy Policy and Terms of Service must be present
 
 ### Terms of Service
 - [ ] TOS link accessible from conversion points
 - [ ] Clear description of what Melusina OS is (and isn't)
-- [ ] Limitation of liability
-- [ ] Governing law and jurisdiction clause
+- [ ] "As is" / "as available" product disclaimer present
+- [ ] AI disclosure: site acknowledges heavy AI use in development and operations
+- [ ] AI in customer service: users warned interactions may be handled by automated systems
+- [ ] ISP safe harbour: mere conduit / no general monitoring obligation stated
+- [ ] DMCA policy reference: TOS mentions DMCA policy will be published separately
+- [ ] Regional independence: TOS states Association has no control over regional implementations
+- [ ] Limitation of liability for both Hrbr.Life Ltd. AND Association Melusina-OS.org
+- [ ] Indemnification covers both entities
+- [ ] Split jurisdiction clause (Swiss law for Association, RMI law for Hrbr.Life)
 - [ ] No lock-in / data portability clause (aligns with core principles)
+- [ ] No professional advice disclaimer (legal, financial, tax, investment)
+- [ ] Governing law and jurisdiction clause
 
 ### Financial Disclaimers
 

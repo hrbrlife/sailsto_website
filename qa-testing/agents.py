@@ -1,6 +1,8 @@
 """
 Expert agent definitions — each agent loads its dogma document as the system prompt.
-All powered by Pydantic AI + OpenRouter, 2-tier model routing (Boss + Slave).
+All powered by Pydantic AI + OpenRouter, 4-tier model routing:
+  Opus 4 (council + legal) → Sonnet 4 (editorial/principles/conversion) →
+  Gemini 2.5 Pro (consistency/seo) → Gemini 2.5 Flash (UX viewports).
 """
 
 from __future__ import annotations
@@ -165,7 +167,7 @@ Synthesize them into a unified council report with prioritized decisions.
 
 {reports_text}"""
 
-    result = await agents["council"].run(prompt)
+    result = await agents["council"].run(prompt, model_settings={"max_tokens": 16000})
     council = result.output
     council.expert_reports = expert_reports
     return council

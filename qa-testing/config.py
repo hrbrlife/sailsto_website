@@ -1,7 +1,7 @@
 """
 Configuration for the QA testing suite.
-Per-agent model routing: critical → Opus 4.6, mid-tier → Sonnet 4.6,
-UX → Kimi K2.5, mechanical → Grok 4.1 Fast. All via OpenRouter.
+Opus 4 + xAI Grok swarm: Opus 4 (council), Grok 4.1 Fast (expert agents),
+Grok 3 Mini (UX viewport checks). All via OpenRouter.
 """
 
 import os
@@ -20,27 +20,28 @@ CRAWL_DATA_DIR = ROOT / "reports" / "crawl_data"
 # ── OpenRouter ───────────────────────────────────────────────────────────────
 OPENROUTER_API_KEY = os.environ.get("OPENROUTER_API_KEY", "")
 
-# ── Model routing (2 tiers) ─────────────────────────────────────────────────
-# Boss  = Opus 4.6 ($5/$25)  — legal + council (critical thinking)
-# Slave = Gemini 2.5 Flash ($0.30/$2.50) — everything else
-# TEST MODE: all agents use cheapest model to validate pipeline
-MODEL_BOSS  = os.environ.get("MODEL_BOSS",  "openrouter:google/gemini-2.5-flash")
-MODEL_SLAVE = os.environ.get("MODEL_SLAVE", "openrouter:google/gemini-2.5-flash")
+# ── Model routing (Opus + xAI Grok) ─────────────────────────────────────────
+# Tier 1: BOSS    — Claude Opus 4         — council synthesis (deep reasoning)
+# Tier 2: SENIOR  — xAI Grok 4.1 Fast     — expert agents (SEO #1, Legal #3, 2M context)
+# Tier 3: WORKER  — xAI Grok 3 Mini       — UX viewport analysis (lightweight)
+MODEL_BOSS    = os.environ.get("MODEL_BOSS",    "openrouter:anthropic/claude-opus-4")
+MODEL_SENIOR  = os.environ.get("MODEL_SENIOR",  "openrouter:x-ai/grok-4.1-fast")
+MODEL_WORKER  = os.environ.get("MODEL_WORKER",  "openrouter:x-ai/grok-3-mini")
 
 AGENT_MODELS = {
-    "legal":       MODEL_BOSS,
-    "council":     MODEL_BOSS,
-    "conversion":  MODEL_BOSS,
-    "consistency": MODEL_SLAVE,
-    "editorial":   MODEL_SLAVE,
-    "principles":  MODEL_SLAVE,
-    "mobile_ux":   MODEL_SLAVE,
-    "desktop_ux":  MODEL_SLAVE,
-    "seo":         MODEL_SLAVE,
+    "council":     MODEL_BOSS,      # Opus 4 — synthesises 8 expert reports, final grade
+    "legal":       MODEL_SENIOR,    # Grok 4.1 Fast — regulatory nuance (#3 Legal)
+    "editorial":   MODEL_SENIOR,    # Grok 4.1 Fast — copy quality, dinner test
+    "principles":  MODEL_SENIOR,    # Grok 4.1 Fast — brand identity, emotional arc
+    "conversion":  MODEL_SENIOR,    # Grok 4.1 Fast — persona journeys, funnel analysis
+    "consistency": MODEL_SENIOR,    # Grok 4.1 Fast — cross-page terminology, tone
+    "seo":         MODEL_SENIOR,    # Grok 4.1 Fast — meta tags, structured data (#1 SEO)
+    "mobile_ux":   MODEL_WORKER,    # Grok 3 Mini — mechanical viewport checks
+    "desktop_ux":  MODEL_WORKER,    # Grok 3 Mini — mechanical viewport checks
 }
 
 # ── Sites to test ────────────────────────────────────────────────────────────
-BASE_URL = os.environ.get("BASE_URL", "https://melusina-os.org")
+BASE_URL = os.environ.get("BASE_URL", "http://localhost:4173")
 
 SITES = {
     "melusina-os": {
@@ -58,6 +59,9 @@ SITES = {
             "/en/knowledge-base",
             "/en/glossary",
             "/en/blog",
+            "/en/privacy",
+            "/en/terms",
+            "/en/dmca",
         ],
     },
 }
