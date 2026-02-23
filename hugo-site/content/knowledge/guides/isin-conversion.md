@@ -5,7 +5,6 @@ description: "How CrossConversion bridges on-chain tokens and bankable ISIN secu
 ogImage: "/og-image.png"
 keywords: ["ISIN", "CrossConversion", "Clearstream", "bankable securities", "on-chain", "custody", "conversion", "settlement"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/guides.css"

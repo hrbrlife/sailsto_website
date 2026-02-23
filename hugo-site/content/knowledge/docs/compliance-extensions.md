@@ -4,7 +4,6 @@ description: "Beyond the Transfer Hook — credential lifecycle, emergency power
 ogImage: "/og-image.png"
 keywords: ["compliance extensions", "transfer hook", "credential lifecycle", "emergency powers", "feature flags", "jurisdictional adaptability", "regulatory reporting", "Form D", "Blue Sky", "AML", "K-1"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"

@@ -4,7 +4,6 @@ description: "Sails CrossSecurities are bonds, shares, or RWA tokens that can be
 ogImage: "/og-image.png"
 keywords: ["crosssecurities", "glossary", "sails", "bonds", "shares", "rwa", "tokens", "held"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

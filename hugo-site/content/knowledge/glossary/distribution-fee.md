@@ -4,7 +4,6 @@ description: "A fee charged by the platform to distribute securities tokens to i
 ogImage: "/og-image.png"
 keywords: ["distribution", "fee", "glossary", "charged", "platform", "distribute", "securities", "tokens"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

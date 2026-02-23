@@ -4,7 +4,6 @@ description: "Transfer compliance checks, the SPL-2022 Transfer Hook mechanism, 
 ogImage: "/og-image.png"
 keywords: ["transfer rules", "transfer hook", "compliance", "account freezing", "forced transfer", "jurisdiction"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"

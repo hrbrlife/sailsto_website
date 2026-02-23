@@ -4,7 +4,6 @@ description: "An open-source platform for self-hosting web applications, providi
 ogImage: "/og-image.png"
 keywords: ["sandstorm", "glossary", "self-hosting", "isolation", "grain", "security", "sandbox", "melusina"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

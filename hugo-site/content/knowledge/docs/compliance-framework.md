@@ -4,7 +4,6 @@ description: "KYC credential NFTs, ComplianceConfig PDAs, transfer enforcement, 
 ogImage: "/og-image.png"
 keywords: ["compliance", "KYC", "regulatory reporting", "audit trail", "accredited investor", "Reg D"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"

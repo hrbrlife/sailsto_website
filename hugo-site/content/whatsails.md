@@ -17,7 +17,6 @@ ogImage: "/og-how-it-works.png"
 headScripts:
   - "/assets/js/mermaid.min.js"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/whatsails.css"

@@ -4,7 +4,6 @@ description: "Complete architectural overview of the Sails.to platform — three
 ogImage: "/og-image.png"
 keywords: ["platform architecture", "sandstorm grains", "cap'n proto", "tokenized securities", "data sovereignty"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"

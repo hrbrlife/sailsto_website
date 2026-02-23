@@ -4,7 +4,6 @@ description: "The date on which a bond's principal amount becomes due and payabl
 ogImage: "/og-image.png"
 keywords: ["maturity", "glossary", "date", "bond", "principal", "amount", "becomes", "due"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

@@ -4,7 +4,6 @@ description: "The application engine layer of Sails.to, built on Sandstorm/Melus
 ogImage: "/og-image.png"
 keywords: ["bloom", "application engine", "glossary", "sandstorm", "melusina", "grain", "runtime", "cap'n proto"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

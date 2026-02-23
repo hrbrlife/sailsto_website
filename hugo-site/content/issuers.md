@@ -15,7 +15,6 @@ keywords:
   - CrossConversion
 ogImage: "/og-issuers.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
 ---

@@ -13,7 +13,6 @@ keywords:
   - CrossConversion
 ogImage: "/og-institutions.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
 ---

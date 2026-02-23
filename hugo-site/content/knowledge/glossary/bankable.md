@@ -4,7 +4,6 @@ description: "Securities in a format recognized by traditional banking infrastru
 ogImage: "/og-image.png"
 keywords: ["bankable", "glossary", "securities", "format", "recognized", "traditional", "banking", "infrastructure"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

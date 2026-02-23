@@ -4,7 +4,6 @@ description: "Complete glossary of terms for CrossSecurities, tokenized securiti
 ogImage: "/og-image.png"
 keywords: ["glossary", "complete", "terms", "crosssecurities", "tokenized", "securities", "blockchain", "compliance"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/knowledge-glossary-index.css"

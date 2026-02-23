@@ -9,7 +9,6 @@ keywords:
   - platform updates
 ogImage: "/og-roadmap.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/knowledge-roadmap.css"
 scripts:

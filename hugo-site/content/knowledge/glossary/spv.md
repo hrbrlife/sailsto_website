@@ -4,7 +4,6 @@ description: "A subsidiary entity created for a specific, limited purpose, typic
 ogImage: "/og-image.png"
 keywords: ["spv", "special", "purpose", "vehicle", "glossary", "subsidiary", "entity", "created"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

@@ -10,7 +10,6 @@ keywords:
   - CrossSecurities oversight
 ogImage: "/og-oversight.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
 ---

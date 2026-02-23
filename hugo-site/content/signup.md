@@ -11,7 +11,6 @@ keywords:
   - broker application
 ogImage: "/og-signup.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/signup.css"

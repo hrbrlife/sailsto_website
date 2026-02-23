@@ -19,7 +19,6 @@ ogImage: "/og-image.png"
 headScripts:
 - "/assets/js/mermaid.min.js"
 stylesheets:
-- "/assets/fonts/fonts.css"
 - "/styles.css"
 - "/assets/css/home.css"
 - "/assets/css/players.css"

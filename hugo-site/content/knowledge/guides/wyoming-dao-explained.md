@@ -5,7 +5,6 @@ description: "Understanding Wyoming DAO LLC and Series LLC structures—how they
 ogImage: "/og-image.png"
 keywords: ["wyoming", "dao", "llc", "explained", "understanding", "series", "structures", "provide"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/guides.css"

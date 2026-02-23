@@ -10,7 +10,6 @@ keywords:
   - CrossSecurities offering
 ogImage: "/og-pricing.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/pricing.css"

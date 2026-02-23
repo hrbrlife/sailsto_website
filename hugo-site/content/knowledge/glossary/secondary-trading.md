@@ -4,7 +4,6 @@ description: "The buying and selling of securities after their initial issuance,
 ogImage: "/og-image.png"
 keywords: ["secondary", "trading", "glossary", "buying", "selling", "securities", "initial", "issuance"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

@@ -4,7 +4,6 @@ description: "The process of converting ownership rights in an asset into digita
 ogImage: "/og-image.png"
 keywords: ["tokenization", "glossary", "process", "converting", "ownership", "rights", "asset", "digital"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

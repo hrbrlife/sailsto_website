@@ -4,7 +4,6 @@ description: "The sails_distributions program — waterfall-based revenue distri
 ogImage: "/og-image.png"
 keywords: ["distributions", "waterfall", "revenue", "investor payout", "claiming", "reconciliation"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"

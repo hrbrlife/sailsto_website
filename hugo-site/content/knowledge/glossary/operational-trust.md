@@ -4,7 +4,6 @@ description: "A trust structure used to hold and manage operational assets on be
 ogImage: "/og-image.png"
 keywords: ["operational", "trust", "glossary", "structure", "used", "hold", "manage", "assets"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

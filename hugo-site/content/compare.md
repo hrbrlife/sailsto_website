@@ -13,7 +13,6 @@ keywords:
   - sovereign infrastructure
 ogImage: "/og-compare.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/compare.css"

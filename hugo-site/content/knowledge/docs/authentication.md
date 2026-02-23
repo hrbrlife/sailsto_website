@@ -4,7 +4,6 @@ description: "The four-layer authentication model — from Solana wallet signatu
 ogImage: "/og-image.png"
 keywords: ["authentication", "NFT roles", "threshold signing", "wallet signature", "powerbox capabilities"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"

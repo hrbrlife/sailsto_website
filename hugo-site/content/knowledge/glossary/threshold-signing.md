@@ -4,7 +4,6 @@ description: "M-of-N keyholder cryptographic operations used to protect critical
 ogImage: "/og-image.png"
 keywords: ["threshold signing", "glossary", "m-of-n", "keyholder", "cryptographic", "multisig", "solana", "authority"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

@@ -4,7 +4,6 @@ description: "The cap table on Sails.to is the live state of InvestorPosition PD
 ogImage: "/og-image.png"
 keywords: ["cap table", "InvestorPosition", "OfferingState", "PDA", "ownership", "snapshot", "audit", "CrossConversion", "access control"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"

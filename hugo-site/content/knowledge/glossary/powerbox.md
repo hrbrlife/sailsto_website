@@ -4,7 +4,6 @@ description: "The inter-grain capability sharing mechanism in Sandstorm/Melusina
 ogImage: "/og-image.png"
 keywords: ["powerbox", "glossary", "capability", "sharing", "grains", "sandstorm", "sturdyref", "delegation"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

@@ -4,7 +4,6 @@ description: "A dedicated series within a Series LLC structure that facilitates 
 ogImage: "/og-image.png"
 keywords: ["crossconversion", "series", "glossary", "dedicated", "within", "llc", "structure", "facilitates"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

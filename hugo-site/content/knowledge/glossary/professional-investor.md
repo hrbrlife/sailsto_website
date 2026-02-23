@@ -4,7 +4,6 @@ description: "Under EU/international regulations, an investor with sufficient ex
 ogImage: "/og-image.png"
 keywords: ["professional", "investor", "glossary", "international", "regulations", "sufficient", "experience", "knowledge"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

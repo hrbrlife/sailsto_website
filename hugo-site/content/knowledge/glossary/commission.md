@@ -4,7 +4,6 @@ description: "Fees paid to brokers and introducers for placing investors or faci
 ogImage: "/og-image.png"
 keywords: ["commission", "glossary", "fees", "paid", "brokers", "introducers", "placing", "investors"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

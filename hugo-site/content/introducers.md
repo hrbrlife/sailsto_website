@@ -10,7 +10,6 @@ keywords:
   - CrossSecurities referral
 ogImage: "/og-introducers.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/introducers.css"

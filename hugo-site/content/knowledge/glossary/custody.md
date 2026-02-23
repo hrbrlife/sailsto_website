@@ -4,7 +4,6 @@ description: "The safekeeping and administration of securities on behalf of inve
 ogImage: "/og-image.png"
 keywords: ["custody", "glossary", "safekeeping", "administration", "securities", "behalf", "investors", "including"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

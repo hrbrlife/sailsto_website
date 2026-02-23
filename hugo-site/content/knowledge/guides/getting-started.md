@@ -5,7 +5,6 @@ description: "Step-by-step guide to getting started on Sails.to—for issuers la
 ogImage: "/og-image.png"
 keywords: ["getting", "started", "sails", "step-by-step", "guide", "issuers", "launching", "tokenized"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/guides.css"

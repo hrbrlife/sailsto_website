@@ -11,7 +11,6 @@ keywords:
   - securities trading
 ogImage: "/og-brokers.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/brokers.css"

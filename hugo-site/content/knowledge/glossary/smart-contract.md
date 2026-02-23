@@ -4,7 +4,6 @@ description: "Self-executing code deployed on a blockchain that automatically en
 ogImage: "/og-image.png"
 keywords: ["smart", "contract", "glossary", "self-executing", "code", "deployed", "blockchain", "automatically"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

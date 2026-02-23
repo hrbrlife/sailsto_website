@@ -4,7 +4,6 @@ description: "Your onboarding guide to the Sails.to platform — choose your rol
 ogImage: "/og-image.png"
 keywords: ["getting started", "onboarding", "KYC", "signup", "investor", "issuer", "broker", "grain provisioning"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"

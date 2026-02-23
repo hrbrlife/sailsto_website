@@ -11,7 +11,6 @@ keywords:
   - platform capabilities
 ogImage: "/og-platform.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/issuers-directory.css"

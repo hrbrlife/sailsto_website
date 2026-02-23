@@ -4,7 +4,6 @@ description: "Structured metadata for KYC credential NFTs, role NFTs, offering s
 ogImage: "/og-image.png"
 keywords: ["metadata", "NFT metadata", "KYC credential", "role NFT", "PDA", "on-chain", "privacy"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"

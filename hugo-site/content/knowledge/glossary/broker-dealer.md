@@ -4,7 +4,6 @@ description: "Licensed securities professional who can execute trades and place 
 ogImage: "/og-image.png"
 keywords: ["broker-dealer", "glossary", "licensed", "securities", "professional", "execute", "trades", "place"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

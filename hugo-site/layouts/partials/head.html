@@ -188,13 +188,7 @@
     <link rel="stylesheet" href="{{ strings.TrimLeft "/" . | relURL }}?v={{ $cacheBust }}">
     {{ end }}
     
-    <!-- Default stylesheets if none specified -->
-    {{ if not .Params.stylesheets }}
-    <link rel="stylesheet" href="{{ "assets/fonts/fonts.css" | relURL }}?v={{ $cacheBust }}">
-    <link rel="stylesheet" href="{{ "styles.css" | relURL }}?v={{ $cacheBust }}">
-    {{ end }}
-    
-    <!-- Self-hosted Design System Fonts (no CDN) -->
+    <!-- Design System Fonts -->
     <link rel="stylesheet" href="{{ "fonts/fonts.css" | relURL }}">
     
     <!-- Version meta -->

@@ -4,7 +4,6 @@ description: "The Investor Self-Service Grain — portfolio management, distribu
 ogImage: "/og-image.png"
 keywords: ["investor API", "portfolio", "distributions", "CrossConversion", "secondary trading", "tax documents", "DAO governance", "OTC", "cap table"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"

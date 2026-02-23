@@ -5,7 +5,6 @@ description: "Who can invest on Sails.to—investor classifications, the 10-step
 ogImage: "/og-image.png"
 keywords: ["investor eligibility", "accredited investor", "KYC", "verification", "Reg D", "Reg S", "qualified purchaser", "compliance"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/guides.css"

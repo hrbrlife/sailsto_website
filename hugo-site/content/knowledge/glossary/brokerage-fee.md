@@ -4,7 +4,6 @@ description: "A fee charged by a broker for executing securities transactions on
 ogImage: "/og-image.png"
 keywords: ["brokerage", "fee", "glossary", "charged", "broker", "executing", "securities", "transactions"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

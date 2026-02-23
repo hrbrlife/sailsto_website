@@ -10,7 +10,6 @@ keywords:
   - fintech startup
 ogImage: "/og-about.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/company-about.css"

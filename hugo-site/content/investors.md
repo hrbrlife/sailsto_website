@@ -14,7 +14,6 @@ keywords:
   - CrossConversion
 ogImage: "/og-investors.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
 ---

@@ -4,7 +4,6 @@ description: "Regulatory process to verify the identity of clients, assess their
 ogImage: "/og-image.png"
 keywords: ["kyc", "know", "customer", "glossary", "regulatory", "process", "verify", "identity"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

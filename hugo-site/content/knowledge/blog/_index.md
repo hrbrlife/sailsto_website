@@ -2,7 +2,6 @@
 title: "Blog"
 description: "Insights, updates, and analysis from the Sails.to team — covering CrossSecurities, tokenization, DeFi-TradFi convergence, and regulatory developments."
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/knowledge-blog-index.css"

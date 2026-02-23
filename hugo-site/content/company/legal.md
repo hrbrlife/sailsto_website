@@ -9,7 +9,6 @@ keywords:
   - securities law
 ogImage: "/og-legal.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/company-legal.css"

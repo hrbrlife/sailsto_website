@@ -10,7 +10,6 @@ keywords:
   - CrossSecurities security
 ogImage: "/og-security.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
 ---

@@ -4,7 +4,6 @@ description: "The fundamental isolation unit in Sandstorm/Melusina OS — a sand
 ogImage: "/og-image.png"
 keywords: ["grain", "glossary", "sandstorm", "isolation", "sandboxed", "application", "instance", "melusina"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

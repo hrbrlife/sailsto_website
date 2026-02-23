@@ -4,7 +4,6 @@ description: "The face value of a security as stated by the issuer, representing
 ogImage: "/og-image.png"
 keywords: ["nominal", "value", "glossary", "face", "security", "stated", "issuer", "representing"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

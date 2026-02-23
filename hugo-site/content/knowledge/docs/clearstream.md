@@ -4,7 +4,6 @@ description: "How the Clearstream Adapter connects on-chain CrossSecurities to t
 ogImage: "/og-image.png"
 keywords: ["Clearstream", "ISIN registration", "settlement", "reconciliation", "SWIFT", "MT540", "MT542", "ISO 20022", "CrossConversion", "bankable securities"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"

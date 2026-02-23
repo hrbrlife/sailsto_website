@@ -4,7 +4,6 @@ description: "The process of moving Sails CrossSecurities between on-chain (Sola
 ogImage: "/og-image.png"
 keywords: ["crossconversion", "glossary", "process", "moving", "sails", "crosssecurities", "on-chain", "solana"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

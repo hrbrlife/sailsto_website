@@ -4,7 +4,6 @@ description: "Securities trading conducted directly between two parties without 
 ogImage: "/og-image.png"
 keywords: ["otc", "over-the-counter", "glossary", "securities", "trading", "conducted", "directly", "two"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

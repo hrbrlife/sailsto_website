@@ -4,7 +4,6 @@ description: "Wyoming's legally-recognized DAO structure combined with Series LL
 ogImage: "/og-image.png"
 keywords: ["wyoming", "dao", "series", "llc", "glossary", "legally-recognized", "structure", "combined"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

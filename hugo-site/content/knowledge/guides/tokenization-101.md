@@ -5,7 +5,6 @@ description: "What tokenization is, why it matters, and how Sails.to's CrossSecu
 ogImage: "/og-image.png"
 keywords: ["tokenization", "security tokens", "CrossSecurities", "SPL-2022", "digital securities", "blockchain", "Solana", "compliance"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/guides.css"

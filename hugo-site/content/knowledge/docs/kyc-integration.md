@@ -4,7 +4,6 @@ description: "KYC as a grain, not a service — the 10-step verification workflo
 ogImage: "/og-image.png"
 keywords: ["KYC", "investor onboarding", "credential NFT", "accredited investor", "verification workflow", "Cap'n Proto", "Powerbox"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"

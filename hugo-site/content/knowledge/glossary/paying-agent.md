@@ -4,7 +4,6 @@ description: "The entity authorized to execute distributions and manage the reve
 ogImage: "/og-image.png"
 keywords: ["paying agent", "glossary", "distributions", "revenue", "waterfall", "trustee", "oversight", "offering"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

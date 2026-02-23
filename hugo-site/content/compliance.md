@@ -10,7 +10,6 @@ keywords:
   - CrossSecurities compliance
 ogImage: "/og-compliance.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
 ---

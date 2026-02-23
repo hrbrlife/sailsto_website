@@ -4,7 +4,6 @@ description: "Branded platform instances available to regulated institutions, tr
 ogImage: "/og-image.png"
 keywords: ["white-label", "glossary", "branded", "platform", "regulated", "institutions", "broker-dealer", "compliance"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

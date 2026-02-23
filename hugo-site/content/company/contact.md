@@ -9,7 +9,6 @@ keywords:
   - tokenization questions
 ogImage: "/og-contact.png"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/company-contact.css"

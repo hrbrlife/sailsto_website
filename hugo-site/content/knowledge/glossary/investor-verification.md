@@ -4,7 +4,6 @@ description: "The process of confirming an investor's identity, financial status
 ogImage: "/og-image.png"
 keywords: ["investor", "verification", "glossary", "process", "confirming", "identity", "financial", "status"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

@@ -4,7 +4,6 @@ description: "SEC regulation providing a safe harbor for securities offerings ma
 ogImage: "/og-image.png"
 keywords: ["regulation", "reg", "glossary", "sec", "providing", "safe", "harbor", "securities"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/glossary-term.css"

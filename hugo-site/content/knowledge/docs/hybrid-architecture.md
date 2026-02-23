@@ -4,7 +4,6 @@ description: "The CrossConversion Engine — how Sails.to bridges on-chain Solan
 ogImage: "/og-image.png"
 keywords: ["crossconversion", "hybrid securities", "clearstream", "ISIN", "lockbox", "reconciliation"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"

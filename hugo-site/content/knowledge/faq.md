@@ -48,7 +48,6 @@ faqItems:
     answer: "Cap'n Proto is a zero-copy serialization protocol used for inter-grain RPC communication. Unlike JSON or Protocol Buffers, it requires no encoding or decoding step—data is read directly from the wire format. This enables native Sandstorm integration on FD3 without an HTTP bridge, giving maximum performance for capability-based security."
     category: "technical"
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/knowledge-faq.css"

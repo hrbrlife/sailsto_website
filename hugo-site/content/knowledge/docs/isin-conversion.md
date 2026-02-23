@@ -4,7 +4,6 @@ description: "The CrossConversion Engine in detail — how tokens are locked on 
 ogImage: "/og-image.png"
 keywords: ["ISIN conversion", "CrossConversion", "lockbox", "Clearstream", "SWIFT", "MT540", "MT542", "reconciliation", "trustee authentication"]
 stylesheets:
-  - "/assets/fonts/fonts.css"
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
