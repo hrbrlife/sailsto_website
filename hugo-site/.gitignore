@@ -5,4 +5,5 @@ node_modules/
 
 # TinaCMS generated
 tina/__generated__/
+tina/tina-lock.json
 static/admin/

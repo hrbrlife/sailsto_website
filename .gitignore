@@ -10,4 +10,13 @@ social/
 qa-testing/node_modules/
 hugo-site/public/
 hugo-site/qc/node_modules/
-hugo-site/public/
+hugo-site/node_modules/
+hugo-site/tina/__generated__/
+hugo-site/tina/tina-lock.json
+hugo-site/static/admin/
+
+# Submodule build artifacts
+**/node_modules/
+**/dist-publish/
+**/tina-lock.json
+**/__generated__/
