@@ -20,3 +20,4 @@ hugo-site/static/admin/
 **/dist-publish/
 **/tina-lock.json
 **/__generated__/
+**/package-lock.json
