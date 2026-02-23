@@ -1,5 +1,6 @@
 ---
 title: "Investor Eligibility Guide"
+type: "guide"
 description: "Who can invest on Sails.to—investor classifications, the 10-step KYC verification process, regulatory exemptions, geographic eligibility."
 ogImage: "/og-image.png"
 keywords: ["investor eligibility", "accredited investor", "KYC", "verification", "Reg D", "Reg S", "qualified purchaser", "compliance"]
@@ -8,20 +9,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/guides.css"
+guideMeta: "Everything you need to know about who can invest, how verification works, and what the system checks before a single token touches your wallet"
 draft: false
 ---
-
-<header class="guide-header">
-    <div class="container">
-        <a href="/knowledge/" class="back-link">← Back to Knowledge Base</a>
-        <span class="guide-badge">Guide</span>
-        <h1 class="guide-title">Investor Eligibility Guide</h1>
-        <p class="guide-meta">Everything you need to know about who can invest, how verification works, and what the system checks before a single token touches your wallet</p>
-    </div>
-</header>
-<main class="guide-content">
-    <div class="guide-container">
-        <nav class="guide-nav">
+<nav class="guide-nav">
             <h4>In This Guide</h4>
             <ul>
                 <li><a href="#who-can-invest">Who Can Invest?</a></li>
@@ -245,5 +236,3 @@ draft: false
             <a href="/signup/?type=investor" class="btn">Begin Verification</a>
         </div>
     </div>
-</main>
-<script src="/assets/js/glossary.js"></script>

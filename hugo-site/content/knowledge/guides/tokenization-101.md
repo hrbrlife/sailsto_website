@@ -1,5 +1,6 @@
 ---
 title: "Tokenization 101"
+type: "guide"
 description: "What tokenization is, why it matters, and how Sails.to's CrossSecurities architecture creates hybrid on-chain + bankable securities that actually work in."
 ogImage: "/og-image.png"
 keywords: ["tokenization", "security tokens", "CrossSecurities", "SPL-2022", "digital securities", "blockchain", "Solana", "compliance"]
@@ -8,20 +9,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/guides.css"
+guideMeta: "The complete guide to tokenized securities—what they are, why they exist, and how they will remake capital markets"
 draft: false
 ---
-
-<header class="guide-header">
-    <div class="container">
-        <a href="/knowledge/" class="back-link">← Back to Knowledge Base</a>
-        <span class="guide-badge">Guide</span>
-        <h1 class="guide-title">Tokenization 101</h1>
-        <p class="guide-meta">The complete guide to tokenized securities—what they are, why they exist, and how they will remake capital markets</p>
-    </div>
-</header>
-<main class="guide-content">
-    <div class="guide-container">
-        <nav class="guide-nav">
+<nav class="guide-nav">
             <h4>In This Guide</h4>
             <ul>
                 <li><a href="#what-is-tokenization">What Is Tokenization?</a></li>
@@ -233,5 +224,3 @@ draft: false
             <a href="/signup/" class="btn">Get Started</a>
         </div>
     </div>
-</main>
-<script src="/assets/js/glossary.js"></script>

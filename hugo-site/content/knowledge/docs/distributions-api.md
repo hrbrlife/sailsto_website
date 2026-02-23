@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "Waterfall-based revenue distribution — from revenue receipt to investor payout, enforced on-chain."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Distributions API</h1>
-    <p class="section-desc">Waterfall-based revenue distribution — from revenue receipt to investor payout, enforced on-chain.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Overview</h2>
+<h2>Overview</h2>
         <p><span class="glossary-term" data-term="distributions">Distributions</span> on Sails.to are <span class="glossary-term" data-term="waterfall">waterfall</span>-based and enforced <span class="glossary-term" data-term="on-chain">on-chain</span>. The <code>sails_distributions</code> program is a dedicated <a href="/knowledge/glossary/solana/">Solana</a> Anchor program that handles everything from revenue receipt to investor payout. It is separate from the <code>sails_securities</code> token program — distributions are a first-class concern with their own instruction set, account structures, and authorization model.</p>
         <p>The design principle is simple: investors get paid before the platform. Revenue flows through a priority structure defined at offering creation, and every step is recorded on-chain. There are no off-chain side agreements, no manual overrides, no way to redirect funds outside the waterfall without <span class="glossary-term" data-term="trustee">Trustee</span> authentication. The <span class="glossary-term" data-term="paying-agent">Paying Agent</span> executes the waterfall; the Trustee authenticates it; the blockchain enforces it.</p>
         <h2>The Waterfall Model</h2>
@@ -282,4 +274,3 @@ Seeds: ["distribution", offering_id, epoch]
         </table>
         <p>The frequency setting determines when the Paying Agent is expected to execute the waterfall, but it does not enforce timing at the program level — the <code>execute_waterfall</code> instruction can be called at any time, subject to the dual-authorization requirement. The frequency is a business-logic convention, not a smart contract constraint.</p>
     </div>
-</section>

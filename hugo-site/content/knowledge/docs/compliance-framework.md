@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "Compliance encoded in smart contracts and enforced at the protocol level — because paper policies don't stop non-compliant transfers."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Compliance Framework</h1>
-    <p class="section-desc">Compliance encoded in smart contracts and enforced at the protocol level — because paper policies don't stop non-compliant transfers.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>KYC Credential System</h2>
+<h2>KYC Credential System</h2>
         <p>Every investor on the Sails.to platform carries a <span class="glossary-term" data-term="kyc">KYC</span> Credential NFT — an on-chain attestation of their verified identity, classification, and regulatory status. This NFT contains <strong>zero personally identifiable information</strong>. No names, no addresses, no document images. Only cryptographic proofs and classification flags that the <span class="glossary-term" data-term="smart-contract">smart contract</span> needs to enforce compliance rules.</p>
         <p>The KYC Credential NFT metadata structure:</p>
         <pre><code>KYC NFT Metadata (on-chain, no PII):
@@ -132,4 +124,3 @@ draft: false
         <p><strong>Seven-year retention</strong> — required by SEC regulations for broker-dealer records and investment adviser records. Every audit event is written to the grain's append-only journal, encrypted at rest with AES-256, and replicated for durability. After the 7-year period, automated purge with legal hold override ensures data is retained only as long as required.</p>
         <p>The audit trail is not just for regulators. It is the system's memory. Grain journals support deterministic replay — given the same sequence of audit events, the grain reconstructs the identical state. This is how disaster recovery works: restore the journal, replay the events, verify the state. No backup snapshots needed. The log <em>is</em> the truth.</p>
     </div>
-</section>

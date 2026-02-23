@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "Protocol-level enforcement — non-compliant transfers don't get logged and ignored, they get rejected."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Transfer Rules</h1>
-    <p class="section-desc">Protocol-level enforcement — non-compliant transfers don't get logged and ignored, they get rejected.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Transfer Compliance Checks</h2>
+<h2>Transfer Compliance Checks</h2>
         <p>The <code>transfer_with_compliance</code> instruction is the gate through which every <span class="glossary-term" data-term="security-token">security token</span> transfer must pass. It performs five checks in sequence. If any check fails, the entire transaction reverts — the tokens do not move, and a <code>ComplianceViolation</code> event is emitted with the specific reason for rejection.</p>
         <h3>Check 1: KYC Validity</h3>
         <p>Both the sender and receiver wallets must hold valid, unexpired <span class="glossary-term" data-term="kyc">KYC</span> Credential NFTs. The instruction reads the <code>expires_at</code> field on each credential and compares it to the current slot time. An expired credential is treated the same as no credential — the transfer is rejected.</p>
@@ -154,4 +146,3 @@ draft: false
         </table>
         <p>Jurisdiction rules are immutable once set on an offering's <code>ComplianceConfig</code> — they can only be modified by the Issuer with Platform Operator approval, and any change is logged to the audit trail. This ensures that an offering's regulatory status cannot be silently changed after investors have committed capital.</p>
     </div>
-</section>

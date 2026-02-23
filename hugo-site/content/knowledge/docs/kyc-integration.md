@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "Every verification is an isolated grain — 10 steps from terms acceptance to on-chain credential, with zero PII touching the blockchain."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">KYC Integration</h1>
-    <p class="section-desc">Every verification is an isolated grain — 10 steps from terms acceptance to on-chain credential, with zero PII touching the blockchain.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Overview</h2>
+<h2>Overview</h2>
         <p><span class="glossary-term" data-term="kyc">KYC</span> on Sails.to is a <span class="glossary-term" data-term="grain">grain</span>, not a service. Each investor verification spawns an isolated Instance grain — a single-purpose, sandboxed process that owns its own encrypted journal, its own state machine, and its own lifecycle. When the verification completes, the grain mints an on-chain credential and can be archived. When it fails, the grain retains the audit trail and nothing else.</p>
         <p>This architecture comes directly from the <span class="glossary-term" data-term="bloom">BLOOM_FINAL</span> specification: the KYC/Investor Onboarding Grain is an Instance-type grain, one per verification, implemented in Go+HTMX as a native Sandstorm grain. The verification workflow is a 10-step state machine that moves an investor from anonymous visitor to on-chain credentialed participant. Every step is logged. Every transition is irreversible. Every piece of personally identifiable information stays inside the grain's encrypted journal — never on-chain, never in a shared database, never accessible to any other grain without an explicit <span class="glossary-term" data-term="powerbox">Powerbox</span> capability grant.</p>
         <p>The KYC grain integrates with external data providers (Onfido, Jumio, or equivalent) for document verification and biometric matching, but the grain itself is the system of record. If the external provider goes down, the grain queues the verification step and retries. If the provider returns an ambiguous result, the grain escalates to human review. The grain is the authority — the provider is a tool.</p>
@@ -176,4 +168,3 @@ KYC Grain ──(Powerbox offer: KYC result)──► Offering Grain
         <h3>Solana Event Watcher → KYC Grain</h3>
         <p>The credential minting and revocation happen on-chain via the <span class="glossary-term" data-term="melusina">Melusina</span> program. The Solana Event Watcher grain monitors the chain for KYC-related events (<code>KycMinted</code>, <code>KycRevoked</code>) and routes confirmations back to the originating KYC grain. This closes the loop — the grain initiates the mint, the on-chain program executes it, the Event Watcher confirms it, and the grain updates its journal. If the on-chain transaction fails (insufficient SOL, network congestion), the grain retries with exponential backoff.</p>
     </div>
-</section>

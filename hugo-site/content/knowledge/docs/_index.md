@@ -1,4 +1,6 @@
 ---
+cascade:
+  type: "doc"
 title: "Documentation"
 description: "Technical documentation for Sails.to platform — architecture overview, API reference, token standards, compliance framework, and integration guides."
 stylesheets:

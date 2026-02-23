@@ -1,0 +1,39 @@
+{{ define "main" }}
+<header class="term-page-header">
+    <div class="container">
+        <a href="{{ "knowledge/glossary/" | relURL }}" class="back-link">← Back to Glossary</a>
+        <span class="term-category">{{ .Params.category | title }}</span>
+        <h1 class="term-title">{{ .Params.termTitle | default (.Title | replaceRE " - Glossary$" "") }}</h1>
+        <p class="term-short">{{ .Params.shortDesc | default .Params.description | safeHTML }}</p>
+    </div>
+</header>
+<main class="term-content">
+    <div class="term-content-inner">
+        {{ .Content }}
+        {{ with .Params.relatedTerms }}
+        <section class="term-section">
+            <h2>Related Terms</h2>
+            <div class="related-terms">
+                {{ range . }}
+                {{ $slug := .slug }}
+                {{ $label := .label }}
+                {{ $term := site.GetPage (printf "knowledge/glossary/%s" $slug) }}
+                {{ if $term }}
+                <a href="{{ $term.RelPermalink }}" class="related-term-link">{{ $label }}</a>
+                {{ else }}
+                <a href="{{ printf "knowledge/glossary/%s/" $slug | relURL }}" class="related-term-link">{{ $label }}</a>
+                {{ end }}
+                {{ end }}
+            </div>
+        </section>
+        {{ end }}
+        {{ if .Params.ctaTitle }}
+        <div class="term-cta">
+            <h3>{{ .Params.ctaTitle }}</h3>
+            <p>{{ .Params.ctaText }}</p>
+            <a href="{{ .Params.ctaLink | default "/signup/" }}" class="btn">{{ .Params.ctaLabel | default "Get Started" }}</a>
+        </div>
+        {{ end }}
+    </div>
+</main>
+{{ end }}

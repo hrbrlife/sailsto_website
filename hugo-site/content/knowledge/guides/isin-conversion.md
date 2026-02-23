@@ -1,5 +1,6 @@
 ---
 title: "ISIN Conversion Guide"
+type: "guide"
 description: "How CrossConversion bridges on-chain tokens and bankable ISIN securities through Clearstream—step by step, with the 1:1 invariant, reconciliation, fees."
 ogImage: "/og-image.png"
 keywords: ["ISIN", "CrossConversion", "Clearstream", "bankable securities", "on-chain", "custody", "conversion", "settlement"]
@@ -8,20 +9,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/guides.css"
+guideMeta: "How to move between on-chain tokens and bankable ISIN securities—and why the bridge between these two worlds changes everything"
 draft: false
 ---
-
-<header class="guide-header">
-    <div class="container">
-        <a href="/knowledge/" class="back-link">← Back to Knowledge Base</a>
-        <span class="guide-badge">Guide</span>
-        <h1 class="guide-title">ISIN Conversion Guide</h1>
-        <p class="guide-meta">How to move between on-chain tokens and bankable ISIN securities—and why the bridge between these two worlds changes everything</p>
-    </div>
-</header>
-<main class="guide-content">
-    <div class="guide-container">
-        <nav class="guide-nav">
+<nav class="guide-nav">
             <h4>In This Guide</h4>
             <ul>
                 <li><a href="#what-is-isin">What Is an ISIN?</a></li>
@@ -251,5 +242,3 @@ draft: false
             <a href="/signup/?type=investor" class="btn">Get Started</a>
         </div>
     </div>
-</main>
-<script src="/assets/js/glossary.js"></script>

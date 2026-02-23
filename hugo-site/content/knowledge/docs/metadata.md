@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "Every NFT and on-chain account on Sails.to carries structured metadata — the fields that tell the protocol what a token represents, who holds it, and what rules apply."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Metadata</h1>
-    <p class="section-desc">Every NFT and on-chain account on Sails.to carries structured metadata — the fields that tell the protocol what a token represents, who holds it, and what rules apply.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Overview</h2>
+<h2>Overview</h2>
         <p>Metadata is not decoration. On Sails.to, metadata is the mechanism by which <span class="glossary-term" data-term="smart-contract">smart contracts</span> enforce compliance, authorize actions, and maintain audit trails. Every NFT — whether it represents a <span class="glossary-term" data-term="kyc">KYC</span> credential, an operator role, or an offering configuration — carries a structured set of fields that the <a href="/knowledge/glossary/solana/">Solana</a> runtime reads and validates on every instruction.</p>
         <p>There are no optional fields in a "nice to have" sense. Each field exists because a specific compliance check, authorization gate, or audit requirement demands it. Remove a field and a smart contract check breaks. Add a field without purpose and you waste on-chain storage that every validator must replicate. The metadata schemas documented here are the product of that discipline.</p>
         <p>This page covers the six metadata categories on the platform: <strong>KYC Credential NFTs</strong>, <strong>Role NFTs</strong>, <strong>OfferingState PDAs</strong>, <strong>ComplianceConfig PDAs</strong>, <strong>Program Events</strong>, and the <strong>privacy architecture</strong> that binds them together.</p>
@@ -308,4 +300,3 @@ draft: false
         </ul>
         <p>This architecture satisfies both regulatory requirements and privacy expectations. Regulators can audit compliance enforcement through on-chain events and metadata — they can verify that every transfer was compliant, every mint checked KYC credentials, and every distribution followed the waterfall rules. But they access investor identity through the off-chain KYC records, not through the blockchain. The chain proves <em>what happened</em>. The grain journals prove <em>who was involved</em>. Neither system exposes more than it needs to.</p>
     </div>
-</section>

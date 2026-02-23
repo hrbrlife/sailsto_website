@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "Four layers of cryptographic proof — because regulated securities demand nothing less."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Authentication</h1>
-    <p class="section-desc">Four layers of cryptographic proof — because regulated securities demand nothing less.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Authentication Layers</h2>
+<h2>Authentication Layers</h2>
         <p>Sails.to implements a four-layer authentication model. Each layer builds on the one below it. No single layer is sufficient — all four must agree before any operation proceeds. This is not over-engineering; this is what you build when you're responsible for other people's securities.</p>
         <h3>Layer 1: Solana Wallet Signature</h3>
         <p>The cryptographic foundation. Every request begins with a <a href="/knowledge/glossary/solana/">Solana</a> wallet signature proving ownership of the private key. This is standard Ed25519 — the same signature scheme that secures every transaction on the Solana network. No password, no username — just cryptographic proof of identity.</p>
@@ -131,4 +123,3 @@ Layer 4: Powerbox Capability        → proves inter-grain authority</code></pre
         </ul>
         <p>The result: a system where authentication is not a gate you pass through once, but a continuous assertion of identity, role, access, and authority — verified at every layer, for every operation, without exception.</p>
     </div>
-</section>

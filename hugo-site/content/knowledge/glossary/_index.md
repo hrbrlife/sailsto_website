@@ -11,6 +11,8 @@ stylesheets:
 scripts:
   - "/js/kb-filters.js"
   - "/js/knowledge-glossary-index.js"
+cascade:
+  type: "glossary-term"
 ---
 
 

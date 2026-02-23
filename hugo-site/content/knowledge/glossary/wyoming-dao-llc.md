@@ -13,53 +13,32 @@ category: "legal"
 tags:
   - "legal-structure"
 relatedTerms:
-  - "crossconversion-series"
-  - "operating-series"
-  - "series-llc"
-  - "spv"
-  - "treasury-series"
+  - slug: "series-llc"
+    label: "Series LLC"
+  - slug: "operating-series"
+    label: "Operating Series"
+  - slug: "treasury-series"
+    label: "Treasury Series"
+  - slug: "crossconversion-series"
+    label: "CrossConversion Series"
+  - slug: "spv"
+    label: "SPV"
+shortDesc: "Wyoming's legally-recognized DAO structure combined with Series LLC capability — each Sails.to offering gets its own isolated series with separate assets, liabilities, and governance."
+linkLabel: "Wyoming DAO LLC"
 ---
 
-<header class="term-page-header">
-    <div class="container">
-        <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
-        <span class="term-category">Legal</span>
-        <h1 class="term-title">Wyoming DAO Series LLC</h1>
-        <p class="term-short">Wyoming's legally-recognized DAO structure combined with Series LLC capability — each Sails.to offering gets its own isolated series with separate assets, liabilities, and governance.</p>
-    </div>
-</header>
-<main class="term-content">
-    <div class="term-content-inner">
-        <section class="term-section">
-            <h2>Full Definition</h2>
-            <p>Wyoming became the first US state to legally recognize DAOs as a distinct business entity type in 2021. Sails.to combines this with <strong>Series LLC</strong> structure, creating isolated compartments for each offering. This means:</p>
-            <ul>
-                <li><strong>Operating Series</strong> — Holds pledged assets, revenue streams, and operational agreements</li>
-                <li><strong>Treasury Series</strong> — Manages reserves, distribution pools, and investor funds</li>
-                <li><strong>CrossConversion Series</strong> — Handles the bridge between on-chain and Clearstream custody</li>
-            </ul>
-            <p>Each offering's series is legally isolated from every other offering on the platform. If one issuer defaults, other offerings are not affected.</p>
-        </section>
-        <section class="term-section">
-            <h2>Why It Matters</h2>
-            <p>The Wyoming DAO Series LLC is the legal foundation of Sails.to. By operating as a legal entity—not just code—we can sign contracts, hold assets, sue and be sued, and interact with the traditional financial system. Token holders have clear legal rights, not just cryptographic claims.</p>
-            <p>The Series structure provides bankruptcy-remote isolation without creating hundreds of separate companies. It's the best of both worlds: blockchain efficiency with legal certainty and investor protection.</p>
-        </section>
-        <section class="term-section">
-            <h2>Related Terms</h2>
-            <div class="related-terms">
-                <a href="/knowledge/glossary/series-llc/" class="related-term-link">Series LLC</a>
-                <a href="/knowledge/glossary/operating-series/" class="related-term-link">Operating Series</a>
-                <a href="/knowledge/glossary/treasury-series/" class="related-term-link">Treasury Series</a>
-                <a href="/knowledge/glossary/crossconversion-series/" class="related-term-link">CrossConversion Series</a>
-                <a href="/knowledge/glossary/spv/" class="related-term-link">SPV</a>
-            </div>
-        </section>
-        <div class="term-cta">
-            <h3>Launch with legal clarity</h3>
-            <p>Every Sails.to offering benefits from Wyoming DAO Series LLC structure.</p>
-        </div>
-    </div>
-</main>
-<script src="/assets/js/glossary.js"></script>
-
+<section class="term-section">
+    <h2>Full Definition</h2>
+    <p>Wyoming became the first US state to legally recognize DAOs as a distinct business entity type in 2021. Sails.to combines this with <strong>Series LLC</strong> structure, creating isolated compartments for each offering. This means:</p>
+    <ul>
+        <li><strong>Operating Series</strong> — Holds pledged assets, revenue streams, and operational agreements</li>
+        <li><strong>Treasury Series</strong> — Manages reserves, distribution pools, and investor funds</li>
+        <li><strong>CrossConversion Series</strong> — Handles the bridge between on-chain and Clearstream custody</li>
+    </ul>
+    <p>Each offering's series is legally isolated from every other offering on the platform. If one issuer defaults, other offerings are not affected.</p>
+</section>
+<section class="term-section">
+    <h2>Why It Matters</h2>
+    <p>The Wyoming DAO Series LLC is the legal foundation of Sails.to. By operating as a legal entity—not just code—we can sign contracts, hold assets, sue and be sued, and interact with the traditional financial system. Token holders have clear legal rights, not just cryptographic claims.</p>
+    <p>The Series structure provides bankruptcy-remote isolation without creating hundreds of separate companies. It's the best of both worlds: blockchain efficiency with legal certainty and investor protection.</p>
+</section>

@@ -13,44 +13,27 @@ category: "finance"
 tags:
   - "issuance"
 relatedTerms:
-  - "escrow"
-  - "hard-cap"
-  - "security-token"
+  - slug: "hard-cap"
+    label: "Hard Cap"
+  - slug: "escrow"
+    label: "Escrow"
+  - slug: "security-token"
+    label: "Security Token"
+shortDesc: "The minimum funding threshold an offering must reach for the capital raise to proceed."
+ctaTitle: "Launch your offering with confidence"
+ctaText: "Set your funding parameters and start raising capital on Sails.to."
+ctaLabel: "Learn About Issuing"
+ctaLink: "/issuers/"
+linkLabel: "Soft Cap"
 ---
 
-<header class="term-page-header">
-    <div class="container">
-        <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
-        <span class="term-category">Finance</span>
-        <h1 class="term-title">Soft Cap</h1>
-        <p class="term-short">The minimum funding threshold an offering must reach for the capital raise to proceed.</p>
-    </div>
-</header>
-<main class="term-content">
-    <div class="term-content-inner">
-        <section class="term-section">
-            <h2>Full Definition</h2>
-            <p>A <strong>soft cap</strong> is the minimum amount of capital an issuer must raise for a securities offering to be considered successful. If the soft cap is not reached by the offering deadline, the raise is typically cancelled and all investor funds are returned in full.</p>
-            <p>The soft cap represents the minimum viable funding level that allows the issuer to execute their business plan. It's a protective mechanism for both issuers (ensuring they have enough capital to proceed) and investors (guaranteeing their funds won't be deployed into an underfunded venture).</p>
-        </section>
-        <section class="term-section">
-            <h2>Why It Matters</h2>
-            <p>On Sails.to, tokens are minted upfront and distributed to investors at subscription — but during the soft cap phase, they function as non-transferable zero-coupon bonds with funds held in escrow. This protects investors: if the soft cap isn't reached, the security redeems at par and the full principal is returned. Once the soft cap is reached, the token's permissions upgrade to a full, transferable security and the offering continues accepting investments up to the <a href="/knowledge/glossary/hard-cap/">hard cap</a>.</p>
-            <p>For issuers, setting an appropriate soft cap signals confidence and ensures you only proceed when you have the resources to deliver on your commitments.</p>
-        </section>
-        <section class="term-section">
-            <h2>Related Terms</h2>
-            <div class="related-terms">
-                <a href="/knowledge/glossary/hard-cap/" class="related-term-link">Hard Cap</a>
-                <a href="/knowledge/glossary/escrow/" class="related-term-link">Escrow</a>
-                <a href="/knowledge/glossary/security-token/" class="related-term-link">Security Token</a>
-            </div>
-        </section>
-        <div class="term-cta">
-            <h3>Launch your offering with confidence</h3>
-            <p>Set your funding parameters and start raising capital on Sails.to.</p>
-            <a href="/issuers/" class="btn">Learn About Issuing</a>
-        </div>
-    </div>
-</main>
-<script src="/assets/js/glossary.js"></script>
+<section class="term-section">
+    <h2>Full Definition</h2>
+    <p>A <strong>soft cap</strong> is the minimum amount of capital an issuer must raise for a securities offering to be considered successful. If the soft cap is not reached by the offering deadline, the raise is typically cancelled and all investor funds are returned in full.</p>
+    <p>The soft cap represents the minimum viable funding level that allows the issuer to execute their business plan. It's a protective mechanism for both issuers (ensuring they have enough capital to proceed) and investors (guaranteeing their funds won't be deployed into an underfunded venture).</p>
+</section>
+<section class="term-section">
+    <h2>Why It Matters</h2>
+    <p>On Sails.to, tokens are minted upfront and distributed to investors at subscription — but during the soft cap phase, they function as non-transferable zero-coupon bonds with funds held in escrow. This protects investors: if the soft cap isn't reached, the security redeems at par and the full principal is returned. Once the soft cap is reached, the token's permissions upgrade to a full, transferable security and the offering continues accepting investments up to the <a href="/knowledge/glossary/hard-cap/">hard cap</a>.</p>
+    <p>For issuers, setting an appropriate soft cap signals confidence and ensures you only proceed when you have the resources to deliver on your commitments.</p>
+</section>

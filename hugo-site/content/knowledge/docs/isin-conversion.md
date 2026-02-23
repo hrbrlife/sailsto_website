@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "CrossConversion is the bridge — lock Solana tokens, issue bankable ISIN securities via Clearstream, and back again. One invariant. Zero exceptions."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">ISIN Conversion</h1>
-    <p class="section-desc">CrossConversion is the bridge — lock Solana tokens, issue bankable ISIN securities via Clearstream, and back again. One invariant. Zero exceptions.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Overview</h2>
+<h2>Overview</h2>
         <p><span class="glossary-term" data-term="crossconversion">CrossConversion</span> is the mechanism that makes <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> hybrid. It is the bridge between two worlds: <a href="/knowledge/glossary/solana/">Solana</a> tokens that live on-chain and <span class="glossary-term" data-term="isin">ISIN</span>-identified securities held in traditional financial infrastructure at <span class="glossary-term" data-term="clearstream">Clearstream</span>.</p>
         <p>Two directions, one invariant:</p>
         <ul>
@@ -264,4 +256,3 @@ draft: false
             <li><a href="/knowledge/docs/api-reference/">API Reference</a> — Cap'n Proto schemas for programmatic access to CrossConversion operations</li>
         </ul>
     </div>
-</section>

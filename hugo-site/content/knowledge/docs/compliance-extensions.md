@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "The Transfer Hook enforces the rules. Everything on this page extends those rules into credential lifecycle, emergency powers, jurisdictional adaptability, and regulatory reporting."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Compliance Extensions</h1>
-    <p class="section-desc">The Transfer Hook enforces the rules. Everything on this page extends those rules into credential lifecycle, emergency powers, jurisdictional adaptability, and regulatory reporting.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Overview</h2>
+<h2>Overview</h2>
         <p>The SPL-2022 <span class="glossary-term" data-term="transfer-hook">Transfer Hook</span> is the enforcement core — five checks, executed by the <a href="/knowledge/glossary/solana/">Solana</a> runtime on every transfer, with no bypass path. But compliance for regulated securities does not end at transfers. Credentials expire. Regulators issue subpoenas. Courts order seizures. Jurisdictions change their rules. Tax authorities demand filings.</p>
         <p>Compliance extensions are the mechanisms that handle everything the Transfer Hook does not: the lifecycle of <span class="glossary-term" data-term="kyc">KYC</span> credentials between transfers, the emergency powers that override normal operations under legal authority, the feature flags that let issuers adapt offering behavior without redeploying contracts, the jurisdictional rules that vary across regulatory regimes, and the reporting grain that turns on-chain state into regulatory filings.</p>
         <p>None of these extensions weaken the Transfer Hook. They extend the compliance surface around it — covering the full regulatory lifecycle from credential issuance through investor exit and tax reporting.</p>
@@ -310,4 +302,3 @@ if config.features & PAUSE_TRADING != 0 {
         <p>The compliance-grain supports full audit trail export in standard formats for external auditors, regulators, and legal counsel. Exports can be filtered by offering, date range, severity, category, and actor. The export includes cryptographic integrity proofs — an auditor can verify that no events have been tampered with or omitted from the export.</p>
         <p>Grain journals support deterministic replay: given the same sequence of audit events, the grain reconstructs identical state. This is the disaster recovery mechanism — restore the journal, replay the events, verify the state. The log is the truth.</p>
     </div>
-</section>

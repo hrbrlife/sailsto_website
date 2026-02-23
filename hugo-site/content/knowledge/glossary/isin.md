@@ -13,48 +13,30 @@ category: "finance"
 tags:
   - "tradfi"
 relatedTerms:
-  - "clearstream"
-  - "crossconversion"
-  - "crosssecurities"
-  - "custody"
-  - "security-token"
+  - slug: "crosssecurities"
+    label: "CrossSecurities"
+  - slug: "crossconversion"
+    label: "CrossConversion"
+  - slug: "clearstream"
+    label: "Clearstream"
+  - slug: "custody"
+    label: "Custody"
+  - slug: "security-token"
+    label: "Security Token"
+termTitle: "ISIN"
+ctaTitle: "Cross to bankable form"
+ctaText: "Get an ISIN for your CrossSecurities and unlock institutional custody."
+ctaLabel: "Learn More"
+ctaLink: "/signup/?type=issuer"
+linkLabel: "ISIN"
 ---
 
-<header class="term-page-header">
-    <div class="container">
-        <a href="/knowledge/glossary/" class="back-link">← Back to Glossary</a>
-        <span class="term-category">Finance</span>
-        <h1 class="term-title">ISIN</h1>
-        <p class="term-short">A 12-character alphanumeric code that uniquely identifies a security globally, enabling it to be held in traditional bank custody systems.</p>
-    </div>
-</header>
-<main class="term-content">
-    <div class="term-content-inner">
-        <section class="term-section">
-            <h2>Full Definition</h2>
-            <p>The International Securities Identification Number is the global standard for identifying securities, administered by national numbering agencies. When a CrossSecurity receives an ISIN, it can be recognized by traditional financial infrastructure including custodian banks, clearinghouses, and securities depositories. This enables investors to hold CrossSecurities in bankable form in their existing brokerage accounts.</p>
-        </section>
-        <section class="term-section">
-            <h2>Why It Matters</h2>
-            <p>An ISIN is the key that unlocks institutional adoption. Without it, security tokens exist only in the on-chain world. With an ISIN, your <a href="/knowledge/glossary/crosssecurities/">CrossSecurities</a> can be held by <a href="/knowledge/glossary/clearstream/">Clearstream</a>, custodied by traditional banks, and appear in standard portfolio reports.</p>
-            <p>Sails.to's <a href="/knowledge/glossary/crossconversion/">CrossConversion</a> makes ISIN conversion seamless. For approximately $4K and about one week of processing, any CrossSecurity on our platform can receive its own ISIN—instantly bridging on-chain innovation with bankable infrastructure.</p>
-        </section>
-        <section class="term-section">
-            <h2>Related Terms</h2>
-            <div class="related-terms">
-                <a href="/knowledge/glossary/crosssecurities/" class="related-term-link">CrossSecurities</a>
-                <a href="/knowledge/glossary/crossconversion/" class="related-term-link">CrossConversion</a>
-                <a href="/knowledge/glossary/clearstream/" class="related-term-link">Clearstream</a>
-                <a href="/knowledge/glossary/custody/" class="related-term-link">Custody</a>
-                <a href="/knowledge/glossary/security-token/" class="related-term-link">Security Token</a>
-            </div>
-        </section>
-        <div class="term-cta">
-            <h3>Cross to bankable form</h3>
-            <p>Get an ISIN for your CrossSecurities and unlock institutional custody.</p>
-            <a href="/signup/?type=issuer" class="btn">Learn More</a>
-        </div>
-    </div>
-</main>
-<script src="/assets/js/glossary.js"></script>
-
+<section class="term-section">
+    <h2>Full Definition</h2>
+    <p>The International Securities Identification Number is the global standard for identifying securities, administered by national numbering agencies. When a CrossSecurity receives an ISIN, it can be recognized by traditional financial infrastructure including custodian banks, clearinghouses, and securities depositories. This enables investors to hold CrossSecurities in bankable form in their existing brokerage accounts.</p>
+</section>
+<section class="term-section">
+    <h2>Why It Matters</h2>
+    <p>An ISIN is the key that unlocks institutional adoption. Without it, security tokens exist only in the on-chain world. With an ISIN, your <a href="/knowledge/glossary/crosssecurities/">CrossSecurities</a> can be held by <a href="/knowledge/glossary/clearstream/">Clearstream</a>, custodied by traditional banks, and appear in standard portfolio reports.</p>
+    <p>Sails.to's <a href="/knowledge/glossary/crossconversion/">CrossConversion</a> makes ISIN conversion seamless. For approximately $4K and about one week of processing, any CrossSecurity on our platform can receive its own ISIN—instantly bridging on-chain innovation with bankable infrastructure.</p>
+</section>

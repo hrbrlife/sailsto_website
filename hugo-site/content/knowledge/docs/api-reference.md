@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "Everything the platform exposes — REST endpoints for web clients, Cap'n Proto interfaces for grain-native callers, and the authentication model that gates every request."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">API Reference</h1>
-    <p class="section-desc">Everything the platform exposes — REST endpoints for web clients, Cap'n Proto interfaces for grain-native callers, and the authentication model that gates every request.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Overview</h2>
+<h2>Overview</h2>
         <p>The Sails.to API lives at <code>api.sails.to</code>. Every endpoint is authenticated via <a href="/knowledge/glossary/solana/">Solana</a> wallet signature and <span class="glossary-term" data-term="nft-hierarchy">NFT</span> role verification. There are no API keys, no OAuth tokens, no username/password flows. Your wallet <em>is</em> your identity. Your NFT <em>is</em> your authorization. The API simply verifies both and routes you to the correct <span class="glossary-term" data-term="grain">grain</span> capability.</p>
         <p>Two access paths exist. Web clients hit the REST gateway and receive JSON responses. Grain-native callers — other grains, the operator service, automated pipelines — use <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> RPC directly over <span class="glossary-term" data-term="powerbox">Powerbox</span> capabilities, with zero-copy serialization and no HTTP overhead. Both paths enforce the same authentication and compliance checks.</p>
         <pre><code>┌──────────────┐     REST/JSON      ┌──────────────────┐
@@ -267,4 +259,3 @@ draft: false
         <p>When a rate limit is hit, the API returns a <code>429</code> with a <code>Retry-After</code> header indicating the number of seconds to wait. Burst allowance permits short spikes above the per-minute rate — useful for Broker batch placements or Investor portfolio refreshes — but sustained traffic above the limit will be throttled.</p>
         <p>Cap'n Proto RPC calls between grains are <strong>not</strong> subject to these rate limits. Rate limiting applies only to the REST gateway. Grain-to-grain calls are governed by Powerbox capability grants — if you hold the capability, you can call it. The Sandstorm runtime handles backpressure at the OS level.</p>
     </div>
-</section>

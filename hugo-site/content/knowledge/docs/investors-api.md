@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "One grain per investor — portfolio, distributions, trading, tax documents, and governance in a single sandboxed process."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Investors API</h1>
-    <p class="section-desc">One grain per investor — portfolio, distributions, trading, tax documents, and governance in a single sandboxed process.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Overview</h2>
+<h2>Overview</h2>
         <p>The Investor Self-Service <span class="glossary-term" data-term="grain">Grain</span> is an Instance-type grain — one per investor, provisioned automatically when an investor signs up on the platform. It is the investor's personal dashboard, API surface, and data store, implemented in Go+HTMX as a native <span class="glossary-term" data-term="sandstorm">Sandstorm</span> grain. Every piece of investor-specific state — portfolio positions, distribution history, trade listings, wallet connections — lives inside this grain's encrypted journal. No shared database, no centralized user table, no way for one investor's grain to read another investor's data.</p>
         <p>The grain does not hold tokens or execute on-chain transactions directly. It aggregates data from <span class="glossary-term" data-term="offering">Offering Grains</span> via <span class="glossary-term" data-term="powerbox">Powerbox</span> capabilities, surfaces it through an HTMX-rendered UI and a JSON API, and delegates on-chain operations to the appropriate programs. When an investor claims a distribution, the grain submits the <code>claim_distribution</code> instruction to the <code>sails_distributions</code> program. When an investor requests a <span class="glossary-term" data-term="crossconversion">CrossConversion</span>, the grain calls the <code>requestCrossConversion</code> method on the Offering Grain's <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> interface. The grain is the coordinator — the blockchain is the settlement layer.</p>
         <p>The Investors API is exposed through the platform's API gateway at <code>api.sails.to</code>. Authentication uses <a href="/knowledge/docs/authentication/">Solana wallet signature</a> — the investor signs a challenge with their wallet, and the gateway verifies the signature before routing requests to the investor's grain. All endpoints return JSON.</p>
@@ -322,4 +314,3 @@ Broker Grain ──(BrokerAPI capability)──► Investor Grain
         <h3>Governance Participation</h3>
         <p>For offerings with DAO governance enabled, the Investor Grain receives a <code>GovernanceAPI</code> capability from the DAO Manager Grain. This capability allows the investor to view active proposals, cast votes weighted by their token holdings, and view voting results. The Investor Grain calls <code>vote</code> on the GovernanceAPI interface, which records the vote on-chain and updates the proposal's tally. Voting weight is determined by the investor's token balance at a governance snapshot slot — the same snapshot mechanism used for distribution calculations.</p>
     </div>
-</section>

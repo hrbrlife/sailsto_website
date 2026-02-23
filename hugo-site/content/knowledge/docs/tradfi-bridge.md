@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "The complete integration layer between on-chain Solana tokens and the traditional financial system — event routing, settlement, regulatory filing, and operational monitoring."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">TradFi Bridge</h1>
-    <p class="section-desc">The complete integration layer between on-chain Solana tokens and the traditional financial system — event routing, settlement, regulatory filing, and operational monitoring.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Overview</h2>
+<h2>Overview</h2>
         <p>The <span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span> is not a single service. It is the entire integration layer that connects the on-chain world of <a href="/knowledge/glossary/solana/">Solana</a> programs and <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> to the traditional financial system — <span class="glossary-term" data-term="clearstream">Clearstream</span> settlement, SWIFT messaging, SEC regulatory filings, investor notifications, and revenue distribution. Every service that touches an external system or translates between on-chain events and off-chain actions lives here.</p>
         <p>The bridge is composed of five cooperating services, each running as a <span class="glossary-term" data-term="grain">grain</span> or sidecar within the Sandstorm/Melusina OS environment:</p>
         <table>
@@ -497,4 +489,3 @@ transfer_completed     = "broker-grain"</code></pre>
             <li><a href="/knowledge/docs/platform-overview/">Platform Overview</a> — The three-pillar architecture and grain types</li>
         </ul>
     </div>
-</section>

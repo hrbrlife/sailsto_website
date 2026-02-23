@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "The CrossConversion Engine — bridging on-chain tokens to bankable securities with mathematical certainty."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Hybrid Architecture</h1>
-    <p class="section-desc">The CrossConversion Engine — bridging on-chain tokens to bankable securities with mathematical certainty.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>The Hybrid Model</h2>
+<h2>The Hybrid Model</h2>
         <p><span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> are not purely on-chain. They are not purely traditional. They exist in both worlds simultaneously — and the <span class="glossary-term" data-term="crossconversion">CrossConversion</span> Engine is the mechanism that makes this possible.</p>
         <p>The premise is absolute: an investor holding Sails <span class="glossary-term" data-term="security-token">security tokens</span> on <a href="/knowledge/glossary/solana/">Solana</a> can convert them to <span class="glossary-term" data-term="bankable">bankable</span>, <span class="glossary-term" data-term="isin">ISIN</span>-identified securities held at <span class="glossary-term" data-term="clearstream">Clearstream</span> — and back again. At any time. With full regulatory compliance. Without losing a single unit of value.</p>
         <p>Two directions, one invariant:</p>
@@ -127,4 +119,3 @@ draft: false
         </table>
         <p>The <span class="glossary-term" data-term="tradfi-bridge">TradFi bridge</span> adapter service (Go, running as a grain or sidecar) handles all message generation, submission, and response parsing. It translates between the Sails.to <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> schema and the SWIFT/ISO messaging formats — ensuring that every CrossConversion is expressed in the language that traditional financial infrastructure expects and trusts.</p>
     </div>
-</section>

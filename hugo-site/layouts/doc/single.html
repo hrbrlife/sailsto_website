@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="page-hero">
+    <span class="section-label">Documentation</span>
+    <h1 class="section-title">{{ .Title | replaceRE " - Documentation$" "" }}</h1>
+    <p class="section-desc">{{ .Params.heroDesc | safeHTML }}</p>
+</section>
+
+<section class="features-section">
+    <div class="container">
+        {{ .Content }}
+</section>
+{{ end }}

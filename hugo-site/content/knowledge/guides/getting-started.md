@@ -1,5 +1,6 @@
 ---
 title: "Getting Started with Sails.to"
+type: "guide"
 description: "Step-by-step guide to getting started on Sails.to—for issuers launching tokenized offerings, investors accessing opportunities."
 ogImage: "/og-image.png"
 keywords: ["getting", "started", "sails", "step-by-step", "guide", "issuers", "launching", "tokenized"]
@@ -10,19 +11,9 @@ stylesheets:
   - "/assets/css/guides.css"
 scripts:
   - "/js/knowledge-guides-getting-started.js"
+guideMeta: "Complete onboarding guide for issuers, investors, and brokers"
 ---
-
-<header class="guide-header">
-    <div class="container">
-        <a href="/knowledge/" class="back-link">← Back to Knowledge Base</a>
-        <span class="guide-badge">Guide</span>
-        <h1 class="guide-title">Getting Started with Sails.to</h1>
-        <p class="guide-meta">Complete onboarding guide for issuers, investors, and brokers</p>
-    </div>
-</header>
-<main class="guide-content">
-    <div class="guide-container">
-        <nav class="guide-nav">
+<nav class="guide-nav">
             <h4>In This Guide</h4>
             <ul>
                 <li><a href="#overview">Platform Overview</a></li>
@@ -259,6 +250,3 @@ scripts:
             <a href="/signup/" class="btn">Create Account</a>
         </div>
     </div>
-</main>
-<script src="/assets/js/glossary.js"></script>
-

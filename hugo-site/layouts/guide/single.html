@@ -1,0 +1,14 @@
+{{ define "main" }}
+<header class="guide-header">
+    <div class="container">
+        <a href="{{ "knowledge/" | relURL }}" class="back-link">← Back to Knowledge Base</a>
+        <span class="guide-badge">Guide</span>
+        <h1 class="guide-title">{{ .Title }}</h1>
+        <p class="guide-meta">{{ .Params.guideMeta }}</p>
+    </div>
+</header>
+<main class="guide-content">
+    <div class="guide-container">
+        {{ .Content }}
+</main>
+{{ end }}

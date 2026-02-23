@@ -1,5 +1,6 @@
 ---
 title: "Wyoming DAO LLC Explained"
+type: "guide"
 description: "Understanding Wyoming DAO LLC and Series LLC structures—how they provide legal clarity for tokenized securities and protect both issuers and investors."
 ogImage: "/og-image.png"
 keywords: ["wyoming", "dao", "llc", "explained", "understanding", "series", "structures", "provide"]
@@ -10,19 +11,9 @@ stylesheets:
   - "/assets/css/guides.css"
 scripts:
   - "/js/knowledge-guides-wyoming-dao-explained.js"
+guideMeta: "Understanding the legal structure behind compliant tokenized securities"
 ---
-
-<header class="guide-header">
-    <div class="container">
-        <a href="/knowledge/" class="back-link">← Back to Knowledge Base</a>
-        <span class="guide-badge">Guide</span>
-        <h1 class="guide-title">Wyoming DAO LLC Explained</h1>
-        <p class="guide-meta">Understanding the legal structure behind compliant tokenized securities</p>
-    </div>
-</header>
-<main class="guide-content">
-    <div class="guide-container">
-        <nav class="guide-nav">
+<nav class="guide-nav">
             <h4>In This Guide</h4>
             <ul>
                 <li><a href="#what-is">What Is a Wyoming DAO LLC?</a></li>
@@ -283,6 +274,3 @@ scripts:
             <a href="/signup/?type=issuer" class="btn">Start Issuing</a>
         </div>
     </div>
-</main>
-<script src="/assets/js/glossary.js"></script>
-

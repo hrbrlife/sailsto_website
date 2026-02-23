@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "The sails_securities program — security tokens with compliance enforcement at the protocol level."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Token Standard</h1>
-    <p class="section-desc">The sails_securities program — security tokens with compliance enforcement at the protocol level.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Program Overview</h2>
+<h2>Program Overview</h2>
         <p>The <code>sails_securities</code> program is an <a href="/knowledge/glossary/solana/">Solana</a> Anchor program purpose-built for regulated securities issuance. It extends the <span class="glossary-term" data-term="melusina">Melusina</span> NFT authority pattern with securities-specific logic: offering lifecycle management, compliance-gated minting, <span class="glossary-term" data-term="crossconversion">CrossConversion</span> lockbox integration, distribution waterfall execution, and transfer enforcement via SPL-2022 <span class="glossary-term" data-term="transfer-hook">Transfer Hook</span>.</p>
         <p>This is not a general-purpose token program. Every instruction assumes a regulated context. Every account structure encodes compliance constraints. Every event is designed for audit trail consumption. The program will reject any operation that violates its compliance rules — there is no admin override that bypasses the Transfer Hook, no backdoor for unverified wallets, no way to mint tokens to an investor without a valid <span class="glossary-term" data-term="kyc">KYC</span> credential.</p>
         <h2>Instructions</h2>
@@ -172,4 +164,3 @@ draft: false
         </ul>
         <p>The result: a <span class="glossary-term" data-term="security-token">security token</span> that carries its compliance rules with it. Not in documentation. Not in terms of service. In the program code that the <a href="/knowledge/glossary/solana/">Solana</a> runtime executes on every transfer. This is what "compliance as code" actually means.</p>
     </div>
-</section>

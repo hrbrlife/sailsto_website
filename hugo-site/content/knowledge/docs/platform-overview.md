@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "The three-pillar architecture that brings regulated securities on-chain — without compromise."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Platform Overview</h1>
-    <p class="section-desc">The three-pillar architecture that brings regulated securities on-chain — without compromise.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Architecture Overview</h2>
+<h2>Architecture Overview</h2>
         <p>Sails.to is not a monolith. It is not a microservices cluster. It is a <strong>capability-secured grain architecture</strong> — every component isolated at the OS level, every interaction mediated by cryptographic authority, every byte of investor data sovereign to its owner. This is what regulated infrastructure demands, and this is what we built.</p>
         <p>The platform rests on three pillars, each independently auditable, each doing exactly one job with absolute fidelity:</p>
         <pre><code>┌─────────────────────────────────────────────────────┐
@@ -142,4 +134,3 @@ draft: false
         <p>Every grain runs Go compiled to a native binary. No HTTP bridge — <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> on file descriptor 3 (FD3) directly. The Go binary implements <code>UiView</code> and <code>WebSession</code> natively. HTMX delivers server-rendered HTML fragments — no SPA, no client-side routing, no JavaScript framework. Journal-based storage gives every grain an append-only log with deterministic replay. WebSocket connections flow through Cap'n Proto's <code>WebSession_WebSocketStream</code> for real-time updates.</p>
         <p>This is the stack. It is simple. It is fast. It is correct. And it will outlast every framework that ships between now and when you read this.</p>
     </div>
-</section>

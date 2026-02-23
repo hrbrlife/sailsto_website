@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "The international central securities depository that provides the bankable side of CrossSecurities — where ISIN-identified securities live in traditional finance."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Clearstream Integration</h1>
-    <p class="section-desc">The international central securities depository that provides the bankable side of CrossSecurities — where ISIN-identified securities live in traditional finance.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Overview</h2>
+<h2>Overview</h2>
         <p><span class="glossary-term" data-term="clearstream">Clearstream</span> is the international central securities depository (ICSD) that makes <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> hybrid. When an investor converts on-chain tokens to <span class="glossary-term" data-term="bankable">bankable</span> format via <span class="glossary-term" data-term="crossconversion">CrossConversion</span>, the resulting <span class="glossary-term" data-term="isin">ISIN</span>-identified securities are held in custody at Clearstream — visible through standard brokerage infrastructure, settleable through established financial rails, and recognizable by every institution in traditional finance.</p>
         <p>The integration is not a wrapper or an abstraction. It is a direct, bidirectional connection between the Sails.to platform and Clearstream's settlement infrastructure. Tokens locked in the on-chain lockbox have a 1:1 corresponding ISIN position at Clearstream. The <a href="/knowledge/docs/isin-conversion/">CrossConversion Engine</a> enforces this invariant. The Clearstream Adapter is the service that makes it operationally real.</p>
         <p>Lead time for onboarding: <strong>4–8 weeks</strong> from application to production API access. This must be initiated early — Clearstream account setup and API credential provisioning cannot be parallelized with other integration work.</p>
@@ -411,4 +403,3 @@ verify_sig     = true                # Validate Clearstream webhook signatures</
             <li><a href="/knowledge/docs/api-reference/">API Reference</a> — Cap'n Proto schemas for programmatic access</li>
         </ul>
     </div>
-</section>

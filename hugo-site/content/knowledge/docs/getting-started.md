@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "From signup to your first action on the platform — everything you need to get moving with regulated tokenized securities."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Getting Started</h1>
-    <p class="section-desc">From signup to your first action on the platform — everything you need to get moving with regulated tokenized securities.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Welcome to Sails.to</h2>
+<h2>Welcome to Sails.to</h2>
         <p>Sails.to is a regulated platform for tokenized securities issuance, compliance, and broker-mediated secondary trading. It is built as a <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO Series LLC</span> — a legal structure purpose-built for on-chain governance of real-world assets. Every offering is a Series. Every participant is cryptographically credentialed. Every action is compliant by default.</p>
         <p>This guide walks you through your first minutes on the platform: choosing your role, completing identity verification, and taking your first action. If you want the full architectural picture first, start with the <a href="/knowledge/docs/platform-overview/">Platform Overview</a>.</p>
         <h3>What You Need</h3>
@@ -161,4 +153,3 @@ draft: false
             <li><a href="/knowledge/docs/api-reference/">API Reference</a> — <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> schemas and programmatic access</li>
         </ul>
     </div>
-</section>

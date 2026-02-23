@@ -8,18 +8,10 @@ stylesheets:
   - "/styles.css"
   - "/assets/css/glossary.css"
   - "/assets/css/docs.css"
+heroDesc: "The cap table is not a spreadsheet — it's the live state of on-chain PDAs, read and exposed by the Offering Grain."
 draft: false
 ---
-
-<section class="page-hero">
-    <span class="section-label">Documentation</span>
-    <h1 class="section-title">Cap Table API</h1>
-    <p class="section-desc">The cap table is not a spreadsheet — it's the live state of on-chain PDAs, read and exposed by the Offering Grain.</p>
-</section>
-
-<section class="features-section">
-    <div class="container">
-        <h2>Overview</h2>
+<h2>Overview</h2>
         <p>The cap table on Sails.to is not a spreadsheet. It is the live state of the <span class="glossary-term" data-term="pda">InvestorPosition PDAs</span> on <a href="/knowledge/glossary/solana/">Solana</a>. There is no separate database of ownership records, no CSV export that becomes stale the moment it is generated, no reconciliation step between "the cap table" and "the ledger." They are the same thing. The blockchain <em>is</em> the cap table.</p>
         <p>The <span class="glossary-term" data-term="offering">Offering</span> <span class="glossary-term" data-term="grain">Grain</span> reads this <span class="glossary-term" data-term="on-chain">on-chain</span> state and exposes it through the <code>getCapTable</code> method on its <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> OfferingAPI interface. Every query returns the current state of the ledger — not a cached copy, not a periodic sync, but the actual on-chain data at the moment of the request. When a token is minted, transferred, locked in a <span class="glossary-term" data-term="crossconversion">CrossConversion</span> lockbox, or frozen by a compliance action, the cap table reflects that change immediately because the cap table <em>is</em> that change.</p>
         <p>This design eliminates an entire class of operational risk that plagues traditional cap table management: the drift between what the spreadsheet says and what actually happened. On Sails.to, ownership is on-chain, queries are against on-chain state, and every position is independently verifiable by anyone with a <a href="/knowledge/glossary/solana/">Solana</a> RPC endpoint.</p>
@@ -374,4 +366,3 @@ Investor Wallet ──► API Gateway ──► Investor Grain
                               Own InvestorPosition only</code></pre>
         <p>The on-chain data itself is publicly readable — anyone with a <a href="/knowledge/glossary/solana/">Solana</a> RPC endpoint can read any PDA. The access control layer governs what the <em>platform API</em> exposes, not what the blockchain stores. This is intentional: the cap table's verifiability guarantee depends on the data being publicly auditable on-chain, while the API layer provides role-appropriate views for operational use.</p>
     </div>
-</section>
