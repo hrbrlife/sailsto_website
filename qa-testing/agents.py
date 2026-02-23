@@ -3,6 +3,10 @@ Expert agent definitions — each agent loads its dogma document as the system p
 All powered by Pydantic AI + OpenRouter, 4-tier model routing:
   Opus 4 (council + legal) → Sonnet 4 (editorial/principles/conversion) →
   Gemini 2.5 Pro (consistency/seo) → Gemini 2.5 Flash (UX viewports).
+
+Supports per-site dogma directories:
+  dogma/melusina-os/legal.md, dogma/sails-to/legal.md, etc.
+  Falls back to dogma/legal.md if site-specific file doesn't exist.
 """
 
 from __future__ import annotations
@@ -12,7 +16,7 @@ from pathlib import Path
 
 from pydantic_ai import Agent
 
-from config import AGENT_MODELS, CONTEXT_DOCS
+from config import AGENT_MODELS, CONTEXT_DOCS, SITES
 from models import (
     LegalReport,
     ConsistencyReport,
@@ -29,26 +33,44 @@ from models import (
 DOGMA_DIR = Path(__file__).resolve().parent / "dogma"
 
 
-def _load_dogma(agent_key: str) -> str:
-    """Load the dogma document for an agent."""
+def _load_dogma(agent_key: str, site_name: str = "") -> str:
+    """Load the dogma document for an agent, preferring site-specific version."""
+    # Try site-specific dogma first
+    if site_name:
+        site_cfg = SITES.get(site_name, {})
+        dogma_subdir = site_cfg.get("dogma_dir", site_name)
+        site_path = DOGMA_DIR / dogma_subdir / f"{agent_key}.md"
+        if site_path.exists():
+            return site_path.read_text()
+
+    # Fall back to root dogma
     path = DOGMA_DIR / f"{agent_key}.md"
     if not path.exists():
         raise FileNotFoundError(f"Dogma file missing: {path}")
     return path.read_text()
 
 
-def _load_context_docs() -> str:
-    """Load grounding documents (REVIEW-PROMPT.md etc.)."""
+def _load_context_docs(site_name: str = "") -> str:
+    """Load grounding documents — per-site if available, else legacy fallback."""
+    # Try per-site context docs
+    doc_paths = []
+    if site_name and site_name in SITES:
+        doc_paths = SITES[site_name].get("context_docs", [])
+
+    # Legacy fallback
+    if not doc_paths:
+        doc_paths = CONTEXT_DOCS
+
     parts = []
-    for p in CONTEXT_DOCS:
+    for p in doc_paths:
         if p.exists():
-            parts.append(f"--- {p.name} ---\n{p.read_text()[:6000]}")
+            parts.append(f"--- {p.name} ---\n{p.read_text()[:8000]}")
     return "\n\n".join(parts) if parts else "(No context documents found)"
 
 
-def _build_system_prompt(agent_key: str, brand_context: str) -> str:
+def _build_system_prompt(agent_key: str, brand_context: str, site_name: str = "") -> str:
     """Combine dogma + brand context into a system prompt."""
-    dogma = _load_dogma(agent_key)
+    dogma = _load_dogma(agent_key, site_name)
     return f"{dogma}\n\n---\n\n## Brand & Product Context\n\n{brand_context}"
 
 
@@ -92,18 +114,18 @@ Load time: {item['load_time_ms']}ms | Words: {item['word_count']} | Links: {item
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-#  EXPERT AGENTS — lazy initialization (no API key needed at import time)
+#  EXPERT AGENTS — per-site initialization (no API key needed at import time)
 # ═══════════════════════════════════════════════════════════════════════════════
 
-_agents_cache: dict[str, Agent] = {}
+_agents_cache: dict[str, dict[str, Agent]] = {}  # site_name -> {agent_key -> Agent}
 
 
-def _get_agents() -> dict[str, Agent]:
-    """Create all agents on first call. Requires OPENROUTER_API_KEY."""
-    if _agents_cache:
-        return _agents_cache
+def _get_agents(site_name: str = "melusina-os") -> dict[str, Agent]:
+    """Create all agents for a site on first call. Requires OPENROUTER_API_KEY."""
+    if site_name in _agents_cache:
+        return _agents_cache[site_name]
 
-    BRAND_CONTEXT = _load_context_docs()
+    BRAND_CONTEXT = _load_context_docs(site_name)
 
     # Agent key → output type mapping
     agent_defs: list[tuple[str, type]] = [
@@ -118,23 +140,25 @@ def _get_agents() -> dict[str, Agent]:
         ("council",     CouncilReport),
     ]
 
+    site_agents = {}
     for key, output_type in agent_defs:
-        _agents_cache[key] = Agent(
+        site_agents[key] = Agent(
             model=AGENT_MODELS[key],
             output_type=output_type,
-            system_prompt=_build_system_prompt(key, BRAND_CONTEXT),
+            system_prompt=_build_system_prompt(key, BRAND_CONTEXT, site_name),
         )
 
-    return _agents_cache
+    _agents_cache[site_name] = site_agents
+    return site_agents
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
 #  RUNNER FUNCTIONS
 # ═══════════════════════════════════════════════════════════════════════════════
 
-async def run_expert(agent_key: str, crawl_data: list[dict], viewport_filter: str = "") -> ExpertReport:
+async def run_expert(agent_key: str, crawl_data: list[dict], viewport_filter: str = "", site_name: str = "melusina-os") -> ExpertReport:
     """Run a single expert agent against crawl data."""
-    agents = _get_agents()
+    agents = _get_agents(site_name)
     agent = agents[agent_key]
     formatted = _format_crawl_data(crawl_data, viewport_filter)
     prompt = f"Review the following website crawl data and produce your expert report:\n\n{formatted}"
@@ -144,7 +168,7 @@ async def run_expert(agent_key: str, crawl_data: list[dict], viewport_filter: st
 
 async def run_council(expert_reports: list[ExpertReport], site_name: str, run_date: str) -> CouncilReport:
     """Run the council agent to synthesize all expert reports."""
-    agents = _get_agents()
+    agents = _get_agents(site_name)
     reports_text = ""
     for report in expert_reports:
         reports_text += f"\n\n{'='*60}\n"

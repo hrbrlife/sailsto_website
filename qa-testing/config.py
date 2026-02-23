@@ -63,6 +63,61 @@ SITES = {
             "/en/terms",
             "/en/dmca",
         ],
+        "context_docs": [
+            ROOT.parent / "melusina-os" / "REVIEW-PROMPT.md",
+        ],
+        "dogma_dir": "melusina-os",
+    },
+    "sails-to": {
+        "base_url": os.environ.get("SAILSTO_BASE_URL", "http://localhost:4174"),
+        "pages": [
+            # ── Core / Landing ──
+            "/",
+            "/whatsails/",
+            "/compare/",
+            "/players/",
+            # ── Audience pages ──
+            "/brokers/",
+            "/investors/",
+            "/issuers/",
+            "/introducers/",
+            "/trustees/",
+            "/regulated/",
+            "/issuers-directory/",
+            # ── Product / Commercial ──
+            "/pricing/",
+            "/signup/",
+            "/compliance/",
+            "/security/",
+            "/oversight/",
+            # ── Company ──
+            "/company/about/",
+            "/company/contact/",
+            "/company/legal/",
+            # ── Knowledge Hub ──
+            "/knowledge/",
+            "/knowledge/faq/",
+            "/knowledge/roadmap/",
+            "/knowledge/blog/",
+            "/knowledge/docs/",
+            "/knowledge/glossary/",
+            # ── Key Docs (sample) ──
+            "/knowledge/docs/platform-overview/",
+            "/knowledge/docs/getting-started/",
+            "/knowledge/docs/hybrid-architecture/",
+            "/knowledge/docs/compliance-framework/",
+            # ── Key Guides (sample) ──
+            "/knowledge/guides/tokenization-101/",
+            "/knowledge/guides/wyoming-dao-explained/",
+            # ── Key Glossary (sample) ──
+            "/knowledge/glossary/crosssecurities/",
+            "/knowledge/glossary/crossconversion/",
+            "/knowledge/glossary/security-token/",
+        ],
+        "context_docs": [
+            ROOT / "SAILSTO-REVIEW-PROMPT.md",
+        ],
+        "dogma_dir": "sails-to",
     },
 }
 
@@ -77,6 +132,8 @@ PLAYWRIGHT_TIMEOUT = 30_000  # ms per page load
 SCREENSHOT_FULL_PAGE = True
 
 # ── Context document paths (fed to agents for grounding) ────────────────────
+# Per-site context docs are now in SITES[site]["context_docs"].
+# Legacy fallback for backward compatibility:
 CONTEXT_DOCS = [
     ROOT.parent / "melusina-os" / "REVIEW-PROMPT.md",
 ]

@@ -31,19 +31,19 @@ from agents import (
 from report_generator import save_report
 
 
-async def run_all_experts(crawl_data: list[dict]) -> list:
+async def run_all_experts(crawl_data: list[dict], site_name: str = "melusina-os") -> list:
     """Run all expert agents in parallel against crawl data."""
     print("\n🤖 Running expert panel...")
 
     tasks = [
-        ("Legal", run_expert("legal", crawl_data)),
-        ("Consistency", run_expert("consistency", crawl_data)),
-        ("Editorial", run_expert("editorial", crawl_data)),
-        ("Principles", run_expert("principles", crawl_data)),
-        ("Mobile UX", run_expert("mobile_ux", crawl_data, viewport_filter="mobile")),
-        ("Desktop UX", run_expert("desktop_ux", crawl_data, viewport_filter="desktop")),
-        ("SEO", run_expert("seo", crawl_data)),
-        ("Conversion", run_expert("conversion", crawl_data)),
+        ("Legal", run_expert("legal", crawl_data, site_name=site_name)),
+        ("Consistency", run_expert("consistency", crawl_data, site_name=site_name)),
+        ("Editorial", run_expert("editorial", crawl_data, site_name=site_name)),
+        ("Principles", run_expert("principles", crawl_data, site_name=site_name)),
+        ("Mobile UX", run_expert("mobile_ux", crawl_data, viewport_filter="mobile", site_name=site_name)),
+        ("Desktop UX", run_expert("desktop_ux", crawl_data, viewport_filter="desktop", site_name=site_name)),
+        ("SEO", run_expert("seo", crawl_data, site_name=site_name)),
+        ("Conversion", run_expert("conversion", crawl_data, site_name=site_name)),
     ]
 
     # Run all agents in parallel
@@ -107,7 +107,7 @@ async def main():
                 continue
 
         # ── Phase 2: Expert Agents ──
-        expert_reports = await run_all_experts(crawl_data)
+        expert_reports = await run_all_experts(crawl_data, site_name=site_name)
 
         if not expert_reports:
             print("  ❌ No expert reports generated. Check API key and model.")
