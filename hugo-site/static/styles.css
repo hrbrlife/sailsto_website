@@ -14,7 +14,6 @@
     --bg-dark:       #0F0F23;   /* cyber-midnight */
     --bg-dark-alt:   #1A1A3E;   /* deep indigo */
     --bg-card:       #FFFFFF;   /* pure white cards */
-    --bg-card-dark:  #14142B;   /* dark card panels */
     --bg-surface:    #F0F7FF;   /* light blue surface */
 
     /* TEXT */
@@ -33,13 +32,10 @@
     --neon-purple:   #7B68EE;   /* links / interactive */
     --neon-blue:     #4DA6FF;   /* info / secondary accent */
     --neon-yellow:   #FFD600;   /* warning / badges */
-    --neon-green:    #00E676;   /* live status */
     --neon-red:      #FF1744;   /* error / critical */
 
     /* LEGACY ALIASES (keep old var names working) */
-    --ivory:      var(--bg-primary);
     --cream:      var(--bg-alt);
-    --champagne:  var(--bg-alt);
     --navy:       var(--bg-dark);
     --gold:       var(--neon-orange);
     --crimson:    var(--neon-pink);
@@ -47,7 +43,6 @@
     /* BORDERS & SURFACES */
     --border:        rgba(10,10,42,0.10);
     --border-strong: rgba(10,10,42,0.20);
-    --border-neon:   var(--neon-orange);
     --glow-orange:   0 0 20px rgba(255,107,53,0.25);
     --glow-teal:     0 0 20px rgba(0,212,170,0.25);
     --glow-purple:   0 0 20px rgba(123,104,238,0.25);
@@ -60,7 +55,6 @@
 
     /* MOTION */
     --ease-out-expo:    cubic-bezier(0.16, 1, 0.3, 1);
-    --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
     --speed-fast:    150ms;
     --speed-normal:  300ms;
     --speed-slow:    500ms;
@@ -1724,4 +1718,24 @@ footer {
     .page-hero .section-title { font-size: clamp(2rem, 8vw, 2.8rem); }
     .stats-row { grid-template-columns: 1fr; }
     .global-card::before, .global-card::after { display: none; }
+}
+
+/* ── SHARED COMPONENTS ─────────────────────────────────────── */
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--neon-orange);
+    text-decoration: none;
+    margin-bottom: 24px;
+    transition: color var(--speed-fast) ease;
+}
+
+.back-link:hover {
+    color: var(--neon-pink);
 }

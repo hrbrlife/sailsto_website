@@ -46,6 +46,8 @@ echo ""
 echo "📦 Building Hugo site..."
 cd "$HUGO_DIR"
 hugo --gc --minify
+# Remove TinaCMS admin panel (dev-only, points at localhost:4001)
+rm -rf "$HUGO_DIR/public/admin"
 echo "✅ Hugo build complete"
 
 # Step 2: Copy built files to deploy repo
