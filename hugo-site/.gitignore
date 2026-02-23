@@ -1,0 +1,8 @@
+/public/
+/resources/_gen/
+.hugo_build.lock
+node_modules/
+
+# TinaCMS generated
+tina/__generated__/
+static/admin/
