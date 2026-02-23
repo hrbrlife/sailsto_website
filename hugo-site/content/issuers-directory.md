@@ -156,7 +156,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </div>
-    <span class="flip-hint">↻ Hover for details</span>
+    <span class="flip-hint">↻ Tap or hover for details</span>
 </div>
 </div>
 <div class="flip-card-back">
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </div>
-    <span class="flip-hint">↻ Hover for details</span>
+    <span class="flip-hint">↻ Tap or hover for details</span>
 </div>
 </div>
 <div class="flip-card-back">
@@ -326,7 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </div>
-    <span class="flip-hint">↻ Hover for details</span>
+    <span class="flip-hint">↻ Tap or hover for details</span>
 </div>
 </div>
 <div class="flip-card-back">
@@ -412,7 +412,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </div>
-    <span class="flip-hint">↻ Hover for details</span>
+    <span class="flip-hint">↻ Tap or hover for details</span>
 </div>
 </div>
 <div class="flip-card-back">
@@ -497,7 +497,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </div>
-    <span class="flip-hint">↻ Hover for details</span>
+    <span class="flip-hint">↻ Tap or hover for details</span>
 </div>
 </div>
 <div class="flip-card-back">
@@ -583,7 +583,7 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         </div>
     </div>
-    <span class="flip-hint">↻ Hover for details</span>
+    <span class="flip-hint">↻ Tap or hover for details</span>
 </div>
 </div>
 <div class="flip-card-back">

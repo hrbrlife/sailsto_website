@@ -17,6 +17,8 @@ from pathlib import Path
 from pydantic_ai import Agent
 
 from config import AGENT_MODELS, CONTEXT_DOCS, SITES
+from content_loader import SiteCorpus, format_source_for_prompt
+from qc_agents import QCReport
 from models import (
     LegalReport,
     ConsistencyReport,
@@ -64,14 +66,30 @@ def _load_context_docs(site_name: str = "") -> str:
     parts = []
     for p in doc_paths:
         if p.exists():
-            parts.append(f"--- {p.name} ---\n{p.read_text()[:8000]}")
+            parts.append(f"--- {p.name} ---\n{p.read_text()[:30000]}")
     return "\n\n".join(parts) if parts else "(No context documents found)"
 
 
-def _build_system_prompt(agent_key: str, brand_context: str, site_name: str = "") -> str:
-    """Combine dogma + brand context into a system prompt."""
+def _build_system_prompt(
+    agent_key: str,
+    brand_context: str,
+    site_name: str = "",
+    source_content: str = "",
+    qc_report_text: str = "",
+) -> str:
+    """Combine dogma + brand context + source content + QC findings into a system prompt."""
     dogma = _load_dogma(agent_key, site_name)
-    return f"{dogma}\n\n---\n\n## Brand & Product Context\n\n{brand_context}"
+    parts = [dogma, "\n\n---\n\n## Brand & Product Context\n\n", brand_context]
+
+    if qc_report_text:
+        parts.append("\n\n---\n\n")
+        parts.append(qc_report_text)
+
+    if source_content:
+        parts.append("\n\n---\n\n")
+        parts.append(source_content)
+
+    return "".join(parts)
 
 
 # ── Helper to build page data for prompts ────────────────────────────────────
@@ -107,7 +125,7 @@ Load time: {item['load_time_ms']}ms | Words: {item['word_count']} | Links: {item
 ### Screenshot: {item['screenshot_path']}
 
 ### Page Content (excerpt):
-{item['page_text'][:3000]}
+{item['page_text'][:6000]}
 """
         pages.append(page)
     return "\n---\n".join(pages)
@@ -120,12 +138,27 @@ Load time: {item['load_time_ms']}ms | Words: {item['word_count']} | Links: {item
 _agents_cache: dict[str, dict[str, Agent]] = {}  # site_name -> {agent_key -> Agent}
 
 
-def _get_agents(site_name: str = "melusina-os") -> dict[str, Agent]:
-    """Create all agents for a site on first call. Requires OPENROUTER_API_KEY."""
-    if site_name in _agents_cache:
-        return _agents_cache[site_name]
+def _get_agents(
+    site_name: str = "melusina-os",
+    source_content: str = "",
+    qc_report_text: str = "",
+) -> dict[str, Agent]:
+    """Create all agents for a site on first call. Requires OPENROUTER_API_KEY.
+
+    When source_content or qc_report_text change we invalidate the cache
+    so agents get the fresh system prompt.
+    """
+    # Build a cache key that includes whether we have source/QC data
+    cache_key = f"{site_name}|{bool(source_content)}|{bool(qc_report_text)}"
+    if cache_key in _agents_cache:
+        return _agents_cache[cache_key]
 
     BRAND_CONTEXT = _load_context_docs(site_name)
+
+    # Size control: source content per agent role
+    # Council + consistency + editorial + principles get full source
+    # Others get a truncated version to save tokens
+    FULL_SOURCE_AGENTS = {"council", "consistency", "editorial", "principles", "legal"}
 
     # Agent key → output type mapping
     agent_defs: list[tuple[str, type]] = [
@@ -142,13 +175,30 @@ def _get_agents(site_name: str = "melusina-os") -> dict[str, Agent]:
 
     site_agents = {}
     for key, output_type in agent_defs:
+        # Full source for content-heavy agents, truncated for others
+        if key in FULL_SOURCE_AGENTS:
+            agent_source = source_content
+        elif source_content:
+            # Give UX/SEO/conversion a shorter excerpt (first 60K chars)
+            agent_source = source_content[:60_000]
+            if len(source_content) > 60_000:
+                agent_source += "\n...(source truncated for this agent)"
+        else:
+            agent_source = ""
+
+        retries = 3 if key == "council" else 1
         site_agents[key] = Agent(
             model=AGENT_MODELS[key],
             output_type=output_type,
-            system_prompt=_build_system_prompt(key, BRAND_CONTEXT, site_name),
+            retries=retries,
+            system_prompt=_build_system_prompt(
+                key, BRAND_CONTEXT, site_name,
+                source_content=agent_source,
+                qc_report_text=qc_report_text,
+            ),
         )
 
-    _agents_cache[site_name] = site_agents
+    _agents_cache[cache_key] = site_agents
     return site_agents
 
 
@@ -156,9 +206,16 @@ def _get_agents(site_name: str = "melusina-os") -> dict[str, Agent]:
 #  RUNNER FUNCTIONS
 # ═══════════════════════════════════════════════════════════════════════════════
 
-async def run_expert(agent_key: str, crawl_data: list[dict], viewport_filter: str = "", site_name: str = "melusina-os") -> ExpertReport:
+async def run_expert(
+    agent_key: str,
+    crawl_data: list[dict],
+    viewport_filter: str = "",
+    site_name: str = "melusina-os",
+    source_content: str = "",
+    qc_report_text: str = "",
+) -> ExpertReport:
     """Run a single expert agent against crawl data."""
-    agents = _get_agents(site_name)
+    agents = _get_agents(site_name, source_content=source_content, qc_report_text=qc_report_text)
     agent = agents[agent_key]
     formatted = _format_crawl_data(crawl_data, viewport_filter)
     prompt = f"Review the following website crawl data and produce your expert report:\n\n{formatted}"
@@ -166,9 +223,15 @@ async def run_expert(agent_key: str, crawl_data: list[dict], viewport_filter: st
     return result.output
 
 
-async def run_council(expert_reports: list[ExpertReport], site_name: str, run_date: str) -> CouncilReport:
+async def run_council(
+    expert_reports: list[ExpertReport],
+    site_name: str,
+    run_date: str,
+    source_content: str = "",
+    qc_report_text: str = "",
+) -> CouncilReport:
     """Run the council agent to synthesize all expert reports."""
-    agents = _get_agents(site_name)
+    agents = _get_agents(site_name, source_content=source_content, qc_report_text=qc_report_text)
     reports_text = ""
     for report in expert_reports:
         reports_text += f"\n\n{'='*60}\n"

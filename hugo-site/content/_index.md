@@ -62,9 +62,9 @@ scripts:
 <section class="editorial-section">
 <div class="editorial-container">
 <div class="product-grid">
-<div class="product-card live">
-<div class="tag live">Live</div>
-<div class="category">Bonds</div>
+<div class="product-card testing">
+<div class="tag testing">Private Testing</div>
+<div class="category">CrossBonds</div>
 <h3>Maximum Flexibility</h3>
 <p class="desc">Structure the deal your way—fixed income, profit participation, or hybrid.</p>
 <ul class="feature-list">
@@ -74,8 +74,8 @@ scripts:
 <li><span class="bullet">✓</span>Project or corporate finance</li>
 </ul>
 </div>
-<div class="product-card coming-soon">
-<div class="tag coming-soon">Coming Soon</div>
+<div class="product-card testing">
+<div class="tag testing">Private Testing</div>
 <div class="category">CrossShares</div>
 <h3>DAO Investment & Control</h3>
 <p class="desc">Governance rights and equity participation with on-chain transparency.</p>
@@ -86,8 +86,8 @@ scripts:
 <li><span class="bullet">○</span>Exit participation</li>
 </ul>
 </div>
-<div class="product-card coming-soon">
-<div class="tag coming-soon">Coming Soon</div>
+<div class="product-card testing">
+<div class="tag testing">Private Testing</div>
 <div class="category">CrossRWA</div>
 <h3>Liquidity on Illiquid Assets</h3>
 <p class="desc">Fractional ownership and trading of real-world assets via <span class="glossary-term" data-term="tokenization">tokenization</span>.</p>
@@ -919,7 +919,7 @@ flowchart TD
 <h2>Ready to raise sails?</h2>
 <p>For issuers, investors, and brokers who want infrastructure that works across both worlds.</p>
 <a href="/signup/" class="btn btn-primary">
-Get Started
+Request Access
 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
 </a>
 </section>

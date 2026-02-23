@@ -25,25 +25,38 @@ sys.path.insert(0, str(Path(__file__).parent))
 
 from config import SITES, CRAWL_DATA_DIR, REPORTS_DIR, OPENROUTER_API_KEY
 from crawler import crawl_all, crawl_site, save_crawl_data, CrawlResult
+from content_loader import load_site_content, format_source_for_prompt
+from qc_agents import run_all_qc
 from agents import (
     run_expert, run_council,
 )
 from report_generator import save_report
 
 
-async def run_all_experts(crawl_data: list[dict], site_name: str = "melusina-os") -> list:
+async def run_all_experts(
+    crawl_data: list[dict],
+    site_name: str = "melusina-os",
+    source_content: str = "",
+    qc_report_text: str = "",
+) -> list:
     """Run all expert agents in parallel against crawl data."""
     print("\n🤖 Running expert panel...")
 
+    common = dict(
+        site_name=site_name,
+        source_content=source_content,
+        qc_report_text=qc_report_text,
+    )
+
     tasks = [
-        ("Legal", run_expert("legal", crawl_data, site_name=site_name)),
-        ("Consistency", run_expert("consistency", crawl_data, site_name=site_name)),
-        ("Editorial", run_expert("editorial", crawl_data, site_name=site_name)),
-        ("Principles", run_expert("principles", crawl_data, site_name=site_name)),
-        ("Mobile UX", run_expert("mobile_ux", crawl_data, viewport_filter="mobile", site_name=site_name)),
-        ("Desktop UX", run_expert("desktop_ux", crawl_data, viewport_filter="desktop", site_name=site_name)),
-        ("SEO", run_expert("seo", crawl_data, site_name=site_name)),
-        ("Conversion", run_expert("conversion", crawl_data, site_name=site_name)),
+        ("Legal", run_expert("legal", crawl_data, **common)),
+        ("Consistency", run_expert("consistency", crawl_data, **common)),
+        ("Editorial", run_expert("editorial", crawl_data, **common)),
+        ("Principles", run_expert("principles", crawl_data, **common)),
+        ("Mobile UX", run_expert("mobile_ux", crawl_data, viewport_filter="mobile", **common)),
+        ("Desktop UX", run_expert("desktop_ux", crawl_data, viewport_filter="desktop", **common)),
+        ("SEO", run_expert("seo", crawl_data, **common)),
+        ("Conversion", run_expert("conversion", crawl_data, **common)),
     ]
 
     # Run all agents in parallel
@@ -106,8 +119,37 @@ async def main():
                 print(f"\n✅ Crawl complete. Data saved to {crawl_data_file}")
                 continue
 
+        # ── Phase 1b: Load MD source content ──
+        print(f"\n📄 Loading source content for {site_name}...")
+        corpus = load_site_content(site_name)
+        if corpus.pages:
+            print(f"  Loaded {corpus.total_files} files ({corpus.total_words:,} words)")
+            source_content = format_source_for_prompt(corpus, max_chars=300_000)
+        else:
+            print(f"  ⚠️  No source content found (using crawl data only)")
+            source_content = ""
+
+        # ── Phase 1c: Pre-Processing QC ──
+        qc_report_text = ""
+        if corpus.pages:
+            print(f"\n🔍 Running pre-processing QC checks...")
+            qc_report = run_all_qc(corpus)
+            print(f"  {qc_report.summary}")
+            qc_report_text = qc_report.format_for_prompt()
+
+            # Save QC report
+            qc_dir = REPORTS_DIR / "qc" / site_name
+            qc_dir.mkdir(parents=True, exist_ok=True)
+            qc_file = qc_dir / "qc-report.txt"
+            qc_file.write_text(qc_report_text)
+            print(f"  Saved QC report to {qc_file}")
+
         # ── Phase 2: Expert Agents ──
-        expert_reports = await run_all_experts(crawl_data, site_name=site_name)
+        expert_reports = await run_all_experts(
+            crawl_data, site_name=site_name,
+            source_content=source_content,
+            qc_report_text=qc_report_text,
+        )
 
         if not expert_reports:
             print("  ❌ No expert reports generated. Check API key and model.")
@@ -122,7 +164,11 @@ async def main():
 
         # ── Phase 3: Council ──
         print(f"\n🏛️  Convening council with {len(expert_reports)} expert reports...")
-        council = await run_council(expert_reports, site_name, run_date)
+        council = await run_council(
+            expert_reports, site_name, run_date,
+            source_content=source_content,
+            qc_report_text=qc_report_text,
+        )
         print(f"  Grade: {council.overall_grade}")
         print(f"  Decisions: {len(council.decisions)}")
 

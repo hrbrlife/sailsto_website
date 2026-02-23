@@ -106,16 +106,17 @@ launched. Any implication of live public trading is a regulatory risk.
 
 ## DAO LLC Structure — Series Compartments
 
-Each issuance creates a Wyoming DAO LLC with **interconnected Series compartments**.
+Each issuance creates a Wyoming DAO LLC with **five firewalled Series**.
 The issuer is the self-issuer — Sails.to provides the templated IT and legal
-wrapper infrastructure only. The required compartments are:
+wrapper infrastructure only. The required Series are:
 
-| Series Compartment | Purpose |
-|---|---|
-| **Issuer Series** | The issuing entity controlled by the issuer |
-| **Locked CrossSecurities Series** | Holds locked/escrowed tokenized securities |
-| **Cash Accumulation Series** | Accumulates cash due to bondholders (coupons, redemptions) |
-| **Guarantee Series** | Holds 3% of issuance as guarantee — used for legal defense expenses or proceedings against the issuer |
+| Series | Purpose | Control |
+|---|---|---|
+| **Operating Series** | Cashflow, pledges, and underlying assets | Issuer operates, Trust authenticates |
+| **Revenue Series** | Collected income — investors paid first (waterfall priority) | Issuer initiates, Trust authenticates |
+| **Deposit Series** | 3% security deposit — backs orderly wind-down and trustee remedies | Issuer + Trust (both access, trust authenticates use) |
+| **Treasury Series** | Token reserves, un-issued tokens, unclaimed distributions | Trust oversight |
+| **CrossConversion Series** | On-chain token ↔ bankable ISIN conversion lockbox | Issuer requests, Trust authenticates |
 
 ### DAO LLC Claims — Accuracy Requirements
 - Wyoming Series LLC structure must be accurately described
@@ -123,15 +124,15 @@ wrapper infrastructure only. The required compartments are:
 - "Near-instant" entity setup claim needs qualification if used
 - Series segregation (assets/liabilities isolated per issuance) must be correct
 - No implication that DAO LLC eliminates all regulatory requirements
-- The 4-compartment structure (Issuer, Locked Securities, Cash, Guarantee) must be accurately represented when referenced
-- The Guarantee Series (3%) must be described as being **under trust** for the bond — not controlled by Sails.to
+- The 5-Series structure (Operating, Revenue, Deposit, Treasury, CrossConversion) must be consistently named
+- The Deposit Series (3%) must be described as being **under trust** for the bond — not controlled by Sails.to
 - All guarantees are administered by a licensed trust company
 
 ### Arbitration & Dispute Resolution
 - All PPMs mandate **arbitration** for dispute resolution
 - The site should reference arbitration as the dispute mechanism, not litigation
 - Protection measures ensure the platform is not involved in default situations without settlement attempts first
-- The guarantee compartment can fund defensive legal proceedings on behalf of bondholders
+- The Deposit Series can fund defensive legal proceedings on behalf of bondholders
 
 ---
 

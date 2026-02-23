@@ -46,6 +46,7 @@ BASE_URL = os.environ.get("BASE_URL", "http://localhost:4173")
 SITES = {
     "melusina-os": {
         "base_url": BASE_URL,
+        "content_dir": str(ROOT.parent / "melusina-os"),  # may not have MD source
         "pages": [
             "/en",
             "/en/use-cases",
@@ -70,6 +71,7 @@ SITES = {
     },
     "sails-to": {
         "base_url": os.environ.get("SAILSTO_BASE_URL", "http://localhost:4174"),
+        "content_dir": str(ROOT.parent / "hugo-site" / "content"),
         "pages": [
             # ── Core / Landing ──
             "/",

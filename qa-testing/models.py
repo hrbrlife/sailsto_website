@@ -4,7 +4,8 @@ Every expert agent returns a typed, validated structure.
 """
 
 from __future__ import annotations
-from pydantic import BaseModel, Field
+import json
+from pydantic import BaseModel, Field, model_validator
 
 
 # ── Shared primitives ────────────────────────────────────────────────────────
@@ -139,3 +140,27 @@ class CouncilReport(BaseModel):
     strengths: list[str] = Field(description="Things the site does well")
     quick_wins: list[str] = Field(description="Easy fixes with high impact")
     expert_reports: list[ExpertReport] = Field(default_factory=list)
+
+    @model_validator(mode="before")
+    @classmethod
+    def _parse_stringified_fields(cls, data: dict) -> dict:
+        """LLMs sometimes return list/dict fields as JSON strings — parse them."""
+        if not isinstance(data, dict):
+            return data
+        list_fields = ["decisions", "cross_cutting_themes", "strengths", "quick_wins"]
+        for field in list_fields:
+            val = data.get(field)
+            if isinstance(val, str):
+                try:
+                    data[field] = json.loads(val)
+                except (json.JSONDecodeError, TypeError):
+                    pass
+        dict_fields = ["expert_scores"]
+        for field in dict_fields:
+            val = data.get(field)
+            if isinstance(val, str):
+                try:
+                    data[field] = json.loads(val)
+                except (json.JSONDecodeError, TypeError):
+                    pass
+        return data

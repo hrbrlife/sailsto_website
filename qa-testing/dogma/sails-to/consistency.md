@@ -38,10 +38,11 @@ These are the **correct** terms for the sails.to platform. Flag any deviation.
 | **QIC'd** | KYC'd only | Qualified Investor Certified — brokers verify investor qualification status per jurisdiction. |
 | **credential token** | KYC NFT, identity token | The soulbound NFT that represents KYC status. |
 | **technology infrastructure provider** | platform operator, exchange, dealer | Sails.to provides IT + legal wrapper infrastructure. Not a broker-dealer or fiduciary. |
-| **Issuer Series** | issuer compartment | The DAO LLC compartment controlled by the issuer. |
-| **Locked CrossSecurities Series** | lock-up, escrow | Compartment holding locked/escrowed tokenized securities. |
-| **Cash Accumulation Series** | cash pool, payment fund | Compartment accumulating cash due to bondholders. |
-| **Guarantee Series** | guarantee fund, reserve | Holds 3% of issuance under trust for the bond. Used for legal defense. |
+| **Operating Series** | issuer compartment, ops series | Cashflow, pledges, underlying assets. Issuer operates, trust authenticates. |
+| **Revenue Series** | cash accumulation, cash pool | Collected income. Investors paid first via waterfall. |
+| **Deposit Series** | guarantee fund, reserve, deposit compartment | 3% security deposit under trust. Backs wind-down + trustee remedies. |
+| **Treasury Series** | token vault, reserve series | Token reserves, un-issued tokens. Trust oversight. |
+| **CrossConversion Series** | conversion lockbox, lockbox | On-chain ↔ ISIN conversion. Issuer requests, trust authenticates. |
 | **arbitration** | litigation, court proceedings | All PPMs mandate arbitration for disputes. |
 | **0.75%** | varies, negotiable | CrossConversion fee. Must be consistently stated. |
 | **Solana** | SOL, solana | Proper noun. The only blockchain currently supported. Do NOT mention TON. |

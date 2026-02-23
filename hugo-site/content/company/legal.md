@@ -71,6 +71,8 @@ scripts:
             <p>To the maximum extent permitted by law, Sails.to and its affiliates shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of the Platform or any investment activities.</p>
             <h3>8. Governing Law</h3>
             <p>These Terms shall be governed by and construed in accordance with the laws of the State of Wyoming, United States, without regard to conflict of law principles.</p>
+            <h3>8a. Dispute Resolution</h3>
+            <p>Any dispute, controversy, or claim arising out of or relating to these Terms, or the breach, termination, or invalidity thereof, shall be settled by binding arbitration in accordance with the rules of the American Arbitration Association. The arbitration shall be conducted in the State of Wyoming. Judgment on the award rendered by the arbitrator(s) may be entered in any court having jurisdiction thereof. Each party shall bear its own costs of arbitration unless the arbitrator(s) determine otherwise. The parties agree that arbitration shall be the exclusive mechanism for resolving disputes and waive any right to pursue claims in court, except for injunctive or equitable relief.</p>
             <h3>9. Amendments</h3>
             <p>We reserve the right to modify these Terms at any time. Material changes will be notified via email or prominent notice on the Platform. Continued use after changes constitutes acceptance.</p>
             <h3>10. Contact</h3>

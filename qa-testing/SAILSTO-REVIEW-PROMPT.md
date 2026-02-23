@@ -52,17 +52,18 @@ Hierarchical non-transferable NFTs controlling access:
 - Near-instant legal entity setup
 - The issuing SPV is a Series of a Wyoming DAO LLC **controlled by the issuer**
 
-#### DAO LLC Compartment Structure
-Each issuance creates a DAO LLC with four interconnected Series compartments:
+#### DAO LLC Five-Series Structure
+Each issuance creates a DAO LLC with five firewalled Series:
 
-| Series Compartment | Purpose |
-|---|---|
-| **Issuer Series** | The issuing entity controlled by the issuer |
-| **Locked CrossSecurities Series** | Holds locked/escrowed tokenized securities |
-| **Cash Accumulation Series** | Accumulates cash due to bondholders (coupons, redemptions) |
-| **Guarantee Series** | Holds 3% of issuance as guarantee — under trust for the bond, used for legal defense expenses or proceedings against the issuer |
+| Series | Purpose | Control |
+|---|---|---|
+| **Operating Series** | Cashflow, pledges, underlying assets | Issuer operates, Trust authenticates |
+| **Revenue Series** | Collected income — investors paid first (waterfall priority) | Issuer initiates, Trust authenticates |
+| **Deposit Series** | 3% security deposit — backs orderly wind-down and trustee remedies | Issuer + Trust (both access, trust authenticates use) |
+| **Treasury Series** | Token reserves, un-issued tokens, unclaimed distributions | Trust oversight |
+| **CrossConversion Series** | On-chain token ↔ bankable ISIN conversion lockbox | Issuer requests, Trust authenticates |
 
-All guarantees are **under trust** administered by a licensed trust company. All PPMs mandate **arbitration** for dispute resolution. Protection measures ensure no default situation proceeds without settlement attempts first.
+All Series are legally firewalled. The Deposit Series is **under trust** administered by a licensed trust company. All PPMs mandate **arbitration** for dispute resolution. Protection measures ensure no default situation proceeds without settlement attempts first.
 
 ---
 
@@ -141,7 +142,7 @@ The sails.to website is a Hugo static site with:
 1. **CrossConversion** — No other platform lets you seamlessly move between on-chain and traditional custody
 2. **Broker-mediated OTC** — Compliant by architecture, not bolt-on compliance
 3. **Self-hosted compliance** — Each participant runs their own Melusina OS instance
-4. **DAO LLC integration** — Near-instant legal entities mapped to on-chain governance, 4-compartment structure
+4. **DAO LLC integration** — Near-instant legal entities mapped to on-chain governance, 5-Series firewalled structure
 5. **Soulbound credentials** — Identity infrastructure, not just KYC checkboxes
 6. **Solana** — Built on Solana blockchain
 7. **Clearstream bridge** — Real global custody, not just crypto custody

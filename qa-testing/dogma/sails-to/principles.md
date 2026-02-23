@@ -72,16 +72,17 @@ Near-instant setup, not months of legal drafting. The issuing SPV is a
 Series of a Wyoming DAO LLC controlled by the issuer — Sails.to is just
 the technology provider.
 
-#### DAO LLC Compartment Structure
-Each issuance DAO LLC has four interconnected Series compartments:
-- **Issuer Series** — the issuing entity, controlled by the issuer
-- **Locked CrossSecurities Series** — holds locked/escrowed tokens
-- **Cash Accumulation Series** — accumulates cash due to bondholders
-- **Guarantee Series** — holds 3% of issuance under trust for the bond,
-  used for legal defense expenses or proceedings against the issuer
+#### DAO LLC Five-Series Structure
+Each issuance DAO LLC has five firewalled Series:
+- **Operating Series** — cashflow, pledges, underlying assets (issuer operates, trust authenticates)
+- **Revenue Series** — collected income, investors paid first via waterfall (issuer initiates, trust authenticates)
+- **Deposit Series** — 3% security deposit under trust for the bond, backs orderly wind-down and trustee remedies
+- **Treasury Series** — token reserves, un-issued tokens (trust oversight)
+- **CrossConversion Series** — on-chain ↔ ISIN lockbox (issuer requests, trust authenticates)
 
-All guarantees are under trust and administered by a licensed trust company.
-Disputes are resolved via arbitration (mandatory in all PPMs).
+All Series are legally firewalled. The Deposit Series is administered by
+a licensed trust company. Disputes are resolved via arbitration
+(mandatory in all PPMs).
 
 ### 6. Soulbound credentials — identity, not tokens
 KYC/AML credentials are non-transferable, revocable, renewable NFTs.

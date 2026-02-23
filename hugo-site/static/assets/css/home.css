@@ -464,6 +464,7 @@ nav.scrolled .nav-dropdown-menu a:hover {
 
 .product-card.live { background: var(--bg-card); }
 .product-card.coming-soon { background: var(--bg-surface); }
+.product-card.testing { background: var(--bg-card); }
 
 .product-card:hover { background: var(--bg-card); }
 
@@ -491,6 +492,13 @@ nav.scrolled .nav-dropdown-menu a:hover {
     font-weight: 600;
 }
 
+.product-card .tag.testing {
+    background: transparent;
+    border: 1px solid var(--neon-orange);
+    color: var(--neon-orange);
+    font-weight: 600;
+}
+
 .product-card .category {
     font-family: var(--font-mono);
     font-size: 0.62rem;
@@ -502,6 +510,7 @@ nav.scrolled .nav-dropdown-menu a:hover {
 
 .product-card.live .category { color: var(--neon-orange); }
 .product-card.coming-soon .category { color: var(--silver); }
+.product-card.testing .category { color: var(--neon-orange); }
 
 .product-card h3 {
     font-family: var(--font-display);
@@ -515,6 +524,10 @@ nav.scrolled .nav-dropdown-menu a:hover {
 .product-card.coming-soon h3,
 .product-card.coming-soon .desc,
 .product-card.coming-soon .feature-list { opacity: 0.55; }
+
+.product-card.testing h3,
+.product-card.testing .desc,
+.product-card.testing .feature-list { opacity: 0.85; }
 
 .product-card .desc {
     font-size: 0.8rem;
@@ -533,10 +546,12 @@ nav.scrolled .nav-dropdown-menu a:hover {
 
 .product-card.live .feature-list { color: var(--graphite); }
 .product-card.coming-soon .feature-list { color: var(--slate); }
+.product-card.testing .feature-list { color: var(--graphite); }
 
 .product-card .feature-list li { padding-left: 18px; position: relative; }
 .product-card .feature-list .bullet { position: absolute; left: 0; }
 .product-card.live .feature-list .bullet { color: var(--neon-teal); }
+.product-card.testing .feature-list .bullet { color: var(--neon-orange); }
 
 
 /* ═══════════════════════════════════════════════════════════════
@@ -806,6 +821,27 @@ footer {
 .footer-bottom {
     border-top-color: rgba(255,255,255,0.08);
     color: var(--silver);
+}
+
+.footer-disclaimer {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 16px 0;
+    margin-top: 24px;
+}
+
+.footer-disclaimer p {
+    font-size: 0.65rem;
+    color: var(--text-muted-dk);
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.footer-disclaimer a {
+    color: var(--neon-teal);
+    text-decoration: underline;
 }
 
 

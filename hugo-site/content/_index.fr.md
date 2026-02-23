@@ -62,9 +62,9 @@ scripts:
 <section class="editorial-section">
 <div class="editorial-container">
 <div class="product-grid">
-<div class="product-card live">
-<div class="tag live">Actif</div>
-<div class="category">Obligations</div>
+<div class="product-card testing">
+<div class="tag testing">Test Privé</div>
+<div class="category">CrossBonds</div>
 <h3>Flexibilité Maximale</h3>
 <p class="desc">Structurez l'opération à votre façon — revenu fixe, participation aux bénéfices ou hybride.</p>
 <ul class="feature-list">
@@ -74,8 +74,8 @@ scripts:
 <li><span class="bullet">✓</span>Finance de projet ou d'entreprise</li>
 </ul>
 </div>
-<div class="product-card coming-soon">
-<div class="tag coming-soon">Bientôt</div>
+<div class="product-card testing">
+<div class="tag testing">Test Privé</div>
 <div class="category">CrossShares</div>
 <h3>Investissement & Contrôle DAO</h3>
 <p class="desc">Droits de gouvernance et participation au capital avec transparence on-chain.</p>
@@ -86,8 +86,8 @@ scripts:
 <li><span class="bullet">○</span>Participation à la sortie</li>
 </ul>
 </div>
-<div class="product-card coming-soon">
-<div class="tag coming-soon">Bientôt</div>
+<div class="product-card testing">
+<div class="tag testing">Test Privé</div>
 <div class="category">CrossRWA</div>
 <h3>Liquidité sur Actifs Illiquides</h3>
 <p class="desc">Propriété fractionnée et négociation d'actifs réels via <span class="glossary-term" data-term="tokenization">tokenization</span>.</p>
@@ -537,8 +537,8 @@ flowchart TD
 
 <section class="content-section story-cta">
 <div class="content-container" style="text-align: center;">
-<a href="/issuers/" class="btn-secondary">Full Issuers Page →</a>
-<a href="/signup/" class="btn-primary" style="margin-left: 12px;">Start Your Raise</a>
+<a href="/issuers/" class="btn-secondary">Page Émetteurs →</a>
+<a href="/signup/" class="btn-primary" style="margin-left: 12px;">Lancer votre levée</a>
 </div>
 </section>
 
@@ -720,8 +720,8 @@ flowchart TD
 
 <section class="content-section story-cta">
 <div class="content-container" style="text-align: center;">
-<a href="/investors/" class="btn-secondary">Full Investors Page →</a>
-<a href="/signup/" class="btn-primary" style="margin-left: 12px;">Register Interest</a>
+<a href="/investors/" class="btn-secondary">Page Investisseurs →</a>
+<a href="/signup/" class="btn-primary" style="margin-left: 12px;">Manifester votre intérêt</a>
 </div>
 </section>
 
@@ -904,8 +904,8 @@ flowchart TD
 
 <section class="content-section story-cta">
 <div class="content-container" style="text-align: center;">
-<a href="/trustees/" class="btn-secondary">Full Trustees Page →</a>
-<a href="/signup/" class="btn-primary" style="margin-left: 12px;">Join the Registry</a>
+<a href="/trustees/" class="btn-secondary">Page Fiduciaires →</a>
+<a href="/signup/" class="btn-primary" style="margin-left: 12px;">Rejoindre le registre</a>
 </div>
 </section>
 
@@ -919,7 +919,7 @@ flowchart TD
 <h2>Prêt à lever les voiles ?</h2>
 <p>Pour les émetteurs, investisseurs et courtiers qui veulent une infrastructure fonctionnant dans les deux mondes.</p>
 <a href="/signup/" class="btn btn-primary">
-Commencer
+Demander l'accès
 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
 </a>
 </section>
