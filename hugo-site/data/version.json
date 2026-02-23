@@ -1,8 +1,8 @@
 {
-  "hash": "40d2519e170aa5b2438e5d33c396b3f36474833c",
-  "hashShort": "40d2519",
-  "date": "2026-02-20T12:11:11+04:00",
-  "message": "chore: eliminate all CDN dependencies — self-host fonts + native emoji",
+  "hash": "0f5ade590c02ee4225aa706f61afbc26c62fb575",
+  "hashShort": "0f5ade5",
+  "date": "2026-02-23T16:41:42+04:00",
+  "message": "QA panel fixes: product status, disclaimers, CTA clarity, QC agents",
   "tag": "",
-  "buildNumber": 175
+  "buildNumber": 183
 }
