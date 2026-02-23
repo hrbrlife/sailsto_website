@@ -1190,6 +1190,27 @@ footer {
 }
 .site-version:hover { opacity: 1; }
 
+.footer-disclaimer {
+    border-top: 1px solid rgba(255,255,255,0.06);
+    padding: 16px 0;
+    margin-top: 24px;
+}
+
+.footer-disclaimer p {
+    font-size: 0.65rem;
+    color: var(--text-muted-dk);
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.footer-disclaimer a {
+    color: var(--neon-teal);
+    text-decoration: underline;
+}
+
 
 /* ═══════════════════════════════════════════════════════════════
    MERMAID DIAGRAMS — Transparent, borderless, cyberpunk palette
