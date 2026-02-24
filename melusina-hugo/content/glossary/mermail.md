@@ -3,7 +3,7 @@ description: "Melusina's sidelying email gateway service with Postmark + SMTP fa
 title: "mermail"
 type: "glossary-term"
 slug: "mermail"
-category: "Infrastructure"
+category: "technology"
 definition: ""
 relatedTerms:
   - "grapple"

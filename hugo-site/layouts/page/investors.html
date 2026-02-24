@@ -12,8 +12,8 @@
         </div>
     </div>
     <div class="hero-ctas">
-        <a href="/signup/?type=investor" class="btn-hero primary">Access Deal Flow</a>
-        <a href="/whatsails/" class="btn-hero secondary">Learn How It Works</a>
+        <a href="{{ "signup/?type=investor" | relURL }}" class="btn-hero primary">Access Deal Flow</a>
+        <a href="{{ "whatsails/" | relURL }}" class="btn-hero secondary">Learn How It Works</a>
     </div>
     <div class="trust-badges">
         <span class="trust-badge">
@@ -226,7 +226,7 @@
 <section class="cta-section">
     <h2>Ready to explore?</h2>
     <p>Professional investors can browse offerings after verification.</p>
-    <a href="/signup/?type=investor" class="btn btn-primary">
+    <a href="{{ "signup/?type=investor" | relURL }}" class="btn btn-primary">
         Create Account
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
     </a>

@@ -5,8 +5,8 @@
     <h1 class="section-title">Know a business that<br>should be raising capital?</h1>
     <p class="section-desc">Make one introduction. We handle everything — onboarding, <span class="glossary-term" data-term="compliance">compliance</span>, structuring, distribution. When they close, you earn 25% of Sails.to's fee. A $2M raise through <span class="glossary-term" data-term="broker-dealer">broker network</span> = $30,000 to you. No license. No ongoing work.</p>
     <div class="hero-ctas">
-        <a href="/signup/?type=introducer" class="btn-hero primary">Register as Introducer</a>
-        <a href="/whatsails/" class="btn-hero secondary">How It Works</a>
+        <a href="{{ "signup/?type=introducer" | relURL }}" class="btn-hero primary">Register as Introducer</a>
+        <a href="{{ "whatsails/" | relURL }}" class="btn-hero secondary">How It Works</a>
     </div>
     <div class="trust-badges">
         <span class="trust-badge">
@@ -333,7 +333,7 @@
 <section class="cta-section">
     <h2>Know someone who needs capital?</h2>
     <p>Register as an introducer and start earning from your business relationships.</p>
-    <a href="/signup/?type=introducer" class="btn btn-primary">
+    <a href="{{ "signup/?type=introducer" | relURL }}" class="btn btn-primary">
         Register as Introducer
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
     </a>

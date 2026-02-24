@@ -299,10 +299,12 @@ function validateGlossary() {
             }
 
             // Check relatedTerms references
+            // Supports both string format ("slug") and object format ({ slug, label })
             if (fm.relatedTerms && Array.isArray(fm.relatedTerms)) {
                 for (const ref of fm.relatedTerms) {
-                    if (!glossaryPages.has(ref)) {
-                        fmIssues.push({ file, issue: `relatedTerms "${ref}" has no glossary page` });
+                    const refSlug = (typeof ref === 'object' && ref !== null) ? ref.slug : ref;
+                    if (!refSlug || !glossaryPages.has(refSlug)) {
+                        fmIssues.push({ file, issue: `relatedTerms "${refSlug || ref}" has no glossary page` });
                     }
                 }
             }

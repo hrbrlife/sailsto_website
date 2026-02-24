@@ -29,7 +29,7 @@
     {{ else if eq $status "upcoming" }}{{ $temporal = "public" }}
     {{ else }}{{ $temporal = "future" }}{{ end }}
     {{ $tags := delimit $m.tags " " }}
-    <a href="/knowledge/roadmap/#{{ $m.id }}" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="{{ $temporal }}" data-tags="{{ $tags }}">
+    <a href="{{ "knowledge/roadmap/#{{ $m.id }}" | relURL }}" class="kb-card kb-card-roadmap" data-category="roadmap" data-temporal="{{ $temporal }}" data-tags="{{ $tags }}">
         <span class="kb-roadmap-status {{ $statusClass }}">{{ $statusIcon }}</span>
         <span class="kb-card-category">{{ $m.category }}</span>
         <h3>{{ index $m.title $lang }}</h3>

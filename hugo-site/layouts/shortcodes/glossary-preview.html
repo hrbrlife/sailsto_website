@@ -22,7 +22,7 @@
                 {{ $count = add $count 1 }}
             {{ end }}
         {{ end }}
-        <a href="/knowledge/glossary/" class="kb-glossary-cat">
+        <a href="{{ "knowledge/glossary/" | relURL }}" class="kb-glossary-cat">
             <span class="kb-glossary-icon" style="color: {{ $def.color }};">{{ $def.icon }}</span>
             <span class="kb-glossary-label">{{ index $def $lang }}</span>
             <span class="kb-glossary-count">{{ $count }} {{ if eq $lang "fr" }}termes{{ else }}terms{{ end }}</span>

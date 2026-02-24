@@ -5,8 +5,8 @@
     <h1 class="section-title">Your raise. Fully equipped.<br>Day one.</h1>
     <p class="section-desc">We provide everything: legal entity, compliance structure, KYC platform, document vault, investor communications, and a global broker network ready to distribute. Plug into a multi-broker OTC network for automatic liquidity. You bring the deal. We provide the rails. Pay nothing until you succeed.</p>
     <div class="hero-ctas">
-        <a href="/signup/?type=issuer" class="btn-hero primary">Schedule Consultation</a>
-        <a href="/pricing/" class="btn-hero secondary">View Pricing</a>
+        <a href="{{ "signup/?type=issuer" | relURL }}" class="btn-hero primary">Schedule Consultation</a>
+        <a href="{{ "pricing/" | relURL }}" class="btn-hero secondary">View Pricing</a>
     </div>
     <div class="trust-badges">
         <span class="trust-badge">
@@ -262,7 +262,7 @@
 <section class="cta-section">
     <h2>Ready to raise?</h2>
     <p>From term sheet to live offering in 1–2 weeks. Zero upfront.</p>
-    <a href="/signup/?type=issuer" class="btn btn-primary">
+    <a href="{{ "signup/?type=issuer" | relURL }}" class="btn btn-primary">
         Start Your Raise
         <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
     </a>
