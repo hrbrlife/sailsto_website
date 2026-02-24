@@ -1,8 +1,8 @@
 {
-  "hash": "c63622789621ecd70c283ed1714cf05f3578e1db",
-  "hashShort": "c636227",
-  "date": "2026-02-24T09:06:01+04:00",
-  "message": "refactor(sails.to): extract HTML to layout templates, reorganize CSS/JS",
+  "hash": "6aeb970531b962ee8a733795c7d2d30ea9847e18",
+  "hashShort": "6aeb970",
+  "date": "2026-02-24T09:17:30+04:00",
+  "message": "feat(seo): comprehensive SEO improvements",
   "tag": "",
-  "buildNumber": 192
+  "buildNumber": 194
 }
