@@ -163,15 +163,18 @@ function extractDataReferences(files) {
 }
 
 /**
- * Get available data files
+ * Get available data files (includes subdirectories, which Hugo exposes as nested data keys)
  */
 function getAvailableDataKeys() {
     const keys = new Set();
     if (!fs.existsSync(DATA_DIR)) return keys;
-    const files = fs.readdirSync(DATA_DIR);
-    for (const file of files) {
-        if (file.endsWith('.yaml') || file.endsWith('.yml') || file.endsWith('.json') || file.endsWith('.toml')) {
-            keys.add(file.replace(/\.(yaml|yml|json|toml)$/, ''));
+    const entries = fs.readdirSync(DATA_DIR, { withFileTypes: true });
+    for (const entry of entries) {
+        if (entry.isDirectory()) {
+            // Hugo maps data/foo/ → .Site.Data.foo
+            keys.add(entry.name);
+        } else if (entry.name.endsWith('.yaml') || entry.name.endsWith('.yml') || entry.name.endsWith('.json') || entry.name.endsWith('.toml')) {
+            keys.add(entry.name.replace(/\.(yaml|yml|json|toml)$/, ''));
         }
     }
     return keys;
