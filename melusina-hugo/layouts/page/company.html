@@ -1,0 +1,100 @@
+{{ define "main" }}
+
+{{/* ═══════════════ 1. HERO ═══════════════ */}}
+<section class="neon-hero">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <span class="eyebrow-tag mb-3">{{ i18n "companyEyebrow" | default "THE TEAM" }}</span>
+        <h1 class="hero-heading mb-3">{{ .Title }}</h1>
+        <p class="hero-subtitle mb-4">{{ .Description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ═══════════════ 2. MISSION ═══════════════ */}}
+<section class="py-7">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card neon-card border-0">
+          <div class="card-body p-5">
+            <h2 class="text-white mb-3">{{ i18n "missionHeading" | default "Our Mission" }}</h2>
+            <p class="text-muted">{{ i18n "missionText" | default "Building sovereign digital infrastructure for individuals and institutions. Every app isolated, every connection chosen, every action verifiable." }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ═══════════════ 3. CONTACT CATEGORIES ═══════════════ */}}
+<section class="py-7 bg-light">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <h2 class="section-heading">{{ i18n "contactHeading" | default "Get in Touch" }}</h2>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3">
+        <div class="card neon-card border-0 h-100 text-center">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-3">📧</div>
+            <h5 class="text-white mb-2">General</h5>
+            <a href="mailto:hello@melusina-os.org" class="btn btn-outline-primary btn-sm btn-wire">hello@melusina-os.org</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card neon-card border-0 h-100 text-center">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-3">👥</div>
+            <h5 class="text-white mb-2">Partnerships</h5>
+            <a href="mailto:partners@melusina-os.org" class="btn btn-outline-primary btn-sm btn-wire">partners@melusina-os.org</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card neon-card border-0 h-100 text-center">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-3">💰</div>
+            <h5 class="text-white mb-2">Investors</h5>
+            <a href="mailto:invest@melusina-os.org" class="btn btn-outline-primary btn-sm btn-wire">invest@melusina-os.org</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3">
+        <div class="card neon-card border-0 h-100 text-center">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-3">🛡️</div>
+            <h5 class="text-white mb-2">Security</h5>
+            <a href="mailto:security@melusina-os.org" class="btn btn-outline-primary btn-sm btn-wire">security@melusina-os.org</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ═══════════════ 4. OTHER CONTACTS ═══════════════ */}}
+<section class="py-7">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="card neon-card border-0">
+          <div class="card-body p-4 text-center">
+            <h3 class="text-white mb-3">{{ i18n "otherContactsHeading" | default "Other Ways to Reach Us" }}</h3>
+            <p class="text-muted">Telegram: <a href="https://t.me/melusina_os" target="_blank" rel="noopener" style="color: #00E5FF;">@melusina_os</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ═══════════════ 5. CTA ═══════════════ */}}
+{{ partial "blocks/cta" (dict "data" (dict "heading" "Ready to take control?" "subtitle" "Start with the architecture that puts you in charge." "primaryButton" (dict "text" "See Pricing" "link" "/plans/") "secondaryButton" (dict "text" "Learn More" "link" "/use-cases/")) "variant" "gradient") }}
+
+{{ end }}

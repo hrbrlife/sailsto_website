@@ -1,0 +1,70 @@
+{
+  "slug": "visiblewhen",
+  "term": "visibleWhen",
+  "shortDefinition": "A JSONLogic rule in Bureau that controls when a field or panel is shown.",
+  "longDefinition": {
+    "type": "root",
+    "children": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "visibleWhen attaches a JSONLogic expression to any field or panel. It evaluates current form values to decide if the UI should render that element."
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "children": [
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Supports AND/OR/NOT, comparisons, set membership, and nested logic."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Works for date comparisons, role-based visibility, and multi-step flows."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Same pattern at field level and panel level."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Technology",
+  "relatedTerms": [
+    "panel-builder",
+    "repeatable-group",
+    "bureau"
+  ],
+  "searchTerms": [
+    "conditional display",
+    "jsonlogic",
+    "visibility rules"
+  ],
+  "createdAt": "2025-11-28T00:00:00.000Z",
+  "updatedAt": "2025-11-28T00:00:00.000Z",
+  "metadata": {
+    "seo": {
+      "title": "visibleWhen JSONLogic",
+      "description": "Definition of visibleWhen, Bureau's JSONLogic-driven visibility rule."
+    }
+  }
+}

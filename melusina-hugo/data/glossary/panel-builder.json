@@ -1,0 +1,71 @@
+{
+  "slug": "panel-builder",
+  "term": "Panel Builder",
+  "shortDefinition": "Bureau's drag-and-drop editor that produces JSON manifests for forms and workflows.",
+  "longDefinition": {
+    "type": "root",
+    "children": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Panel Builder lets teams design panels, fields, and conditional logic without touching app code. Published manifests are compiled and activated into the Process Catalog for CLIENT and MANAGER Pearls to serve."
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "children": [
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Supports REPEATABLE_GROUP tables, datasets, and custom renderers."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Uses visibleWhen JSONLogic for conditional display of fields and panels."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Publishes GraphQL-ready schemas for automation and validation."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Technology",
+  "relatedTerms": [
+    "bureau",
+    "repeatable-group",
+    "visiblewhen",
+    "template-compiler"
+  ],
+  "searchTerms": [
+    "form builder",
+    "workflow editor",
+    "low code"
+  ],
+  "createdAt": "2025-11-28T00:00:00.000Z",
+  "updatedAt": "2025-11-28T00:00:00.000Z",
+  "metadata": {
+    "seo": {
+      "title": "Panel Builder (Bureau)",
+      "description": "Definition of Panel Builder, the drag-drop editor for Bureau workflows."
+    }
+  }
+}

@@ -1,0 +1,961 @@
+{
+  "family-offices": {
+    "slug": "family-offices",
+    "icon": "🏛️",
+    "label": "For Family Offices",
+    "title": "Your family's digital world.\nOn your terms.",
+    "subtitle": "A sovereign operating system that unifies communications, documents, compliance, and asset management — all running on infrastructure you own. No SaaS vendor sees your family's data. Ever.",
+    "trustBadges": [
+      "Self-hosted infrastructure",
+      "End-to-end encryption",
+      "Multi-generational design",
+      "No vendor access to data"
+    ],
+    "primaryCta": {
+      "text": "Book a Demo",
+      "href": "/plans"
+    },
+    "secondaryCta": {
+      "text": "See Use Cases",
+      "href": "/use-cases"
+    },
+    "howItWorks": {
+      "heading": "How Melusina OS works for family offices",
+      "description": "Deploy once. Unite your entire family office stack. Every member, every advisor, every document — on your infrastructure.",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Deploy on your infrastructure",
+          "description": "Install Melusina OS on your servers, your private cloud, or our managed hosting. You choose where every byte of family data lives — by jurisdiction, by regulation, by preference."
+        },
+        {
+          "number": 2,
+          "title": "Configure your digital workplace",
+          "description": "Set up Bureau for document management, Office for collaboration, Communication for secure messaging, and Internet for private browsing. All integrated. All yours."
+        },
+        {
+          "number": 3,
+          "title": "Onboard family & advisors",
+          "description": "Each family member and advisor gets their own Pearl — an isolated workspace with role-based access. Trustees see trusts. Beneficiaries see allocations. Nobody sees what they shouldn't."
+        }
+      ]
+    },
+    "whyItMatters": {
+      "heading": "Why family offices choose sovereign computing",
+      "description": "Your family's most sensitive information — wealth, health, legal, succession — shouldn't sit on someone else's servers.",
+      "points": [
+        {
+          "icon": "🔒",
+          "title": "Total data sovereignty",
+          "description": "Family PII, trust documents, tax filings, medical records — all on infrastructure you control. No cloud vendor, no SaaS provider, no IT contractor has access to your family's data."
+        },
+        {
+          "icon": "🏗️",
+          "title": "Pearl isolation",
+          "description": "Each family member, trust, or entity operates in its own Pearl — a containerized workspace with independent encryption and access controls. A compromise in one cannot reach another."
+        },
+        {
+          "icon": "🤖",
+          "title": "Private AI assistant",
+          "description": "Run AI models on your hardware for document analysis, compliance checking, and communication drafting. Your family's prompts and data never leave your network. Never train someone else's model."
+        },
+        {
+          "icon": "👪",
+          "title": "Multi-generational design",
+          "description": "Succession planning built into the platform. Transfer access, archive Pearls, transition advisors. Designed for decades of operation, not just quarterly billing cycles."
+        },
+        {
+          "icon": "📋",
+          "title": "Integrated compliance",
+          "description": "KYC, AML, tax reporting, regulatory filings — all handled within the OS. InstaKYC for identity verification. Bureau for workflow automation. One system, not twenty vendors."
+        },
+        {
+          "icon": "💰",
+          "title": "Predictable fixed cost",
+          "description": "One license. No per-seat fees. No per-document charges. No per-API-call billing. Scale from 5 users to 500 on the same license and infrastructure."
+        }
+      ]
+    },
+    "features": {
+      "heading": "Everything a family office needs",
+      "items": [
+        {
+          "icon": "📁",
+          "title": "Bureau Document Management",
+          "description": "Organize trust deeds, investment agreements, memoranda, and correspondence. Version control, dual signatures, and complete audit trails."
+        },
+        {
+          "icon": "💬",
+          "title": "Encrypted Communication",
+          "description": "Secure messaging between family members, advisors, and external parties. Voice, video, and chat — all end-to-end encrypted on your servers."
+        },
+        {
+          "icon": "📊",
+          "title": "Office Suite",
+          "description": "Spreadsheets, word processing, presentations — all running locally. No document ever touches Google or Microsoft servers."
+        },
+        {
+          "icon": "🌐",
+          "title": "Private Internet",
+          "description": "Browse, research, and transact through your own secure gateway. No tracking. No profiling. No data harvesting."
+        },
+        {
+          "icon": "🔐",
+          "title": "Identity & KYC",
+          "description": "InstaKYC built in. Verify counterparties, onboard new advisors, maintain compliance records — all within the OS."
+        },
+        {
+          "icon": "🗂️",
+          "title": "Vintage Archive",
+          "description": "Long-term document storage with cryptographic integrity. Access records from decades ago with proof they haven't been altered."
+        }
+      ]
+    },
+    "stats": [
+      {
+        "value": "100%",
+        "label": "Data sovereignty"
+      },
+      {
+        "value": "5+",
+        "label": "Integrated apps"
+      },
+      {
+        "value": "0",
+        "label": "Vendor data access"
+      },
+      {
+        "value": "∞",
+        "label": "Isolated Pearls"
+      }
+    ],
+    "bottomCta": {
+      "heading": "Ready to secure your family's digital life?",
+      "description": "Stop spreading your family's most sensitive data across dozens of SaaS vendors. Deploy Melusina OS and own every byte.",
+      "buttonText": "Book a Working Session",
+      "buttonHref": "/plans"
+    }
+  },
+  "trust-companies": {
+    "slug": "trust-companies",
+    "icon": "⚖️",
+    "label": "For Trust Companies",
+    "title": "Fiduciary operations.\nSovereign infrastructure.",
+    "subtitle": "Run your entire trust administration on infrastructure you own. Client files isolated in Pearls. AI that never leaks. Compliance workflows that satisfy regulators and protect beneficiaries.",
+    "trustBadges": [
+      "Pearl-isolated client data",
+      "Regulator-ready exports",
+      "Self-hosted AI",
+      "Zero vendor access"
+    ],
+    "primaryCta": {
+      "text": "Book a Demo",
+      "href": "/plans"
+    },
+    "secondaryCta": {
+      "text": "Compare Solutions",
+      "href": "/compare"
+    },
+    "howItWorks": {
+      "heading": "How Melusina OS works for trust companies",
+      "description": "Your clients trust you with their life's work. Your operating system should be worthy of that trust.",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Deploy your fiduciary OS",
+          "description": "Install Melusina OS on your infrastructure. Configure Bureau for trust administration, Communication for client liaison, and Office for report preparation. All integrated, all private."
+        },
+        {
+          "number": 2,
+          "title": "Isolate each client in a Pearl",
+          "description": "Every trust, every settlor, every beneficiary relationship gets its own Pearl. Documents, communications, compliance records, and AI analysis — cryptographically separated."
+        },
+        {
+          "number": 3,
+          "title": "Administer with confidence",
+          "description": "Dual-signature approvals, automated compliance checks, regulatory reporting, and complete audit trails. When the regulator visits, any client's full history in one click."
+        }
+      ]
+    },
+    "whyItMatters": {
+      "heading": "Why fiduciaries need sovereign computing",
+      "description": "You have a legal duty to protect client information. Using multi-tenant SaaS for trust administration creates risks your fiduciary duty doesn't allow.",
+      "points": [
+        {
+          "icon": "🔐",
+          "title": "Fiduciary-grade isolation",
+          "description": "Each client relationship is its own Pearl with independent encryption keys. Not shared infrastructure with logical separation — actual cryptographic isolation. This is what fiduciary duty demands."
+        },
+        {
+          "icon": "📜",
+          "title": "Complete audit trail",
+          "description": "Every document opened, every decision made, every signature applied — timestamped and cryptographically signed. Not just access logs, but mathematical proof of who did what, when."
+        },
+        {
+          "icon": "🤖",
+          "title": "Private AI for trust work",
+          "description": "Draft trust deeds, analyze beneficial ownership, screen against sanctions — all with AI running on your hardware. Client information never leaves for processing."
+        },
+        {
+          "icon": "🏛️",
+          "title": "Regulator-ready always",
+          "description": "Export any client Pearl as a self-contained evidence package: documents, decisions, communications, signatures, timeline. Ready in minutes, not weeks of preparation."
+        },
+        {
+          "icon": "🔗",
+          "title": "Cryptographic signatures",
+          "description": "Every critical trust action — appointment, distribution, investment — is cryptographically signed by authorized parties. Verifiable by anyone, forever. Not just digital signatures — mathematical proof."
+        },
+        {
+          "icon": "🌍",
+          "title": "Multi-jurisdiction",
+          "description": "Administer trusts under different legal frameworks from the same platform. Luxembourg, Jersey, Singapore, BVI — different rules, different workflows, same sovereign infrastructure."
+        }
+      ]
+    },
+    "features": {
+      "heading": "Built for fiduciary excellence",
+      "items": [
+        {
+          "icon": "📝",
+          "title": "Trust Administration",
+          "description": "Bureau workflows for trust establishment, amendments, distributions, and terminations. Template-driven with configurable approval chains."
+        },
+        {
+          "icon": "💬",
+          "title": "Secure Client Portal",
+          "description": "Clients and beneficiaries access their Pearl through encrypted channels. Share documents, request signatures, provide updates — all within the OS."
+        },
+        {
+          "icon": "📊",
+          "title": "Compliance Dashboard",
+          "description": "Pending reviews, expiring KYC, regulatory deadlines, risk alerts — real-time overview of your entire trust book. Filter by jurisdiction, risk, or status."
+        },
+        {
+          "icon": "🔍",
+          "title": "Screening & Monitoring",
+          "description": "Sanctions, PEP, adverse media — screened locally against global databases. Continuous monitoring of all parties, not just onboarding."
+        },
+        {
+          "icon": "📁",
+          "title": "Document Vault",
+          "description": "Deeds of trust, side letters, beneficial ownership records, board minutes — all versioned, signed, and archived with integrity guarantees."
+        },
+        {
+          "icon": "🔌",
+          "title": "Integration APIs",
+          "description": "Connect to custodians, registrars, and corporate service providers through secure APIs. No data touches third-party clouds during transit."
+        }
+      ]
+    },
+    "stats": [
+      {
+        "value": "100%",
+        "label": "Client isolation"
+      },
+      {
+        "value": "0",
+        "label": "Vendor access"
+      },
+      {
+        "value": "∞",
+        "label": "Trust Pearls"
+      },
+      {
+        "value": "24/7",
+        "label": "Audit ready"
+      }
+    ],
+    "bottomCta": {
+      "heading": "Ready to elevate your fiduciary operations?",
+      "description": "Deploy Melusina OS and give your clients the data protection their trust demands.",
+      "buttonText": "Book a Demo",
+      "buttonHref": "/plans"
+    }
+  },
+  "private-banks": {
+    "slug": "private-banks",
+    "icon": "🏦",
+    "label": "For Private Banks",
+    "title": "Private banking deserves\nprivate infrastructure.",
+    "subtitle": "A sovereign operating system for relationship managers, compliance teams, and wealth advisors. Every client relationship isolated. Every communication encrypted. Every action auditable.",
+    "trustBadges": [
+      "Banking-grade security",
+      "Client data sovereignty",
+      "Integrated compliance",
+      "No cloud dependency"
+    ],
+    "primaryCta": {
+      "text": "Request a Demo",
+      "href": "/plans"
+    },
+    "secondaryCta": {
+      "text": "Explore Use Cases",
+      "href": "/use-cases"
+    },
+    "howItWorks": {
+      "heading": "How Melusina OS works for private banks",
+      "description": "Deploy a complete digital workplace that keeps client data exactly where it belongs — on your infrastructure.",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Deploy your sovereign workplace",
+          "description": "Install Melusina OS on your servers or private cloud. Configure for your regulatory environment — FINMA, CSSF, MAS, or multi-jurisdiction. Keep client data in-country by design."
+        },
+        {
+          "number": 2,
+          "title": "Equip every team",
+          "description": "Relationship managers get secure Communication and Office. Compliance gets Bureau and InstaKYC. Investment teams get private research tools. All connected, all sovereign."
+        },
+        {
+          "number": 3,
+          "title": "Serve clients with confidence",
+          "description": "Each client Pearl contains their complete relationship: KYC, portfolios, correspondence, meeting notes, compliance records. One view. One system. Zero data leakage."
+        }
+      ]
+    },
+    "whyItMatters": {
+      "heading": "Why private banks are going sovereign",
+      "description": "Your HNWI clients chose private banking for discretion. Your technology stack should deliver the same standard.",
+      "points": [
+        {
+          "icon": "🔒",
+          "title": "Banking secrecy, enforced by design",
+          "description": "Client data on your servers, encrypted with your keys, accessed only by your people. Not \"trust us\" — verifiable isolation that banking regulators can audit."
+        },
+        {
+          "icon": "💬",
+          "title": "Secure client communication",
+          "description": "Encrypted messaging, video calls, and document sharing — all within the OS. No WhatsApp screenshots. No email forwards to personal accounts. Compliant by default."
+        },
+        {
+          "icon": "🤖",
+          "title": "AI-powered relationship management",
+          "description": "Draft client reports, analyze risk profiles, prepare investment summaries — with AI that runs on your hardware. Client names never leave your network."
+        },
+        {
+          "icon": "📋",
+          "title": "Integrated KYC/AML",
+          "description": "InstaKYC built into the OS. Onboard clients, screen counterparties, monitor transactions — all in the same environment relationship managers use daily."
+        },
+        {
+          "icon": "🏗️",
+          "title": "Pearl isolation per client",
+          "description": "Every HNWI relationship is a Pearl. Their documents, communications, investment records, and compliance files are cryptographically separated from every other client."
+        },
+        {
+          "icon": "💰",
+          "title": "Total cost of ownership",
+          "description": "Replace 15+ SaaS subscriptions with one sovereign platform. Communication, office suite, compliance, document management, KYC — one license, predictable costs."
+        }
+      ]
+    },
+    "features": {
+      "heading": "A complete private banking platform",
+      "items": [
+        {
+          "icon": "👤",
+          "title": "Client Relationship Hub",
+          "description": "One Pearl per client with their complete history: KYC status, documents, correspondence, risk profile, portfolio summary. Everything a RM needs in one place."
+        },
+        {
+          "icon": "💬",
+          "title": "Compliant Communication",
+          "description": "Encrypted chat, voice, and video with automatic archiving and supervision. Meet MiFID II and FINMA recording requirements without third-party tools."
+        },
+        {
+          "icon": "📝",
+          "title": "Bureau Workflows",
+          "description": "Account opening, KYC review, investment suitability, complaint handling — all as configurable workflows with approval chains and audit trails."
+        },
+        {
+          "icon": "📊",
+          "title": "Reporting Suite",
+          "description": "Generate client reports, regulatory filings, and management dashboards from sovereign data. Office suite integrated for custom analysis and presentations."
+        },
+        {
+          "icon": "🔍",
+          "title": "Compliance Cockpit",
+          "description": "Real-time overview of KYC status, regulatory deadlines, risk alerts, and screening results across your entire client book."
+        },
+        {
+          "icon": "🌐",
+          "title": "Secure Research",
+          "description": "Private Internet for market research, due diligence, and competitive analysis. No browsing history shared with search engines or ad networks."
+        }
+      ]
+    },
+    "stats": [
+      {
+        "value": "15+",
+        "label": "Tools replaced"
+      },
+      {
+        "value": "100%",
+        "label": "Data sovereignty"
+      },
+      {
+        "value": "0",
+        "label": "Cloud dependency"
+      },
+      {
+        "value": "∞",
+        "label": "Client Pearls"
+      }
+    ],
+    "bottomCta": {
+      "heading": "Ready to make your technology as private as your banking?",
+      "description": "Deploy Melusina OS and give your clients the digital discretion they expect.",
+      "buttonText": "Request a Demo",
+      "buttonHref": "/plans"
+    }
+  },
+  "daos": {
+    "slug": "daos",
+    "icon": "🗳️",
+    "label": "For DAOs & Web3 Organizations",
+    "title": "Decentralized governance.\nSovereign operations.",
+    "subtitle": "A self-hosted operating system for DAOs that need more than Discord and Google Docs. Real governance, real compliance, real privacy — on infrastructure your community controls.",
+    "trustBadges": [
+      "Community-controlled",
+      "Web3-native architecture",
+      "On-chain governance",
+      "No corporate surveillance"
+    ],
+    "primaryCta": {
+      "text": "Get Started",
+      "href": "/plans"
+    },
+    "secondaryCta": {
+      "text": "See How It Works",
+      "href": "/use-cases"
+    },
+    "howItWorks": {
+      "heading": "How Melusina OS works for DAOs",
+      "description": "Self-sovereign infrastructure for communities that believe in decentralization — not just on-chain, but everywhere.",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Deploy community infrastructure",
+          "description": "Install Melusina OS on servers your DAO controls. Cloud, bare metal, or distributed — your community decides. No corporate account needed. No terms of service surprises."
+        },
+        {
+          "number": 2,
+          "title": "Configure your workspace",
+          "description": "Communication for governance discussions and coordination. Bureau for proposal management and treasury workflows. Office for documentation. InstaKYC for contributor verification when needed."
+        },
+        {
+          "number": 3,
+          "title": "Operate transparently",
+          "description": "Governance proposals, treasury movements, contributor agreements — all on your sovereign infrastructure with cryptographic signatures. Transparent to members, private from surveillance."
+        }
+      ]
+    },
+    "whyItMatters": {
+      "heading": "Why DAOs need sovereign infrastructure",
+      "description": "You can't build a decentralized organization on centralized corporate platforms. When Discord bans your server or Google locks your Docs, your DAO loses its operational history.",
+      "points": [
+        {
+          "icon": "🏛️",
+          "title": "Community ownership",
+          "description": "Your DAO's communications, documents, and governance records run on infrastructure your community controls. No platform can censor, suspend, or datamine your operations."
+        },
+        {
+          "icon": "🗳️",
+          "title": "On-chain governance integration",
+          "description": "Connect proposals and votes to on-chain execution. Bureau workflows can require multi-sig or DAO vote approval before treasury actions. Governance that touches both worlds."
+        },
+        {
+          "icon": "🔐",
+          "title": "Privacy where it matters",
+          "description": "Not everything in a DAO needs to be public. Treasury planning, legal discussions, contributor PII — keep sensitive operations private while keeping governance transparent."
+        },
+        {
+          "icon": "📜",
+          "title": "Immutable records",
+          "description": "Every governance action cryptographically signed and timestamped. Proposals, votes, treasury movements — a verifiable history that can't be edited after the fact."
+        },
+        {
+          "icon": "🤖",
+          "title": "AI for governance",
+          "description": "Summarize proposals, analyze treasury impact, draft communications — with AI on your servers. Community discussions never train corporate models."
+        },
+        {
+          "icon": "🌍",
+          "title": "Regulatory readiness",
+          "description": "As DAO regulation emerges globally, having organized records, KYC for contributors, and auditable treasury flows puts your DAO ahead of compliance requirements."
+        }
+      ]
+    },
+    "features": {
+      "heading": "Purpose-built for decentralized operations",
+      "items": [
+        {
+          "icon": "💬",
+          "title": "Sovereign Communication",
+          "description": "Replace Discord with encrypted, self-hosted messaging. Channels, threads, voice rooms — without corporate surveillance or platform risk."
+        },
+        {
+          "icon": "📝",
+          "title": "Proposal Management",
+          "description": "Bureau workflows for proposals: draft, discuss, refine, vote, execute. Multi-sig integration for treasury movements. Complete audit trail."
+        },
+        {
+          "icon": "📁",
+          "title": "Decentralized Docs",
+          "description": "Collaborative documents and knowledge base on your infrastructure. Meeting notes, specs, research — no Google Docs dependency."
+        },
+        {
+          "icon": "🔐",
+          "title": "Contributor Identity",
+          "description": "InstaKYC for contributor verification when compliance requires it. Pseudonymous by default, verified when needed. Privacy-preserving KYC."
+        },
+        {
+          "icon": "📊",
+          "title": "Treasury Dashboard",
+          "description": "Track treasury balances, payment schedules, grant disbursements, and budget allocation. Multi-chain support for diverse treasuries."
+        },
+        {
+          "icon": "🔌",
+          "title": "Web3 Integrations",
+          "description": "Connect to on-chain governance, multi-sig wallets, and DeFi protocols. Wallet-based authentication. ENS support."
+        }
+      ]
+    },
+    "stats": [
+      {
+        "value": "0",
+        "label": "Platform risk"
+      },
+      {
+        "value": "100%",
+        "label": "Community-owned"
+      },
+      {
+        "value": "Web3",
+        "label": "Native integration"
+      },
+      {
+        "value": "∞",
+        "label": "Contributors"
+      }
+    ],
+    "bottomCta": {
+      "heading": "Ready to give your DAO sovereign infrastructure?",
+      "description": "Stop building decentralized organizations on centralized platforms. Deploy Melusina OS.",
+      "buttonText": "Get Started",
+      "buttonHref": "/plans"
+    }
+  },
+  "vasps": {
+    "slug": "vasps",
+    "icon": "₿",
+    "label": "For VASPs & Crypto Businesses",
+    "title": "Crypto operations.\nSovereign infrastructure.",
+    "subtitle": "A complete operating system for crypto businesses — compliance, communication, document management, and client operations. All self-hosted. All yours. Built for the regulatory reality of digital assets.",
+    "trustBadges": [
+      "Self-hosted everything",
+      "MiCA-ready compliance",
+      "Travel Rule built in",
+      "No data leakage by design"
+    ],
+    "primaryCta": {
+      "text": "Get Started",
+      "href": "/plans"
+    },
+    "secondaryCta": {
+      "text": "Compare Solutions",
+      "href": "/compare"
+    },
+    "howItWorks": {
+      "heading": "How Melusina OS works for VASPs",
+      "description": "A purpose-built operating system for crypto businesses, not a patchwork of SaaS tools and spreadsheets.",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Deploy your operations platform",
+          "description": "Install Melusina OS on your infrastructure. InstaKYC for client onboarding, Bureau for compliance workflows, Communication for team coordination, Office for reporting — integrated from day one."
+        },
+        {
+          "number": 2,
+          "title": "Configure for your jurisdictions",
+          "description": "MiCA, MAS, VARA, state-by-state — configure different compliance workflows per market. Travel Rule messaging, sanctions screening, and transaction monitoring built into Bureau workflows."
+        },
+        {
+          "number": 3,
+          "title": "Scale confidently",
+          "description": "Each client in their own Pearl. Each jurisdiction with its own compliance rules. Your team communicates securely. Your data stays on your servers. Grow without growing your vendor risk."
+        }
+      ]
+    },
+    "whyItMatters": {
+      "heading": "Why crypto businesses need their own OS",
+      "description": "Crypto compliance is hard enough. Running it on 15 different SaaS platforms makes it impossible to audit and expensive to maintain.",
+      "points": [
+        {
+          "icon": "🔐",
+          "title": "Data sovereignty matters in crypto",
+          "description": "Client KYC data, wallet addresses, transaction records — your most sensitive data shouldn't sit on vendors' multi-tenant clouds. When your KYC vendor is breached, your clients are exposed."
+        },
+        {
+          "icon": "⚡",
+          "title": "Unified operations",
+          "description": "Stop switching between Slack for communication, Notion for docs, a KYC SaaS, a compliance tool, and a support desk. One OS handles everything — with data that flows between tools."
+        },
+        {
+          "icon": "🤖",
+          "title": "Private AI for compliance",
+          "description": "Screen transactions, analyze risk patterns, generate SARs, draft policies — with AI on your hardware. Client data and compliance intelligence never leave your network."
+        },
+        {
+          "icon": "📜",
+          "title": "Regulation-ready",
+          "description": "MiCA Article 60 requires robust data handling. Travel Rule demands verifiable transmission. AML directives require audit trails. Melusina OS delivers all of this architecturally, not as add-ons."
+        },
+        {
+          "icon": "🛡️",
+          "title": "Pearl isolation",
+          "description": "Every client relationship is cryptographically isolated. A breach in one Pearl cannot access another. This is the data handling standard emerging crypto regulation will require."
+        },
+        {
+          "icon": "💰",
+          "title": "Replace your SaaS stack",
+          "description": "Communication + Office + Compliance + KYC + Document Management + Support. One license. Predictable costs. No per-seat, per-case, or per-API surprises."
+        }
+      ]
+    },
+    "features": {
+      "heading": "Everything a VASP needs in one OS",
+      "items": [
+        {
+          "icon": "🔍",
+          "title": "InstaKYC Integration",
+          "description": "Client onboarding with 44+ field types, document verification, sanctions screening, and continuous monitoring. Isolated per client in Pearls."
+        },
+        {
+          "icon": "📝",
+          "title": "Compliance Workflows",
+          "description": "Bureau-powered workflows for onboarding, periodic review, SAR filing, and incident management. Configurable per jurisdiction."
+        },
+        {
+          "icon": "💬",
+          "title": "Secure Team Communication",
+          "description": "Encrypted messaging for compliance discussions, client escalations, and operational coordination. Archived and auditable."
+        },
+        {
+          "icon": "📊",
+          "title": "Operations Dashboard",
+          "description": "Client pipeline, compliance status, screening alerts, regulatory deadlines — one view of your entire operation."
+        },
+        {
+          "icon": "📁",
+          "title": "Document Management",
+          "description": "Policies, procedures, client files, regulatory correspondence — all versioned, signed, and stored on your infrastructure."
+        },
+        {
+          "icon": "🌐",
+          "title": "Multi-chain Support",
+          "description": "EVM, Bitcoin, Solana, and custom chains for wallet verification and transaction monitoring. Crypto-native, not retrofitted."
+        }
+      ]
+    },
+    "stats": [
+      {
+        "value": "15+",
+        "label": "Tools replaced"
+      },
+      {
+        "value": "MiCA",
+        "label": "Ready"
+      },
+      {
+        "value": "0",
+        "label": "Vendor data access"
+      },
+      {
+        "value": "100%",
+        "label": "Self-hosted"
+      }
+    ],
+    "bottomCta": {
+      "heading": "Ready to unify your crypto operations?",
+      "description": "One sovereign OS for everything your VASP needs. Compliant, private, and under your control.",
+      "buttonText": "Get Started",
+      "buttonHref": "/plans"
+    }
+  },
+  "regulated": {
+    "slug": "regulated",
+    "icon": "🏢",
+    "label": "For Regulated Businesses",
+    "title": "Compliance-grade computing.\nZero vendor risk.",
+    "subtitle": "Payment institutions, insurance companies, fund managers — any regulated business that needs to control where its data lives, how it's processed, and who can access it.",
+    "trustBadges": [
+      "Regulatory compliant",
+      "Full audit trail",
+      "Self-hosted AI",
+      "Data residency control"
+    ],
+    "primaryCta": {
+      "text": "Book a Demo",
+      "href": "/plans"
+    },
+    "secondaryCta": {
+      "text": "See Use Cases",
+      "href": "/use-cases"
+    },
+    "howItWorks": {
+      "heading": "How Melusina OS works for regulated businesses",
+      "description": "Take back control of your data, your communications, and your compliance workflows — all on infrastructure that satisfies your regulator.",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Choose your deployment",
+          "description": "On-premise, private cloud, or managed hosting. Deploy in the jurisdictions your regulator requires. Meet data residency requirements by architecture, not by policy."
+        },
+        {
+          "number": 2,
+          "title": "Unify your operations",
+          "description": "Communication for compliant team coordination. Bureau for workflow automation and compliance management. Office for document creation. InstaKYC for identity verification. All sovereign."
+        },
+        {
+          "number": 3,
+          "title": "Demonstrate compliance",
+          "description": "Every action auditable. Every document versioned and signed. Every communication archived. When your regulator asks, you're ready — because the OS is designed for it."
+        }
+      ]
+    },
+    "whyItMatters": {
+      "heading": "Why regulated businesses go sovereign",
+      "description": "Regulators are increasing scrutiny of third-party risk, cloud dependencies, and data handling. Sovereign infrastructure isn't future-proofing — it's current-proofing.",
+      "points": [
+        {
+          "icon": "📋",
+          "title": "Third-party risk elimination",
+          "description": "Every SaaS vendor is a third-party risk entry on your register. Replace 15 vendors with one sovereign OS and transform your third-party risk profile overnight."
+        },
+        {
+          "icon": "🔒",
+          "title": "Data residency by design",
+          "description": "Deploy in Luxembourg, deploy in Singapore, deploy on-premise. Your data lives where your regulator says it should. Not where your SaaS vendor's cheapest data center is."
+        },
+        {
+          "icon": "📜",
+          "title": "Audit-ready architecture",
+          "description": "Melusina OS was designed for regulated environments. Complete, immutable audit trails for every action. Cryptographic signatures on every critical operation. Not add-on compliance — built-in compliance."
+        },
+        {
+          "icon": "🤖",
+          "title": "AI without data leakage",
+          "description": "Draft reports, analyze documents, screen parties — with AI models running on your infrastructure. Your regulatory intelligence stays yours. Your client data never trains external models."
+        },
+        {
+          "icon": "🏗️",
+          "title": "Operational resilience",
+          "description": "DORA? Operational resilience requirements? When your OS runs on your infrastructure, you control uptime, recovery, and continuity. No dependency on a vendor's availability."
+        },
+        {
+          "icon": "💡",
+          "title": "Simplified vendor management",
+          "description": "Communication, office suite, document management, compliance, KYC — one vendor instead of fifteen. Simpler procurement, simpler auditing, simpler risk management."
+        }
+      ]
+    },
+    "features": {
+      "heading": "Enterprise features for regulated operations",
+      "items": [
+        {
+          "icon": "🔐",
+          "title": "Role-Based Access Control",
+          "description": "Fine-grained permissions per user, per function, per data set. Know exactly who can access what — and prove it to your regulator."
+        },
+        {
+          "icon": "📊",
+          "title": "Compliance Dashboard",
+          "description": "Regulatory deadlines, pending reviews, screening alerts, document expiries — a real-time compliance cockpit for your entire organization."
+        },
+        {
+          "icon": "💬",
+          "title": "Supervised Communication",
+          "description": "Encrypted messaging with configurable archiving and supervision rules. Meet communication recording requirements without compromising privacy."
+        },
+        {
+          "icon": "📝",
+          "title": "Workflow Automation",
+          "description": "Bureau-powered workflows for approvals, escalations, periodic reviews, and regulatory reporting. No manual tracking. No missed deadlines."
+        },
+        {
+          "icon": "🔍",
+          "title": "Screening & Monitoring",
+          "description": "Sanctions, PEP, adverse media — continuous screening of all parties. InstaKYC integration for identity verification throughout the lifecycle."
+        },
+        {
+          "icon": "📁",
+          "title": "Records Management",
+          "description": "Policies, procedures, meeting minutes, decisions — all with versioning, signatures, and retention scheduling. Ready for regulatory inspection at any time."
+        }
+      ]
+    },
+    "stats": [
+      {
+        "value": "1",
+        "label": "OS for everything"
+      },
+      {
+        "value": "0",
+        "label": "Third-party risk"
+      },
+      {
+        "value": "100%",
+        "label": "Audit coverage"
+      },
+      {
+        "value": "∞",
+        "label": "Scalable Pearls"
+      }
+    ],
+    "bottomCta": {
+      "heading": "Ready to simplify your regulatory technology?",
+      "description": "One sovereign OS. Complete compliance. Total data control. Deploy Melusina OS.",
+      "buttonText": "Book a Demo",
+      "buttonHref": "/plans"
+    }
+  },
+  "introducers": {
+    "slug": "introducers",
+    "icon": "🤝",
+    "label": "For Introducers",
+    "title": "Introduce sovereign computing.\nEarn when they deploy.",
+    "subtitle": "Know a family office, trust company, or regulated business struggling with data sovereignty? Introduce them to Melusina OS. We handle the demo, the deployment, the support. You earn commission.",
+    "trustBadges": [
+      "No cost to join",
+      "No technical knowledge required",
+      "Commission per deployment",
+      "White-label available"
+    ],
+    "primaryCta": {
+      "text": "Register as Introducer",
+      "href": "/plans"
+    },
+    "secondaryCta": {
+      "text": "Learn More",
+      "href": "/use-cases"
+    },
+    "howItWorks": {
+      "heading": "How the introducer model works",
+      "description": "Make one introduction. We handle the rest. You earn when they deploy.",
+      "steps": [
+        {
+          "number": 1,
+          "title": "Connect & qualify",
+          "description": "You know businesses that need data sovereignty — family offices, trust companies, banks, regulated firms. When you identify a fit, make an introduction. That's all we need from you."
+        },
+        {
+          "number": 2,
+          "title": "We demonstrate & deploy",
+          "description": "Our team runs the demo, handles technical due diligence, configures the deployment, and manages the implementation. You stay informed. You don't need to sell or support."
+        },
+        {
+          "number": 3,
+          "title": "You earn commission",
+          "description": "When the introduced business deploys Melusina OS, you earn a referral commission. Transparent tracking, regular reporting, and prompt payment. Long-term residuals for ongoing subscriptions."
+        }
+      ]
+    },
+    "whyItMatters": {
+      "heading": "Why introduce Melusina OS",
+      "description": "Data sovereignty is becoming a regulatory requirement, not just a preference. The businesses in your network will need this. Be the one who introduces them.",
+      "points": [
+        {
+          "icon": "📈",
+          "title": "Growing market demand",
+          "description": "DORA, GDPR enforcement, regulatory third-party risk requirements — regulated businesses are actively looking for sovereign alternatives to SaaS stacks. The timing is now."
+        },
+        {
+          "icon": "💎",
+          "title": "High-value deployments",
+          "description": "Melusina OS replaces 10-15 SaaS tools. These are significant deployments with meaningful license values. Your commission reflects that."
+        },
+        {
+          "icon": "🔄",
+          "title": "Recurring revenue",
+          "description": "Ongoing managed hosting, support contracts, and additional licenses generate residual income for you. One introduction can pay for years."
+        },
+        {
+          "icon": "🏦",
+          "title": "Your network is the fit",
+          "description": "If you work with family offices, trust companies, banks, or regulated firms — you already know organizations with this exact problem. Data sovereignty conversation is natural."
+        },
+        {
+          "icon": "🛡️",
+          "title": "We handle complexity",
+          "description": "You make the introduction. We handle sales engineering, deployment, customization, and ongoing support. You don't need to understand infrastructure — just recognize the need."
+        },
+        {
+          "icon": "🌍",
+          "title": "No geographic limits",
+          "description": "Melusina OS deploys globally. Luxembourg, Singapore, Middle East, Americas — wherever your network operates, the product fits."
+        }
+      ]
+    },
+    "features": {
+      "heading": "What you get as an introducer",
+      "items": [
+        {
+          "icon": "📊",
+          "title": "Transparent Dashboard",
+          "description": "Track your introductions, pipeline status, deployment progress, and commission earnings. Real-time visibility into every referral."
+        },
+        {
+          "icon": "📚",
+          "title": "Sales Materials",
+          "description": "Pitch decks, case studies, ROI calculators, and comparison guides. Everything you need to spark a conversation — we provide the depth."
+        },
+        {
+          "icon": "🏷️",
+          "title": "White-Label Option",
+          "description": "For larger introducers: co-branded materials, custom landing pages, and partner logos. Make Melusina OS part of your advisory offering."
+        },
+        {
+          "icon": "💬",
+          "title": "Dedicated Support",
+          "description": "Direct line to our partnership team. Quick answers, joint calls, and coordinated follow-up. You're not a ticket number."
+        },
+        {
+          "icon": "💰",
+          "title": "Flexible Compensation",
+          "description": "Upfront referral fees, recurring residuals, or hybrid models. Choose the structure that fits your business."
+        },
+        {
+          "icon": "🤝",
+          "title": "Events & Co-Marketing",
+          "description": "Joint webinars, conference presence, and co-authored content. Build your profile as a sovereign computing advisor."
+        }
+      ]
+    },
+    "stats": [
+      {
+        "value": "💰",
+        "label": "Referral commission"
+      },
+      {
+        "value": "$0",
+        "label": "Cost to join"
+      },
+      {
+        "value": "0",
+        "label": "Licenses required"
+      },
+      {
+        "value": "1",
+        "label": "Introduction needed"
+      }
+    ],
+    "bottomCta": {
+      "heading": "Know someone who needs sovereign computing?",
+      "description": "Make one introduction. We handle everything. You earn commission when they deploy.",
+      "buttonText": "Register as Introducer",
+      "buttonHref": "/plans"
+    }
+  }
+}

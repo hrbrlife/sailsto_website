@@ -1,0 +1,98 @@
+[navHome]
+other = "Home"
+
+[navUseCases]
+other = "Use Cases"
+
+[navCompare]
+other = "Compare"
+
+[navRoadmap]
+other = "Roadmap"
+
+[navPricing]
+other = "Pricing"
+
+[navForYou]
+other = "For You"
+
+[navApps]
+other = "Apps"
+
+[navKnowledgeBase]
+other = "Knowledge Base"
+
+[navBlog]
+other = "Blog"
+
+[navDocs]
+other = "Docs"
+
+[navFAQ]
+other = "FAQ"
+
+[navGlossary]
+other = "Glossary"
+
+[navCompany]
+other = "Company"
+
+[navGetMelusina]
+other = "Get Melusina"
+
+[navAllUseCases]
+other = "All Use Cases"
+
+[forFamilyOffices]
+other = "For Family Offices"
+
+[forTrustCompanies]
+other = "For Trust Companies"
+
+[forPrivateBanks]
+other = "For Private Banks"
+
+[forDAOs]
+other = "For DAOs"
+
+[forVASPs]
+other = "For VASPs"
+
+[forRegulated]
+other = "For Regulated Firms"
+
+[forIntroducers]
+other = "For Introducers"
+
+[footerDescription]
+other = "Melusina is a sovereign operating system for the Web3 & AI era. Run your apps, AI models, and workflows on infrastructure you control—no external dependencies, no vendor lock-in."
+
+[footerTagline]
+other = "Self-hosted • Sovereign • Open Source"
+
+[footerOnSite]
+other = "On the site"
+
+[footerResources]
+other = "Resources"
+
+[footerConnect]
+other = "Connect"
+
+[footerFamily]
+other = "hrbr.life Family"
+
+[footerLegal]
+other = "Legal Notice"
+
+[footerDisclaimer]
+other = "Melusina OS is infrastructure software. It does not provide, broker, or advise on financial products, securities, or investment opportunities. References to blockchain, NFTs, or tokens describe technical licensing and operational mechanisms only. Regulated financial services within the Hrbr.Life ecosystem are provided by separately licensed entities. Nothing on this site constitutes financial, legal, or investment advice."
+
+[footerCopyright]
+other = "© {{ now.Year }} Hrbr.Life Ltd. All rights reserved."
+
+[learnMore]
+other = "Learn More"
+
+[getStarted]
+other = "Get Started"

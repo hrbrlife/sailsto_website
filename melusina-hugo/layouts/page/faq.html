@@ -1,0 +1,57 @@
+{{ define "main" }}
+{{ $d := site.Data.pages.faq }}
+
+{{/* ═══════════════ 1. HERO ═══════════════ */}}
+{{ partial "blocks/hero" (dict "data" $d.hero "class" "neon-hero") }}
+
+{{/* ═══════════════ 2. CATEGORY FILTER ═══════════════ */}}
+<section class="py-4 bg-light border-top border-bottom">
+  <div class="container">
+    <div class="d-flex flex-wrap gap-2 align-items-center">
+      <span class="text-muted small fw-semibold">🎯 Filter by category:</span>
+      <span class="badge rounded-pill bg-primary category-pill fw-semibold faq-filter active" role="button" data-category="all">All</span>
+      {{ range $d.categories }}
+      <span class="badge rounded-pill bg-light text-dark category-pill fw-semibold faq-filter" role="button" data-category="{{ .key }}">{{ .icon }} {{ .label }}</span>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{/* ═══════════════ 3. FAQ ITEMS ═══════════════ */}}
+<section class="py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-xl-8 mx-auto">
+        <div class="accordion accordion-flush" id="faqMain">
+          {{ range $i, $item := $d.faqs }}
+          <div class="accordion-item faq-item" data-categories="{{ delimit .categories " " }}">
+            <h2 class="accordion-header" id="faqMH{{ $i }}">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqMB{{ $i }}" aria-expanded="false" aria-controls="faqMB{{ $i }}">
+                <span class="me-auto">{{ .question }}</span>
+                {{ if .featured }}<span class="badge bg-warning text-dark ms-2">Featured</span>{{ end }}
+              </button>
+            </h2>
+            <div id="faqMB{{ $i }}" class="accordion-collapse collapse" aria-labelledby="faqMH{{ $i }}">
+              <div class="accordion-body text-muted">
+                {{ .answer }}
+                {{ with .categories }}
+                <div class="mt-3 d-flex flex-wrap gap-2">
+                  {{ range . }}
+                  <span class="badge bg-light text-dark">{{ . }}</span>
+                  {{ end }}
+                </div>
+                {{ end }}
+              </div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ═══════════════ 4. CTA ═══════════════ */}}
+{{ partial "blocks/cta" (dict "data" $d.cta "variant" "gradient") }}
+
+{{ end }}

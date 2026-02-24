@@ -1,0 +1,133 @@
+{
+  "seo": {
+    "title": "Melusina Roadmap | Trust Chain, Threshold Crypto & Sovereign Infrastructure",
+    "description": "Track Melusina's implementation milestones: Solana program deployment, NFT trust hierarchy, threshold cryptography, DANE/DNSSEC, and Pearl orchestration.",
+    "keywords": "melusina roadmap, trust chain milestones, threshold crypto timeline, NFT licensing progress",
+    "ogImage": "",
+    "canonicalUrl": "https://melusina-os.org/roadmap",
+    "favicon": "🗺️"
+  },
+  "hero": {
+    "eyebrow": "Implementation progress",
+    "heading": "Building verifiable infrastructure in the open",
+    "subtitle": "Every milestone produces on-chain artifacts. Progress you can verify — not promises you have to trust."
+  },
+  "items": [
+    {
+      "id": "m1",
+      "phase": "M1 — Foundation",
+      "status": "complete",
+      "title": "Solana Program & Foundation NFT",
+      "description": "Deploy the Melusina License Registry program on Solana. Mint the Foundation Master NFT. Establish the root of the hierarchical trust chain.",
+      "deliverables": [
+        "License Registry program deployed (8bVLhPF9suNrB3Tj5q9Ps6uyonhWxeTUpXTyDRwitnR9)",
+        "Foundation Master NFT minted with metadata URI",
+        "Reseller NFT minting instruction operational",
+        "License NFT minting under reseller authority",
+        "Keyholder registration with X25519 public keys"
+      ]
+    },
+    {
+      "id": "m2",
+      "phase": "M2 — Threshold Crypto",
+      "status": "complete",
+      "title": "Shamir SSS & Keyholder Ops",
+      "description": "Implement threshold cryptography layer: Shamir secret sharing over GF(256), NaCl SealedBox per-keyholder encryption, and M-of-N Vault unseal.",
+      "deliverables": [
+        "Shamir SSS implementation over GF(256)",
+        "NaCl SealedBox encryption per keyholder X25519 key",
+        "Threshold Vault unseal (M-of-N keyholders)",
+        "Threshold-encrypted backup system",
+        "Keyholder share distribution and rotation"
+      ]
+    },
+    {
+      "id": "m3",
+      "phase": "M3 — Boot & Verification",
+      "status": "in-progress",
+      "title": "4-Phase Boot Orchestration",
+      "description": "Blockchain-coordinated boot sequence: license verification, monitoring setup, threshold Vault unseal, and service start. No service runs without on-chain confirmation.",
+      "deliverables": [
+        "Phase 1: License NFT verification via Solana RPC",
+        "Phase 2: Monitoring and alerting provisioned",
+        "Phase 3: Threshold keyholder Vault unseal",
+        "Phase 4: Service startup with derived ephemeral CA keys",
+        "DANE TLSA record publishing in DNSSEC-signed zones"
+      ]
+    },
+    {
+      "id": "m4",
+      "phase": "M4 — SOL Billing",
+      "status": "in-progress",
+      "title": "On-Chain Billing & Pearl Escrow",
+      "description": "SOL-denominated billing with on-chain payment verification via getTransaction(). Pearl-based metered billing with escrow and settlement.",
+      "deliverables": [
+        "SOL payment verification via getTransaction()",
+        "Tier-based cloud plans (Starter → Enterprise in SOL)",
+        "Per-Pearl SOL micropayment wallets with escrow",
+        "Pearl spend limits and preauthorization thresholds",
+        "Automated license suspension on payment lapse",
+        "Payment history on-chain via Memo transactions"
+      ]
+    },
+    {
+      "id": "m5",
+      "phase": "M5 — Pearl Orchestration",
+      "status": "planned",
+      "title": "Sovereign Pearl Isolation & AI Pearls",
+      "description": "Full Pearl lifecycle orchestration with Incus containers, capability-based access control, and isolated AI Pearls for local model inference.",
+      "deliverables": [
+        "Pearl provisioning via Incus container orchestration",
+        "Capability-based access control",
+        "Pearl-blind shared OTP: platform-level codes with HMAC proof tokens, Pearl never sees the code",
+        "Shared notification stack: email, SMS, Telegram via Grapple capability grants",
+        "AI Pearl isolation — local LLMs with no network egress",
+        "Pearl-level backup with threshold encryption",
+        "Recallable Admin NFT integration per Pearl"
+      ]
+    },
+    {
+      "id": "m6",
+      "phase": "M6 — Advanced Capabilities",
+      "status": "planned",
+      "title": "PWA, Wallet Auth & Pearl Creation",
+      "description": "Progressive Web App with content-free push, 3-tier Solana wallet authentication, and policy-gated Pearl-creates-Pearl workflow.",
+      "deliverables": [
+        "PWA manifest and service worker with offline access",
+        "Content-free push notifications (empty payloads, DDP-aware)",
+        "3-tier wallet login: extension / Mobile Wallet Adapter / QR code",
+        "Keyholder NFT → auto-admin promotion with 5-minute cache",
+        "Policy-gated Pearl-creates-Pearl with approval popup",
+        "Four Pearl link modes: burn-after-reading, timed, use-count, unlimited",
+        "NFT-backed Pearl shares via Solana PDA"
+      ]
+    },
+    {
+      "id": "m7",
+      "phase": "M7 — Sidelying Services",
+      "status": "planned",
+      "title": "Mermail, Solana Proxy & Cyclone",
+      "description": "Deploy production sidelying services: Mermail email gateway, rate-limited Solana RPC proxy, and Cyclone multi-machine clustering. Internal mTLS between all containers.",
+      "deliverables": [
+        "Mermail email gateway (Go, Postmark + SMTP failover, DKIM, SRS, SQLite queue)",
+        "Solana RPC proxy (47 whitelisted methods, rate limiting, key injection)",
+        "Cyclone cluster orchestration (C++, Cap'n Proto schema)",
+        "Internal mTLS via threshold-derived CA between all containers",
+        "TrustMaster external verification tool",
+        "Cap'n Proto dual transport (native + postMessage bridging)"
+      ]
+    }
+  ],
+  "cta": {
+    "heading": "Want to verify our progress?",
+    "subtitle": "Every milestone produces on-chain artifacts. Walk the trust chain yourself or book a working session to see it live.",
+    "primaryButton": {
+      "text": "Book a session",
+      "link": "/company"
+    },
+    "secondaryButton": {
+      "text": "View architecture",
+      "link": "/architecture"
+    }
+  }
+}

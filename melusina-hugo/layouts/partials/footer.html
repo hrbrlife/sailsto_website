@@ -1,0 +1,109 @@
+{{- $lang := .Site.Language.Lang | default "en" -}}
+<footer class="neon-footer text-white py-5 mt-auto">
+    <div class="container">
+        <div class="gy-4 row">
+            <!-- Brand -->
+            <div class="col-lg-3">
+                <h5 class="mb-3 d-flex align-items-center gap-2">
+                    <img alt="Melusina" src="{{ "melulogo-cyan.svg" | relURL }}" style="width: 28px; height: 28px; border-radius: 3px; filter: drop-shadow(rgba(0, 229, 255, 0.4) 0px 0px 6px);">
+                    <span class="d-flex flex-column">
+                        <span style="font-family: Orbitron, sans-serif; font-weight: 800; font-size: 14px; letter-spacing: 0.05em;">
+                            <span class="neon-text">MELUSINA</span>
+                        </span>
+                        <span style="color: rgb(110, 95, 138); font-weight: 400; font-size: 8px; font-family: 'JetBrains Mono', monospace; letter-spacing: 0.1em; margin-top: 1px;">SOVEREIGN WEB3 SUPERAPP OS</span>
+                    </span>
+                </h5>
+                <p class="text-white-50 prose">{{ i18n "footerDescription" | default "Melusina is a sovereign operating system for the Web3 & AI era. Run your apps, AI models, and workflows on infrastructure you control—no external dependencies, no vendor lock-in." }}</p>
+                <p class="small text-white-50">{{ i18n "footerTagline" | default "Self-hosted • Sovereign • Open Source" }}</p>
+            </div>
+            
+            <!-- On the Site -->
+            <div class="col-lg-2 col-md-6">
+                <h6 class="mb-3 text-uppercase-spaced">{{ i18n "footerOnSite" | default "On the site" }}</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="footer-link" href="{{ "/" | relURL }}">{{ i18n "navHome" | default "Home" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "use-cases/" | relURL }}">{{ i18n "navUseCases" | default "Use Cases" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "compare/" | relURL }}">{{ i18n "navCompare" | default "Compare" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "knowledge/roadmap/" | relURL }}">{{ i18n "navRoadmap" | default "Roadmap" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "knowledge/blog/" | relURL }}">{{ i18n "navBlog" | default "Blog" }}</a></li>
+                </ul>
+            </div>
+            
+            <!-- For You -->
+            <div class="col-lg-2 col-md-6">
+                <h6 class="mb-3 text-uppercase-spaced">{{ i18n "navForYou" | default "For You" }}</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="footer-link" href="{{ "for/family-offices/" | relURL }}">🏛️ {{ i18n "forFamilyOffices" | default "For Family Offices" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "for/trust-companies/" | relURL }}">⚖️ {{ i18n "forTrustCompanies" | default "For Trust Companies" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "for/private-banks/" | relURL }}">🏦 {{ i18n "forPrivateBanks" | default "For Private Banks" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "for/daos/" | relURL }}">🗳️ {{ i18n "forDAOs" | default "For DAOs & Web3 Organizations" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "for/vasps/" | relURL }}">₿ {{ i18n "forVASPs" | default "For VASPs & Crypto Businesses" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "for/regulated/" | relURL }}">🏢 {{ i18n "forRegulated" | default "For Regulated Businesses" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "for/introducers/" | relURL }}">🤝 {{ i18n "forIntroducers" | default "For Introducers" }}</a></li>
+                </ul>
+            </div>
+            
+            <!-- Resources -->
+            <div class="col-lg-2 col-md-6">
+                <h6 class="mb-3 text-uppercase-spaced">{{ i18n "footerResources" | default "Resources" }}</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="footer-link" href="{{ "knowledge/" | relURL }}">{{ i18n "navKnowledgeBase" | default "Knowledge Base" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "knowledge/faq/" | relURL }}">{{ i18n "navFAQ" | default "FAQ" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "knowledge/glossary/" | relURL }}">{{ i18n "navGlossary" | default "Glossary" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "plans/" | relURL }}">{{ i18n "navPricing" | default "Plans" }}</a></li>
+                </ul>
+            </div>
+            
+            <!-- Connect -->
+            <div class="col-lg-3 col-md-6">
+                <h6 class="mb-3 text-uppercase-spaced">{{ i18n "footerConnect" | default "Connect" }}</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a class="footer-link" href="{{ "company/" | relURL }}">{{ i18n "navCompany" | default "Company" }}</a></li>
+                    <li class="mb-2"><a href="mailto:sales@melusina-os.org" class="footer-link">sales@melusina-os.org</a></li>
+                    <li class="mb-2"><a href="https://t.me/melusina_os" target="_blank" rel="noopener noreferrer" class="footer-link">Telegram</a></li>
+                </ul>
+                <h6 class="mb-3 mt-4 text-uppercase-spaced">{{ i18n "footerFamily" | default "hrbr.life Family" }}</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="https://sails.to" target="_blank" rel="noopener noreferrer" class="footer-link">Sails.to</a></li>
+                    <li class="mb-2"><a href="https://kyc.lat" target="_blank" rel="noopener noreferrer" class="footer-link">kyc.lat</a></li>
+                    <li class="mb-2"><a href="https://melusina-os.org" target="_blank" rel="noopener noreferrer" class="footer-link">Melusina OS</a></li>
+                </ul>
+            </div>
+            
+            <!-- Legal Notice -->
+            <div class="col-lg-2 col-md-3">
+                <h6 class="mb-3 text-uppercase-spaced">{{ i18n "footerLegal" | default "Legal Notice" }}</h6>
+                <ul class="list-unstyled small" style="color: rgba(232, 232, 255, 0.5); line-height: 1.8;">
+                    <li><strong style="color: rgba(232, 232, 255, 0.7);">Hrbr.Life Ltd.</strong></li>
+                    <li>Republic of the Marshall Islands</li>
+                    <li class="mt-2"><a href="mailto:legal@melusina-os.org" class="footer-link">legal@melusina-os.org</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <hr style="border-color: rgba(0, 229, 255, 0.15); margin: 1.5rem 0;">
+        
+        <!-- Financial Disclaimer -->
+        <div class="mb-3 row">
+            <div class="col">
+                <p class="mb-0" style="color: rgba(232, 232, 255, 0.3); font-size: 0.7rem; line-height: 1.5;">
+                    {{ i18n "footerDisclaimer" | default "Melusina OS is infrastructure software. It does not provide, broker, or advise on financial products, securities, or investment opportunities. References to blockchain, NFTs, or tokens describe technical licensing and operational mechanisms only. Regulated financial services within the Hrbr.Life ecosystem are provided by separately licensed entities. Nothing on this site constitutes financial, legal, or investment advice." }}
+                </p>
+            </div>
+        </div>
+        
+        <!-- Bottom bar -->
+        <div class="d-flex flex-wrap justify-content-between align-items-center">
+            <small style="color: rgba(232, 232, 255, 0.4);">
+                © {{ now.Year }} Hrbr.Life Ltd. All rights reserved.
+            </small>
+            <div class="d-flex gap-3">
+                <a href="{{ "privacy/" | relURL }}" class="footer-link small">Privacy</a>
+                <a href="{{ "terms/" | relURL }}" class="footer-link small">Terms</a>
+                {{ with .Site.Data.version }}
+                <span class="badge" style="background: rgba(0,229,255,0.1); color: rgba(0,229,255,0.6); font-size: 0.65rem;">v{{ .hashShort | default "dev" }} #{{ .buildNumber | default "0" }}</span>
+                {{ end }}
+            </div>
+        </div>
+    </div>
+</footer>

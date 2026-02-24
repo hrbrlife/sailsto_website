@@ -1,0 +1,29 @@
+{{/* FAQ Block - matches React FAQBlock/FAQAccordion component */}}
+{{/* Usage: {{ partial "blocks/faq" (dict "eyebrow" "" "heading" "" "items" .items "class" "py-7") }} */}}
+{{ $class := .class | default "py-7" }}
+
+<section class="{{ $class }}">
+  <div class="container">
+    {{ if or .eyebrow .heading }}
+    {{ partial "blocks/section-header" (dict "eyebrow" .eyebrow "heading" .heading "subtitle" .subtitle) }}
+    {{ end }}
+    <div class="row">
+      <div class="col-lg-10 col-xl-8 mx-auto">
+        <div class="accordion accordion-flush" id="faqAccordion">
+          {{ range $i, $item := .items }}
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="faqHead{{ $i }}">
+              <button class="accordion-button{{ if $i }} collapsed{{ end }}" type="button" data-bs-toggle="collapse" data-bs-target="#faqBody{{ $i }}" aria-expanded="{{ if not $i }}true{{ else }}false{{ end }}" aria-controls="faqBody{{ $i }}">
+                {{ .question }}
+              </button>
+            </h2>
+            <div id="faqBody{{ $i }}" class="accordion-collapse collapse{{ if not $i }} show{{ end }}" aria-labelledby="faqHead{{ $i }}">
+              <div class="accordion-body text-muted">{{ .answer }}</div>
+            </div>
+          </div>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

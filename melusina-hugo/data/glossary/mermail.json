@@ -1,0 +1,90 @@
+{
+  "slug": "mermail",
+  "term": "Mermail",
+  "shortDefinition": "Melusina's sidelying email gateway service with Postmark + SMTP failover and DKIM signing.",
+  "longDefinition": {
+    "type": "root",
+    "children": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Mermail is Melusina's Go-based email gateway that runs as a sidelying service alongside the core platform. It handles all outbound email delivery for OTP codes, notifications, and Pearl-initiated emails."
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "children": [
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Dual delivery: Postmark API as primary, direct SMTP as failover."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "DKIM signing: cryptographic email authentication for deliverability."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "SRS forwarding: Sender Rewriting Scheme for proper email routing."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "SQLite queue: persistent email queue for reliability and retry."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "React admin dashboard: monitor delivery status, bounces, and queue health."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Infrastructure",
+  "relatedTerms": [
+    "grapple",
+    "capnproto"
+  ],
+  "searchTerms": [
+    "mermail",
+    "email gateway",
+    "smtp",
+    "postmark",
+    "dkim",
+    "sidelying"
+  ],
+  "createdAt": "2025-11-28T00:00:00.000Z",
+  "updatedAt": "2025-11-28T00:00:00.000Z",
+  "metadata": {
+    "seo": {
+      "title": "Mermail Email Gateway",
+      "description": "Definition of Mermail, Melusina's sidelying email gateway service."
+    }
+  }
+}

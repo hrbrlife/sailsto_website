@@ -1,0 +1,81 @@
+{
+  "slug": "capnproto",
+  "term": "Cap'n Proto",
+  "shortDefinition": "Melusina's universal inter-process communication protocol—type-safe, zero-copy, capability-based.",
+  "longDefinition": {
+    "type": "root",
+    "children": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Cap'n Proto is the RPC backbone of Melusina. Every Pearl API, system call, and capability exchange uses Cap'n Proto schemas. The protocol provides type safety without serialization overhead—messages are read directly from the wire format."
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "children": [
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Type-safe: all interfaces defined in .capnp schema files with code generation."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Zero-copy: no serialization/deserialization step—data is used in wire format."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Capability-based: capabilities (object references) are passed over RPC, not just data."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Dual transport: native Cap'n Proto for internal calls, postMessage bridging for HTTP-sandboxed Pearls."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Technology",
+  "relatedTerms": [
+    "pearl",
+    "grapple"
+  ],
+  "searchTerms": [
+    "capnp",
+    "cap'n proto",
+    "rpc",
+    "ipc",
+    "protocol buffers",
+    "zero copy"
+  ],
+  "createdAt": "2025-11-28T00:00:00.000Z",
+  "updatedAt": "2025-11-28T00:00:00.000Z",
+  "metadata": {
+    "seo": {
+      "title": "Cap'n Proto RPC in Melusina",
+      "description": "Definition of Cap'n Proto, Melusina's universal IPC/RPC protocol."
+    }
+  }
+}

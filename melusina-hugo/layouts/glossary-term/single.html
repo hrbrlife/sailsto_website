@@ -1,0 +1,97 @@
+{{ define "main" }}
+{{ $term := .Params }}
+{{ $slug := .File.ContentBaseName }}
+{{ $data := index site.Data.glossary $slug }}
+{{ $title := .Title }}
+{{ $definition := "" }}
+{{ with $data }}{{ with .shortDefinition }}{{ $definition = . }}{{ end }}{{ end }}
+{{ $category := "" }}
+{{ with $data }}{{ with .category }}{{ $category = . }}{{ end }}{{ end }}
+
+{{/* ═══════════════ 1. BREADCRUMB ═══════════════ */}}
+<div class="bg-light border-bottom">
+  <div class="container py-3">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a href="{{ "/" | relURL }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ "glossary/" | relURL }}">Glossary</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ $title }}</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+{{/* ═══════════════ 2. CONTENT ═══════════════ */}}
+<section class="py-4">
+  <div class="container">
+    <div class="row">
+      {{/* Main Content */}}
+      <div class="col-lg-8">
+        <div class="card neon-card border-0 mb-4">
+          <div class="card-body p-5">
+            <h1 class="display-5 fw-bold text-white mb-3">{{ $title }}</h1>
+            {{ with $category }}
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              {{ $catKey := . | lower | urlize }}
+              {{ $cat := index site.Data.glossary_categories $catKey }}
+              <span class="badge bg-{{ with $cat }}{{ .color }}{{ else }}secondary{{ end }}">{{ with $cat }}{{ .icon }} {{ end }}{{ . }}</span>
+            </div>
+            {{ end }}
+            {{ with $definition }}
+            <p class="lead text-muted mb-4">{{ . }}</p>
+            {{ end }}
+            {{ with $data }}
+            {{ with .updatedAt }}
+            <div class="text-muted small"><span class="me-2">📅</span>Last updated: {{ . }}</div>
+            {{ end }}
+            {{ end }}
+          </div>
+        </div>
+        {{/* Long definition from .Content (markdown from .md file) */}}
+        {{ if .Content }}
+        <div class="card border-0 mb-4 shadow-sm">
+          <div class="card-body p-4">
+            <div class="markdown-content">
+              {{ .Content }}
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{/* Sidebar */}}
+      <div class="col-lg-4">
+        {{/* Related Terms */}}
+        {{ with $data.relatedTerms }}
+        <div class="card border-0 shadow-sm mb-4">
+          <div class="card-body p-4">
+            <h5 class="mb-3">Related Terms</h5>
+            <ul class="list-unstyled mb-0">
+              {{ range . }}
+              <li class="mb-2">
+                <a href="{{ printf "glossary/%s/" (urlize .) | relURL }}" style="color: #00E5FF;">{{ . }}</a>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </div>
+        {{ end }}
+        {{/* Term Details */}}
+        {{ with $data }}
+        <div class="card border-0 shadow-sm">
+          <div class="card-body p-4">
+            <h5 class="mb-3">Details</h5>
+            {{ with .category }}
+            <p class="text-muted small mb-2"><strong>Category:</strong> {{ . }}</p>
+            {{ end }}
+            {{ with .updatedAt }}
+            <p class="text-muted small mb-0"><strong>Updated:</strong> {{ . }}</p>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

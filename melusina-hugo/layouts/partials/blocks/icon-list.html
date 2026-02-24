@@ -1,0 +1,29 @@
+{{/* Icon List Block - matches React IconListBlock */}}
+{{/* Usage: {{ partial "blocks/icon-list" (dict "eyebrow" "" "heading" "" "items" .items "columns" 1 "class" "py-7") }} */}}
+{{ $columns := .columns | default 1 }}
+{{ $class := .class | default "py-7" }}
+{{ $colSize := 12 }}
+{{ if eq $columns 2 }}{{ $colSize = 6 }}{{ end }}
+
+<section class="{{ $class }}">
+  <div class="container">
+    {{ if or .eyebrow .heading }}
+    {{ partial "blocks/section-header" (dict "eyebrow" .eyebrow "heading" .heading "subtitle" .subtitle) }}
+    {{ end }}
+    <div class="row g-4">
+      {{ range .items }}
+      <div class="col-md-{{ $colSize }} mx-auto">
+        <div class="d-flex h-100 border-bottom pb-3">
+          {{ with .icon }}
+          <div class="flex-shrink-0 me-3">{{ . }}</div>
+          {{ end }}
+          <div class="flex-grow-1">
+            <h5 class="mb-2">{{ .title }}</h5>
+            <p class="text-muted mb-0">{{ .description }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

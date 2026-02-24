@@ -1,0 +1,69 @@
+{
+  "slug": "pearl",
+  "term": "Pearl",
+  "shortDefinition": "An isolated app instance in Melusina OS with its own capability URL and boundaries.",
+  "longDefinition": {
+    "type": "root",
+    "children": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "A Pearl is the atomic unit of computing in Melusina OS. Each Pearl is a single instance of an app—one document, one notebook, one portal—running in an isolated container with its own capability URL."
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "children": [
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Isolation: syscall and network sandboxing per Pearl."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Sharing: access is granted through capability URLs, not global ACLs."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Portability: any Linux app packaged as an SPK can run as Pearls."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Technology",
+  "relatedTerms": [
+    "grapple",
+    "capability-url"
+  ],
+  "searchTerms": [
+    "grain",
+    "app instance",
+    "melusina pearl"
+  ],
+  "createdAt": "2025-11-28T00:00:00.000Z",
+  "updatedAt": "2025-11-28T00:00:00.000Z",
+  "metadata": {
+    "seo": {
+      "title": "Pearl (Melusina OS)",
+      "description": "Definition of a Pearl, the isolated app unit in Melusina OS."
+    }
+  }
+}

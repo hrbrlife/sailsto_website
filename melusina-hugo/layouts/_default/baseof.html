@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.Language.Lang }}">
+{{ partial "head.html" . }}
+<body>
+    {{ partial "icon-sprite.html" . }}
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+    {{ if not .Params.hideNav }}
+    {{ partial "nav.html" . }}
+    {{ end }}
+
+    <main id="main-content">
+    {{ block "main" . }}{{ end }}
+    </main>
+
+    {{ if not .Params.hideFooter }}
+    {{ partial "footer.html" . }}
+    {{ end }}
+
+    {{- $cacheBust := .Site.Data.version.hashShort | default "dev" -}}
+    <script src="{{ "js/nav.js" | relURL }}?v={{ $cacheBust }}" defer></script>
+    {{ range .Params.scripts }}
+    <script src="{{ strings.TrimLeft "/" . | relURL }}?v={{ $cacheBust }}" defer></script>
+    {{ end }}
+    {{ block "scripts" . }}{{ end }}
+</body>
+</html>

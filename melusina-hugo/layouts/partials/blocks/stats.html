@@ -1,0 +1,23 @@
+{{/* Stats Block - matches React StatsBlock */}}
+{{/* Usage: {{ partial "blocks/stats" (dict "items" .stats "variant" "dark" "class" "py-7") }} */}}
+{{ $variant := .variant | default "" }}
+{{ $class := .class | default "py-7" }}
+{{ $columns := len .items }}
+{{ if gt $columns 6 }}{{ $columns = 4 }}{{ end }}
+{{ $colSize := div 12 $columns }}
+
+<section class="{{ $class }} {{ if eq $variant "dark" }}bg-dark text-white{{ end }}">
+  <div class="container">
+    <div class="row g-4 text-center">
+      {{ range .items }}
+      <div class="col-sm-6 col-lg-{{ $colSize }}">
+        <div class="display-4 fw-bold mb-2" style="color: var(--bs-cyan, #00E5FF);">{{ .value }}</div>
+        <div class="h5 mb-2">{{ .label }}</div>
+        {{ with .description }}
+        <p class="text-muted small mb-0">{{ . }}</p>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

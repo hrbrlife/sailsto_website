@@ -1,0 +1,81 @@
+{
+  "slug": "due-diligence",
+  "term": "Due Diligence",
+  "shortDefinition": "The investigation and verification process that financial institutions perform to assess customer risk and comply with regulatory requirements.",
+  "longDefinition": {
+    "type": "root",
+    "children": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Due Diligence in the context of financial services refers to the comprehensive process of investigating and verifying information about customers, business partners, or transactions to identify potential risks and ensure regulatory compliance."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Types of Due Diligence include:"
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "children": [
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Customer Due Diligence (CDD) - standard verification procedures"
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Enhanced Due Diligence (EDD) - additional checks for high-risk customers"
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Simplified Due Diligence (SDD) - reduced requirements for low-risk scenarios"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Risk Management",
+  "relatedTerms": [
+    "kyc",
+    "aml",
+    "compliance",
+    "risk-assessment"
+  ],
+  "searchTerms": [
+    "due diligence",
+    "customer verification",
+    "risk assessment",
+    "compliance checks"
+  ],
+  "createdAt": "2025-11-06T00:00:00.000Z",
+  "updatedAt": "2025-11-06T00:00:00.000Z",
+  "metadata": {
+    "seo": {
+      "title": "Due Diligence Definition - Melusina Glossary",
+      "description": "Comprehensive definition of Due Diligence - the investigation process financial institutions use to assess customer risk and ensure compliance."
+    }
+  }
+}

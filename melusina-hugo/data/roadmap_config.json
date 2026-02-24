@@ -1,0 +1,72 @@
+{
+  "categories": {
+    "core-platform": {
+      "key": "core-platform",
+      "icon": "🏗️",
+      "color": "primary",
+      "label": "Core Platform"
+    },
+    "compliance": {
+      "key": "compliance",
+      "icon": "⚖️",
+      "color": "success",
+      "label": "Compliance"
+    },
+    "crypto": {
+      "key": "crypto",
+      "icon": "₿",
+      "color": "warning",
+      "label": "Crypto"
+    },
+    "enterprise": {
+      "key": "enterprise",
+      "icon": "🏢",
+      "color": "info",
+      "label": "Enterprise"
+    },
+    "automation": {
+      "key": "automation",
+      "icon": "🤖",
+      "color": "secondary",
+      "label": "Automation"
+    },
+    "integrations": {
+      "key": "integrations",
+      "icon": "🔌",
+      "color": "dark",
+      "label": "Integrations"
+    },
+    "security": {
+      "key": "security",
+      "icon": "🔒",
+      "color": "danger",
+      "label": "Security"
+    },
+    "developer": {
+      "key": "developer",
+      "icon": "👨‍💻",
+      "color": "primary",
+      "label": "Developer"
+    }
+  },
+  "statuses": {
+    "complete": {
+      "key": "complete",
+      "icon": "✓",
+      "color": "success",
+      "label": "Released"
+    },
+    "in-progress": {
+      "key": "in-progress",
+      "icon": "🚧",
+      "color": "warning",
+      "label": "In Development"
+    },
+    "planned": {
+      "key": "planned",
+      "icon": "📅",
+      "color": "secondary",
+      "label": "Planned"
+    }
+  }
+}

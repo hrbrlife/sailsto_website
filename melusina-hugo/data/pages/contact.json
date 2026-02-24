@@ -1,0 +1,48 @@
+{
+  "seo": {
+    "title": "Contact Melusina | Deployment & Trust Chain Setup",
+    "description": "Connect with Melusina engineers for trust chain provisioning, keyholder configuration, and sovereign infrastructure deployment.",
+    "keywords": "contact melusina, trust chain setup, keyholder support, sovereign deployment",
+    "ogImage": "",
+    "canonicalUrl": "https://melusina-os.org/contact",
+    "favicon": "📧"
+  },
+  "pageTitle": "Contact Us",
+  "eyebrow": "Let's collaborate",
+  "heading": "Plan your Melusina deployment",
+  "subtitle": "Share architecture requirements, keyholder count, jurisdiction constraints, and deployment timelines—we'll respond with a trust chain provisioning plan, sandbox environment, and readiness checklist.",
+  "channels": [
+    {
+      "label": "Email",
+      "value": "sales@melusina-os.org",
+      "description": "Deployment scoping, License NFT provisioning, security questionnaires, and architecture reviews.",
+      "href": "mailto:sales@melusina-os.org"
+    },
+    {
+      "label": "Telegram Hotline",
+      "value": "@Melusina_Support",
+      "description": "Real-time coordination with deployment engineers for trust chain setup, threshold configuration, and urgent questions.",
+      "href": "https://t.me/Melusina_Support"
+    },
+    {
+      "label": "Secure File Drop",
+      "value": "Request link",
+      "description": "Send keyholder public keys, regulator feedback, or compliance policies via threshold-encrypted vault sessions.",
+      "href": "mailto:sales@melusina-os.org?subject=Secure%20File%20Drop%20Request"
+    }
+  ],
+  "nextSteps": [
+    {
+      "title": "Trust chain workshop",
+      "detail": "Review your requirements, map the NFT license hierarchy, configure keyholder thresholds (M-of-N), and set up DANE/DNSSEC for your domains."
+    },
+    {
+      "title": "Data residency & governance review",
+      "detail": "Align Pearl isolation, retention policies, backup threshold parameters, and on-chain audit trail expectations with regulator obligations."
+    },
+    {
+      "title": "Pilot planning",
+      "detail": "Provision a License NFT sandbox, configure threshold Vault unseal, deploy test Pearls, and agree on verification scripts before full launch."
+    }
+  ]
+}

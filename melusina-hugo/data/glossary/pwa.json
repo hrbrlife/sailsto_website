@@ -1,0 +1,71 @@
+{
+  "slug": "pwa",
+  "term": "PWA (Progressive Web App)",
+  "shortDefinition": "Melusina installs as a Progressive Web App with content-free push notifications and offline access.",
+  "longDefinition": {
+    "type": "root",
+    "children": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Melusina's PWA support lets users install the platform as a native-feeling app on any device. The service worker provides offline access and caching, while push notifications keep users informed."
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "children": [
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Content-free pushes: payloads are deliberately empty ('something happened')—no data leaks through the push service."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "DDP-aware: pushes only fire when the user lacks an active real-time Meteor connection, avoiding duplicate alerts."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Service worker: offline access, resource caching, and background sync."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Technology",
+  "relatedTerms": [
+    "pearl"
+  ],
+  "searchTerms": [
+    "pwa",
+    "progressive web app",
+    "push notification",
+    "service worker",
+    "offline",
+    "content-free"
+  ],
+  "createdAt": "2025-11-28T00:00:00.000Z",
+  "updatedAt": "2025-11-28T00:00:00.000Z",
+  "metadata": {
+    "seo": {
+      "title": "PWA & Push Notifications",
+      "description": "Definition of PWA support in Melusina with content-free push notifications."
+    }
+  }
+}

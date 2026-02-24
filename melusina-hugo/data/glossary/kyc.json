@@ -1,0 +1,89 @@
+{
+  "slug": "kyc",
+  "term": "KYC",
+  "shortDefinition": "Know Your Customer - the process of verifying the identity of clients to prevent fraud and money laundering.",
+  "longDefinition": {
+    "type": "root",
+    "children": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Know Your Customer (KYC) is a regulatory requirement and business practice that financial institutions and other regulated companies use to verify the identity, suitability, and risks involved with maintaining a business relationship with a customer."
+          }
+        ]
+      },
+      {
+        "type": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "KYC processes are designed to:"
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "children": [
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Prevent identity theft and financial fraud"
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Comply with anti-money laundering (AML) regulations"
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Assess customer risk levels"
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Monitor ongoing customer relationships"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Compliance",
+  "relatedTerms": [
+    "aml",
+    "due-diligence",
+    "compliance"
+  ],
+  "searchTerms": [
+    "know your customer",
+    "kyc",
+    "customer verification",
+    "identity verification"
+  ],
+  "createdAt": "2025-11-06T00:00:00.000Z",
+  "updatedAt": "2025-11-06T00:00:00.000Z",
+  "metadata": {
+    "seo": {
+      "title": "KYC (Know Your Customer) Definition - Melusina Glossary",
+      "description": "Comprehensive definition of KYC (Know Your Customer) - the regulatory process for verifying client identity to prevent fraud and money laundering."
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "seo": {
+    "title": "Offres Melusina | Plateforme KYC auto-hébergée",
+    "description": "Comparez licence perpétuelle, déploiement clé en main et support VIP pour lancer Melusina dans votre périmètre.",
+    "keywords": "tarifs KYC, Melusina, conformité auto-hébergée",
+    "ogImage": "",
+    "canonicalUrl": "https://melusina-os.org/fr/plans",
+    "favicon": "💰"
+  },
+  "pageTitle": "Offres et tarifs",
+  "eyebrow": "Formules",
+  "heading": "Choisissez le niveau d’accompagnement nécessaire",
+  "subtitle": "Commencez avec la licence perpétuelle puis ajoutez déploiement, support et ingénierie embarquée selon vos contraintes réglementaires.",
+  "ownership": {
+    "name": "Licence perpétuelle — propriétaire unique",
+    "price": "75 000 $ une fois (offre bêta -50 %)",
+    "description": "Vous détenez à vie le code Melusina, les modules, jeux de données, prompts IA et la documentation. Déployez partout, étendez librement et gardez le contrôle.",
+    "bullets": [
+      {
+        "text": "Livraison complète du code source avec playbooks d’ingénierie et scripts de vérification."
+      },
+      {
+        "text": "Droits illimités pour auto-héberger et étendre dans votre institution."
+      },
+      {
+        "text": "Cinq ans de mises à jour produit, données et prompts IA poussées dans votre dépôt."
+      },
+      {
+        "text": "Cinq ans de support correctif par tickets avec réponse sous 24 h."
+      }
+    ]
+  },
+  "deployment": {
+    "name": "Déploiement clé en main & personnalisation",
+    "price": "25 000 $ en option (offre bêta -50 %)",
+    "description": "Nous installons Bureau Pearls, helpers, proxys, datasets et scripts de vérification dans votre environnement puis adaptons flux et automatisations à vos politiques.",
+    "bullets": [
+      {
+        "text": "Installation sur votre cloud ou on-prem avec durcissement des helpers et proxys."
+      },
+      {
+        "text": "Configuration OTP, mail, screening, wallets et pipelines IA avec tests de bout en bout."
+      },
+      {
+        "text": "Remise de runbooks, exercices de préparation et plans de repli conformes à votre régulateur."
+      }
+    ]
+  },
+  "vipSupport": [
+    {
+      "title": "Support VIP — 24/7 / SLA 2 h",
+      "price": "25 000 $ par an (offre bêta -50 %)",
+      "description": "Réponse incidents 24/7 par l’équipe noyau ingénierie + conformité, avec mises à jour proactives et exercices trimestriels.",
+      "bullets": [
+        {
+          "text": "Réponse en deux heures avec escalade vers des ingénieurs connaissant votre déploiement."
+        },
+        {
+          "text": "Actualisation trimestrielle des datasets de screening et des prompts IA avec documentation des changements."
+        },
+        {
+          "text": "Répétitions d’incident et aide à la production de rapports prêts pour le régulateur."
+        }
+      ]
+    },
+    {
+      "title": "Ingénieur dédié",
+      "price": "25 000 $ le bloc de 200 h (offre bêta -50 %)",
+      "description": "Un ingénieur cœur Melusina embarqué pour intégrer, construire des flux sur mesure, automatiser et transférer le savoir sans perte de contexte.",
+      "bullets": [
+        {
+          "text": "Grooming backlog, gestion de release et pair programming sur vos fonctionnalités sur mesure."
+        },
+        {
+          "text": "Planification des mises à niveau alignée régulateur et documentation de préparation."
+        },
+        {
+          "text": "Blocs reconductibles pour prolonger l’accompagnement sur la feuille de route."
+        }
+      ]
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Combien de temps prend le déploiement ?",
+      "answer": "La plupart des équipes finalisent provisioning et vérifications en 2 à 3 semaines : semaine 1 pour Pearls, helpers, proxys et datasets ; semaine 2 pour les flux, screenings et contrôles wallets ; semaine 3 pour les cas pilotes et le transfert."
+    },
+    {
+      "question": "Peut-on ajouter plus de ressources dédiées ?",
+      "answer": "Oui. Empilez des blocs d’ingénieur dédié de 200 h ou ajoutez des spécialistes conformité pour co-gérer screenings, documentation ou réponses régulateur."
+    },
+    {
+      "question": "Sommes-nous obligés d’utiliser vos LLM ou votre SMS ?",
+      "answer": "Non. Branchez vos propres modèles IA, SMS, e-mails et hotlines. Les helpers et politiques de capacités maintiennent les données dans votre périmètre avec audit complet."
+    }
+  ]
+}

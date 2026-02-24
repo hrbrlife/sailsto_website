@@ -1,0 +1,338 @@
+{
+  "seo": {
+    "title": "Melusina | Your Apps. Your Data. One OS.",
+    "description": "A self-hosted operating system where every app runs in its own container. No data sprawl. No vendor lock-in. Run AI privately. Share on your terms. From families to institutions.",
+    "keywords": "self-hosted os, sovereign cloud, private AI, app isolation, data sovereignty, personal server, family server, web3 os, NFT licensing",
+    "favicon": "🐚"
+  },
+  "hero": {
+    "eyebrow": "YOUR DIGITAL WORLD",
+    "heading": "That Christmas card maker from 2019 can still read your bank statements.",
+    "subtitle": "You didn't give it permission to do that — you gave it a recipient list. It took your entire drive. Melusina is an operating system where every app runs in its own sealed container on your hardware. Nothing shared unless you choose.",
+    "primaryButton": "Book a Demo",
+    "secondaryButton": "See Use Cases",
+    "audienceCards": [
+      {
+        "icon": "🏦",
+        "label": "Trust Companies"
+      },
+      {
+        "icon": "📈",
+        "label": "Family Offices"
+      },
+      {
+        "icon": "📰",
+        "label": "Journalists"
+      },
+      {
+        "icon": "🚀",
+        "label": "Startups"
+      },
+      {
+        "icon": "👨‍👩‍👧‍👦",
+        "label": "Families"
+      }
+    ],
+    "proofPoints": [
+      {
+        "text": "Built on a decade of open-source production code"
+      },
+      {
+        "text": "A growing library of apps — shipping now"
+      },
+      {
+        "text": "Verifiable on Solana — anyone can check"
+      },
+      {
+        "text": "Runs on your server — open it from any browser"
+      }
+    ],
+    "ahaMoment": "You gave away your digital life one app at a time. Email here, docs there, photos somewhere else. Melusina brings it all back — onto one server you control."
+  },
+  "problem": {
+    "eyebrow": "WHAT HAPPENED",
+    "heading": "You gave away your digital life. One app at a time.",
+    "intro": "It started with email. Then documents. Then photos, passwords, calendars, notes, chat, AI. Each one a different company. A different set of terms. A different copy of your life on a server you'll never see. You didn't plan for this. It just happened.",
+    "points": [
+      {
+        "pain": "First, convenience",
+        "consequence": "Gmail because it was easy. Dropbox because it synced. Slack because your team was there. Every choice made sense. None of them were about keeping control."
+      },
+      {
+        "pain": "Then, dependence",
+        "consequence": "Your files in one place, your notes in another, your passwords in a third. Try leaving. Exporting from Notion is a research project. Migrating from Google is a month of your life."
+      },
+      {
+        "pain": "Then, invisible wiring",
+        "consequence": "Your calendar reads your contacts. Your project tool sees your email. Everything is connected to everything behind the scenes. One breach and it all spills — because nothing was ever truly separate."
+      },
+      {
+        "pain": "And always, someone else's rules",
+        "consequence": "One admin holds the keys. One company sets the terms. They can raise prices, change policies, or get hacked. You'll find out after."
+      }
+    ],
+    "punchline": "But you can take it back. One server. Your data. Every piece of your digital life — separate, private, yours.",
+    "ahaMoment": "The tools exist now. The infrastructure is real. It's not too late."
+  },
+  "meetMelusina": {
+    "eyebrow": "MEET MELUSINA",
+    "heading": "One place for everything. Everything in its own place.",
+    "subtitle": "Melusina is an operating system — like having your own private internet. Install it on a server. Open it in any browser. Every single thing inside it — a document, a conversation, a photo album, a financial plan — lives in its own sealed container. Not because of settings. Because that's how it's built.",
+    "keyPoints": [
+      "It runs on your hardware — a PC, a dedicated server, a cloud VPS. You reach it from any browser on any device.",
+      "Every document is its own world. A spreadsheet can't see a chat room. A photo album can't see a tax return. They're physically separate containers — not permission-separate.",
+      "When two things need to talk, you decide. A window shows your options. You pick. One connection. Nothing else changes.",
+      "Build without coding. Point at the apps you need — documents, identity verification, chat, AI — click them together. Clients see one dashboard. You built it in minutes.",
+      "Your whole company can live inside it. Email, documents, code, AI, customer bots, compliance — all apps on one OS. Add what you need when you need it.",
+      "Leave whenever you want. Export everything in standard formats. No lock-in. No exit fees. Your data is yours."
+    ],
+    "ahaMoment": "Think of it like having your own private internet — where every app runs on your box, nothing phones home, and you decide what connects to what."
+  },
+  "solution": {
+    "eyebrow": "HOW IT WORKS",
+    "heading": "Three ideas that change everything.",
+    "subtitle": "Most platforms connect everything and hope nothing goes wrong. Melusina separates everything and lets you connect what you choose.",
+    "pillars": [
+      {
+        "title": "Separation by Default",
+        "icon": "🏠",
+        "description": "Think filing cabinets, not open-plan offices. Every document, every chat, every app lives in its own sealed room. Your personal budget can't see your work project. Client A can't see Client B. A breach in one room stays in one room."
+      },
+      {
+        "title": "Connection by Choice",
+        "icon": "🔗",
+        "description": "When you need two things to talk — and only when you need to — you open a slot between exactly those two things. A spreadsheet that asks one AI model for help. An invoice that connects to one payment method. Nothing blanket. Nothing permanent unless you want it."
+      },
+      {
+        "title": "No Single Point of Failure",
+        "icon": "🔐",
+        "description": "No single password. No single admin. Critical operations require multiple people — like a safe that needs two keys. Someone leaves? One action freezes their access across everything. No chasing down a dozen logins."
+      }
+    ]
+  },
+  "isolation": {
+    "eyebrow": "IN PRACTICE",
+    "heading": "What it feels like.",
+    "subtitle": "Not features. Moments.",
+    "intro": "The best way to understand Melusina isn't a feature list. It's to picture yourself using it.",
+    "layers": [
+      {
+        "title": "The moment you need AI",
+        "tagline": "Your report needs OCR. Nothing else does.",
+        "description": "You're working on a document and need to extract text from a scan. A window shows your available AI models — local and cloud. You pick one. That document gets AI. Your hundred other documents don't know it happened.",
+        "concrete": "One choice. One connection. One document. That's the whole model."
+      },
+      {
+        "title": "The moment a client verifies",
+        "tagline": "They see their passport. You see a verdict.",
+        "description": "You send a verification link. Your client uploads their passport in their own private space — their own sealed container. AI extracts the data, matches their face, returns a verdict: verified or not. You see the verdict. You never touched the passport.",
+        "concrete": "Their data in their container. Your review in yours. Physically separate."
+      },
+      {
+        "title": "The moment someone leaves",
+        "tagline": "One action. Every door closed.",
+        "description": "An employee leaves on Friday. You freeze their access — one action. Every document, every tool, every workflow — gone. Monday morning there's on-chain proof of exactly when it happened. No spreadsheets. No chasing twelve different services.",
+        "concrete": "Their authority was a token. You froze it. Done."
+      }
+    ],
+    "examples": {
+      "heading": "More moments",
+      "items": [
+        "A customer messages your Telegram bot → a support ticket appears in your workflow app. The bot can't see anything else.",
+        "Push code to a branch called 'public' → your website is live. No deploy scripts. Git push equals published.",
+        "Share a photo album with grandma → 48-hour link. Then it vanishes.",
+        "Build a client portal → pick identity verification, documents, chat. Point and click. One unified dashboard.",
+        "Your startup runs entirely inside Melusina — email, docs, code, AI, bots, compliance. One OS. One server."
+      ]
+    },
+    "access": {
+      "heading": "The difference",
+      "description": "Traditional: connect Zapier to Stripe — Zapier sees all your Stripe data forever. Melusina: your invoice requests one payment from one payment app. That's all it can do. Revoke anytime."
+    },
+    "callout": "Every moment follows the same principle: you choose what connects to what. Nothing happens automatically. Nothing is permanent unless you say so."
+  },
+  "audiences": {
+    "eyebrow": "WHO IT'S FOR",
+    "heading": "From kitchen tables to board rooms.",
+    "subtitle": "Same architecture. Different lives.",
+    "items": [
+      {
+        "title": "Families",
+        "icon": "👨‍👩‍👧‍👦",
+        "tagline": "Your photos, documents, and conversations — on your hardware",
+        "apps": "Documents, chat, passwords, photos, wiki"
+      },
+      {
+        "title": "Journalists & Activists",
+        "icon": "📰",
+        "tagline": "Source protection built into the architecture, not bolted on",
+        "apps": "Encrypted notes, secure drops, anonymous tips, local AI"
+      },
+      {
+        "title": "High-Net-Worth Individuals",
+        "icon": "💎",
+        "tagline": "Private wealth deserves private infrastructure",
+        "apps": "Estate planning, advisor portals, financial tracking"
+      },
+      {
+        "title": "Startups & Small Teams",
+        "icon": "🚀",
+        "tagline": "Your company runs inside it — not alongside it",
+        "apps": "Docs, email, code, AI, customer bots, identity verification"
+      },
+      {
+        "title": "DAOs & Web3 Orgs",
+        "icon": "🌐",
+        "tagline": "Governance with real multi-keyholder approval on-chain",
+        "apps": "Proposals, treasury, contributor portals"
+      },
+      {
+        "title": "Regulated Institutions",
+        "icon": "🏦",
+        "tagline": "Compliance infrastructure a regulator can verify themselves",
+        "apps": "KYC/KYB, compliance workflows, audit trails, reporting"
+      }
+    ],
+    "growthMessage": "Start with what you need today. The rest is there when you're ready."
+  },
+  "web3": {
+    "eyebrow": "VERIFIABLE BY DESIGN",
+    "heading": "Trust no one. Verify everything.",
+    "features": [
+      {
+        "title": "A license anyone can check",
+        "description": "Your Melusina license is an NFT on Solana. The chain is public: Foundation → Reseller → License → your Shares. Any partner, regulator, or client can verify it. No phone calls. No PDFs. Just math."
+      },
+      {
+        "title": "Sign in with your wallet",
+        "description": "Browser extension, mobile wallet, or QR code — three ways to authenticate with your Solana wallet. Keyholders get admin access automatically. No passwords to forget."
+      },
+      {
+        "title": "Multiple keys for critical operations",
+        "description": "Vault access, certificate rotation, backup decryption — all require multiple keyholders to approve via Solana. One person can't do it alone. That's the design."
+      },
+      {
+        "title": "Freeze access in one block",
+        "description": "Admin authority is an NFT. Freeze it — access revoked in the same Solana block. On-chain proof of exactly when it happened."
+      },
+      {
+        "title": "Prove what's running",
+        "description": "Check the license on Solana. Verify TLS certificates via DNS. Confirm the Foundation-signed release hash. Anyone can verify your infrastructure without trusting you."
+      }
+    ]
+  },
+  "ai": {
+    "eyebrow": "PRIVATE AI",
+    "heading": "Your questions are your most intimate data.",
+    "subtitle": "What you ask an AI reveals what you're worried about, what you're planning, what you don't know. With Melusina, those questions never leave your server.",
+    "features": [
+      {
+        "title": "Private AI that runs locally",
+        "description": "Connect local models or cloud services — each in its own container. Every prompt stays on your server or goes only where you explicitly allow. No training on your data. No harvesting. Proof, not promises."
+      },
+      {
+        "title": "AI reaches only what you point it at",
+        "description": "Your document needs OCR? It asks your AI hub and you approve — for that document alone. Your KYC app needs extraction? Same process. One connection per request. The AI never sees your whole world."
+      },
+      {
+        "title": "Every query logged. Every model auditable.",
+        "description": "Who asked what, when, which model answered. An append-only audit trail you control. When someone asks 'does your AI see my data?' — show them the architecture. It can't."
+      }
+    ]
+  },
+  "features": {
+    "eyebrow": "DETAILS THAT MATTER",
+    "heading": "Security details that survive scrutiny",
+    "items": [
+      {
+        "title": "TLS certificates pinned in DNS",
+        "description": "Your TLS certificates are pinned in DNS records signed with DNSSEC. Man-in-the-middle attacks are mathematically impossible. Anyone can verify the pin by querying DNS — no trust needed."
+      },
+      {
+        "title": "No persistent secrets",
+        "description": "CA private keys are created from license data when needed, used once to sign a certificate, then destroyed. Vault keys come from keyholder approvals. There's nothing to steal because nothing is stored."
+      },
+      {
+        "title": "Nothing starts without verification",
+        "description": "After every reboot: verify the license on Solana, check the release hash, wait for keyholder approval, then start services. Tampered code won't boot."
+      },
+      {
+        "title": "Instant admin revocation",
+        "description": "Admin authority is an NFT. Freeze it — access revoked in the same Solana block. No database coordination. No hoping they forgot the password. On-chain proof of when access was granted and revoked."
+      },
+      {
+        "title": "Per-app spending limits",
+        "description": "Each Pearl has its own SOL wallet with spending limits. Apps consume platform services — OTP, email, SMS, AI — via micropayments. Operators set budgets. Runaway costs are impossible."
+      },
+      {
+        "title": "One server, every screen",
+        "description": "Melusina runs on your hardware — a PC, a VPS, a dedicated server. You open it from any browser on any device. Add it to your home screen for instant access. Push notifications arrive content-free — payloads carry no data. Your server talks to your screen and nothing leaks in between."
+      }
+    ]
+  },
+  "credibility": {
+    "eyebrow": "REAL, NOT VAPOR",
+    "heading": "Not a whitepaper. Deployed on Solana. Running in production.",
+    "points": [
+      {
+        "title": "Production apps, not mockups",
+        "description": "Bureau (office suite), CoinFace (KYC), AI Lagoon (private AI), MerMail (email + workflows), BotMother (Telegram bots), MiniGit (Git hosting), Shell Tester (dev tools) — and more. Real Go, TypeScript, and Python codebases. Real Cap'n Proto schemas. The app library keeps growing."
+      },
+      {
+        "title": "On-chain since February 2026",
+        "description": "License Registry deployed on Solana. Master NFT minted. 4 keyholders activated. 2-of-4 threshold configured. Full trust chain operational."
+      },
+      {
+        "title": "Real cryptography, not toy crypto",
+        "description": "Shamir secret sharing over GF(256) with Lagrange interpolation. Per-keyholder encrypted shares. 44 unit tests verify the implementation. Auditable code."
+      },
+      {
+        "title": "Open source since 2014",
+        "description": "Production-proven sovereign infrastructure. We added NFT licensing, threshold crypto, Solana verification, TLS pinning, and local AI. Full source code. Audit every line."
+      }
+    ],
+    "stat": "A growing library of production apps. 4 keyholders. 2-of-4 threshold. 79 boot tests. 72 deployment tests.",
+    "testimonial": "\"The only platform where anyone — a regulator, an auditor, a partner, a client — can independently verify that the operator's infrastructure is legitimate.\" — Melusina Foundation"
+  },
+  "faqs": {
+    "eyebrow": "QUESTIONS",
+    "heading": "What you should ask",
+    "items": [
+      {
+        "question": "Is this actually deployed, or just a whitepaper?",
+        "answer": "Deployed. License Registry is live on Solana. Master NFT minted. 4 keyholders activated with 2-of-4 threshold. Full trust chain operational: Foundation → Reseller → License → Shares."
+      },
+      {
+        "question": "Do I need to be technical to use this?",
+        "answer": "No. Open it in your browser. Pick apps. Connect them by pointing and clicking. Build client portals, onboarding flows, and dashboards without writing code. Melusina handles isolation and security automatically."
+      },
+      {
+        "question": "What if one of our keyholders is unavailable?",
+        "answer": "That's the point of multi-keyholder design. With 2-of-4, any two keyholders can approve operations. One person being unavailable doesn't block anything."
+      },
+      {
+        "question": "Can I actually leave if I want to?",
+        "answer": "Yes. Export everything. Your data is in standard formats. Your license is on the blockchain. There's no lock-in. If you want to migrate, you migrate."
+      },
+      {
+        "question": "Who is this for?",
+        "answer": "Anyone who's tired of their data being scattered across the internet. A family protecting photos. A journalist protecting sources. A startup protecting IP. A fintech meeting compliance. A DAO running governance. Same OS, same isolation — you just install different apps."
+      }
+    ]
+  },
+  "cta": {
+    "eyebrow": "BEGIN",
+    "heading": "It's not too late.",
+    "subtitle": "Your digital life doesn't have to stay scattered across companies you don't control. One server. One OS. Every piece separate. Every connection yours to make.",
+    "primaryButton": {
+      "text": "See Pricing",
+      "link": "/plans"
+    },
+    "secondaryButton": {
+      "text": "Explore Use Cases",
+      "link": "/use-cases"
+    },
+    "freeNote": "The software is open source. The trust chain is on Solana. We sell deployment, support, and licensed editions.",
+    "urgency": "The tools exist now. The infrastructure is ready."
+  }
+}

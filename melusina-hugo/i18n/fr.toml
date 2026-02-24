@@ -1,0 +1,95 @@
+[navHome]
+other = "Accueil"
+
+[navUseCases]
+other = "Cas d'utilisation"
+
+[navCompare]
+other = "Comparer"
+
+[navRoadmap]
+other = "Feuille de route"
+
+[navPricing]
+other = "Tarifs"
+
+[navForYou]
+other = "Pour vous"
+
+[navApps]
+other = "Applications"
+
+[navKnowledgeBase]
+other = "Base de connaissances"
+
+[navBlog]
+other = "Blog"
+
+[navDocs]
+other = "Documentation"
+
+[navFAQ]
+other = "FAQ"
+
+[navGlossary]
+other = "Glossaire"
+
+[navCompany]
+other = "Entreprise"
+
+[navGetMelusina]
+other = "Obtenir Melusina"
+
+[navAllUseCases]
+other = "Tous les cas d'utilisation"
+
+[forFamilyOffices]
+other = "Pour les Family Offices"
+
+[forTrustCompanies]
+other = "Pour les sociétés fiduciaires"
+
+[forPrivateBanks]
+other = "Pour les banques privées"
+
+[forDAOs]
+other = "Pour les DAOs"
+
+[forVASPs]
+other = "Pour les VASPs"
+
+[forRegulated]
+other = "Pour les entreprises réglementées"
+
+[forIntroducers]
+other = "Pour les Introducteurs"
+
+[footerDescription]
+other = "Melusina est un système d'exploitation souverain pour l'ère du Web3 et de l'IA. Exécutez vos applications, modèles d'IA et flux de travail sur une infrastructure que vous contrôlez — sans dépendances externes, sans verrouillage fournisseur."
+
+[footerTagline]
+other = "Auto-hébergé • Souverain • Open Source"
+
+[footerOnSite]
+other = "Sur le site"
+
+[footerResources]
+other = "Ressources"
+
+[footerConnect]
+other = "Contact"
+
+[footerFamily]
+other = "Famille hrbr.life"
+
+[footerLegal]
+other = "Mentions légales"
+
+[footerDisclaimer]
+other = "Melusina OS est un logiciel d'infrastructure. Il ne fournit pas, ne courtise pas et ne conseille pas sur les produits financiers, les titres ou les opportunités d'investissement."
+
+[learnMore]
+other = "En savoir plus"
+
+[getStarted]
+other = "Commencer"

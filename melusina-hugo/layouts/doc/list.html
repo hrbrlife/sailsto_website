@@ -1,0 +1,47 @@
+{{ define "main" }}
+
+{{/* ═══════════════ HERO ═══════════════ */}}
+<section class="neon-hero py-5">
+  <div class="container text-center">
+    <span class="fs-1">📘</span>
+    <h1 class="hero-heading mt-3 mb-3">Documentation</h1>
+    <p class="hero-subtitle">Technical guides, API documentation, and best practices for Melusina.</p>
+    <div class="d-flex justify-content-center gap-2 text-muted small mt-3">
+      <span>{{ len .Pages }} guides</span>
+    </div>
+  </div>
+</section>
+
+{{/* ═══════════════ DOCS GRID ═══════════════ */}}
+<section class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      {{ range .Pages }}
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 shadow-sm h-100 {{ if .Params.featured }}documentation-featured-card{{ end }}">
+          <div class="card-body p-4 d-flex flex-column">
+            {{ with .Params.category }}
+            <div class="d-flex flex-wrap gap-2 mb-3">
+              <span class="badge bg-primary">{{ . }}</span>
+            </div>
+            {{ end }}
+            <div class="d-flex gap-2 mb-2">
+              {{ with .Params.difficulty }}
+              <span class="badge bg-{{ if eq . "beginner" }}success{{ else if eq . "intermediate" }}warning{{ else }}danger{{ end }}">{{ . | title }}</span>
+              {{ end }}
+              {{ with .Params.readTime }}
+              <span class="badge bg-light text-dark">{{ . }}</span>
+              {{ end }}
+            </div>
+            <h3 class="h5 mb-2">{{ .Title }}</h3>
+            <p class="text-muted mb-3">{{ .Description }}</p>
+            <a href="{{ .RelPermalink }}" class="btn btn-outline-primary btn-wire mt-auto">Learn more</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,71 @@
+{
+  "slug": "bureau",
+  "term": "Bureau",
+  "shortDefinition": "The low-code workflow layer on Melusina that publishes forms and processes with cryptographic control.",
+  "longDefinition": {
+    "type": "root",
+    "children": [
+      {
+        "type": "p",
+        "children": [
+          {
+            "type": "text",
+            "text": "Bureau (formerly Bureau) is the Panel Builder and process engine that lets teams design and publish workflows without redeploying apps. It runs on Melusina's Pearl isolation model and uses GraphQL APIs for automations."
+          }
+        ]
+      },
+      {
+        "type": "ul",
+        "children": [
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Drag-drop Panel Builder with JSON manifests you own."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Server-side computed fields and JSONLogic conditionals."
+              }
+            ]
+          },
+          {
+            "type": "li",
+            "children": [
+              {
+                "type": "text",
+                "text": "Identity-ready fields: document upload, selfie capture, OCR review, face comparison."
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "category": "Technology",
+  "relatedTerms": [
+    "panel-builder",
+    "repeatable-group",
+    "template-compiler",
+    "process-catalog"
+  ],
+  "searchTerms": [
+    "bureau",
+    "panel builder",
+    "workflow layer"
+  ],
+  "createdAt": "2025-11-28T00:00:00.000Z",
+  "updatedAt": "2025-11-28T00:00:00.000Z",
+  "metadata": {
+    "seo": {
+      "title": "Bureau Workflow Layer",
+      "description": "Definition of Bureau, the low-code workflow layer on Melusina."
+    }
+  }
+}

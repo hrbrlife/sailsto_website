@@ -1,0 +1,135 @@
+{
+  "seo": {
+    "title": "Cas d'usage Melusina",
+    "description": "Découvrez comment échanges, banques et plateformes Web3 déploient Melusina avec des contrôles souverains.",
+    "keywords": "cas d'usage kyc, melusina",
+    "ogImage": "",
+    "canonicalUrl": "https://melusina-os.org/fr/use-cases",
+    "favicon": "🎯"
+  },
+  "hero": {
+    "eyebrow": "Playbooks métiers",
+    "heading": "Des cas d'usage pour chaque équipe régulée",
+    "subtitle": "Exchanges crypto, banques digitales, processeurs de paiement et conservation institutionnelle s'appuient sur Melusina."
+  },
+  "industries": {
+    "eyebrow": "Industries",
+    "heading": "Pensé pour les organisations régulées",
+    "subtitle": "Des startups crypto aux institutions traditionnelles",
+    "features": [
+      {
+        "title": "Exchanges crypto",
+        "description": "Provenance wallets, sanctions et onboarding rapide dans vos infrastructures."
+      },
+      {
+        "title": "Banques & fintechs",
+        "description": "IA documentaire, biométrie et flux adaptatifs."
+      },
+      {
+        "title": "Processeurs de paiement",
+        "description": "KYB, scoring marchand et playbooks automatisés."
+      },
+      {
+        "title": "Plateformes d'investissement",
+        "description": "Évaluations de convenance et preuves immuables."
+      },
+      {
+        "title": "NFT & Web3",
+        "description": "Lien wallets, risque chaîne et formulaires multilingues."
+      },
+      {
+        "title": "Garde institutionnelle",
+        "description": "EDD, approbations multi-parties et journaux audit prêts régulateur."
+      }
+    ]
+  },
+  "technical": {
+    "eyebrow": "Fondation technique",
+    "heading": "Une architecture souveraine",
+    "subtitle": "Isolation Pearl, egress piloté par helpers et IA maîtrisée.",
+    "features": [
+      {
+        "title": "Un client, un Pearl",
+        "description": "Chaque dossier tourne dans son sandbox avec stockage isolé et exports signés.",
+        "icon": "🔒",
+        "imageCaption": "Isolation Pearl",
+        "items": [
+          {
+            "text": "Hôtes éphémères"
+          },
+          {
+            "text": "Accès par capacités"
+          },
+          {
+            "text": "Reçus helper"
+          }
+        ]
+      },
+      {
+        "title": "Votre IA",
+        "description": "Déployez vos LLMs pour OCR, traduction et scoring.",
+        "icon": "🤖",
+        "imageCaption": "Pipeline IA",
+        "items": [
+          {
+            "text": "Prompts personnalisés"
+          },
+          {
+            "text": "Fallbacks déterministes"
+          },
+          {
+            "text": "Logs audités"
+          }
+        ]
+      },
+      {
+        "title": "Conformité crypto-native",
+        "description": "Signatures wallets, provenance et monitoring chaîne.",
+        "icon": "₿",
+        "imageCaption": "Provenance wallet",
+        "items": [
+          {
+            "text": "Preuve de possession"
+          },
+          {
+            "text": "Scoring chain"
+          },
+          {
+            "text": "Bundles evidence"
+          }
+        ]
+      }
+    ]
+  },
+  "deployment": {
+    "eyebrow": "Déploiement",
+    "heading": "Partout où vous en avez besoin",
+    "subtitle": "Cloud, on-prem ou hybride.",
+    "features": [
+      {
+        "title": "Cloud",
+        "description": "AWS, GCP ou Azure avec egress contrôlé."
+      },
+      {
+        "title": "On-prem",
+        "description": "Installations dédiées ou air-gap."
+      },
+      {
+        "title": "Hybride",
+        "description": "Charge sensible on-prem, services scalables dans le cloud."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Prêt à le voir en action ?",
+    "subtitle": "Planifiez une session pour relier Melusina à vos cas critiques.",
+    "primaryButton": {
+      "text": "Demander une session",
+      "link": "/company"
+    },
+    "secondaryButton": {
+      "text": "Voir la roadmap",
+      "link": "/roadmap"
+    }
+  }
+}

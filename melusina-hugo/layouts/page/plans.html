@@ -1,0 +1,203 @@
+{{ define "main" }}
+{{ $d := site.Data.pages.plans }}
+
+{{/* ═══════════════ 1. HERO ═══════════════ */}}
+<section class="py-6 py-lg-7" style="background: linear-gradient(135deg, #0A0A1A 0%, #0F0F23 40%, #1a1a3e 60%, #0A0A1A 100%);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8 text-center">
+        <span class="badge rounded-pill bg-dark text-uppercase-spaced mb-3 px-3 py-2" style="color: #00E5FF;">{{ $d.hero.eyebrow | default "PRICING" }}</span>
+        <h1 class="display-4 fw-bold text-white mb-3">{{ $d.hero.heading }}</h1>
+        <p class="lead text-muted">{{ $d.hero.subtitle }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ═══════════════ 2. PRICING TIERS ═══════════════ */}}
+{{ with $d.tiers }}
+<section class="py-6 py-lg-7">
+  <div class="container">
+    <div class="row g-4 justify-content-center">
+      {{ range . }}
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 {{ if .highlighted }}border-primary shadow-lg{{ else }}neon-card border-0{{ end }}" {{ if .highlighted }}style="transform: scale(1.02);"{{ end }}>
+          <div class="card-body p-4 d-flex flex-column">
+            {{ if .highlighted }}
+            <span class="badge bg-primary mb-3 align-self-start">Most Popular</span>
+            {{ end }}
+            <h3 class="h4 mb-2 {{ if not .highlighted }}text-white{{ end }}">{{ .name }}</h3>
+            <div class="mb-3">
+              <span class="display-5 fw-bold {{ if not .highlighted }}text-white{{ end }}">{{ .price }}</span>
+              {{ with .period }}<span class="text-muted">/{{ . }}</span>{{ end }}
+            </div>
+            <p class="text-muted mb-4">{{ .description }}</p>
+            <ul class="list-unstyled mb-4 flex-grow-1">
+              {{ range .features }}
+              <li class="mb-2"><span class="text-primary me-2">✓</span>{{ . }}</li>
+              {{ end }}
+            </ul>
+            {{ with .idealFor }}
+            <p class="text-muted small mb-3"><em>Ideal for: {{ . }}</em></p>
+            {{ end }}
+            <a href="{{ .ctaLink | default "#" }}" class="btn w-100 {{ if .highlighted }}btn-primary btn-neon{{ else }}btn-outline-primary btn-wire{{ end }}">{{ .ctaText | default "Get Started" }}</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ═══════════════ 3. ADD-ONS ═══════════════ */}}
+{{ with $d.addons }}
+<section class="py-6 py-lg-7" style="background: #f8f9fa;">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <span class="eyebrow-tag mb-3">{{ .eyebrow | default "ADD-ONS" }}</span>
+        <h2 class="section-heading">{{ .heading }}</h2>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      {{ range .items }}
+      <div class="col-md-6 col-lg-3">
+        <div class="card neon-card border-0 h-100">
+          <div class="card-body p-4 text-center">
+            <div class="fs-2 mb-3">{{ .icon }}</div>
+            <h5 class="text-white mb-2">{{ .title }}</h5>
+            <p class="h5 fw-bold mb-2" style="color: #00E5FF;">{{ .price }}</p>
+            <p class="text-muted small mb-0">{{ .description }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ═══════════════ 4. FEATURE COMPARISON TABLE ═══════════════ */}}
+{{ with $d.comparison }}
+<section class="py-6 py-lg-7">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <h2 class="section-heading">{{ .heading | default "Feature Comparison" }}</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="table-responsive">
+          <table class="table table-bordered">
+            <thead class="table-light">
+              <tr>
+                <th>Feature</th>
+                {{ range .columns }}
+                <th class="text-center {{ if .highlighted }}bg-primary bg-opacity-10{{ end }}">{{ .name }}</th>
+                {{ end }}
+              </tr>
+            </thead>
+            <tbody>
+              {{ range .rows }}
+              <tr>
+                <td class="fw-semibold">{{ .feature }}</td>
+                {{ range .values }}
+                <td class="text-center">
+                  {{ if eq . "✓" }}<span class="text-success">✓</span>
+                  {{ else if eq . "—" }}<span class="text-muted">—</span>
+                  {{ else }}{{ . }}{{ end }}
+                </td>
+                {{ end }}
+              </tr>
+              {{ end }}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ═══════════════ 5. FAQ ═══════════════ */}}
+{{ with $d.faqs }}
+{{ partial "blocks/faq" (dict "eyebrow" "FAQ" "heading" "Pricing Questions" "items" . "class" "py-7 bg-light") }}
+{{ end }}
+
+{{/* ═══════════════ 6. VALUE CONTEXT ═══════════════ */}}
+{{ with $d.valueContext }}
+<section class="py-6 py-lg-7">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <span class="eyebrow-tag mb-3">{{ .eyebrow }}</span>
+        <h2 class="section-heading">{{ .heading }}</h2>
+        <p class="section-subtitle mx-auto">{{ .subtitle }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        <div class="table-responsive mb-4">
+          <table class="table table-bordered">
+            <thead class="table-light">
+              <tr>
+                <th>Service</th>
+                <th class="text-center">Annual Cost</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ range .items }}
+              <tr>
+                <td>{{ .service }}</td>
+                <td class="text-center">{{ .cost }}</td>
+              </tr>
+              {{ end }}
+            </tbody>
+          </table>
+        </div>
+        {{ with .summary }}
+        <div class="card neon-card border-0">
+          <div class="card-body p-4 text-center">
+            <p class="text-muted mb-0">{{ . }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ═══════════════ 7. CTA ═══════════════ */}}
+{{ with $d.cta }}
+<section class="py-6 py-lg-7 text-white" style="background: #0A0A1A;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="display-6 mb-3">{{ .heading }}</h2>
+        <p class="lead mb-4" style="color: rgba(255,255,255,0.8);">{{ .subtitle }}</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          {{ with .primaryButton }}
+          {{ if reflect.IsMap . }}
+          <a href="{{ .link | relURL }}" class="btn btn-primary btn-lg btn-neon">{{ .text }}</a>
+          {{ else }}
+          <a href="#" class="btn btn-primary btn-lg btn-neon">{{ . }}</a>
+          {{ end }}
+          {{ end }}
+          {{ with .secondaryButton }}
+          {{ if reflect.IsMap . }}
+          <a href="{{ .link | relURL }}" class="btn btn-outline-primary btn-lg btn-wire">{{ .text }}</a>
+          {{ else }}
+          <a href="{{ "/" | relURL }}" class="btn btn-outline-primary btn-lg btn-wire">{{ . }}</a>
+          {{ end }}
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ end }}

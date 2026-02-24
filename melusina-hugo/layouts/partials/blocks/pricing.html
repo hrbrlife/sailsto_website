@@ -1,0 +1,37 @@
+{{/* Pricing Block - matches React PricingBlock component */}}
+{{/* Usage: {{ partial "blocks/pricing" (dict "data" .plans) }} */}}
+{{ $data := .data }}
+
+<section class="py-7">
+  <div class="container">
+    {{ partial "blocks/section-header" (dict "eyebrow" $data.eyebrow "heading" $data.heading "subtitle" $data.subtitle) }}
+    <div class="row g-4 justify-content-center">
+      {{ range $data.tiers }}
+      <div class="col-md-6 col-lg-4">
+        <div class="card h-100 {{ if .highlighted }}border-primary shadow-lg{{ else }}border-0{{ end }}" {{ if .highlighted }}style="transform: scale(1.02);"{{ end }}>
+          <div class="card-body p-4 d-flex flex-column">
+            {{ if .highlighted }}
+            <span class="badge bg-primary mb-3 align-self-start">Most Popular</span>
+            {{ end }}
+            <h3 class="h4 mb-3">{{ .name }}</h3>
+            <div class="mb-3">
+              <span class="display-5 fw-bold">{{ .price }}</span>
+              {{ with .period }}<span class="text-muted">/{{ . }}</span>{{ end }}
+            </div>
+            <p class="text-muted mb-4">{{ .description }}</p>
+            <ul class="list-unstyled mb-4 flex-grow-1">
+              {{ range .features }}
+              <li class="mb-2"><span class="text-primary me-2">✓</span>{{ . }}</li>
+              {{ end }}
+            </ul>
+            {{ with .idealFor }}
+            <p class="text-muted small mb-3"><em>Ideal for: {{ . }}</em></p>
+            {{ end }}
+            <a href="{{ .ctaLink | default "/plans/" | relURL }}" class="btn w-100 {{ if .highlighted }}btn-primary btn-neon{{ else }}btn-outline-primary btn-wire{{ end }}">{{ .ctaText | default "Get Started" }}</a>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

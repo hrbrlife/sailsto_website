@@ -1,0 +1,256 @@
+{{ define "main" }}
+{{ $d := site.Data.pages.use_cases }}
+{{ if not $d }}{{ $d = index site.Data.pages "use-cases" }}{{ end }}
+
+{{/* ═══════════════ 1. HERO ═══════════════ */}}
+<section class="d-flex align-items-center position-relative overflow-hidden" style="min-height: 60vh; background: linear-gradient(135deg, #0A0A1A 0%, #0F0F23 40%, #1a1a3e 60%, #0A0A1A 100%);">
+  <div class="position-absolute w-100 h-100" style="background-image: radial-gradient(circle at 1px 1px, rgba(0,229,255,0.08) 1px, transparent 0); background-size: 40px 40px; opacity: 0.5;"></div>
+  <div class="container position-relative">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 text-center">
+        <span class="badge rounded-pill bg-dark text-uppercase-spaced mb-3 px-3 py-2" style="color: #00E5FF;">{{ $d.seo.title | default "USE CASES" }}</span>
+        <h1 class="display-3 fw-bold text-white mb-3">{{ $d.hero.heading }}</h1>
+        <p class="lead text-muted mb-4">{{ $d.hero.subtitle }}</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          {{ with $d.hero.primaryButton }}
+          <a href="{{ "plans/" | relURL }}" class="btn btn-primary btn-lg btn-neon">{{ . }}</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{/* ═══════════════ 2. INSIGHT ═══════════════ */}}
+{{ with $d.insight }}
+<section class="py-6 py-lg-7" style="background: #f8f9fa;">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <span class="eyebrow-tag mb-3">{{ .eyebrow }}</span>
+        <h2 class="section-heading">{{ .heading }}</h2>
+      </div>
+    </div>
+    <div class="row g-4">
+      {{ range $i, $point := .points }}
+      <div class="col-md-4">
+        <div class="card border-0 h-100 shadow-sm">
+          <div class="card-body p-4 text-center">
+            {{ $colors := slice "#FF1744" "#2196F3" "#00FFB2" }}
+            <span class="badge rounded-circle mb-3 d-inline-flex align-items-center justify-content-center" style="width: 48px; height: 48px; background: {{ index $colors $i }}; font-size: 1.25rem;">{{ add $i 1 }}</span>
+            <h5 class="mb-2">{{ .title }}</h5>
+            <p class="text-muted mb-0">{{ .description }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ═══════════════ 3. AUDIENCES ═══════════════ */}}
+{{ with $d.audiences }}
+<section class="py-6 py-lg-7">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <span class="eyebrow-tag mb-3">{{ .eyebrow }}</span>
+        <h2 class="section-heading">{{ .heading }}</h2>
+        <p class="section-subtitle mx-auto">{{ .subtitle }}</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      {{ range .items }}
+      <div class="col-lg-6">
+        <div class="card neon-card h-100 border-0">
+          <div class="card-body p-4">
+            <div class="d-flex align-items-center mb-3">
+              <span class="fs-2 me-3">{{ .icon }}</span>
+              <div>
+                <h5 class="text-white mb-1">{{ .title }}</h5>
+                <p class="text-muted small mb-0">{{ .tagline }}</p>
+              </div>
+            </div>
+            {{ with .starterApps }}
+            <div class="d-flex flex-wrap gap-2 mb-2">
+              {{ range . }}
+              <span class="badge bg-dark">{{ . }}</span>
+              {{ end }}
+            </div>
+            {{ end }}
+            {{ with .growInto }}
+            <p class="text-muted small mb-0">Grow into: {{ . }}</p>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ═══════════════ 4. SUPERAPP ═══════════════ */}}
+{{ with $d.superapp }}
+<section class="py-6 py-lg-7" style="background: #0A0A1A;">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <span class="badge rounded-pill px-3 py-2 mb-3" style="background: rgba(0,229,255,0.15); color: #00E5FF;">{{ .eyebrow }}</span>
+        <h2 class="display-5 fw-bold text-white">{{ .heading }}</h2>
+        <p class="section-subtitle mx-auto text-muted">{{ .subtitle }}</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      {{ range .categories }}
+      <div class="col-md-6 col-lg-4">
+        <div class="rounded p-4" style="background: #1A1A2E; border-left: 3px solid #00E5FF;">
+          <h5 class="text-white mb-3">{{ .title }}</h5>
+          <div class="d-flex flex-wrap gap-2">
+            {{ range .apps }}
+            <span class="badge bg-dark">{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ═══════════════ 5. ACCESS ═══════════════ */}}
+{{ with $d.access }}
+<section class="py-6 py-lg-7" style="background: #f8f9fa;">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <span class="badge bg-danger mb-3">{{ .eyebrow }}</span>
+        <h2 class="section-heading">{{ .heading }}</h2>
+        <p class="section-subtitle mx-auto">{{ .subtitle }}</p>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      {{ range .items }}
+      <div class="col-md-6 col-lg-3">
+        <div class="card border-0 h-100 text-center shadow-sm">
+          <div class="card-body p-4">
+            <div class="fs-2 mb-3">{{ .icon }}</div>
+            <h5 class="mb-2">{{ .title }}</h5>
+            <p class="text-muted small mb-0">{{ .description }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ═══════════════ 6. SIGNATURES ═══════════════ */}}
+{{ with $d.signatures }}
+<section class="py-6 py-lg-7">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <span class="badge bg-warning text-dark mb-3">{{ .eyebrow }}</span>
+        <h2 class="section-heading">{{ .heading }}</h2>
+        <p class="section-subtitle mx-auto">{{ .subtitle }}</p>
+      </div>
+    </div>
+    <div class="row g-4">
+      {{ range .items }}
+      <div class="col-md-6 col-lg-4">
+        <div class="card border-0 h-100" style="border-top: 3px solid #FF6B35 !important;">
+          <div class="card-body p-4">
+            <h5 class="mb-2">{{ .title }}</h5>
+            <p class="text-muted small mb-0">{{ .description }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ═══════════════ 7. MCP ═══════════════ */}}
+{{ with $d.mcp }}
+<section class="py-6 py-lg-7" style="background: #0A0A1A;">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <span class="badge rounded-pill px-3 py-2 mb-3" style="background: rgba(0,229,255,0.15); color: #00E5FF;">{{ .eyebrow }}</span>
+        <h2 class="display-5 fw-bold text-white">{{ .heading }}</h2>
+        <p class="section-subtitle mx-auto text-muted">{{ .subtitle }}</p>
+      </div>
+    </div>
+    <div class="row g-4 justify-content-center">
+      {{ range .items }}
+      <div class="col-md-6 col-lg-3">
+        <div class="text-center rounded p-4" style="background: #1A1A2E;">
+          <div class="fs-2 mb-3">{{ .icon }}</div>
+          <h6 class="text-white mb-2">{{ .title }}</h6>
+          <p class="text-muted small mb-0">{{ .description }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ═══════════════ 8. GROWTH ═══════════════ */}}
+{{ with $d.growth }}
+<section class="py-6 py-lg-7" style="background: #f8f9fa;">
+  <div class="container">
+    <div class="row text-center mb-5">
+      <div class="col">
+        <span class="eyebrow-tag mb-3">{{ .eyebrow }}</span>
+        <h2 class="section-heading">{{ .heading }}</h2>
+        <p class="section-subtitle mx-auto">{{ .subtitle }}</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-10 col-xl-8 mx-auto">
+        {{ range $i, $stage := .stages }}
+        <div class="d-flex {{ if $i }}mt-4{{ end }}">
+          <div class="flex-shrink-0 me-4">
+            <span class="badge rounded-circle bg-success d-inline-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">{{ add $i 1 }}</span>
+          </div>
+          <div class="flex-grow-1">
+            <h5 class="mb-2">{{ .title }}</h5>
+            <p class="text-muted mb-0">{{ .description }}</p>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{/* ═══════════════ 9. CTA ═══════════════ */}}
+{{ with $d.cta }}
+<section class="py-6 py-lg-7 text-white" style="background: var(--bs-primary, #0d6efd);">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        <h2 class="display-6 mb-3">{{ .heading }}</h2>
+        <p class="lead mb-4">{{ .subtitle }}</p>
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          {{ with .primaryButton }}
+          <a href="{{ "plans/" | relURL }}" class="btn btn-light btn-lg">{{ . }}</a>
+          {{ end }}
+          {{ with .secondaryButton }}
+          <a href="{{ "/" | relURL }}" class="btn btn-outline-light btn-lg">{{ . }}</a>
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
+
+{{ end }}

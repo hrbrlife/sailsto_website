@@ -1,0 +1,54 @@
+{{/* CTA Block - matches React CTABlock component */}}
+{{/* Usage: {{ partial "blocks/cta" (dict "data" .cta "variant" "gradient") }} */}}
+{{ $data := .data }}
+{{ $variant := .variant | default "gradient" }}
+{{ $class := .class | default "py-7" }}
+
+{{ $bgClass := "" }}
+{{ if eq $variant "gradient" }}
+  {{ $bgClass = "bg-gradient text-white" }}
+{{ else if eq $variant "dark" }}
+  {{ $bgClass = "bg-dark text-white" }}
+{{ else }}
+  {{ $bgClass = "bg-light" }}
+{{ end }}
+
+<section class="{{ $class }} {{ $bgClass }}" style="{{ if eq $variant "gradient" }}background: linear-gradient(135deg, #0A0A1A 0%, #1a1a3e 50%, #0A0A1A 100%);{{ end }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 mx-auto text-center">
+        {{ with $data.eyebrow }}
+        <span class="eyebrow-tag mb-3">{{ . }}</span>
+        {{ end }}
+        {{ with $data.heading }}
+        <h2 class="display-6 mb-3">{{ . }}</h2>
+        {{ end }}
+        {{ with $data.subtitle }}
+        <p class="lead mb-4">{{ . }}</p>
+        {{ end }}
+        {{ with $data.freeNote }}
+        <p class="text-muted small mb-4">{{ . }}</p>
+        {{ end }}
+        <div class="d-flex flex-wrap gap-3 justify-content-center">
+          {{ with $data.primaryButton }}
+          {{ if reflect.IsMap . }}
+          <a href="{{ .link | relURL }}" class="btn btn-primary btn-lg btn-neon">{{ .text }}</a>
+          {{ else }}
+          <a href="/plans/" class="btn btn-primary btn-lg btn-neon">{{ . }}</a>
+          {{ end }}
+          {{ end }}
+          {{ with $data.secondaryButton }}
+          {{ if reflect.IsMap . }}
+          <a href="{{ .link | relURL }}" class="btn btn-outline-primary btn-lg btn-wire">{{ .text }}</a>
+          {{ else }}
+          <a href="/use-cases/" class="btn btn-outline-primary btn-lg btn-wire">{{ . }}</a>
+          {{ end }}
+          {{ end }}
+        </div>
+        {{ with $data.urgency }}
+        <p class="mt-3 text-muted small">{{ . }}</p>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>

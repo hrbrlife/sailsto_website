@@ -1,0 +1,48 @@
+{
+  "seo": {
+    "title": "Contact Melusina | Équipe déploiement et support",
+    "description": "Échangez avec les ingénieurs Melusina pour planifier votre déploiement, vos ateliers conformité et vos transferts sécurisés.",
+    "keywords": "contact Melusina, support KYC, conformité",
+    "ogImage": "",
+    "canonicalUrl": "https://melusina-os.org/fr/contact",
+    "favicon": "📧"
+  },
+  "pageTitle": "Contact",
+  "eyebrow": "Collaborons",
+  "heading": "Préparez votre déploiement Melusina",
+  "subtitle": "Partagez exigences d’architecture, objectifs de conformité, périmètre de screening et calendrier : nous revenons avec une feuille de route, un environnement démo et une checklist de préparation.",
+  "channels": [
+    {
+      "label": "E-mail",
+      "value": "sales@melusina-os.org",
+      "description": "Cadrage détaillé, achats, questionnaires sécurité et demandes de documentation.",
+      "href": "mailto:sales@melusina-os.org"
+    },
+    {
+      "label": "Hotline Telegram",
+      "value": "@Melusina_Support",
+      "description": "Coordination en temps réel avec ingénieurs déploiement et responsables conformité pour les urgences.",
+      "href": "https://t.me/Melusina_Support"
+    },
+    {
+      "label": "Dépôt sécurisé",
+      "value": "Demander un lien",
+      "description": "Transmettez politiques, retours régulateur ou jeux d’essai via coffres chiffrés opérés par les helpers.",
+      "href": "mailto:sales@melusina-os.org?subject=Secure%20File%20Drop%20Request"
+    }
+  ],
+  "nextSteps": [
+    {
+      "title": "Atelier architecture",
+      "detail": "Passez en revue votre stack actuelle, mappez Pearls et helpers à votre environnement et capturez les exigences sécurité/conformité."
+    },
+    {
+      "title": "Revue résidence & gouvernance des données",
+      "detail": "Alignez isolement, rétention, sauvegarde et attentes probatoires avec vos obligations clients et régulateurs."
+    },
+    {
+      "title": "Planification du pilote",
+      "detail": "Sélectionnez des cas représentatifs, paramétrez flux + automatisations et validez scripts de vérification et critères d’acceptation avant lancement complet."
+    }
+  ]
+}

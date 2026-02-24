@@ -1,0 +1,16 @@
+{{ define "main" }}
+{{ $d := site.Data.pages.compare }}
+
+{{/* ═══════════════ 1. HERO ═══════════════ */}}
+{{ partial "blocks/hero" (dict "data" $d.hero "class" "neon-hero") }}
+
+{{/* ═══════════════ 2. COMPARISON TABLE ═══════════════ */}}
+{{ partial "blocks/comparison" (dict "data" $d.comparison "class" "py-7") }}
+
+{{/* ═══════════════ 3. DIFFERENTIATORS ═══════════════ */}}
+{{ partial "blocks/feature-grid" (dict "eyebrow" $d.differentiators.eyebrow "heading" $d.differentiators.heading "subtitle" $d.differentiators.subtitle "items" $d.differentiators.items "columns" 3 "cardStyle" "neon" "class" "py-7 bg-light") }}
+
+{{/* ═══════════════ 4. CTA ═══════════════ */}}
+{{ partial "blocks/cta" (dict "data" $d.cta "variant" "gradient") }}
+
+{{ end }}

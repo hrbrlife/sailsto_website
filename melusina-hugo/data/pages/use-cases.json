@@ -1,0 +1,335 @@
+{
+  "seo": {
+    "title": "Who Uses Melusina | From Families to Institutions",
+    "description": "Your own private operating system. Every app runs in its own isolated Pearl. From family photo vaults to regulated compliance stacks — same OS, different starting points.",
+    "keywords": "self-hosted os, family server, journalist security, private AI, family office software, DAO tooling, VASP compliance, development team collaboration",
+    "canonicalUrl": "https://melusina-os.org/use-cases",
+    "favicon": "🏠"
+  },
+  "hero": {
+    "eyebrow": "WHO IT'S FOR",
+    "heading": "Everyone who's tired of scattering their data across the internet.",
+    "subtitle": "A family runs it on a home PC. A journalist runs it on a VPS. A startup runs its entire company inside it. Same OS. Your server, any browser."
+  },
+  "audiences": {
+    "eyebrow": "USE CASES",
+    "heading": "Same platform, different worlds",
+    "subtitle": "Start with what you need. Add apps as you grow. The OS scales with you.",
+    "items": [
+      {
+        "title": "Families",
+        "icon": "👨‍👩‍👧‍👦",
+        "tagline": "Your digital life, on your own hardware",
+        "description": "Install Melusina on a home PC or small server. Open it from any browser in the house. Bureau handles documents and spreadsheets. Encrypted chat keeps family conversations private. Each photo album, document, and chat is its own isolated Pearl. Lose a laptop? Doesn't matter — your data lives on the server, protected by multiple keyholders.",
+        "starterApps": [
+          "Bureau (Docs & Spreadsheets)",
+          "Encrypted Chat",
+          "Password Vault",
+          "Photo Archive",
+          "MiniGit (Family Wiki)"
+        ],
+        "growInto": "Add financial tracking, property management, or estate planning workflows."
+      },
+      {
+        "title": "Journalists & Activists",
+        "icon": "📰",
+        "tagline": "Source protection built into the architecture",
+        "description": "Every source conversation is its own isolated Pearl. Encrypted notes in Bureau, secure file drops, anonymous tip lines — each physically separated. One investigation can never see another. Push notifications are content-free — nothing leaks. AI Lagoon runs document analysis locally and connects to specific documents via Grapple — not your whole archive. Push code to MiniGit's 'public' branch and your story is live at a URL. No CI/CD. No deploy scripts.",
+        "starterApps": [
+          "Bureau (Encrypted Notes)",
+          "Secure File Drop",
+          "Encrypted Chat",
+          "AI Lagoon (Document Analysis)",
+          "MiniGit (Secure Publishing)"
+        ],
+        "growInto": "Add collaborative investigation tools, BotMother for secure tiplines, or team coordination."
+      },
+      {
+        "title": "High-Net-Worth Individuals",
+        "icon": "💎",
+        "tagline": "Private wealth, private infrastructure",
+        "description": "Your financial documents, estate plans, advisor communications, and tax records — each in its own isolated Pearl on hardware you control. Your tax documents can't see your estate plans unless you connect them. Multi-keyholder protection means no single advisor or family member can access everything alone.",
+        "starterApps": [
+          "Document Vault",
+          "Advisor Portal",
+          "Encrypted Messaging",
+          "Financial Tracking",
+          "Estate Documents"
+        ],
+        "growInto": "Add portfolio reporting, family office workflows, or trust administration."
+      },
+      {
+        "title": "Small Teams & Startups",
+        "icon": "🚀",
+        "tagline": "Your startup IS Melusina — not a tool you bolt on",
+        "description": "You don't add Melusina to your startup. Your startup runs inside Melusina. Bureau for docs, spreadsheets, and diagrams. MerMail for email and client workflows. MiniGit for code. AI Lagoon for private AI. BotMother for customer-facing Telegram bots. CoinFace for client verification. Each is a Pearl — isolated, connected via Grapple. Build a client portal by clicking Grapple and picking Pearls: a KYC Pearl, a document vault, a chat room. The client sees one dashboard. You wrote zero code.",
+        "starterApps": [
+          "Bureau (Office Suite)",
+          "MerMail (Email + Workflows)",
+          "MiniGit (Code Hosting)",
+          "AI Lagoon (Private AI)",
+          "Encrypted Chat"
+        ],
+        "growInto": "Add CoinFace for client KYC, BotMother for customer bots, or signed release publishing via MiniGit."
+      },
+      {
+        "title": "Family Offices",
+        "icon": "🏠",
+        "tagline": "Wealth infrastructure you actually control",
+        "description": "Portfolio tracking, advisor portals, consolidated reporting — each client's data in its own isolated Pearl. Connect this portfolio to that reporting tool — not all portfolios to all tools. Multiple keyholders protect critical operations: backup decryption, certificate rotation, admin access.",
+        "starterApps": [
+          "Portfolio Tracker",
+          "Document Vault",
+          "Advisor Portal",
+          "Consolidated Reporting",
+          "Task Management"
+        ],
+        "growInto": "Add KYC workflows for co-investing, compliance tracking, or on-chain governance for foundation work."
+      },
+      {
+        "title": "DAOs & Web3 Organizations",
+        "icon": "🌐",
+        "tagline": "Governance with real multi-keyholder approval",
+        "description": "Proposals, voting, treasury management — with multi-keyholder approval on Solana. Each workstream in its own Pearl. Connect your treasury dashboard to your proposal system — without exposing contributor data. Prove what's running on your DAO's infrastructure.",
+        "starterApps": [
+          "Proposal System",
+          "Treasury Dashboard",
+          "Contributor Portal",
+          "Document Storage",
+          "Multi-Keyholder Workflows"
+        ],
+        "growInto": "Add grant management with on-chain approval, contributor KYC, SOL payroll, and cross-DAO collaboration."
+      },
+      {
+        "title": "Regulated Institutions",
+        "icon": "🏦",
+        "tagline": "Compliance infrastructure a regulator can verify on-chain",
+        "description": "Private banks, trust companies, VASPs, PSPs — CoinFace handles KYC/KYB with every client case in its own Pearl. The administrator sends a verification link; the respondent gets their own isolated Pearl with their passport, face scan, and documents. The bank sees only 'verified' or 'flagged' — never the raw PII. Admin NFTs for compliance officers — frozen the moment they leave. MerMail coordinates workflows across departments.",
+        "starterApps": [
+          "CoinFace (KYC/KYB)",
+          "Client Portal",
+          "MerMail (Compliance Workflows)",
+          "Sanctions Screening",
+          "Regulatory Reporting"
+        ],
+        "growInto": "Add custody operations, Travel Rule compliance, multi-jurisdiction reporting, or on-chain settlement."
+      },
+      {
+        "title": "Payment Service Providers",
+        "icon": "💳",
+        "tagline": "Merchant onboarding with verifiable compliance",
+        "description": "Each merchant is isolated in its own Pearl. CoinFace handles KYB — the merchant uploads documents in their own isolated Pearl and the admin reviews without touching raw data. Risk dashboards connect to AI Lagoon for document analysis via Grapple. One merchant can never see another's data. Build the entire onboarding pipeline by dragging process steps: terms → document upload → screening → review → approval.",
+        "starterApps": [
+          "CoinFace (Merchant KYB)",
+          "MerMail (Onboarding Workflows)",
+          "Risk Dashboard",
+          "Merchant Portal",
+          "Compliance Reporting"
+        ],
+        "growInto": "Add on-chain settlement, transaction monitoring, and multi-jurisdiction compliance."
+      }
+    ]
+  },
+  "insight": {
+    "eyebrow": "THE INSIGHT",
+    "heading": "One server replaces your entire SaaS stack",
+    "points": [
+      {
+        "title": "The accumulation problem",
+        "description": "Every year you sign up for more services. Every service gets a copy of something — your documents, your contacts, your habits. None of them talk to each other the way you'd want. All of them talk to each other in ways you don't know about."
+      },
+      {
+        "title": "The Melusina inversion",
+        "description": "Instead of scattering your life across the internet, you bring the internet's capabilities onto one server you control. Apps run on your hardware. Data stays in sealed Pearls. You choose what connects to what — nothing is automatic."
+      },
+      {
+        "title": "The shift",
+        "description": "You stop being a tenant in other people's systems. You become the owner of your own. And anyone — a partner, an auditor, a regulator — can verify your infrastructure is real without trusting you."
+      }
+    ]
+  },
+  "superapp": {
+    "eyebrow": "YOUR SUPERAPP",
+    "heading": "Two layers of isolation. Zero cross-contamination.",
+    "subtitle": "Documents can't see other documents. Apps can't see other apps. Connect only what you choose.",
+    "concept": "Traditional platforms are monolithic — a bug in one feature can take down everything, and all data sits in one database. Melusina isolates at the instance level: every Bureau spreadsheet, CoinFace client case, MerMail workflow, and AI Lagoon model runs in its own Pearl. A vulnerability in your chat app can't access your KYC documents. One client's spreadsheet can't see another's. Connect specific instances via Grapple when data needs to flow — this spreadsheet to that AI model, this invoice to that payment processor. Disconnect when it doesn't.",
+    "examples": [
+      {
+        "category": "Office Suite (Bureau)",
+        "apps": [
+          "Spreadsheets with real-time collaboration",
+          "Documents with CRDT editing",
+          "Diagrams & flowcharts",
+          "miniPaint image editor"
+        ]
+      },
+      {
+        "category": "Communication",
+        "apps": [
+          "MerMail (email + workflows)",
+          "BotMother (Telegram bots)",
+          "Encrypted Chat",
+          "Client Messaging"
+        ]
+      },
+      {
+        "category": "Workflows & Processes",
+        "apps": [
+          "Visual process builder",
+          "Drag-drop step pipelines",
+          "Kanban boards",
+          "Multi-level approvals"
+        ]
+      },
+      {
+        "category": "Identity & Compliance",
+        "apps": [
+          "CoinFace (KYC/KYB)",
+          "Sanctions screening",
+          "AI-powered document extraction",
+          "Facial verification"
+        ]
+      },
+      {
+        "category": "Developer Tools",
+        "apps": [
+          "MiniGit (Git hosting + static publishing)",
+          "AI Lagoon (private AI hub)",
+          "Shell Tester (extension testing)",
+          "API Documentation"
+        ]
+      },
+      {
+        "category": "Web3 & Crypto",
+        "apps": [
+          "Wallet verification",
+          "Transaction monitoring",
+          "Multisig management",
+          "On-chain signatures"
+        ]
+      }
+    ]
+  },
+  "access": {
+    "eyebrow": "ACCESS CONTROL",
+    "heading": "Instant access. Instant recall.",
+    "subtitle": "Employees see exactly what they need. Remove access in one click.",
+    "points": [
+      {
+        "title": "Role-based access",
+        "description": "Define roles: analyst, manager, compliance officer, executive. Each role sees specific apps and specific data. An analyst in the investment team doesn't see HR documents."
+      },
+      {
+        "title": "Per-item permissions",
+        "description": "Beyond roles, grant access to specific items: this client file, that project folder, this workflow. Employees access exactly what their work requires—no more."
+      },
+      {
+        "title": "Instant recall",
+        "description": "Employee leaves? One action revokes all access. Every app, every document, every workflow—gone. No chasing down shared passwords or hoping they forgot the login."
+      },
+      {
+        "title": "Audit everything",
+        "description": "Who accessed what, when, from where. Every document view, every approval, every export. When regulators ask, you have the answer. When something goes wrong, you can trace it."
+      }
+    ]
+  },
+  "signatures": {
+    "eyebrow": "MULTI-KEYHOLDER APPROVAL",
+    "heading": "M-of-N approval for every critical operation",
+    "subtitle": "No single person holds the keys. Vault access, certificate rotation, backup decryption — all require multiple keyholders to approve via signed Solana transactions.",
+    "points": [
+      {
+        "title": "Vault access after reboot",
+        "description": "After every reboot, the vault is sealed. Keyholders get alerts. Each approves by signing a Solana transaction. When enough approve, the vault opens. Keys are created, used once, then destroyed."
+      },
+      {
+        "title": "Backups only keyholders can decrypt",
+        "description": "Backups are encrypted with a random key. The key is split among keyholders. Each piece is encrypted so only that keyholder can read it. You need M-of-N pieces to reconstruct."
+      },
+      {
+        "title": "Recallable Admin NFTs",
+        "description": "Admin authority is an NFT you can freeze or recall in the same Solana block. Employee leaves? Freeze it — access gone. On-chain proof of when it was granted and revoked."
+      },
+      {
+        "title": "Immutable audit trail",
+        "description": "Every vault access, every backup hash, every certificate rotation, every keyholder approval — recorded as Solana Memo transactions. Immutable. Verifiable by anyone."
+      }
+    ]
+  },
+  "mcp": {
+    "eyebrow": "EXTENSIBILITY",
+    "heading": "Connect to exactly what you need",
+    "subtitle": "MCP servers let apps request specific resources. You approve each connection.",
+    "description": "Apps request specific capabilities: 'I need to send an email', 'I need OCR on this document.' Each request goes through Grapple. You see what's being requested and approve or deny. No blanket permissions. No hidden data flows. AI Lagoon offers three capability types — AIText, AIVision, AIGeneric — and any Pearl on the server can request them. You pick which model, which provider, which data it sees.",
+    "capabilities": [
+      {
+        "title": "AI Models",
+        "description": "AI Lagoon connects to Ollama, ChatGPT, or OpenRouter. Any Pearl can request AI through Grapple — your spreadsheet gets OCR, your KYC app gets document extraction, your bot gets natural language. You pick which model. Every request is audit-trailed."
+      },
+      {
+        "title": "External APIs",
+        "description": "Sanctions lists, company registries, credit bureaus. Each connection is explicit. Each request is logged. You control what goes out and what comes in."
+      },
+      {
+        "title": "Internal Databases",
+        "description": "An app needs customer data? It requests access to specific tables. You grant read-only on specific columns. The app never sees more than it needs."
+      },
+      {
+        "title": "Email & Messaging",
+        "description": "MerMail handles email with automatic failover and DKIM signing. BotMother routes Telegram messages. Apps send notifications via shared platform infrastructure. No per-app SMTP configs. All through Grapple capability grants."
+      },
+      {
+        "title": "Pearl Micropayments",
+        "description": "Each Pearl has a SOL wallet. Platform services — OTP, email, SMS, AI — deduct micropayments per use. Operators set spending limits. Usage metered per Pearl."
+      }
+    ]
+  },
+  "growth": {
+    "eyebrow": "GROWTH PATH",
+    "heading": "Start small. Scale safely.",
+    "stages": [
+      {
+        "stage": "1",
+        "title": "Personal / Family",
+        "description": "Document storage, encrypted messaging, photo archives, passwords. Get your digital life off other people's servers.",
+        "typical": "A family, journalist, or individual taking control of their data"
+      },
+      {
+        "stage": "2",
+        "title": "Small Team",
+        "description": "Your startup IS Melusina. Bureau for docs and spreadsheets. MiniGit for code. MerMail for email. AI Lagoon for private AI. Shared OTP and email handled by the platform — no per-app configuration.",
+        "typical": "A startup, studio, or small organization running entirely inside Melusina"
+      },
+      {
+        "stage": "3",
+        "title": "Growing Organization",
+        "description": "Bureau workflows for onboarding, approvals, and processes. Kanban views for managers. Dynamic requirements for different scenarios.",
+        "typical": "A family office, advisory firm, or NGO with repeatable processes"
+      },
+      {
+        "stage": "4",
+        "title": "Regulated Operations",
+        "description": "CoinFace for KYC/KYB, sanctions screening, AI-powered document extraction and facial verification. MerMail for compliance workflows. Regulatory reporting with on-chain audit trails.",
+        "typical": "A VASP, private bank, trust company, or PSP with regulatory obligations"
+      },
+      {
+        "stage": "5",
+        "title": "Enterprise Platform",
+        "description": "Multiple departments, each with their own apps. Cross-org workflows. Consolidated reporting. Full audit trails. White-label licensing.",
+        "typical": "A large institution or platform company building on Melusina"
+      }
+    ]
+  },
+  "cta": {
+    "heading": "What would your setup look like?",
+    "subtitle": "Start with the apps you need today. Every instance isolated. Every connection under your control. Grow when you're ready.",
+    "primaryButton": {
+      "text": "See a Demo",
+      "link": "/company"
+    },
+    "secondaryButton": {
+      "text": "Explore Architecture",
+      "link": "/architecture"
+    }
+  }
+}

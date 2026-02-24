@@ -1,0 +1,30 @@
+{{/* Feature Grid Block - matches React FeatureGridBlock component */}}
+{{/* Usage: {{ partial "blocks/feature-grid" (dict "eyebrow" "" "heading" "" "subtitle" "" "items" .items "columns" 3 "cardStyle" "neon" "class" "py-7") }} */}}
+{{ $columns := .columns | default 3 }}
+{{ $cardStyle := .cardStyle | default "neon" }}
+{{ $class := .class | default "py-7" }}
+{{ $colSize := div 12 $columns }}
+
+<section class="{{ $class }}">
+  <div class="container">
+    {{ partial "blocks/section-header" (dict "eyebrow" .eyebrow "heading" .heading "subtitle" .subtitle) }}
+    <div class="row g-4">
+      {{ range .items }}
+      <div class="col-md-6 col-lg-{{ $colSize }}">
+        <div class="card {{ if eq $cardStyle "neon" }}neon-card{{ else if eq $cardStyle "highlight" }}highlight-tile{{ else }}border-0{{ end }} h-100">
+          <div class="card-body p-4">
+            {{ with .badge }}
+            <span class="badge bg-primary mb-3">{{ . }}</span>
+            {{ end }}
+            {{ with .icon }}
+            <div class="mb-3">{{ . }}</div>
+            {{ end }}
+            <h5 class="card-title h5 mb-3">{{ .title }}</h5>
+            <p class="card-text text-muted">{{ .description }}</p>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

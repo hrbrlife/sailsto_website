@@ -1,0 +1,50 @@
+{
+  "compliance": {
+    "icon": "⚖️",
+    "color": "warning",
+    "label": "Compliance",
+    "labelFr": "Conformité"
+  },
+  "risk-management": {
+    "icon": "⚠️",
+    "color": "danger",
+    "label": "Risk Management",
+    "labelFr": "Gestion des Risques"
+  },
+  "identity-verification": {
+    "icon": "🆔",
+    "color": "info",
+    "label": "Identity Verification",
+    "labelFr": "Vérification d'Identité"
+  },
+  "regulation": {
+    "icon": "📜",
+    "color": "primary",
+    "label": "Regulation",
+    "labelFr": "Réglementation"
+  },
+  "technology": {
+    "icon": "💻",
+    "color": "success",
+    "label": "Technology",
+    "labelFr": "Technologie"
+  },
+  "financial-crime": {
+    "icon": "🚨",
+    "color": "danger",
+    "label": "Financial Crime",
+    "labelFr": "Criminalité Financière"
+  },
+  "data-privacy": {
+    "icon": "🔒",
+    "color": "dark",
+    "label": "Data Privacy",
+    "labelFr": "Confidentialité des Données"
+  },
+  "blockchain": {
+    "icon": "⛓️",
+    "color": "info",
+    "label": "Blockchain",
+    "labelFr": "Blockchain"
+  }
+}
