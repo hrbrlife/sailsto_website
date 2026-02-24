@@ -3,16 +3,12 @@ description: "Know Your Customer - the process of verifying the identity of clie
 title: "kyc"
 type: "glossary-term"
 slug: "kyc"
-category: "[object Object]"
+category: "Compliance"
 definition: ""
 relatedTerms:
   - "aml"
   - "due-diligence"
   - "compliance"
-stylesheets:
-  - "/css/main.css"
-  - "/css/pages/glossary.css"
-  - "/fonts/fonts.css"
 date: "2025-01-01"
 sitemap:
   priority: 0.5

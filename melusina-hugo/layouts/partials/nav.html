@@ -1,8 +1,8 @@
 {{- $lang := .Site.Language.Lang | default "en" -}}
-{{- $langPrefix := cond (eq $lang "en") "" (printf "/%s" $lang) -}}
+{{- $homeURL := site.Home.RelPermalink -}}
 <nav class="py-3 neon-navbar navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a aria-label="Melusina Home" class="fw-semibold fs-4 d-flex align-items-center gap-2 navbar-brand" href="{{ $langPrefix | default "/" | relURL }}">
+        <a aria-label="Melusina Home" class="fw-semibold fs-4 d-flex align-items-center gap-2 navbar-brand" href="{{ $homeURL }}">
             <img alt="Melusina" class="brand-logo" src="{{ "melulogo-cyan.svg" | relURL }}" style="width: 36px; height: 36px; border-radius: 3px; filter: drop-shadow(rgba(0, 229, 255, 0.53) 0px 0px 8px) drop-shadow(rgba(0, 229, 255, 0.18) 0px 0px 20px);">
             <span class="d-flex flex-column">
                 <span style="font-size: 16px; font-weight: 800; letter-spacing: 0.05em; font-family: Orbitron, sans-serif;">
@@ -16,10 +16,10 @@
         </button>
         <div class="navbar-collapse collapse" id="main-navbar">
             <nav class="ms-auto align-items-lg-center gap-lg-2 navbar-nav" role="navigation">
-                <a aria-label="{{ i18n "navHome" | default "Home" }}" class="fw-semibold text-uppercase-spaced nav-link{{ if .IsHome }} active{{ end }}" href="{{ $langPrefix | default "/" | relURL }}">{{ i18n "navHome" | default "Home" }}</a>
+                <a aria-label="{{ i18n "navHome" | default "Home" }}" class="fw-semibold text-uppercase-spaced nav-link{{ if .IsHome }} active{{ end }}" href="{{ $homeURL }}">{{ i18n "navHome" | default "Home" }}</a>
                 <a aria-label="{{ i18n "navUseCases" | default "Use Cases" }}" class="fw-semibold text-uppercase-spaced nav-link{{ if eq .RelPermalink "/use-cases/" }} active{{ end }}" href="{{ "use-cases/" | relURL }}">{{ i18n "navUseCases" | default "Use Cases" }}</a>
                 <a aria-label="{{ i18n "navCompare" | default "Compare" }}" class="fw-semibold text-uppercase-spaced nav-link{{ if eq .RelPermalink "/compare/" }} active{{ end }}" href="{{ "compare/" | relURL }}">{{ i18n "navCompare" | default "Compare" }}</a>
-                <a aria-label="{{ i18n "navRoadmap" | default "Roadmap" }}" class="fw-semibold text-uppercase-spaced nav-link{{ if eq .RelPermalink "/roadmap/" }} active{{ end }}" href="{{ "knowledge/roadmap/" | relURL }}">{{ i18n "navRoadmap" | default "Roadmap" }}</a>
+                <a aria-label="{{ i18n "navRoadmap" | default "Roadmap" }}" class="fw-semibold text-uppercase-spaced nav-link{{ if eq .RelPermalink "/roadmap/" }} active{{ end }}" href="{{ "roadmap/" | relURL }}">{{ i18n "navRoadmap" | default "Roadmap" }}</a>
                 <a aria-label="{{ i18n "navPricing" | default "Pricing" }}" class="fw-semibold text-uppercase-spaced nav-link{{ if eq .RelPermalink "/plans/" }} active{{ end }}" href="{{ "plans/" | relURL }}">{{ i18n "navPricing" | default "Pricing" }}</a>
                 
                 <!-- For You dropdown -->
@@ -42,7 +42,7 @@
                 <div class="fw-semibold text-uppercase-spaced nav-item dropdown">
                     <a id="apps-dropdown" aria-expanded="false" role="button" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" href="#">{{ i18n "navApps" | default "Apps" }}</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ "apps/bureau/" | relURL }}">📋 Bureau</a></li>
+                        <li><a class="dropdown-item" href="{{ "bureau/" | relURL }}">📋 Bureau</a></li>
                         <li><a class="dropdown-item disabled" href="#">🛠️ Office Tools</a></li>
                         <li><a class="dropdown-item disabled" href="#">💬 Communication</a></li>
                         <li><a class="dropdown-item disabled" href="#">🌐 Internet</a></li>
@@ -59,12 +59,11 @@
                 <div class="fw-semibold text-uppercase-spaced nav-item dropdown">
                     <a id="knowledge-base-dropdown" aria-expanded="false" role="button" class="dropdown-toggle nav-link" data-bs-toggle="dropdown" href="#">{{ i18n "navKnowledgeBase" | default "Knowledge Base" }}</a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ "knowledge/" | relURL }}">📚 {{ i18n "navKnowledgeBase" | default "Knowledge Base" }}</a></li>
+                        <li><a class="dropdown-item" href="{{ "knowledge-base/" | relURL }}">📚 {{ i18n "navKnowledgeBase" | default "Knowledge Base" }}</a></li>
                         <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="{{ "knowledge/blog/" | relURL }}">📝 {{ i18n "navBlog" | default "Blog" }}</a></li>
-                        <li><a class="dropdown-item" href="{{ "knowledge/docs/" | relURL }}">📖 {{ i18n "navDocs" | default "Docs" }}</a></li>
-                        <li><a class="dropdown-item" href="{{ "knowledge/faq/" | relURL }}">❓ {{ i18n "navFAQ" | default "FAQ" }}</a></li>
-                        <li><a class="dropdown-item" href="{{ "knowledge/glossary/" | relURL }}">📘 {{ i18n "navGlossary" | default "Glossary" }}</a></li>
+                        <li><a class="dropdown-item" href="{{ "docs/" | relURL }}">📖 {{ i18n "navDocs" | default "Docs" }}</a></li>
+                        <li><a class="dropdown-item" href="{{ "faq/" | relURL }}">❓ {{ i18n "navFAQ" | default "FAQ" }}</a></li>
+                        <li><a class="dropdown-item" href="{{ "glossary/" | relURL }}">📘 {{ i18n "navGlossary" | default "Glossary" }}</a></li>
                     </ul>
                 </div>
                 

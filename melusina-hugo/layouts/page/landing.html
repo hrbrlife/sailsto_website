@@ -7,23 +7,24 @@
   <div class="container position-relative">
     <div class="row justify-content-center">
       <div class="col-lg-10 text-center">
-        <span class="badge rounded-pill bg-dark text-uppercase-spaced mb-3 px-3 py-2" style="color: #00E5FF;">{{ $d.hero.eyebrow }}</span>
+        <span class="badge rounded-pill bg-primary text-uppercase-spaced mb-3 px-3 py-2">{{ $d.hero.eyebrow }}</span>
         <h1 class="display-3 fw-bold mb-3" style="color: #fff;">{{ $d.hero.heading }}</h1>
         <p class="lead mb-4" style="color: rgba(255,255,255,0.8); max-width: 720px; margin: 0 auto;">{{ $d.hero.subtitle }}</p>
         <div class="d-flex flex-wrap gap-3 justify-content-center mb-4">
           <a href="{{ "plans/" | relURL }}" class="btn btn-primary btn-lg btn-neon">{{ $d.hero.primaryButton }}</a>
           <a href="{{ "use-cases/" | relURL }}" class="btn btn-outline-primary btn-lg btn-wire">{{ $d.hero.secondaryButton }}</a>
         </div>
-        {{/* Audience Cards */}}
-        <div class="d-flex flex-wrap gap-2 justify-content-center mb-4">
-          {{ range $d.hero.audienceCards }}
-          <span class="badge rounded-pill bg-dark px-3 py-2" style="border: 1px solid rgba(255,255,255,0.1);">{{ .icon }} {{ .label }}</span>
+        {{/* Proof Points */}}
+        <div class="d-flex flex-wrap gap-4 mt-4 pt-3 justify-content-center" style="border-top: 1px solid rgba(0, 229, 255, 0.15);">
+          {{ range $d.hero.proofPoints }}
+          <span class="small" style="color: rgba(232, 232, 255, 0.5);"><span style="color: #00E5FF;">✓</span> {{ .text }}</span>
           {{ end }}
         </div>
-        {{/* Proof Points */}}
-        <div class="d-flex flex-wrap gap-3 justify-content-center">
-          {{ range $d.hero.proofPoints }}
-          <span class="badge bg-dark text-uppercase-spaced small">{{ .text }}</span>
+        {{/* Audience Cards */}}
+        <div class="d-flex flex-wrap gap-2 mt-4 justify-content-center">
+          <span class="small fw-semibold" style="color: rgba(232, 232, 255, 0.4); align-self: center; margin-right: 4px;">Built for:</span>
+          {{ range $d.hero.audienceCards }}
+          <span class="px-3 py-1 rounded-pill small fw-semibold" style="background-color: rgba(0, 229, 255, 0.06); border: 1px solid rgba(0, 229, 255, 0.15); color: rgba(232, 232, 255, 0.6); font-size: 0.8rem;">{{ .icon }} {{ .label }}</span>
           {{ end }}
         </div>
       </div>
@@ -351,7 +352,7 @@
   <div class="container position-relative">
     <div class="row">
       <div class="col-lg-8 mx-auto text-center">
-        <span class="badge rounded-pill bg-dark text-uppercase-spaced mb-3 px-3 py-2" style="color: #00E5FF;">{{ $d.cta.eyebrow }}</span>
+        <span class="badge rounded-pill bg-primary text-uppercase-spaced mb-3 px-3 py-2">{{ $d.cta.eyebrow }}</span>
         <h2 class="display-5 fw-bold text-white mb-3">{{ $d.cta.heading }}</h2>
         <p class="lead mb-4" style="color: rgba(255,255,255,0.8);">{{ $d.cta.subtitle }}</p>
         <div class="d-flex flex-wrap gap-3 justify-content-center mb-4">

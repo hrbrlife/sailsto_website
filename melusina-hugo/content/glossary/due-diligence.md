@@ -3,17 +3,13 @@ description: "The investigation and verification process that financial institut
 title: "due-diligence"
 type: "glossary-term"
 slug: "due-diligence"
-category: "[object Object]"
+category: "Risk Management"
 definition: ""
 relatedTerms:
   - "kyc"
   - "aml"
   - "compliance"
   - "risk-assessment"
-stylesheets:
-  - "/css/main.css"
-  - "/css/pages/glossary.css"
-  - "/fonts/fonts.css"
 date: "2025-01-01"
 sitemap:
   priority: 0.5

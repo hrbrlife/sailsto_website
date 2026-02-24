@@ -21,11 +21,11 @@
             <div class="col-lg-2 col-md-6">
                 <h6 class="mb-3 text-uppercase-spaced">{{ i18n "footerOnSite" | default "On the site" }}</h6>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a class="footer-link" href="{{ "/" | relURL }}">{{ i18n "navHome" | default "Home" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ site.Home.RelPermalink }}">{{ i18n "navHome" | default "Home" }}</a></li>
                     <li class="mb-2"><a class="footer-link" href="{{ "use-cases/" | relURL }}">{{ i18n "navUseCases" | default "Use Cases" }}</a></li>
                     <li class="mb-2"><a class="footer-link" href="{{ "compare/" | relURL }}">{{ i18n "navCompare" | default "Compare" }}</a></li>
-                    <li class="mb-2"><a class="footer-link" href="{{ "knowledge/roadmap/" | relURL }}">{{ i18n "navRoadmap" | default "Roadmap" }}</a></li>
-                    <li class="mb-2"><a class="footer-link" href="{{ "knowledge/blog/" | relURL }}">{{ i18n "navBlog" | default "Blog" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "roadmap/" | relURL }}">{{ i18n "navRoadmap" | default "Roadmap" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "docs/" | relURL }}">{{ i18n "navDocs" | default "Docs" }}</a></li>
                 </ul>
             </div>
             
@@ -47,9 +47,9 @@
             <div class="col-lg-2 col-md-6">
                 <h6 class="mb-3 text-uppercase-spaced">{{ i18n "footerResources" | default "Resources" }}</h6>
                 <ul class="list-unstyled">
-                    <li class="mb-2"><a class="footer-link" href="{{ "knowledge/" | relURL }}">{{ i18n "navKnowledgeBase" | default "Knowledge Base" }}</a></li>
-                    <li class="mb-2"><a class="footer-link" href="{{ "knowledge/faq/" | relURL }}">{{ i18n "navFAQ" | default "FAQ" }}</a></li>
-                    <li class="mb-2"><a class="footer-link" href="{{ "knowledge/glossary/" | relURL }}">{{ i18n "navGlossary" | default "Glossary" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "knowledge-base/" | relURL }}">{{ i18n "navKnowledgeBase" | default "Knowledge Base" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "faq/" | relURL }}">{{ i18n "navFAQ" | default "FAQ" }}</a></li>
+                    <li class="mb-2"><a class="footer-link" href="{{ "glossary/" | relURL }}">{{ i18n "navGlossary" | default "Glossary" }}</a></li>
                     <li class="mb-2"><a class="footer-link" href="{{ "plans/" | relURL }}">{{ i18n "navPricing" | default "Plans" }}</a></li>
                 </ul>
             </div>

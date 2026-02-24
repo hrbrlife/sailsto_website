@@ -3,16 +3,12 @@ description: "The Bureau service that turns Panel Builder manifests into executa
 title: "template-compiler"
 type: "glossary-term"
 slug: "template-compiler"
-category: "[object Object]"
+category: "Technology"
 definition: ""
 relatedTerms:
   - "panel-builder"
   - "process-catalog"
   - "bureau"
-stylesheets:
-  - "/css/main.css"
-  - "/css/pages/glossary.css"
-  - "/fonts/fonts.css"
 date: "2025-01-01"
 sitemap:
   priority: 0.5

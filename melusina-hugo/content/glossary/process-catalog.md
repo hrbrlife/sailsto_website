@@ -3,16 +3,12 @@ description: "The Bureau registry that stores published workflow definitions for
 title: "process-catalog"
 type: "glossary-term"
 slug: "process-catalog"
-category: "[object Object]"
+category: "Technology"
 definition: ""
 relatedTerms:
   - "template-compiler"
   - "panel-builder"
   - "bureau"
-stylesheets:
-  - "/css/main.css"
-  - "/css/pages/glossary.css"
-  - "/fonts/fonts.css"
 date: "2025-01-01"
 sitemap:
   priority: 0.5

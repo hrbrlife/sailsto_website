@@ -333,4 +333,4 @@ docker-compose logs -f screening-worker
 
 ---
 
-**Need help configuring?** Schedule a [technical consultation](https://melusina-os.org/contact).
+**Need help configuring?** Schedule a [technical consultation](https://melusina-os.org/company).

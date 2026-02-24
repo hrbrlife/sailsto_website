@@ -62,18 +62,25 @@
       <div class="col-lg-4">
         {{/* Related Terms */}}
         {{ with $data.relatedTerms }}
+        {{ $hasValid := false }}
+        {{ range . }}{{ if index site.Data.glossary . }}{{ $hasValid = true }}{{ end }}{{ end }}
+        {{ if $hasValid }}
         <div class="card border-0 shadow-sm mb-4">
           <div class="card-body p-4">
             <h5 class="mb-3">Related Terms</h5>
             <ul class="list-unstyled mb-0">
               {{ range . }}
+              {{ $related := index site.Data.glossary . }}
+              {{ if $related }}
               <li class="mb-2">
                 <a href="{{ printf "glossary/%s/" (urlize .) | relURL }}" style="color: #00E5FF;">{{ . }}</a>
               </li>
               {{ end }}
+              {{ end }}
             </ul>
           </div>
         </div>
+        {{ end }}
         {{ end }}
         {{/* Term Details */}}
         {{ with $data }}

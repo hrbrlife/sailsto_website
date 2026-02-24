@@ -3,17 +3,13 @@ description: "Anti-Money Laundering - regulations and procedures designed to pre
 title: "aml"
 type: "glossary-term"
 slug: "aml"
-category: "[object Object]"
+category: "Compliance"
 definition: ""
 relatedTerms:
   - "kyc"
   - "due-diligence"
   - "compliance"
   - "fatf"
-stylesheets:
-  - "/css/main.css"
-  - "/css/pages/glossary.css"
-  - "/fonts/fonts.css"
 date: "2025-01-01"
 sitemap:
   priority: 0.5

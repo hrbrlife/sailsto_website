@@ -31,7 +31,7 @@
       ],
       "idealFor": "Platform companies, fintechs, compliance providers, and any organization building sovereign infrastructure products with their own branding and trust chain.",
       "cta": "Contact Sales",
-      "ctaLink": "/contact?plan=licensed",
+      "ctaLink": "/company/?plan=licensed",
       "highlight": false
     },
     {
@@ -55,7 +55,7 @@
       ],
       "idealFor": "Families, HNW individuals, privacy-focused teams, family offices, law firms, and anyone wanting full data sovereignty on their own hardware.",
       "cta": "Get Started",
-      "ctaLink": "/contact?plan=selfhosted",
+      "ctaLink": "/company/?plan=selfhosted",
       "highlight": true
     },
     {
@@ -80,7 +80,7 @@
       ],
       "idealFor": "Individuals, families, small teams, DAOs, and anyone who wants zero infrastructure overhead with sovereign hosting.",
       "cta": "Start Free Trial",
-      "ctaLink": "/contact?plan=cloud",
+      "ctaLink": "/company/?plan=cloud",
       "highlight": false
     }
   ],
@@ -303,7 +303,7 @@
     "subtitle": "Whether you're a family, a startup, or an institution — we'll help you find the right fit.",
     "primaryButton": {
       "text": "Contact Sales",
-      "link": "/contact"
+      "link": "/company/"
     },
     "secondaryButton": {
       "text": "See Architecture",

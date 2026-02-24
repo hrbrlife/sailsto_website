@@ -22,14 +22,14 @@
           {{ if reflect.IsMap . }}
           <a href="{{ .link | relURL }}" class="btn btn-primary btn-lg btn-neon">{{ .text }}</a>
           {{ else }}
-          <a href="/plans/" class="btn btn-primary btn-lg btn-neon">{{ . }}</a>
+          <a href="{{ "plans/" | relURL }}" class="btn btn-primary btn-lg btn-neon">{{ . }}</a>
           {{ end }}
           {{ end }}
           {{ with $data.secondaryButton }}
           {{ if reflect.IsMap . }}
           <a href="{{ .link | relURL }}" class="btn btn-outline-primary btn-lg btn-wire">{{ .text }}</a>
           {{ else }}
-          <a href="/use-cases/" class="btn btn-outline-primary btn-lg btn-wire">{{ . }}</a>
+          <a href="{{ "use-cases/" | relURL }}" class="btn btn-outline-primary btn-lg btn-wire">{{ . }}</a>
           {{ end }}
           {{ end }}
         </div>

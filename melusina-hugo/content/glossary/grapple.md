@@ -3,16 +3,12 @@ description: "Melusina's universal connector — how pearls request capabilities
 title: "grapple"
 type: "glossary-term"
 slug: "grapple"
-category: "[object Object]"
+category: "Data Privacy"
 definition: ""
 relatedTerms:
   - "pearl"
   - "capability-url"
   - "capnproto"
-stylesheets:
-  - "/css/main.css"
-  - "/css/pages/glossary.css"
-  - "/fonts/fonts.css"
 date: "2025-01-01"
 sitemap:
   priority: 0.5

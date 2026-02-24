@@ -96,6 +96,6 @@ Keep full-fidelity events in the Pearl while shipping hashed digests to your SIE
 
 ## Resources
 
-- [Architecture diagrams (PDF)](/reference/melusina-pearls.pdf) — Layer diagrams for Pearl, helper mesh, and monitoring plane.
+- [Architecture overview](/architecture/) — Platform architecture pillars and security design.
 - [Helper hardening checklist](https://reference.melusina-os.org/helpers/hardening) — Security baselines for every helper type plus remediation flow.
 - [Timeline export sample](https://reference.melusina-os.org/timeline-sample) — Inspect the JSON export auditors receive when requesting evidence.
