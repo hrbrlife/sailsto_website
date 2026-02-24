@@ -4,9 +4,9 @@ description: "Sails.to's 4-layer authority structure on Solana: Master NFT → R
 ogImage: "/og-image.png"
 keywords: ["nft hierarchy", "glossary", "authority", "structure", "solana", "master", "reseller", "license"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "technology"
 tags:

@@ -4,9 +4,9 @@ description: "Payments made to security token holders, including dividends, inte
 ogImage: "/og-image.png"
 keywords: ["distributions", "glossary", "payments", "made", "security", "token", "holders", "including"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "finance"
 tags:

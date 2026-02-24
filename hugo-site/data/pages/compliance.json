@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "label": "Compliance",
+    "title": "Built for Regulatory Clarity",
+    "desc": "<span class=\"glossary-term\" data-term=\"crosssecurities\">CrossSecurities</span> are designed from the ground up to meet securities regulations across multiple jurisdictions."
+  },
+  "features": [
+    {
+      "icon": "lock",
+      "title": "<span class=\"glossary-term\" data-term=\"kyc\">KYC</span>/<span class=\"glossary-term\" data-term=\"aml\">AML</span>",
+      "text": "<span class=\"glossary-term\" data-term=\"professional-investor\">Professional investor</span> verification with tiered KYC levels. Identity verification, source of funds, and accreditation checks built into every offering."
+    },
+    {
+      "icon": "document",
+      "title": "Securities Exemptions",
+      "text": "Offerings structured under recognized exemptions including <span class=\"glossary-term\" data-term=\"reg-d\">Regulation D</span> (US), <span class=\"glossary-term\" data-term=\"reg-s\">Regulation S</span> (offshore), and equivalent frameworks globally."
+    },
+    {
+      "icon": "globe",
+      "title": "Multi-Jurisdiction",
+      "text": "Legal opinions and <span class=\"glossary-term\" data-term=\"compliance\">compliance</span> frameworks covering EU, UK, US, and emerging markets. Clear investor eligibility by jurisdiction. <span class=\"glossary-term\" data-term=\"wyoming-dao-llc\">Wyoming DAO Series LLC</span> legal structure."
+    },
+    {
+      "icon": "folder",
+      "title": "Documentation",
+      "text": "Standardized offering documents including <span class=\"glossary-term\" data-term=\"offering-memorandum\">private placement memorandum (PPM)</span>, subscription agreements, and risk disclosures reviewed by securities counsel."
+    }
+  ],
+  "info_blocks": [
+    {
+      "title": "Compliance Infrastructure",
+      "intro": "Every CrossSecurities offering on Sails.to includes:",
+      "items": [
+        "<strong><span class=\"glossary-term\" data-term=\"investor-verification\">Investor Verification</span>:</strong> Multi-level <span class=\"glossary-term\" data-term=\"kyc\">KYC</span> with <span class=\"glossary-term\" data-term=\"professional-investor\">professional investor</span> certification",
+        "<strong>Jurisdictional Controls:</strong> Automated geo-blocking and eligibility enforcement",
+        "<strong>Transfer Restrictions:</strong> <span class=\"glossary-term\" data-term=\"smart-contract\">Smart contract</span> enforcement of holding periods and transfer rules",
+        "<strong>Reporting:</strong> Automated regulatory reporting and investor communications",
+        "<strong>Audit Trail:</strong> Complete transaction history for regulatory inquiries"
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Questions About Compliance?",
+    "text": "Our team can walk you through our compliance framework and how it applies to your specific situation.",
+    "label": "Contact Us",
+    "href": "/company/contact/"
+  }
+}

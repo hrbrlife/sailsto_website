@@ -5,9 +5,9 @@ description: "What tokenization is, why it matters, and how Sails.to's CrossSecu
 ogImage: "/og-image.png"
 keywords: ["tokenization", "security tokens", "CrossSecurities", "SPL-2022", "digital securities", "blockchain", "Solana", "compliance"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/guides.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/guides.css"
 guideMeta: "The complete guide to tokenized securities—what they are, why they exist, and how they will remake capital markets"
 draft: false
 ---

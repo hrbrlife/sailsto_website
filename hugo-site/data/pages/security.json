@@ -1,0 +1,63 @@
+{
+  "hero": {
+    "label": "Security",
+    "title": "Your Data. Your Control.",
+    "desc": "No big-tech cloud dependencies. No centralized data honeypots. Infrastructure built from the ground up to minimize what can go wrong."
+  },
+  "features": [
+    {
+      "icon": "building",
+      "title": "Independent Infrastructure",
+      "text": "We don't rent space on AWS, Google, or Azure. Your sensitive data never passes through big-tech systems that mine, profile, or aggregate user information."
+    },
+    {
+      "icon": "lock",
+      "title": "Isolated by Design",
+      "text": "Each issuer's data lives in its own sealed container via <span class=\"glossary-term\" data-term=\"series-llc\">Series LLC</span> separation. A breach elsewhere can't cascade to you. Smaller attack surface means fewer things that can go wrong."
+    },
+    {
+      "icon": "users",
+      "title": "No Single Point of Failure",
+      "text": "Critical operations require multiple independent approvers. No single person—not even us—can unilaterally access funds or make system changes."
+    },
+    {
+      "icon": "shield",
+      "title": "Audited Smart Contracts",
+      "text": "All <span class=\"glossary-term\" data-term=\"crosssecurities\">CrossSecurities</span> <span class=\"glossary-term\" data-term=\"smart-contract\">smart contracts</span> undergo third-party security audits before deployment. Published audit reports available for review."
+    }
+  ],
+  "info_blocks": [
+    {
+      "title": "Why This Matters",
+      "paragraphs": [
+        "Most platforms store everyone's data in one giant database on rented cloud infrastructure. When that database gets breached—and breaches happen—everyone's exposed at once.",
+        "We took a different approach:"
+      ],
+      "items": [
+        "<strong>Dedicated systems:</strong> Purpose-built infrastructure we control, not shared cloud resources",
+        "<strong>Data isolation:</strong> Your offering's data is walled off from every other offering",
+        "<strong>Encrypted everything:</strong> Data encrypted at rest and in transit with keys we rotate regularly",
+        "<strong>Multi-party controls:</strong> Sensitive operations require approval from multiple independent keyholders",
+        "<strong>Minimal footprint:</strong> We collect only what's legally required for <span class=\"glossary-term\" data-term=\"kyc\">KYC</span>/<span class=\"glossary-term\" data-term=\"aml\">AML</span>—less data stored means less data at risk"
+      ]
+    },
+    {
+      "title": "<span class=\"glossary-term\" data-term=\"custody\">Custody</span> & Funds",
+      "paragraphs": [
+        "Investor funds are held with regulated custodians in segregated accounts—never commingled with platform operations. Multi-signature controls mean no single party can move funds unilaterally. <span class=\"glossary-term\" data-term=\"on-chain\">On-chain</span> holdings are on <span class=\"glossary-term\" data-term=\"solana\">Solana</span>; <span class=\"glossary-term\" data-term=\"bankable\">bankable</span> holdings are via <span class=\"glossary-term\" data-term=\"clearstream\">Clearstream</span>."
+      ]
+    },
+    {
+      "title": "Incident Response",
+      "paragraphs": [
+        "Documented incident response procedures with 24/7 monitoring. Security incidents are communicated transparently to affected parties within regulatory timeframes."
+      ]
+    }
+  ],
+  "cta": {
+    "title": "Security Questions?",
+    "text": "Request our detailed security documentation or schedule a security review call.",
+    "label": "Contact Security Team",
+    "href": "/company/contact/"
+  }
+}

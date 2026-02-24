@@ -4,9 +4,9 @@ description: "A complete record of a company's securities ownership, showing all
 ogImage: "/og-image.png"
 keywords: ["cap", "table", "capitalization", "glossary", "complete", "record", "company", "securities"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "finance"
 tags:

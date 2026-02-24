@@ -4,9 +4,9 @@ description: "A deterministic Solana account address derived from program seeds,
 ogImage: "/og-image.png"
 keywords: ["pda", "program derived address", "glossary", "solana", "deterministic", "account", "seeds", "trustless"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "technology"
 tags:

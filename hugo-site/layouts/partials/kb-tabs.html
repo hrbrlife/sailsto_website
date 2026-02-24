@@ -1,0 +1,9 @@
+{{/* Partial (converted from shortcode): kb-tabs — renders content type tabs from data/categories.yaml */}}
+{{ $lang := .Language.Lang }}
+{{ $cats := .Site.Data.categories }}
+
+<div class="kb-tabs" id="kb-tabs">
+    {{ range $key, $def := $cats.content_types }}
+    <button class="kb-tab{{ if eq $key "all" }} active{{ end }}" data-category="{{ $key }}">{{ index $def $lang }}</button>
+    {{ end }}
+</div>

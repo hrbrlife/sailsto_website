@@ -4,9 +4,9 @@ description: "Self-executing code deployed on a blockchain that automatically en
 ogImage: "/og-image.png"
 keywords: ["smart", "contract", "glossary", "self-executing", "code", "deployed", "blockchain", "automatically"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "technology"
 tags:

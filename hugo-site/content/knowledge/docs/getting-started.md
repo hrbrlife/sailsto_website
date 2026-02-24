@@ -4,9 +4,9 @@ description: "Your onboarding guide to the Sails.to platform — choose your rol
 ogImage: "/og-image.png"
 keywords: ["getting started", "onboarding", "KYC", "signup", "investor", "issuer", "broker", "grain provisioning"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "From signup to your first action on the platform — everything you need to get moving with regulated tokenized securities."
 draft: false
 ---

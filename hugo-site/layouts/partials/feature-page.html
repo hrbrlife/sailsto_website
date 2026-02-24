@@ -1,0 +1,56 @@
+{{/*
+  Partial: feature-page
+  Renders a standard feature page with:
+  - Hero section
+  - 2×2 feature card grid
+  - Info blocks (with optional lists)
+  - CTA section
+  
+  Data source: data/pages/<pagename>.json
+  Used by: compliance, security, oversight pages
+*/}}
+{{ $data := . }}
+
+<section class="page-hero">
+<span class="section-label">{{ $data.hero.label }}</span>
+<h1 class="section-title">{{ $data.hero.title | safeHTML }}</h1>
+<p class="section-desc">{{ $data.hero.desc | safeHTML }}</p>
+</section>
+
+<section class="content-section">
+<div class="content-container">
+
+<div class="feature-grid" style="grid-template-columns: repeat(2, 1fr);">
+{{ range $data.features }}
+<div class="feature-card">
+<span class="icon-wrapper" style="margin-bottom: 20px;"><svg><use href="#icon-{{ .icon }}"></use></svg></span>
+<h3>{{ .title | safeHTML }}</h3>
+<p>{{ .text | safeHTML }}</p>
+</div>
+{{ end }}
+</div>
+
+{{ range $data.info_blocks }}
+<div class="info-block">
+<h2>{{ .title | safeHTML }}</h2>
+{{ with .intro }}<p>{{ . | safeHTML }}</p>{{ end }}
+{{ range .paragraphs }}<p>{{ . | safeHTML }}</p>{{ end }}
+{{ with .items }}
+<ul>
+{{ range . }}
+<li>{{ . | safeHTML }}</li>
+{{ end }}
+</ul>
+{{ end }}
+{{ with .outro }}<p>{{ . | safeHTML }}</p>{{ end }}
+</div>
+{{ end }}
+
+</div>
+</section>
+
+<section class="cta-section">
+<h2>{{ $data.cta.title }}</h2>
+<p>{{ $data.cta.text }}</p>
+<a href="{{ $data.cta.href }}" class="btn btn-primary">{{ $data.cta.label }}</a>
+</section>

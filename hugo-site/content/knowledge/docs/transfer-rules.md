@@ -4,9 +4,9 @@ description: "Transfer compliance checks, the SPL-2022 Transfer Hook mechanism, 
 ogImage: "/og-image.png"
 keywords: ["transfer rules", "transfer hook", "compliance", "account freezing", "forced transfer", "jurisdiction"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "Protocol-level enforcement — non-compliant transfers don't get logged and ignored, they get rejected."
 draft: false
 ---

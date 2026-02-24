@@ -4,9 +4,9 @@ description: "A high-performance blockchain platform known for fast transaction 
 ogImage: "/og-image.png"
 keywords: ["solana", "glossary", "high-performance", "blockchain", "platform", "known", "fast", "transaction"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "technology"
 tags:

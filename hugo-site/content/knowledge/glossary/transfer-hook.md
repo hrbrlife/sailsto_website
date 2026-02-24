@@ -4,9 +4,9 @@ description: "A Solana SPL-2022 extension that intercepts token transfers and en
 ogImage: "/og-image.png"
 keywords: ["transfer hook", "glossary", "solana", "spl-2022", "compliance", "token", "transfer", "kyc"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "technology"
 tags:

@@ -1,5 +1,7 @@
 ---
 title: "Roadmap"
+type: "page"
+layout: "knowledge-roadmap"
 description: "Sails.to development roadmap and timeline. Track our progress from beta launch through institutional adoption and global expansion."
 keywords:
   - sails.to roadmap
@@ -9,14 +11,9 @@ keywords:
   - platform updates
 ogImage: "/og-roadmap.png"
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/knowledge-roadmap.css"
+  - "/css/main.css"
+  - "/css/pages/knowledge-roadmap.css"
 scripts:
-  - "/js/kb-filters.js"
-  - "/js/knowledge-roadmap.js"
+  - "/js/pages/kb-filters.js"
+  - "/js/pages/knowledge-roadmap.js"
 ---
-
-
-{{< roadmap-timeline >}}
-
-

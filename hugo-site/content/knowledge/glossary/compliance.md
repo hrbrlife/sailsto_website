@@ -4,9 +4,9 @@ description: "Adherence to legal, regulatory, and internal requirements — auto
 ogImage: "/og-image.png"
 keywords: ["compliance", "glossary", "adherence", "legal", "regulatory", "internal", "requirements", "automated"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "compliance"
 tags:

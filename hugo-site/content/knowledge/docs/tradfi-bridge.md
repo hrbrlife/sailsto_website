@@ -4,9 +4,9 @@ description: "The full integration layer connecting on-chain Solana tokens to tr
 ogImage: "/og-image.png"
 keywords: ["TradFi bridge", "integration layer", "Solana event watcher", "Clearstream", "SWIFT", "notifications", "regulatory filing", "Form D", "EDGAR", "distributions", "waterfall", "monitoring"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "The complete integration layer between on-chain Solana tokens and the traditional financial system — event routing, settlement, regulatory filing, and operational monitoring."
 draft: false
 ---

@@ -4,9 +4,9 @@ description: "Also known as CrossConversion — Sails.to's mechanism for convert
 ogImage: "/og-image.png"
 keywords: ["tradfi", "bridge", "crossconversion", "glossary", "known", "sails", "mechanism", "converting"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "finance"
 tags:

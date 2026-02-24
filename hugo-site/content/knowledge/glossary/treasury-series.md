@@ -4,9 +4,9 @@ description: "A dedicated series within a Series LLC structure that holds un-iss
 ogImage: "/og-image.png"
 keywords: ["treasury", "series", "glossary", "dedicated", "within", "llc", "structure", "holds"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "legal"
 tags:

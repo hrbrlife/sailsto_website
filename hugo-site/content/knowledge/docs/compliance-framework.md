@@ -4,9 +4,9 @@ description: "KYC credential NFTs, ComplianceConfig PDAs, transfer enforcement, 
 ogImage: "/og-image.png"
 keywords: ["compliance", "KYC", "regulatory reporting", "audit trail", "accredited investor", "Reg D"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "Compliance encoded in smart contracts and enforced at the protocol level — because paper policies don't stop non-compliant transfers."
 draft: false
 ---

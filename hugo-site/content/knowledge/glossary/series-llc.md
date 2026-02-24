@@ -4,9 +4,9 @@ description: "A corporate structure allowing a single LLC to create multiple seg
 ogImage: "/og-image.png"
 keywords: ["series", "llc", "glossary", "corporate", "structure", "allowing", "single", "create"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "legal"
 tags:

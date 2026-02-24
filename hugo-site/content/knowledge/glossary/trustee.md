@@ -4,9 +4,9 @@ description: "An independent fiduciary entity that represents and protects the i
 ogImage: "/og-image.png"
 keywords: ["trustee", "glossary", "independent", "fiduciary", "entity", "represents", "protects", "interests"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "legal"
 tags:

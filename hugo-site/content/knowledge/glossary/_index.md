@@ -1,45 +1,17 @@
 ---
 title: "Glossary"
+type: "page"
+layout: "knowledge-glossary-index"
 description: "Complete glossary of terms for CrossSecurities, tokenized securities, blockchain, compliance, and traditional finance."
 ogImage: "/og-image.png"
 keywords: ["glossary", "complete", "terms", "crosssecurities", "tokenized", "securities", "blockchain", "compliance"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/knowledge-glossary-index.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/knowledge-glossary-index.css"
 scripts:
-  - "/js/kb-filters.js"
-  - "/js/knowledge-glossary-index.js"
+  - "/js/pages/kb-filters.js"
+  - "/js/pages/knowledge-glossary-index.js"
 cascade:
   type: "glossary-term"
 ---
-
-
-<section class="page-hero">
-    <span class="section-label">Reference</span>
-    <h1 class="section-title">Glossary</h1>
-    <p class="section-desc">Key terms and concepts for understanding Sails CrossSecurities infrastructure.</p>
-    <div class="glossary-search">
-        <input type="text" id="glossary-search-input" placeholder="Search terms..." class="glossary-search-input">
-        <svg class="glossary-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/>
-            <path d="M21 21l-4.35-4.35"/>
-        </svg>
-    </div>
-</section>
-<section class="glossary-filter-section">
-    <div class="glossary-container">
-        {{< glossary-index >}}
-    </div>
-</section>
-<section class="cta-section">
-    <h2>Ready to Put Knowledge into Action?</h2>
-    <p>Start your journey with Sails CrossSecurities.</p>
-    <a href="/signup/" class="btn btn-primary">
-        Get Started
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-    </a>
-</section>
-

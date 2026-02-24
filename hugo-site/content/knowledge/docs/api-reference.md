@@ -4,9 +4,9 @@ description: "The Sails.to REST gateway and Cap'n Proto RPC interfaces — endpo
 ogImage: "/og-image.png"
 keywords: ["API", "REST", "Cap'n Proto", "endpoints", "rate limiting", "NFT authentication", "RPC"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "Everything the platform exposes — REST endpoints for web clients, Cap'n Proto interfaces for grain-native callers, and the authentication model that gates every request."
 draft: false
 ---

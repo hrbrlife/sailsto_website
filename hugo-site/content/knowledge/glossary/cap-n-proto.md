@@ -4,9 +4,9 @@ description: "A zero-copy serialization protocol used for inter-grain RPC in the
 ogImage: "/og-image.png"
 keywords: ["capnproto", "cap'n proto", "glossary", "zero-copy", "serialization", "rpc", "grains", "sandstorm"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "technology"
 tags:

@@ -4,9 +4,9 @@ description: "The sails_distributions program — waterfall-based revenue distri
 ogImage: "/og-image.png"
 keywords: ["distributions", "waterfall", "revenue", "investor payout", "claiming", "reconciliation"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "Waterfall-based revenue distribution — from revenue receipt to investor payout, enforced on-chain."
 draft: false
 ---

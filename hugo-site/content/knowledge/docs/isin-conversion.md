@@ -4,9 +4,9 @@ description: "The CrossConversion Engine in detail — how tokens are locked on 
 ogImage: "/og-image.png"
 keywords: ["ISIN conversion", "CrossConversion", "lockbox", "Clearstream", "SWIFT", "MT540", "MT542", "reconciliation", "trustee authentication"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "CrossConversion is the bridge — lock Solana tokens, issue bankable ISIN securities via Clearstream, and back again. One invariant. Zero exceptions."
 draft: false
 ---

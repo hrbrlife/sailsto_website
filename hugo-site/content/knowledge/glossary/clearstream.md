@@ -4,9 +4,9 @@ description: "A major international securities depository and settlement system 
 ogImage: "/og-image.png"
 keywords: ["clearstream", "glossary", "major", "international", "securities", "depository", "settlement", "system"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "finance"
 tags:

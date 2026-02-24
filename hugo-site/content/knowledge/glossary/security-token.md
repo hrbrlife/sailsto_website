@@ -4,9 +4,9 @@ description: "A digital representation of a traditional security (equity, debt, 
 ogImage: "/og-image.png"
 keywords: ["security", "token", "glossary", "digital", "representation", "traditional", "equity", "debt"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "finance"
 tags:

@@ -5,11 +5,11 @@ description: "Understanding Wyoming DAO LLC and Series LLC structures—how they
 ogImage: "/og-image.png"
 keywords: ["wyoming", "dao", "llc", "explained", "understanding", "series", "structures", "provide"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/guides.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/guides.css"
 scripts:
-  - "/js/knowledge-guides-wyoming-dao-explained.js"
+  - "/js/pages/knowledge-guides-wyoming-dao-explained.js"
 guideMeta: "Understanding the legal structure behind compliant tokenized securities"
 ---
 <nav class="guide-nav">

@@ -4,9 +4,9 @@ description: "The minimum funding threshold an offering must reach for the capit
 ogImage: "/og-image.png"
 keywords: ["soft", "cap", "glossary", "minimum", "funding", "threshold", "offering", "must"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "finance"
 tags:

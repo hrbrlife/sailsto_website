@@ -4,9 +4,9 @@ description: "The cap table on Sails.to is the live state of InvestorPosition PD
 ogImage: "/og-image.png"
 keywords: ["cap table", "InvestorPosition", "OfferingState", "PDA", "ownership", "snapshot", "audit", "CrossConversion", "access control"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "The cap table is not a spreadsheet — it's the live state of on-chain PDAs, read and exposed by the Offering Grain."
 draft: false
 ---

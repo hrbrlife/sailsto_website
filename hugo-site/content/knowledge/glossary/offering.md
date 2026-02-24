@@ -4,9 +4,9 @@ description: "A structured securities fundraise on Sails.to, governed by an Offe
 ogImage: "/og-image.png"
 keywords: ["offering", "glossary", "securities", "fundraise", "grain", "token", "compliance", "distribution"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "finance"
 tags:

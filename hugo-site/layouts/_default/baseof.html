@@ -18,7 +18,7 @@
     
     {{- $cacheBust := .Site.Data.version.hashShort | default "dev" -}}
     <script src="{{ "js/nav.js" | relURL }}?v={{ $cacheBust }}" defer></script>
-    <script src="{{ "assets/js/glossary.js" | relURL }}?v={{ $cacheBust }}" defer></script>
+    <script src="{{ "js/lib/glossary.js" | relURL }}?v={{ $cacheBust }}" defer></script>
     {{ range .Params.scripts }}
     <script src="{{ strings.TrimLeft "/" . | relURL }}?v={{ $cacheBust }}" defer></script>
     {{ end }}

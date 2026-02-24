@@ -4,9 +4,9 @@ description: "The revenue distribution priority structure for Sails.to offerings
 ogImage: "/og-image.png"
 keywords: ["waterfall", "glossary", "revenue", "distribution", "priority", "investor", "on-chain", "smart contract"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "finance"
 tags:

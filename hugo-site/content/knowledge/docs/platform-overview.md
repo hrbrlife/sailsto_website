@@ -4,9 +4,9 @@ description: "Complete architectural overview of the Sails.to platform — three
 ogImage: "/og-image.png"
 keywords: ["platform architecture", "sandstorm grains", "cap'n proto", "tokenized securities", "data sovereignty"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "The three-pillar architecture that brings regulated securities on-chain — without compromise."
 draft: false
 ---

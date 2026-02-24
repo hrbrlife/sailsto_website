@@ -4,9 +4,9 @@ description: "SEC regulation providing exemptions from registration for private 
 ogImage: "/og-image.png"
 keywords: ["regulation", "reg", "glossary", "sec", "providing", "exemptions", "registration", "private"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "compliance"
 tags:

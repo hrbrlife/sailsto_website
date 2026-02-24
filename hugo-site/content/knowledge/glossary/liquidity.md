@@ -4,9 +4,9 @@ description: "The ease of buying or selling a security without significantly aff
 ogImage: "/og-image.png"
 keywords: ["liquidity", "glossary", "ease", "buying", "selling", "security", "without", "significantly"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "finance"
 tags:

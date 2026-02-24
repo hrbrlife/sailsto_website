@@ -1,0 +1,47 @@
+{{/* 
+  Partial (converted from shortcode): glossary-preview
+  Renders the glossary categories preview for the KB index page.
+  Counts actual glossary pages per category from frontmatter.
+*/}}
+{{ $lang := .Language.Lang }}
+{{ $cats := .Site.Data.categories }}
+
+{{/* Get all glossary term pages */}}
+{{ $glossarySection := .Site.GetPage "/knowledge/glossary" }}
+{{ $glossaryPages := slice }}
+{{ if $glossarySection }}
+  {{ $glossaryPages = $glossarySection.Pages }}
+{{ end }}
+
+<div class="kb-glossary-preview">
+    <div class="kb-glossary-categories">
+        {{ range $key, $def := $cats.glossary_categories }}
+        {{ $count := 0 }}
+        {{ range $glossaryPages }}
+            {{ if eq (.Params.category | default "") $key }}
+                {{ $count = add $count 1 }}
+            {{ end }}
+        {{ end }}
+        <a href="/knowledge/glossary/" class="kb-glossary-cat">
+            <span class="kb-glossary-icon" style="color: {{ $def.color }};">{{ $def.icon }}</span>
+            <span class="kb-glossary-label">{{ index $def $lang }}</span>
+            <span class="kb-glossary-count">{{ $count }} {{ if eq $lang "fr" }}termes{{ else }}terms{{ end }}</span>
+        </a>
+        {{ end }}
+    </div>
+    <div class="kb-glossary-featured">
+        <h4>{{ if eq $lang "fr" }}Termes Populaires{{ else }}Popular Terms{{ end }}</h4>
+        <div class="kb-glossary-terms">
+            {{ $popular := slice "crosssecurities" "crossconversion" "wyoming-dao-llc" "isin" "clearstream" "kyc" "nft-hierarchy" "grain" "threshold-signing" }}
+            {{ range $popular }}
+            {{ $slug := . }}
+            {{ range $glossaryPages }}
+                {{ if eq .File.ContentBaseName $slug }}
+                {{ $title := .Title | replaceRE ` - Glossary$` "" }}
+                <a href="{{ .RelPermalink }}" class="glossary-term-pill">{{ $title }}</a>
+                {{ end }}
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</div>

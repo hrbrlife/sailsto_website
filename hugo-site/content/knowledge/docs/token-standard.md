@@ -4,9 +4,9 @@ description: "The sails_securities Anchor program — instructions, PDA accounts
 ogImage: "/og-image.png"
 keywords: ["security token", "SPL-2022", "anchor program", "solana", "transfer hook", "PDA"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "The sails_securities program — security tokens with compliance enforcement at the protocol level."
 draft: false
 ---

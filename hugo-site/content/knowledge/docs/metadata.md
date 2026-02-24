@@ -4,9 +4,9 @@ description: "Structured metadata for KYC credential NFTs, role NFTs, offering s
 ogImage: "/og-image.png"
 keywords: ["metadata", "NFT metadata", "KYC credential", "role NFT", "PDA", "on-chain", "privacy"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "Every NFT and on-chain account on Sails.to carries structured metadata — the fields that tell the protocol what a token represents, who holds it, and what rules apply."
 draft: false
 ---

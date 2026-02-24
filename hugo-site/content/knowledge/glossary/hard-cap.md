@@ -4,9 +4,9 @@ description: "The maximum amount of capital an issuer will accept in a securitie
 ogImage: "/og-image.png"
 keywords: ["hard", "cap", "glossary", "maximum", "amount", "capital", "issuer", "accept"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "finance"
 tags:

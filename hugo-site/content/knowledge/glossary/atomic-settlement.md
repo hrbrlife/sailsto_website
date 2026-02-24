@@ -4,9 +4,9 @@ description: "A transaction mechanism where all parts of a trade execute simulta
 ogImage: "/og-image.png"
 keywords: ["atomic", "settlement", "glossary", "transaction", "mechanism", "parts", "trade", "execute"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "technology"
 tags:

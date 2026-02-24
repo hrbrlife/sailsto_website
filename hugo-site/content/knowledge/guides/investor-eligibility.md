@@ -5,9 +5,9 @@ description: "Who can invest on Sails.to—investor classifications, the 10-step
 ogImage: "/og-image.png"
 keywords: ["investor eligibility", "accredited investor", "KYC", "verification", "Reg D", "Reg S", "qualified purchaser", "compliance"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/guides.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/guides.css"
 guideMeta: "Everything you need to know about who can invest, how verification works, and what the system checks before a single token touches your wallet"
 draft: false
 ---

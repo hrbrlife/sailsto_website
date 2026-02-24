@@ -4,9 +4,9 @@ description: "A neutral holding arrangement where funds are held by a trusted th
 ogImage: "/og-image.png"
 keywords: ["escrow", "glossary", "neutral", "holding", "arrangement", "funds", "held", "trusted"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "finance"
 tags:

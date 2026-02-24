@@ -4,9 +4,9 @@ description: "Recorded directly on a blockchain — CrossSecurities exist on-cha
 ogImage: "/og-image.png"
 keywords: ["on-chain", "glossary", "recorded", "directly", "blockchain", "crosssecurities", "exist", "solana"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "technology"
 tags:

@@ -4,9 +4,9 @@ description: "An individual or entity meeting SEC financial thresholds ($200K+ a
 ogImage: "/og-image.png"
 keywords: ["accredited", "investor", "glossary", "individual", "entity", "meeting", "sec", "financial"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "compliance"
 tags:

@@ -4,9 +4,9 @@ description: "A dedicated series within a Series LLC structure that facilitates 
 ogImage: "/og-image.png"
 keywords: ["crossconversion", "series", "glossary", "dedicated", "within", "llc", "structure", "facilitates"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "legal"
 tags:

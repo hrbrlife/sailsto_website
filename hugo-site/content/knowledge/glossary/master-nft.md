@@ -4,9 +4,9 @@ description: "The root authority token in Sails.to's 4-layer NFT hierarchy on So
 ogImage: "/og-image.png"
 keywords: ["master nft", "glossary", "root", "authority", "token", "solana", "threshold", "keyholder"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "technology"
 tags:

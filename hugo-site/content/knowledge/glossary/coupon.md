@@ -4,9 +4,9 @@ description: "The periodic interest payment made to bondholders, typically expre
 ogImage: "/og-image.png"
 keywords: ["coupon", "glossary", "periodic", "interest", "payment", "made", "bondholders", "typically"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "finance"
 tags:

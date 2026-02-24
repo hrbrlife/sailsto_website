@@ -5,11 +5,11 @@ description: "Step-by-step guide to getting started on Sails.to—for issuers la
 ogImage: "/og-image.png"
 keywords: ["getting", "started", "sails", "step-by-step", "guide", "issuers", "launching", "tokenized"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/guides.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/guides.css"
 scripts:
-  - "/js/knowledge-guides-getting-started.js"
+  - "/js/pages/knowledge-guides-getting-started.js"
 guideMeta: "Complete onboarding guide for issuers, investors, and brokers"
 ---
 <nav class="guide-nav">

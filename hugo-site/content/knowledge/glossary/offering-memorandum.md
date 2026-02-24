@@ -4,9 +4,9 @@ description: "Legal document detailing investment terms, risks, use of proceeds,
 ogImage: "/og-image.png"
 keywords: ["offering", "memorandum", "glossary", "legal", "document", "detailing", "investment", "terms"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "legal"
 tags:

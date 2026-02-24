@@ -4,9 +4,9 @@ description: "A regulated Multilateral Trading Facility operated by the Vienna S
 ogImage: "/og-image.png"
 keywords: ["vienna", "mtf", "glossary", "regulated", "multilateral", "trading", "facility", "operated"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "finance"
 tags:

@@ -4,9 +4,9 @@ description: "The four-layer authentication model — from Solana wallet signatu
 ogImage: "/og-image.png"
 keywords: ["authentication", "NFT roles", "threshold signing", "wallet signature", "powerbox capabilities"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "Four layers of cryptographic proof — because regulated securities demand nothing less."
 draft: false
 ---

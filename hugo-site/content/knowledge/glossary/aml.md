@@ -4,9 +4,9 @@ description: "Laws, regulations, and procedures designed to prevent criminals fr
 ogImage: "/og-image.png"
 keywords: ["aml", "anti-money", "laundering", "glossary", "laws", "regulations", "procedures", "designed"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "compliance"
 tags:

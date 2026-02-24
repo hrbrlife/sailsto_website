@@ -4,9 +4,9 @@ description: "The on-chain authority layer for Sails.to — a Solana-based syste
 ogImage: "/og-image.png"
 keywords: ["melusina", "glossary", "on-chain", "authority", "solana", "nft", "compliance", "sails"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/glossary-term.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/glossary-term.css"
 
 category: "technology"
 tags:

@@ -4,9 +4,9 @@ description: "How the Clearstream Adapter connects on-chain CrossSecurities to t
 ogImage: "/og-image.png"
 keywords: ["Clearstream", "ISIN registration", "settlement", "reconciliation", "SWIFT", "MT540", "MT542", "ISO 20022", "CrossConversion", "bankable securities"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "The international central securities depository that provides the bankable side of CrossSecurities — where ISIN-identified securities live in traditional finance."
 draft: false
 ---

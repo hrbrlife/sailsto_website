@@ -4,9 +4,9 @@ description: "The Investor Self-Service Grain — portfolio management, distribu
 ogImage: "/og-image.png"
 keywords: ["investor API", "portfolio", "distributions", "CrossConversion", "secondary trading", "tax documents", "DAO governance", "OTC", "cap table"]
 stylesheets:
-  - "/styles.css"
-  - "/assets/css/glossary.css"
-  - "/assets/css/docs.css"
+  - "/css/main.css"
+  - "/css/pages/glossary.css"
+  - "/css/pages/docs.css"
 heroDesc: "One grain per investor — portfolio, distributions, trading, tax documents, and governance in a single sandboxed process."
 draft: false
 ---
