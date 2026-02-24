@@ -27,6 +27,11 @@ ctaText: "Capability-secured grains powering every interaction on the platform."
 ctaLabel: "Learn More"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "BLOOM"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

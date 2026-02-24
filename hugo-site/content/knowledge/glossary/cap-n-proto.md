@@ -25,6 +25,11 @@ ctaText: "Zero-copy serialization powering institutional-grade financial infrast
 ctaLabel: "Learn More"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "Cap'n Proto"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

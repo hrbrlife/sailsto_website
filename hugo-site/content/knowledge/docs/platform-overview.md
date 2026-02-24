@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "The three-pillar architecture that brings regulated securities on-chain — without compromise."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Architecture Overview</h2>
         <p>Sails.to is not a monolith. It is not a microservices cluster. It is a <strong>capability-secured grain architecture</strong> — every component isolated at the OS level, every interaction mediated by cryptographic authority, every byte of investor data sovereign to its owner. This is what regulated infrastructure demands, and this is what we built.</p>

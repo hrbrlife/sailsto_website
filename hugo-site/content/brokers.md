@@ -18,4 +18,9 @@ stylesheets:
   - "/css/pages/brokers.css"
 scripts:
   - "/js/pages/brokers.js"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.9
+  changefreq: "monthly"
 ---

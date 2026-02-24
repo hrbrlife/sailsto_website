@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "The international central securities depository that provides the bankable side of CrossSecurities — where ISIN-identified securities live in traditional finance."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Overview</h2>
         <p><span class="glossary-term" data-term="clearstream">Clearstream</span> is the international central securities depository (ICSD) that makes <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> hybrid. When an investor converts on-chain tokens to <span class="glossary-term" data-term="bankable">bankable</span> format via <span class="glossary-term" data-term="crossconversion">CrossConversion</span>, the resulting <span class="glossary-term" data-term="isin">ISIN</span>-identified securities are held in custody at Clearstream — visible through standard brokerage infrastructure, settleable through established financial rails, and recognizable by every institution in traditional finance.</p>

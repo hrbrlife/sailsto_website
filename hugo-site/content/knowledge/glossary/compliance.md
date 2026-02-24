@@ -28,6 +28,11 @@ ctaText: "Focus on your raise, not regulatory paperwork."
 ctaLabel: "Learn About Compliance"
 ctaLink: "/compliance/"
 linkLabel: "Compliance"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.8
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

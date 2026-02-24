@@ -24,6 +24,11 @@ ctaText: "Brokers can offer CrossSecurities to expand their product range."
 ctaLabel: "Broker Program"
 ctaLink: "/brokers/"
 linkLabel: "Brokerage Fee"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

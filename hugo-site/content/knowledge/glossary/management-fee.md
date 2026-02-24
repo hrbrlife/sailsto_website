@@ -26,6 +26,11 @@ ctaText: "No upfront fees. No hidden charges. You pay when you raise."
 ctaLabel: "Learn More"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "Management Fee"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

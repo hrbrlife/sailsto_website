@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "Protocol-level enforcement — non-compliant transfers don't get logged and ignored, they get rejected."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Transfer Compliance Checks</h2>
         <p>The <code>transfer_with_compliance</code> instruction is the gate through which every <span class="glossary-term" data-term="security-token">security token</span> transfer must pass. It performs five checks in sequence. If any check fails, the entire transaction reverts — the tokens do not move, and a <code>ComplianceViolation</code> event is emitted with the specific reason for rejection.</p>

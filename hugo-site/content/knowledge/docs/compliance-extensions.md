@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "The Transfer Hook enforces the rules. Everything on this page extends those rules into credential lifecycle, emergency powers, jurisdictional adaptability, and regulatory reporting."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Overview</h2>
         <p>The SPL-2022 <span class="glossary-term" data-term="transfer-hook">Transfer Hook</span> is the enforcement core — five checks, executed by the <a href="/knowledge/glossary/solana/">Solana</a> runtime on every transfer, with no bypass path. But compliance for regulated securities does not end at transfers. Credentials expire. Regulators issue subpoenas. Courts order seizures. Jurisdictions change their rules. Tax authorities demand filings.</p>

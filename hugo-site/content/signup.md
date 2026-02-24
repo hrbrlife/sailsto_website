@@ -18,4 +18,9 @@ stylesheets:
   - "/css/pages/signup.css"
 scripts:
   - "/js/pages/signup.js"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.9
+  changefreq: "monthly"
 ---

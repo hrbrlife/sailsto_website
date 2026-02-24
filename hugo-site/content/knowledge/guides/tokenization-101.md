@@ -10,6 +10,12 @@ stylesheets:
   - "/css/pages/guides.css"
 guideMeta: "The complete guide to tokenized securities—what they are, why they exist, and how they will remake capital markets"
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.6
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <nav class="guide-nav">
             <h4>In This Guide</h4>

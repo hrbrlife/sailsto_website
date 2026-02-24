@@ -27,6 +27,11 @@ ctaText: "Investor-first priority. On-chain enforcement. Every payment verifiabl
 ctaLabel: "Start Investing"
 ctaLink: "/signup/?type=investor"
 linkLabel: "Paying Agent"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

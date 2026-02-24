@@ -16,4 +16,9 @@ stylesheets:
   - "/css/pages/company-contact.css"
 scripts:
   - "/js/pages/company-contact.js"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.7
+  changefreq: "monthly"
 ---

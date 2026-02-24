@@ -25,6 +25,11 @@ ctaText: "Deterministic addresses. Program-controlled data. Zero trust required.
 ctaLabel: "Learn More"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "PDA"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

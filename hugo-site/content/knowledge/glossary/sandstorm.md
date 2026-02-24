@@ -27,6 +27,11 @@ ctaText: "Every grain sandboxed. Every boundary enforced. Every capability expli
 ctaLabel: "Learn More"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "Sandstorm"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

@@ -24,6 +24,11 @@ relatedTerms:
     label: "SPV"
 shortDesc: "Wyoming's legally-recognized DAO structure combined with Series LLC capability — each Sails.to offering gets its own isolated series with separate assets, liabilities, and governance."
 linkLabel: "Wyoming DAO LLC"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

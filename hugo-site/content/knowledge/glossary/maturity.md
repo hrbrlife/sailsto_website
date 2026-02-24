@@ -24,6 +24,11 @@ ctaText: "Find bonds with maturities that fit your timeline."
 ctaLabel: "Explore Investments"
 ctaLink: "/investors/"
 linkLabel: "Maturity"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

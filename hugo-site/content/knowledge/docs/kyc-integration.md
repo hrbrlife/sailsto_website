@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "Every verification is an isolated grain — 10 steps from terms acceptance to on-chain credential, with zero PII touching the blockchain."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Overview</h2>
         <p><span class="glossary-term" data-term="kyc">KYC</span> on Sails.to is a <span class="glossary-term" data-term="grain">grain</span>, not a service. Each investor verification spawns an isolated Instance grain — a single-purpose, sandboxed process that owns its own encrypted journal, its own state machine, and its own lifecycle. When the verification completes, the grain mints an on-chain credential and can be archived. When it fails, the grain retains the audit trail and nothing else.</p>

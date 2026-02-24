@@ -24,6 +24,11 @@ ctaText: "Our streamlined verification process gets you investing faster."
 ctaLabel: "Start Verification"
 ctaLink: "/signup/?type=investor"
 linkLabel: "KYC"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

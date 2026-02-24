@@ -18,6 +18,15 @@
     <meta name="author" content="{{ .Site.Params.author }}">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="{{ .Permalink }}">
+
+    <!-- Hreflang alternates for multilingual SEO -->
+    {{ if .IsTranslated }}
+    {{ range .Translations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+    {{ end }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+    {{ end }}
+    <link rel="alternate" hreflang="x-default" href="{{ .Permalink }}">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="{{ .Params.ogtype | default "website" }}">
@@ -29,6 +38,15 @@
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="{{ .Site.Params.siteName }}">
     <meta property="og:locale" content="{{ .Site.Language.Lang }}">
+    {{ if .IsTranslated }}{{ range .Translations }}
+    <meta property="og:locale:alternate" content="{{ .Language.Lang }}">
+    {{ end }}{{ end }}
+    {{- with .Params.date }}
+    <meta property="article:published_time" content="{{ . }}">
+    {{- end }}
+    {{- with .Params.lastmod }}
+    <meta property="article:modified_time" content="{{ . }}">
+    {{- end }}
     
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
@@ -156,6 +174,43 @@
         ]
     }
     </script>
+    {{ end }}
+
+    <!-- Article Schema for docs, guides, blog posts -->
+    {{ if or (eq .Type "doc") (eq .Type "guide") (in .RelPermalink "/blog/") }}
+    {{ if not .IsSection }}
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "{{ .Title }}",
+        "description": "{{ .Params.description | default .Site.Params.description }}",
+        "url": "{{ .Permalink }}",
+        {{- with .Params.date }}
+        "datePublished": "{{ . }}",
+        {{- end }}
+        {{- with .Params.lastmod }}
+        "dateModified": "{{ . }}",
+        {{- end }}
+        "author": {
+            "@type": "Organization",
+            "name": "Sails.to DAO LLC"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Sails.to",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "{{ "sail_logo.png" | absURL }}"
+            }
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "{{ .Permalink }}"
+        }
+    }
+    </script>
+    {{ end }}
     {{ end }}
     
     <!-- DefinedTerm Schema for glossary terms -->

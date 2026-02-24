@@ -24,6 +24,11 @@ ctaText: "Sails.to handles the complexity of compliant token structures."
 ctaLabel: "Learn About Issuing"
 ctaLink: "/issuers/"
 linkLabel: "Treasury Series"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

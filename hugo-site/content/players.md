@@ -22,4 +22,9 @@ stylesheets:
   - "/css/pages/players.css"
 scripts:
   - "/js/pages/players.js"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.8
+  changefreq: "monthly"
 ---

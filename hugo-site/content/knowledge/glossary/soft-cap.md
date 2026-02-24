@@ -24,6 +24,11 @@ ctaText: "Set your funding parameters and start raising capital on Sails.to."
 ctaLabel: "Learn About Issuing"
 ctaLink: "/issuers/"
 linkLabel: "Soft Cap"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

@@ -23,6 +23,11 @@ ctaText: "Compliant secondary trading with automated verification."
 ctaLabel: "Start Trading"
 ctaLink: "/signup/?type=investor"
 linkLabel: "Secondary Trading"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

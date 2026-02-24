@@ -27,6 +27,11 @@ ctaText: "Distributed authority. Independent keyholders. Mathematical guarantees
 ctaLabel: "Learn More"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "Threshold Signing"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

@@ -14,4 +14,9 @@ scripts:
   - "/js/pages/knowledge-glossary-index.js"
 cascade:
   type: "glossary-term"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.7
+  changefreq: "yearly"
 ---

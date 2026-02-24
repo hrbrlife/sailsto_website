@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "One grain per investor — portfolio, distributions, trading, tax documents, and governance in a single sandboxed process."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Overview</h2>
         <p>The Investor Self-Service <span class="glossary-term" data-term="grain">Grain</span> is an Instance-type grain — one per investor, provisioned automatically when an investor signs up on the platform. It is the investor's personal dashboard, API surface, and data store, implemented in Go+HTMX as a native <span class="glossary-term" data-term="sandstorm">Sandstorm</span> grain. Every piece of investor-specific state — portfolio positions, distribution history, trade listings, wallet connections — lives inside this grain's encrypted journal. No shared database, no centralized user table, no way for one investor's grain to read another investor's data.</p>

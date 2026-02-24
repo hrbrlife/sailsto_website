@@ -24,6 +24,11 @@ ctaText: "Learn how Sails.to structures compliant offerings."
 ctaLabel: "Our Legal Framework"
 ctaLink: "/regulated/"
 linkLabel: "Operating Series"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

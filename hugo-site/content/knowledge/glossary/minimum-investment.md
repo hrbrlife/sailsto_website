@@ -25,6 +25,11 @@ ctaText: "Access curated CrossSecurities opportunities."
 ctaLabel: "Apply for Access"
 ctaLink: "/signup/?type=investor"
 linkLabel: "Minimum Investment"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

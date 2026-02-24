@@ -24,6 +24,11 @@ ctaText: "Sails.to offerings include professional trustee services."
 ctaLabel: "Learn About Our Structure"
 ctaLink: "/regulated/"
 linkLabel: "Trustee"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

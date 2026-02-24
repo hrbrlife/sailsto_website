@@ -25,6 +25,11 @@ ctaText: "Our team helps structure compliant offering documents."
 ctaLabel: "Start Your Offering"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "Offering Memorandum"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

@@ -24,6 +24,11 @@ ctaText: "Learn about Sails.to's investor protection framework."
 ctaLabel: "Our Legal Structure"
 ctaLink: "/regulated/"
 linkLabel: "Operational Trust"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

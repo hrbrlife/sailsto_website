@@ -25,6 +25,11 @@ ctaText: "Complete investor verification to access CrossSecurities."
 ctaLabel: "Start Verification"
 ctaLink: "/signup/?type=investor"
 linkLabel: "Investor Verification"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

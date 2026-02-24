@@ -28,6 +28,11 @@ ctaText: "Get an ISIN for your CrossSecurities and unlock institutional custody.
 ctaLabel: "Learn More"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "ISIN"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

@@ -28,6 +28,11 @@ ctaText: "Launch your offering on Sails.to with full regulatory compliance."
 ctaLabel: "Start Issuing"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "Security Token"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

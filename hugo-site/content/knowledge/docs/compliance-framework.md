@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "Compliance encoded in smart contracts and enforced at the protocol level — because paper policies don't stop non-compliant transfers."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>KYC Credential System</h2>
         <p>Every investor on the Sails.to platform carries a <span class="glossary-term" data-term="kyc">KYC</span> Credential NFT — an on-chain attestation of their verified identity, classification, and regulatory status. This NFT contains <strong>zero personally identifiable information</strong>. No names, no addresses, no document images. Only cryptographic proofs and classification flags that the <span class="glossary-term" data-term="smart-contract">smart contract</span> needs to enforce compliance rules.</p>

@@ -27,6 +27,11 @@ ctaText: "Unlock liquidity and reach global investors."
 ctaLabel: "Start Tokenizing"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "Tokenization"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

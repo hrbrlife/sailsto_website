@@ -25,6 +25,11 @@ ctaText: "Access deal flow and earn commissions on CrossSecurities."
 ctaLabel: "Broker Partnership"
 ctaLink: "/brokers/"
 linkLabel: "Broker-Dealer"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

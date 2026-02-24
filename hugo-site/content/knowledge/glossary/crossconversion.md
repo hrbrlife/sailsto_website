@@ -28,6 +28,11 @@ ctaText: "On-chain today, bank custody tomorrow. Your security adapts to your ne
 ctaLabel: "Start Investing"
 ctaLink: "/signup/?type=investor"
 linkLabel: "CrossConversion"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

@@ -24,6 +24,11 @@ ctaText: "Reg D 506(c) with full accreditation verification."
 ctaLabel: "Start Your Offering"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "Reg D"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

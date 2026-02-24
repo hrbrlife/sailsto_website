@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "Every NFT and on-chain account on Sails.to carries structured metadata — the fields that tell the protocol what a token represents, who holds it, and what rules apply."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Overview</h2>
         <p>Metadata is not decoration. On Sails.to, metadata is the mechanism by which <span class="glossary-term" data-term="smart-contract">smart contracts</span> enforce compliance, authorize actions, and maintain audit trails. Every NFT — whether it represents a <span class="glossary-term" data-term="kyc">KYC</span> credential, an operator role, or an offering configuration — carries a structured set of fields that the <a href="/knowledge/glossary/solana/">Solana</a> runtime reads and validates on every instruction.</p>

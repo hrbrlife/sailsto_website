@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "Everything the platform exposes — REST endpoints for web clients, Cap'n Proto interfaces for grain-native callers, and the authentication model that gates every request."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Overview</h2>
         <p>The Sails.to API lives at <code>api.sails.to</code>. Every endpoint is authenticated via <a href="/knowledge/glossary/solana/">Solana</a> wallet signature and <span class="glossary-term" data-term="nft-hierarchy">NFT</span> role verification. There are no API keys, no OAuth tokens, no username/password flows. Your wallet <em>is</em> your identity. Your NFT <em>is</em> your authorization. The API simply verifies both and routes you to the correct <span class="glossary-term" data-term="grain">grain</span> capability.</p>

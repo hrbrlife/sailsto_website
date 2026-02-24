@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "Waterfall-based revenue distribution — from revenue receipt to investor payout, enforced on-chain."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Overview</h2>
         <p><span class="glossary-term" data-term="distributions">Distributions</span> on Sails.to are <span class="glossary-term" data-term="waterfall">waterfall</span>-based and enforced <span class="glossary-term" data-term="on-chain">on-chain</span>. The <code>sails_distributions</code> program is a dedicated <a href="/knowledge/glossary/solana/">Solana</a> Anchor program that handles everything from revenue receipt to investor payout. It is separate from the <code>sails_securities</code> token program — distributions are a first-class concern with their own instruction set, account structures, and authorization model.</p>

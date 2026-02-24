@@ -25,6 +25,11 @@ ctaText: "Self-custody or institutional—it's your call."
 ctaLabel: "Get Started"
 ctaLink: "/signup/?type=investor"
 linkLabel: "Custody"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

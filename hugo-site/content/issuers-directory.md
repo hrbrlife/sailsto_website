@@ -18,4 +18,9 @@ stylesheets:
   - "/css/pages/issuers-directory.css"
 scripts:
   - "/js/pages/issuers-directory.js"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.8
+  changefreq: "monthly"
 ---

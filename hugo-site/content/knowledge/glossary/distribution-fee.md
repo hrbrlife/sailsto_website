@@ -24,6 +24,11 @@ ctaText: "See all Sails.to fees clearly explained."
 ctaLabel: "View Pricing"
 ctaLink: "/pricing/"
 linkLabel: "Distribution Fee"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

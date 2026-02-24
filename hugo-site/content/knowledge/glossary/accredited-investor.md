@@ -23,6 +23,11 @@ ctaText: "Quick verification gets you access to exclusive offerings."
 ctaLabel: "Get Verified"
 ctaLink: "/signup/?type=investor"
 linkLabel: "Accredited Investor"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "The cap table is not a spreadsheet — it's the live state of on-chain PDAs, read and exposed by the Offering Grain."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Overview</h2>
         <p>The cap table on Sails.to is not a spreadsheet. It is the live state of the <span class="glossary-term" data-term="pda">InvestorPosition PDAs</span> on <a href="/knowledge/glossary/solana/">Solana</a>. There is no separate database of ownership records, no CSV export that becomes stale the moment it is generated, no reconciliation step between "the cap table" and "the ledger." They are the same thing. The blockchain <em>is</em> the cap table.</p>

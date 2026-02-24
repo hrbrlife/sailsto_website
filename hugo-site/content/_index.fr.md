@@ -26,4 +26,9 @@ stylesheets:
 scripts:
 - "/js/pages/home.js"
 - "/js/pages/home-stories.js"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 1.0
+  changefreq: "monthly"
 ---

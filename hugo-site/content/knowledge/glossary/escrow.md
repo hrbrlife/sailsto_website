@@ -24,6 +24,11 @@ ctaText: "Your funds are protected until offerings reach their funding goals."
 ctaLabel: "Start Investing"
 ctaLink: "/investors/"
 linkLabel: "Escrow"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

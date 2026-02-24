@@ -10,6 +10,12 @@ stylesheets:
   - "/css/pages/guides.css"
 guideMeta: "Everything you need to know about who can invest, how verification works, and what the system checks before a single token touches your wallet"
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.6
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <nav class="guide-nav">
             <h4>In This Guide</h4>

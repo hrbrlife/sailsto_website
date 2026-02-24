@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "Four layers of cryptographic proof — because regulated securities demand nothing less."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Authentication Layers</h2>
         <p>Sails.to implements a four-layer authentication model. Each layer builds on the one below it. No single layer is sufficient — all four must agree before any operation proceeds. This is not over-engineering; this is what you build when you're responsible for other people's securities.</p>

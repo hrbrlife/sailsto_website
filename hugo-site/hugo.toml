@@ -5,6 +5,7 @@ disableHugoGeneratorInject = true
 canonifyURLs = true
 defaultContentLanguage = 'en'
 defaultContentLanguageInSubdir = false
+enableRobotsTXT = true
 
 [languages]
   [languages.en]

@@ -29,6 +29,11 @@ ctaText: "Hold on-chain or through your bank. Cross between forms at will."
 ctaLabel: "Get Started"
 ctaLink: "/signup/"
 linkLabel: "CrossSecurities"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

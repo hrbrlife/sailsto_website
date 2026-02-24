@@ -24,6 +24,11 @@ ctaText: "Benefit from Series LLC liability protection on Sails.to."
 ctaLabel: "Start Your Series"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "Series LLC"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

@@ -23,6 +23,11 @@ ctaText: "Access global offerings as a professional investor."
 ctaLabel: "Get Started"
 ctaLink: "/signup/?type=investor"
 linkLabel: "Professional Investor"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

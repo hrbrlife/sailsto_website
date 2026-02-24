@@ -1,11 +1,11 @@
 # Sails.to Robots.txt
-# https://sails.to
+# {{ .Site.BaseURL }}
 
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://sails.to/sitemap.xml
+# Sitemap location (auto-generated from baseURL)
+Sitemap: {{ "sitemap.xml" | absURL }}
 
 # Crawl-delay suggestion (optional, respected by some bots)
 Crawl-delay: 1

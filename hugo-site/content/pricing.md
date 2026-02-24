@@ -17,4 +17,9 @@ stylesheets:
   - "/css/pages/pricing.css"
 scripts:
   - "/js/pages/pricing.js"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.8
+  changefreq: "monthly"
 ---

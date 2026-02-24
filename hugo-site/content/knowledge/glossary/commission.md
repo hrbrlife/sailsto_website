@@ -25,6 +25,11 @@ ctaText: "Join our broker network or introducer program."
 ctaLabel: "Learn More"
 ctaLink: "/brokers/"
 linkLabel: "Commission"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

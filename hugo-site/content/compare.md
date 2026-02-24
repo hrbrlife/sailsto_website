@@ -18,4 +18,9 @@ stylesheets:
   - "/css/main.css"
   - "/css/pages/glossary.css"
   - "/css/pages/compare.css"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.8
+  changefreq: "monthly"
 ---

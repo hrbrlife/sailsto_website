@@ -25,6 +25,11 @@ ctaText: "Every component sandboxed. Every capability explicit. Every action aud
 ctaLabel: "Learn More"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "Grain"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

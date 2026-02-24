@@ -23,6 +23,11 @@ ctaText: "Browse available bond investments with transparent coupon rates."
 ctaLabel: "View Opportunities"
 ctaLink: "/investors/"
 linkLabel: "Coupon"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

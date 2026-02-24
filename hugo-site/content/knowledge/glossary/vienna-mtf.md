@@ -24,6 +24,11 @@ ctaText: "Trade Sails CrossSecurities on regulated venues."
 ctaLabel: "Learn More"
 ctaLink: "/investors/"
 linkLabel: "Vienna MTF"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

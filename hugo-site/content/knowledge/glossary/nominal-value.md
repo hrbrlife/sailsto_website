@@ -24,6 +24,11 @@ ctaText: "All Sails.to offerings include clear nominal value disclosures."
 ctaLabel: "Browse Offerings"
 ctaLink: "/investors/"
 linkLabel: "Nominal Value"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

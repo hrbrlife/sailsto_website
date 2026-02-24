@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "The CrossConversion Engine — bridging on-chain tokens to bankable securities with mathematical certainty."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>The Hybrid Model</h2>
         <p><span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> are not purely on-chain. They are not purely traditional. They exist in both worlds simultaneously — and the <span class="glossary-term" data-term="crossconversion">CrossConversion</span> Engine is the mechanism that makes this possible.</p>

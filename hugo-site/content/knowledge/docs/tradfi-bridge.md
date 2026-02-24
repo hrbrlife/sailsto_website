@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "The complete integration layer between on-chain Solana tokens and the traditional financial system — event routing, settlement, regulatory filing, and operational monitoring."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Overview</h2>
         <p>The <span class="glossary-term" data-term="tradfi-bridge">TradFi Bridge</span> is not a single service. It is the entire integration layer that connects the on-chain world of <a href="/knowledge/glossary/solana/">Solana</a> programs and <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> to the traditional financial system — <span class="glossary-term" data-term="clearstream">Clearstream</span> settlement, SWIFT messaging, SEC regulatory filings, investor notifications, and revenue distribution. Every service that touches an external system or translates between on-chain events and off-chain actions lives here.</p>

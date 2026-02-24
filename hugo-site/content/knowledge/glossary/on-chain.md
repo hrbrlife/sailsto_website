@@ -25,6 +25,11 @@ ctaText: "CrossSecurities work in both worlds."
 ctaLabel: "How It Works"
 ctaLink: "/whatsails/"
 linkLabel: "On-Chain"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

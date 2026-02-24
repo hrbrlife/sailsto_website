@@ -23,6 +23,11 @@ ctaText: "Our robust AML procedures protect you and the platform."
 ctaLabel: "Get Started"
 ctaLink: "/signup/?type=investor"
 linkLabel: "AML"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

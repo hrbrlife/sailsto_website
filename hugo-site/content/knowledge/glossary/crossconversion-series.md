@@ -24,6 +24,11 @@ ctaText: "Learn how Sails.to enables seamless format conversion."
 ctaLabel: "How It Works"
 ctaLink: "/whatsails/"
 linkLabel: "CrossConversion Series"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

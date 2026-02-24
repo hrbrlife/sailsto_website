@@ -28,6 +28,11 @@ ctaText: "Not bolted on. Not optional. Built into every instruction, every accou
 ctaLabel: "Build on Melusina"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "Melusina"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

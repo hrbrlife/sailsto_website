@@ -27,6 +27,11 @@ ctaText: "Every transfer checked. Every rule enforced. Every violation blocked a
 ctaLabel: "Learn More"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "Transfer Hook"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

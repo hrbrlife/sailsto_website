@@ -16,4 +16,9 @@ stylesheets:
   - "/css/pages/company-legal.css"
 scripts:
   - "/js/pages/company-legal.js"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.7
+  changefreq: "monthly"
 ---

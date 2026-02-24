@@ -56,4 +56,9 @@ stylesheets:
 scripts:
   - "/js/pages/kb-filters.js"
   - "/js/pages/knowledge-faq.js"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.7
+  changefreq: "monthly"
 ---

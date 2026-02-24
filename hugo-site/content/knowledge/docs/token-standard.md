@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "The sails_securities program — security tokens with compliance enforcement at the protocol level."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Program Overview</h2>
         <p>The <code>sails_securities</code> program is an <a href="/knowledge/glossary/solana/">Solana</a> Anchor program purpose-built for regulated securities issuance. It extends the <span class="glossary-term" data-term="melusina">Melusina</span> NFT authority pattern with securities-specific logic: offering lifecycle management, compliance-gated minting, <span class="glossary-term" data-term="crossconversion">CrossConversion</span> lockbox integration, distribution waterfall execution, and transfer enforcement via SPL-2022 <span class="glossary-term" data-term="transfer-hook">Transfer Hook</span>.</p>

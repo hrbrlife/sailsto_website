@@ -27,6 +27,11 @@ ctaText: "Offer tokenized securities under your own brand, powered by institutio
 ctaLabel: "Launch Your Platform"
 ctaLink: "/signup/?type=issuer"
 linkLabel: "White-Label"
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.4
+  changefreq: "yearly"
 ---
 
 <section class="term-section">

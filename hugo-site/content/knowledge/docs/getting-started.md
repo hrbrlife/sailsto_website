@@ -9,6 +9,12 @@ stylesheets:
   - "/css/pages/docs.css"
 heroDesc: "From signup to your first action on the platform — everything you need to get moving with regulated tokenized securities."
 draft: false
+date: "2026-02-24"
+lastmod: "2026-02-24"
+sitemap:
+  priority: 0.5
+  changefreq: "monthly"
+ogtype: "article"
 ---
 <h2>Welcome to Sails.to</h2>
         <p>Sails.to is a regulated platform for tokenized securities issuance, compliance, and broker-mediated secondary trading. It is built as a <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO Series LLC</span> — a legal structure purpose-built for on-chain governance of real-world assets. Every offering is a Series. Every participant is cryptographically credentialed. Every action is compliant by default.</p>
