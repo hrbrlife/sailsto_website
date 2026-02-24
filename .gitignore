@@ -21,3 +21,4 @@ hugo-site/static/admin/
 **/tina-lock.json
 **/__generated__/
 **/package-lock.json
+static_store

@@ -1,6 +1,3 @@
-[submodule "static_store"]
-	path = static_store
-	url = https://github.com/hrbrlife/melusina-static-store.git
 [submodule "hrbrlife_website"]
 	path = hrbrlife_website
 	url = https://github.com/hrbrlife/hrbrlife_website.git
