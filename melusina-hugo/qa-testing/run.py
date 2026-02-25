@@ -3,7 +3,7 @@
 QA Council — Per-Page Consilium Architecture
 
 Phase 1: Crawl site + load MD source -> build per-page bundles
-Phase 2: For each page: 8 experts (parallel) -> per-page consilium -> save
+Phase 2: For each page: 9 experts (parallel) -> per-page consilium -> save
 Phase 3: Mega consilium from all per-page reports -> final report
 Phase 4: Generate HTML mega report
 
@@ -268,7 +268,7 @@ async def main():
     print(f"  {run_date}")
     n_cfg = len(site_cfg.get("pages", []))
     print(f"  Config pages: {n_cfg or 'auto-discover from crawl'}")
-    print(f"  Architecture: 8 experts x N pages -> consilium -> mega")
+    print(f"  Architecture: 9 experts x N pages -> consilium -> mega")
     print(f"{'='*60}")
 
     # ── Phase 1: Crawl ──────────────────────────────────────────────────────
@@ -365,8 +365,8 @@ async def main():
 
     print(f"\n[Phase 2] Evaluating {total_pages} pages "
           f"({len(completed_pages)} cached, {remaining} remaining)")
-    print(f"  Estimated calls: {remaining * 9} "
-          f"(8 experts + 1 council per page)")
+    print(f"  Estimated calls: {remaining * 10} "
+          f"(9 experts + 1 council per page)")
 
     for idx, bundle in enumerate(bundles, 1):
         page_path = bundle["page_path"]

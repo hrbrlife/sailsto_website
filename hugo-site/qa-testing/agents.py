@@ -2,8 +2,8 @@
 Per-page consilium agents — each agent evaluates ONE page at a time.
 
 Architecture:
-  Phase 2a: 8 experts × N pages = 8N calls (parallel per page, sequential across pages)
-  Phase 2b: per-page council synthesizes 8 expert reports → PageConsilium
+  Phase 2a: 9 experts × N pages = 9N calls (parallel per page, sequential across pages)
+  Phase 2b: per-page council synthesizes 9 expert reports → PageConsilium
   Phase 3:  mega council synthesizes all PageConsiliums → MegaConsilium
 
 All powered by Pydantic AI + OpenRouter using Trinity Large Preview (free tier).
@@ -28,6 +28,7 @@ from models import (
     DesktopUXReport,
     SEOReport,
     ConversionReport,
+    QCImprovementReport,
     ExpertReport,
     Issue,
     PageConsilium,
@@ -40,6 +41,7 @@ from models import (
 EXPERT_KEYS = [
     "legal", "consistency", "editorial", "principles",
     "mobile_ux", "desktop_ux", "seo", "conversion",
+    "qc_improvement",
 ]
 
 OUTPUT_MODELS: dict[str, type] = {
@@ -49,9 +51,10 @@ OUTPUT_MODELS: dict[str, type] = {
     "principles":   PrinciplesReport,
     "mobile_ux":    MobileUXReport,
     "desktop_ux":   DesktopUXReport,
-    "seo":          SEOReport,
-    "conversion":   ConversionReport,
-    "page_council": PageConsilium,
+    "seo":              SEOReport,
+    "conversion":       ConversionReport,
+    "qc_improvement":   QCImprovementReport,
+    "page_council":     PageConsilium,
     "mega_council": MegaConsilium,
 }
 
@@ -223,7 +226,7 @@ def _build_page_council_system(site_name: str) -> str:
     instructions = """\
 # Per-Page Consilium — Council Chair
 
-You receive reports from up to 8 expert reviewers who have each evaluated a
+You receive reports from up to 9 expert reviewers who have each evaluated a
 SINGLE PAGE of the website. Your job is to synthesize their findings into
 a unified per-page consilium report.
 
@@ -232,7 +235,8 @@ a unified per-page consilium report.
 1. **Read every expert report** — don't skim
 2. **Merge and deduplicate issues** — same issue found by multiple experts is stronger signal
 3. **Score the page** — weighted average of expert scores, adjusted for critical issues
-4. **Produce top recommendations** — specific, actionable, prioritized
+4. **Note QC Improvement suggestions** — the qc_improvement expert proposes new automated checks; include the best ones in your recommendations
+5. **Produce top recommendations** — specific, actionable, prioritized
 
 ## Conflict Resolution
 
@@ -348,7 +352,9 @@ def build_page_council_prompt(
         f"**Title**: {page_title}\n\n"
         f"Below are findings from {len(expert_reports)} expert reviewers "
         f"for this specific page.\n"
-        f"Synthesize them into a unified consilium.\n\n"
+        f"Synthesize them into a unified consilium.\n"
+        f"The 'qc_improvement' expert suggests improvements to the automated test suite "
+        f"itself — include actionable suggestions in your recommendations.\n\n"
     ]
 
     for report in expert_reports:

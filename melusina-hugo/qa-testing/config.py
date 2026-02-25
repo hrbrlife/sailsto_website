@@ -42,7 +42,8 @@ AGENT_MODELS = {
     "consistency": MODEL_BRAIN,     # Trinity — cross-page terminology, messaging
     "seo":         MODEL_BRAIN,     # Trinity — meta tags, heading structure, perf
     "mobile_ux":   MODEL_BRAIN,     # Trinity — mobile layout analysis from metadata
-    "desktop_ux":  MODEL_BRAIN,     # Trinity — desktop layout analysis from metadata
+    "desktop_ux":      MODEL_BRAIN,     # Trinity — desktop layout analysis from metadata
+    "qc_improvement":  MODEL_BRAIN,     # Trinity — suggests improvements to automated QC tests
 }
 
 # Vision agents disabled — Nemotron VL free tier is unreliable (null responses).

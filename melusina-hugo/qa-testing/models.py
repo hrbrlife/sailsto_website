@@ -92,6 +92,14 @@ class SEOReport(ExpertReport):
     performance_notes: list[dict] = Field(default_factory=list, description="Load time concerns")
 
 
+class QCImprovementReport(ExpertReport):
+    """QC Improvement Advisor findings — suggests improvements to automated QC tests."""
+    proposed_checks: list[dict] = Field(default_factory=list, description="New checks to add [{name, pattern, implementation, priority}]")
+    coverage_gaps: list[str] = Field(default_factory=list, description="Categories the current QC misses entirely")
+    false_positive_patterns: list[str] = Field(default_factory=list, description="Current QC checks that produce false positives")
+    automation_ready: list[dict] = Field(default_factory=list, description="Issues AI experts found that code could catch [{issue, regex_or_logic}]")
+
+
 class PersonaJourney(BaseModel):
     """Assessment of a single persona's journey through the site."""
     persona: str = Field(description="Persona name, e.g. 'Trust Companies', 'Issuers'")

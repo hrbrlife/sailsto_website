@@ -19,3 +19,6 @@
 [submodule "instadao_site"]
 	path = instadao_site
 	url = https://github.com/hrbrlife/instadao_site.git
+[submodule "melusina-galactic-council"]
+	path = melusina-galactic-council
+	url = https://github.com/hrbrlife/melusina-galactic-council.git
