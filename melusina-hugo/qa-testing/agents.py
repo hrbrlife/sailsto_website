@@ -160,6 +160,26 @@ def _load_dogma(agent_key: str, site_name: str = "") -> str:
     return path.read_text()
 
 
+def _load_context_docs(site_name: str = "") -> str:
+    """Load master dogma / context documents — per-site if available, else legacy fallback."""
+    from config import SITES, CONTEXT_DOCS
+    # Try per-site context docs
+    doc_paths = []
+    if site_name and site_name in SITES:
+        doc_paths = SITES[site_name].get("context_docs", [])
+
+    # Legacy fallback
+    if not doc_paths:
+        doc_paths = CONTEXT_DOCS
+
+    parts = []
+    for p in doc_paths:
+        fp = Path(p) if not isinstance(p, Path) else p
+        if fp.exists():
+            parts.append(f"--- {fp.name} ---\n{fp.read_text()[:30000]}")
+    return "\n\n".join(parts) if parts else ""
+
+
 def _parse_output(raw: str, agent_key: str):
     """Parse raw JSON string into the appropriate Pydantic model."""
     model_cls = OUTPUT_MODELS[agent_key]
@@ -176,21 +196,30 @@ _agents_cache: dict[str, dict[str, Agent]] = {}
 
 
 def _get_page_agents(site_name: str = "aitxpro") -> dict[str, Agent]:
-    """Create agents with dogma-only system prompts.
+    """Create agents with dogma + master-dogma system prompts.
 
     Page-specific data goes in user messages, not system prompts.
     Agents are created once and reused across all pages.
+    Master dogma (brand identity, terminology, audiences) is injected
+    between per-expert dogma and JSON schema instruction.
     """
     if site_name in _agents_cache:
         return _agents_cache[site_name]
 
     agents = {}
 
-    # Expert agents: dogma + JSON schema
+    # Load master dogma / context docs once for all agents
+    master_context = _load_context_docs(site_name)
+    master_section = (
+        f"\n\n---\n\n## Master Dogma — Brand & Product Context\n\n{master_context}"
+        if master_context else ""
+    )
+
+    # Expert agents: dogma + master dogma + JSON schema
     for key in EXPERT_KEYS:
         dogma = _load_dogma(key, site_name)
         model_cls = OUTPUT_MODELS[key]
-        system = dogma + _json_schema_instruction(model_cls)
+        system = dogma + master_section + _json_schema_instruction(model_cls)
         agents[key] = Agent(
             model=AGENT_MODELS[key],
             output_type=str,
@@ -200,6 +229,8 @@ def _get_page_agents(site_name: str = "aitxpro") -> dict[str, Agent]:
 
     # Per-page council agent
     page_council_system = _build_page_council_system(site_name)
+    if master_context:
+        page_council_system += master_section
     agents["page_council"] = Agent(
         model=AGENT_MODELS["council"],
         output_type=str,
@@ -209,7 +240,7 @@ def _get_page_agents(site_name: str = "aitxpro") -> dict[str, Agent]:
 
     # Mega council agent: uses council.md dogma
     mega_dogma = _load_dogma("council", site_name)
-    mega_system = mega_dogma + _json_schema_instruction(MegaConsilium)
+    mega_system = mega_dogma + master_section + _json_schema_instruction(MegaConsilium)
     agents["mega_council"] = Agent(
         model=AGENT_MODELS["council"],
         output_type=str,

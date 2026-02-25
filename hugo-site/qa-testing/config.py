@@ -103,7 +103,7 @@ SITES = {
             "/knowledge/glossary/crossconversion/",
             "/knowledge/glossary/security-token/",
         ],
-        "context_docs": [],
+        "context_docs": [str(ROOT / "dogma" / "sails-to" / "MASTER-DOGMA.md")],
         "dogma_dir": "sails-to",
     },
 }
@@ -119,4 +119,4 @@ PLAYWRIGHT_TIMEOUT = 30_000  # ms per page load
 SCREENSHOT_FULL_PAGE = True
 
 # ── Context document paths (fed to agents for grounding) ────────────────────
-CONTEXT_DOCS = []
+CONTEXT_DOCS = [str(ROOT / "dogma" / "sails-to" / "MASTER-DOGMA.md")]

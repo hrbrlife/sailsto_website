@@ -134,6 +134,24 @@ SITE_TERM_RULES: dict[str, dict[str, list[str]]] = {
         "Melusina OS": ["melusina os", "MelusinaOS", "melusina OS",
                         "MELUSINA OS", "Melusina-OS", "melusina-os"],
     },
+    "aitxpro": {
+        **DEFAULT_TERM_RULES,
+        "AiTX.pro": ["AITX.pro", "aitx.pro", "Aitx.pro", "AiTx.pro",
+                      "AITX PRO", "aitxpro", "AiTXpro", "Ai TX pro",
+                      "AiTX Pro", "AiTX.Pro"],
+        "MetaTrader 5": ["Metatrader 5", "metatrader 5", "MetaTrader5",
+                         "MT5", "metatrader5", "Meta Trader 5"],
+        "FSC": ["fsc", "Fsc", "F.S.C."],
+        "Investment Dealer": ["investment dealer", "Investment dealer",
+                              "investment Dealer", "INVESTMENT DEALER"],
+        "B2B Prime Services EU": ["B2B Prime", "b2b prime", "B2B prime",
+                                   "B2B Prime Services", "b2b prime services eu"],
+        "Mauritius": ["mauritius", "MAURITIUS"],
+        "intelligent brokerage infrastructure": ["smart brokerage",
+                                                  "AI brokerage platform"],
+        "multi-asset brokerage": ["multi asset brokerage",
+                                   "multiasset brokerage"],
+    },
 }
 
 
@@ -223,6 +241,10 @@ CANONICAL_NUMBERS: dict[str, list[str]] = {
         "€3-5k": ["Vienna MTF", "MTF listing"],
     },
     "melusina-os": {},
+    "aitxpro": {
+        "GB21026537": ["FSC licence", "licence number", "license number"],
+        "IDB/ATS": ["licence category", "dealer category"],
+    },
 }
 
 

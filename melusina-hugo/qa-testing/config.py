@@ -76,7 +76,7 @@ SITES = {
             "/en/terms",
             "/en/dmca",
         ],
-        "context_docs": [],
+        "context_docs": [str(ROOT / "dogma" / "melusina-os" / "MASTER-DOGMA.md")],
         "dogma_dir": "melusina-os",
     },
 }
@@ -92,4 +92,4 @@ PLAYWRIGHT_TIMEOUT = 30_000  # ms per page load
 SCREENSHOT_FULL_PAGE = True
 
 # ── Context document paths (fed to agents for grounding) ────────────────────
-CONTEXT_DOCS = []
+CONTEXT_DOCS = [str(ROOT / "dogma" / "melusina-os" / "MASTER-DOGMA.md")]
