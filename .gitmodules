@@ -22,3 +22,6 @@
 [submodule "melusina-galactic-council"]
 	path = melusina-galactic-council
 	url = https://github.com/hrbrlife/melusina-galactic-council.git
+[submodule "melusina-site"]
+	path = melusina-site
+	url = https://github.com/hrbrlife/melusina-site.git
