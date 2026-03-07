@@ -1,0 +1,976 @@
+/* ═══════════════════════════════════════════════════════════════
+   SAILS.TO — SIGNUP PAGE
+   Cyberpunk-Vintage · Pastel Neon
+   Page-specific styles only — inherits from styles.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── SIGNUP HERO SECTION ───────────────────────────────────── */
+.signup-section {
+    min-height: 100vh;
+    padding: 160px var(--space-lg) 100px;
+    display: block;
+    background: var(--bg-dark);
+    position: relative;
+    overflow: visible;
+}
+
+.signup-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0 L60 30 L30 60 L0 30 Z' fill='none' stroke='%23FF6B35' stroke-width='0.5' opacity='0.15'/%3E%3C/svg%3E");
+    opacity: 0.3;
+}
+
+.signup-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 60px;
+    align-items: start;
+    position: relative;
+    z-index: 1;
+}
+
+/* ── STICKY CONTENT WRAPPER ────────────────────────────────── */
+.signup-content-wrapper {
+    min-height: 400px;
+}
+
+.signup-content {
+    padding-right: 20px;
+    align-self: start;
+    transition: transform var(--speed-fast) ease-out;
+}
+
+.signup-content.is-sticky {
+    position: fixed;
+    top: 120px;
+}
+
+.signup-content h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 3.5vw, 3rem);
+    font-weight: 400;
+    color: var(--text-on-dark);
+    margin-bottom: 20px;
+    line-height: 1.25;
+}
+
+.signup-content p {
+    font-size: 1.05rem;
+    color: var(--text-muted-dk);
+    line-height: 1.7;
+    margin-bottom: 28px;
+    max-width: 480px;
+}
+
+/* ── BENEFITS LIST ─────────────────────────────────────────── */
+.signup-benefits {
+    list-style: none;
+}
+
+.signup-benefits li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-sm);
+    padding: var(--space-sm) 0;
+    border-bottom: 2px solid rgba(240, 240, 255, 0.08);
+}
+
+.signup-benefits li:last-child {
+    border-bottom: none;
+}
+
+.signup-benefits .icon {
+    font-size: 1.4rem;
+    flex-shrink: 0;
+}
+
+.signup-benefits .text h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-on-dark);
+    margin-bottom: 4px;
+}
+
+.signup-benefits .text p {
+    font-size: 0.9rem;
+    color: var(--text-muted-dk);
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* ── FORM CARD ─────────────────────────────────────────────── */
+.signup-form-card {
+    background: var(--bg-dark-alt);
+    border: 2px solid rgba(240, 240, 255, 0.1);
+    padding: 36px 40px;
+    position: relative;
+    max-height: none;
+    overflow-y: visible;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: var(--space-md);
+}
+
+.form-header h2 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--text-on-dark);
+    margin-bottom: 6px;
+}
+
+.form-header p {
+    font-size: 0.85rem;
+    color: var(--text-muted-dk);
+}
+
+/* ── INTEREST GRID (checkbox cards) ────────────────────────── */
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: var(--space-md);
+}
+
+.interest-checkbox {
+    display: flex;
+    flex-direction: column;
+    padding: var(--space-sm);
+    background: rgba(240, 240, 255, 0.04);
+    border: 2px solid rgba(240, 240, 255, 0.12);
+    cursor: pointer;
+    transition: all var(--speed-normal) ease;
+    position: relative;
+    user-select: none;
+}
+
+.interest-checkbox * {
+    pointer-events: none;
+}
+
+.interest-checkbox input[type="checkbox"] {
+    pointer-events: none;
+}
+
+.interest-checkbox:hover {
+    border-color: var(--neon-orange);
+    background: rgba(255, 107, 53, 0.06);
+}
+
+.interest-checkbox.selected {
+    background: rgba(255, 107, 53, 0.10);
+    border-color: var(--neon-orange);
+    box-shadow: var(--glow-orange);
+}
+
+.interest-checkbox input[type="checkbox"] {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    accent-color: var(--neon-orange);
+}
+
+.interest-checkbox .interest-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: var(--space-xs);
+}
+
+.interest-checkbox .interest-icon svg {
+    width: 100%;
+    height: 100%;
+    stroke: var(--text-on-dark);
+}
+
+.interest-checkbox.selected .interest-icon svg {
+    stroke: var(--neon-orange);
+}
+
+.interest-checkbox .interest-label {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-on-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.interest-checkbox.selected .interest-label {
+    color: var(--neon-orange);
+}
+
+.interest-checkbox .interest-desc {
+    font-size: 0.75rem;
+    color: var(--text-muted-dk);
+    margin-top: 4px;
+    line-height: 1.4;
+}
+
+.interest-checkbox.selected .interest-desc {
+    color: rgba(240, 240, 255, 0.85);
+}
+
+/* ── LEGACY USER TYPE GRID ─────────────────────────────────── */
+.user-type-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+    margin-bottom: var(--space-md);
+}
+
+.user-type-btn {
+    padding: 12px 6px;
+    background: rgba(240, 240, 255, 0.05);
+    border: 2px solid rgba(240, 240, 255, 0.12);
+    cursor: pointer;
+    transition: all var(--speed-normal) ease;
+    text-align: center;
+}
+
+.user-type-btn:hover {
+    border-color: var(--neon-orange);
+}
+
+.user-type-btn.selected {
+    background: var(--neon-orange);
+    border-color: var(--neon-orange);
+    box-shadow: var(--glow-orange);
+}
+
+.user-type-btn .icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: var(--space-xs);
+}
+
+.user-type-btn .label {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--text-on-dark);
+    transition: color var(--speed-normal) ease;
+}
+
+.user-type-btn.selected .label {
+    color: var(--bg-dark);
+}
+
+/* ── FORM FIELDS ───────────────────────────────────────────── */
+.form-group {
+    margin-bottom: var(--space-sm);
+}
+
+.form-group label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-muted-dk);
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text-on-dark);
+    background: rgba(240, 240, 255, 0.04);
+    border: 2px solid rgba(240, 240, 255, 0.15);
+    border-radius: 0;
+    transition: all var(--speed-normal) ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: rgba(240, 240, 255, 0.35);
+}
+
+.form-group select option {
+    background: var(--bg-dark);
+    color: var(--text-on-dark);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--neon-orange);
+    box-shadow: var(--glow-orange);
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-sm);
+}
+
+/* ── FORM CHECKBOX ─────────────────────────────────────────── */
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: var(--space-md);
+}
+
+.form-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    accent-color: var(--neon-orange);
+    flex-shrink: 0;
+}
+
+.form-checkbox label {
+    font-size: 0.85rem;
+    color: var(--text-muted-dk);
+    line-height: 1.5;
+    text-transform: none;
+    letter-spacing: normal;
+    margin: 0;
+}
+
+.form-checkbox label a {
+    color: var(--neon-orange);
+    text-decoration: underline;
+}
+
+/* ── MARKETING CHECKBOX (neon glow) ────────────────────────── */
+.marketing-checkbox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(255, 107, 53, 0.06);
+    border: 2px solid rgba(255, 107, 53, 0.20);
+    padding: 14px var(--space-sm);
+    margin-bottom: var(--space-sm);
+    animation: subtleGlow 2s ease-in-out infinite;
+    overflow: visible;
+}
+
+.marketing-checkbox .hug-emoji {
+    font-size: 1.3rem;
+    line-height: 1;
+    margin-right: 10px;
+    flex-shrink: 0;
+    animation: wiggle 3s ease-in-out infinite;
+}
+
+.marketing-checkbox input[type="checkbox"] {
+    margin-top: 0;
+    margin-right: 10px;
+}
+
+.marketing-checkbox label {
+    margin: 0;
+    line-height: 1.4;
+}
+
+@keyframes subtleGlow {
+    0%, 100% {
+        box-shadow: 0 0 8px rgba(255, 107, 53, 0.15);
+        border-color: rgba(255, 107, 53, 0.20);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(255, 107, 53, 0.35);
+        border-color: rgba(255, 107, 53, 0.45);
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-5deg); }
+    75% { transform: rotate(5deg); }
+}
+
+.marketing-checkbox.checked {
+    animation: none;
+    border-color: var(--neon-teal);
+    background: rgba(0, 212, 170, 0.08);
+    box-shadow: var(--glow-teal);
+}
+
+.marketing-checkbox.checked .hug-emoji {
+    animation: none;
+}
+
+/* ── SPARKLE PARTICLES ─────────────────────────────────────── */
+.marketing-checkbox .sparkles {
+    position: absolute;
+    top: 50%;
+    left: 28px;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+.marketing-checkbox .sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: var(--neon-orange);
+    opacity: 0;
+}
+
+.marketing-checkbox.burst .sparkle {
+    animation: sparkle 0.6s ease-out forwards;
+}
+
+.marketing-checkbox.burst .sparkle:nth-child(1) { --angle: 0deg; --distance: 60px; }
+.marketing-checkbox.burst .sparkle:nth-child(2) { --angle: 45deg; --distance: 70px; animation-delay: 0.05s; }
+.marketing-checkbox.burst .sparkle:nth-child(3) { --angle: 90deg; --distance: 55px; animation-delay: 0.1s; }
+.marketing-checkbox.burst .sparkle:nth-child(4) { --angle: 135deg; --distance: 65px; animation-delay: 0.05s; }
+.marketing-checkbox.burst .sparkle:nth-child(5) { --angle: 180deg; --distance: 60px; }
+.marketing-checkbox.burst .sparkle:nth-child(6) { --angle: 225deg; --distance: 70px; animation-delay: 0.1s; }
+.marketing-checkbox.burst .sparkle:nth-child(7) { --angle: 270deg; --distance: 55px; animation-delay: 0.05s; }
+.marketing-checkbox.burst .sparkle:nth-child(8) { --angle: 315deg; --distance: 65px; }
+
+@keyframes sparkle {
+    0% {
+        transform: rotate(var(--angle)) translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(var(--angle)) translateY(calc(var(--distance) * -1));
+        opacity: 0;
+    }
+}
+
+/* ── SUBMIT BUTTON ─────────────────────────────────────────── */
+.form-submit {
+    width: 100%;
+    padding: var(--space-sm) 32px;
+    background: var(--neon-orange);
+    color: var(--bg-dark);
+    border: 2px solid var(--neon-orange);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    cursor: pointer;
+    transition: all var(--speed-normal) ease;
+}
+
+.form-submit:hover {
+    background: transparent;
+    color: var(--neon-orange);
+    box-shadow: var(--glow-orange);
+}
+
+.form-submit:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+/* ── FORM SUCCESS STATE ────────────────────────────────────── */
+.form-success {
+    text-align: center;
+    padding: 40px 20px;
+    display: none;
+}
+
+.form-success.show {
+    display: block;
+}
+
+.form-success .icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.form-success h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--ink);
+    margin-bottom: 12px;
+}
+
+.form-success p {
+    font-size: 0.95rem;
+    color: var(--slate);
+    margin-bottom: var(--space-md);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-sm);
+}
+
+.social-link {
+    padding: 12px var(--space-md);
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    text-decoration: none;
+    border: 2px solid var(--border);
+    color: var(--ink);
+    transition: all var(--speed-normal) ease;
+}
+
+.social-link:hover {
+    background: var(--neon-purple);
+    border-color: var(--neon-purple);
+    color: var(--bg-card);
+    box-shadow: var(--glow-purple);
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+    .signup-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        max-width: 640px;
+    }
+
+    .signup-content {
+        position: static;
+        text-align: center;
+        padding-right: 0;
+    }
+
+    .signup-content p {
+        max-width: 100%;
+    }
+
+    .signup-benefits li {
+        justify-content: center;
+        text-align: left;
+    }
+
+    .signup-form-card {
+        max-height: none;
+        overflow-y: visible;
+    }
+
+    .user-type-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .signup-section {
+        padding: 120px var(--space-md) 60px;
+    }
+
+    .signup-form-card {
+        padding: 32px var(--space-md);
+    }
+
+    .user-type-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .user-type-btn {
+        padding: 12px var(--space-xs);
+    }
+
+    .user-type-btn .label {
+        font-size: 0.6rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ── TWO-STEP FORM FLOW ────────────────────────────────────── */
+.form-step {
+    display: none;
+    animation: fadeIn var(--speed-normal) ease-out;
+}
+
+.form-step.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ── STEP 1 SUCCESS ────────────────────────────────────────── */
+.step-success-content {
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.step-success-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    color: var(--text-on-dark);
+    margin: var(--space-sm) 0 12px;
+}
+
+.step-success-content p {
+    color: var(--text-muted-dk);
+    margin-bottom: var(--space-md);
+    line-height: 1.6;
+}
+
+.step-success-content .form-submit {
+    margin-top: var(--space-xs);
+}
+
+.skip-text {
+    margin-top: var(--space-sm);
+    font-size: 0.85rem;
+    color: rgba(240, 240, 255, 0.45);
+}
+
+.skip-text a {
+    color: var(--neon-orange);
+    text-decoration: underline;
+}
+
+/* ── SUCCESS BANNER ────────────────────────────────────────── */
+.step-success-banner {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0, 212, 170, 0.08);
+    border: 2px solid rgba(0, 212, 170, 0.25);
+    border-left: 3px solid var(--neon-teal);
+    padding: var(--space-sm) 20px;
+    margin-bottom: var(--space-md);
+}
+
+.step-success-banner .icon {
+    color: var(--neon-teal);
+    flex-shrink: 0;
+}
+
+.step-success-banner .banner-text {
+    color: rgba(240, 240, 255, 0.9);
+    font-size: 0.95rem;
+}
+
+.step-success-banner .banner-text strong {
+    color: var(--neon-teal);
+}
+
+/* ── STEP INDICATOR ────────────────────────────────────────── */
+.step-indicator {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--neon-orange);
+    margin-bottom: var(--space-xs);
+}
+
+/* ── CONDITIONAL FIELDS ────────────────────────────────────── */
+.conditional-fields {
+    display: none;
+    animation: slideDown var(--speed-normal) ease-out;
+    border: none;
+    padding: var(--space-md);
+    margin: var(--space-sm) 0;
+}
+
+.conditional-fields.active {
+    display: block;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ── CATEGORY-SPECIFIC CONDITIONAL FIELDS ──────────────────── */
+.conditional-fields[data-show-for="issuer"] {
+    background: rgba(0, 212, 170, 0.06);
+    border-top: 3px solid var(--neon-teal);
+}
+
+.conditional-fields[data-show-for="investor"] {
+    background: rgba(255, 107, 53, 0.06);
+    border-top: 3px solid var(--neon-orange);
+}
+
+.conditional-fields[data-show-for="broker"] {
+    background: rgba(77, 166, 255, 0.06);
+    border-top: 3px solid var(--neon-blue);
+}
+
+.conditional-fields[data-show-for="institution"] {
+    background: rgba(123, 104, 238, 0.06);
+    border-top: 3px solid var(--neon-purple);
+}
+
+.conditional-fields[data-show-for="introducer"] {
+    background: rgba(255, 105, 180, 0.06);
+    border-top: 3px solid var(--neon-pink);
+}
+
+/* ── SECTION HEADER COLOURS ────────────────────────────────── */
+.section-header-issuer {
+    color: var(--neon-teal);
+    border-bottom-color: rgba(0, 212, 170, 0.3);
+}
+
+.section-header-investor {
+    color: var(--neon-orange);
+    border-bottom-color: rgba(255, 107, 53, 0.3);
+}
+
+.section-header-broker {
+    color: var(--neon-blue);
+    border-bottom-color: rgba(77, 166, 255, 0.3);
+}
+
+.section-header-institution {
+    color: var(--neon-purple);
+    border-bottom-color: rgba(123, 104, 238, 0.3);
+}
+
+.section-header-introducer {
+    color: var(--neon-pink);
+    border-bottom-color: rgba(255, 105, 180, 0.3);
+}
+
+/* ── FORM SECTION LABEL ────────────────────────────────────── */
+.form-section-label {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--neon-orange);
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(255, 107, 53, 0.20);
+}
+
+/* ── FIELD HELPER ──────────────────────────────────────────── */
+.field-helper {
+    display: block;
+    font-size: 0.75rem;
+    color: rgba(240, 240, 255, 0.45);
+    margin-top: 6px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+/* ── REQUIRED ASTERISK ─────────────────────────────────────── */
+.required {
+    color: var(--neon-pink);
+    font-weight: 600;
+}
+
+/* ── INFO BOXES ────────────────────────────────────────────── */
+.form-info-box {
+    background: rgba(255, 107, 53, 0.06);
+    border: 2px solid rgba(255, 107, 53, 0.18);
+    border-left: 3px solid var(--neon-orange);
+    padding: var(--space-sm) 20px;
+    margin: var(--space-md) 0 var(--space-sm);
+    font-size: 0.85rem;
+}
+
+.form-info-box strong {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--neon-orange);
+    margin-bottom: 10px;
+}
+
+.form-info-box ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.form-info-box li {
+    color: rgba(240, 240, 255, 0.8);
+    margin-bottom: 4px;
+    line-height: 1.5;
+}
+
+.form-info-box li:last-child {
+    margin-bottom: 0;
+}
+
+/* ── CHECKBOX GRID ─────────────────────────────────────────── */
+.checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px var(--space-sm);
+    margin-top: var(--space-xs);
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    font-size: 0.85rem;
+    color: var(--text-muted-dk);
+    cursor: pointer;
+    padding: 6px 0;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--neon-orange);
+    flex-shrink: 0;
+}
+
+.checkbox-item:hover {
+    color: var(--text-on-dark);
+}
+
+/* ── OPTGROUP ──────────────────────────────────────────────── */
+optgroup {
+    font-weight: 600;
+    color: var(--text-on-dark);
+}
+
+optgroup option {
+    font-weight: 400;
+    padding-left: var(--space-xs);
+}
+
+@media (max-width: 600px) {
+    .checkbox-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   SLIDESHOW STYLES
+   ═══════════════════════════════════════════════════════════════ */
+.signup-slideshow {
+    position: relative;
+    min-height: 320px;
+}
+
+.signup-slide {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.signup-slide.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+}
+
+/* ── SLIDESHOW DOTS ────────────────────────────────────────── */
+.slideshow-dots {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    padding: var(--space-xs) 0;
+}
+
+.slideshow-dots .dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(240, 240, 255, 0.2);
+    border: 2px solid rgba(240, 240, 255, 0.3);
+    padding: 0;
+    cursor: pointer;
+    transition: all var(--speed-normal) ease;
+}
+
+.slideshow-dots .dot:hover {
+    background: rgba(240, 240, 255, 0.5);
+    transform: scale(1.2);
+}
+
+.slideshow-dots .dot.active {
+    background: var(--neon-orange);
+    border-color: var(--neon-orange);
+    box-shadow: 0 0 10px rgba(255, 107, 53, 0.4);
+    transform: scale(1.1);
+}
+
+/* ── SLIDE ANIMATIONS ──────────────────────────────────────── */
+.signup-slide.active h1 {
+    animation: slideIn var(--speed-slow) ease forwards;
+}
+
+.signup-slide.active p {
+    animation: slideIn var(--speed-slow) ease 0.1s forwards;
+}
+
+.signup-slide.active .signup-benefits li {
+    animation: slideIn 0.4s ease forwards;
+}
+
+.signup-slide.active .signup-benefits li:nth-child(1) { animation-delay: 0.15s; }
+.signup-slide.active .signup-benefits li:nth-child(2) { animation-delay: 0.25s; }
+.signup-slide.active .signup-benefits li:nth-child(3) { animation-delay: 0.35s; }
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 900px) {
+    .signup-slideshow {
+        min-height: auto;
+    }
+
+    .signup-slide {
+        position: relative;
+        display: none;
+    }
+
+    .signup-slide.active {
+        display: block;
+    }
+
+    .slideshow-dots {
+        justify-content: center;
+    }
+}

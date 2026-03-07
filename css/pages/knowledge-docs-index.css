@@ -1,0 +1,364 @@
+/* ═══════════════════════════════════════════════════════════════
+   DOCS INDEX — Page-Specific Styles
+   Cyberpunk-Vintage · Pastel Neon
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── LAYOUT ────────────────────────────────────────────────── */
+.docs-main {
+    padding: 0 48px 80px;
+}
+
+.docs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 60px;
+}
+
+/* ── SIDEBAR ───────────────────────────────────────────────── */
+.docs-sidebar {
+    position: sticky;
+    top: 120px;
+    align-self: start;
+    max-height: calc(100vh - 150px);
+    overflow-y: auto;
+    padding: 20px 0;
+}
+
+.docs-nav h4 {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--slate);
+    margin: 24px 0 12px;
+}
+
+.docs-nav h4:first-child {
+    margin-top: 0;
+}
+
+.docs-link {
+    display: block;
+    font-size: 0.9rem;
+    color: var(--graphite);
+    text-decoration: none;
+    padding: 8px 0;
+    transition: color var(--speed-normal) ease;
+}
+
+.docs-link:hover,
+.docs-link.active {
+    color: var(--ink);
+}
+
+.docs-link.active {
+    font-weight: 500;
+    border-left: 3px solid var(--neon-orange);
+    padding-left: 12px;
+    margin-left: -12px;
+}
+
+/* ── CONTENT ───────────────────────────────────────────────── */
+.docs-content {
+    padding-top: 20px;
+}
+
+.docs-hero-card {
+    background: var(--bg-alt);
+    padding: 40px;
+    margin-bottom: 48px;
+}
+
+.docs-hero-card h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 12px;
+}
+
+.docs-hero-card p {
+    font-size: 1rem;
+    color: var(--graphite);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* ── QUICK LINKS ───────────────────────────────────────────── */
+.docs-quick-links {
+    display: flex;
+    gap: 16px;
+}
+
+.docs-quick-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    background: var(--bg-primary);
+    border: 2px solid var(--border);
+    text-decoration: none;
+    transition: all var(--speed-normal) ease;
+}
+
+.docs-quick-link:hover {
+    border-color: var(--neon-orange);
+    transform: translateY(-2px);
+}
+
+.docs-quick-link .icon {
+    font-size: 1.5rem;
+}
+
+.docs-quick-link .text strong {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1rem;
+    color: var(--ink);
+}
+
+.docs-quick-link .text small {
+    font-size: 0.8rem;
+    color: var(--slate);
+}
+
+/* ── SECTIONS ──────────────────────────────────────────────── */
+.docs-section {
+    margin-bottom: 48px;
+}
+
+.docs-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 16px;
+}
+
+.docs-section > p {
+    font-size: 0.95rem;
+    color: var(--graphite);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* ── CARDS GRID ────────────────────────────────────────────── */
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.docs-card {
+    display: block;
+    padding: 24px;
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    text-decoration: none;
+    transition: all var(--speed-normal) ease;
+}
+
+.docs-card:hover {
+    border-color: var(--neon-orange);
+    transform: translateY(-2px);
+}
+
+.docs-card-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.docs-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 6px;
+}
+
+.docs-card p {
+    font-size: 0.85rem;
+    color: var(--slate);
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ── API PREVIEW ───────────────────────────────────────────── */
+.docs-api-preview {
+    background: var(--bg-alt);
+    padding: 20px 24px;
+    margin-bottom: 16px;
+}
+
+.docs-api-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.docs-api-method {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    padding: 4px 8px;
+}
+
+.docs-api-method.get {
+    background: rgba(0, 212, 170, 0.15);
+    color: var(--neon-teal);
+}
+
+.docs-api-method.post {
+    background: rgba(77, 166, 255, 0.15);
+    color: var(--neon-blue);
+}
+
+.docs-api-header code {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--ink);
+}
+
+.docs-api-desc {
+    font-size: 0.85rem;
+    color: var(--slate);
+    margin: 0;
+}
+
+.docs-section-link {
+    display: inline-block;
+    margin-top: 16px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--neon-orange);
+    text-decoration: none;
+    transition: color var(--speed-normal) ease;
+}
+
+.docs-section-link:hover {
+    color: var(--ink);
+}
+
+/* ── DIAGRAM ───────────────────────────────────────────────── */
+.docs-diagram {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    background: var(--bg-alt);
+    overflow-x: auto;
+}
+
+.docs-diagram-step {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 20px;
+    background: var(--bg-primary);
+    border: 2px solid var(--border);
+    white-space: nowrap;
+}
+
+.docs-diagram-step .step-num {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--ink);
+    color: var(--bg-primary);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.docs-diagram-step .step-text {
+    font-size: 0.85rem;
+    color: var(--ink);
+}
+
+.docs-diagram-arrow {
+    font-size: 1.5rem;
+    color: var(--neon-orange);
+    flex-shrink: 0;
+}
+
+/* ── HELP GRID ─────────────────────────────────────────────── */
+.docs-help-grid {
+    display: flex;
+    gap: 16px;
+}
+
+.docs-help-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: var(--bg-alt);
+    border: 2px solid var(--border);
+    text-decoration: none;
+    transition: all var(--speed-normal) ease;
+}
+
+.docs-help-link:hover {
+    border-color: var(--neon-orange);
+}
+
+.docs-help-link .icon {
+    font-size: 1.2rem;
+}
+
+.docs-help-link .text {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ink);
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 992px) {
+    .docs-container {
+        grid-template-columns: 1fr;
+    }
+
+    .docs-sidebar {
+        position: static;
+        max-height: none;
+        border-bottom: 2px solid var(--border);
+        padding-bottom: 24px;
+        margin-bottom: 24px;
+    }
+
+    .docs-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .docs-main {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .docs-quick-links {
+        flex-direction: column;
+    }
+
+    .docs-diagram {
+        flex-direction: column;
+    }
+
+    .docs-diagram-arrow {
+        transform: rotate(90deg);
+    }
+}

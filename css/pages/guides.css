@@ -1,0 +1,429 @@
+/* ═══════════════════════════════════════════════════════════════
+   SAILS.TO — GUIDES (SHARED)
+   Cyberpunk-Vintage · Pastel Neon
+   Shared styles for all knowledge/guides pages
+   Inherits from styles.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── GUIDE HEADER ──────────────────────────────────────────── */
+.guide-header {
+    background: var(--bg-dark);
+    padding: 160px var(--space-lg) 80px;
+    color: var(--text-on-dark);
+    border-bottom: 3px solid var(--neon-purple);
+}
+
+.guide-badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(123, 104, 238, 0.12);
+    border: 2px solid var(--neon-purple);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--neon-purple);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.guide-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.15;
+    color: var(--text-on-dark);
+}
+
+.guide-meta {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    color: var(--text-muted-dk);
+}
+
+
+/* ── GUIDE CONTENT AREA ────────────────────────────────────── */
+.guide-content {
+    padding: var(--space-xl) var(--space-lg);
+    background: var(--bg-primary);
+}
+
+.guide-container {
+    max-width: var(--max-prose);
+    margin: 0 auto;
+}
+
+
+/* ── TABLE OF CONTENTS NAV ─────────────────────────────────── */
+.guide-nav {
+    background: var(--bg-card);
+    border: 2px solid var(--border-strong);
+    padding: 28px;
+    margin-bottom: 48px;
+}
+
+.guide-nav h4 {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.20em;
+    color: var(--neon-orange);
+    margin-bottom: 16px;
+}
+
+.guide-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 8px;
+}
+
+.guide-nav li {
+    margin-bottom: 0;
+}
+
+.guide-nav li a {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--graphite);
+    text-decoration: none;
+    padding: 8px 0;
+    display: block;
+    border-bottom: 1px solid var(--border);
+    transition: color var(--speed-fast) ease;
+}
+
+.guide-nav li a:hover {
+    color: var(--neon-orange);
+}
+
+
+/* ── GUIDE SECTIONS ────────────────────────────────────────── */
+.guide-section {
+    margin: 56px 0;
+    padding-top: 24px;
+    border-top: 2px solid var(--border);
+}
+
+.guide-section:first-of-type {
+    border-top: none;
+    margin-top: 0;
+}
+
+.guide-section h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+}
+
+.guide-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin: 28px 0 16px;
+}
+
+.guide-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--graphite);
+    margin-bottom: 16px;
+}
+
+.guide-section ul,
+.guide-section ol {
+    margin: 16px 0;
+    padding-left: 25px;
+}
+
+.guide-section li {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--graphite);
+    margin-bottom: 8px;
+}
+
+
+/* ── BACK LINK ─────────────────────────────────────────────── */
+/* ── STEP CARDS ────────────────────────────────────────────── */
+.step-card {
+    background: var(--bg-card);
+    border: 2px solid var(--border-strong);
+    padding: 28px;
+    margin: 24px 0;
+    display: flex;
+    gap: 20px;
+}
+
+.step-number {
+    width: 40px;
+    height: 40px;
+    background: var(--neon-orange);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-weight: 700;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 10px;
+}
+
+.step-content p {
+    margin: 0;
+}
+
+
+/* ── INFO & HIGHLIGHT BOXES ────────────────────────────────── */
+.info-box {
+    background: var(--bg-card);
+    border: 2px solid var(--border-strong);
+    border-left: 3px solid var(--neon-teal);
+    padding: 28px;
+    margin: 28px 0;
+}
+
+.info-box h4 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--charcoal);
+}
+
+.info-box p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight-box {
+    padding: 20px 28px;
+    background: var(--bg-surface);
+    border: 2px solid var(--border);
+    border-left: 3px solid var(--neon-orange);
+    margin: 28px 0;
+}
+
+.requirement-box {
+    background: var(--bg-alt);
+    border: 2px solid var(--border);
+    padding: 24px;
+    margin: 24px 0;
+}
+
+.requirement-box h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    color: var(--charcoal);
+}
+
+
+/* ── COMPARISON TABLE ──────────────────────────────────────── */
+.comparison-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 28px 0;
+    border: 2px solid var(--border-strong);
+}
+
+.comparison-table th,
+.comparison-table td {
+    padding: 14px 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+}
+
+.comparison-table th {
+    background: var(--bg-dark);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--neon-teal);
+}
+
+.comparison-table td {
+    color: var(--graphite);
+    font-size: 0.95rem;
+}
+
+.comparison-table tbody tr:nth-child(even) {
+    background: var(--bg-surface);
+}
+
+.comparison-table tbody tr:hover {
+    background: rgba(77, 166, 255, 0.06);
+}
+
+
+/* ── ROLE TABS ─────────────────────────────────────────────── */
+.role-tabs {
+    display: flex;
+    gap: 8px;
+    margin: 32px 0 24px;
+    flex-wrap: wrap;
+}
+
+.role-tab {
+    padding: 10px 24px;
+    background: var(--bg-card);
+    border: 2px solid var(--border-strong);
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--graphite);
+    transition: all var(--speed-fast) ease;
+}
+
+.role-tab:hover {
+    border-color: var(--neon-orange);
+    color: var(--neon-orange);
+}
+
+.role-tab.active {
+    background: var(--neon-orange);
+    color: #fff;
+    border-color: var(--neon-orange);
+}
+
+.role-content {
+    display: none;
+}
+
+.role-content.active {
+    display: block;
+}
+
+
+/* ── DIAGRAM BOXES ─────────────────────────────────────────── */
+.diagram-box {
+    background: var(--bg-dark);
+    color: var(--text-on-dark);
+    border: 2px solid var(--border-strong);
+    padding: var(--space-lg);
+    margin: 32px 0;
+}
+
+.diagram-box h4 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 400;
+    margin-bottom: 24px;
+    text-align: center;
+    color: var(--text-on-dark);
+}
+
+.structure-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.structure-level {
+    background: rgba(255, 107, 53, 0.12);
+    border: 2px solid var(--neon-orange);
+    padding: 14px 32px;
+    text-align: center;
+    min-width: 200px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+}
+
+.structure-connector {
+    color: var(--neon-orange);
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+}
+
+.series-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.series-box {
+    background: rgba(240, 240, 255, 0.08);
+    border: 2px solid rgba(240, 240, 255, 0.2);
+    padding: 10px 20px;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.04em;
+}
+
+
+/* ── CTA BOX ───────────────────────────────────────────────── */
+.cta-box {
+    background: var(--bg-dark);
+    color: var(--text-on-dark);
+    border: 2px solid var(--border-strong);
+    padding: var(--space-lg);
+    text-align: center;
+    margin-top: 56px;
+}
+
+.cta-box h3 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: var(--text-on-dark);
+}
+
+.cta-box p {
+    color: var(--text-muted-dk);
+    margin-bottom: 24px;
+    font-size: 1.05rem;
+}
+
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .guide-header {
+        padding: 140px var(--space-md) 60px;
+    }
+
+    .guide-content {
+        padding: 48px var(--space-md);
+    }
+
+    .guide-nav ul {
+        grid-template-columns: 1fr;
+    }
+
+    .step-card {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .diagram-box {
+        padding: 28px var(--space-md);
+    }
+
+    .cta-box {
+        padding: 32px var(--space-md);
+    }
+}

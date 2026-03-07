@@ -1,0 +1,150 @@
+/* ═══════════════════════════════════════════════════════════════
+   DOCS PAGE — Content Typography
+   Cyberpunk-Vintage · Pastel Neon
+   Tables & code blocks inherited from styles.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── CONTENT CONTAINER ─────────────────────────────────────── */
+.features-section .container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.features-section h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin: 56px 0 20px 0;
+    letter-spacing: -0.01em;
+}
+
+.features-section h2:first-child {
+    margin-top: 0;
+}
+
+.features-section h3 {
+    font-family: var(--font-display);
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin: 40px 0 16px 0;
+}
+
+.features-section p {
+    font-size: 1rem;
+    color: var(--graphite);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.features-section p:last-child {
+    margin-bottom: 0;
+}
+
+.features-section strong {
+    color: var(--ink);
+    font-weight: 600;
+}
+
+/* ── LISTS ─────────────────────────────────────────────────── */
+.features-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 24px 0;
+}
+
+.features-section ul li {
+    font-size: 0.95rem;
+    color: var(--graphite);
+    line-height: 1.8;
+    padding: 8px 0 8px 24px;
+    position: relative;
+    border-bottom: 2px solid rgba(10, 10, 42, 0.04);
+}
+
+.features-section ul li:last-child {
+    border-bottom: none;
+}
+
+.features-section ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 16px;
+    width: 8px;
+    height: 2px;
+    background: var(--neon-orange);
+}
+
+.features-section ul li strong {
+    color: var(--ink);
+}
+
+.features-section ol {
+    padding: 0;
+    margin: 16px 0 24px 0;
+    counter-reset: docs-counter;
+    list-style: none;
+}
+
+.features-section ol li {
+    font-size: 0.95rem;
+    color: var(--graphite);
+    line-height: 1.8;
+    padding: 12px 0 12px 40px;
+    position: relative;
+    border-bottom: 2px solid rgba(10, 10, 42, 0.04);
+    counter-increment: docs-counter;
+}
+
+.features-section ol li:last-child {
+    border-bottom: none;
+}
+
+.features-section ol li::before {
+    content: counter(docs-counter);
+    position: absolute;
+    left: 0;
+    top: 12px;
+    width: 24px;
+    height: 24px;
+    background: var(--bg-dark);
+    color: var(--text-on-dark);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.features-section ol li strong {
+    color: var(--ink);
+}
+
+/* ── LINKS ─────────────────────────────────────────────────── */
+.features-section a:not(.btn):not(.glossary-term) {
+    color: var(--charcoal);
+    text-decoration: underline;
+    text-decoration-color: var(--neon-orange);
+    text-underline-offset: 3px;
+    transition: color var(--speed-fast) ease;
+}
+
+.features-section a:not(.btn):not(.glossary-term):hover {
+    color: var(--neon-orange);
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .features-section h2 {
+        font-size: 1.5rem;
+        margin: 40px 0 16px 0;
+    }
+
+    .features-section h3 {
+        font-size: 1.2rem;
+        margin: 32px 0 12px 0;
+    }
+}
