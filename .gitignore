@@ -1,24 +1,16 @@
-./solana_workflow-license/
-drafts/diagrams/node_modules/
-
-# Other sites (reference only)
-instakycsite/
-melusinasite/
-
-# Social media assets
-social/
-qa-testing/node_modules/
+# Hugo build output
 hugo-site/public/
-hugo-site/qc/node_modules/
-hugo-site/node_modules/
-hugo-site/tina/__generated__/
-hugo-site/tina/tina-lock.json
-hugo-site/static/admin/
+hugo-site/resources/_gen/
+hugo-site/.hugo_build.lock
 
-# Submodule build artifacts
+# Dependencies
 **/node_modules/
-**/dist-publish/
-**/tina-lock.json
-**/__generated__/
-**/package-lock.json
-static_store
+**/tina/__generated__/
+**/tina/tina-lock.json
+
+# Build artifacts
+.vite/
+
+# OS/IDE
+.DS_Store
+*.swp
