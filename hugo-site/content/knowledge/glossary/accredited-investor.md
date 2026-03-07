@@ -54,6 +54,6 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>US securities laws require <a href="/knowledge/glossary/reg-d/">Reg D 506(c)</a> offerings to verify that all investors are accredited. This isn't just a checkbox—it's a legal requirement with real consequences for issuers who get it wrong.</p>
+    <p>US securities laws require <a href="/knowledge/glossary/reg-d/">Reg D 506(c)</a> offerings to verify that all investors are accredited. This isn't just a checkbox - it's a legal requirement with real consequences for issuers who get it wrong.</p>
     <p>Sails.to works with third-party verification services to confirm accredited status during <a href="/knowledge/glossary/kyc/">KYC</a>. Non-US investors may qualify under <a href="/knowledge/glossary/reg-s/">Reg S</a> without meeting US accreditation thresholds, instead qualifying as <a href="/knowledge/glossary/professional-investor/">professional investors</a> under their local regulations.</p>
 </section>

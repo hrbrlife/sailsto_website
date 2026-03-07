@@ -8,7 +8,7 @@ stylesheets:
   - "/css/main.css"
   - "/css/pages/glossary.css"
   - "/css/pages/guides.css"
-guideMeta: "The complete guide to tokenized securities—what they are, why they exist, and how they will remake capital markets"
+guideMeta: "The complete guide to tokenized securities - what they are, why they exist, and how they will remake capital markets"
 draft: false
 date: "2026-02-24"
 lastmod: "2026-02-24"
@@ -30,23 +30,23 @@ ogtype: "article"
         </nav>
         <section id="what-is-tokenization" class="guide-section">
             <h2>What Is Tokenization?</h2>
-            <p>Tokenization is the process of representing ownership of a real-world asset as a digital token on a blockchain. A <span class="glossary-term" data-term="security-token">security token</span> is not a cryptocurrency—it is a regulated financial instrument that happens to live on a distributed ledger instead of in a spreadsheet at a transfer agent's office.</p>
-            <p>Think of it this way: a traditional stock certificate proves you own shares. A security token does exactly the same thing—except the certificate is a programmable, instantly transferable, compliance-enforcing piece of code running on <span class="glossary-term" data-term="solana">Solana</span>.</p>
-            <p>Every rule that governs the security—who can hold it, when it can transfer, how dividends are paid—is encoded directly into the token. Compliance is not a department. It is a feature of the asset itself.</p>
+            <p>Tokenization is the process of representing ownership of a real-world asset as a digital token on a blockchain. A <span class="glossary-term" data-term="security-token">security token</span> is not a cryptocurrency - it is a regulated financial instrument that happens to live on a distributed ledger instead of in a spreadsheet at a transfer agent's office.</p>
+            <p>Think of it this way: a traditional stock certificate proves you own shares. A security token does exactly the same thing - except the certificate is a programmable, instantly transferable, compliance-enforcing piece of code running on <span class="glossary-term" data-term="solana">Solana</span>.</p>
+            <p>Every rule that governs the security - who can hold it, when it can transfer, how dividends are paid - is encoded directly into the token. Compliance is not a department. It is a feature of the asset itself.</p>
             <div class="highlight-box">
-                <p><strong>The fundamental insight:</strong> Securities have always been information. Tokenization simply moves that information to a better database—one that is programmable, auditable, and operates 24/7 without intermediaries extracting rent at every step.</p>
+                <p><strong>The fundamental insight:</strong> Securities have always been information. Tokenization simply moves that information to a better database - one that is programmable, auditable, and operates 24/7 without intermediaries extracting rent at every step.</p>
             </div>
         </section>
         <section id="why-tokenize" class="guide-section">
             <h2>Why Tokenize?</h2>
-            <p>Traditional securities issuance is a monument to friction. Every step—from formation to distribution to secondary trading—involves intermediaries, paper, delays, and fees that exist because the infrastructure was designed in the 1970s.</p>
+            <p>Traditional securities issuance is a monument to friction. Every step - from formation to distribution to secondary trading - involves intermediaries, paper, delays, and fees that exist because the infrastructure was designed in the 1970s.</p>
             <h3>The Problems with Traditional Issuance</h3>
             <ul>
-                <li><strong>Time:</strong> A traditional private placement takes 3–6 months. Legal, compliance, transfer agent setup, subscription processing—all sequential, all manual.</li>
+                <li><strong>Time:</strong> A traditional private placement takes 3–6 months. Legal, compliance, transfer agent setup, subscription processing - all sequential, all manual.</li>
                 <li><strong>Cost:</strong> Legal fees, transfer agent fees, custody fees, distribution processing fees. A small offering can lose 5–10% of proceeds to infrastructure.</li>
-                <li><strong>Illiquidity:</strong> Once you buy into a private fund, your capital is locked. No secondary market. No price discovery. No exit except redemption—if it's even offered.</li>
+                <li><strong>Illiquidity:</strong> Once you buy into a private fund, your capital is locked. No secondary market. No price discovery. No exit except redemption - if it's even offered.</li>
                 <li><strong>Geographic barriers:</strong> Serving international investors means separate legal opinions, separate custodians, separate compliance frameworks for every jurisdiction.</li>
-                <li><strong>Manual distributions:</strong> Paying dividends means ACH files, wire instructions, tax withholding calculations, and reconciliation—all by hand.</li>
+                <li><strong>Manual distributions:</strong> Paying dividends means ACH files, wire instructions, tax withholding calculations, and reconciliation - all by hand.</li>
             </ul>
             <h3>What Tokenization Solves</h3>
             <ul>
@@ -59,28 +59,28 @@ ogtype: "article"
             </ul>
             <div class="info-box">
                 <h4>Not Just Cost Savings</h4>
-                <p>Tokenization does not merely reduce fees—it enables entirely new capital structures. Assets that were never economically viable to securitize (revenue streams, intellectual property, infrastructure projects) become possible when the cost of issuance drops by 90%.</p>
+                <p>Tokenization does not merely reduce fees - it enables entirely new capital structures. Assets that were never economically viable to securitize (revenue streams, intellectual property, infrastructure projects) become possible when the cost of issuance drops by 90%.</p>
             </div>
         </section>
         <section id="how-sailsto-tokenizes" class="guide-section">
             <h2>How Sails.to Tokenizes</h2>
-            <p>Most tokenization platforms make you choose: on-chain <em>or</em> traditional. Sails.to refuses that choice. Our <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> architecture delivers both simultaneously—a hybrid instrument that is natively on-chain <em>and</em> bankable through traditional infrastructure.</p>
+            <p>Most tokenization platforms make you choose: on-chain <em>or</em> traditional. Sails.to refuses that choice. Our <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> architecture delivers both simultaneously - a hybrid instrument that is natively on-chain <em>and</em> bankable through traditional infrastructure.</p>
             <h3>The CrossSecurities Architecture</h3>
             <p>Every Sails.to security token is deployed through our <code>sails_securities</code> program on Solana, built on the SPL Token-2022 standard with compliance hooks. But here is what makes it different:</p>
             <ul>
                 <li><strong>On-Chain Form:</strong> Tokens live in your <span class="glossary-term" data-term="solana">Solana</span> wallet. Self-custody. Instant transfers to other verified investors. Programmable distributions in stablecoin.</li>
-                <li><strong>Bankable Form:</strong> Through <span class="glossary-term" data-term="crossconversion">CrossConversion</span>, the same tokens can be locked on-chain and represented as <span class="glossary-term" data-term="isin">ISIN</span>-identified securities in <span class="glossary-term" data-term="clearstream">Clearstream</span>—the world's largest international securities depository.</li>
+                <li><strong>Bankable Form:</strong> Through <span class="glossary-term" data-term="crossconversion">CrossConversion</span>, the same tokens can be locked on-chain and represented as <span class="glossary-term" data-term="isin">ISIN</span>-identified securities in <span class="glossary-term" data-term="clearstream">Clearstream</span> - the world's largest international securities depository.</li>
             </ul>
             <p>Investors choose their form. They can switch between forms at any time. The asset is identical. Only the custody model changes.</p>
             <h3>The Legal Wrapper</h3>
-            <p>Every offering on Sails.to is issued through a <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO LLC</span> with a <span class="glossary-term" data-term="series-llc">Series LLC</span> structure. Each offering is its own series—legally isolated from every other offering on the platform.</p>
+            <p>Every offering on Sails.to is issued through a <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO LLC</span> with a <span class="glossary-term" data-term="series-llc">Series LLC</span> structure. Each offering is its own series - legally isolated from every other offering on the platform.</p>
             <ul>
                 <li>Series A has legal trouble? Series B is untouched.</li>
                 <li>One registered agent. One annual filing. Unlimited series.</li>
                 <li>Smart contracts recognized as part of the operating agreement under Wyoming law.</li>
             </ul>
             <h3>SPL Token-2022 with Compliance Hooks</h3>
-            <p>Our tokens use Solana's SPL Token-2022 standard, which supports transfer hooks—custom logic that executes on every token transfer. Our hooks enforce:</p>
+            <p>Our tokens use Solana's SPL Token-2022 standard, which supports transfer hooks - custom logic that executes on every token transfer. Our hooks enforce:</p>
             <ul>
                 <li><strong>KYC verification:</strong> Both sender and receiver must hold a valid <span class="glossary-term" data-term="kyc">KYC</span> Credential NFT.</li>
                 <li><strong>Accreditation checks:</strong> Investor classification matches the offering's regulatory exemption.</li>
@@ -89,7 +89,7 @@ ogtype: "article"
                 <li><strong>Investor count limits:</strong> <span class="glossary-term" data-term="reg-d">Reg D 506(b)</span> offerings enforce the 35 non-accredited investor limit.</li>
             </ul>
             <div class="highlight-box">
-                <p><strong>Compliance is not optional—it is physical.</strong> An unauthorized transfer does not fail a compliance check after the fact. It cannot execute at all. The smart contract rejects it at the instruction level. This is not a policy. It is mathematics.</p>
+                <p><strong>Compliance is not optional - it is physical.</strong> An unauthorized transfer does not fail a compliance check after the fact. It cannot execute at all. The smart contract rejects it at the instruction level. This is not a policy. It is mathematics.</p>
             </div>
         </section>
         <section id="token-lifecycle" class="guide-section">
@@ -99,7 +99,7 @@ ogtype: "article"
                 <div class="step-number">1</div>
                 <div class="step-content">
                     <h4>init_offering</h4>
-                    <p>The issuer initializes the offering on-chain. This creates a Program Derived Address (PDA) linking the token to its Series LLC, sets the maximum supply, nominal value per token, and configures the compliance parameters—allowed jurisdictions, minimum investment, lock-up period, and regulatory exemption type.</p>
+                    <p>The issuer initializes the offering on-chain. This creates a Program Derived Address (PDA) linking the token to its Series LLC, sets the maximum supply, nominal value per token, and configures the compliance parameters - allowed jurisdictions, minimum investment, lock-up period, and regulatory exemption type.</p>
                 </div>
             </div>
             <div class="step-card">
@@ -113,7 +113,7 @@ ogtype: "article"
                 <div class="step-number">3</div>
                 <div class="step-content">
                     <h4>distribute</h4>
-                    <p>Revenue enters the distribution smart contract. The waterfall executes automatically: senior debt holders first, then pro-rata investor distributions based on token holdings, then platform fees, then excess to treasury. Every token holder receives their share in stablecoin—no ACH, no wire delays, no reconciliation.</p>
+                    <p>Revenue enters the distribution smart contract. The waterfall executes automatically: senior debt holders first, then pro-rata investor distributions based on token holdings, then platform fees, then excess to treasury. Every token holder receives their share in stablecoin - no ACH, no wire delays, no reconciliation.</p>
                 </div>
             </div>
             <div class="step-card">
@@ -127,7 +127,7 @@ ogtype: "article"
                 <div class="step-number">5</div>
                 <div class="step-content">
                     <h4>burn_for_crossconversion</h4>
-                    <p>When an investor wants to move from on-chain to bankable form, tokens are locked in the CrossConversion lockbox PDA. This emits a <code>CrossConversionRequested</code> event that triggers the off-chain process: ISIN issuance and Clearstream account crediting. The tokens are not destroyed—they are locked, maintaining the 1:1 invariant between locked tokens and outstanding ISINs.</p>
+                    <p>When an investor wants to move from on-chain to bankable form, tokens are locked in the CrossConversion lockbox PDA. This emits a <code>CrossConversionRequested</code> event that triggers the off-chain process: ISIN issuance and Clearstream account crediting. The tokens are not destroyed - they are locked, maintaining the 1:1 invariant between locked tokens and outstanding ISINs.</p>
                 </div>
             </div>
             <div class="info-box">
@@ -141,9 +141,9 @@ ogtype: "article"
             <h3>Equity</h3>
             <p>Ownership stakes in companies, funds, or projects. Tokens represent membership interests in the Series LLC, carrying pro-rata economic and governance rights. Ideal for startups, growth companies, and venture-style investments.</p>
             <h3>Debt</h3>
-            <p>Fixed-income instruments—bonds, notes, revenue-sharing agreements. Tokens carry a stated coupon or interest rate with automated distribution payments. The smart contract enforces the payment waterfall: senior tranches first, subordinated after.</p>
+            <p>Fixed-income instruments - bonds, notes, revenue-sharing agreements. Tokens carry a stated coupon or interest rate with automated distribution payments. The smart contract enforces the payment waterfall: senior tranches first, subordinated after.</p>
             <h3>Fund Shares</h3>
-            <p>Interests in investment funds—real estate funds, venture funds, hedge funds. Tokenization solves the historic illiquidity problem of alternative fund shares. NAV calculations can be published on-chain. Distributions flow automatically.</p>
+            <p>Interests in investment funds - real estate funds, venture funds, hedge funds. Tokenization solves the historic illiquidity problem of alternative fund shares. NAV calculations can be published on-chain. Distributions flow automatically.</p>
             <h3>Real Estate</h3>
             <p>Direct property ownership or real estate fund interests. Each property or portfolio is its own Series LLC, providing clean legal isolation. Rental income distributions are automated. Fractional ownership makes institutional-quality real estate accessible at $150K minimums.</p>
             <div class="requirement-box">

@@ -4,7 +4,7 @@ cascade:
 title: "Documentation"
 type: "page"
 layout: "knowledge-docs-index"
-description: "Technical documentation for Sails.to platform — architecture overview, API reference, token standards, compliance framework, and integration guides."
+description: "Technical documentation for Sails.to platform - architecture overview, API reference, token standards, compliance framework, and integration guides."
 stylesheets:
   - "/css/main.css"
   - "/css/pages/glossary.css"

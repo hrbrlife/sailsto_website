@@ -39,6 +39,6 @@ sitemap:
 <section class="term-section">
     <h2>Why It Matters</h2>
     <p>Sails.to <a href="/knowledge/glossary/crosssecurities/">CrossSecurities</a> can be listed for <a href="/knowledge/glossary/secondary-trading/">secondary trading</a> on the Vienna MTF, providing institutional investors with access to compliant, regulated trading venues.</p>
-    <p>This complements the on-chain trading available through <a href="/knowledge/glossary/solana/">Solana</a>: retail and crypto-native investors can trade 24/7 on-chain, while institutional investors requiring regulated venue execution can use the MTF. The securities remain the same—only the trading venue differs.</p>
+    <p>This complements the on-chain trading available through <a href="/knowledge/glossary/solana/">Solana</a>: retail and crypto-native investors can trade 24/7 on-chain, while institutional investors requiring regulated venue execution can use the MTF. The securities remain the same - only the trading venue differs.</p>
     <p>Vienna MTF integration demonstrates Sails.to's commitment to building securities that work in both blockchain and traditional finance ecosystems.</p>
 </section>

@@ -37,6 +37,6 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>Reg D 506(c) is the workhorse of compliant token offerings in the US. It allows you to market publicly—essential for blockchain projects—but requires verifying that every investor is <a href="/knowledge/glossary/accredited-investor/">accredited</a>.</p>
+    <p>Reg D 506(c) is the workhorse of compliant token offerings in the US. It allows you to market publicly - essential for blockchain projects - but requires verifying that every investor is <a href="/knowledge/glossary/accredited-investor/">accredited</a>.</p>
     <p>Sails.to structures all US-facing offerings under 506(c), combined with <a href="/knowledge/glossary/reg-s/">Reg S</a> for international investors. This dual structure lets issuers market globally while maintaining full SEC compliance.</p>
 </section>

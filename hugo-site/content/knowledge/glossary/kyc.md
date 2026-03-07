@@ -37,6 +37,6 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>KYC is the first line of defense against financial crime and regulatory violations. On Sails.to, our KYC process verifies that investors meet the eligibility requirements for each offering—whether that's <a href="/knowledge/glossary/accredited-investor/">accredited investor</a> status under US regulations or <a href="/knowledge/glossary/professional-investor/">professional investor</a> classification under EU rules.</p>
+    <p>KYC is the first line of defense against financial crime and regulatory violations. On Sails.to, our KYC process verifies that investors meet the eligibility requirements for each offering - whether that's <a href="/knowledge/glossary/accredited-investor/">accredited investor</a> status under US regulations or <a href="/knowledge/glossary/professional-investor/">professional investor</a> classification under EU rules.</p>
     <p>Our KYC data is stored securely and can be reused across multiple investments, so investors only need to verify once. Combined with <a href="/knowledge/glossary/aml/">AML screening</a>, this creates a compliant foundation for all platform activities.</p>
 </section>

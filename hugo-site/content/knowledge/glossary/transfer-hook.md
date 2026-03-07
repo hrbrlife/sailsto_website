@@ -36,13 +36,13 @@ sitemap:
 
 <section class="term-section">
     <h2>Full Definition</h2>
-    <p>A <strong>Transfer Hook</strong> is a <a href="/knowledge/glossary/solana/">Solana</a> SPL-2022 token extension that injects custom program logic into every token transfer. When a transfer instruction is executed, the Solana runtime automatically invokes the hook program <em>before</em> the transfer completes. If the hook rejects the transfer, the entire transaction fails atomically. There is no way to bypass it — the hook is embedded in the token mint itself.</p>
+    <p>A <strong>Transfer Hook</strong> is a <a href="/knowledge/glossary/solana/">Solana</a> SPL-2022 token extension that injects custom program logic into every token transfer. When a transfer instruction is executed, the Solana runtime automatically invokes the hook program <em>before</em> the transfer completes. If the hook rejects the transfer, the entire transaction fails atomically. There is no way to bypass it - the hook is embedded in the token mint itself.</p>
     <p>In Sails.to, the transfer hook is the enforcement arm of the <a href="/knowledge/glossary/compliance/">compliance</a> system. Every transfer of a <a href="/knowledge/glossary/crosssecurities/">CrossSecurity</a> token passes through the hook, which performs a battery of checks before allowing the transfer to proceed.</p>
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>Security tokens without enforceable transfer restrictions are just tokens with a label. Anyone can claim their token is "compliant" — but if a non-<a href="/knowledge/glossary/kyc/">KYC</a>'d wallet can receive it, if a sanctioned jurisdiction can hold it, if a lock-up period can be circumvented by a simple peer-to-peer transfer, then compliance is a fiction.</p>
-    <p>The transfer hook makes compliance a fact. It is not a middleware that can be routed around. It is not an API that can be skipped. It is baked into the <a href="/knowledge/glossary/solana/">Solana</a> runtime's transfer logic. Every transfer — whether initiated from a dApp, a CLI, a DEX, or a direct RPC call — must pass through the hook. The rules are inescapable.</p>
+    <p>Security tokens without enforceable transfer restrictions are just tokens with a label. Anyone can claim their token is "compliant" - but if a non-<a href="/knowledge/glossary/kyc/">KYC</a>'d wallet can receive it, if a sanctioned jurisdiction can hold it, if a lock-up period can be circumvented by a simple peer-to-peer transfer, then compliance is a fiction.</p>
+    <p>The transfer hook makes compliance a fact. It is not a middleware that can be routed around. It is not an API that can be skipped. It is baked into the <a href="/knowledge/glossary/solana/">Solana</a> runtime's transfer logic. Every transfer - whether initiated from a dApp, a CLI, a DEX, or a direct RPC call - must pass through the hook. The rules are inescapable.</p>
 </section>
 <section class="term-section">
     <h2>How It Works</h2>

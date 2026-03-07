@@ -44,5 +44,5 @@ sitemap:
         <li>Equivalent <a href="/knowledge/glossary/clearstream/">Clearstream</a>-held securities are transferred from the CrossConversion Series to their brokerage account</li>
     </ol>
     <p>The reverse happens when crossing back to on-chain. The CrossConversion Series always holds the "opposite format" of whatever investors hold, ensuring 1:1 backing at all times.</p>
-    <p>This legal architecture provides institutional confidence in the conversion mechanism—it's not just software, it's a proper securities structure with auditable custody.</p>
+    <p>This legal architecture provides institutional confidence in the conversion mechanism - it's not just software, it's a proper securities structure with auditable custody.</p>
 </section>

@@ -1,6 +1,6 @@
 ---
 title: "Sails.to"
-description: "Issue Sails CrossSecurities — bonds, shares, and RWA tokens that investors can hold on-chain or via traditional bank custody, and cross between forms at will."
+description: "Issue Sails CrossSecurities - bonds, shares, and RWA tokens that investors can hold on-chain or via traditional bank custody, and cross between forms at will."
 keywords:
 - CrossSecurities
 - capital raising

@@ -39,5 +39,5 @@ sitemap:
 <section class="term-section">
     <h2>Why It Matters</h2>
     <p>Clearstream is the gold standard for institutional custody. When your security tokens can be held in Clearstream, they're accessible to virtually every institutional investor, private bank, and wealth manager in the world.</p>
-    <p>This is Sails.to's secret weapon: by bridging to <a href="/knowledge/glossary/isin/">ISIN</a> format and settling through Clearstream, we give blockchain-native assets the same credibility and accessibility as traditional securities. No new custody arrangements needed—your tokens fit into existing workflows.</p>
+    <p>This is Sails.to's secret weapon: by bridging to <a href="/knowledge/glossary/isin/">ISIN</a> format and settling through Clearstream, we give blockchain-native assets the same credibility and accessibility as traditional securities. No new custody arrangements needed - your tokens fit into existing workflows.</p>
 </section>

@@ -1,13 +1,13 @@
 ---
 title: "Cap Table API - Documentation"
-description: "The cap table on Sails.to is the live state of InvestorPosition PDAs on Solana — always current, always verifiable, always immutable."
+description: "The cap table on Sails.to is the live state of InvestorPosition PDAs on Solana - always current, always verifiable, always immutable."
 ogImage: "/og-image.png"
 keywords: ["cap table", "InvestorPosition", "OfferingState", "PDA", "ownership", "snapshot", "audit", "CrossConversion", "access control"]
 stylesheets:
   - "/css/main.css"
   - "/css/pages/glossary.css"
   - "/css/pages/docs.css"
-heroDesc: "The cap table is not a spreadsheet — it's the live state of on-chain PDAs, read and exposed by the Offering Grain."
+heroDesc: "The cap table is not a spreadsheet - it's the live state of on-chain PDAs, read and exposed by the Offering Grain."
 draft: false
 date: "2026-02-24"
 lastmod: "2026-02-24"
@@ -18,10 +18,10 @@ ogtype: "article"
 ---
 <h2>Overview</h2>
         <p>The cap table on Sails.to is not a spreadsheet. It is the live state of the <span class="glossary-term" data-term="pda">InvestorPosition PDAs</span> on <a href="/knowledge/glossary/solana/">Solana</a>. There is no separate database of ownership records, no CSV export that becomes stale the moment it is generated, no reconciliation step between "the cap table" and "the ledger." They are the same thing. The blockchain <em>is</em> the cap table.</p>
-        <p>The <span class="glossary-term" data-term="offering">Offering</span> <span class="glossary-term" data-term="grain">Grain</span> reads this <span class="glossary-term" data-term="on-chain">on-chain</span> state and exposes it through the <code>getCapTable</code> method on its <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> OfferingAPI interface. Every query returns the current state of the ledger — not a cached copy, not a periodic sync, but the actual on-chain data at the moment of the request. When a token is minted, transferred, locked in a <span class="glossary-term" data-term="crossconversion">CrossConversion</span> lockbox, or frozen by a compliance action, the cap table reflects that change immediately because the cap table <em>is</em> that change.</p>
+        <p>The <span class="glossary-term" data-term="offering">Offering</span> <span class="glossary-term" data-term="grain">Grain</span> reads this <span class="glossary-term" data-term="on-chain">on-chain</span> state and exposes it through the <code>getCapTable</code> method on its <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> OfferingAPI interface. Every query returns the current state of the ledger - not a cached copy, not a periodic sync, but the actual on-chain data at the moment of the request. When a token is minted, transferred, locked in a <span class="glossary-term" data-term="crossconversion">CrossConversion</span> lockbox, or frozen by a compliance action, the cap table reflects that change immediately because the cap table <em>is</em> that change.</p>
         <p>This design eliminates an entire class of operational risk that plagues traditional cap table management: the drift between what the spreadsheet says and what actually happened. On Sails.to, ownership is on-chain, queries are against on-chain state, and every position is independently verifiable by anyone with a <a href="/knowledge/glossary/solana/">Solana</a> RPC endpoint.</p>
         <h2>InvestorPosition PDA</h2>
-        <p>Every investor's position in an offering is stored as a <span class="glossary-term" data-term="pda">Program Derived Address</span> — a deterministic on-chain account seeded from the offering ID and the investor's wallet address. The <code>InvestorPosition</code> PDA is the atomic unit of the cap table. One PDA per investor per offering, created when the investor first subscribes and updated with every subsequent event that affects their position.</p>
+        <p>Every investor's position in an offering is stored as a <span class="glossary-term" data-term="pda">Program Derived Address</span> - a deterministic on-chain account seeded from the offering ID and the investor's wallet address. The <code>InvestorPosition</code> PDA is the atomic unit of the cap table. One PDA per investor per offering, created when the investor first subscribes and updated with every subsequent event that affects their position.</p>
         <pre><code>InvestorPosition PDA
 Seeds: ["investor_position", offering_id, wallet]
 ├── offering_id: Pubkey        // The offering this position belongs to
@@ -32,7 +32,7 @@ Seeds: ["investor_position", offering_id, wallet]
 ├── jurisdiction: String       // Two-letter country code (ISO 3166-1)
 ├── position_index: u32        // Sequential index for distribution bitmap
 └── created_at: i64            // Timestamp of initial subscription</code></pre>
-        <p>The PDA address is deterministic — given an offering ID and a wallet address, anyone can derive the PDA address and read the investor's position directly from the blockchain without going through the platform API. This is the verifiability guarantee: an investor can independently confirm their ownership using any <a href="/knowledge/glossary/solana/">Solana</a> explorer or RPC client.</p>
+        <p>The PDA address is deterministic - given an offering ID and a wallet address, anyone can derive the PDA address and read the investor's position directly from the blockchain without going through the platform API. This is the verifiability guarantee: an investor can independently confirm their ownership using any <a href="/knowledge/glossary/solana/">Solana</a> explorer or RPC client.</p>
         <h3>Key Fields</h3>
         <table>
             <thead>
@@ -56,7 +56,7 @@ Seeds: ["investor_position", offering_id, wallet]
                 <tr>
                     <td><strong><code>balance</code></strong></td>
                     <td><code>u64</code></td>
-                    <td>Current token balance. This includes tokens locked in the <span class="glossary-term" data-term="crossconversion">CrossConversion</span> lockbox — locked tokens still count toward ownership, only the custody rail changes.</td>
+                    <td>Current token balance. This includes tokens locked in the <span class="glossary-term" data-term="crossconversion">CrossConversion</span> lockbox - locked tokens still count toward ownership, only the custody rail changes.</td>
                 </tr>
                 <tr>
                     <td><strong><code>locked_until</code></strong></td>
@@ -75,9 +75,9 @@ Seeds: ["investor_position", offering_id, wallet]
                 </tr>
             </tbody>
         </table>
-        <p>The <code>position_index</code> field deserves special attention. It is assigned sequentially when the investor first subscribes and never changes — even if the investor sells all tokens and later reacquires them. This index maps the investor to a specific bit in the <code>claimed_bitmap</code> of <a href="/knowledge/docs/distributions-api/">DistributionRecord</a> PDAs, enabling efficient tracking of which investors have claimed their <span class="glossary-term" data-term="distributions">distributions</span> for each epoch.</p>
+        <p>The <code>position_index</code> field deserves special attention. It is assigned sequentially when the investor first subscribes and never changes - even if the investor sells all tokens and later reacquires them. This index maps the investor to a specific bit in the <code>claimed_bitmap</code> of <a href="/knowledge/docs/distributions-api/">DistributionRecord</a> PDAs, enabling efficient tracking of which investors have claimed their <span class="glossary-term" data-term="distributions">distributions</span> for each epoch.</p>
         <h2>OfferingState PDA</h2>
-        <p>While <code>InvestorPosition</code> PDAs represent individual holdings, the <code>OfferingState</code> PDA provides the aggregate view of an offering — the total picture of supply, ownership, and status. There is exactly one <code>OfferingState</code> PDA per offering, created when the offering is initialized by the <span class="glossary-term" data-term="offering">Issuer</span>.</p>
+        <p>While <code>InvestorPosition</code> PDAs represent individual holdings, the <code>OfferingState</code> PDA provides the aggregate view of an offering - the total picture of supply, ownership, and status. There is exactly one <code>OfferingState</code> PDA per offering, created when the offering is initialized by the <span class="glossary-term" data-term="offering">Issuer</span>.</p>
         <pre><code>OfferingState PDA
 Seeds: ["offering_state", series_id]
 ├── series_id: Text            // The Series identifier within the DAO LLC
@@ -103,7 +103,7 @@ Seeds: ["offering_state", series_id]
                 <tr>
                     <td><strong><code>series_id</code></strong></td>
                     <td><code>Text</code></td>
-                    <td>The Series identifier within the Wyoming DAO Series LLC. Each offering maps 1:1 to a Series — the legal entity wrapper for the asset.</td>
+                    <td>The Series identifier within the Wyoming DAO Series LLC. Each offering maps 1:1 to a Series - the legal entity wrapper for the asset.</td>
                 </tr>
                 <tr>
                     <td><strong><code>max_supply</code></strong></td>
@@ -118,7 +118,7 @@ Seeds: ["offering_state", series_id]
                 <tr>
                     <td><strong><code>locked_in_crossconv</code></strong></td>
                     <td><code>u64</code></td>
-                    <td>Tokens currently locked in the <span class="glossary-term" data-term="crossconversion">CrossConversion</span> lockbox. These tokens are still part of the total supply and still count toward their holders' ownership — only the custody rail has changed from on-chain to <span class="glossary-term" data-term="bankable">bankable</span> via <span class="glossary-term" data-term="clearstream">Clearstream</span>.</td>
+                    <td>Tokens currently locked in the <span class="glossary-term" data-term="crossconversion">CrossConversion</span> lockbox. These tokens are still part of the total supply and still count toward their holders' ownership - only the custody rail has changed from on-chain to <span class="glossary-term" data-term="bankable">bankable</span> via <span class="glossary-term" data-term="clearstream">Clearstream</span>.</td>
                 </tr>
                 <tr>
                     <td><strong><code>nominal_value</code></strong></td>
@@ -132,9 +132,9 @@ Seeds: ["offering_state", series_id]
                 </tr>
             </tbody>
         </table>
-        <p>The supply invariant <code>minted == sum(all InvestorPosition.balance)</code> is enforced at the program level. Every mint instruction increments <code>minted</code> and creates or updates the corresponding <code>InvestorPosition</code>. Every burn decrements both. There is no way for the aggregate to drift from the sum of individual positions — the smart contract makes it structurally impossible.</p>
+        <p>The supply invariant <code>minted == sum(all InvestorPosition.balance)</code> is enforced at the program level. Every mint instruction increments <code>minted</code> and creates or updates the corresponding <code>InvestorPosition</code>. Every burn decrements both. There is no way for the aggregate to drift from the sum of individual positions - the smart contract makes it structurally impossible.</p>
         <h2>Cap Table Endpoints</h2>
-        <p>The Cap Table API is exposed through the platform's API gateway at <code>api.sails.to</code>. Authentication uses <a href="/knowledge/docs/authentication/">Solana wallet signature + NFT verification</a>. All endpoints return JSON. The data returned is read directly from <span class="glossary-term" data-term="on-chain">on-chain</span> state — there is no intermediate database or cache layer between the API and the blockchain.</p>
+        <p>The Cap Table API is exposed through the platform's API gateway at <code>api.sails.to</code>. Authentication uses <a href="/knowledge/docs/authentication/">Solana wallet signature + NFT verification</a>. All endpoints return JSON. The data returned is read directly from <span class="glossary-term" data-term="on-chain">on-chain</span> state - there is no intermediate database or cache layer between the API and the blockchain.</p>
         <h3>REST Endpoints</h3>
         <table>
             <thead>
@@ -150,7 +150,7 @@ Seeds: ["offering_state", series_id]
                     <td><code>/v1/offerings/:id/cap-table</code></td>
                     <td><code>GET</code></td>
                     <td>Issuer NFT or <span class="glossary-term" data-term="trustee">Trustee</span> NFT</td>
-                    <td>Returns the full cap table for the offering — every <code>InvestorPosition</code> PDA associated with the offering ID. Includes wallet address, balance, lock-up status, accreditation tier, jurisdiction, and CrossConversion status. Supports pagination via <code>?page=</code> and <code>?per_page=</code> query parameters.</td>
+                    <td>Returns the full cap table for the offering - every <code>InvestorPosition</code> PDA associated with the offering ID. Includes wallet address, balance, lock-up status, accreditation tier, jurisdiction, and CrossConversion status. Supports pagination via <code>?page=</code> and <code>?per_page=</code> query parameters.</td>
                 </tr>
                 <tr>
                     <td><code>/v1/offerings/:id/cap-table/summary</code></td>
@@ -183,7 +183,7 @@ interface OfferingAPI {
   # locked_until, accreditation_tier, jurisdiction, position_index.
   # Data is read directly from on-chain PDAs at the time of the call.
 }</code></pre>
-        <p>The <code>getCapTable</code> method returns a <code>List(InvestorPosition)</code> — the same data structure as the REST endpoint, but delivered through the Powerbox capability system. The calling grain must hold a valid capability for the Offering Grain: an <code>OfferingAPI</code> capability (for Issuers and Brokers) or a <code>TrusteeView</code> capability (for Trustees). Investor Grains hold <code>InvestorView</code> capabilities, which only expose their own position — not the full cap table.</p>
+        <p>The <code>getCapTable</code> method returns a <code>List(InvestorPosition)</code> - the same data structure as the REST endpoint, but delivered through the Powerbox capability system. The calling grain must hold a valid capability for the Offering Grain: an <code>OfferingAPI</code> capability (for Issuers and Brokers) or a <code>TrusteeView</code> capability (for Trustees). Investor Grains hold <code>InvestorView</code> capabilities, which only expose their own position - not the full cap table.</p>
         <h3>Response Format</h3>
         <pre><code>GET /v1/offerings/:id/cap-table
 
@@ -224,10 +224,10 @@ interface OfferingAPI {
   ]
 }</code></pre>
         <h2 id="cap-table-snapshots">Cap Table Snapshots</h2>
-        <p>A cap table snapshot is a point-in-time record of all ownership positions for an offering, pulled directly from on-chain state. Snapshots are immutable — once created, they cannot be modified, because they reference a specific <a href="/knowledge/glossary/solana/">Solana</a> slot number. Anyone can independently verify a snapshot by reading the same PDAs at the same slot using an archival RPC node.</p>
+        <p>A cap table snapshot is a point-in-time record of all ownership positions for an offering, pulled directly from on-chain state. Snapshots are immutable - once created, they cannot be modified, because they reference a specific <a href="/knowledge/glossary/solana/">Solana</a> slot number. Anyone can independently verify a snapshot by reading the same PDAs at the same slot using an archival RPC node.</p>
         <p>Snapshots serve three primary purposes:</p>
         <ul>
-            <li><strong>Audit compliance:</strong> Auditors require a frozen view of ownership at specific dates — quarter-end, year-end, or the date of a specific event. Snapshots provide this without requiring the auditor to interact with the live ledger.</li>
+            <li><strong>Audit compliance:</strong> Auditors require a frozen view of ownership at specific dates - quarter-end, year-end, or the date of a specific event. Snapshots provide this without requiring the auditor to interact with the live ledger.</li>
             <li><strong>Tax season:</strong> K-1 generation requires ownership percentages at each <span class="glossary-term" data-term="distributions">distribution</span> epoch. The Compliance <span class="glossary-term" data-term="grain">Grain</span> uses cap table snapshots to determine each investor's pro-rata share for tax reporting.</li>
             <li><strong>Regulatory filings:</strong> <span class="glossary-term" data-term="reg-d">Reg D</span> and Reg S filings require accurate investor counts and ownership breakdowns by jurisdiction and accreditation tier. Snapshots provide this data in an exportable, verifiable format.</li>
         </ul>
@@ -264,9 +264,9 @@ interface OfferingAPI {
             </tbody>
         </table>
         <h3>Snapshot vs. Live Cap Table</h3>
-        <p>The live cap table (via <code>GET /v1/offerings/:id/cap-table</code>) always returns the current state. A snapshot freezes the state at a specific moment. Both read from the same on-chain data — the difference is that a snapshot records the Solana slot number and preserves the data for historical reference. The live cap table is what you query to see who owns what <em>right now</em>. A snapshot is what you hand to an auditor to show who owned what <em>on a specific date</em>.</p>
+        <p>The live cap table (via <code>GET /v1/offerings/:id/cap-table</code>) always returns the current state. A snapshot freezes the state at a specific moment. Both read from the same on-chain data - the difference is that a snapshot records the Solana slot number and preserves the data for historical reference. The live cap table is what you query to see who owns what <em>right now</em>. A snapshot is what you hand to an auditor to show who owned what <em>on a specific date</em>.</p>
         <h2>CrossConversion Impact</h2>
-        <p>When an investor converts their on-chain tokens to <span class="glossary-term" data-term="bankable">bankable</span> securities via <span class="glossary-term" data-term="crossconversion">CrossConversion</span>, the cap table reflects a change in custody — not a change in ownership. The tokens are locked in the CrossConversion lockbox <span class="glossary-term" data-term="pda">PDA</span>, and the investor receives an equivalent position in <span class="glossary-term" data-term="clearstream">Clearstream</span> identified by the offering's <span class="glossary-term" data-term="isin">ISIN</span> code. But the investor's <code>InvestorPosition</code> PDA still reflects their full balance — locked tokens are included.</p>
+        <p>When an investor converts their on-chain tokens to <span class="glossary-term" data-term="bankable">bankable</span> securities via <span class="glossary-term" data-term="crossconversion">CrossConversion</span>, the cap table reflects a change in custody - not a change in ownership. The tokens are locked in the CrossConversion lockbox <span class="glossary-term" data-term="pda">PDA</span>, and the investor receives an equivalent position in <span class="glossary-term" data-term="clearstream">Clearstream</span> identified by the offering's <span class="glossary-term" data-term="isin">ISIN</span> code. But the investor's <code>InvestorPosition</code> PDA still reflects their full balance - locked tokens are included.</p>
         <h3>How the Cap Table Handles CrossConversion</h3>
         <table>
             <thead>
@@ -312,7 +312,7 @@ interface OfferingAPI {
         <p>The cap table provides a unified view regardless of format. An investor who has converted 100% of their tokens to <span class="glossary-term" data-term="bankable">bankable</span> securities still appears on the cap table with their full balance. The <code>crossconversion_status</code> field in the API response breaks down how many tokens are held on-chain versus locked in the <span class="glossary-term" data-term="crossconversion">CrossConversion</span> lockbox, but the total ownership never changes due to a CrossConversion event.</p>
         <p>The supply invariant <code>tokens_locked == isin_outstanding</code> is enforced by the <code>sails_crossconversion</code> program and verified nightly by the reconciliation engine. If the lockbox PDA state and the <span class="glossary-term" data-term="clearstream">Clearstream</span> position report ever disagree, the <span class="glossary-term" data-term="trustee">Trustee</span> is alerted immediately and further CrossConversion operations are suspended until the discrepancy is resolved.</p>
         <h2>Access Control</h2>
-        <p>Cap table access is governed by the <span class="glossary-term" data-term="nft-hierarchy">NFT role hierarchy</span>. Different participants see different slices of the cap table based on the role NFT they hold. There is no single "cap table permission" — access is granular and role-specific.</p>
+        <p>Cap table access is governed by the <span class="glossary-term" data-term="nft-hierarchy">NFT role hierarchy</span>. Different participants see different slices of the cap table based on the role NFT they hold. There is no single "cap table permission" - access is granular and role-specific.</p>
         <table>
             <thead>
                 <tr>
@@ -355,7 +355,7 @@ interface OfferingAPI {
             </tbody>
         </table>
         <h3>Powerbox Capability Scoping</h3>
-        <p>Access control is enforced at two layers. First, the REST API gateway verifies the caller's role NFT before routing the request to the Offering Grain. Second, the Offering Grain's <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> interface enforces capability-based scoping — an <code>InvestorView</code> capability physically cannot return other investors' data because the interface definition only exposes the requesting investor's position. This is not a permission check that could be bypassed; it is a structural constraint of the capability system.</p>
+        <p>Access control is enforced at two layers. First, the REST API gateway verifies the caller's role NFT before routing the request to the Offering Grain. Second, the Offering Grain's <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> interface enforces capability-based scoping - an <code>InvestorView</code> capability physically cannot return other investors' data because the interface definition only exposes the requesting investor's position. This is not a permission check that could be bypassed; it is a structural constraint of the capability system.</p>
         <pre><code>Cap Table Access Flow:
 
 Issuer NFT ──► API Gateway ──► Offering Grain
@@ -369,5 +369,5 @@ Investor Wallet ──► API Gateway ──► Investor Grain
                                    Offering Grain
                                         │
                               Own InvestorPosition only</code></pre>
-        <p>The on-chain data itself is publicly readable — anyone with a <a href="/knowledge/glossary/solana/">Solana</a> RPC endpoint can read any PDA. The access control layer governs what the <em>platform API</em> exposes, not what the blockchain stores. This is intentional: the cap table's verifiability guarantee depends on the data being publicly auditable on-chain, while the API layer provides role-appropriate views for operational use.</p>
+        <p>The on-chain data itself is publicly readable - anyone with a <a href="/knowledge/glossary/solana/">Solana</a> RPC endpoint can read any PDA. The access control layer governs what the <em>platform API</em> exposes, not what the blockchain stores. This is intentional: the cap table's verifiability guarantee depends on the data being publicly auditable on-chain, while the API layer provides role-appropriate views for operational use.</p>
     </div>

@@ -1,6 +1,6 @@
 ---
 title: "Compliance - Glossary"
-description: "Adherence to legal, regulatory, and internal requirements — automated and enforced on-chain for CrossSecurities through KYC/AML, investor eligibility."
+description: "Adherence to legal, regulatory, and internal requirements - automated and enforced on-chain for CrossSecurities through KYC/AML, investor eligibility."
 ogImage: "/og-image.png"
 keywords: ["compliance", "glossary", "adherence", "legal", "regulatory", "internal", "requirements", "automated"]
 stylesheets:
@@ -22,7 +22,7 @@ relatedTerms:
     label: "Regulation S"
   - slug: "smart-contract"
     label: "Smart Contract"
-shortDesc: "Adherence to legal, regulatory, and internal requirements — automated and enforced on-chain for CrossSecurities through KYC/AML, investor eligibility, and transfer restrictions."
+shortDesc: "Adherence to legal, regulatory, and internal requirements - automated and enforced on-chain for CrossSecurities through KYC/AML, investor eligibility, and transfer restrictions."
 ctaTitle: "Compliance built in"
 ctaText: "Focus on your raise, not regulatory paperwork."
 ctaLabel: "Learn About Compliance"
@@ -39,10 +39,10 @@ sitemap:
     <h2>Full Definition</h2>
     <p>Securities compliance encompasses all rules governing how securities can be issued, traded, and held. On Sails.to, compliance is built into the infrastructure:</p>
     <ul>
-        <li><strong>KYC/AML</strong> — Identity verification and anti-money laundering checks before any transaction</li>
-        <li><strong>Investor eligibility</strong> — On-chain verification that buyers meet accredited/professional status</li>
-        <li><strong>Transfer restrictions</strong> — Smart contracts enforce holding periods and geographic restrictions</li>
-        <li><strong>Regulatory reporting</strong> — Automated generation of required regulatory filings</li>
+        <li><strong>KYC/AML</strong> - Identity verification and anti-money laundering checks before any transaction</li>
+        <li><strong>Investor eligibility</strong> - On-chain verification that buyers meet accredited/professional status</li>
+        <li><strong>Transfer restrictions</strong> - Smart contracts enforce holding periods and geographic restrictions</li>
+        <li><strong>Regulatory reporting</strong> - Automated generation of required regulatory filings</li>
     </ul>
 </section>
 <section class="term-section">

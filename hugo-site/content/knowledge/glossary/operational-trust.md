@@ -33,7 +33,7 @@ sitemap:
 
 <section class="term-section">
     <h2>Full Definition</h2>
-    <p>An <strong>Operational Trust</strong> is a legal arrangement where a <a href="/knowledge/glossary/trustee/">trustee</a> holds and manages assets on behalf of beneficiaries (investors). Unlike simple custody, an operational trust involves active management responsibilities—the trustee may be authorized to make operational decisions, manage cash flows, and take actions to protect beneficiary interests.</p>
+    <p>An <strong>Operational Trust</strong> is a legal arrangement where a <a href="/knowledge/glossary/trustee/">trustee</a> holds and manages assets on behalf of beneficiaries (investors). Unlike simple custody, an operational trust involves active management responsibilities - the trustee may be authorized to make operational decisions, manage cash flows, and take actions to protect beneficiary interests.</p>
     <p>Operational trusts provide an additional layer of investor protection through fiduciary oversight, separate from the issuer's management team.</p>
 </section>
 <section class="term-section">

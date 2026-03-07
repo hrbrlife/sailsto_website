@@ -1,7 +1,7 @@
 ---
 title: "Investor Eligibility Guide"
 type: "guide"
-description: "Who can invest on Sails.to—investor classifications, the 10-step KYC verification process, regulatory exemptions, geographic eligibility."
+description: "Who can invest on Sails.to - investor classifications, the 10-step KYC verification process, regulatory exemptions, geographic eligibility."
 ogImage: "/og-image.png"
 keywords: ["investor eligibility", "accredited investor", "KYC", "verification", "Reg D", "Reg S", "qualified purchaser", "compliance"]
 stylesheets:
@@ -30,21 +30,21 @@ ogtype: "article"
         </nav>
         <section id="who-can-invest" class="guide-section">
             <h2>Who Can Invest?</h2>
-            <p>Sails.to offerings are private placements—regulated securities sold under specific exemptions from public registration. This means not everyone can invest. There are rules, and these rules are not suggestions. They are federal law.</p>
+            <p>Sails.to offerings are private placements - regulated securities sold under specific exemptions from public registration. This means not everyone can invest. There are rules, and these rules are not suggestions. They are federal law.</p>
             <p>The <span class="glossary-term" data-term="security-token">security tokens</span> on our platform are offered under <span class="glossary-term" data-term="reg-d">Reg D</span> (US investors) and <span class="glossary-term" data-term="reg-s">Reg S</span> (non-US investors) exemptions. Your eligibility depends on three factors:</p>
             <ul>
-                <li><strong>Your investor classification</strong> — Are you accredited, professional, or institutional?</li>
-                <li><strong>Your jurisdiction</strong> — Where do you reside and what regulations apply?</li>
-                <li><strong>Your verification status</strong> — Have you completed our KYC process and received a credential?</li>
+                <li><strong>Your investor classification</strong> - Are you accredited, professional, or institutional?</li>
+                <li><strong>Your jurisdiction</strong> - Where do you reside and what regulations apply?</li>
+                <li><strong>Your verification status</strong> - Have you completed our KYC process and received a credential?</li>
             </ul>
-            <p>No credential, no tokens. This is enforced at the smart contract level—the <code>mint_security_token</code> instruction on <span class="glossary-term" data-term="solana">Solana</span> physically cannot execute without a valid <span class="glossary-term" data-term="kyc">KYC</span> Credential NFT in your wallet.</p>
+            <p>No credential, no tokens. This is enforced at the smart contract level - the <code>mint_security_token</code> instruction on <span class="glossary-term" data-term="solana">Solana</span> physically cannot execute without a valid <span class="glossary-term" data-term="kyc">KYC</span> Credential NFT in your wallet.</p>
             <div class="highlight-box">
-                <p><strong>Why this matters:</strong> Every other platform asks you to check a box saying you're accredited. We verify it, encode it on-chain, and make it impossible for non-verified wallets to hold tokens. Compliance is not a checkbox—it is cryptographic proof.</p>
+                <p><strong>Why this matters:</strong> Every other platform asks you to check a box saying you're accredited. We verify it, encode it on-chain, and make it impossible for non-verified wallets to hold tokens. Compliance is not a checkbox - it is cryptographic proof.</p>
             </div>
         </section>
         <section id="investor-classifications" class="guide-section">
             <h2>Investor Classifications</h2>
-            <p>Our KYC Credential NFT encodes your investor classification directly on-chain. No personally identifiable information—just your verified status, jurisdiction hash, and regulatory eligibility. Here are the classifications:</p>
+            <p>Our KYC Credential NFT encodes your investor classification directly on-chain. No personally identifiable information - just your verified status, jurisdiction hash, and regulatory eligibility. Here are the classifications:</p>
             <h3>Accredited Investor (US)</h3>
             <p>The primary classification for US-based investors under SEC rules:</p>
             <ul>
@@ -56,7 +56,7 @@ ogtype: "article"
             <h3>Professional Investor (International)</h3>
             <p>For non-US investors, classification follows their home jurisdiction's equivalent standards. Common frameworks include:</p>
             <ul>
-                <li><strong>MiFID II Professional Client</strong> (EU/EEA) — Meets at least two of: 10+ transactions per quarter, portfolio >€500K, financial sector experience >1 year</li>
+                <li><strong>MiFID II Professional Client</strong> (EU/EEA) - Meets at least two of: 10+ transactions per quarter, portfolio >€500K, financial sector experience >1 year</li>
                 <li><strong>Qualified Investor</strong> (Switzerland, FINMA)</li>
                 <li><strong>Sophisticated Investor</strong> (UK FCA, Australia ASIC)</li>
                 <li><strong>Professional Investor</strong> (Hong Kong SFC, Singapore MAS)</li>
@@ -77,7 +77,7 @@ ogtype: "article"
                 <div class="step-number">1</div>
                 <div class="step-content">
                     <h4>Terms Acceptance</h4>
-                    <p>You review and accept the platform terms of service, privacy policy, and investor acknowledgements. This is not a click-through—the system requires you to scroll the full document before the acceptance checkbox activates.</p>
+                    <p>You review and accept the platform terms of service, privacy policy, and investor acknowledgements. This is not a click-through - the system requires you to scroll the full document before the acceptance checkbox activates.</p>
                 </div>
             </div>
             <div class="step-card">
@@ -91,7 +91,7 @@ ogtype: "article"
                 <div class="step-number">3</div>
                 <div class="step-content">
                     <h4>Phone Verification</h4>
-                    <p>A second OTP sent via SMS to verify your phone number. Two-factor identity anchoring—email and phone—before we collect any sensitive documents.</p>
+                    <p>A second OTP sent via SMS to verify your phone number. Two-factor identity anchoring - email and phone - before we collect any sensitive documents.</p>
                 </div>
             </div>
             <div class="step-card">
@@ -133,7 +133,7 @@ ogtype: "article"
                 <div class="step-number">9</div>
                 <div class="step-content">
                     <h4>Respondent Review</h4>
-                    <p>A human compliance officer reviews the complete file. AI handles the heavy lifting, but a trained professional makes the final call on every investor. Edge cases, risk flags, and unusual patterns get expert judgment—not just an algorithm.</p>
+                    <p>A human compliance officer reviews the complete file. AI handles the heavy lifting, but a trained professional makes the final call on every investor. Edge cases, risk flags, and unusual patterns get expert judgment - not just an algorithm.</p>
                 </div>
             </div>
             <div class="step-card">
@@ -168,7 +168,7 @@ ogtype: "article"
             </ul>
             <h3>Reg D 506(c)</h3>
             <ul>
-                <li><strong>Investors:</strong> Accredited investors only—no exceptions</li>
+                <li><strong>Investors:</strong> Accredited investors only - no exceptions</li>
                 <li><strong>Marketing:</strong> General solicitation and advertising permitted</li>
                 <li><strong>Verification:</strong> Issuer must take "reasonable steps" to verify accreditation (income/net worth documentation, CPA letter, attorney letter, or broker-dealer confirmation)</li>
                 <li><strong>Best for:</strong> Offerings seeking broad marketing reach; Sails.to's primary exemption</li>
@@ -182,12 +182,12 @@ ogtype: "article"
             </ul>
             <div class="info-box">
                 <h4>Dual-Exemption Offerings</h4>
-                <p>Most Sails.to offerings use a combined <strong>Reg D 506(c) + Reg S</strong> structure. US accredited investors participate under Reg D; international professional investors participate under Reg S. One offering, one token, two regulatory frameworks—handled seamlessly by the compliance hooks in the smart contract.</p>
+                <p>Most Sails.to offerings use a combined <strong>Reg D 506(c) + Reg S</strong> structure. US accredited investors participate under Reg D; international professional investors participate under Reg S. One offering, one token, two regulatory frameworks - handled seamlessly by the compliance hooks in the smart contract.</p>
             </div>
         </section>
         <section id="geographic-eligibility" class="guide-section">
             <h2>Geographic Eligibility</h2>
-            <p>Tokenized securities do not eliminate borders—they simply make compliance at those borders programmable. Each offering on Sails.to specifies an allowed jurisdiction whitelist, encoded in the <code>ComplianceConfig</code> PDA on Solana.</p>
+            <p>Tokenized securities do not eliminate borders - they simply make compliance at those borders programmable. Each offering on Sails.to specifies an allowed jurisdiction whitelist, encoded in the <code>ComplianceConfig</code> PDA on Solana.</p>
             <h3>Generally Eligible Jurisdictions</h3>
             <p>Most offerings accept investors from:</p>
             <ul>
@@ -233,7 +233,7 @@ ogtype: "article"
                     <li>Board resolution or authorized signatory documentation</li>
                 </ul>
             </div>
-            <p>The $150,000 minimum investment reflects the institutional character of these offerings. Sails.to is not a retail platform—it is infrastructure for serious capital allocation, built for investors who understand that compliance and custody are features, not friction.</p>
+            <p>The $150,000 minimum investment reflects the institutional character of these offerings. Sails.to is not a retail platform - it is infrastructure for serious capital allocation, built for investors who understand that compliance and custody are features, not friction.</p>
         </section>
         <div class="cta-box">
             <h3>Ready to verify?</h3>

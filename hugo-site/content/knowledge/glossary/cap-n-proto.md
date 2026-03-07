@@ -38,15 +38,15 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>When a DAO Manager grain needs to coordinate with an Offering grain, or a Broker Portal queries KYC status, every microsecond of serialization overhead is wasted time. Cap'n Proto eliminates that overhead completely. The protocol was purpose-built for capability-based systems — it doesn't just move data, it moves <em>capabilities</em>. A Cap'n Proto RPC call can pass live references to objects across grain boundaries, which is exactly how the <a href="/knowledge/glossary/powerbox/">Powerbox</a> mechanism delegates authority.</p>
+    <p>When a DAO Manager grain needs to coordinate with an Offering grain, or a Broker Portal queries KYC status, every microsecond of serialization overhead is wasted time. Cap'n Proto eliminates that overhead completely. The protocol was purpose-built for capability-based systems - it doesn't just move data, it moves <em>capabilities</em>. A Cap'n Proto RPC call can pass live references to objects across grain boundaries, which is exactly how the <a href="/knowledge/glossary/powerbox/">Powerbox</a> mechanism delegates authority.</p>
     <p>This is not a nice-to-have optimization. When you're running regulated financial infrastructure where compliance checks must execute on every transfer, serialization speed is a systemic constraint. Cap'n Proto removes it from the equation entirely.</p>
 </section>
 <section class="term-section">
     <h2>How It Works</h2>
     <ol>
         <li><a href="/knowledge/glossary/grain/">Grains</a> expose Cap'n Proto interfaces defined in .capnp schema files</li>
-        <li>When Grain A calls Grain B, the request is written directly to FD3 — no HTTP, no REST, no encoding step</li>
-        <li>Grain B reads the request as a native in-memory data structure — zero deserialization</li>
+        <li>When Grain A calls Grain B, the request is written directly to FD3 - no HTTP, no REST, no encoding step</li>
+        <li>Grain B reads the request as a native in-memory data structure - zero deserialization</li>
         <li>Capability references (sturdyRefs) can be embedded in messages, enabling the <a href="/knowledge/glossary/powerbox/">Powerbox</a> to pass live object references between grains</li>
         <li>Responses flow back on the same channel with the same zero-copy guarantee</li>
     </ol>

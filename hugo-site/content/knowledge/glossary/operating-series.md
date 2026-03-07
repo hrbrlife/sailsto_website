@@ -34,7 +34,7 @@ sitemap:
 <section class="term-section">
     <h2>Full Definition</h2>
     <p>An <strong>Operating Series</strong> is one type of compartment within a <a href="/knowledge/glossary/series-llc/">Series LLC</a> structure. Each Operating Series functions as a legally distinct entity that holds the assets, liabilities, and contractual relationships for a specific project or investment.</p>
-    <p>The Operating Series is where the actual business activity occurs—it holds the real estate, makes the loans, owns the revenue-generating assets, or conducts whatever activity the offering is designed to fund.</p>
+    <p>The Operating Series is where the actual business activity occurs - it holds the real estate, makes the loans, owns the revenue-generating assets, or conducts whatever activity the offering is designed to fund.</p>
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>

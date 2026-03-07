@@ -1,6 +1,6 @@
 ---
 title: "Private Placement - Glossary"
-description: "Sale of securities directly to qualified investors without public offering registration — the primary method for issuing CrossSecurities on Sails.to."
+description: "Sale of securities directly to qualified investors without public offering registration - the primary method for issuing CrossSecurities on Sails.to."
 ogImage: "/og-image.png"
 keywords: ["private", "placement", "glossary", "sale", "securities", "directly", "qualified", "investors"]
 stylesheets:
@@ -41,6 +41,6 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>Private placement enables companies to raise capital efficiently without the expense and regulatory burden of public offerings. For investors, it provides access to opportunities not available on public markets — often with higher yields and more favorable terms.</p>
+    <p>Private placement enables companies to raise capital efficiently without the expense and regulatory burden of public offerings. For investors, it provides access to opportunities not available on public markets - often with higher yields and more favorable terms.</p>
     <p>The tradeoff is restricted liquidity and investor qualification requirements. Sails.to addresses the liquidity issue through our multi-broker OTC network for secondary trading.</p>
 </section>

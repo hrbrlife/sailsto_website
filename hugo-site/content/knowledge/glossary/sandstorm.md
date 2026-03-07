@@ -41,6 +41,6 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>Sandstorm gives Sails.to true application isolation without containers or VMs. Each <a href="/knowledge/glossary/grain/">grain</a> is a security boundary — compromise one, and the rest remain unaffected. This is not a policy enforced by configuration; it is a structural property of the runtime.</p>
+    <p>Sandstorm gives Sails.to true application isolation without containers or VMs. Each <a href="/knowledge/glossary/grain/">grain</a> is a security boundary - compromise one, and the rest remain unaffected. This is not a policy enforced by configuration; it is a structural property of the runtime.</p>
     <p>For regulated financial infrastructure, this isolation model is critical. Every investor's data, every offering's state, every compliance workflow runs in its own sandbox. Auditors can verify that access boundaries are enforced by architecture, not by access control lists that can be misconfigured or overridden.</p>
 </section>

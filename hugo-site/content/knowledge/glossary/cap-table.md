@@ -38,5 +38,5 @@ sitemap:
 <section class="term-section">
     <h2>Why It Matters</h2>
     <p>Cap table chaos kills deals. When a company gets acquired or goes public, lawyers spend weeks reconciling spreadsheet versions. Errors in cap tables have derailed M&A deals worth hundreds of millions of dollars.</p>
-    <p>On Sails.to, your cap table IS the blockchain. Every transfer, every <a href="/knowledge/glossary/distributions/">distribution</a>, every ownership change is recorded automatically in the <a href="/knowledge/glossary/smart-contract/">smart contract</a>. When it's time for due diligence, there's nothing to reconcile—the blockchain is the authoritative record.</p>
+    <p>On Sails.to, your cap table IS the blockchain. Every transfer, every <a href="/knowledge/glossary/distributions/">distribution</a>, every ownership change is recorded automatically in the <a href="/knowledge/glossary/smart-contract/">smart contract</a>. When it's time for due diligence, there's nothing to reconcile - the blockchain is the authoritative record.</p>
 </section>

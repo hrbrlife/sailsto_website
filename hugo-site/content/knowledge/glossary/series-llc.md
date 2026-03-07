@@ -37,6 +37,6 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>The Series LLC is the backbone of Sails.to's offering structure. When you launch a token offering, it doesn't create a whole new company—it creates a new series under our <a href="/knowledge/glossary/wyoming-dao-llc/">Wyoming DAO LLC</a>.</p>
-    <p>This means: One filing, one registered agent, one operating agreement—but complete liability isolation. If one offering fails, it doesn't affect others. Investors in Series A have no claim on Series B assets, and vice versa. It's the efficiency of shared infrastructure with the protection of separate entities.</p>
+    <p>The Series LLC is the backbone of Sails.to's offering structure. When you launch a token offering, it doesn't create a whole new company - it creates a new series under our <a href="/knowledge/glossary/wyoming-dao-llc/">Wyoming DAO LLC</a>.</p>
+    <p>This means: One filing, one registered agent, one operating agreement - but complete liability isolation. If one offering fails, it doesn't affect others. Investors in Series A have no claim on Series B assets, and vice versa. It's the efficiency of shared infrastructure with the protection of separate entities.</p>
 </section>

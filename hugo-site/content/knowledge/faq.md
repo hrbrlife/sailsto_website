@@ -47,7 +47,7 @@ faqItems:
     answer: "Revenue enters the Operating Series and flows through a priority waterfall enforced on-chain: (1) Senior debt holders first, (2) Investor distributions pro-rata by token holding, (3) Platform fee of 1%, (4) Excess to Treasury Series. Investors always get paid before the platform."
     category: "for-investors"
   - question: "What is Cap'n Proto and why do you use it?"
-    answer: "Cap'n Proto is a zero-copy serialization protocol used for inter-grain RPC communication. Unlike JSON or Protocol Buffers, it requires no encoding or decoding step—data is read directly from the wire format. This enables native Sandstorm integration on FD3 without an HTTP bridge, giving maximum performance for capability-based security."
+    answer: "Cap'n Proto is a zero-copy serialization protocol used for inter-grain RPC communication. Unlike JSON or Protocol Buffers, it requires no encoding or decoding step - data is read directly from the wire format. This enables native Sandstorm integration on FD3 without an HTTP bridge, giving maximum performance for capability-based security."
     category: "technical"
 stylesheets:
   - "/css/main.css"

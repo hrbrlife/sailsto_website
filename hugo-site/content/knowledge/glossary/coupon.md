@@ -38,5 +38,5 @@ sitemap:
 <section class="term-section">
     <h2>Why It Matters</h2>
     <p>On Sails.to, bond offerings clearly display the coupon rate so investors can calculate expected returns. Higher coupons typically indicate higher risk or less favorable terms for the issuer. The coupon, combined with <a href="/knowledge/glossary/maturity/">maturity</a> and current price, determines a bond's yield.</p>
-    <p>For <a href="/knowledge/glossary/crosssecurities/">CrossSecurities</a> bonds, coupons are paid to token holders regardless of whether they hold in on-chain or bankable form—<a href="/knowledge/glossary/distributions/">distributions</a> flow through automatically.</p>
+    <p>For <a href="/knowledge/glossary/crosssecurities/">CrossSecurities</a> bonds, coupons are paid to token holders regardless of whether they hold in on-chain or bankable form - <a href="/knowledge/glossary/distributions/">distributions</a> flow through automatically.</p>
 </section>

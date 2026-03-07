@@ -39,5 +39,5 @@ sitemap:
 <section class="term-section">
     <h2>Why It Matters</h2>
     <p>On Sails.to, <a href="/knowledge/glossary/secondary-trading/">secondary trading</a> combines the benefits of OTC flexibility with blockchain transparency. Token holders can trade peer-to-peer on <a href="/knowledge/glossary/solana/">Solana</a> with <a href="/knowledge/glossary/atomic-settlement/">atomic settlement</a>, while larger institutional trades can be facilitated through regulated <a href="/knowledge/glossary/vienna-mtf/">MTF</a> venues.</p>
-    <p>The on-chain settlement layer eliminates traditional OTC risks like counterparty default and settlement delays—trades either complete fully and instantly, or they don't happen at all.</p>
+    <p>The on-chain settlement layer eliminates traditional OTC risks like counterparty default and settlement delays - trades either complete fully and instantly, or they don't happen at all.</p>
 </section>

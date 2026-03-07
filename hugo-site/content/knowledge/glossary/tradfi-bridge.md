@@ -1,6 +1,6 @@
 ---
 title: "TradFi Bridge (CrossConversion) - Glossary"
-description: "Also known as CrossConversion — Sails.to's mechanism for converting on-chain CrossSecurities to bankable ISIN securities that can be held in conventional."
+description: "Also known as CrossConversion - Sails.to's mechanism for converting on-chain CrossSecurities to bankable ISIN securities that can be held in conventional."
 ogImage: "/og-image.png"
 keywords: ["tradfi", "bridge", "crossconversion", "glossary", "known", "sails", "mechanism", "converting"]
 stylesheets:
@@ -25,7 +25,7 @@ relatedTerms:
     label: "Solana"
   - slug: "custody"
     label: "Custody"
-shortDesc: "Also known as <a href=\"/knowledge/glossary/crossconversion/\">CrossConversion</a> — Sails.to's mechanism for converting on-chain CrossSecurities to bankable ISIN securities."
+shortDesc: "Also known as <a href=\"/knowledge/glossary/crossconversion/\">CrossConversion</a> - Sails.to's mechanism for converting on-chain CrossSecurities to bankable ISIN securities."
 ctaTitle: "Cross between worlds"
 ctaText: "On-chain innovation meets bankable infrastructure."
 ctaLabel: "Start Investing"
@@ -45,5 +45,5 @@ sitemap:
 <section class="term-section">
     <h2>Why It Matters</h2>
     <p>CrossConversion (formerly TradFi Bridge) is what makes <a href="/knowledge/glossary/crosssecurities/">Sails CrossSecurities</a> different from every other security token platform. Most platforms force you to choose: on-chain OR bankable. CrossSecurities let you have both.</p>
-    <p>Start with on-chain <a href="/knowledge/glossary/solana/">Solana</a> tokens for cheap transfers and 24/7 trading. When you need institutional credibility or want to use your existing broker, CrossConvert to bankable <a href="/knowledge/glossary/isin/">ISIN</a> format and settle through <a href="/knowledge/glossary/clearstream/">Clearstream</a>. Same CrossSecurity, same ownership rights, different rails. The conversion takes about a week and costs around $4K—a small price for bankable legitimacy.</p>
+    <p>Start with on-chain <a href="/knowledge/glossary/solana/">Solana</a> tokens for cheap transfers and 24/7 trading. When you need institutional credibility or want to use your existing broker, CrossConvert to bankable <a href="/knowledge/glossary/isin/">ISIN</a> format and settle through <a href="/knowledge/glossary/clearstream/">Clearstream</a>. Same CrossSecurity, same ownership rights, different rails. The conversion takes about a week and costs around $4K - a small price for bankable legitimacy.</p>
 </section>

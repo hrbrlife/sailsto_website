@@ -36,6 +36,6 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>Reg S is what makes Sails.to truly global. While US investors must be <a href="/knowledge/glossary/accredited-investor/">accredited</a> and verified under <a href="/knowledge/glossary/reg-d/">Reg D 506(c)</a>, international investors can participate under Reg S—often with simpler <a href="/knowledge/glossary/professional-investor/">professional investor</a> requirements.</p>
+    <p>Reg S is what makes Sails.to truly global. While US investors must be <a href="/knowledge/glossary/accredited-investor/">accredited</a> and verified under <a href="/knowledge/glossary/reg-d/">Reg D 506(c)</a>, international investors can participate under Reg S - often with simpler <a href="/knowledge/glossary/professional-investor/">professional investor</a> requirements.</p>
     <p>The combination of Reg D + Reg S is the gold standard for compliant global fundraising. One offering, two regulatory frameworks, worldwide reach.</p>
 </section>

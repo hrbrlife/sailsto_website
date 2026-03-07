@@ -41,6 +41,6 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>The offering is the fundamental unit of the platform. It's where securities are created, investors participate, and distributions flow. Because each offering is an isolated grain, there is no cross-contamination between fundraises — an issue in one offering cannot affect another.</p>
+    <p>The offering is the fundamental unit of the platform. It's where securities are created, investors participate, and distributions flow. Because each offering is an isolated grain, there is no cross-contamination between fundraises - an issue in one offering cannot affect another.</p>
     <p>For issuers, this means a turnkey capital raise with built-in compliance, tokenization, and investor management. For investors, it means a clear, auditable record of their participation from subscription through distribution. The <a href="/knowledge/glossary/series-llc/">Series LLC</a> structure provides legal isolation that mirrors the technical isolation of the grain architecture.</p>
 </section>

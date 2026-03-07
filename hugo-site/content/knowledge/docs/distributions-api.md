@@ -1,13 +1,13 @@
 ---
 title: "Distributions API - Documentation"
-description: "The sails_distributions program — waterfall-based revenue distribution, investor claiming, reconciliation with Clearstream."
+description: "The sails_distributions program - waterfall-based revenue distribution, investor claiming, reconciliation with Clearstream."
 ogImage: "/og-image.png"
 keywords: ["distributions", "waterfall", "revenue", "investor payout", "claiming", "reconciliation"]
 stylesheets:
   - "/css/main.css"
   - "/css/pages/glossary.css"
   - "/css/pages/docs.css"
-heroDesc: "Waterfall-based revenue distribution — from revenue receipt to investor payout, enforced on-chain."
+heroDesc: "Waterfall-based revenue distribution - from revenue receipt to investor payout, enforced on-chain."
 draft: false
 date: "2026-02-24"
 lastmod: "2026-02-24"
@@ -17,10 +17,10 @@ sitemap:
 ogtype: "article"
 ---
 <h2>Overview</h2>
-        <p><span class="glossary-term" data-term="distributions">Distributions</span> on Sails.to are <span class="glossary-term" data-term="waterfall">waterfall</span>-based and enforced <span class="glossary-term" data-term="on-chain">on-chain</span>. The <code>sails_distributions</code> program is a dedicated <a href="/knowledge/glossary/solana/">Solana</a> Anchor program that handles everything from revenue receipt to investor payout. It is separate from the <code>sails_securities</code> token program — distributions are a first-class concern with their own instruction set, account structures, and authorization model.</p>
+        <p><span class="glossary-term" data-term="distributions">Distributions</span> on Sails.to are <span class="glossary-term" data-term="waterfall">waterfall</span>-based and enforced <span class="glossary-term" data-term="on-chain">on-chain</span>. The <code>sails_distributions</code> program is a dedicated <a href="/knowledge/glossary/solana/">Solana</a> Anchor program that handles everything from revenue receipt to investor payout. It is separate from the <code>sails_securities</code> token program - distributions are a first-class concern with their own instruction set, account structures, and authorization model.</p>
         <p>The design principle is simple: investors get paid before the platform. Revenue flows through a priority structure defined at offering creation, and every step is recorded on-chain. There are no off-chain side agreements, no manual overrides, no way to redirect funds outside the waterfall without <span class="glossary-term" data-term="trustee">Trustee</span> authentication. The <span class="glossary-term" data-term="paying-agent">Paying Agent</span> executes the waterfall; the Trustee authenticates it; the blockchain enforces it.</p>
         <h2>The Waterfall Model</h2>
-        <p>Every offering on Sails.to defines a waterfall — a priority structure that determines the order in which revenue is distributed. The waterfall is configured when the offering is initialized via the <code>init_waterfall</code> instruction and cannot be modified after investors have committed capital.</p>
+        <p>Every offering on Sails.to defines a waterfall - a priority structure that determines the order in which revenue is distributed. The waterfall is configured when the offering is initialized via the <code>init_waterfall</code> instruction and cannot be modified after investors have committed capital.</p>
         <p>The waterfall executes in strict priority order. Each tranche must be fully satisfied before the next tranche receives any funds:</p>
         <table>
             <thead>
@@ -34,17 +34,17 @@ ogtype: "article"
                 <tr>
                     <td><strong>1</strong></td>
                     <td>Senior Debt Holders</td>
-                    <td>If the offering has a senior debt component, these holders are paid first — fixed interest or coupon payments as defined in the offering terms. This tranche is optional and only present for structured offerings.</td>
+                    <td>If the offering has a senior debt component, these holders are paid first - fixed interest or coupon payments as defined in the offering terms. This tranche is optional and only present for structured offerings.</td>
                 </tr>
                 <tr>
                     <td><strong>2</strong></td>
                     <td>Investor Distributions</td>
-                    <td>Pro-rata distribution to all <span class="glossary-term" data-term="security-token">security token</span> holders based on their token balance at the epoch snapshot. This is the core payout — every investor receives their proportional share of remaining revenue.</td>
+                    <td>Pro-rata distribution to all <span class="glossary-term" data-term="security-token">security token</span> holders based on their token balance at the epoch snapshot. This is the core payout - every investor receives their proportional share of remaining revenue.</td>
                 </tr>
                 <tr>
                     <td><strong>3</strong></td>
                     <td>Platform Fee</td>
-                    <td>1% <span class="glossary-term" data-term="distribution-fee">distribution fee</span> to the platform. This is taken <em>after</em> investors are paid — the platform never takes its fee before investors receive their distributions.</td>
+                    <td>1% <span class="glossary-term" data-term="distribution-fee">distribution fee</span> to the platform. This is taken <em>after</em> investors are paid - the platform never takes its fee before investors receive their distributions.</td>
                 </tr>
                 <tr>
                     <td><strong>4</strong></td>
@@ -53,9 +53,9 @@ ogtype: "article"
                 </tr>
             </tbody>
         </table>
-        <p>The investor-first design is non-negotiable. The platform fee sits at priority 3 — below investor distributions. If revenue in a given epoch is insufficient to fully satisfy the investor tranche, the platform receives zero fees for that epoch. This alignment of incentives is encoded in the smart contract, not in a terms-of-service document.</p>
+        <p>The investor-first design is non-negotiable. The platform fee sits at priority 3 - below investor distributions. If revenue in a given epoch is insufficient to fully satisfy the investor tranche, the platform receives zero fees for that epoch. This alignment of incentives is encoded in the smart contract, not in a terms-of-service document.</p>
         <h2>Program Instructions</h2>
-        <p>The <code>sails_distributions</code> program exposes five instructions. Each instruction enforces role-based authorization via the <span class="glossary-term" data-term="nft-hierarchy">NFT</span> hierarchy — you cannot call these instructions without holding the correct role NFT:</p>
+        <p>The <code>sails_distributions</code> program exposes five instructions. Each instruction enforces role-based authorization via the <span class="glossary-term" data-term="nft-hierarchy">NFT</span> hierarchy - you cannot call these instructions without holding the correct role NFT:</p>
         <table>
             <thead>
                 <tr>
@@ -82,13 +82,13 @@ ogtype: "article"
                     <td><strong><code>execute_waterfall</code></strong></td>
                     <td><code>offering_id</code></td>
                     <td>Paying Agent NFT + <span class="glossary-term" data-term="trustee">Trustee</span> authentication</td>
-                    <td>Executes the waterfall for the current epoch. Takes a snapshot of all token holder balances, calculates the pro-rata allocation per token, satisfies each tranche in priority order, and creates a <code>DistributionRecord</code> PDA. Emits a <code>DistributionPaid</code> event. Requires dual authorization — the Paying Agent initiates, the Trustee authenticates.</td>
+                    <td>Executes the waterfall for the current epoch. Takes a snapshot of all token holder balances, calculates the pro-rata allocation per token, satisfies each tranche in priority order, and creates a <code>DistributionRecord</code> PDA. Emits a <code>DistributionPaid</code> event. Requires dual authorization - the Paying Agent initiates, the Trustee authenticates.</td>
                 </tr>
                 <tr>
                     <td><strong><code>claim_distribution</code></strong></td>
                     <td><code>offering_id, epoch</code></td>
                     <td>Investor wallet signature</td>
-                    <td>Investor pulls their allocation for a specific epoch. Reads the <code>DistributionRecord</code> to determine the <code>amount_per_token</code>, multiplies by the investor's token balance at the epoch snapshot, transfers the funds to the investor's wallet, and sets the investor's bit in the <code>claimed_bitmap</code>. Idempotent — calling twice for the same epoch has no effect.</td>
+                    <td>Investor pulls their allocation for a specific epoch. Reads the <code>DistributionRecord</code> to determine the <code>amount_per_token</code>, multiplies by the investor's token balance at the epoch snapshot, transfers the funds to the investor's wallet, and sets the investor's bit in the <code>claimed_bitmap</code>. Idempotent - calling twice for the same epoch has no effect.</td>
                 </tr>
                 <tr>
                     <td><strong><code>reconcile</code></strong></td>
@@ -101,12 +101,12 @@ ogtype: "article"
         <h3>Authorization Flow</h3>
         <p>The dual-authorization model for <code>execute_waterfall</code> deserves emphasis. This is not a single-signer operation:</p>
         <ol>
-            <li><strong>Paying Agent initiates</strong> — The Paying Agent (appointed by the Trustee, holding a Paying Agent role NFT) submits the <code>execute_waterfall</code> instruction with the offering ID.</li>
-            <li><strong>Trustee authenticates</strong> — The Trustee (holding a Trustee role NFT) co-signs the transaction. The program verifies both NFTs before executing. For standard distributions, this is a <span class="glossary-term" data-term="threshold-signing">1-of-1 Trustee NFT</span> signature. For large distributions exceeding a configurable threshold, a 2-of-3 keyholder ceremony is required.</li>
-            <li><strong>On-chain execution</strong> — The program snapshots token balances, runs the waterfall calculation, creates the <code>DistributionRecord</code>, and emits the <code>DistributionPaid</code> event. Funds are placed in escrow for investor claiming.</li>
+            <li><strong>Paying Agent initiates</strong> - The Paying Agent (appointed by the Trustee, holding a Paying Agent role NFT) submits the <code>execute_waterfall</code> instruction with the offering ID.</li>
+            <li><strong>Trustee authenticates</strong> - The Trustee (holding a Trustee role NFT) co-signs the transaction. The program verifies both NFTs before executing. For standard distributions, this is a <span class="glossary-term" data-term="threshold-signing">1-of-1 Trustee NFT</span> signature. For large distributions exceeding a configurable threshold, a 2-of-3 keyholder ceremony is required.</li>
+            <li><strong>On-chain execution</strong> - The program snapshots token balances, runs the waterfall calculation, creates the <code>DistributionRecord</code>, and emits the <code>DistributionPaid</code> event. Funds are placed in escrow for investor claiming.</li>
         </ol>
         <h2>Distribution Records</h2>
-        <p>Every executed waterfall creates a <code>DistributionRecord</code> — a <span class="glossary-term" data-term="pda">Program Derived Address</span> that stores the complete state of a single distribution epoch:</p>
+        <p>Every executed waterfall creates a <code>DistributionRecord</code> - a <span class="glossary-term" data-term="pda">Program Derived Address</span> that stores the complete state of a single distribution epoch:</p>
         <pre><code>DistributionRecord PDA
 Seeds: ["distribution", offering_id, epoch]
 ├── offering_id: Pubkey        // The offering this distribution belongs to
@@ -121,11 +121,11 @@ Seeds: ["distribution", offering_id, epoch]
         <h3>The Claimed Bitmap</h3>
         <p>The <code>claimed_bitmap</code> is a compact bit array where each bit corresponds to an investor position index. When an investor calls <code>claim_distribution</code>, the program sets their bit to 1. This design has three advantages:</p>
         <ul>
-            <li><strong>Space efficiency:</strong> A single byte tracks 8 investors. An offering with 2,000 investors requires only 250 bytes for the bitmap — far cheaper than creating a separate PDA per investor per epoch.</li>
+            <li><strong>Space efficiency:</strong> A single byte tracks 8 investors. An offering with 2,000 investors requires only 250 bytes for the bitmap - far cheaper than creating a separate PDA per investor per epoch.</li>
             <li><strong>Idempotency:</strong> The program checks the bitmap before transferring funds. If the investor's bit is already set, the instruction returns success without transferring anything. Double-claiming is impossible.</li>
             <li><strong>Audit visibility:</strong> Anyone can read the bitmap to see exactly which investors have claimed and which have not. Unclaimed distributions are immediately visible to the Paying Agent and Trustee for follow-up.</li>
         </ul>
-        <p>Investor position indices are assigned sequentially when tokens are first minted to a wallet. The mapping from wallet address to position index is stored in the <code>InvestorPosition</code> PDA and does not change — even if the investor transfers all their tokens and later reacquires them, they retain their original index.</p>
+        <p>Investor position indices are assigned sequentially when tokens are first minted to a wallet. The mapping from wallet address to position index is stored in the <code>InvestorPosition</code> PDA and does not change - even if the investor transfers all their tokens and later reacquires them, they retain their original index.</p>
         <h2>Claiming Distributions</h2>
         <p>Distributions on Sails.to use a <strong>pull-based</strong> model. The <code>execute_waterfall</code> instruction calculates allocations and records them on-chain, but it does not push funds to investors. Instead, each investor calls <code>claim_distribution</code> to pull their allocation when they are ready.</p>
         <h3>On-Chain Holders</h3>
@@ -135,7 +135,7 @@ Seeds: ["distribution", offering_id, epoch]
             <li>The program reads the <code>DistributionRecord</code> for the specified epoch and retrieves the <code>amount_per_token</code> value.</li>
             <li>The program reads the investor's <code>InvestorPosition</code> PDA to determine their token balance at the <code>snapshot_slot</code>.</li>
             <li>The program calculates the payout: <code>amount_per_token × investor_balance</code>.</li>
-            <li>The program checks the <code>claimed_bitmap</code> — if the investor's bit is already set, the instruction returns without transferring funds.</li>
+            <li>The program checks the <code>claimed_bitmap</code> - if the investor's bit is already set, the instruction returns without transferring funds.</li>
             <li>The program transfers the calculated amount from the distribution escrow to the investor's wallet, sets the bitmap bit, and emits a claim event.</li>
         </ol>
         <h3>Bankable / Clearstream Holders</h3>
@@ -146,7 +146,7 @@ Seeds: ["distribution", offering_id, epoch]
             <li>Clearstream settles the distribution to each investor's custodial account according to its standard settlement cycle.</li>
             <li>The <code>reconcile</code> instruction is then used to verify that the on-chain and bankable distributions match.</li>
         </ul>
-        <p>This dual-track claiming model is what makes <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> work — the same offering can pay both on-chain and traditional finance investors from a single waterfall execution.</p>
+        <p>This dual-track claiming model is what makes <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> work - the same offering can pay both on-chain and traditional finance investors from a single waterfall execution.</p>
         <h2>Reconciliation</h2>
         <p>Reconciliation is the process of cross-checking on-chain distribution records with the bankable side. This is critical for offerings that have investors on both sides of the <span class="glossary-term" data-term="crossconversion">CrossConversion</span> bridge.</p>
         <h3>The Reconcile Instruction</h3>
@@ -159,7 +159,7 @@ Seeds: ["distribution", offering_id, epoch]
             <li>If a discrepancy is detected, the status is set to <code>Disputed</code>, a <code>ComplianceViolation</code> event is emitted, and the DAO Manager <span class="glossary-term" data-term="grain">Grain</span> is alerted for investigation.</li>
         </ol>
         <h3>Reconciliation Schedule</h3>
-        <p>The reconciliation engine runs on a configurable schedule — typically within 48 hours of each distribution execution. For high-frequency distributions (monthly), the nightly reconciliation job compares the on-chain lockbox state with Clearstream holdings and flags any drift. A discrepancy in the supply invariant (<code>tokens_locked == isin_outstanding</code>) triggers an immediate alert to the Trustee and platform operators.</p>
+        <p>The reconciliation engine runs on a configurable schedule - typically within 48 hours of each distribution execution. For high-frequency distributions (monthly), the nightly reconciliation job compares the on-chain lockbox state with Clearstream holdings and flags any drift. A discrepancy in the supply invariant (<code>tokens_locked == isin_outstanding</code>) triggers an immediate alert to the Trustee and platform operators.</p>
         <table>
             <thead>
                 <tr>
@@ -182,7 +182,7 @@ Seeds: ["distribution", offering_id, epoch]
                 <tr>
                     <td><strong>Full Audit</strong></td>
                     <td>Quarterly</td>
-                    <td>Comprehensive reconciliation across all offerings, all epochs, all investors — generates the formal audit report</td>
+                    <td>Comprehensive reconciliation across all offerings, all epochs, all investors - generates the formal audit report</td>
                 </tr>
             </tbody>
         </table>
@@ -207,7 +207,7 @@ Seeds: ["distribution", offering_id, epoch]
                 <tr>
                     <td><code>/v1/investor/distributions/:epoch/claim</code></td>
                     <td><code>POST</code></td>
-                    <td>Claims a specific distribution. Submits the <code>claim_distribution</code> instruction on behalf of the investor. Returns the transaction signature and claimed amount. Idempotent — returns success if already claimed.</td>
+                    <td>Claims a specific distribution. Submits the <code>claim_distribution</code> instruction on behalf of the investor. Returns the transaction signature and claimed amount. Idempotent - returns success if already claimed.</td>
                 </tr>
             </tbody>
         </table>
@@ -230,7 +230,7 @@ Seeds: ["distribution", offering_id, epoch]
                 <tr>
                     <td><code>/v1/offerings/:id/distributions/waterfall</code></td>
                     <td><code>GET</code></td>
-                    <td>Returns the waterfall configuration for the offering — tranche priorities, allocation rules, and current escrow balance.</td>
+                    <td>Returns the waterfall configuration for the offering - tranche priorities, allocation rules, and current escrow balance.</td>
                 </tr>
                 <tr>
                     <td><code>/v1/offerings/:id/distributions/unclaimed</code></td>
@@ -277,5 +277,5 @@ Seeds: ["distribution", offering_id, epoch]
                 </tr>
             </tbody>
         </table>
-        <p>The frequency setting determines when the Paying Agent is expected to execute the waterfall, but it does not enforce timing at the program level — the <code>execute_waterfall</code> instruction can be called at any time, subject to the dual-authorization requirement. The frequency is a business-logic convention, not a smart contract constraint.</p>
+        <p>The frequency setting determines when the Paying Agent is expected to execute the waterfall, but it does not enforce timing at the program level - the <code>execute_waterfall</code> instruction can be called at any time, subject to the dual-authorization requirement. The frequency is a business-logic convention, not a smart contract constraint.</p>
     </div>

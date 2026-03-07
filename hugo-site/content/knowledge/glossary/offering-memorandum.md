@@ -1,6 +1,6 @@
 ---
 title: "Offering Memorandum - Glossary"
-description: "Legal document detailing investment terms, risks, use of proceeds, and issuer information — required for all CrossSecurities offerings on Sails.to."
+description: "Legal document detailing investment terms, risks, use of proceeds, and issuer information - required for all CrossSecurities offerings on Sails.to."
 ogImage: "/og-image.png"
 keywords: ["offering", "memorandum", "glossary", "legal", "document", "detailing", "investment", "terms"]
 stylesheets:
@@ -36,11 +36,11 @@ sitemap:
     <h2>Full Definition</h2>
     <p>An offering memorandum (OM), also called a private placement memorandum (PPM), is the disclosure document provided to potential investors in a private placement. It contains:</p>
     <ul>
-        <li><strong>Investment Terms</strong> — Amount sought, security type, coupon/dividend rates, maturity</li>
-        <li><strong>Risk Factors</strong> — Comprehensive disclosure of what could go wrong</li>
-        <li><strong>Use of Proceeds</strong> — How raised capital will be deployed</li>
-        <li><strong>Issuer Information</strong> — Business description, management, financials</li>
-        <li><strong>Legal Terms</strong> — Investor rights, restrictions, governing law</li>
+        <li><strong>Investment Terms</strong> - Amount sought, security type, coupon/dividend rates, maturity</li>
+        <li><strong>Risk Factors</strong> - Comprehensive disclosure of what could go wrong</li>
+        <li><strong>Use of Proceeds</strong> - How raised capital will be deployed</li>
+        <li><strong>Issuer Information</strong> - Business description, management, financials</li>
+        <li><strong>Legal Terms</strong> - Investor rights, restrictions, governing law</li>
     </ul>
 </section>
 <section class="term-section">

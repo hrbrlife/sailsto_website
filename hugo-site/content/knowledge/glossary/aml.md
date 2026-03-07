@@ -36,6 +36,6 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>AML compliance isn't optional—it's a legal requirement for any platform dealing with financial transactions. On Sails.to, our AML procedures work alongside <a href="/knowledge/glossary/kyc/">KYC verification</a> to ensure the platform isn't used for illicit purposes.</p>
+    <p>AML compliance isn't optional - it's a legal requirement for any platform dealing with financial transactions. On Sails.to, our AML procedures work alongside <a href="/knowledge/glossary/kyc/">KYC verification</a> to ensure the platform isn't used for illicit purposes.</p>
     <p>Our automated screening checks every user against global sanctions lists and politically exposed persons (PEP) databases. Combined with transaction monitoring built into our <a href="/knowledge/glossary/smart-contract/">smart contracts</a>, this creates a comprehensive compliance framework.</p>
 </section>

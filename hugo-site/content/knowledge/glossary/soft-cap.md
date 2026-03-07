@@ -38,6 +38,6 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>On Sails.to, tokens are minted upfront and distributed to investors at subscription — but during the soft cap phase, they function as non-transferable zero-coupon bonds with funds held in escrow. This protects investors: if the soft cap isn't reached, the security redeems at par and the full principal is returned. Once the soft cap is reached, the token's permissions upgrade to a full, transferable security and the offering continues accepting investments up to the <a href="/knowledge/glossary/hard-cap/">hard cap</a>.</p>
+    <p>On Sails.to, tokens are minted upfront and distributed to investors at subscription - but during the soft cap phase, they function as non-transferable zero-coupon bonds with funds held in escrow. This protects investors: if the soft cap isn't reached, the security redeems at par and the full principal is returned. Once the soft cap is reached, the token's permissions upgrade to a full, transferable security and the offering continues accepting investments up to the <a href="/knowledge/glossary/hard-cap/">hard cap</a>.</p>
     <p>For issuers, setting an appropriate soft cap signals confidence and ensures you only proceed when you have the resources to deliver on your commitments.</p>
 </section>

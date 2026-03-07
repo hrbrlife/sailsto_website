@@ -1,7 +1,7 @@
 ---
 title: "Getting Started with Sails.to"
 type: "guide"
-description: "Step-by-step guide to getting started on Sails.to—for issuers launching tokenized offerings, investors accessing opportunities."
+description: "Step-by-step guide to getting started on Sails.to - for issuers launching tokenized offerings, investors accessing opportunities."
 ogImage: "/og-image.png"
 keywords: ["getting", "started", "sails", "step-by-step", "guide", "issuers", "launching", "tokenized"]
 stylesheets:
@@ -145,7 +145,7 @@ ogtype: "article"
                 <div class="step-number">6</div>
                 <div class="step-content">
                     <h4>Receive Tokens & Distributions</h4>
-                    <p>Tokens arrive in your chosen custody. <span class="glossary-term" data-term="distributions">Distributions</span> are automated—stablecoin to wallet or cash via custodian.</p>
+                    <p>Tokens arrive in your chosen custody. <span class="glossary-term" data-term="distributions">Distributions</span> are automated - stablecoin to wallet or cash via custodian.</p>
                 </div>
             </div>
             <div class="requirement-box">
@@ -236,9 +236,9 @@ ogtype: "article"
             <h2>Getting Help</h2>
             <h3>Self-Service Resources</h3>
             <ul>
-                <li><a href="/knowledge/faq/">FAQ</a> — Answers to common questions</li>
-                <li><a href="/knowledge/glossary/">Glossary</a> — Key terms explained</li>
-                <li><a href="/knowledge/docs/">Documentation</a> — Technical guides and API reference</li>
+                <li><a href="/knowledge/faq/">FAQ</a> - Answers to common questions</li>
+                <li><a href="/knowledge/glossary/">Glossary</a> - Key terms explained</li>
+                <li><a href="/knowledge/docs/">Documentation</a> - Technical guides and API reference</li>
             </ul>
             <h3>Contact Support</h3>
             <ul>

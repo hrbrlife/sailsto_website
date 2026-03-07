@@ -1,6 +1,6 @@
 ---
 title: "CrossSecurities - Glossary"
-description: "Sails CrossSecurities are bonds, shares, or RWA tokens that can be held on-chain (Solana) or via traditional bank/brokerage custody (ISIN-bearing) — and."
+description: "Sails CrossSecurities are bonds, shares, or RWA tokens that can be held on-chain (Solana) or via traditional bank/brokerage custody (ISIN-bearing) - and."
 ogImage: "/og-image.png"
 keywords: ["crosssecurities", "glossary", "sails", "bonds", "shares", "rwa", "tokens", "held"]
 stylesheets:
@@ -23,7 +23,7 @@ relatedTerms:
   - slug: "custody"
     label: "Custody"
 termTitle: "Sails CrossSecurities"
-shortDesc: "Securities that can be held on-chain or via traditional bank/brokerage custody — and crossed from one form to another at will."
+shortDesc: "Securities that can be held on-chain or via traditional bank/brokerage custody - and crossed from one form to another at will."
 ctaTitle: "Securities that cross the line"
 ctaText: "Hold on-chain or through your bank. Cross between forms at will."
 ctaLabel: "Get Started"
@@ -43,12 +43,12 @@ sitemap:
         <li><strong>On-chain</strong>: As Solana tokens with 24/7 trading, instant settlement, and self-custody capabilities</li>
         <li><strong>Bankable</strong>: As ISIN-bearing securities held through traditional bank/brokerage custody via Clearstream</li>
     </ul>
-    <p>The defining feature of CrossSecurities is <strong>format portability</strong>: holders can cross between on-chain and bankable forms at any time through the <a href="/knowledge/glossary/crossconversion/">CrossConversion</a> process. The underlying security remains the same — same rights, same ownership, same legal standing — only the custody rails change.</p>
+    <p>The defining feature of CrossSecurities is <strong>format portability</strong>: holders can cross between on-chain and bankable forms at any time through the <a href="/knowledge/glossary/crossconversion/">CrossConversion</a> process. The underlying security remains the same - same rights, same ownership, same legal standing - only the custody rails change.</p>
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
     <p>Traditional tokenization platforms force a choice: blockchain-native tokens (inaccessible to institutional investors) OR traditional securities (missing blockchain benefits). CrossSecurities eliminate this trade-off.</p>
-    <p><strong>For Investors:</strong> Start with on-chain tokens for cheap transfers and 24/7 liquidity. When your compliance requires traditional custody, cross to bankable ISIN format — your position appears in your regular brokerage account. Cross back when it makes sense.</p>
+    <p><strong>For Investors:</strong> Start with on-chain tokens for cheap transfers and 24/7 liquidity. When your compliance requires traditional custody, cross to bankable ISIN format - your position appears in your regular brokerage account. Cross back when it makes sense.</p>
     <p><strong>For Issuers:</strong> One offering reaches both crypto-native and traditional investors. Unified cap table regardless of which form investors hold. No need to run parallel structures.</p>
     <p>CrossSecurities represent the evolution from "tokenized securities" to truly hybrid instruments that operate natively in both worlds.</p>
 </section>

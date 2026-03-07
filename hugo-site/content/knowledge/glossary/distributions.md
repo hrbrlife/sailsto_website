@@ -36,6 +36,6 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>Traditional dividend processing is a nightmare. Record dates, ex-dividend dates, payment delays, intermediary banks, currency conversions, tax withholding—every step adds cost and delay. A simple dividend can take weeks to reach international investors.</p>
+    <p>Traditional dividend processing is a nightmare. Record dates, ex-dividend dates, payment delays, intermediary banks, currency conversions, tax withholding - every step adds cost and delay. A simple dividend can take weeks to reach international investors.</p>
     <p>On Sails.to, distributions are instant and automatic. The <a href="/knowledge/glossary/smart-contract/">smart contract</a> reads the <a href="/knowledge/glossary/cap-table/">cap table</a>, calculates each holder's pro-rata share, and sends funds directly to their wallet. For investors holding tokens via <a href="/knowledge/glossary/isin/">ISIN</a> in <a href="/knowledge/glossary/clearstream/">Clearstream</a>, distributions are converted and settled through traditional banking rails.</p>
 </section>

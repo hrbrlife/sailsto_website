@@ -37,5 +37,5 @@ sitemap:
 <section class="term-section">
     <h2>Why It Matters</h2>
     <p>Smart contracts are what make <a href="/knowledge/glossary/security-token/">security tokens</a> more than just "stocks on blockchain." They enforce rules automatically: if someone tries to transfer tokens to a non-<a href="/knowledge/glossary/kyc/">KYC</a>'d wallet, the contract rejects it. When <a href="/knowledge/glossary/distributions/">dividends</a> are due, the contract calculates and sends them to every holder instantly.</p>
-    <p>On Sails.to, our smart contracts on <a href="/knowledge/glossary/solana/">Solana</a> handle everything from compliance checks to <a href="/knowledge/glossary/cap-table/">cap table</a> management. The rules are transparent, auditable, and execute the same way every time—no human error, no delays, no favoritism.</p>
+    <p>On Sails.to, our smart contracts on <a href="/knowledge/glossary/solana/">Solana</a> handle everything from compliance checks to <a href="/knowledge/glossary/cap-table/">cap table</a> management. The rules are transparent, auditable, and execute the same way every time - no human error, no delays, no favoritism.</p>
 </section>

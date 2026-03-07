@@ -1,13 +1,13 @@
 ---
 title: "Clearstream Integration - Documentation"
-description: "How the Clearstream Adapter connects on-chain CrossSecurities to traditional financial infrastructure — ISIN registration, settlement operations."
+description: "How the Clearstream Adapter connects on-chain CrossSecurities to traditional financial infrastructure - ISIN registration, settlement operations."
 ogImage: "/og-image.png"
 keywords: ["Clearstream", "ISIN registration", "settlement", "reconciliation", "SWIFT", "MT540", "MT542", "ISO 20022", "CrossConversion", "bankable securities"]
 stylesheets:
   - "/css/main.css"
   - "/css/pages/glossary.css"
   - "/css/pages/docs.css"
-heroDesc: "The international central securities depository that provides the bankable side of CrossSecurities — where ISIN-identified securities live in traditional finance."
+heroDesc: "The international central securities depository that provides the bankable side of CrossSecurities - where ISIN-identified securities live in traditional finance."
 draft: false
 date: "2026-02-24"
 lastmod: "2026-02-24"
@@ -17,9 +17,9 @@ sitemap:
 ogtype: "article"
 ---
 <h2>Overview</h2>
-        <p><span class="glossary-term" data-term="clearstream">Clearstream</span> is the international central securities depository (ICSD) that makes <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> hybrid. When an investor converts on-chain tokens to <span class="glossary-term" data-term="bankable">bankable</span> format via <span class="glossary-term" data-term="crossconversion">CrossConversion</span>, the resulting <span class="glossary-term" data-term="isin">ISIN</span>-identified securities are held in custody at Clearstream — visible through standard brokerage infrastructure, settleable through established financial rails, and recognizable by every institution in traditional finance.</p>
+        <p><span class="glossary-term" data-term="clearstream">Clearstream</span> is the international central securities depository (ICSD) that makes <span class="glossary-term" data-term="crosssecurities">CrossSecurities</span> hybrid. When an investor converts on-chain tokens to <span class="glossary-term" data-term="bankable">bankable</span> format via <span class="glossary-term" data-term="crossconversion">CrossConversion</span>, the resulting <span class="glossary-term" data-term="isin">ISIN</span>-identified securities are held in custody at Clearstream - visible through standard brokerage infrastructure, settleable through established financial rails, and recognizable by every institution in traditional finance.</p>
         <p>The integration is not a wrapper or an abstraction. It is a direct, bidirectional connection between the Sails.to platform and Clearstream's settlement infrastructure. Tokens locked in the on-chain lockbox have a 1:1 corresponding ISIN position at Clearstream. The <a href="/knowledge/docs/isin-conversion/">CrossConversion Engine</a> enforces this invariant. The Clearstream Adapter is the service that makes it operationally real.</p>
-        <p>Lead time for onboarding: <strong>4–8 weeks</strong> from application to production API access. This must be initiated early — Clearstream account setup and API credential provisioning cannot be parallelized with other integration work.</p>
+        <p>Lead time for onboarding: <strong>4–8 weeks</strong> from application to production API access. This must be initiated early - Clearstream account setup and API credential provisioning cannot be parallelized with other integration work.</p>
         <h2>The Clearstream Adapter</h2>
         <p>The Clearstream Adapter is a Go service that runs as a <span class="glossary-term" data-term="grain">grain</span> or sidecar within the Sandstorm/Melusina OS environment. It handles all communication between the Sails.to platform and Clearstream, translating between <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> RPC calls and the SWIFT/ISO messaging formats that Clearstream expects.</p>
         <pre><code>Service: clearstream-adapter (Go, runs as grain or sidecar)
@@ -73,15 +73,15 @@ ogtype: "article"
             </tbody>
         </table>
         <h2>ISIN Registration</h2>
-        <p>Before any <span class="glossary-term" data-term="crossconversion">CrossConversion</span> can occur for an offering, the security must have an <span class="glossary-term" data-term="isin">ISIN</span> — the International Securities Identification Number that makes the instrument recognizable to traditional financial infrastructure. The Clearstream Adapter manages this process end-to-end.</p>
+        <p>Before any <span class="glossary-term" data-term="crossconversion">CrossConversion</span> can occur for an offering, the security must have an <span class="glossary-term" data-term="isin">ISIN</span> - the International Securities Identification Number that makes the instrument recognizable to traditional financial infrastructure. The Clearstream Adapter manages this process end-to-end.</p>
         <h3>Registration Workflow</h3>
         <ol>
-            <li><strong>Issuer configures offering for CrossConversion</strong> — In the Offering <span class="glossary-term" data-term="grain">grain</span>, the issuer enables CrossConversion and provides the required security metadata: instrument type, nominal value, currency, maturity terms, and jurisdiction.</li>
-            <li><strong>Adapter submits ISIN application</strong> — The Clearstream Adapter packages the security metadata into a registration request and submits it to Clearstream. Cost: approximately <strong>$4,000</strong> per ISIN application.</li>
-            <li><strong>Status tracking</strong> — The adapter polls Clearstream for application status updates. Typical turnaround: approximately <strong>1 week</strong> from submission to approval. Status transitions are logged to the adapter's journal and surfaced in the Offering grain UI.</li>
-            <li><strong>ISIN assigned</strong> — Clearstream assigns the ISIN code (e.g., <code>XS1234567890</code>). The adapter receives the assignment notification.</li>
-            <li><strong>On-chain storage</strong> — The adapter writes the assigned ISIN code to the <code>OfferingState</code> <span class="glossary-term" data-term="pda">PDA</span> on <a href="/knowledge/glossary/solana/">Solana</a>, linking the on-chain offering to its Clearstream identity. This also triggers the initialization of the <code>CrossConversionLockbox</code> PDA via <code>init_lockbox</code>.</li>
-            <li><strong>CrossConversion enabled</strong> — With the ISIN registered and the lockbox initialized, the offering is ready for CrossConversion operations.</li>
+            <li><strong>Issuer configures offering for CrossConversion</strong> - In the Offering <span class="glossary-term" data-term="grain">grain</span>, the issuer enables CrossConversion and provides the required security metadata: instrument type, nominal value, currency, maturity terms, and jurisdiction.</li>
+            <li><strong>Adapter submits ISIN application</strong> - The Clearstream Adapter packages the security metadata into a registration request and submits it to Clearstream. Cost: approximately <strong>$4,000</strong> per ISIN application.</li>
+            <li><strong>Status tracking</strong> - The adapter polls Clearstream for application status updates. Typical turnaround: approximately <strong>1 week</strong> from submission to approval. Status transitions are logged to the adapter's journal and surfaced in the Offering grain UI.</li>
+            <li><strong>ISIN assigned</strong> - Clearstream assigns the ISIN code (e.g., <code>XS1234567890</code>). The adapter receives the assignment notification.</li>
+            <li><strong>On-chain storage</strong> - The adapter writes the assigned ISIN code to the <code>OfferingState</code> <span class="glossary-term" data-term="pda">PDA</span> on <a href="/knowledge/glossary/solana/">Solana</a>, linking the on-chain offering to its Clearstream identity. This also triggers the initialization of the <code>CrossConversionLockbox</code> PDA via <code>init_lockbox</code>.</li>
+            <li><strong>CrossConversion enabled</strong> - With the ISIN registered and the lockbox initialized, the offering is ready for CrossConversion operations.</li>
         </ol>
         <h3>ISIN Application Data</h3>
         <table>
@@ -135,22 +135,22 @@ ogtype: "article"
         <h3>Cross to Bankable (Credit)</h3>
         <p>When an investor requests a CrossConversion from on-chain to <span class="glossary-term" data-term="bankable">bankable</span> format:</p>
         <ol>
-            <li><strong>Tokens locked</strong> — The <code>sails_crossconversion</code> program locks the investor's tokens in the lockbox <span class="glossary-term" data-term="pda">PDA</span> and emits a <code>CrossConversionRequested</code> event.</li>
-            <li><strong>Trustee authenticates</strong> — The <span class="glossary-term" data-term="trustee">Trustee</span> reviews and signs the conversion with their Trustee NFT.</li>
-            <li><strong>Adapter generates MT540</strong> — The Clearstream Adapter constructs an MT540 (Receive Free of Payment) SWIFT message instructing Clearstream to credit the investor's securities account.</li>
-            <li><strong>Clearstream confirms</strong> — Clearstream processes the instruction and returns a settlement confirmation with reference details.</li>
-            <li><strong>Proof stored on-chain</strong> — The adapter writes the Clearstream proof-of-issuance to the lockbox PDA metadata, linking the locked tokens to the issued ISIN position.</li>
+            <li><strong>Tokens locked</strong> - The <code>sails_crossconversion</code> program locks the investor's tokens in the lockbox <span class="glossary-term" data-term="pda">PDA</span> and emits a <code>CrossConversionRequested</code> event.</li>
+            <li><strong>Trustee authenticates</strong> - The <span class="glossary-term" data-term="trustee">Trustee</span> reviews and signs the conversion with their Trustee NFT.</li>
+            <li><strong>Adapter generates MT540</strong> - The Clearstream Adapter constructs an MT540 (Receive Free of Payment) SWIFT message instructing Clearstream to credit the investor's securities account.</li>
+            <li><strong>Clearstream confirms</strong> - Clearstream processes the instruction and returns a settlement confirmation with reference details.</li>
+            <li><strong>Proof stored on-chain</strong> - The adapter writes the Clearstream proof-of-issuance to the lockbox PDA metadata, linking the locked tokens to the issued ISIN position.</li>
         </ol>
         <h3>Cross to On-Chain (Cancel)</h3>
-        <p>When an investor requests the reverse — moving their ISIN position back to on-chain tokens:</p>
+        <p>When an investor requests the reverse - moving their ISIN position back to on-chain tokens:</p>
         <ol>
-            <li><strong>Trustee authenticates</strong> — The Trustee verifies the investor holds the claimed ISIN position and that the conversion is permissible under the offering's <span class="glossary-term" data-term="compliance">compliance</span> rules.</li>
-            <li><strong>Adapter generates MT542</strong> — The Clearstream Adapter constructs an MT542 (Deliver Free of Payment) SWIFT message instructing Clearstream to cancel the investor's ISIN position.</li>
-            <li><strong>Clearstream confirms cancellation</strong> — Clearstream debits the investor's securities account and returns cryptographic proof of cancellation.</li>
-            <li><strong>Tokens unlocked</strong> — The adapter triggers <code>unlock_tokens</code> on the <code>sails_crossconversion</code> program, providing the Trustee's NFT signature and the Clearstream cancellation proof. The lockbox releases the tokens to the investor's wallet.</li>
+            <li><strong>Trustee authenticates</strong> - The Trustee verifies the investor holds the claimed ISIN position and that the conversion is permissible under the offering's <span class="glossary-term" data-term="compliance">compliance</span> rules.</li>
+            <li><strong>Adapter generates MT542</strong> - The Clearstream Adapter constructs an MT542 (Deliver Free of Payment) SWIFT message instructing Clearstream to cancel the investor's ISIN position.</li>
+            <li><strong>Clearstream confirms cancellation</strong> - Clearstream debits the investor's securities account and returns cryptographic proof of cancellation.</li>
+            <li><strong>Tokens unlocked</strong> - The adapter triggers <code>unlock_tokens</code> on the <code>sails_crossconversion</code> program, providing the Trustee's NFT signature and the Clearstream cancellation proof. The lockbox releases the tokens to the investor's wallet.</li>
         </ol>
         <h3>Corporate Actions</h3>
-        <p>ISIN-identified securities held at Clearstream are subject to corporate actions — events that affect all holders of the instrument. The Clearstream Adapter processes these automatically:</p>
+        <p>ISIN-identified securities held at Clearstream are subject to corporate actions - events that affect all holders of the instrument. The Clearstream Adapter processes these automatically:</p>
         <table>
             <thead>
                 <tr>
@@ -173,7 +173,7 @@ ogtype: "article"
                 <tr>
                     <td><strong>Maturity Events</strong></td>
                     <td>Bond maturity, fund liquidation, or offering close</td>
-                    <td>Triggers the offering close workflow — all ISIN positions must be reverse-converted before final redemption</td>
+                    <td>Triggers the offering close workflow - all ISIN positions must be reverse-converted before final redemption</td>
                 </tr>
                 <tr>
                     <td><strong>Coupon Payments</strong></td>
@@ -183,7 +183,7 @@ ogtype: "article"
             </tbody>
         </table>
         <h2>Reconciliation</h2>
-        <p>The reconciliation engine is the safety net that proves the 1:1 invariant holds across both systems — every night, automatically, without fail. The Clearstream Adapter owns the Clearstream side of this process.</p>
+        <p>The reconciliation engine is the safety net that proves the 1:1 invariant holds across both systems - every night, automatically, without fail. The Clearstream Adapter owns the Clearstream side of this process.</p>
         <pre><code>tokens_locked == isin_outstanding    // Always. No tolerance. No rounding.</code></pre>
         <h3>Two Sources of Truth</h3>
         <table>
@@ -209,21 +209,21 @@ ogtype: "article"
         </table>
         <h3>Daily Reconciliation Process</h3>
         <ol>
-            <li><strong>Pull Clearstream positions</strong> — The adapter requests the daily position report from Clearstream for all active ISINs linked to Sails offerings.</li>
-            <li><strong>Read on-chain lockbox state</strong> — For every offering with CrossConversion enabled, the adapter calls <code>get_lockbox_state</code> to retrieve the current <code>total_locked</code> value.</li>
-            <li><strong>Compare totals</strong> — For each offering: <code>tokens_locked</code> must equal <code>isin_outstanding</code>. Exact integer match. No tolerance. No rounding.</li>
-            <li><strong>Generate reconciliation report</strong> — A detailed report covering every offering, every position, every discrepancy (if any), timestamped and formatted for audit.</li>
-            <li><strong>Trustee signs the report</strong> — The appointed <span class="glossary-term" data-term="trustee">Trustee</span> reviews and signs the reconciliation report. The signature and a SHA-256 hash of the Clearstream snapshot are stored on-chain via the <code>reconcile</code> instruction.</li>
-            <li><strong>On match</strong> — The program emits a <code>ReconciliationCompleted</code> event. The <code>last_reconciliation</code> timestamp updates. Business as usual.</li>
-            <li><strong>On mismatch</strong> — The program emits a <code>ReconciliationFailed</code> event. A P0 alert fires. The affected offering's CrossConversion capability is <strong>frozen</strong> until manual resolution by the Trustee.</li>
+            <li><strong>Pull Clearstream positions</strong> - The adapter requests the daily position report from Clearstream for all active ISINs linked to Sails offerings.</li>
+            <li><strong>Read on-chain lockbox state</strong> - For every offering with CrossConversion enabled, the adapter calls <code>get_lockbox_state</code> to retrieve the current <code>total_locked</code> value.</li>
+            <li><strong>Compare totals</strong> - For each offering: <code>tokens_locked</code> must equal <code>isin_outstanding</code>. Exact integer match. No tolerance. No rounding.</li>
+            <li><strong>Generate reconciliation report</strong> - A detailed report covering every offering, every position, every discrepancy (if any), timestamped and formatted for audit.</li>
+            <li><strong>Trustee signs the report</strong> - The appointed <span class="glossary-term" data-term="trustee">Trustee</span> reviews and signs the reconciliation report. The signature and a SHA-256 hash of the Clearstream snapshot are stored on-chain via the <code>reconcile</code> instruction.</li>
+            <li><strong>On match</strong> - The program emits a <code>ReconciliationCompleted</code> event. The <code>last_reconciliation</code> timestamp updates. Business as usual.</li>
+            <li><strong>On mismatch</strong> - The program emits a <code>ReconciliationFailed</code> event. A P0 alert fires. The affected offering's CrossConversion capability is <strong>frozen</strong> until manual resolution by the Trustee.</li>
         </ol>
         <h3>Discrepancy Handling</h3>
         <p>A supply mismatch should <em>never</em> happen. The <span class="glossary-term" data-term="smart-contract">smart contract</span> enforces the invariant on every lock and unlock. But the reconciliation engine exists because defense in depth is not optional when you hold other people's securities. If a discrepancy is detected:</p>
         <ul>
-            <li><strong>Immediate freeze</strong> — All CrossConversion operations for the affected offering halt. No new locks. No new unlocks.</li>
-            <li><strong>P0 alert</strong> — The Platform Operator, Trustee, and compliance team receive immediate notification.</li>
-            <li><strong>Root cause investigation</strong> — Manual review of all transactions since the last successful reconciliation, using the adapter's append-only journal as the audit trail.</li>
-            <li><strong>Trustee-signed resolution</strong> — The Trustee must sign a resolution report before CrossConversion resumes. The resolution is stored on-chain for audit.</li>
+            <li><strong>Immediate freeze</strong> - All CrossConversion operations for the affected offering halt. No new locks. No new unlocks.</li>
+            <li><strong>P0 alert</strong> - The Platform Operator, Trustee, and compliance team receive immediate notification.</li>
+            <li><strong>Root cause investigation</strong> - Manual review of all transactions since the last successful reconciliation, using the adapter's append-only journal as the audit trail.</li>
+            <li><strong>Trustee-signed resolution</strong> - The Trustee must sign a resolution report before CrossConversion resumes. The resolution is stored on-chain for audit.</li>
         </ul>
         <h2>Communication Protocols</h2>
         <p>The Clearstream Adapter translates between the Sails.to <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> schema and the messaging formats that traditional financial infrastructure expects. All messages are validated against their respective schemas before submission.</p>
@@ -242,19 +242,19 @@ ogtype: "article"
                     <td><strong>MT540</strong></td>
                     <td>SWIFT</td>
                     <td>Cross to Bankable</td>
-                    <td>Receive Free of Payment — instructs Clearstream to credit the investor's account with ISIN-identified securities. Generated after tokens are locked and Trustee authentication is complete.</td>
+                    <td>Receive Free of Payment - instructs Clearstream to credit the investor's account with ISIN-identified securities. Generated after tokens are locked and Trustee authentication is complete.</td>
                 </tr>
                 <tr>
                     <td><strong>MT541</strong></td>
                     <td>SWIFT</td>
                     <td>Cross to Bankable</td>
-                    <td>Receive Against Payment — used when the CrossConversion involves a cash settlement component (e.g., initial subscription with fiat payment).</td>
+                    <td>Receive Against Payment - used when the CrossConversion involves a cash settlement component (e.g., initial subscription with fiat payment).</td>
                 </tr>
                 <tr>
                     <td><strong>MT542</strong></td>
                     <td>SWIFT</td>
                     <td>Cross to On-Chain</td>
-                    <td>Deliver Free of Payment — instructs Clearstream to cancel the investor's ISIN position. Generated after the Trustee authenticates the reverse conversion request.</td>
+                    <td>Deliver Free of Payment - instructs Clearstream to cancel the investor's ISIN position. Generated after the Trustee authenticates the reverse conversion request.</td>
                 </tr>
             </tbody>
         </table>
@@ -271,27 +271,27 @@ ogtype: "article"
                 <tr>
                     <td><strong>seev.031</strong></td>
                     <td>ISO 20022</td>
-                    <td>Corporate action notification — Clearstream informs the adapter of upcoming events (distributions, votes, maturity) affecting ISIN positions.</td>
+                    <td>Corporate action notification - Clearstream informs the adapter of upcoming events (distributions, votes, maturity) affecting ISIN positions.</td>
                 </tr>
                 <tr>
                     <td><strong>seev.033</strong></td>
                     <td>ISO 20022</td>
-                    <td>Corporate action instruction — The adapter responds with processing instructions for how the platform wishes to handle the event.</td>
+                    <td>Corporate action instruction - The adapter responds with processing instructions for how the platform wishes to handle the event.</td>
                 </tr>
                 <tr>
                     <td><strong>seev.035</strong></td>
                     <td>ISO 20022</td>
-                    <td>Corporate action movement confirmation — Clearstream confirms the corporate action has been processed and positions updated.</td>
+                    <td>Corporate action movement confirmation - Clearstream confirms the corporate action has been processed and positions updated.</td>
                 </tr>
             </tbody>
         </table>
         <h3>Real-Time Notifications</h3>
         <p>In addition to structured SWIFT and ISO 20022 messaging, the adapter receives real-time webhook notifications from Clearstream for time-sensitive events:</p>
         <ul>
-            <li><strong>Settlement confirmations</strong> — Immediate notification when an MT540/MT542 instruction has been processed and the investor's account updated.</li>
-            <li><strong>Failed settlement alerts</strong> — If a settlement instruction is rejected or fails validation, the adapter is notified immediately so the CrossConversion can be rolled back before the on-chain state becomes inconsistent.</li>
-            <li><strong>Position change notifications</strong> — Any change to ISIN positions outside the normal CrossConversion flow (e.g., regulatory freeze on the Clearstream side) triggers an alert.</li>
-            <li><strong>Corporate action deadlines</strong> — Advance notice of upcoming corporate action deadlines requiring platform response.</li>
+            <li><strong>Settlement confirmations</strong> - Immediate notification when an MT540/MT542 instruction has been processed and the investor's account updated.</li>
+            <li><strong>Failed settlement alerts</strong> - If a settlement instruction is rejected or fails validation, the adapter is notified immediately so the CrossConversion can be rolled back before the on-chain state becomes inconsistent.</li>
+            <li><strong>Position change notifications</strong> - Any change to ISIN positions outside the normal CrossConversion flow (e.g., regulatory freeze on the Clearstream side) triggers an alert.</li>
+            <li><strong>Corporate action deadlines</strong> - Advance notice of upcoming corporate action deadlines requiring platform response.</li>
         </ul>
         <h3>Message Flow</h3>
         <pre><code>┌──────────────┐       Cap'n Proto        ┌─────────────────────┐
@@ -308,7 +308,7 @@ ogtype: "article"
                                           │  Settlement Engine  │
                                           │  (ICSD)             │
                                           └─────────────────────┘</code></pre>
-        <p>The adapter maintains message queues with at-least-once delivery semantics. Transient failures trigger automatic retries with exponential backoff. Every message — sent or received — is logged to the grain's append-only journal with the originating CrossConversion request ID, enabling full end-to-end traceability.</p>
+        <p>The adapter maintains message queues with at-least-once delivery semantics. Transient failures trigger automatic retries with exponential backoff. Every message - sent or received - is logged to the grain's append-only journal with the originating CrossConversion request ID, enabling full end-to-end traceability.</p>
         <h2>Operational Requirements</h2>
         <p>Before the Clearstream integration can go live, the following must be in place:</p>
         <h3>Account Setup</h3>
@@ -400,11 +400,11 @@ tls_key        = "/etc/certs/clearstream-webhook-key.pem"
 verify_sig     = true                # Validate Clearstream webhook signatures</code></pre>
         <h2>Next Steps</h2>
         <ul>
-            <li><a href="/knowledge/docs/isin-conversion/">ISIN Conversion</a> — The complete CrossConversion Engine: lockbox contract, conversion flows, trustee authentication, and SWIFT messaging</li>
-            <li><a href="/knowledge/docs/hybrid-architecture/">Hybrid Architecture</a> — How on-chain and bankable layers compose into a single regulated system</li>
-            <li><a href="/knowledge/docs/compliance-framework/">Compliance Framework</a> — KYC credentials, jurisdiction rules, and transfer enforcement</li>
-            <li><a href="/knowledge/docs/platform-overview/">Platform Overview</a> — The three-pillar architecture and grain types</li>
-            <li><a href="/knowledge/docs/authentication/">Authentication</a> — The four-layer authentication model and Trustee NFT hierarchy</li>
-            <li><a href="/knowledge/docs/api-reference/">API Reference</a> — Cap'n Proto schemas for programmatic access</li>
+            <li><a href="/knowledge/docs/isin-conversion/">ISIN Conversion</a> - The complete CrossConversion Engine: lockbox contract, conversion flows, trustee authentication, and SWIFT messaging</li>
+            <li><a href="/knowledge/docs/hybrid-architecture/">Hybrid Architecture</a> - How on-chain and bankable layers compose into a single regulated system</li>
+            <li><a href="/knowledge/docs/compliance-framework/">Compliance Framework</a> - KYC credentials, jurisdiction rules, and transfer enforcement</li>
+            <li><a href="/knowledge/docs/platform-overview/">Platform Overview</a> - The three-pillar architecture and grain types</li>
+            <li><a href="/knowledge/docs/authentication/">Authentication</a> - The four-layer authentication model and Trustee NFT hierarchy</li>
+            <li><a href="/knowledge/docs/api-reference/">API Reference</a> - Cap'n Proto schemas for programmatic access</li>
         </ul>
     </div>

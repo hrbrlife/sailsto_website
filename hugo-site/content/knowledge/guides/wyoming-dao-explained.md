@@ -1,7 +1,7 @@
 ---
 title: "Wyoming DAO LLC Explained"
 type: "guide"
-description: "Understanding Wyoming DAO LLC and Series LLC structures—how they provide legal clarity for tokenized securities and protect both issuers and investors."
+description: "Understanding Wyoming DAO LLC and Series LLC structures - how they provide legal clarity for tokenized securities and protect both issuers and investors."
 ogImage: "/og-image.png"
 keywords: ["wyoming", "dao", "llc", "explained", "understanding", "series", "structures", "provide"]
 stylesheets:
@@ -32,7 +32,7 @@ ogtype: "article"
         </nav>
         <section id="what-is" class="guide-section">
             <h2>What Is a Wyoming DAO LLC?</h2>
-            <p>A <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO LLC</span> is a limited liability company that can be managed algorithmically—through <span class="glossary-term" data-term="smart-contract">smart contracts</span> instead of (or in addition to) human managers.</p>
+            <p>A <span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO LLC</span> is a limited liability company that can be managed algorithmically - through <span class="glossary-term" data-term="smart-contract">smart contracts</span> instead of (or in addition to) human managers.</p>
             <p>In 2021, Wyoming became the first US state to legally recognize Decentralized Autonomous Organizations (DAOs) as a type of LLC. This means DAOs can:</p>
             <ul>
                 <li>Own property and assets</li>
@@ -41,9 +41,9 @@ ogtype: "article"
                 <li>Open bank accounts</li>
                 <li>Interact with traditional legal systems</li>
             </ul>
-            <p>Without this recognition, DAOs exist in legal limbo—potentially exposing members to unlimited personal liability.</p>
+            <p>Without this recognition, DAOs exist in legal limbo - potentially exposing members to unlimited personal liability.</p>
             <div class="highlight-box">
-                <p><strong>The key innovation:</strong> Wyoming law explicitly allows smart contracts to serve as the operating agreement and decision-making mechanism for an LLC. Code can be law—legally.</p>
+                <p><strong>The key innovation:</strong> Wyoming law explicitly allows smart contracts to serve as the operating agreement and decision-making mechanism for an LLC. Code can be law - legally.</p>
             </div>
         </section>
         <section id="why-wyoming" class="guide-section">
@@ -73,7 +73,7 @@ ogtype: "article"
         </section>
         <section id="series-llc" class="guide-section">
             <h2>The Series LLC Advantage</h2>
-            <p>A <span class="glossary-term" data-term="series-llc">Series LLC</span> is a special type of LLC that can create unlimited "series" (sub-LLCs), each with its own assets, liabilities, and members—all under one parent entity.</p>
+            <p>A <span class="glossary-term" data-term="series-llc">Series LLC</span> is a special type of LLC that can create unlimited "series" (sub-LLCs), each with its own assets, liabilities, and members - all under one parent entity.</p>
             <div class="diagram-box">
                 <h4>Sails.to Series LLC Structure</h4>
                 <div class="structure-visual">
@@ -88,7 +88,7 @@ ogtype: "article"
             </div>
             <h3>Why This Matters</h3>
             <h4>Liability Isolation</h4>
-            <p>If Series A has legal issues, Series B and C are protected. Each series' liabilities cannot reach the others—or the parent LLC. This is crucial for a platform hosting multiple offerings.</p>
+            <p>If Series A has legal issues, Series B and C are protected. Each series' liabilities cannot reach the others - or the parent LLC. This is crucial for a platform hosting multiple offerings.</p>
             <h4>Operational Efficiency</h4>
             <p>Instead of forming a new LLC for every offering (with separate registrations, registered agents, filings), series can be created quickly through the operating agreement.</p>
             <h4>Cost Savings</h4>
@@ -140,7 +140,7 @@ ogtype: "article"
         <section id="investor-rights" class="guide-section">
             <h2>Investor Rights & Protections</h2>
             <h3>Limited Liability</h3>
-            <p>As a member of a Wyoming LLC, your liability is limited to your investment. You cannot be personally sued for series debts or obligations—just like a corporation shareholder.</p>
+            <p>As a member of a Wyoming LLC, your liability is limited to your investment. You cannot be personally sued for series debts or obligations - just like a corporation shareholder.</p>
             <h3>Economic Rights</h3>
             <p>Specified in each series' operating agreement:</p>
             <ul>
@@ -164,7 +164,7 @@ ogtype: "article"
             </ul>
             <div class="info-box">
                 <h4>Smart Contract ≠ No Legal Rights</h4>
-                <p>Your rights exist in the operating agreement—a legally enforceable contract. The smart contract automates execution but doesn't replace your legal protections. If there's a conflict, the operating agreement governs.</p>
+                <p>Your rights exist in the operating agreement - a legally enforceable contract. The smart contract automates execution but doesn't replace your legal protections. If there's a conflict, the operating agreement governs.</p>
             </div>
         </section>
         <section id="governance" class="guide-section">
@@ -193,7 +193,7 @@ ogtype: "article"
                     <td>Passive investments, larger groups</td>
                 </tr>
             </table>
-            <p>Most Sails.to offerings are <strong>manager-managed</strong>—the issuer/sponsor handles operations while investors receive passive economic returns. Major decisions still require member approval.</p>
+            <p>Most Sails.to offerings are <strong>manager-managed</strong> - the issuer/sponsor handles operations while investors receive passive economic returns. Major decisions still require member approval.</p>
             <h3>On-Chain Voting</h3>
             <p>For member votes, we use token-weighted on-chain governance:</p>
             <ol>

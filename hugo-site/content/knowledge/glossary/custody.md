@@ -21,7 +21,7 @@ relatedTerms:
   - slug: "crosssecurities"
     label: "CrossSecurities"
 ctaTitle: "Choose your custody"
-ctaText: "Self-custody or institutional—it's your call."
+ctaText: "Self-custody or institutional - it's your call."
 ctaLabel: "Get Started"
 ctaLink: "/signup/?type=investor"
 linkLabel: "Custody"
@@ -38,6 +38,6 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>Custody is the elephant in the room for crypto adoption. Institutions need qualified custodians for regulatory reasons. Retail investors want the security (and insurance) that comes with professional custody. But crypto natives want self-custody—"not your keys, not your coins."</p>
+    <p>Custody is the elephant in the room for crypto adoption. Institutions need qualified custodians for regulatory reasons. Retail investors want the security (and insurance) that comes with professional custody. But crypto natives want self-custody - "not your keys, not your coins."</p>
     <p>Sails.to solves this with <a href="/knowledge/glossary/crosssecurities/">CrossSecurities</a>. Keep your tokens in your <a href="/knowledge/glossary/solana/">Solana</a> wallet for on-chain control. Or use <a href="/knowledge/glossary/crossconversion/">CrossConversion</a> to move them to bankable form at <a href="/knowledge/glossary/clearstream/">Clearstream</a>. Same securities, your choice of rails.</p>
 </section>

@@ -1,6 +1,6 @@
 ---
 title: "Commission - Glossary"
-description: "Fees paid to brokers and introducers for placing investors or facilitating trades — typically a percentage of the investment or transaction value."
+description: "Fees paid to brokers and introducers for placing investors or facilitating trades - typically a percentage of the investment or transaction value."
 ogImage: "/og-image.png"
 keywords: ["commission", "glossary", "fees", "paid", "brokers", "introducers", "placing", "investors"]
 stylesheets:
@@ -36,11 +36,11 @@ sitemap:
     <h2>Full Definition</h2>
     <p>Commissions on Sails.to are structured transparently:</p>
     <ul>
-        <li><strong>Primary placement (brokers)</strong> — Up to 5%: 3% issuer reward + 2% from platform's 6% distribution fee</li>
-        <li><strong>Secondary trading</strong> — 0.5% split: ⅓ platform, ⅓ buy-side broker, ⅓ sell-side broker</li>
-        <li><strong>Introducer referrals</strong> — 25% of Sails.to's platform fee on successful raises</li>
+        <li><strong>Primary placement (brokers)</strong> - Up to 5%: 3% issuer reward + 2% from platform's 6% distribution fee</li>
+        <li><strong>Secondary trading</strong> - 0.5% split: ⅓ platform, ⅓ buy-side broker, ⅓ sell-side broker</li>
+        <li><strong>Introducer referrals</strong> - 25% of Sails.to's platform fee on successful raises</li>
     </ul>
-    <p>All commissions are calculated and distributed automatically via smart contract — no manual invoicing or billing.</p>
+    <p>All commissions are calculated and distributed automatically via smart contract - no manual invoicing or billing.</p>
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>

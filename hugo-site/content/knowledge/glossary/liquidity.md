@@ -1,6 +1,6 @@
 ---
 title: "Liquidity - Glossary"
-description: "The ease of buying or selling a security without significantly affecting its price — provided for CrossSecurities through our multi-broker OTC network."
+description: "The ease of buying or selling a security without significantly affecting its price - provided for CrossSecurities through our multi-broker OTC network."
 ogImage: "/og-image.png"
 keywords: ["liquidity", "glossary", "ease", "buying", "selling", "security", "without", "significantly"]
 stylesheets:
@@ -35,12 +35,12 @@ sitemap:
 <section class="term-section">
     <h2>Full Definition</h2>
     <p>Liquidity measures how quickly and easily an asset can be converted to cash (or another asset) at a fair price. High liquidity means tight bid-ask spreads and ability to trade large positions without moving the market.</p>
-    <p>Private market securities traditionally suffer from poor liquidity — investors may be locked in for years. Sails.to addresses this through:</p>
+    <p>Private market securities traditionally suffer from poor liquidity - investors may be locked in for years. Sails.to addresses this through:</p>
     <ul>
-        <li><strong>Multi-broker OTC network</strong> — Multiple dealers competing to provide quotes</li>
-        <li><strong>CrossConversion</strong> — Option to convert to Clearstream-held ISIN for broader market access</li>
-        <li><strong>Vienna MTF listing</strong> — Regulated trading venue for ISIN-format securities</li>
-        <li><strong>Atomic settlement</strong> — Same-day settlement eliminates counterparty risk</li>
+        <li><strong>Multi-broker OTC network</strong> - Multiple dealers competing to provide quotes</li>
+        <li><strong>CrossConversion</strong> - Option to convert to Clearstream-held ISIN for broader market access</li>
+        <li><strong>Vienna MTF listing</strong> - Regulated trading venue for ISIN-format securities</li>
+        <li><strong>Atomic settlement</strong> - Same-day settlement eliminates counterparty risk</li>
     </ul>
 </section>
 <section class="term-section">

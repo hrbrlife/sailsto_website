@@ -34,7 +34,7 @@ sitemap:
 
 <section class="term-section">
     <h2>Full Definition</h2>
-    <p>The <strong>Powerbox</strong> is the capability brokering system at the heart of Sandstorm/Melusina OS. It is the <em>only</em> mechanism through which <a href="/knowledge/glossary/grain/">grains</a> can share access to each other's resources. When a grain needs a capability it doesn't have — access to an Offering, a KYC result, a distribution channel — it requests it through the Powerbox. The request produces a claim token. When the granting grain accepts, the claim token becomes a persistent sturdyRef: a durable, revocable, fine-grained capability reference serialized via <a href="/knowledge/glossary/cap-n-proto/">Cap'n Proto</a>.</p>
+    <p>The <strong>Powerbox</strong> is the capability brokering system at the heart of Sandstorm/Melusina OS. It is the <em>only</em> mechanism through which <a href="/knowledge/glossary/grain/">grains</a> can share access to each other's resources. When a grain needs a capability it doesn't have - access to an Offering, a KYC result, a distribution channel - it requests it through the Powerbox. The request produces a claim token. When the granting grain accepts, the claim token becomes a persistent sturdyRef: a durable, revocable, fine-grained capability reference serialized via <a href="/knowledge/glossary/cap-n-proto/">Cap'n Proto</a>.</p>
     <p>There is no ambient authority. No global permissions. No role-based access control. If a grain doesn't hold a sturdyRef to a resource, that resource does not exist in its universe.</p>
 </section>
 <section class="term-section">
@@ -45,12 +45,12 @@ sitemap:
 <section class="term-section">
     <h2>How It Works</h2>
     <ol>
-        <li>Grain A (e.g., Broker Portal) requests a capability from the Powerbox — "I need access to Offering X"</li>
+        <li>Grain A (e.g., Broker Portal) requests a capability from the Powerbox - "I need access to Offering X"</li>
         <li>The Powerbox identifies Grain B (e.g., DAO Manager) as the authority for that capability</li>
         <li>Grain B evaluates the request and, if authorized, generates a claim token</li>
         <li>The claim token is delivered to Grain A and resolved into a persistent sturdyRef via <a href="/knowledge/glossary/cap-n-proto/">Cap'n Proto</a></li>
-        <li>Grain A can now invoke methods on the capability — but only the methods the sturdyRef exposes</li>
+        <li>Grain A can now invoke methods on the capability - but only the methods the sturdyRef exposes</li>
         <li>The granting grain can revoke the sturdyRef at any time, instantly terminating access</li>
     </ol>
-    <p>Capability delegation is transitive but attenuating — a grain can share a subset of its own capabilities, never more than it holds.</p>
+    <p>Capability delegation is transitive but attenuating - a grain can share a subset of its own capabilities, never more than it holds.</p>
 </section>

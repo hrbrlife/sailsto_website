@@ -36,12 +36,12 @@ sitemap:
 
 <section class="term-section">
     <h2>Full Definition</h2>
-    <p>The <strong>Paying Agent</strong> is the designated entity responsible for executing all financial <a href="/knowledge/glossary/distributions/">distributions</a> within a Sails.to offering structure. Operating under the authority and oversight of the <a href="/knowledge/glossary/trustee/">Trustee</a>, the Paying Agent manages the revenue <a href="/knowledge/glossary/waterfall/">waterfall</a> — ensuring that every dollar flows to the right recipient in the right order. The Paying Agent does not decide <em>whether</em> to distribute; it executes <em>how</em> distributions occur according to the offering's predefined priority structure.</p>
+    <p>The <strong>Paying Agent</strong> is the designated entity responsible for executing all financial <a href="/knowledge/glossary/distributions/">distributions</a> within a Sails.to offering structure. Operating under the authority and oversight of the <a href="/knowledge/glossary/trustee/">Trustee</a>, the Paying Agent manages the revenue <a href="/knowledge/glossary/waterfall/">waterfall</a> - ensuring that every dollar flows to the right recipient in the right order. The Paying Agent does not decide <em>whether</em> to distribute; it executes <em>how</em> distributions occur according to the offering's predefined priority structure.</p>
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
     <p>Investors need absolute certainty that their distributions arrive correctly, on time, and in the right priority order. The Paying Agent is the mechanism that delivers this certainty. When revenue enters the <a href="/knowledge/glossary/operating-series/">Operating Series</a>, the Paying Agent ensures investors are paid before the platform takes its fee, and the platform takes its fee before excess flows to the <a href="/knowledge/glossary/treasury-series/">Treasury Series</a>.</p>
-    <p>On Sails.to, this process is enforced on-chain via <a href="/knowledge/glossary/smart-contract/">smart contracts</a>. The Paying Agent's authority is bounded — it can execute distributions according to the waterfall, but it cannot alter the waterfall itself. That requires <a href="/knowledge/glossary/trustee/">Trustee</a> authorization. Separation of duties is not a policy document. It is code.</p>
+    <p>On Sails.to, this process is enforced on-chain via <a href="/knowledge/glossary/smart-contract/">smart contracts</a>. The Paying Agent's authority is bounded - it can execute distributions according to the waterfall, but it cannot alter the waterfall itself. That requires <a href="/knowledge/glossary/trustee/">Trustee</a> authorization. Separation of duties is not a policy document. It is code.</p>
 </section>
 <section class="term-section">
     <h2>How It Works</h2>

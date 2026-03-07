@@ -1,13 +1,13 @@
 ---
 title: "Token Standard - Documentation"
-description: "The sails_securities Anchor program — instructions, PDA accounts, events, and SPL-2022 Transfer Hook compliance extensions for regulated security tokens."
+description: "The sails_securities Anchor program - instructions, PDA accounts, events, and SPL-2022 Transfer Hook compliance extensions for regulated security tokens."
 ogImage: "/og-image.png"
 keywords: ["security token", "SPL-2022", "anchor program", "solana", "transfer hook", "PDA"]
 stylesheets:
   - "/css/main.css"
   - "/css/pages/glossary.css"
   - "/css/pages/docs.css"
-heroDesc: "The sails_securities program — security tokens with compliance enforcement at the protocol level."
+heroDesc: "The sails_securities program - security tokens with compliance enforcement at the protocol level."
 draft: false
 date: "2026-02-24"
 lastmod: "2026-02-24"
@@ -18,9 +18,9 @@ ogtype: "article"
 ---
 <h2>Program Overview</h2>
         <p>The <code>sails_securities</code> program is an <a href="/knowledge/glossary/solana/">Solana</a> Anchor program purpose-built for regulated securities issuance. It extends the <span class="glossary-term" data-term="melusina">Melusina</span> NFT authority pattern with securities-specific logic: offering lifecycle management, compliance-gated minting, <span class="glossary-term" data-term="crossconversion">CrossConversion</span> lockbox integration, distribution waterfall execution, and transfer enforcement via SPL-2022 <span class="glossary-term" data-term="transfer-hook">Transfer Hook</span>.</p>
-        <p>This is not a general-purpose token program. Every instruction assumes a regulated context. Every account structure encodes compliance constraints. Every event is designed for audit trail consumption. The program will reject any operation that violates its compliance rules — there is no admin override that bypasses the Transfer Hook, no backdoor for unverified wallets, no way to mint tokens to an investor without a valid <span class="glossary-term" data-term="kyc">KYC</span> credential.</p>
+        <p>This is not a general-purpose token program. Every instruction assumes a regulated context. Every account structure encodes compliance constraints. Every event is designed for audit trail consumption. The program will reject any operation that violates its compliance rules - there is no admin override that bypasses the Transfer Hook, no backdoor for unverified wallets, no way to mint tokens to an investor without a valid <span class="glossary-term" data-term="kyc">KYC</span> credential.</p>
         <h2>Instructions</h2>
-        <p>The program exposes eight core instructions. Each instruction enforces its own authorization requirements — the required NFT role, the threshold level, and the compliance checks are non-negotiable:</p>
+        <p>The program exposes eight core instructions. Each instruction enforces its own authorization requirements - the required NFT role, the threshold level, and the compliance checks are non-negotiable:</p>
         <table>
             <thead>
                 <tr>
@@ -119,7 +119,7 @@ ogtype: "article"
                 </tr>
             </tbody>
         </table>
-        <p>All PDA accounts include a <code>version</code> field to support data migration when the program is upgraded. The upgrade authority is held by the 3-of-5 <span class="glossary-term" data-term="master-nft">Master NFT</span> keyholder set — no single party can deploy a new program version.</p>
+        <p>All PDA accounts include a <code>version</code> field to support data migration when the program is upgraded. The upgrade authority is held by the 3-of-5 <span class="glossary-term" data-term="master-nft">Master NFT</span> keyholder set - no single party can deploy a new program version.</p>
         <h2>Events</h2>
         <p>The program emits structured events for every significant state change. These events are consumed by the Solana Event Watcher grain, which routes them to the appropriate application grains for processing:</p>
         <table>
@@ -160,11 +160,11 @@ ogtype: "article"
         </table>
         <p>Every event is also written to the Solana Event Watcher's local event log for replay capability. If a grain misses an event (network partition, grain restart), the watcher replays the missed events in order. No event is ever lost.</p>
         <h2>Compliance Extensions</h2>
-        <p>The <code>sails_securities</code> program builds on <strong>SPL-2022</strong> (Token Extensions) — specifically the <span class="glossary-term" data-term="transfer-hook">Transfer Hook</span> extension. This is the mechanism that makes compliance enforcement inescapable:</p>
+        <p>The <code>sails_securities</code> program builds on <strong>SPL-2022</strong> (Token Extensions) - specifically the <span class="glossary-term" data-term="transfer-hook">Transfer Hook</span> extension. This is the mechanism that makes compliance enforcement inescapable:</p>
         <ul>
-            <li><strong>Transfer Hook:</strong> The Solana runtime invokes the Transfer Hook program on <em>every</em> token transfer — not just transfers initiated through the <code>sails_securities</code> program, but any SPL token transfer instruction that touches a Sails security token. This means compliance cannot be bypassed by calling the token program directly.</li>
-            <li><strong>Hook Logic:</strong> The Transfer Hook reads both wallets' KYC Credential NFTs, the offering's <code>ComplianceConfig</code> PDA, and the sender's <code>InvestorPosition</code> PDA. If any check fails — expired KYC, jurisdiction mismatch, lock-up period active, accreditation insufficient — the hook returns an error and the entire transfer transaction is reverted.</li>
-            <li><strong>Emergency Pause:</strong> The <code>ComplianceConfig</code> includes a <code>features</code> bitmask. Setting the pause bit (gated by Security Admin NFT) causes the Transfer Hook to reject all transfers for that offering — a circuit breaker for regulatory emergencies.</li>
+            <li><strong>Transfer Hook:</strong> The Solana runtime invokes the Transfer Hook program on <em>every</em> token transfer - not just transfers initiated through the <code>sails_securities</code> program, but any SPL token transfer instruction that touches a Sails security token. This means compliance cannot be bypassed by calling the token program directly.</li>
+            <li><strong>Hook Logic:</strong> The Transfer Hook reads both wallets' KYC Credential NFTs, the offering's <code>ComplianceConfig</code> PDA, and the sender's <code>InvestorPosition</code> PDA. If any check fails - expired KYC, jurisdiction mismatch, lock-up period active, accreditation insufficient - the hook returns an error and the entire transfer transaction is reverted.</li>
+            <li><strong>Emergency Pause:</strong> The <code>ComplianceConfig</code> includes a <code>features</code> bitmask. Setting the pause bit (gated by Security Admin NFT) causes the Transfer Hook to reject all transfers for that offering - a circuit breaker for regulatory emergencies.</li>
             <li><strong>Upgradeable Programs:</strong> All Anchor programs are deployed with upgrade authority held by the 3-of-5 Master NFT keyholder set. PDA accounts include a <code>version</code> field for data migration. New program versions are deployed alongside old ones, and migration instructions move state from old PDAs to new PDAs. Every upgrade must pass full regression on devnet before mainnet deployment.</li>
         </ul>
         <p>The result: a <span class="glossary-term" data-term="security-token">security token</span> that carries its compliance rules with it. Not in documentation. Not in terms of service. In the program code that the <a href="/knowledge/glossary/solana/">Solana</a> runtime executes on every transfer. This is what "compliance as code" actually means.</p>

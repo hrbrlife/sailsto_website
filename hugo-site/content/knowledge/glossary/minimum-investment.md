@@ -1,6 +1,6 @@
 ---
 title: "Minimum Investment - Glossary"
-description: "$150,000 minimum investment threshold for CrossSecurities — set to comply with professional and accredited investor regulations globally."
+description: "$150,000 minimum investment threshold for CrossSecurities - set to comply with professional and accredited investor regulations globally."
 ogImage: "/og-image.png"
 keywords: ["minimum", "investment", "glossary", "150", "000", "threshold", "crosssecurities", "set"]
 stylesheets:
@@ -36,9 +36,9 @@ sitemap:
     <h2>Full Definition</h2>
     <p>The minimum investment for CrossSecurities is $150,000 per security. This threshold serves multiple purposes:</p>
     <ul>
-        <li><strong>Regulatory compliance</strong> — Meets professional investor thresholds under EU MiFID II (€100,000+ initial investment)</li>
-        <li><strong>Investor qualification</strong> — Ensures participants have financial sophistication to evaluate complex securities</li>
-        <li><strong>Administrative efficiency</strong> — Reduces cap table complexity and per-investor costs</li>
+        <li><strong>Regulatory compliance</strong> - Meets professional investor thresholds under EU MiFID II (€100,000+ initial investment)</li>
+        <li><strong>Investor qualification</strong> - Ensures participants have financial sophistication to evaluate complex securities</li>
+        <li><strong>Administrative efficiency</strong> - Reduces cap table complexity and per-investor costs</li>
     </ul>
     <p>The nominal value of each CrossSecurity unit is set at $150,000, which becomes the basis for coupon calculations and maturity repayment.</p>
 </section>

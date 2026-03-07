@@ -42,5 +42,5 @@ sitemap:
 <section class="term-section">
     <h2>Why It Matters</h2>
     <p>An ISIN is the key that unlocks institutional adoption. Without it, security tokens exist only in the on-chain world. With an ISIN, your <a href="/knowledge/glossary/crosssecurities/">CrossSecurities</a> can be held by <a href="/knowledge/glossary/clearstream/">Clearstream</a>, custodied by traditional banks, and appear in standard portfolio reports.</p>
-    <p>Sails.to's <a href="/knowledge/glossary/crossconversion/">CrossConversion</a> makes ISIN conversion seamless. For approximately $4K and about one week of processing, any CrossSecurity on our platform can receive its own ISIN—instantly bridging on-chain innovation with bankable infrastructure.</p>
+    <p>Sails.to's <a href="/knowledge/glossary/crossconversion/">CrossConversion</a> makes ISIN conversion seamless. For approximately $4K and about one week of processing, any CrossSecurity on our platform can receive its own ISIN - instantly bridging on-chain innovation with bankable infrastructure.</p>
 </section>

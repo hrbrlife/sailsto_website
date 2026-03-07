@@ -1,13 +1,13 @@
 ---
 title: "Investors API - Documentation"
-description: "The Investor Self-Service Grain — portfolio management, distribution tracking, CrossConversion requests, secondary trading, tax documents, DAO governance."
+description: "The Investor Self-Service Grain - portfolio management, distribution tracking, CrossConversion requests, secondary trading, tax documents, DAO governance."
 ogImage: "/og-image.png"
 keywords: ["investor API", "portfolio", "distributions", "CrossConversion", "secondary trading", "tax documents", "DAO governance", "OTC", "cap table"]
 stylesheets:
   - "/css/main.css"
   - "/css/pages/glossary.css"
   - "/css/pages/docs.css"
-heroDesc: "One grain per investor — portfolio, distributions, trading, tax documents, and governance in a single sandboxed process."
+heroDesc: "One grain per investor - portfolio, distributions, trading, tax documents, and governance in a single sandboxed process."
 draft: false
 date: "2026-02-24"
 lastmod: "2026-02-24"
@@ -17,9 +17,9 @@ sitemap:
 ogtype: "article"
 ---
 <h2>Overview</h2>
-        <p>The Investor Self-Service <span class="glossary-term" data-term="grain">Grain</span> is an Instance-type grain — one per investor, provisioned automatically when an investor signs up on the platform. It is the investor's personal dashboard, API surface, and data store, implemented in Go+HTMX as a native <span class="glossary-term" data-term="sandstorm">Sandstorm</span> grain. Every piece of investor-specific state — portfolio positions, distribution history, trade listings, wallet connections — lives inside this grain's encrypted journal. No shared database, no centralized user table, no way for one investor's grain to read another investor's data.</p>
-        <p>The grain does not hold tokens or execute on-chain transactions directly. It aggregates data from <span class="glossary-term" data-term="offering">Offering Grains</span> via <span class="glossary-term" data-term="powerbox">Powerbox</span> capabilities, surfaces it through an HTMX-rendered UI and a JSON API, and delegates on-chain operations to the appropriate programs. When an investor claims a distribution, the grain submits the <code>claim_distribution</code> instruction to the <code>sails_distributions</code> program. When an investor requests a <span class="glossary-term" data-term="crossconversion">CrossConversion</span>, the grain calls the <code>requestCrossConversion</code> method on the Offering Grain's <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> interface. The grain is the coordinator — the blockchain is the settlement layer.</p>
-        <p>The Investors API is exposed through the platform's API gateway at <code>api.sails.to</code>. Authentication uses <a href="/knowledge/docs/authentication/">Solana wallet signature</a> — the investor signs a challenge with their wallet, and the gateway verifies the signature before routing requests to the investor's grain. All endpoints return JSON.</p>
+        <p>The Investor Self-Service <span class="glossary-term" data-term="grain">Grain</span> is an Instance-type grain - one per investor, provisioned automatically when an investor signs up on the platform. It is the investor's personal dashboard, API surface, and data store, implemented in Go+HTMX as a native <span class="glossary-term" data-term="sandstorm">Sandstorm</span> grain. Every piece of investor-specific state - portfolio positions, distribution history, trade listings, wallet connections - lives inside this grain's encrypted journal. No shared database, no centralized user table, no way for one investor's grain to read another investor's data.</p>
+        <p>The grain does not hold tokens or execute on-chain transactions directly. It aggregates data from <span class="glossary-term" data-term="offering">Offering Grains</span> via <span class="glossary-term" data-term="powerbox">Powerbox</span> capabilities, surfaces it through an HTMX-rendered UI and a JSON API, and delegates on-chain operations to the appropriate programs. When an investor claims a distribution, the grain submits the <code>claim_distribution</code> instruction to the <code>sails_distributions</code> program. When an investor requests a <span class="glossary-term" data-term="crossconversion">CrossConversion</span>, the grain calls the <code>requestCrossConversion</code> method on the Offering Grain's <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> interface. The grain is the coordinator - the blockchain is the settlement layer.</p>
+        <p>The Investors API is exposed through the platform's API gateway at <code>api.sails.to</code>. Authentication uses <a href="/knowledge/docs/authentication/">Solana wallet signature</a> - the investor signs a challenge with their wallet, and the gateway verifies the signature before routing requests to the investor's grain. All endpoints return JSON.</p>
         <h2>Investor Self-Service Grain</h2>
         <p>The grain provides eight core capabilities, each mapping to a section of the investor dashboard and a set of API endpoints:</p>
         <table>
@@ -133,11 +133,11 @@ ogtype: "article"
   ]
 }</code></pre>
         <h3>Ownership Percentage</h3>
-        <p>Ownership percentage is calculated as the investor's token balance divided by the total outstanding supply for the offering — not the max supply, but the actual minted and uncancelled supply. This percentage changes when new tokens are minted (dilution) or when tokens are burned (concentration). The grain recalculates this value on every request by querying the Offering Grain's cap table, ensuring it always reflects the current state of the ledger.</p>
+        <p>Ownership percentage is calculated as the investor's token balance divided by the total outstanding supply for the offering - not the max supply, but the actual minted and uncancelled supply. This percentage changes when new tokens are minted (dilution) or when tokens are burned (concentration). The grain recalculates this value on every request by querying the Offering Grain's cap table, ensuring it always reflects the current state of the ledger.</p>
         <h3>Yield Tracking</h3>
         <p>Yield is tracked per offering and across the entire portfolio. Per-offering yield is the sum of all distributions claimed, divided by the investor's cost basis (tokens × nominal value at subscription). Portfolio-level yield is the weighted average across all holdings. The grain stores distribution claim receipts in its journal and cross-references them with on-chain <code>DistributionRecord</code> PDAs to ensure consistency. If the grain's journal and the on-chain record disagree, the on-chain record is authoritative.</p>
         <h2>CrossConversion Requests</h2>
-        <p><span class="glossary-term" data-term="crossconversion">CrossConversion</span> allows investors to move between <span class="glossary-term" data-term="on-chain">on-chain</span> token ownership and <span class="glossary-term" data-term="bankable">bankable</span> custody via <span class="glossary-term" data-term="clearstream">Clearstream</span>. The Investor Grain exposes this through a simple API — the complexity of lockbox management, <span class="glossary-term" data-term="trustee">Trustee</span> authentication, and Clearstream settlement is handled by the CrossConversion Operator Grain behind the scenes.</p>
+        <p><span class="glossary-term" data-term="crossconversion">CrossConversion</span> allows investors to move between <span class="glossary-term" data-term="on-chain">on-chain</span> token ownership and <span class="glossary-term" data-term="bankable">bankable</span> custody via <span class="glossary-term" data-term="clearstream">Clearstream</span>. The Investor Grain exposes this through a simple API - the complexity of lockbox management, <span class="glossary-term" data-term="trustee">Trustee</span> authentication, and Clearstream settlement is handled by the CrossConversion Operator Grain behind the scenes.</p>
         <table>
             <thead>
                 <tr>
@@ -165,7 +165,7 @@ ogtype: "article"
             </tbody>
         </table>
         <h3>The requestCrossConversion Method</h3>
-        <p>Under the hood, the Investor Grain calls the <code>requestCrossConversion</code> method on the Offering Grain's <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> OfferingAPI interface. This is a Powerbox-mediated call — the Investor Grain must hold a valid InvestorView capability for the offering, and the Offering Grain validates the request against the investor's position and the offering's CrossConversion configuration.</p>
+        <p>Under the hood, the Investor Grain calls the <code>requestCrossConversion</code> method on the Offering Grain's <span class="glossary-term" data-term="cap-n-proto">Cap'n Proto</span> OfferingAPI interface. This is a Powerbox-mediated call - the Investor Grain must hold a valid InvestorView capability for the offering, and the Offering Grain validates the request against the investor's position and the offering's CrossConversion configuration.</p>
         <pre><code># From sails/offering.capnp
 
 interface OfferingAPI {
@@ -177,16 +177,16 @@ interface OfferingAPI {
 }</code></pre>
         <p>The conversion flow proceeds as follows:</p>
         <ol>
-            <li><strong>Investor submits request</strong> — The Investor Grain validates that the investor has sufficient unlocked tokens (for <code>to_bankable</code>) or sufficient bankable position (for <code>to_onchain</code>), then calls <code>requestCrossConversion</code> on the Offering Grain.</li>
-            <li><strong>Offering Grain queues request</strong> — The Offering Grain records the request and notifies the CrossConversion Operator Grain and the Trustee Dashboard Grain via Powerbox events.</li>
-            <li><strong>Trustee authenticates</strong> — The <span class="glossary-term" data-term="trustee">Trustee</span> reviews and signs the conversion request using their Trustee NFT. For conversions under the configurable threshold, this is a 1-of-1 signature. For large conversions exceeding $1M, a 2-of-3 <span class="glossary-term" data-term="threshold-signing">keyholder ceremony</span> is required.</li>
-            <li><strong>On-chain execution</strong> — For <code>to_bankable</code>: the <code>sails_crossconversion</code> program locks the investor's tokens in the lockbox <span class="glossary-term" data-term="pda">PDA</span> and emits a <code>CrossConversionRequested</code> event. For <code>to_onchain</code>: the program verifies the Clearstream cancellation proof and unlocks tokens from the lockbox.</li>
-            <li><strong>Clearstream settlement</strong> — The CrossConversion Operator Grain initiates the corresponding action with Clearstream: crediting the investor's custodial account (for <code>to_bankable</code>) or cancelling the <span class="glossary-term" data-term="isin">ISIN</span> position (for <code>to_onchain</code>).</li>
-            <li><strong>Status update</strong> — The Investor Grain receives a Powerbox notification when the conversion settles and updates the request status to <code>settled</code>.</li>
+            <li><strong>Investor submits request</strong> - The Investor Grain validates that the investor has sufficient unlocked tokens (for <code>to_bankable</code>) or sufficient bankable position (for <code>to_onchain</code>), then calls <code>requestCrossConversion</code> on the Offering Grain.</li>
+            <li><strong>Offering Grain queues request</strong> - The Offering Grain records the request and notifies the CrossConversion Operator Grain and the Trustee Dashboard Grain via Powerbox events.</li>
+            <li><strong>Trustee authenticates</strong> - The <span class="glossary-term" data-term="trustee">Trustee</span> reviews and signs the conversion request using their Trustee NFT. For conversions under the configurable threshold, this is a 1-of-1 signature. For large conversions exceeding $1M, a 2-of-3 <span class="glossary-term" data-term="threshold-signing">keyholder ceremony</span> is required.</li>
+            <li><strong>On-chain execution</strong> - For <code>to_bankable</code>: the <code>sails_crossconversion</code> program locks the investor's tokens in the lockbox <span class="glossary-term" data-term="pda">PDA</span> and emits a <code>CrossConversionRequested</code> event. For <code>to_onchain</code>: the program verifies the Clearstream cancellation proof and unlocks tokens from the lockbox.</li>
+            <li><strong>Clearstream settlement</strong> - The CrossConversion Operator Grain initiates the corresponding action with Clearstream: crediting the investor's custodial account (for <code>to_bankable</code>) or cancelling the <span class="glossary-term" data-term="isin">ISIN</span> position (for <code>to_onchain</code>).</li>
+            <li><strong>Status update</strong> - The Investor Grain receives a Powerbox notification when the conversion settles and updates the request status to <code>settled</code>.</li>
         </ol>
-        <p>The 1:1 supply invariant — <code>tokens_locked == isin_outstanding</code> — is enforced at every step. The lockbox contract will reject any lock or unlock operation that would violate this invariant, and the nightly reconciliation engine verifies it independently by comparing on-chain lockbox state with Clearstream position reports.</p>
+        <p>The 1:1 supply invariant - <code>tokens_locked == isin_outstanding</code> - is enforced at every step. The lockbox contract will reject any lock or unlock operation that would violate this invariant, and the nightly reconciliation engine verifies it independently by comparing on-chain lockbox state with Clearstream position reports.</p>
         <h2>Secondary Trading</h2>
-        <p>Investors can list their <span class="glossary-term" data-term="security-token">security tokens</span> for sale on the <span class="glossary-term" data-term="otc">OTC</span> secondary market. Sails.to operates a multi-broker network — trades are not matched by the platform directly but by licensed <span class="glossary-term" data-term="broker-dealer">broker-dealers</span> who hold Broker role NFTs. The Investor Grain provides the listing interface; the Broker Grain handles matching, compliance checks, and settlement.</p>
+        <p>Investors can list their <span class="glossary-term" data-term="security-token">security tokens</span> for sale on the <span class="glossary-term" data-term="otc">OTC</span> secondary market. Sails.to operates a multi-broker network - trades are not matched by the platform directly but by licensed <span class="glossary-term" data-term="broker-dealer">broker-dealers</span> who hold Broker role NFTs. The Investor Grain provides the listing interface; the Broker Grain handles matching, compliance checks, and settlement.</p>
         <table>
             <thead>
                 <tr>
@@ -229,15 +229,15 @@ interface BrokerAPI {
     -> (settlement :TradeSettlement);
 }</code></pre>
         <ol>
-            <li><strong>Listing published</strong> — The Investor Grain calls <code>listForSecondaryTrading</code> on the Broker Grain. The listing becomes visible to all brokers in the network who are authorized to trade the offering.</li>
-            <li><strong>Buyer identified</strong> — A broker identifies an interested buyer from their client roster. The buyer must hold a valid <span class="glossary-term" data-term="kyc">KYC</span> Credential NFT with the appropriate investor classification and jurisdiction for the offering.</li>
-            <li><strong>Compliance check</strong> — The Broker Grain verifies both parties: the seller has sufficient unlocked tokens, the buyer has a valid KYC credential, both wallets pass the <span class="glossary-term" data-term="transfer-hook">Transfer Hook</span> compliance checks (jurisdiction whitelist, accreditation tier, lock-up period), and the transfer would not violate the offering's <code>ComplianceConfig</code> maximum investor count.</li>
-            <li><strong>Trade matched</strong> — The Broker Grain calls <code>matchTrade</code>, which initiates the on-chain <code>transfer_with_compliance</code> instruction on the <code>sails_securities</code> program. The Transfer Hook enforces all compliance rules at the smart contract level.</li>
-            <li><strong>Settlement</strong> — On successful transfer, the Broker Grain notifies both the seller's and buyer's Investor Grains via Powerbox. The seller's grain updates the listing status to <code>settled</code> and adjusts the portfolio. The buyer's grain adds the new position.</li>
+            <li><strong>Listing published</strong> - The Investor Grain calls <code>listForSecondaryTrading</code> on the Broker Grain. The listing becomes visible to all brokers in the network who are authorized to trade the offering.</li>
+            <li><strong>Buyer identified</strong> - A broker identifies an interested buyer from their client roster. The buyer must hold a valid <span class="glossary-term" data-term="kyc">KYC</span> Credential NFT with the appropriate investor classification and jurisdiction for the offering.</li>
+            <li><strong>Compliance check</strong> - The Broker Grain verifies both parties: the seller has sufficient unlocked tokens, the buyer has a valid KYC credential, both wallets pass the <span class="glossary-term" data-term="transfer-hook">Transfer Hook</span> compliance checks (jurisdiction whitelist, accreditation tier, lock-up period), and the transfer would not violate the offering's <code>ComplianceConfig</code> maximum investor count.</li>
+            <li><strong>Trade matched</strong> - The Broker Grain calls <code>matchTrade</code>, which initiates the on-chain <code>transfer_with_compliance</code> instruction on the <code>sails_securities</code> program. The Transfer Hook enforces all compliance rules at the smart contract level.</li>
+            <li><strong>Settlement</strong> - On successful transfer, the Broker Grain notifies both the seller's and buyer's Investor Grains via Powerbox. The seller's grain updates the listing status to <code>settled</code> and adjusts the portfolio. The buyer's grain adds the new position.</li>
         </ol>
-        <p>The platform does not operate an order book or matching engine. Each trade is a bilateral OTC transaction mediated by a licensed broker. This structure is deliberate — it ensures every secondary trade has a responsible broker-dealer who has performed their own suitability analysis, as required for <span class="glossary-term" data-term="reg-d">Reg D</span> securities.</p>
+        <p>The platform does not operate an order book or matching engine. Each trade is a bilateral OTC transaction mediated by a licensed broker. This structure is deliberate - it ensures every secondary trade has a responsible broker-dealer who has performed their own suitability analysis, as required for <span class="glossary-term" data-term="reg-d">Reg D</span> securities.</p>
         <h2>Tax &amp; Statements</h2>
-        <p>The Investor Grain provides access to tax documents and distribution statements generated from on-chain records. Data is pulled from <code>DistributionRecord</code> PDAs, cap table snapshots, and the investor's position history — all on-chain, all auditable, all immutable.</p>
+        <p>The Investor Grain provides access to tax documents and distribution statements generated from on-chain records. Data is pulled from <code>DistributionRecord</code> PDAs, cap table snapshots, and the investor's position history - all on-chain, all auditable, all immutable.</p>
         <table>
             <thead>
                 <tr>
@@ -250,7 +250,7 @@ interface BrokerAPI {
                 <tr>
                     <td><code>/v1/investor/tax/k1/:tax_year</code></td>
                     <td><code>GET</code></td>
-                    <td>Downloads the K-1 form for the specified tax year. Each DAO Series LLC is a pass-through entity — income, deductions, and credits flow through to investors proportional to their token holdings. The K-1 is generated by the Compliance Grain from on-chain distribution records and cap table snapshots at each epoch.</td>
+                    <td>Downloads the K-1 form for the specified tax year. Each DAO Series LLC is a pass-through entity - income, deductions, and credits flow through to investors proportional to their token holdings. The K-1 is generated by the Compliance Grain from on-chain distribution records and cap table snapshots at each epoch.</td>
                 </tr>
                 <tr>
                     <td><code>/v1/investor/tax/statements</code></td>
@@ -270,22 +270,22 @@ interface BrokerAPI {
             </tbody>
         </table>
         <h3>K-1 Generation</h3>
-        <p>Each offering on Sails.to is structured as a Series within a Wyoming DAO Series LLC. As a pass-through entity, the LLC does not pay federal income tax — instead, each investor receives a Schedule K-1 (Form 1065) reflecting their share of the Series' income, deductions, and credits for the tax year.</p>
+        <p>Each offering on Sails.to is structured as a Series within a Wyoming DAO Series LLC. As a pass-through entity, the LLC does not pay federal income tax - instead, each investor receives a Schedule K-1 (Form 1065) reflecting their share of the Series' income, deductions, and credits for the tax year.</p>
         <p>The K-1 is generated by the Compliance Grain using the following data sources:</p>
         <ul>
-            <li><strong>Distribution records</strong> — Every <code>DistributionRecord</code> PDA for the offering during the tax year, capturing the <code>amount_per_token</code> and the investor's claimed amount per epoch.</li>
-            <li><strong>Cap table snapshots</strong> — The investor's token balance at each epoch's <code>snapshot_slot</code>, determining their pro-rata share. If the investor acquired or disposed of tokens mid-year, the K-1 reflects the weighted average ownership across all epochs.</li>
-            <li><strong>Offering classification</strong> — The tax treatment depends on the offering type: rental income for real estate offerings, interest income for debt instruments, dividend income for equity offerings. This classification is stored in the <code>OfferingConfig</code> and does not change after offering initialization.</li>
+            <li><strong>Distribution records</strong> - Every <code>DistributionRecord</code> PDA for the offering during the tax year, capturing the <code>amount_per_token</code> and the investor's claimed amount per epoch.</li>
+            <li><strong>Cap table snapshots</strong> - The investor's token balance at each epoch's <code>snapshot_slot</code>, determining their pro-rata share. If the investor acquired or disposed of tokens mid-year, the K-1 reflects the weighted average ownership across all epochs.</li>
+            <li><strong>Offering classification</strong> - The tax treatment depends on the offering type: rental income for real estate offerings, interest income for debt instruments, dividend income for equity offerings. This classification is stored in the <code>OfferingConfig</code> and does not change after offering initialization.</li>
         </ul>
         <p>K-1s are typically available by March 15 following the tax year, in accordance with IRS partnership return filing deadlines. The Investor Grain sends a notification when the K-1 is ready for download.</p>
         <h3>Distribution Statements</h3>
-        <p>Distribution statements are generated per epoch, per offering. Each statement provides a complete audit trail from revenue deposit through waterfall execution to the investor's individual payout. The statement includes the on-chain transaction signature for the <code>execute_waterfall</code> instruction and the investor's <code>claim_distribution</code> instruction — anyone can independently verify the amounts on the <a href="/knowledge/glossary/solana/">Solana</a> blockchain.</p>
+        <p>Distribution statements are generated per epoch, per offering. Each statement provides a complete audit trail from revenue deposit through waterfall execution to the investor's individual payout. The statement includes the on-chain transaction signature for the <code>execute_waterfall</code> instruction and the investor's <code>claim_distribution</code> instruction - anyone can independently verify the amounts on the <a href="/knowledge/glossary/solana/">Solana</a> blockchain.</p>
         <p>For investors holding positions on the <span class="glossary-term" data-term="bankable">bankable</span> side via <span class="glossary-term" data-term="clearstream">Clearstream</span>, the distribution statement also includes the Clearstream corporate action reference number, allowing the investor to cross-reference with their custodial account statement.</p>
         <h2>Powerbox Integration</h2>
-        <p>The Investor Grain does not operate in isolation. It receives capabilities from other grains via the <span class="glossary-term" data-term="powerbox">Powerbox</span> — the same claim-token-to-sturdyRef lifecycle that governs all inter-grain communication on the platform. The grain's functionality is directly determined by which capabilities it holds.</p>
+        <p>The Investor Grain does not operate in isolation. It receives capabilities from other grains via the <span class="glossary-term" data-term="powerbox">Powerbox</span> - the same claim-token-to-sturdyRef lifecycle that governs all inter-grain communication on the platform. The grain's functionality is directly determined by which capabilities it holds.</p>
         <h3>InvestorView from Offering Grains</h3>
         <p>When an investor subscribes to an offering, the Offering Grain issues an <code>InvestorView</code> capability to the Investor Grain via Powerbox. This capability provides read access to the investor's position within that offering: token balance, distribution history, cap table position, and CrossConversion status. The Investor Grain claims this capability and stores the resulting sturdyRef in its journal for persistent access across sessions.</p>
-        <p>The InvestorView capability is scoped — it only exposes the requesting investor's own position, not the full cap table or other investors' data. An investor who holds tokens in five offerings will hold five separate InvestorView capabilities, one from each Offering Grain. This is how the portfolio view is assembled: the Investor Grain iterates over its InvestorView sturdyRefs and aggregates the responses.</p>
+        <p>The InvestorView capability is scoped - it only exposes the requesting investor's own position, not the full cap table or other investors' data. An investor who holds tokens in five offerings will hold five separate InvestorView capabilities, one from each Offering Grain. This is how the portfolio view is assembled: the Investor Grain iterates over its InvestorView sturdyRefs and aggregates the responses.</p>
         <pre><code>Powerbox Capability Flow:
 
 Offering Grain A ──(InvestorView)──► Investor Grain
@@ -296,9 +296,9 @@ Offering Grain C ──(InvestorView)──►     │
                                     /v1/investor/portfolio</code></pre>
         <h3>KYC Status from KYC Grains</h3>
         <p>The Investor Grain holds a read-only <code>getStatus</code> and <code>getCredential</code> capability on the investor's <span class="glossary-term" data-term="kyc">KYC</span> Grain. This allows the Investor Grain to display the current KYC verification status, credential expiration date, and investor classification directly in the dashboard. When the KYC credential is approaching expiration (60 days or fewer), the Investor Grain surfaces a re-verification prompt.</p>
-        <p>The Investor Grain cannot modify the KYC state — it holds read-only capabilities. If the investor needs to re-verify, the Investor Grain calls <code>startVerification</code> on the KYCVerifier interface to spawn a new KYC Grain instance. The KYC Grain's HTMX-rendered UI is embedded directly in the investor dashboard via iframe, so the investor completes the verification flow without leaving their Self-Service Grain.</p>
+        <p>The Investor Grain cannot modify the KYC state - it holds read-only capabilities. If the investor needs to re-verify, the Investor Grain calls <code>startVerification</code> on the KYCVerifier interface to spawn a new KYC Grain instance. The KYC Grain's HTMX-rendered UI is embedded directly in the investor dashboard via iframe, so the investor completes the verification flow without leaving their Self-Service Grain.</p>
         <h3>Broker Assistance for Trades</h3>
-        <p>When an investor creates a sell listing for secondary trading, the Investor Grain must request assistance from a Broker Grain. The Investor Grain does not hold a BrokerAPI capability by default — it requests one through Powerbox at the time of listing creation. The Platform Operator pre-authorizes a set of Broker Grains for each offering, and the Powerbox routes the request to an eligible broker.</p>
+        <p>When an investor creates a sell listing for secondary trading, the Investor Grain must request assistance from a Broker Grain. The Investor Grain does not hold a BrokerAPI capability by default - it requests one through Powerbox at the time of listing creation. The Platform Operator pre-authorizes a set of Broker Grains for each offering, and the Powerbox routes the request to an eligible broker.</p>
         <pre><code>Powerbox Capability Flow:
 
 Investor Grain ──(Powerbox request: BrokerAPI)──► Powerbox Router
@@ -315,7 +315,7 @@ Broker Grain ──(BrokerAPI capability)──► Investor Grain
     │  matchTrade() → on-chain settlement     │
     │                                         │
     └──(TradeSettlement notification)──► Investor Grain</code></pre>
-        <p>The Broker Grain retains the BrokerAPI capability for the duration of the listing. Once the trade settles or the listing is cancelled, the capability is released. This ensures that brokers only have access to the investor's trading intent for the specific listings they are servicing — no persistent surveillance, no access to the investor's broader portfolio or personal data.</p>
+        <p>The Broker Grain retains the BrokerAPI capability for the duration of the listing. Once the trade settles or the listing is cancelled, the capability is released. This ensures that brokers only have access to the investor's trading intent for the specific listings they are servicing - no persistent surveillance, no access to the investor's broader portfolio or personal data.</p>
         <h3>Governance Participation</h3>
-        <p>For offerings with DAO governance enabled, the Investor Grain receives a <code>GovernanceAPI</code> capability from the DAO Manager Grain. This capability allows the investor to view active proposals, cast votes weighted by their token holdings, and view voting results. The Investor Grain calls <code>vote</code> on the GovernanceAPI interface, which records the vote on-chain and updates the proposal's tally. Voting weight is determined by the investor's token balance at a governance snapshot slot — the same snapshot mechanism used for distribution calculations.</p>
+        <p>For offerings with DAO governance enabled, the Investor Grain receives a <code>GovernanceAPI</code> capability from the DAO Manager Grain. This capability allows the investor to view active proposals, cast votes weighted by their token holdings, and view voting results. The Investor Grain calls <code>vote</code> on the GovernanceAPI interface, which records the vote on-chain and updates the proposal's tally. Voting weight is determined by the investor's token balance at a governance snapshot slot - the same snapshot mechanism used for distribution calculations.</p>
     </div>

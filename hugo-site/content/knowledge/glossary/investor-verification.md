@@ -36,15 +36,15 @@ sitemap:
     <h2>Full Definition</h2>
     <p>Before investing in CrossSecurities, investors must complete verification that includes:</p>
     <ul>
-        <li><strong>Identity verification (KYC)</strong> — Government ID, proof of address, liveness check</li>
-        <li><strong>Financial qualification</strong> — Confirmation of accredited/professional investor status</li>
-        <li><strong>Source of funds (AML)</strong> — Documentation that investment funds are legitimate</li>
-        <li><strong>Risk acknowledgment</strong> — Confirmation of understanding the risks involved</li>
+        <li><strong>Identity verification (KYC)</strong> - Government ID, proof of address, liveness check</li>
+        <li><strong>Financial qualification</strong> - Confirmation of accredited/professional investor status</li>
+        <li><strong>Source of funds (AML)</strong> - Documentation that investment funds are legitimate</li>
+        <li><strong>Risk acknowledgment</strong> - Confirmation of understanding the risks involved</li>
     </ul>
     <p>Verification is performed once and stored on-chain, enabling seamless participation in subsequent offerings without re-verification.</p>
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
     <p>Investor verification protects both investors and issuers. It ensures only qualified investors participate (protecting them from unsuitable investments) and protects issuers from regulatory violations for selling to non-qualified buyers.</p>
-    <p>Our verification process is designed to be thorough yet efficient — most verifications complete within 24-48 hours.</p>
+    <p>Our verification process is designed to be thorough yet efficient - most verifications complete within 24-48 hours.</p>
 </section>

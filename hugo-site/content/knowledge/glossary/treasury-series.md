@@ -34,7 +34,7 @@ sitemap:
 <section class="term-section">
     <h2>Full Definition</h2>
     <p>A <strong>Treasury Series</strong> is a compartment within a <a href="/knowledge/glossary/series-llc/">Series LLC</a> structure that serves as the holding entity for <a href="/knowledge/glossary/security-token/">security tokens</a> that are either not yet issued to investors or have been repurchased from the market. Treasury tokens are not counted as outstanding securities for voting or distribution purposes.</p>
-    <p>This structure mirrors the concept of "treasury stock" in traditional corporate finance—shares that a company holds in its own name.</p>
+    <p>This structure mirrors the concept of "treasury stock" in traditional corporate finance - shares that a company holds in its own name.</p>
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>

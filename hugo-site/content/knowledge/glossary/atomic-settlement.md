@@ -38,7 +38,7 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>On Sails.to's <a href="/knowledge/glossary/solana/">Solana</a>-based infrastructure, <a href="/knowledge/glossary/secondary-trading/">secondary trades</a> settle atomically in approximately 400 milliseconds. When you buy a <a href="/knowledge/glossary/security-token/">security token</a>, the token transfer and payment occur in the same transaction—instantly and irreversibly.</p>
+    <p>On Sails.to's <a href="/knowledge/glossary/solana/">Solana</a>-based infrastructure, <a href="/knowledge/glossary/secondary-trading/">secondary trades</a> settle atomically in approximately 400 milliseconds. When you buy a <a href="/knowledge/glossary/security-token/">security token</a>, the token transfer and payment occur in the same transaction - instantly and irreversibly.</p>
     <p>This is fundamentally different from traditional markets where buyers send money and hope sellers deliver securities days later. Atomic settlement means trade = settlement = finality, all in one moment.</p>
     <p>Combined with <a href="/knowledge/glossary/smart-contract/">smart contracts</a>, atomic settlement enables programmable trading rules that execute automatically without counterparty risk.</p>
 </section>

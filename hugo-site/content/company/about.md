@@ -2,7 +2,7 @@
 title: "About Us"
 type: "page"
 layout: "company-about"
-description: "Learn about Sails.to — the team building CrossSecurities infrastructure that bridges blockchain innovation with traditional finance."
+description: "Learn about Sails.to - the team building CrossSecurities infrastructure that bridges blockchain innovation with traditional finance."
 keywords:
   - about sails.to
   - CrossSecurities

@@ -36,6 +36,6 @@ sitemap:
 </section>
 <section class="term-section">
     <h2>Why It Matters</h2>
-    <p>Secondary trading is where liquidity happens. Primary offerings let you buy in; secondary markets let you exit. Without secondary trading, your investment is locked until the company goes public, gets acquired, or liquidates—which might be never.</p>
+    <p>Secondary trading is where liquidity happens. Primary offerings let you buy in; secondary markets let you exit. Without secondary trading, your investment is locked until the company goes public, gets acquired, or liquidates - which might be never.</p>
     <p>Sails.to enables compliant secondary trading through our broker network. The 0.5% trading fee is split ⅓ to the platform and ⅔ to the broker facilitating the trade. Our <a href="/knowledge/glossary/smart-contract/">smart contracts</a> automatically verify that both buyer and seller are <a href="/knowledge/glossary/kyc/">KYC</a>-verified and eligible for the security being traded.</p>
 </section>
