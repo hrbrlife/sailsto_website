@@ -165,7 +165,7 @@
    <h2 id="form-title">Get Started</h2>
    <p id="form-subtitle">Tell us about yourself and we'll be in touch within 24 hours</p>
    </div>
-   <form id="signup-form-step1" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+   <form id="signup-form-step1" action="mailto:legal@sails.to" method="POST" enctype="text/plain" onsubmit="return confirm('This will open your email client to send a message to legal@sails.to. Continue?');">
    
    <!-- CONTACT INFORMATION -->
    <div class="form-section-label">Contact Information</div>
@@ -293,9 +293,9 @@
    </div>
    <div class="form-header">
    <h2>A Few More Details</h2>
-   <p>Help us prepare for your call. All fields optional - <a href="#" id="skip-step-2">skip and finish</a></p>
+   <p>Help us prepare for your call. All fields optional - <button type="button" id="skip-step-2" class="text-link">skip and finish</button></p>
    </div>
-   <form id="signup-form-step2" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+   <form id="signup-form-step2" action="mailto:legal@sails.to" method="POST" enctype="text/plain" onsubmit="return confirm('This will open your email client to send a message to legal@sails.to. Continue?');">
    <input type="hidden" name="email" id="step2-email" value="">
    <input type="hidden" name="form_step" value="2">
    <input type="hidden" name="interests" id="step2-interests" value="">

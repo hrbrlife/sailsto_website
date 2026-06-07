@@ -1,5 +1,5 @@
 ---
-title: "ISIN (International Securities Identification Number) - Glossary"
+title: "ISIN (International Securities ID) - Glossary"
 description: "A 12-character alphanumeric code that uniquely identifies a security globally, enabling it to be held in traditional bank custody systems."
 ogImage: "/og-image.png"
 keywords: ["isin", "international", "securities", "identification", "number", "glossary", "12-character", "alphanumeric"]
