@@ -1,0 +1,137 @@
+/* ═══════════════════════════════════════════════════════════════
+   SAILS.TO — INTRODUCERS PAGE
+   Cyberpunk-Vintage · Pastel Neon
+   Page-specific styles only — inherits from styles.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── INTRODUCER CALCULATOR CARD ────────────────────────────── */
+.intro-calc-card {
+    background: var(--bg-card);
+    padding: var(--space-lg);
+    border: 2px solid var(--border-strong);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.intro-calc-card h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: var(--space-xs);
+}
+
+.intro-calc-card .intro {
+    color: var(--slate);
+    margin-bottom: 32px;
+    font-size: 1rem;
+}
+
+
+/* ── CALC LAYOUT ───────────────────────────────────────────── */
+.intro-calc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+@media (max-width: 700px) {
+    .intro-calc-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ── FORM INPUTS ───────────────────────────────────────────── */
+.intro-input-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.intro-input-group label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--ink);
+}
+
+.intro-input-group input {
+    padding: 14px 18px;
+    border: 2px solid var(--border);
+    border-radius: 0;
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--ink);
+    background: var(--bg-card);
+    transition: border-color var(--speed-fast) ease;
+}
+
+.intro-input-group input:focus {
+    outline: none;
+    border-color: var(--neon-orange);
+    box-shadow: var(--glow-orange);
+}
+
+.intro-input-group .hint {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--silver);
+    letter-spacing: 0.04em;
+}
+
+
+/* ── RESULT BOX ────────────────────────────────────────────── */
+.intro-result-box {
+    background: var(--bg-dark);
+    color: var(--text-on-dark);
+    padding: 36px;
+    text-align: center;
+    border: 2px solid var(--border-strong);
+}
+
+.intro-result-box .label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--text-muted-dk);
+    margin-bottom: 8px;
+}
+
+.intro-result-box .amount {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--neon-orange);
+    margin-bottom: 16px;
+}
+
+.intro-result-box .breakdown {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--text-muted-dk);
+    line-height: 2;
+    letter-spacing: 0.04em;
+}
+
+.intro-result-box .breakdown span {
+    display: block;
+}
+
+
+/* ── FEE NOTE ──────────────────────────────────────────────── */
+.fee-note {
+    margin-top: 24px;
+    padding: 16px;
+    background: rgba(255, 107, 53, 0.06);
+    border: 2px solid var(--border);
+    border-left: 3px solid var(--neon-teal);
+    font-size: 0.85rem;
+    color: var(--slate);
+    line-height: 1.7;
+}

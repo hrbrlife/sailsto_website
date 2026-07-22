@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Knowledge Base on Sails.to | Hybrid Securities Infrastructure</title><link>https://sails.to/knowledge/</link><description>Recent content in Knowledge Base on Sails.to | Hybrid Securities Infrastructure</description><generator>Hugo</generator><language>en</language><lastBuildDate>Tue, 24 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://sails.to/knowledge/index.xml" rel="self" type="application/rss+xml"/><item><title>FAQ</title><link>https://sails.to/knowledge/faq/</link><pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate><guid>https://sails.to/knowledge/faq/</guid><description/></item><item><title>Getting Started with Sails.to</title><link>https://sails.to/knowledge/guides/getting-started/</link><pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate><guid>https://sails.to/knowledge/guides/getting-started/</guid><description>&lt;nav class="guide-nav">
+ &lt;h4>In This Guide&lt;/h4>
+ &lt;ul>
+ &lt;li>&lt;a href="#overview">Platform Overview&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#issuers">For Issuers&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#investors">For Investors&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#brokers">For Brokers&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#verification">Verification Process&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#support">Getting Help&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/nav>
+ &lt;section id="overview" class="guide-section">
+ &lt;h2>Platform Overview&lt;/h2>
+ &lt;p>Sails.to is a compliant platform for issuing, investing in, and distributing &lt;span class="glossary-term" data-term="security-token">security tokens&lt;/span>. We combine blockchain efficiency with traditional finance compliance to offer the best of both worlds.&lt;/p>
+ &lt;h3>What We Offer&lt;/h3>
+ &lt;ul>
+ &lt;li>&lt;strong>Issuers:&lt;/strong> Tokenize assets, raise capital globally, manage cap tables automatically&lt;/li>
+ &lt;li>&lt;strong>Investors:&lt;/strong> Access curated offerings, choose your custody model, receive automated distributions&lt;/li>
+ &lt;li>&lt;strong>Brokers:&lt;/strong> Expand your product offering, earn competitive commissions, serve global clients&lt;/li>
+ &lt;/ul>
+ &lt;h3>Key Features&lt;/h3>
+ &lt;ul>
+ &lt;li>&lt;strong>Compliant by design:&lt;/strong> &lt;span class="glossary-term" data-term="reg-d">Reg D 506(c)&lt;/span> / &lt;span class="glossary-term" data-term="reg-s">Reg S&lt;/span> framework with full &lt;span class="glossary-term" data-term="kyc">KYC&lt;/span>/&lt;span class="glossary-term" data-term="aml">AML&lt;/span>&lt;/li>
+ &lt;li>&lt;strong>Hybrid custody:&lt;/strong> Self-custody on &lt;span class="glossary-term" data-term="solana">Solana&lt;/span> or institutional via &lt;span class="glossary-term" data-term="clearstream">Clearstream&lt;/span>&lt;/li>
+ &lt;li>&lt;strong>Wyoming DAO LLC:&lt;/strong> &lt;span class="glossary-term" data-term="wyoming-dao-llc">Legal entity recognition&lt;/span> with &lt;span class="glossary-term" data-term="series-llc">Series LLC&lt;/span> protection&lt;/li>
+ &lt;li>&lt;strong>Secondary trading:&lt;/strong> &lt;span class="glossary-term" data-term="secondary-trading">Compliant peer-to-peer transfers&lt;/span>&lt;/li>
+ &lt;/ul>
+ &lt;/section>
+ &lt;section id="issuers" class="guide-section">
+ &lt;h2>For Issuers&lt;/h2>
+ &lt;p>Launch a tokenized securities offering in weeks, not months. Here's how to get started:&lt;/p></description></item><item><title>Investor Eligibility Guide</title><link>https://sails.to/knowledge/guides/investor-eligibility/</link><pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate><guid>https://sails.to/knowledge/guides/investor-eligibility/</guid><description>&lt;nav class="guide-nav">
+ &lt;h4>In This Guide&lt;/h4>
+ &lt;ul>
+ &lt;li>&lt;a href="#who-can-invest">Who Can Invest?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#investor-classifications">Investor Classifications&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#verification-process">The Verification Process&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#regulatory-exemptions">Regulatory Exemptions&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#geographic-eligibility">Geographic Eligibility&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#minimum-requirements">Minimum Requirements&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/nav>
+ &lt;section id="who-can-invest" class="guide-section">
+ &lt;h2>Who Can Invest?&lt;/h2>
+ &lt;p>Sails.to offerings are private placements - regulated securities sold under specific exemptions from public registration. This means not everyone can invest. There are rules, and these rules are not suggestions. They are federal law.&lt;/p>
+ &lt;p>The &lt;span class="glossary-term" data-term="security-token">security tokens&lt;/span> on our platform are offered under &lt;span class="glossary-term" data-term="reg-d">Reg D&lt;/span> (US investors) and &lt;span class="glossary-term" data-term="reg-s">Reg S&lt;/span> (non-US investors) exemptions. Your eligibility depends on three factors:&lt;/p></description></item><item><title>ISIN Conversion Guide</title><link>https://sails.to/knowledge/guides/isin-conversion/</link><pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate><guid>https://sails.to/knowledge/guides/isin-conversion/</guid><description>&lt;nav class="guide-nav">
+ &lt;h4>In This Guide&lt;/h4>
+ &lt;ul>
+ &lt;li>&lt;a href="#what-is-isin">What Is an ISIN?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#crossconversion-process">The CrossConversion Process&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#cross-to-bankable">Cross to Bankable&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#cross-to-onchain">Cross to On-Chain&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#one-to-one-invariant">The 1:1 Invariant&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#reconciliation-trust">Reconciliation &amp; Trust&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#fees-timeline">Fees &amp; Timeline&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#when-to-convert">When to Convert&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/nav>
+ &lt;section id="what-is-isin" class="guide-section">
+ &lt;h2>What Is an ISIN?&lt;/h2>
+ &lt;p>An &lt;span class="glossary-term" data-term="isin">ISIN&lt;/span> (International Securities Identification Number) is a 12-character alphanumeric code that uniquely identifies a financial instrument globally. It is the lingua franca of traditional finance - every stock, bond, and fund share traded through conventional infrastructure has one.&lt;/p></description></item><item><title>Roadmap</title><link>https://sails.to/knowledge/roadmap/</link><pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate><guid>https://sails.to/knowledge/roadmap/</guid><description/></item><item><title>Tokenization 101</title><link>https://sails.to/knowledge/guides/tokenization-101/</link><pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate><guid>https://sails.to/knowledge/guides/tokenization-101/</guid><description>&lt;nav class="guide-nav">
+ &lt;h4>In This Guide&lt;/h4>
+ &lt;ul>
+ &lt;li>&lt;a href="#what-is-tokenization">What Is Tokenization?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#why-tokenize">Why Tokenize?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#how-sailsto-tokenizes">How Sails.to Tokenizes&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#token-lifecycle">The Token Lifecycle&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#asset-types">Asset Types&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#getting-started">Getting Started&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/nav>
+ &lt;section id="what-is-tokenization" class="guide-section">
+ &lt;h2>What Is Tokenization?&lt;/h2>
+ &lt;p>Tokenization is the process of representing ownership of a real-world asset as a digital token on a blockchain. A &lt;span class="glossary-term" data-term="security-token">security token&lt;/span> is not a cryptocurrency - it is a regulated financial instrument that happens to live on a distributed ledger instead of in a spreadsheet at a transfer agent's office.&lt;/p></description></item><item><title>Wyoming DAO LLC Explained</title><link>https://sails.to/knowledge/guides/wyoming-dao-explained/</link><pubDate>Tue, 24 Feb 2026 00:00:00 +0000</pubDate><guid>https://sails.to/knowledge/guides/wyoming-dao-explained/</guid><description>&lt;nav class="guide-nav">
+ &lt;h4>In This Guide&lt;/h4>
+ &lt;ul>
+ &lt;li>&lt;a href="#what-is">What Is a Wyoming DAO LLC?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#why-wyoming">Why Wyoming?&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#series-llc">The Series LLC Advantage&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#how-it-works">How It Works at Sails.to&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#investor-rights">Investor Rights &amp; Protections&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#governance">Governance &amp; Voting&lt;/a>&lt;/li>
+ &lt;li>&lt;a href="#vs-traditional">DAO LLC vs. Traditional Structures&lt;/a>&lt;/li>
+ &lt;/ul>
+ &lt;/nav>
+ &lt;section id="what-is" class="guide-section">
+ &lt;h2>What Is a Wyoming DAO LLC?&lt;/h2>
+ &lt;p>A &lt;span class="glossary-term" data-term="wyoming-dao-llc">Wyoming DAO LLC&lt;/span> is a limited liability company that can be managed algorithmically - through &lt;span class="glossary-term" data-term="smart-contract">smart contracts&lt;/span> instead of (or in addition to) human managers.&lt;/p>
+ &lt;p>In 2021, Wyoming became the first US state to legally recognize Decentralized Autonomous Organizations (DAOs) as a type of LLC. This means DAOs can:&lt;/p></description></item></channel></rss>

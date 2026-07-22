@@ -1,0 +1,169 @@
+/* ═══════════════════════════════════════════════
+   Company Legal — Cyberpunk-Vintage Design System
+   ═══════════════════════════════════════════════ */
+
+/* ── Sticky legal navigation ───────────────────── */
+.legal-nav-section {
+    background: var(--bg-alt);
+    position: sticky;
+    top: 70px;
+    z-index: 50;
+    border-bottom: 2px solid var(--border);
+}
+
+.legal-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 48px;
+}
+
+.legal-nav {
+    display: flex;
+    gap: 32px;
+    padding: 16px 0;
+    overflow-x: auto;
+}
+
+.legal-nav-link {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--slate);
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 8px 0;
+    border-bottom: 2px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.legal-nav-link:hover,
+.legal-nav-link.active {
+    color: var(--neon-orange);
+    border-bottom-color: var(--neon-orange);
+}
+
+/* ── Legal sections ────────────────────────────── */
+.legal-section {
+    padding: 80px 48px;
+}
+
+.legal-section.alt {
+    background: var(--bg-alt);
+}
+
+.legal-header {
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--border);
+}
+
+.legal-header h2 {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+}
+
+.legal-date {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--silver);
+}
+
+/* ── Legal content typography ──────────────────── */
+.legal-content h3 {
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin: 40px 0 16px;
+}
+
+.legal-content h3:first-child {
+    margin-top: 0;
+}
+
+.legal-content p {
+    font-size: 0.95rem;
+    color: var(--graphite);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.legal-content ul {
+    margin: 16px 0 24px;
+    padding-left: 24px;
+}
+
+.legal-content li {
+    font-size: 0.95rem;
+    color: var(--graphite);
+    line-height: 1.8;
+    margin-bottom: 8px;
+}
+
+.legal-content a {
+    color: var(--neon-orange);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(255, 107, 53, 0.3);
+    transition: all 0.2s ease;
+}
+
+.legal-content a:hover {
+    border-bottom-color: var(--neon-orange);
+    text-shadow: 0 0 8px rgba(255, 107, 53, 0.3);
+}
+
+.legal-address {
+    font-style: normal;
+    font-size: 0.95rem;
+    color: var(--graphite);
+    line-height: 1.6;
+    padding: 16px 24px;
+    background: var(--bg-surface);
+    border-left: 3px solid var(--neon-teal);
+    margin: 16px 0;
+}
+
+/* ── Risk warning ──────────────────────────────── */
+.risk-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 24px;
+    background: rgba(255, 105, 180, 0.06);
+    border: 2px solid rgba(255, 105, 180, 0.15);
+    border-left: 4px solid var(--neon-pink);
+    margin-bottom: 32px;
+}
+
+.risk-warning .warning-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.risk-warning p {
+    margin: 0;
+    color: var(--ink);
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 768px) {
+    .legal-container {
+        padding: 0 24px;
+    }
+
+    .legal-section {
+        padding: 60px 24px;
+    }
+
+    .legal-nav {
+        gap: 20px;
+    }
+}

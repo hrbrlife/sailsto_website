@@ -1,0 +1,970 @@
+{
+  "accredited-investor": {
+    "title": "Accredited Investor",
+    "description": "An individual or entity meeting SEC financial thresholds ($200K+ annual income or $1M+ net worth) that qualifies to invest in unregistered securities offerings.",
+    "category": "compliance",
+    "tags": [
+      "compliance"
+    ],
+    "relatedTerms": [
+      "professional-investor",
+      "reg-d",
+      "kyc"
+    ],
+    "linkLabel": "Accredited Investor"
+  },
+  "aml": {
+    "title": "AML (Anti-Money Laundering)",
+    "description": "Laws, regulations, and procedures designed to prevent criminals from disguising illegally obtained funds as legitimate income through financial transactions.",
+    "category": "compliance",
+    "tags": [
+      "compliance"
+    ],
+    "relatedTerms": [
+      "kyc",
+      "reg-d",
+      "reg-s"
+    ],
+    "linkLabel": "AML"
+  },
+  "atomic-settlement": {
+    "title": "Atomic Settlement",
+    "description": "A transaction mechanism where all parts of a trade execute simultaneously and completely.",
+    "category": "technology",
+    "tags": [
+      "defi"
+    ],
+    "relatedTerms": [
+      "solana",
+      "smart-contract",
+      "secondary-trading"
+    ],
+    "linkLabel": "Atomic Settlement"
+  },
+  "bankable": {
+    "title": "Bankable",
+    "description": "Securities in a format recognized by traditional banking infrastructure — CrossSecurities can CrossConvert to bankable ISIN form held via Clearstream.",
+    "category": "finance",
+    "tags": [
+      "tradfi",
+      "bridge"
+    ],
+    "relatedTerms": [
+      "crossconversion",
+      "isin",
+      "clearstream",
+      "custody"
+    ],
+    "linkLabel": "Bankable"
+  },
+  "bloom": {
+    "title": "BLOOM_FINAL / The Application Engine",
+    "description": "The application engine layer of Sails.to, built on Sandstorm/Melusina OS, providing the grain runtime for all platform applications.",
+    "category": "technology",
+    "tags": [
+      "infrastructure"
+    ],
+    "relatedTerms": [
+      "grain",
+      "sandstorm",
+      "cap-n-proto",
+      "powerbox",
+      "melusina"
+    ],
+    "linkLabel": "BLOOM"
+  },
+  "broker-dealer": {
+    "title": "Broker-Dealer",
+    "description": "Licensed securities professional who can execute trades and place investors in CrossSecurities offerings through our network.",
+    "category": "finance",
+    "tags": [
+      "fees"
+    ],
+    "relatedTerms": [
+      "otc",
+      "secondary-trading",
+      "distribution-fee",
+      "brokerage-fee"
+    ],
+    "linkLabel": "Broker-Dealer"
+  },
+  "brokerage-fee": {
+    "title": "Brokerage Fee",
+    "description": "A fee charged by a broker for executing securities transactions on behalf of clients, typically calculated as a percentage of the transaction value.",
+    "category": "finance",
+    "tags": [
+      "fees"
+    ],
+    "relatedTerms": [
+      "distribution-fee",
+      "secondary-trading",
+      "otc"
+    ],
+    "linkLabel": "Brokerage Fee"
+  },
+  "cap-n-proto": {
+    "title": "Cap'n Proto",
+    "description": "A zero-copy serialization protocol used for inter-grain RPC in the Sails.to platform, eliminating encoding/decoding overhead entirely.",
+    "category": "technology",
+    "tags": [
+      "infrastructure"
+    ],
+    "relatedTerms": [
+      "grain",
+      "powerbox",
+      "melusina",
+      "smart-contract"
+    ],
+    "linkLabel": "Cap'n Proto"
+  },
+  "cap-table": {
+    "title": "Cap Table (Capitalization Table)",
+    "description": "A complete record of a company's securities ownership, showing all shareholders, their holdings, and ownership percentages, updated in real-time on blockchain.",
+    "category": "finance",
+    "tags": [
+      "issuance"
+    ],
+    "relatedTerms": [
+      "smart-contract",
+      "tokenization",
+      "distributions"
+    ],
+    "linkLabel": "Cap Table"
+  },
+  "clearstream": {
+    "title": "Clearstream",
+    "description": "A major international securities depository and settlement system based in Luxembourg, enabling custody and settlement of securities across 110+ markets.",
+    "category": "finance",
+    "tags": [
+      "tradfi"
+    ],
+    "relatedTerms": [
+      "isin",
+      "custody",
+      "crossconversion",
+      "crosssecurities"
+    ],
+    "linkLabel": "Clearstream"
+  },
+  "commission": {
+    "title": "Commission",
+    "description": "Fees paid to brokers and introducers for placing investors or facilitating trades — typically a percentage of the investment or transaction value.",
+    "category": "finance",
+    "tags": [
+      "fees"
+    ],
+    "relatedTerms": [
+      "distribution-fee",
+      "brokerage-fee",
+      "broker-dealer",
+      "soft-cap"
+    ],
+    "linkLabel": "Commission"
+  },
+  "compliance": {
+    "title": "Compliance",
+    "description": "Adherence to legal, regulatory, and internal requirements — automated and enforced on-chain for CrossSecurities through KYC/AML, investor eligibility.",
+    "category": "compliance",
+    "tags": [
+      "compliance"
+    ],
+    "relatedTerms": [
+      "kyc",
+      "aml",
+      "reg-d",
+      "reg-s",
+      "smart-contract"
+    ],
+    "linkLabel": "Compliance"
+  },
+  "coupon": {
+    "title": "Coupon",
+    "description": "The periodic interest payment made to bondholders, typically expressed as an annual percentage of the bond's nominal value.",
+    "category": "finance",
+    "tags": [
+      "tradfi"
+    ],
+    "relatedTerms": [
+      "nominal-value",
+      "maturity",
+      "distributions"
+    ],
+    "linkLabel": "Coupon"
+  },
+  "crossconversion-series": {
+    "title": "CrossConversion Series",
+    "description": "A dedicated series within a Series LLC structure that facilitates the conversion of securities between on-chain tokens and bankable ISIN format.",
+    "category": "legal",
+    "tags": [
+      "legal-structure"
+    ],
+    "relatedTerms": [
+      "crossconversion",
+      "crosssecurities",
+      "series-llc"
+    ],
+    "linkLabel": "CrossConversion Series"
+  },
+  "crossconversion": {
+    "title": "CrossConversion",
+    "description": "The process of moving Sails CrossSecurities between on-chain (Solana) and bankable (ISIN/Clearstream) forms while maintaining 1:1 backing.",
+    "category": "finance",
+    "tags": [
+      "bridge"
+    ],
+    "relatedTerms": [
+      "crosssecurities",
+      "isin",
+      "clearstream",
+      "solana",
+      "custody"
+    ],
+    "linkLabel": "CrossConversion"
+  },
+  "crosssecurities": {
+    "title": "CrossSecurities",
+    "description": "Sails CrossSecurities are bonds, shares, or RWA tokens that can be held on-chain (Solana) or via traditional bank/brokerage custody (ISIN-bearing) — and.",
+    "category": "finance",
+    "tags": [
+      "bridge"
+    ],
+    "relatedTerms": [
+      "crossconversion",
+      "isin",
+      "clearstream",
+      "solana",
+      "custody"
+    ],
+    "linkLabel": "CrossSecurities"
+  },
+  "custody": {
+    "title": "Custody",
+    "description": "The safekeeping and administration of securities on behalf of investors, including settlement, corporate actions processing, and record-keeping.",
+    "category": "finance",
+    "tags": [
+      "tradfi"
+    ],
+    "relatedTerms": [
+      "clearstream",
+      "isin",
+      "crossconversion",
+      "crosssecurities"
+    ],
+    "linkLabel": "Custody"
+  },
+  "distribution-fee": {
+    "title": "Distribution Fee",
+    "description": "A fee charged by the platform to distribute securities tokens to investors during an offering, covering tokenization and delivery costs.",
+    "category": "finance",
+    "tags": [
+      "fees"
+    ],
+    "relatedTerms": [
+      "tokenization",
+      "brokerage-fee",
+      "security-token"
+    ],
+    "linkLabel": "Distribution Fee"
+  },
+  "distributions": {
+    "title": "Distributions",
+    "description": "Payments made to security token holders, including dividends, interest, rental income, or liquidation proceeds, automated via smart contracts.",
+    "category": "finance",
+    "tags": [
+      "issuance"
+    ],
+    "relatedTerms": [
+      "smart-contract",
+      "cap-table",
+      "security-token"
+    ],
+    "linkLabel": "Distributions"
+  },
+  "escrow": {
+    "title": "Escrow",
+    "description": "A neutral holding arrangement where funds are held by a trusted third party until predetermined conditions are met, protecting both buyers and sellers.",
+    "category": "finance",
+    "tags": [
+      "issuance"
+    ],
+    "relatedTerms": [
+      "soft-cap",
+      "smart-contract",
+      "trustee"
+    ],
+    "linkLabel": "Escrow"
+  },
+  "grain": {
+    "title": "Grain",
+    "description": "The fundamental isolation unit in Sandstorm/Melusina OS — a sandboxed application instance with its own journal store, capabilities, and lifecycle.",
+    "category": "technology",
+    "tags": [
+      "infrastructure"
+    ],
+    "relatedTerms": [
+      "powerbox",
+      "cap-n-proto",
+      "melusina",
+      "smart-contract"
+    ],
+    "linkLabel": "Grain"
+  },
+  "hard-cap": {
+    "title": "Hard Cap",
+    "description": "The maximum amount of capital an issuer will accept in a securities offering. Once reached, no additional investments are accepted.",
+    "category": "finance",
+    "tags": [
+      "issuance"
+    ],
+    "relatedTerms": [
+      "soft-cap",
+      "nominal-value",
+      "cap-table"
+    ],
+    "linkLabel": "Hard Cap"
+  },
+  "investor-verification": {
+    "title": "Investor Verification",
+    "description": "The process of confirming an investor's identity, financial status, and eligibility to participate in private securities offerings.",
+    "category": "compliance",
+    "tags": [
+      "compliance"
+    ],
+    "relatedTerms": [
+      "kyc",
+      "aml",
+      "accredited-investor",
+      "professional-investor"
+    ],
+    "linkLabel": "Investor Verification"
+  },
+  "isin": {
+    "title": "ISIN (International Securities Identification Number)",
+    "description": "A 12-character alphanumeric code that uniquely identifies a security globally, enabling it to be held in traditional bank custody systems.",
+    "category": "finance",
+    "tags": [
+      "tradfi"
+    ],
+    "relatedTerms": [
+      "crosssecurities",
+      "crossconversion",
+      "clearstream",
+      "custody",
+      "security-token"
+    ],
+    "linkLabel": "ISIN"
+  },
+  "kyc": {
+    "title": "KYC (Know Your Customer)",
+    "description": "Regulatory process to verify the identity of clients, assess their suitability.",
+    "category": "compliance",
+    "tags": [
+      "compliance"
+    ],
+    "relatedTerms": [
+      "aml",
+      "accredited-investor",
+      "professional-investor"
+    ],
+    "linkLabel": "KYC"
+  },
+  "liquidity": {
+    "title": "Liquidity",
+    "description": "The ease of buying or selling a security without significantly affecting its price — provided for CrossSecurities through our multi-broker OTC network.",
+    "category": "finance",
+    "tags": [
+      "finance"
+    ],
+    "relatedTerms": [
+      "otc",
+      "secondary-trading",
+      "vienna-mtf",
+      "atomic-settlement"
+    ],
+    "linkLabel": "Liquidity"
+  },
+  "management-fee": {
+    "title": "Management Fee",
+    "description": "An ongoing fee charged for the administration and management of a securities offering. Sails.",
+    "category": "finance",
+    "tags": [
+      "fees"
+    ],
+    "relatedTerms": [
+      "distribution-fee",
+      "brokerage-fee",
+      "commission",
+      "distributions"
+    ],
+    "linkLabel": "Management Fee"
+  },
+  "master-nft": {
+    "title": "Master NFT",
+    "description": "The root authority token in Sails.to's 4-layer NFT hierarchy on Solana, controlled by 3-of-5 keyholder threshold signing.",
+    "category": "technology",
+    "tags": [
+      "defi"
+    ],
+    "relatedTerms": [
+      "nft-hierarchy",
+      "threshold-signing",
+      "solana",
+      "melusina",
+      "smart-contract"
+    ],
+    "linkLabel": "Master NFT"
+  },
+  "maturity": {
+    "title": "Maturity",
+    "description": "The date on which a bond's principal amount becomes due and payable to the bondholder, marking the end of the bond's term.",
+    "category": "finance",
+    "tags": [
+      "tradfi"
+    ],
+    "relatedTerms": [
+      "coupon",
+      "nominal-value",
+      "distributions"
+    ],
+    "linkLabel": "Maturity"
+  },
+  "melusina": {
+    "title": "Melusina",
+    "description": "The on-chain authority layer for Sails.to — a Solana-based system implementing NFT hierarchies, KYC credentialing, SPL-2022 compliance tokens.",
+    "category": "technology",
+    "tags": [
+      "infrastructure"
+    ],
+    "relatedTerms": [
+      "solana",
+      "master-nft",
+      "nft-hierarchy",
+      "smart-contract",
+      "transfer-hook"
+    ],
+    "linkLabel": "Melusina"
+  },
+  "minimum-investment": {
+    "title": "Minimum Investment",
+    "description": "$150,000 minimum investment threshold for CrossSecurities — set to comply with professional and accredited investor regulations globally.",
+    "category": "finance",
+    "tags": [
+      "issuance"
+    ],
+    "relatedTerms": [
+      "professional-investor",
+      "accredited-investor",
+      "nominal-value",
+      "reg-d"
+    ],
+    "linkLabel": "Minimum Investment"
+  },
+  "nft-hierarchy": {
+    "title": "NFT Hierarchy",
+    "description": "Sails.to's 4-layer authority structure on Solana: Master NFT → Reseller NFT → License NFT (pNFT) → Share NFT, ensuring cryptographic chain of trust.",
+    "category": "technology",
+    "tags": [
+      "defi"
+    ],
+    "relatedTerms": [
+      "master-nft",
+      "solana",
+      "melusina",
+      "threshold-signing",
+      "crosssecurities"
+    ],
+    "linkLabel": "NFT Hierarchy"
+  },
+  "nominal-value": {
+    "title": "Nominal Value",
+    "description": "The face value of a security as stated by the issuer, representing the principal amount for bonds or the stated value per share for equity.",
+    "category": "finance",
+    "tags": [
+      "tradfi"
+    ],
+    "relatedTerms": [
+      "coupon",
+      "maturity",
+      "hard-cap"
+    ],
+    "linkLabel": "Nominal Value"
+  },
+  "offering-memorandum": {
+    "title": "Offering Memorandum",
+    "description": "Legal document detailing investment terms, risks, use of proceeds, and issuer information — required for all CrossSecurities offerings on Sails.to.",
+    "category": "legal",
+    "tags": [
+      "issuance"
+    ],
+    "relatedTerms": [
+      "private-placement",
+      "reg-d",
+      "reg-s",
+      "kyc"
+    ],
+    "linkLabel": "Offering Memorandum"
+  },
+  "offering": {
+    "title": "Offering",
+    "description": "A structured securities fundraise on Sails.to, governed by an Offering Grain with its own token supply, compliance configuration, and distribution waterfall.",
+    "category": "finance",
+    "tags": [
+      "issuance"
+    ],
+    "relatedTerms": [
+      "crosssecurities",
+      "series-llc",
+      "wyoming-dao-llc",
+      "cap-table",
+      "distributions"
+    ],
+    "linkLabel": "Offering"
+  },
+  "on-chain": {
+    "title": "On-Chain",
+    "description": "Recorded directly on a blockchain — CrossSecurities exist on-chain on Solana with ownership, transfers, and compliance enforced by smart contracts.",
+    "category": "technology",
+    "tags": [
+      "defi"
+    ],
+    "relatedTerms": [
+      "solana",
+      "smart-contract",
+      "crossconversion",
+      "atomic-settlement"
+    ],
+    "linkLabel": "On-Chain"
+  },
+  "operating-series": {
+    "title": "Operating Series",
+    "description": "A dedicated series within a Series LLC structure that holds an issuer's specific project assets and liabilities, isolated from other series.",
+    "category": "legal",
+    "tags": [
+      "legal-structure"
+    ],
+    "relatedTerms": [
+      "series-llc",
+      "wyoming-dao-llc",
+      "treasury-series"
+    ],
+    "linkLabel": "Operating Series"
+  },
+  "operational-trust": {
+    "title": "Operational Trust",
+    "description": "A trust structure used to hold and manage operational assets on behalf of investors, providing fiduciary oversight and legal protection.",
+    "category": "legal",
+    "tags": [
+      "legal-structure"
+    ],
+    "relatedTerms": [
+      "trustee",
+      "custody",
+      "escrow"
+    ],
+    "linkLabel": "Operational Trust"
+  },
+  "otc": {
+    "title": "OTC (Over-the-Counter)",
+    "description": "Securities trading conducted directly between two parties without a centralized exchange, often used for larger transactions or less liquid securities.",
+    "category": "finance",
+    "tags": [
+      "tradfi"
+    ],
+    "relatedTerms": [
+      "secondary-trading",
+      "atomic-settlement",
+      "vienna-mtf"
+    ],
+    "linkLabel": "OTC"
+  },
+  "paying-agent": {
+    "title": "Paying Agent",
+    "description": "The entity authorized to execute distributions and manage the revenue waterfall for a Sails.to offering, operating under Trustee oversight.",
+    "category": "finance",
+    "tags": [
+      "tradfi"
+    ],
+    "relatedTerms": [
+      "trustee",
+      "distributions",
+      "waterfall",
+      "operating-series",
+      "treasury-series"
+    ],
+    "linkLabel": "Paying Agent"
+  },
+  "pda": {
+    "title": "PDA (Program Derived Address)",
+    "description": "A deterministic Solana account address derived from program seeds, used in Sails.to for trustless, programmatic state management.",
+    "category": "technology",
+    "tags": [
+      "infrastructure"
+    ],
+    "relatedTerms": [
+      "solana",
+      "smart-contract",
+      "melusina",
+      "crossconversion"
+    ],
+    "linkLabel": "PDA"
+  },
+  "powerbox": {
+    "title": "Powerbox",
+    "description": "The inter-grain capability sharing mechanism in Sandstorm/Melusina OS, enabling secure permission delegation via claim tokens and persistent sturdyRefs.",
+    "category": "technology",
+    "tags": [
+      "infrastructure"
+    ],
+    "relatedTerms": [
+      "grain",
+      "cap-n-proto",
+      "melusina",
+      "trustee"
+    ],
+    "linkLabel": "Powerbox"
+  },
+  "private-placement": {
+    "title": "Private Placement",
+    "description": "Sale of securities directly to qualified investors without public offering registration — the primary method for issuing CrossSecurities on Sails.to.",
+    "category": "finance",
+    "tags": [
+      "issuance"
+    ],
+    "relatedTerms": [
+      "reg-d",
+      "reg-s",
+      "accredited-investor",
+      "professional-investor",
+      "offering-memorandum"
+    ],
+    "linkLabel": "Private Placement"
+  },
+  "professional-investor": {
+    "title": "Professional Investor",
+    "description": "Under EU/international regulations, an investor with sufficient experience, knowledge, and expertise to make independent investment decisions and assess risks.",
+    "category": "compliance",
+    "tags": [
+      "compliance"
+    ],
+    "relatedTerms": [
+      "accredited-investor",
+      "kyc",
+      "reg-s"
+    ],
+    "linkLabel": "Professional Investor"
+  },
+  "reg-d": {
+    "title": "Regulation D (Reg D)",
+    "description": "SEC regulation providing exemptions from registration for private placements, allowing companies to raise capital from accredited investors without a.",
+    "category": "compliance",
+    "tags": [
+      "compliance"
+    ],
+    "relatedTerms": [
+      "reg-s",
+      "accredited-investor",
+      "security-token"
+    ],
+    "linkLabel": "Reg D"
+  },
+  "reg-s": {
+    "title": "Regulation S (Reg S)",
+    "description": "SEC regulation providing a safe harbor for securities offerings made outside the United States to non-US persons, exempt from SEC registration requirements.",
+    "category": "compliance",
+    "tags": [
+      "compliance"
+    ],
+    "relatedTerms": [
+      "reg-d",
+      "accredited-investor",
+      "professional-investor"
+    ],
+    "linkLabel": "Reg S"
+  },
+  "sandstorm": {
+    "title": "Sandstorm",
+    "description": "An open-source platform for self-hosting web applications, providing OS-level isolation for each application instance (grain) in the Sails.to runtime.",
+    "category": "technology",
+    "tags": [
+      "infrastructure"
+    ],
+    "relatedTerms": [
+      "grain",
+      "melusina",
+      "bloom",
+      "powerbox",
+      "cap-n-proto"
+    ],
+    "linkLabel": "Sandstorm"
+  },
+  "secondary-trading": {
+    "title": "Secondary Trading",
+    "description": "The buying and selling of securities after their initial issuance, providing liquidity and price discovery for investors seeking to exit positions.",
+    "category": "finance",
+    "tags": [
+      "finance"
+    ],
+    "relatedTerms": [
+      "security-token",
+      "smart-contract",
+      "cap-table"
+    ],
+    "linkLabel": "Secondary Trading"
+  },
+  "security-deposit": {
+    "title": "Security Deposit",
+    "description": "An upfront payment required from issuers to initiate the onboarding process and cover preliminary legal, compliance, and structuring costs.",
+    "category": "finance",
+    "tags": [
+      "fees"
+    ],
+    "relatedTerms": [
+      "distribution-fee",
+      "series-llc",
+      "spv"
+    ],
+    "linkLabel": "Security Deposit"
+  },
+  "security-token": {
+    "title": "Security Token",
+    "description": "A digital representation of a traditional security (equity, debt, or fund share) issued on a blockchain with built-in compliance rules enforced by smart.",
+    "category": "finance",
+    "tags": [
+      "defi"
+    ],
+    "relatedTerms": [
+      "crosssecurities",
+      "tokenization",
+      "isin",
+      "smart-contract",
+      "spv"
+    ],
+    "linkLabel": "Security Token"
+  },
+  "series-llc": {
+    "title": "Series LLC",
+    "description": "A corporate structure allowing a single LLC to create multiple segregated series, each with its own assets, liabilities, and members.",
+    "category": "legal",
+    "tags": [
+      "legal-structure"
+    ],
+    "relatedTerms": [
+      "wyoming-dao-llc",
+      "spv",
+      "security-token"
+    ],
+    "linkLabel": "Series LLC"
+  },
+  "smart-contract": {
+    "title": "Smart Contract",
+    "description": "Self-executing code deployed on a blockchain that automatically enforces the terms of an agreement when predetermined conditions are met.",
+    "category": "technology",
+    "tags": [
+      "defi"
+    ],
+    "relatedTerms": [
+      "solana",
+      "security-token",
+      "tokenization"
+    ],
+    "linkLabel": "Smart Contract"
+  },
+  "soft-cap": {
+    "title": "Soft Cap",
+    "description": "The minimum funding threshold an offering must reach for the capital raise to proceed. If the soft cap is not met, investor funds are typically returned.",
+    "category": "finance",
+    "tags": [
+      "issuance"
+    ],
+    "relatedTerms": [
+      "hard-cap",
+      "escrow",
+      "security-token"
+    ],
+    "linkLabel": "Soft Cap"
+  },
+  "solana": {
+    "title": "Solana",
+    "description": "A high-performance blockchain platform known for fast transaction speeds (400ms finality) and low fees, used by Sails.to for issuing CrossSecurities.",
+    "category": "technology",
+    "tags": [
+      "infrastructure"
+    ],
+    "relatedTerms": [
+      "smart-contract",
+      "crossconversion",
+      "crosssecurities"
+    ],
+    "linkLabel": "Solana"
+  },
+  "spv": {
+    "title": "SPV (Special Purpose Vehicle)",
+    "description": "A subsidiary entity created for a specific, limited purpose, typically to isolate financial risk and hold specific assets separate from a parent company.",
+    "category": "legal",
+    "tags": [
+      "legal-structure"
+    ],
+    "relatedTerms": [
+      "series-llc",
+      "security-token",
+      "wyoming-dao-llc"
+    ],
+    "linkLabel": "SPV"
+  },
+  "threshold-signing": {
+    "title": "Threshold Signing",
+    "description": "M-of-N keyholder cryptographic operations used to protect critical Sails.to platform actions, implementing distributed authority on Solana.",
+    "category": "technology",
+    "tags": [
+      "defi"
+    ],
+    "relatedTerms": [
+      "master-nft",
+      "solana",
+      "crossconversion",
+      "nft-hierarchy",
+      "melusina"
+    ],
+    "linkLabel": "Threshold Signing"
+  },
+  "tokenization": {
+    "title": "Tokenization",
+    "description": "The process of converting ownership rights in an asset into digital tokens on a blockchain, enabling fractional ownership and programmable compliance.",
+    "category": "finance",
+    "tags": [
+      "defi"
+    ],
+    "relatedTerms": [
+      "crosssecurities",
+      "security-token",
+      "crossconversion",
+      "smart-contract",
+      "spv"
+    ],
+    "linkLabel": "Tokenization"
+  },
+  "tradfi-bridge": {
+    "title": "TradFi Bridge (CrossConversion)",
+    "description": "Also known as CrossConversion — Sails.to's mechanism for converting on-chain CrossSecurities to bankable ISIN securities that can be held in conventional.",
+    "category": "finance",
+    "tags": [
+      "tradfi",
+      "bridge"
+    ],
+    "relatedTerms": [
+      "crosssecurities",
+      "crossconversion",
+      "isin",
+      "clearstream",
+      "solana",
+      "custody"
+    ],
+    "linkLabel": "TradFi Bridge"
+  },
+  "transfer-hook": {
+    "title": "Transfer Hook",
+    "description": "A Solana SPL-2022 extension that intercepts token transfers and enforces compliance rules before allowing any transfer to proceed.",
+    "category": "technology",
+    "tags": [
+      "defi"
+    ],
+    "relatedTerms": [
+      "kyc",
+      "compliance",
+      "solana",
+      "melusina",
+      "pda"
+    ],
+    "linkLabel": "Transfer Hook"
+  },
+  "treasury-series": {
+    "title": "Treasury Series",
+    "description": "A dedicated series within a Series LLC structure that holds un-issued or repurchased tokens, managing the supply of securities.",
+    "category": "legal",
+    "tags": [
+      "legal-structure"
+    ],
+    "relatedTerms": [
+      "series-llc",
+      "operating-series",
+      "cap-table"
+    ],
+    "linkLabel": "Treasury Series"
+  },
+  "trustee": {
+    "title": "Trustee",
+    "description": "An independent fiduciary entity that represents and protects the interests of bondholders or investors, ensuring issuers meet their obligations.",
+    "category": "legal",
+    "tags": [
+      "legal-structure"
+    ],
+    "relatedTerms": [
+      "escrow",
+      "custody",
+      "distributions"
+    ],
+    "linkLabel": "Trustee"
+  },
+  "vienna-mtf": {
+    "title": "Vienna MTF",
+    "description": "A regulated Multilateral Trading Facility operated by the Vienna Stock Exchange group.",
+    "category": "finance",
+    "tags": [
+      "tradfi"
+    ],
+    "relatedTerms": [
+      "secondary-trading",
+      "crosssecurities",
+      "isin"
+    ],
+    "linkLabel": "Vienna MTF"
+  },
+  "waterfall": {
+    "title": "Waterfall",
+    "description": "The revenue distribution priority structure for Sails.to offerings, enforcing investor-first payment order on-chain via smart contracts.",
+    "category": "finance",
+    "tags": [
+      "issuance"
+    ],
+    "relatedTerms": [
+      "distributions",
+      "operating-series",
+      "treasury-series",
+      "paying-agent",
+      "smart-contract"
+    ],
+    "linkLabel": "Waterfall"
+  },
+  "white-label": {
+    "title": "White-Label",
+    "description": "Branded platform instances available to regulated institutions, trust companies, and broker-dealers, with custom theming and compliance configuration.",
+    "category": "finance",
+    "tags": [
+      "fees"
+    ],
+    "relatedTerms": [
+      "broker-dealer",
+      "trustee",
+      "compliance",
+      "nft-hierarchy",
+      "crosssecurities"
+    ],
+    "linkLabel": "White-Label"
+  },
+  "wyoming-dao-llc": {
+    "title": "Wyoming DAO Series LLC",
+    "description": "Wyoming's legally-recognized DAO structure combined with Series LLC capability — each Sails.",
+    "category": "legal",
+    "tags": [
+      "legal-structure"
+    ],
+    "relatedTerms": [
+      "series-llc",
+      "operating-series",
+      "treasury-series",
+      "crossconversion-series",
+      "spv"
+    ],
+    "linkLabel": "Wyoming DAO LLC"
+  }
+}

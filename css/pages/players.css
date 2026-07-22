@@ -1,0 +1,339 @@
+/* ═══════════════════════════════════════════════
+   Players Page — Life of a Deal
+   Cyberpunk-Vintage Design System
+   ═══════════════════════════════════════════════ */
+
+/* ── Story navigation tabs ─────────────────────── */
+.story-nav {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.story-tab {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 28px;
+    border: 2px solid var(--border);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    font-family: var(--font-mono);
+    flex: 1;
+    min-width: 200px;
+    text-align: left;
+}
+
+.story-tab:hover {
+    border-color: var(--neon-orange);
+    background: rgba(255, 107, 53, 0.06);
+}
+
+.story-tab.active {
+    border-color: var(--neon-orange);
+    background: var(--neon-orange);
+    color: #fff;
+}
+
+.story-tab-icon {
+    font-size: 1.6rem;
+}
+
+.story-tab-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--ink);
+    display: block;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.story-tab.active .story-tab-label {
+    color: #fff;
+}
+
+.story-tab-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.story-tab-desc {
+    display: block;
+    font-size: 0.82rem;
+    font-weight: 400;
+    color: var(--graphite);
+    line-height: 1.3;
+}
+
+.story-tab.active .story-tab-desc {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* ── Story panels ──────────────────────────────── */
+.story-panel {
+    display: none;
+}
+
+.story-panel.active {
+    display: block;
+}
+
+/* ── Story CTA ─────────────────────────────────── */
+.story-cta {
+    padding-top: 0;
+}
+
+/* Mermaid: inherits global styles from styles.css */
+
+/* ── Act sections (timeline) ───────────────────── */
+.act-section {
+    border-bottom: none;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.act-section .content-container {
+    position: relative;
+    padding-left: 72px;
+    padding-top: 48px;
+}
+
+.act-section:first-of-type .content-container {
+    padding-top: 0;
+}
+
+/* Vertical timeline line */
+.act-section .content-container::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--border-strong);
+}
+
+.act-section:first-of-type .content-container::before {
+    top: 28px;
+}
+
+.act-section:nth-last-of-type(2) .content-container::before {
+    bottom: auto;
+    height: 76px;
+}
+
+.act-section:first-of-type:nth-last-of-type(2) .content-container::before {
+    display: none;
+}
+
+.story-cta .content-container::before {
+    display: none;
+}
+
+.story-cta .content-container {
+    padding-left: 0;
+}
+
+/* Act header & number on timeline */
+.act-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.act-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    min-width: 56px;
+    background: var(--bg-dark);
+    color: var(--neon-orange);
+    font-family: var(--font-mono);
+    font-size: 1.4rem;
+    font-weight: 700;
+    line-height: 1;
+    position: absolute;
+    left: -72px;
+    top: 0;
+    z-index: 2;
+    border: 2px solid var(--neon-orange);
+}
+
+.act-title h2 {
+    margin: 0 0 8px;
+    font-size: 1.6rem;
+}
+
+.act-title p {
+    margin: 0;
+    color: var(--graphite);
+    font-size: 1.02rem;
+    line-height: 1.6;
+}
+
+.act-title {
+    flex: 1;
+}
+
+/* ── Act detail bullets ────────────────────────── */
+.act-details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+.detail-item {
+    background: var(--bg-surface);
+    border-left: 3px solid var(--neon-orange);
+    padding: 14px 18px;
+    font-size: 0.94rem;
+    line-height: 1.55;
+    color: var(--graphite);
+}
+
+.detail-item strong {
+    color: var(--ink);
+}
+
+/* ── Fee summary grid ──────────────────────────── */
+.fee-summary {
+    margin-top: 8px;
+}
+
+.fee-summary h3 {
+    font-size: 1.15rem;
+    margin: 0 0 16px;
+}
+
+.fee-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: var(--border-strong);
+    border: 2px solid var(--border-strong);
+}
+
+.fee-item {
+    background: var(--bg-card);
+    padding: 20px;
+    text-align: center;
+}
+
+.fee-amount {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--neon-orange);
+    margin-bottom: 6px;
+}
+
+.fee-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--slate);
+    line-height: 1.4;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* ── CTA buttons ───────────────────────────────── */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 24px;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 22px;
+    border: 2px solid var(--neon-orange);
+    color: var(--neon-orange);
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-secondary:hover {
+    background: var(--neon-orange);
+    color: #fff;
+    box-shadow: var(--glow-orange);
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 1000px) {
+    .fee-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .story-nav {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .story-tab {
+        justify-content: center;
+    }
+
+    .act-section .content-container {
+        padding-left: 52px;
+        padding-top: 36px;
+    }
+
+    .act-section:first-of-type .content-container {
+        padding-top: 0;
+    }
+
+    .act-section .content-container::before {
+        left: 18px;
+    }
+
+    .act-number {
+        width: 38px;
+        height: 38px;
+        min-width: 38px;
+        font-size: 1.1rem;
+        left: -52px;
+    }
+
+    .act-section:first-of-type .content-container::before {
+        top: 19px;
+    }
+
+    .act-section:nth-last-of-type(2) .content-container::before {
+        height: 55px;
+    }
+
+    .fee-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .mermaid {
+        padding: 16px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .fee-grid {
+        grid-template-columns: 1fr;
+    }
+}

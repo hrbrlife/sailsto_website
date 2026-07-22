@@ -1,0 +1,200 @@
+/* ═══════════════════════════════════════════════════════════════
+   SAILS.TO — BROKERS PAGE
+   Cyberpunk-Vintage · Pastel Neon
+   Page-specific styles only — inherits from styles.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── CALCULATOR CARD ───────────────────────────────────────── */
+.calc-card {
+    background: var(--bg-card);
+    padding: var(--space-lg);
+    border: 2px solid var(--border-strong);
+    max-width: var(--max-prose);
+    margin: 0 auto;
+}
+
+.calc-card h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: var(--space-xs);
+}
+
+.calc-card .intro {
+    color: var(--slate);
+    margin-bottom: 32px;
+    font-size: 1rem;
+}
+
+
+/* ── CALC LAYOUT ───────────────────────────────────────────── */
+.calc-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+}
+
+@media (max-width: 768px) {
+    .calc-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ── FORM INPUTS ───────────────────────────────────────────── */
+.calc-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.input-group label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--ink);
+}
+
+.input-group input {
+    padding: 14px 18px;
+    border: 2px solid var(--border);
+    border-radius: 0;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--ink);
+    background: var(--bg-card);
+    transition: border-color var(--speed-fast) ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: var(--neon-orange);
+    box-shadow: var(--glow-orange);
+}
+
+.input-hint {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--silver);
+    letter-spacing: 0.04em;
+}
+
+
+/* ── RESULTS PANEL ─────────────────────────────────────────── */
+.calc-results {
+    background: var(--bg-alt);
+    padding: 24px;
+    border: 2px solid var(--border);
+}
+
+.result-section {
+    margin-bottom: 24px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--border);
+}
+
+.result-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.result-section h4 {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--slate);
+    margin-bottom: 12px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    font-size: 0.95rem;
+}
+
+.result-row .label {
+    color: var(--graphite);
+}
+
+.result-row .value {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    color: var(--ink);
+}
+
+.result-row.sub {
+    padding-left: 16px;
+    font-size: 0.85rem;
+}
+
+.result-row.sub .label {
+    color: var(--slate);
+}
+
+.result-row.sub .value {
+    font-weight: 500;
+    color: var(--slate);
+}
+
+
+/* ── RESULT TOTAL ──────────────────────────────────────────── */
+.result-total {
+    background: var(--bg-dark);
+    color: var(--text-on-dark);
+    padding: 16px 24px;
+    margin: 24px -24px -24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 3px solid var(--neon-orange);
+}
+
+.result-total .label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+}
+
+.result-total .value {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--neon-orange);
+}
+
+
+/* ── ASSUMPTIONS NOTE ──────────────────────────────────────── */
+.assumptions {
+    margin-top: 24px;
+    padding: 16px;
+    background: rgba(255, 107, 53, 0.06);
+    border: 2px solid var(--border);
+    border-left: 3px solid var(--neon-teal);
+    font-size: 0.8rem;
+    color: var(--slate);
+    line-height: 1.7;
+}
+
+.assumptions strong {
+    color: var(--ink);
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+}

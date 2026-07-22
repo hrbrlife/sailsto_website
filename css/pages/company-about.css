@@ -1,0 +1,267 @@
+/* ═══════════════════════════════════════════════
+   Company About — Cyberpunk-Vintage Design System
+   ═══════════════════════════════════════════════ */
+
+/* ── Team styles ───────────────────────────────── */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.team-grid-full {
+    max-width: 1200px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-photo {
+    width: 160px;
+    height: 160px;
+    margin: 0 auto 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-alt);
+    border: 2px solid var(--border);
+}
+
+.team-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+}
+
+.team-role {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--neon-orange);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.team-location {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--silver);
+    display: block;
+    margin-bottom: 16px;
+    letter-spacing: 0.04em;
+}
+
+.team-card p {
+    font-size: 0.9rem;
+    color: var(--slate);
+    line-height: 1.7;
+    margin-bottom: 16px;
+}
+
+.team-links {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.team-links a {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--ink);
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 2px solid var(--border-strong);
+    transition: all 0.25s ease;
+}
+
+.team-links a:hover {
+    background: var(--bg-dark);
+    border-color: var(--bg-dark);
+    color: var(--text-on-dark);
+}
+
+/* ── Partner styles ────────────────────────────── */
+.partner-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    background: var(--border-strong);
+    border: 2px solid var(--border-strong);
+}
+
+.partner-card {
+    text-align: center;
+    padding: 32px 24px;
+    background: var(--bg-card);
+    transition: all 0.25s ease;
+}
+
+.partner-card:hover {
+    background: var(--bg-surface);
+}
+
+.partner-icon {
+    font-size: 2.5rem;
+    display: block;
+    margin-bottom: 16px;
+}
+
+.partner-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+}
+
+.partner-card p {
+    font-size: 0.85rem;
+    color: var(--slate);
+    line-height: 1.5;
+}
+
+/* ── Approach diagram ──────────────────────────── */
+.approach-diagram {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.approach-box {
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    padding: 24px;
+}
+
+.approach-box .label {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.20em;
+    color: var(--neon-orange);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.approach-box .items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.approach-box .items span {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    background: var(--bg-surface);
+    color: var(--ink);
+    border: 1px solid var(--border);
+    letter-spacing: 0.02em;
+}
+
+.approach-bridge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px;
+    background: var(--bg-dark);
+    color: var(--text-on-dark);
+    border-left: 3px solid var(--neon-teal);
+}
+
+.approach-bridge span:first-child {
+    font-size: 1.5rem;
+}
+
+.approach-bridge span:last-child {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+}
+
+/* ── Advisor styles ────────────────────────────── */
+.advisor-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: var(--border-strong);
+    border: 2px solid var(--border-strong);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.advisor-card {
+    padding: 32px;
+    background: var(--bg-card);
+    transition: all 0.25s ease;
+}
+
+.advisor-card:hover {
+    background: var(--bg-surface);
+}
+
+.advisor-card h4 {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+}
+
+.advisor-org {
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--neon-teal);
+    display: block;
+    margin-bottom: 16px;
+}
+
+.advisor-card p {
+    font-size: 0.85rem;
+    color: var(--slate);
+    line-height: 1.7;
+}
+
+/* ── Responsive ────────────────────────────────── */
+@media (max-width: 1024px) {
+    .partner-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .team-grid-full {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .advisor-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .partner-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-grid-full {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    }
+}

@@ -1,0 +1,256 @@
+/* ═══════════════════════════════════════════════════════════════
+   GLOSSARY INDEX — Page-Specific Styles
+   Cyberpunk-Vintage · Pastel Neon
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── SEARCH ────────────────────────────────────────────────── */
+.glossary-search {
+    max-width: 400px;
+    margin: 40px auto 0;
+    position: relative;
+}
+
+.glossary-search-input {
+    width: 100%;
+    padding: 14px 20px 14px 48px;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--ink);
+    background: var(--bg-primary);
+    border: 2px solid var(--border-strong);
+    transition: all var(--speed-normal) ease;
+}
+
+.glossary-search-input:focus {
+    outline: none;
+    border-color: var(--neon-orange);
+    box-shadow: var(--glow-orange);
+}
+
+.glossary-search-icon {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
+    color: var(--slate);
+    pointer-events: none;
+}
+
+/* ── FILTERS ───────────────────────────────────────────────── */
+.glossary-filter-section {
+    background: var(--bg-alt);
+    border-bottom: 2px solid var(--border);
+    position: sticky;
+    top: 70px;
+    z-index: 50;
+}
+
+.glossary-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 48px;
+}
+
+.glossary-filters {
+    display: flex;
+    gap: 8px;
+    padding: 16px 0;
+    overflow-x: auto;
+}
+
+.glossary-filter {
+    padding: 10px 20px;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.10em;
+    color: var(--slate);
+    background: transparent;
+    border: 2px solid transparent;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all var(--speed-normal) ease;
+}
+
+.glossary-filter:hover {
+    color: var(--ink);
+    border-color: var(--border-strong);
+}
+
+.glossary-filter.active {
+    color: var(--bg-primary);
+    background: var(--ink);
+    border-color: var(--ink);
+}
+
+/* ── MAIN ──────────────────────────────────────────────────── */
+.glossary-main {
+    padding: 60px 48px 80px;
+}
+
+.glossary-alphabet {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 2px solid var(--border);
+}
+
+.alpha-link {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--slate);
+    background: var(--bg-alt);
+    text-decoration: none;
+    transition: all var(--speed-normal) ease;
+}
+
+.alpha-link:hover {
+    background: var(--ink);
+    color: var(--bg-primary);
+}
+
+/* ── LETTER SECTIONS ───────────────────────────────────────── */
+.glossary-letter-section {
+    margin-bottom: 48px;
+}
+
+.glossary-letter {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--neon-orange);
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 3px solid var(--neon-orange);
+    display: inline-block;
+}
+
+/* ── CARDS ──────────────────────────────────────────────────── */
+.glossary-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.glossary-card {
+    display: block;
+    padding: 24px;
+    background: var(--bg-card);
+    border: 2px solid var(--border);
+    text-decoration: none;
+    transition: all var(--speed-normal) ease;
+}
+
+.glossary-card:hover {
+    border-color: var(--neon-orange);
+    transform: translateY(-4px);
+    box-shadow: var(--glow-orange);
+}
+
+.glossary-card-category {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.6rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 4px 10px;
+    margin-bottom: 12px;
+}
+
+.glossary-card-category.finance {
+    background: rgba(255, 107, 53, 0.15);
+    color: var(--neon-orange);
+}
+
+.glossary-card-category.compliance {
+    background: rgba(15, 15, 35, 0.10);
+    color: var(--charcoal);
+}
+
+.glossary-card-category.legal {
+    background: rgba(255, 105, 180, 0.10);
+    color: var(--neon-pink);
+}
+
+.glossary-card-category.technology {
+    background: rgba(123, 104, 238, 0.12);
+    color: var(--neon-purple);
+}
+
+.glossary-card h3 {
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: var(--ink);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.glossary-card p {
+    font-size: 0.85rem;
+    color: var(--slate);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* ── NO RESULTS ────────────────────────────────────────────── */
+.glossary-no-results {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.glossary-no-results .icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.glossary-no-results h3 {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    color: var(--ink);
+    margin-bottom: 12px;
+}
+
+.glossary-no-results p {
+    font-size: 0.95rem;
+    color: var(--slate);
+}
+
+.glossary-no-results a {
+    color: var(--neon-orange);
+    text-decoration: underline;
+}
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 992px) {
+    .glossary-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .glossary-container {
+        padding: 0 24px;
+    }
+
+    .glossary-main {
+        padding: 40px 24px 60px;
+    }
+
+    .glossary-grid {
+        grid-template-columns: 1fr;
+    }
+}

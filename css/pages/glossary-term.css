@@ -1,0 +1,147 @@
+/* ═══════════════════════════════════════════════════════════════
+   SAILS.TO — GLOSSARY TERM PAGE
+   Cyberpunk-Vintage · Pastel Neon
+   Page-specific styles only — inherits from styles.css
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ── TERM PAGE HEADER ──────────────────────────────────────── */
+.term-page-header {
+    background: var(--bg-dark);
+    padding: 160px var(--space-lg) 80px;
+    color: var(--text-on-dark);
+    border-bottom: 3px solid var(--neon-teal);
+}
+
+.term-category {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(0, 212, 170, 0.12);
+    border: 2px solid var(--neon-teal);
+    font-family: var(--font-mono);
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--neon-teal);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+}
+
+.term-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 5vw, 3.5rem);
+    font-weight: 400;
+    margin-bottom: 20px;
+    color: var(--text-on-dark);
+    line-height: 1.15;
+}
+
+.term-short {
+    font-size: 1.2rem;
+    color: var(--text-muted-dk);
+    max-width: 700px;
+    line-height: 1.7;
+}
+
+
+/* ── TERM CONTENT ──────────────────────────────────────────── */
+.term-content {
+    padding: var(--space-xl) var(--space-lg);
+    background: var(--bg-primary);
+}
+
+.term-content-inner {
+    max-width: var(--max-prose);
+    margin: 0 auto;
+}
+
+.term-section {
+    margin-bottom: 48px;
+}
+
+.term-section h2 {
+    font-family: var(--font-display);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--charcoal);
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--neon-orange);
+}
+
+.term-section p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--graphite);
+}
+
+
+/* ── RELATED TERMS ─────────────────────────────────────────── */
+.related-terms {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 24px;
+}
+
+.related-term-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background: var(--bg-card);
+    border: 2px solid var(--border-strong);
+    color: var(--graphite);
+    text-decoration: none;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: all var(--speed-normal) var(--ease-out-expo);
+}
+
+.related-term-link:hover {
+    background: var(--neon-orange);
+    color: #fff;
+    border-color: var(--neon-orange);
+    box-shadow: var(--glow-orange);
+}
+
+
+/* ── BACK LINK ─────────────────────────────────────────────── */
+/* ── TERM CTA BOX ──────────────────────────────────────────── */
+.term-cta {
+    background: var(--bg-dark);
+    color: var(--text-on-dark);
+    padding: 48px;
+    border: 2px solid var(--border-strong);
+    text-align: center;
+    margin-top: 48px;
+}
+
+.term-cta h3 {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 16px;
+    color: var(--text-on-dark);
+}
+
+.term-cta p {
+    color: var(--text-muted-dk);
+    margin-bottom: 24px;
+}
+
+
+/* ── RESPONSIVE ────────────────────────────────────────────── */
+@media (max-width: 768px) {
+    .term-page-header {
+        padding: 140px var(--space-md) 60px;
+    }
+
+    .term-content {
+        padding: 48px var(--space-md);
+    }
+
+    .term-cta {
+        padding: 32px 24px;
+    }
+}
